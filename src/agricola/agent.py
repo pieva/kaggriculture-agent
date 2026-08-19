@@ -2,10 +2,10 @@
 
 from typing import Dict, Any, Optional
 from agricola.core.state import GameState
-from agricola.baseline.carrot_loop import CarrotLoopAgent
+from agricola.strategy.roi_crop import ROICropAgent
 
 # Global agent instance for state persistence across turns if needed
-_agent_instance = CarrotLoopAgent()
+_agent_instance = ROICropAgent()
 
 
 def agent(observation: Dict[str, Any], configuration: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
@@ -13,7 +13,6 @@ def agent(observation: Dict[str, Any], configuration: Optional[Dict[str, Any]] =
 
     Args:
         observation: State dictionary provided by Kaggle Environments.
-        configuration: Episode configuration parameters.
 
     Returns:
         Action dictionary with keys 'farmer', 'hands', 'market'.

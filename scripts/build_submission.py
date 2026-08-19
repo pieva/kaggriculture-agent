@@ -16,11 +16,11 @@ from typing import Dict, Any, List, Optional, Tuple
 # --- Action Builder ---
 {actions_code}
 
-# --- Carrot Loop Agent ---
-{baseline_code}
+# --- ROI Crop Agent Strategy ---
+{strategy_code}
 
 # --- Kaggle Entrypoint ---
-_agent_instance = CarrotLoopAgent()
+_agent_instance = ROICropAgent()
 
 def agent(observation: Dict[str, Any], configuration: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     """Kaggle submission entry point."""
@@ -54,8 +54,8 @@ def build_submission(output_path: str = "submission/submission.py") -> None:
     with open(src_dir / "core" / "actions.py", "r", encoding="utf-8") as f:
         actions_code = clean_imports(f.read(), ["from typing import"])
 
-    with open(src_dir / "baseline" / "carrot_loop.py", "r", encoding="utf-8") as f:
-        baseline_code = clean_imports(
+    with open(src_dir / "strategy" / "roi_crop.py", "r", encoding="utf-8") as f:
+        strategy_code = clean_imports(
             f.read(),
             ["from typing import", "from agricola.core.state", "from agricola.core.actions"]
         )
@@ -63,7 +63,7 @@ def build_submission(output_path: str = "submission/submission.py") -> None:
     bundled_code = SUBMISSION_TEMPLATE.format(
         state_code=state_code.strip(),
         actions_code=actions_code.strip(),
-        baseline_code=baseline_code.strip(),
+        strategy_code=strategy_code.strip(),
     )
 
     out_file = project_root / output_path

@@ -4,11 +4,11 @@ from typing import Dict, Any, List, Optional, Tuple
 
 # Constants for crop parameters from kaggriculture environment
 CROPS = {
-    "WHEAT": {"seed": 10, "max_yield_day": 2, "water_needed": True},
-    "CARROT": {"seed": 15, "max_yield_day": 3, "water_needed": True},
-    "TOMATO": {"seed": 25, "max_yield_day": 4, "water_needed": True},
-    "STRAWBERRY": {"seed": 50, "max_yield_day": 5, "water_needed": True},
-    "MELON": {"seed": 100, "max_yield_day": 7, "water_needed": True},
+    "WHEAT": {"seed": 10, "max_yield_day": 4, "water_needed": True},
+    "CARROT": {"seed": 20, "max_yield_day": 3, "water_needed": True},
+    "TOMATO": {"seed": 50, "max_yield_day": 8, "water_needed": True},
+    "STRAWBERRY": {"seed": 100, "max_yield_day": 10, "water_needed": True},
+    "MELON": {"seed": 80, "max_yield_day": 12, "water_needed": True},
 }
 
 

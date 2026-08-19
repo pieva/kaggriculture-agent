@@ -1,0 +1,329 @@
+{
+  "summary": {
+    "total_episodes": 30,
+    "completion_rate_pct": 100.0,
+    "disqualification_rate_pct": 0.0,
+    "overall_win_rate_pct": 100.0,
+    "overall_wins": 30,
+    "overall_losses": 0,
+    "overall_ties": 0,
+    "mean_final_money": 5857.166666666667,
+    "std_final_money": 130.14404412888905,
+    "median_final_money": 5837.0,
+    "min_final_money": 5787.0,
+    "max_final_money": 6552.0,
+    "agent_mean_turn_latency_ms": 0.026671696459899554,
+    "simulation_mean_step_time_ms": 3.4539616111228333
+  },
+  "opponents": {
+    "pass": {
+      "episodes": [
+        {
+          "as_player": 0,
+          "my_reward": 5837.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.031154657006833664
+        },
+        {
+          "as_player": 0,
+          "my_reward": 5837.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.025711963840492163
+        },
+        {
+          "as_player": 0,
+          "my_reward": 6552.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.02324019583986142
+        },
+        {
+          "as_player": 0,
+          "my_reward": 5837.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.02333671450407681
+        },
+        {
+          "as_player": 0,
+          "my_reward": 5837.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.025167870037361297
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5837.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.020843114016087978
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5837.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.026349512755259437
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5837.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.022165926422027454
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5837.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.02094867794032264
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5837.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.019698607138201325
+        }
+      ],
+      "wins": 10,
+      "losses": 0,
+      "ties": 0,
+      "rewards": [
+        5837.0,
+        5837.0,
+        6552.0,
+        5837.0,
+        5837.0,
+        5837.0,
+        5837.0,
+        5837.0,
+        5837.0,
+        5837.0
+      ],
+      "win_rate_pct": 100.0,
+      "mean_reward": 5908.5,
+      "std_reward": 214.5,
+      "median_reward": 5837.0
+    },
+    "random": {
+      "episodes": [
+        {
+          "as_player": 0,
+          "my_reward": 5857.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.024678027069504387
+        },
+        {
+          "as_player": 0,
+          "my_reward": 5837.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.053663143689934585
+        },
+        {
+          "as_player": 0,
+          "my_reward": 5837.0,
+          "opp_reward": 140.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.02216258729381878
+        },
+        {
+          "as_player": 0,
+          "my_reward": 5837.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.021589149705423184
+        },
+        {
+          "as_player": 0,
+          "my_reward": 5787.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.024278166345081013
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5787.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.023130316938816342
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5837.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.027884282812901017
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5837.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.02490166689350849
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5817.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.02414450682155653
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5857.0,
+          "opp_reward": 150.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.024287062969126107
+        }
+      ],
+      "wins": 10,
+      "losses": 0,
+      "ties": 0,
+      "rewards": [
+        5857.0,
+        5837.0,
+        5837.0,
+        5837.0,
+        5787.0,
+        5787.0,
+        5837.0,
+        5837.0,
+        5817.0,
+        5857.0
+      ],
+      "win_rate_pct": 100.0,
+      "mean_reward": 5829.0,
+      "std_reward": 23.57965224510319,
+      "median_reward": 5837.0
+    },
+    "starter": {
+      "episodes": [
+        {
+          "as_player": 0,
+          "my_reward": 5857.0,
+          "opp_reward": 3592.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.025312099230160964
+        },
+        {
+          "as_player": 0,
+          "my_reward": 5787.0,
+          "opp_reward": 3619.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.026064950963728368
+        },
+        {
+          "as_player": 0,
+          "my_reward": 5837.0,
+          "opp_reward": 3702.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.027545344865568738
+        },
+        {
+          "as_player": 0,
+          "my_reward": 5837.0,
+          "opp_reward": 3512.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.027796103630696782
+        },
+        {
+          "as_player": 0,
+          "my_reward": 5837.0,
+          "opp_reward": 3547.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.0321008339498363
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5837.0,
+          "opp_reward": 3550.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.02702934763320464
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5837.0,
+          "opp_reward": 3512.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.024426285817348743
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5837.0,
+          "opp_reward": 3441.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.05111585485182899
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5837.0,
+          "opp_reward": 3421.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.024356331219002915
+        },
+        {
+          "as_player": 1,
+          "my_reward": 5837.0,
+          "opp_reward": 3553.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.02506759159541553
+        }
+      ],
+      "wins": 10,
+      "losses": 0,
+      "ties": 0,
+      "rewards": [
+        5857.0,
+        5787.0,
+        5837.0,
+        5837.0,
+        5837.0,
+        5837.0,
+        5837.0,
+        5837.0,
+        5837.0,
+        5837.0
+      ],
+      "win_rate_pct": 100.0,
+      "mean_reward": 5834.0,
+      "std_reward": 16.76305461424021,
+      "median_reward": 5837.0
+    }
+  }
+}
