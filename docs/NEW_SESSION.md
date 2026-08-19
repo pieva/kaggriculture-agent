@@ -274,4 +274,30 @@ La successiva iterazione deve continuare a mantenere la logica:
 
 e deve essere definita solo dopo revisione delle evidenze E02.
 
+## Post-SHIP observation
+
+Dopo la chiusura e il tagging di E02 (`v0.2-e02-roicrop`), l'evoluzione
+del Kaggle Skill Rating ha fornito una nuova evidenza competitiva.
+
+- E01 `CarrotLoopAgent`: Skill Rating osservato `328.4`.
+- E02 `ROICropAgent`: Skill Rating osservato `273.0`.
+- Il leaderboard continua a mostrare il profilo con rating `328.4`,
+  corrispondente alla migliore performance osservata di E01.
+- Evidenze:
+  - `docs/screenshots/E02-006_kaggle_rating_e02_below_e01.png`
+  - `docs/screenshots/E02-007_kaggle_leaderboard_e01.png`
+
+Questa osservazione non modifica i risultati del benchmark locale E02:
+`ROICropAgent` migliora il Mean Final Money da `$3567.63` a `$5857.17`
+(`+64.18%`) nelle condizioni sperimentali testate.
+
+Mostra invece che l'ottimizzazione locale basata sul ROI della coltura
+non si traduce automaticamente in una migliore performance competitiva
+contro gli agenti presenti sulla piattaforma Kaggle.
+
+La prossima iterazione non deve quindi partire automaticamente da una
+soluzione già decisa. Deve prima analizzare la divergenza tra benchmark
+locale e comportamento competitivo, utilizzando le evidenze disponibili,
+per formulare una nuova ipotesi sperimentale E03.
+
 <!-- END OF DOCUMENT -->
