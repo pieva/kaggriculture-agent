@@ -1,10 +1,10 @@
 # Project State
 
-**Last update:** 2026-08-18
+**Last update:** 2026-08-19
 
 ## Current phase
 
-E01 completed & consolidated — Baseline implemented, verified and benchmarked.
+E01 completed & consolidated — Baseline implemented, verified on Kaggle, and benchmarked (`v0.1-e01-baseline`).
 
 ## Objective
 
@@ -17,16 +17,32 @@ DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP
 
 ## Repository state
 
+- Tag Git: `v0.1-e01-baseline` (main aligned with origin/main).
 - Modular package structure created under `src/agricola/`.
-- `README.md` created with installation instructions, usage, and structure details.
-- Clean repository hygiene configured via `.gitignore` (ignoring `.venv/`, `__pycache__/`, `.pytest_cache/`).
+- `README.md` updated with installation instructions, Kaggle score, tag reference, and E02 entrypoint.
 - Virtual environment `.venv` with Python 3.12 and `kaggle-environments` configured.
 - State wrapper (`GameState`) and action builder (`ActionBuilder`) implemented.
 - Baseline agent `CarrotLoopAgent` implemented.
 - Top-level Kaggle entrypoint (`src/agricola/agent.py`) ready.
 - Bundler script (`scripts/build_submission.py`) producing standalone `submission/submission.py`.
+- Submission verified on Kaggle platform: Status **`Complete`**, Initial Score **`600.0`**.
+- Observable execution trace verified and documented in `docs/versions/E01_verify_antigravity.md`.
 - Benchmark evaluation runner (`scripts/run_eval.py`) with exact per-turn agent latency tracking.
 - Test suite (`tests/`) distinguishing Unit Tests and Integration Smoke Tests passing 100% (5/5).
+
+## Verified E01 Baseline Operational Cycle
+
+`BUY_SEED → PLANT → WATER → PASS → HARVEST → PLANT → SELL`
+
+Key observations from E01 VERIFY trace:
+1. Farmer remains immobile on initial tile `(4, 4)`.
+2. Uses exclusively `CARROT` crop.
+3. Next cycle's seed is pre-purchased as a buffer (`seeds == 0` triggers `BUY_SEED`).
+4. `farmer` and `market` actions operate as independent channels in the same turn.
+5. Watering increases crop yield (`yield_units = 2`).
+6. Harvested crops are sold immediately upon availability in `shed`.
+7. Seed cost and crop selling price are distinct economic variables: seed cost is defined statically by the crop configuration, while selling price is exposed dynamically by the market.
+8. Rich `GameState` fields (grid map, opponent state, other crops, dynamic market prices) remain unexploited.
 
 ## Benchmark Metrics (E01 Baseline - 30 Episodes x 720 Steps)
 
@@ -41,4 +57,4 @@ DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP
 
 ## Next step
 
-E02 — Strategy Improvement & Economic Optimization (e.g. multi-tile farming, ROI crop selection, market price exploitation).
+E02 — Dynamic Crop Selection & ROI Scaling (ROICropAgent): Implementation Plan completato e sottoposto a REVIEW; in attesa di approvazione umana prima della fase BUILD.
