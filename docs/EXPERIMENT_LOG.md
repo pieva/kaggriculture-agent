@@ -82,13 +82,13 @@ SHIP: PASSED (Tag: `v0.1-e01-baseline`)
 ## E02 — Dynamic Crop Selection & ROI Scaling (`ROICropAgent`)
 
 **Date:** 2026-08-19  
-**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW (SHIP Pending)  
+**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW → CONSOLIDATE → SHIP  
 **Tool:** Google Antigravity  
 **Model:** Gemini 3.6 Flash
 
 ### Objective
 
-Sostituire la monocultura statica di carote della baseline E01 (`CarrotLoopAgent`) con una regola di selezione dinamica della coltura basata sul profitto netto stimato per giorno ($\text{NetProfitPerDay} = \frac{(\text{SellPrice} \times \text{Yield}) - \text{SeedPrice}}{\text{Days}}$), al fine di massimizzare la crescita del capitale ed eliminare il pareggio con l'agente `starter`.
+Sostituire la monocultura statica di carote della baseline E01 (`CarrotLoopAgent`) con una regola di selezione dinamica della coltura basata sul profitto netto stimato per giorno ($\text{NetProfitPerDay} = \frac{(\text{SellPrice} \times \text{Yield}) - \text{SeedPrice}}{\text{Days}}$), al fine di massimizzare la crescita del capitale ed eliminare il pareggio con l'agente `starter` mantenendo la struttura operativa single-tile `(4, 4)`.
 
 ### Baseline E01 utilizzata per il confronto
 
@@ -98,29 +98,16 @@ Sostituire la monocultura statica di carote della baseline E01 (`CarrotLoopAgent
 
 *Nota storica sull'evoluzione del riferimento quantitativo*: Durante la fase di PLAN e BUILD era stata inizialmente utilizzata la stima `$3578.80` (derivata dalla media aritmetica delle tre medie aggregate per avversario documentate provvisoriamente). La successiva fase di VERIFY e REVIEW ha rilevato che `$3578.80` non era riproducibile dai 30 episodi grezzi memorizzati in `results/e01_baseline.json` ed ha ricostruito con esattezza la baseline persistente reale pari a **`$3567.63 ± $205.38`**.
 
-### Prompt
-
-References:
-- `docs/prompts/E02-01_start.md`
-- `docs/prompts/E02-02_plan_review.md`
-- `docs/prompts/E02-03_plan_final_check.md`
-- `docs/prompts/E02-04_build_approval.md`
-- `docs/prompts/E02-05_verify.md`
-- `docs/prompts/E02-06_verify_review.md`
-- `docs/prompts/E02-07_verify_review_correction.md`
-- `docs/prompts/E02-08_simulation_analysis.md`
-- `docs/prompts/E02-09_simulation_analysis_review.md`
-- `docs/prompts/E02-10_simulation_analysis_correction.md`
-
-### Implementation Plan & Evidenze
+### PLAN & Evidenze
 
 - Implementation Plan: [`docs/plans/E02_Dynamic_Crop_Selection_&_ROI_Scaling.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/plans/E02_Dynamic_Crop_Selection_&_ROI_Scaling.md)
 - Benchmark JSON E02: [`results/e02_roi_crop.json`](file:///c:/Users/pietr/Projects/kaggriculture-agent/results/e02_roi_crop.json)
 - Evidenza BUILD: [`docs/versions/E02_build_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E02_build_antigravity.md)
 - Evidenza VERIFY REVIEW: [`docs/versions/E02_verify_review_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E02_verify_review_antigravity.md)
 - Evidenza Analisi Simulazione: [`docs/versions/E02_simulation_analysis.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E02_simulation_analysis.md)
+- Evidenza SHIP REVIEW: [`docs/versions/E02_ship_review_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E02_ship_review_antigravity.md)
 
-### Human intervention
+### Human supervision
 
 1. **Scelta e approvazione dell'evoluzione E02**: Definizione del focus su ROI crop selection anziché movimento o multi-tile.
 2. **Review dell'Implementation Plan**: Richiesta di chiarimenti su `MELON max_yield_day = 12`, distinzione tra SeedPrice (statico) e SellPrice (dinamico), ed eliminazione di ambiguita sulla dispersione.
@@ -129,6 +116,7 @@ References:
 5. **Rilevazione incoerenza baseline E01**: Segnalazione della discrepanza tra `$3578.80` e `$3567.63`, guidando la ricostruzione dai dati grezzi.
 6. **Correzione delle formulazioni causali**: Rimozione di affermazioni causali eccessivamente forti non dimostrate dai dati grezzi.
 7. **Review dell'Analisi Osservabile della Simulazione**: Identificazione di imprecisioni nella contabilità dei cicli, nel confronto CARROT e nel modello di resa, ed approvazione della ricostruzione finale.
+8. **Review della Validazione Kaggle SHIP**: Analisi della distinzione tra benchmark locale e Skill Rating Kaggle, riconciliazione del rating dinamico E01 (600.0 $\rightarrow$ 328.4) e formulazione del giudizio finale `PASSED WITH OBSERVATIONS`.
 
 ### Modifiche Implementate
 
@@ -141,7 +129,7 @@ References:
 4. **Unit Testing (`tests/test_roi_crop.py`)**:
    - Aggiunti unit test specifici per verificare il calcolo del ROI ed il comportamento di fallback con basso capitale.
 
-### Verification & Outcome
+### Benchmark & Outcome (Valutazione Locale)
 
 - **Suite di Test (`pytest tests/`)**: **7/7 test superati** (100% success rate in 2.88s).
 - **Integrazione Submission (`pytest tests/test_submission.py`)**: Superata in 2.73s.
@@ -164,17 +152,25 @@ References:
 - **Incremento Assoluto Capitale Medio**: $5857.17 - 3567.63 = \mathbf{+\$2289.53}$
 - **Incremento Percentuale Capitale Medio**: $\mathbf{+64.18\%}$
 - **Esito vs `starter`**: **`0.00% Vittorie (E01)` $\rightarrow$ `100.00% Vittorie (E02)`**
+- **Risultato Sperimentale**: **`SUPPORTATA nelle condizioni sperimentali testate`**
 
-### Interpretazione Verificata & Limiti
+### Analisi Osservabile della Simulazione & Limiti
 
 > **Conclusione Principale**: E02 migliora principalmente perché la regola ROI identifica `MELON` come coltura economicamente dominante nelle condizioni osservate.
 
-- **Evidenze**: `ROICropAgent` seleziona `MELON` fin dal turno 1 (Rank 1 sia con `Yield=2` sia con `max_yield=6`); i primi due cicli completati nella simulazione generano oltre $1600 di incasso lordo ciascuno su singola casella; a fine stagione l'agente seleziona `STRAWBERRY`.
+- **Evidenze**: `ROICropAgent` seleziona `MELON` fin dal turno 1 (Rank 1 sia con `Yield=2` sia con `max_yield=6`); i primi due cicli completati nella simulazione generano oltre $1600 di incasso lordo ciascuno su singola casella `(4, 4)`; a fine stagione (Day 21) l'agente seleziona `STRAWBERRY`.
 - **Limiti E02 Identificati**:
   1. *End-of-Season Horizon*: acquisto/semina di colture in coda stagione che non giungono a maturazione prima del turno 719 ($200 spesi per 2 semi inutilizzati);
   2. *Single-Tile Limitation*: isolamento sulla sola casella `(4, 4)`;
   3. *Immediate Selling*: vendita immediata al raccolto senza timing sui picchi di mercato;
   4. *Yield Model Simplification*: uso di `Yield=2` anziché dei valori `max_yield` specifici della coltura.
+
+### SHIP (Validazione Esterna Kaggle)
+
+- Evidenze Persistenti: [`docs/screenshots/E02-004_kaggle_submission_ready.png`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/screenshots/E02-004_kaggle_submission_ready.png), [`docs/screenshots/E02-005_kaggle_submission_successful.png`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/screenshots/E02-005_kaggle_submission_successful.png), [`docs/versions/E02_ship_review_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E02_ship_review_antigravity.md).
+- **Stato Kaggle**: **`Complete`** (rating iniziale osservato: **`600.0`**).
+- **Valutazione SHIP**: **`PASSED WITH OBSERVATIONS`**
+- *Distinzione Metodologica*: E02 ha superato la validazione esterna Kaggle ed è entrata nel sistema competitivo con rating iniziale 600.0. Il benchmark locale dimostra il miglioramento rispetto a E01 nelle condizioni sperimentali testate; il confronto competitivo esterno richiede invece l'osservazione dell'evoluzione successiva del rating Kaggle.
 
 ### Method assessment
 
@@ -184,4 +180,4 @@ BUILD: PASSED
 VERIFY: PASSED  
 REVIEW: PASSED  
 CONSOLIDATE: PASSED  
-SHIP: PENDING (In attesa dell'invio della submission Kaggle reale e del tag di versione)
+SHIP: PASSED WITH OBSERVATIONS (Tag: `v0.2-e02-roicrop` pronto per la creazione)

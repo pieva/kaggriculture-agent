@@ -7,21 +7,53 @@ Agente competitivo per la competizione Kaggle **Kaggriculture** sviluppato attra
 Kaggriculture è una simulazione economica turn-based 1v1 gestita tramite il pacchetto `kaggle-environments`.
 L'obiettivo è massimizzare il capitale finale (money/net worth) dell'azienda agricola al termine di una stagione di 30 giorni di gioco (720 turni).
 
-### Stato Corrente: E01 Completata (`v0.1-e01-baseline`)
-- **Baseline Agent**: `CarrotLoopAgent` (strategia deterministica basata sul ciclo di coltivazione e vendita delle carote).
-- **Validazione Kaggle**: Submission caricata con successo sulla piattaforma Kaggle, ottenendo uno score iniziale sul leaderboard di **`600.0`**.
-- **Verifica Osservabile Antigravity**: Esecuzione locale ed ispezione comportamentale documentata in [`docs/versions/E01_verify_antigravity.md`](docs/versions/E01_verify_antigravity.md).
-- **Architettura Modulare**: Pacchetto Python in `src/agricola/`, bundler per Kaggle in `scripts/build_submission.py` e suite di test in `tests/`.
-- **Benchmark Locale**: Runner CLI (`scripts/run_eval.py`) con report di metriche registrato in [`results/e01_baseline.json`](results/e01_baseline.json).
+Il progetto adotta rigorosamente il ciclo di sviluppo supervisionato:
+
+`DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP`
 
 ---
 
-## Documentazione del Repository
+## Tabella delle Iterazioni Sperimentali
 
-- **Versioni e Analisi**: Disponibili sotto [`docs/versions/`](docs/versions/) (contiene [`E01_baseline.md`](docs/versions/E01_baseline.md) ed [`E01_verify_antigravity.md`](docs/versions/E01_verify_antigravity.md)).
-- **Prompt Operativi**: Conservati sotto [`docs/prompts/`](docs/prompts/).
-- **Registro Esperimenti**: Consultabile in [`docs/EXPERIMENT_LOG.md`](docs/EXPERIMENT_LOG.md) e [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md).
-- **Prossima Iterazione**: Il punto di ingresso per avviare la fase E02 è la prompt [`docs/prompts/E02-01_start.md`](docs/prompts/E02-01_start.md).
+| Esperimento | Strategia | Variabile Modificata | Mean Final Money (Locale) | Win Rate vs `starter` | Validazione Kaggle |
+| :--- | :--- | :--- | ---: | ---: | :--- |
+| **E01** | `CarrotLoopAgent` | Baseline: monocultura statica `CARROT` | `$3567.63 ± $205.38` | 0.00% (100% Draw) | Validata (`v0.1-e01-baseline`) |
+| **E02** | `ROICropAgent` | Selezione dinamica coltura via ROI/giorno | **`$5857.17 ± $132.37`** | **100.00% Vittorie** | **Complete** (rating iniziale `600.0`) |
+
+> *Nota metodologica: Le metriche del benchmark locale ($ capitale finale) ed il Kaggle Skill Rating misurano aspetti differenti dell'agente e non devono essere confrontati direttamente.*
+
+---
+
+## Stato del Repository
+
+- **Baseline Tag**: `v0.1-e01-baseline` (main allineato con `origin/main`).
+- **Iterazione E02**: Completata, verificata, revisionata e consolidata (pronta per il tag `v0.2-e02-roicrop`).
+- **Strategia Corrente**: `ROICropAgent` in `src/agricola/strategy/roi_crop.py`.
+- **Submission Standalone**: Generata in `submission/submission.py` e verificata con successo su Kaggle.
+- **Suite di Test**: 7/7 test automatizzati superati (`pytest tests/`).
+
+---
+
+## Documentazione ed Evidenze
+
+Le evidenze analitiche e quantitative per ciascuna iterazione sono disponibili sotto `docs/`:
+
+### Iterazione E01 (Baseline)
+- [Documento di Baseline E01](docs/versions/E01_baseline.md)
+- [Verifica Osservabile E01](docs/versions/E01_verify_antigravity.md)
+- [Risultati Benchmark E01](results/e01_baseline.json)
+
+### Iterazione E02 (ROI Crop Selection)
+- [Implementation Plan E02](docs/plans/E02_Dynamic_Crop_Selection_&_ROI_Scaling.md)
+- [Rapporto BUILD E02](docs/versions/E02_build_antigravity.md)
+- [Rapporto VERIFY REVIEW E02](docs/versions/E02_verify_review_antigravity.md)
+- [Analisi Osservabile della Simulazione E02](docs/versions/E02_simulation_analysis.md)
+- [Rapporto SHIP REVIEW E02](docs/versions/E02_ship_review_antigravity.md)
+- [Risultati Benchmark E02](results/e02_roi_crop.json)
+
+### Registri di Progetto
+- [Experiment Log](docs/EXPERIMENT_LOG.md)
+- [Project State](docs/PROJECT_STATE.md)
 
 ---
 
@@ -53,28 +85,22 @@ kaggriculture-agent/
 ├── docs/                       # Documentazione del progetto e registro esperimenti
 │   ├── EXPERIMENT_LOG.md
 │   ├── PROJECT_STATE.md
-│   ├── prompts/                # Prompt operativi (es. E02-01_start.md)
-│   └── versions/               # Documenti di versione (E01_baseline.md, E01_verify_antigravity.md)
+│   ├── plans/                  # Implementation plans (es. E02_Dynamic_Crop_Selection_&_ROI_Scaling.md)
+│   ├── prompts/                # Prompt operativi del processo supervisionato
+│   ├── screenshots/            # Evidenze visive delle submission Kaggle
+│   └── versions/               # Documenti di versione e review analitiche
 ├── src/
 │   └── agricola/               # Pacchetto sorgente dell'agente
 │       ├── agent.py            # Entrypoint per Kaggle Environments
-│       ├── core/
-│       │   ├── state.py        # Wrapper GameState per l'observation
-│       │   └── actions.py      # Builder ActionBuilder per le azioni
-│       ├── baseline/
-│       │   └── carrot_loop.py  # Baseline CarrotLoopAgent
-│       └── evaluation/
-│           └── runner.py       # Motore per simulazioni e benchmark
+│       ├── core/               # State parsing (state.py) ed Action building (actions.py)
+│       ├── baseline/           # CarrotLoopAgent (E01)
+│       ├── strategy/           # ROICropAgent (E02)
+│       └── evaluation/         # Runner CLI e latenza agente (runner.py)
 ├── submission/
 │   └── submission.py           # Submission standalone per Kaggle
-├── tests/
-│   ├── test_baseline.py        # Unit test per stato e azioni + smoke test simulazione
-│   └── test_submission.py      # Integration test per il bundle di submission
-├── scripts/
-│   ├── build_submission.py     # Script di bundling per generare submission.py
-│   └── run_eval.py             # CLI per la valutazione locale benchmark
-└── results/
-    └── e01_baseline.json       # Report metriche JSON del benchmark E01
+├── tests/                      # Suite di unit ed integration smoke test
+├── scripts/                    # Scripts di bundling e benchmark
+└── results/                    # Report JSON dei benchmark locali (e01_baseline.json, e02_roi_crop.json)
 ```
 
 ---
@@ -91,7 +117,7 @@ kaggriculture-agent/
 .\.venv\Scripts\python.exe scripts/build_submission.py
 ```
 
-### 3. Esecuzione del Benchmark Locale E01
+### 3. Esecuzione del Benchmark Locale
 ```bash
-.\.venv\Scripts\python.exe scripts/run_eval.py --opponents pass,random,starter --episodes 10 --output results/e01_baseline.json
+.\.venv\Scripts\python.exe scripts/run_eval.py --opponents pass,random,starter --episodes 10 --output results/e02_roi_crop.json
 ```

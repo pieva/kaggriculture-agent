@@ -4,7 +4,7 @@
 
 ## Current phase
 
-E02 completed & reviewed — Dynamic Crop Selection & ROI Scaling (`ROICropAgent`) implemented, verified, reviewed, and documentally consolidated. Awaiting human approval for SHIP (Kaggle submission & version tagging).
+E02 completed & consolidated — Dynamic Crop Selection & ROI Scaling (`ROICropAgent`) implemented, benchmarked, verified, reviewed, and documentally consolidated. Kaggle validation SHIP PASSED WITH OBSERVATIONS (Status `Complete`, initial observed rating `600.0`). Ready for version tag `v0.2-e02-roicrop`.
 
 ## Objective
 
@@ -18,18 +18,20 @@ DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP
 ## Repository state
 
 - Tag Git Baseline: `v0.1-e01-baseline` (main aligned with origin/main).
+- Tag Git E02: ready for `v0.2-e02-roicrop`.
 - Modular package structure under `src/agricola/`.
-- `README.md` updated with E01 baseline, Kaggle score 600.0, and E02 entrypoint.
+- `README.md` updated with E01 baseline, E02 evolution, iteration table, and documentation links.
 - Virtual environment `.venv` with Python 3.12 and `kaggle-environments`.
 - Strategy `ROICropAgent` implemented in `src/agricola/strategy/roi_crop.py`.
 - Entrypoint `src/agricola/agent.py` updated to run `ROICropAgent`.
-- Standalone submission bundle `submission/submission.py` updated and verified.
+- Standalone submission bundle `submission/submission.py` updated, verified, and submitted to Kaggle.
 - Unit tests (`tests/test_roi_crop.py`) added; full test suite 100% passing (7/7).
 - Benchmark evaluation runner (`scripts/run_eval.py`) with per-turn agent latency tracking.
 - Evidence files generated and consolidated under `docs/versions/`:
   - `docs/versions/E02_build_antigravity.md`
   - `docs/versions/E02_verify_review_antigravity.md`
   - `docs/versions/E02_simulation_analysis.md`
+  - `docs/versions/E02_ship_review_antigravity.md`
 
 ## Verified E01 Baseline Operational Cycle
 
@@ -62,17 +64,20 @@ Key observations from E01 VERIFY trace:
 | **Median Final Money** | $3528.00 | $5837.00 | +$2309.00 |
 | **Agent Mean Turn Latency** | 0.0142 ms/turn | 0.0267 ms/turn | +0.0125 ms/turn |
 | **Simulation Step Time** | 3.69 ms/step | 3.45 ms/step | -0.24 ms/step |
+| **Kaggle Platform Status** | Validated (`600.0` initial rating) | **Complete** (initial observed rating `600.0`) | Validated |
 
-## Main Verified Interpretation of E02
+> *Note: Local benchmark metrics and Kaggle Skill Rating measure different aspects of the agent and must not be compared directly.*
+
+## Main Verified Interpretation & Observations of E02
 
 > **E02 migliora principalmente perché la regola ROI identifica `MELON` come coltura economicamente dominante nelle condizioni osservate.**
 
 Key verified findings:
 1. `MELON` is Rank 1 under both the implemented `Yield=2` model and the environment's `max_yield = 6` watered yield.
-2. Completed sales cycles in the 720-step simulation are 100% `MELON`, generating over +$1600 gross revenue per harvest on tile `(4, 4)` vs +$140 for `CARROT`.
+2. Completed sales cycles in the 720-step simulation generate over +$1600 gross revenue per harvest on tile `(4, 4)` vs +$140 for `CARROT`.
 3. Late in the season (Day 21), l'agente selects `STRAWBERRY` as its ROI rises above `MELON`.
-4. E02 limits identified: End-of-Season Horizon (unharvested late crops), Single-Tile Limitation `(4, 4)`, Immediate Selling (no market sell timing), and Yield Model Simplification (`Yield=2`).
+4. Open observations for future iterations: End-of-Season Horizon (unharvested late crops), Single-Tile Limitation `(4, 4)`, Immediate Selling (no market sell timing), and Yield Model Simplification (`Yield=2`).
 
 ## Next step
 
-E02 — SHIP: submission Kaggle reale, verifica del risultato esterno e successivo tag di versione (`v0.2-e02-roicrop`).
+Creazione del tag Git `v0.2-e02-roicrop`. Le evidenze raccolte in E02 saranno utilizzate per definire la successiva iterazione sperimentale.
