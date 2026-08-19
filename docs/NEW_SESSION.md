@@ -1,243 +1,277 @@
-# Nuova sessione — Kaggriculture Agent
+# NEW SESSION — Kaggriculture Agent
 
-Continuiamo il progetto **Kaggriculture Agent**, usato come caso reale per verificare sul campo il metodo descritto nel libro *Lavorare con l'AI*.
+## Stato del progetto
 
-## Stato raggiunto
+Il progetto ha completato e consolidato due iterazioni sperimentali supervisionate.
 
-La prima iterazione **E01** è completata dal punto di vista dello sviluppo, della validazione Kaggle e della documentazione.
+Metodo adottato:
 
-Repository locale:
+`DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP`
+
+Repository:
 
 `C:\Users\pietr\Projects\kaggriculture-agent`
 
-Repository GitHub:
-
-`pieva/kaggriculture-agent`
-
-Branch:
+Branch corrente:
 
 `main`
 
-Tag della baseline:
+Stato Git atteso:
+
+- `main` allineato con `origin/main`;
+- working tree pulito.
+
+Ultimo commit consolidato:
+
+`107e82b — Finalize E02 documentation`
+
+Tag disponibili:
+
+- `v0.1-e01-baseline`
+- `v0.2-e02-roicrop`
+
+---
+
+## E01 — Baseline
+
+Strategia:
+
+`CarrotLoopAgent`
+
+Caratteristiche principali:
+
+- coltura fissa `CARROT`;
+- singola tile `(4, 4)`;
+- nessun movimento;
+- ciclo operativo:
+
+`BUY_SEED → PLANT → WATER → HARVEST → SELL`
+
+Baseline quantitativa definitiva ricostruita dai dati persistenti:
+
+- Mean Final Money: `$3567.63`;
+- Sample Std Dev (`ddof=1`): `± $205.38`;
+- Median Final Money: `$3528.00`;
+- Overall Win Rate: `66.67%`;
+- Win Rate vs `starter`: `0.00%`;
+- Draw Rate vs `starter`: `100.00%`.
+
+Tag:
 
 `v0.1-e01-baseline`
 
-Il repository è stato lasciato con working tree pulito e allineato con `origin/main`.
+La submission Kaggle E01 era stata validata inizialmente con rating osservato `600.0`.
 
-## E01 — cosa abbiamo fatto
+In uno screenshot successivo il rating E01 risultava `328.4`.
 
-Abbiamo utilizzato Google Antigravity con un workflow supervisionato:
+Il rating Kaggle è dinamico e non deve essere confuso con le metriche del benchmark locale.
 
-`DEFINE → PLAN → REVIEW → BUILD → VERIFY → REVIEW → SHIP`
+---
 
-Antigravity ha prodotto una prima baseline rule-based denominata `CarrotLoopAgent`.
+## E02 — Dynamic Crop Selection & ROI Scaling
 
-La struttura principale comprende:
+Strategia:
 
-- `GameState`, che interpreta l'osservazione dell'ambiente;
-- `ActionBuilder`, che costruisce le azioni;
-- `CarrotLoopAgent`, che implementa la strategia;
-- `agent.py`, che costituisce l'entry point;
-- infrastruttura di evaluation;
-- script per evaluation e build della submission;
-- test automatici;
-- `submission/submission.py` standalone per Kaggle.
+`ROICropAgent`
 
-## Validazione Kaggle
+Variabile sperimentale modificata rispetto a E01:
 
-La baseline è stata sottoposta realmente alla competizione Kaggriculture.
+**selezione dinamica della coltura in funzione del ROI/giorno e della liquidità disponibile**
 
-La submission Kaggle è stata accettata con successo e ha ottenuto uno score iniziale di **600.0**.
+Formula implementata:
 
-Abbiamo conservato gli screenshot:
+`NetProfitPerDay(c) = ((SellPrice_c × Yield_c) - SeedPrice_c) / Days_c`
 
-- `E01-004_kaggle_submission_requirements.png`
-- `E01-005_kaggle_submission_ready.png`
-- `E01-006_kaggle_submission_successful.png`
+L'esperimento mantiene invariati:
 
-## Benchmark locale
+- singola tile `(4, 4)`;
+- assenza di movimento;
+- infrastruttura di benchmark;
+- durata degli episodi;
+- avversari;
+- ciclo operativo fondamentale.
 
-Abbiamo eseguito il benchmark locale ottenendo:
+Tag:
 
-- 30 episodi;
-- completion rate 100%;
-- disqualification rate 0%;
-- overall win rate 66,67%;
-- 20 vittorie, 0 sconfitte, 10 pareggi;
-- mean final money $3567.63;
-- vittorie 100% contro `pass`;
-- vittorie 100% contro `random`;
-- 0% contro `starter`.
+`v0.2-e02-roicrop`
 
-Il risultato è memorizzato in:
+### Risultati benchmark locale E02
 
-`results/e01_baseline.json`
+- Total Episodes: `30`;
+- Completion Rate: `100.00%`;
+- Disqualification Rate: `0.00%`;
+- Overall Win Rate: `100.00%`;
+- Win Rate vs `starter`: `100.00%`;
+- Mean Final Money: `$5857.17`;
+- Sample Std Dev (`ddof=1`): `± $132.37`;
+- Median Final Money: `$5837.00`;
+- Agent Mean Turn Latency: `0.0267 ms/turno`.
 
-## Esecuzione osservabile da PowerShell
+Confronto E01 → E02:
 
-Dopo la validazione abbiamo voluto capire realmente il codice generato, anziché limitarci a constatare che test e submission funzionassero.
+- Mean Final Money: `$3567.63 → $5857.17`;
+- incremento assoluto: `+$2289.53`;
+- incremento percentuale: `+64.18%`;
+- Win Rate vs `starter`: `0% → 100%`.
 
-Poiché il progetto utilizza un layout `src/`, per l'esecuzione interattiva è stato necessario impostare temporaneamente:
+Ipotesi E02:
 
-```powershell
-$env:PYTHONPATH = "$PWD\src"
-```
+`SUPPORTATA nelle condizioni sperimentali testate`
 
-Abbiamo quindi eseguito direttamente la baseline e osservato la sequenza delle decisioni.
+---
 
-La traccia ha mostrato concretamente il ciclo:
+## Evidenza osservabile del miglioramento E02
 
-`BUY_SEED → PLANT → WATER → PASS → HARVEST → PLANT → SELL`
+La simulation analysis ha mostrato che il miglioramento non deriva genericamente da una strategia complessa, ma soprattutto dal fatto che la regola ROI identifica `MELON` come coltura economicamente dominante nelle condizioni osservate.
 
-Da questa osservazione sono emersi elementi importanti:
+Principali evidenze:
 
-- viene utilizzata soltanto `CARROT`;
-- il farmer resta sulla singola casella iniziale;
-- il seme successivo viene acquistato anticipatamente;
-- farmer e mercato possono effettuare azioni nello stesso turno;
-- l'irrigazione influenza la resa;
-- il raccolto viene venduto appena disponibile;
-- una parte significativa dello stato disponibile non è ancora sfruttata;
-- il costo del seme osservato durante l'esecuzione non coincide con un valore statico presente nella configurazione locale.
+- `MELON` risulta Rank 1 sia con il modello implementato `Yield=2` sia utilizzando `max_yield`;
+- i primi due cicli completati e venduti sono `MELON`;
+- l'irrigazione consente di raggiungere la resa massima;
+- i due raccolti completati producono un profitto netto complessivo di circa `+$3117`;
+- nella parte finale della stagione viene osservata anche la selezione di `STRAWBERRY`.
 
-## Documentazione E01
+Conclusione interpretativa consolidata:
 
-Abbiamo creato:
+> E02 migliora principalmente perché la regola ROI identifica `MELON` come coltura economicamente dominante nelle condizioni osservate.
 
-`docs/versions/E01_baseline.md`
+---
 
-Il documento descrive:
+## Limiti osservati in E02
 
-- architettura della prima versione;
-- responsabilità dei componenti;
-- funzionamento della strategia;
-- comandi PowerShell utilizzati;
-- output dell'esecuzione osservabile;
-- interpretazione della traccia;
-- benchmark;
-- rapporto tra struttura modulare e submission standalone;
-- limiti osservati;
-- punti di partenza per le evoluzioni successive.
+Le evidenze hanno fatto emergere quattro dimensioni ancora non ottimizzate.
 
-Questo file inaugura una serie destinata a documentare progressivamente le versioni:
+### 1. End-of-Season Horizon
 
-```text
-docs/versions/E01_baseline.md
-docs/versions/E02_....md
-docs/versions/E03_....md
-```
+L'agente può acquistare o piantare una coltura che non ha tempo di maturare prima della fine della stagione.
 
-## Git
+Nell'episodio osservato sono stati spesi soldi per semi in coda stagione che non hanno prodotto ricavi entro il turno 719.
 
-L'ultimo commit documenta l'esecuzione E01 e la validazione Kaggle.
+### 2. Single-Tile Limitation
 
-Alla fine della sessione:
+Il farmer continua a operare esclusivamente sulla casella `(4, 4)`.
 
-```text
-On branch main
-Your branch is up to date with 'origin/main'.
+La griglia disponibile rimane largamente inutilizzata.
 
-nothing to commit, working tree clean
-```
+### 3. Immediate Selling
 
-Non è stato creato un nuovo tag dopo la documentazione: `v0.1-e01-baseline` rimane il riferimento alla baseline software sottoposta a Kaggle.
+Il raccolto viene venduto immediatamente.
 
-# Prima di E02 — esecuzione osservabile dentro Antigravity
+Non esiste ancora alcuna strategia di market timing.
 
-Prima di iniziare E02 voglio completare un ultimo esperimento metodologico su E01.
+### 4. Yield Model Simplification
 
-Abbiamo già eseguito e osservato la baseline manualmente da PowerShell.
+La formula ROI utilizza:
 
-Adesso voglio verificare se lo stesso processo di **VERIFY** può essere condotto direttamente attraverso Antigravity, senza impartire manualmente i comandi da una console PowerShell esterna.
+`Yield = 2`
 
-Questa prova deve utilizzare **la stessa baseline E01**.
+mentre l'ambiente dispone di `max_yield` specifici per coltura.
 
-Non dobbiamo ancora introdurre alcuna evoluzione strategica.
+La semplificazione non altera la scelta iniziale di `MELON`, che rimane Rank 1, ma limita la precisione economica del modello.
 
-## Obiettivo della prova
+---
 
-Chiederemo ad Antigravity di:
+## SHIP E02
 
-1. eseguire localmente la baseline E01;
-2. produrre una traccia osservabile di un singolo episodio;
-3. mostrare almeno:
-   - step;
-   - day;
-   - hour;
-   - money;
-   - semi disponibili;
-   - raccolto disponibile;
-   - stato della tile;
-   - azione del farmer;
-   - azione di mercato;
-   - reward finale;
-4. rendere riconoscibile il ciclo `BUY_SEED → PLANT → WATER → HARVEST → SELL`;
-5. spiegare eventuali problemi incontrati durante l'esecuzione;
-6. non modificare la strategia.
+La submission standalone:
 
-Non suggeriamo preventivamente ad Antigravity come gestire il layout `src/` o il problema di importazione già incontrato con PowerShell.
+`submission/submission.py`
 
-Vogliamo verificare se identifica autonomamente il problema e come propone di risolverlo.
+è stata:
 
-Qualunque modifica persistente al repository deve essere proposta prima e sottoposta ad approvazione umana.
+- rigenerata;
+- verificata con la suite di test;
+- caricata realmente su Kaggle;
+- completata con Status `Complete`.
 
-## Evidenza da conservare
+Rating iniziale osservato E02:
 
-Se l'esecuzione riesce, conserviamo uno screenshot indicativamente come:
+`600.0`
 
-`docs/screenshots/E01-007_antigravity_observable_execution.png`
+Valutazione SHIP:
 
-Dobbiamo poi confrontare l'esecuzione osservata attraverso Antigravity con quella già ottenuta manualmente da PowerShell.
+`PASSED WITH OBSERVATIONS`
 
-L'obiettivo non è verificare nuovamente la strategia, ma verificare il **workflow di supervisione**:
+Interpretazione corretta:
 
-`Coding Agent → esecuzione → osservazione → interpretazione umana`
+> E02 ha superato la validazione esterna Kaggle ed è entrata nel sistema competitivo con rating iniziale osservato `600.0`. Il benchmark locale dimostra il miglioramento rispetto a E01 nelle condizioni sperimentali testate; il confronto competitivo esterno richiede invece l'osservazione dell'evoluzione successiva del rating Kaggle.
 
-Questa prova è particolarmente importante per *Lavorare con l'AI* perché permette di verificare se il Coding Agent accompagna effettivamente anche la fase **VERIFY**, e non soltanto **PLAN** e **BUILD**.
+Non confrontare direttamente:
 
-Solo dopo avere completato, documentato e discusso questa prova considereremo definitivamente terminata E01 dal punto di vista metodologico.
+- Mean Final Money locale;
+- Kaggle Skill Rating.
 
-# Dopo la prova — apertura di E02
+Misurano aspetti differenti.
 
-È stato preparato:
+---
 
-`docs/prompts/E02_start.md`
+## Evidenze principali E02
 
-Questo sarà il prompt operativo da fornire ad Antigravity dopo la prova di esecuzione E01.
+Implementation Plan:
 
-La prima attività di E02 sarà:
+`docs/plans/E02_Dynamic_Crop_Selection_&_ROI_Scaling.md`
 
-1. rileggere il repository;
-2. confrontare codice e `docs/versions/E01_baseline.md`;
-3. aggiornare `docs/PROJECT_STATE.md`;
-4. aggiornare `docs/EXPERIMENT_LOG.md`;
-5. non modificare ancora il codice;
-6. proporre da 2 a 4 possibili evoluzioni incrementali;
-7. associare a ciascuna un'ipotesi verificabile;
-8. individuare le metriche confrontabili con E01;
-9. raccomandare una sola evoluzione.
+Benchmark:
 
-E02 dovrà essere **una modifica incrementale controllata**, non una riscrittura generale dell'agente.
+`results/e02_roi_crop.json`
 
-Antigravity non deve implementarla finché non avremo esaminato e approvato il piano.
+BUILD:
 
-# Obiettivo della prossima sessione con ChatGPT
+`docs/versions/E02_build_antigravity.md`
 
-Procediamo in questo ordine:
+VERIFY REVIEW:
 
-1. prepariamo il prompt preciso per far eseguire E01 ad Antigravity;
-2. osserviamo cosa fa Antigravity senza suggerirgli la soluzione tecnica;
-3. analizziamo insieme l'esecuzione e gli eventuali problemi;
-4. confrontiamo il risultato con l'esecuzione PowerShell già documentata;
-5. decidiamo se aggiornare `E01_baseline.md`;
-6. conserviamo lo screenshot `E01-007`;
-7. chiudiamo definitivamente la verifica metodologica di E01;
-8. forniamo ad Antigravity `E02_start.md`;
-9. verifichiamo gli aggiornamenti a `PROJECT_STATE.md` ed `EXPERIMENT_LOG.md`;
-10. analizziamo le alternative proposte per E02;
-11. scegliamo l'ipotesi sperimentale;
-12. esaminiamo il piano prima di autorizzare **BUILD**.
+`docs/versions/E02_verify_review_antigravity.md`
 
-Voglio continuare a lavorare come supervisore e non come sviluppatore: Antigravity propone, esegue e implementa; noi analizziamo criticamente piani, azioni, codice, risultati ed evidenze.
+Simulation Analysis:
 
-L'obiettivo parallelo rimane verificare sul campo se questo workflow conferma, smentisce o richiede di precisare quanto abbiamo scritto in *Lavorare con l'AI* sullo sviluppo supervisionato con Coding Agent.
+`docs/versions/E02_simulation_analysis.md`
+
+SHIP REVIEW:
+
+`docs/versions/E02_ship_review_antigravity.md`
+
+Screenshot Kaggle:
+
+- `docs/screenshots/E02-004_kaggle_submission_ready.png`
+- `docs/screenshots/E02-005_kaggle_submission_successful.png`
+
+Prompt E02:
+
+`docs/prompts/E02-01_start.md`
+
+fino a:
+
+`docs/prompts/E02-15_final_consolidation.md`
+
+---
+
+## Punto di partenza della prossima sessione
+
+Non iniziare automaticamente E03.
+
+La prossima attività consiste nel decidere quale **singola variabile sperimentale** modificare rispetto a E02.
+
+Le principali candidate emerse dalle evidenze sono:
+
+- End-of-Season Horizon;
+- espansione multi-tile;
+- market timing della vendita;
+- utilizzo di `max_yield` nella formula ROI.
+
+Prima di scegliere, confrontare:
+
+1. impatto potenziale;
+2. isolamento sperimentale;
+3. complessità introdotta;
+4. capacità di attribuire il risultato alla singola modifica;
+5. valore didattico e metodologico dell'esperimento.
+
+La successiva iterazione deve continuare a mantenere la logica:
+
+**una modifica strategica principale per esperimento**
+
+e deve essere definita solo dopo revisione delle evidenze E02.
+
+<!-- END OF DOCUMENT -->
