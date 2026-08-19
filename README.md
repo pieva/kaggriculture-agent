@@ -1,18 +1,27 @@
 # Kaggriculture Agent
 
-Agente competitivo per la competizione Kaggle **Kaggriculture** sviluppato in modo iterativo e supervisionato.
+Agente competitivo per la competizione Kaggle **Kaggriculture** sviluppato attraverso un approccio iterativo e supervisionato.
 
 ## Overview del Progetto
 
 Kaggriculture è una simulazione economica turn-based 1v1 gestita tramite il pacchetto `kaggle-environments`.
 L'obiettivo è massimizzare il capitale finale (money/net worth) dell'azienda agricola al termine di una stagione di 30 giorni di gioco (720 turni).
 
-### Stato Corrente: Fase E01 (Baseline & Infrastruttura)
-- **Architettura modulare**: pacchetto Python in `src/agricola/`.
+### Stato Corrente: E01 Completata (`v0.1-e01-baseline`)
 - **Baseline Agent**: `CarrotLoopAgent` (strategia deterministica basata sul ciclo di coltivazione e vendita delle carote).
-- **Bundling Submission**: script per impacchettare l'agente in un file unico standalone `submission/submission.py`.
-- **Suite di Test**: unit test e integration test per verificare parsing dello stato, costruzione azioni e validità della submission.
-- **Valutazione Benchmark**: runner CLI per eseguire batterie di simulazioni locali (30 episodi $\times$ 720 turni) contro agenti di riferimento (`pass`, `random`, `starter`).
+- **Validazione Kaggle**: Submission caricata con successo sulla piattaforma Kaggle, ottenendo uno score iniziale sul leaderboard di **`600.0`**.
+- **Verifica Osservabile Antigravity**: Esecuzione locale ed ispezione comportamentale documentata in [`docs/versions/E01_verify_antigravity.md`](docs/versions/E01_verify_antigravity.md).
+- **Architettura Modulare**: Pacchetto Python in `src/agricola/`, bundler per Kaggle in `scripts/build_submission.py` e suite di test in `tests/`.
+- **Benchmark Locale**: Runner CLI (`scripts/run_eval.py`) con report di metriche registrato in [`results/e01_baseline.json`](results/e01_baseline.json).
+
+---
+
+## Documentazione del Repository
+
+- **Versioni e Analisi**: Disponibili sotto [`docs/versions/`](docs/versions/) (contiene [`E01_baseline.md`](docs/versions/E01_baseline.md) ed [`E01_verify_antigravity.md`](docs/versions/E01_verify_antigravity.md)).
+- **Prompt Operativi**: Conservati sotto [`docs/prompts/`](docs/prompts/).
+- **Registro Esperimenti**: Consultabile in [`docs/EXPERIMENT_LOG.md`](docs/EXPERIMENT_LOG.md) e [`docs/PROJECT_STATE.md`](docs/PROJECT_STATE.md).
+- **Prossima Iterazione**: Il punto di ingresso per avviare la fase E02 è la prompt [`docs/prompts/E02-01_start.md`](docs/prompts/E02-01_start.md).
 
 ---
 
@@ -44,7 +53,8 @@ kaggriculture-agent/
 ├── docs/                       # Documentazione del progetto e registro esperimenti
 │   ├── EXPERIMENT_LOG.md
 │   ├── PROJECT_STATE.md
-│   └── prompts/
+│   ├── prompts/                # Prompt operativi (es. E02-01_start.md)
+│   └── versions/               # Documenti di versione (E01_baseline.md, E01_verify_antigravity.md)
 ├── src/
 │   └── agricola/               # Pacchetto sorgente dell'agente
 │       ├── agent.py            # Entrypoint per Kaggle Environments
