@@ -18,7 +18,8 @@ Il progetto adotta rigorosamente il ciclo di sviluppo supervisionato:
 | Esperimento | Strategia | Variabile Modificata | Mean Final Money (Locale) | Win Rate vs `starter` | Validazione Kaggle |
 | :--- | :--- | :--- | ---: | ---: | :--- |
 | **E01** | `CarrotLoopAgent` | Baseline: monocultura statica `CARROT` | `$3567.63 ± $205.38` | 0.00% (100% Draw) | Validata (`v0.1-e01-baseline`) |
-| **E02** | `ROICropAgent` | Selezione dinamica coltura via ROI/giorno | **`$5857.17 ± $132.37`** | **100.00% Vittorie** | **Complete** (rating iniziale `600.0`) |
+| **E02** | `ROICropAgent` | Selezione dinamica coltura via ROI/giorno | `$5857.17 ± $132.37` | 100.00% Vittorie | Complete (`v0.2-e02-roicrop`) |
+| **E03** | `MultiTileROIAgent` | Espansione coltivazione su cluster 2x2 (4 tile) | **`$14682.47 ± $1164.33`** | **100.00% Vittorie** | **Complete** (`v0.3-e03-multitile`) |
 
 > *Nota metodologica: Le metriche del benchmark locale ($ capitale finale) ed il Kaggle Skill Rating misurano aspetti differenti dell'agente e non devono essere confrontati direttamente.*
 
@@ -26,11 +27,12 @@ Il progetto adotta rigorosamente il ciclo di sviluppo supervisionato:
 
 ## Stato del Repository
 
-- **Baseline Tag**: `v0.1-e01-baseline` (main allineato con `origin/main`).
-- **Iterazione E02**: Completata, verificata, revisionata e consolidata (pronta per il tag `v0.2-e02-roicrop`).
-- **Strategia Corrente**: `ROICropAgent` in `src/agricola/strategy/roi_crop.py`.
+- **Baseline Tag**: `v0.1-e01-baseline` (main allineato con origin/main).
+- **Tag E02**: `v0.2-e02-roicrop`.
+- **Iterazione E03**: Completata, verificata, revisionata e consolidata (`v0.3-e03-multitile`).
+- **Strategia Corrente**: `MultiTileROIAgent` in `src/agricola/strategy/multi_tile_roi.py`.
 - **Submission Standalone**: Generata in `submission/submission.py` e verificata con successo su Kaggle.
-- **Suite di Test**: 7/7 test automatizzati superati (`pytest tests/`).
+- **Suite di Test**: 14/14 test automatizzati superati (`pytest tests/`).
 
 ---
 
@@ -51,9 +53,18 @@ Le evidenze analitiche e quantitative per ciascuna iterazione sono disponibili s
 - [Rapporto SHIP REVIEW E02](docs/versions/E02_ship_review_antigravity.md)
 - [Risultati Benchmark E02](results/e02_roi_crop.json)
 
+### Iterazione E03 (Multi-Tile Scaling)
+- [Implementation Plan E03](docs/plans/E03_Multi_Tile_Scaling.md)
+- [Rapporto BUILD E03](docs/versions/E03_build_antigravity.md)
+- [Rapporto VERIFY E03](docs/versions/E03_verify_antigravity.md)
+- [Rapporto REVIEW E03](docs/versions/E03_review_antigravity.md)
+- [Rapporto SHIP E03](docs/versions/E03_ship_antigravity.md)
+- [Risultati Benchmark E03](results/e03_multi_tile.json)
+
 ### Registri di Progetto
 - [Experiment Log](docs/EXPERIMENT_LOG.md)
 - [Project State](docs/PROJECT_STATE.md)
+- [New Session Restart Point](docs/NEW_SESSION.md)
 
 ---
 
@@ -62,14 +73,14 @@ Le evidenze analitiche e quantitative per ciascuna iterazione sono disponibili s
 Il progetto richiede Python 3.10+ (raccomandato **Python 3.12**).
 
 ```bash
-# Creazione dell'ambiente virtuale con Python 3.12 (tramite uv o venv)
-uv venv --python 3.12 .venv
+# Creazione dell'ambiente virtuale con Python 3.12 (tramite venv)
+python -m venv .venv
 
 # Attivazione dell'ambiente virtuale (Windows PowerShell)
 .\.venv\Scripts\activate
 
 # Installazione delle dipendenze di sviluppo
-uv pip install -e ".[dev]"
+pip install -e ".[dev]"
 ```
 
 ---
@@ -85,7 +96,8 @@ kaggriculture-agent/
 ├── docs/                       # Documentazione del progetto e registro esperimenti
 │   ├── EXPERIMENT_LOG.md
 │   ├── PROJECT_STATE.md
-│   ├── plans/                  # Implementation plans (es. E02_Dynamic_Crop_Selection_&_ROI_Scaling.md)
+│   ├── NEW_SESSION.md
+│   ├── plans/                  # Implementation plans (es. E03_Multi_Tile_Scaling.md)
 │   ├── prompts/                # Prompt operativi del processo supervisionato
 │   ├── screenshots/            # Evidenze visive delle submission Kaggle
 │   └── versions/               # Documenti di versione e review analitiche
@@ -94,13 +106,13 @@ kaggriculture-agent/
 │       ├── agent.py            # Entrypoint per Kaggle Environments
 │       ├── core/               # State parsing (state.py) ed Action building (actions.py)
 │       ├── baseline/           # CarrotLoopAgent (E01)
-│       ├── strategy/           # ROICropAgent (E02)
+│       ├── strategy/           # ROICropAgent (E02), MultiTileROIAgent (E03)
 │       └── evaluation/         # Runner CLI e latenza agente (runner.py)
 ├── submission/
 │   └── submission.py           # Submission standalone per Kaggle
 ├── tests/                      # Suite di unit ed integration smoke test
 ├── scripts/                    # Scripts di bundling e benchmark
-└── results/                    # Report JSON dei benchmark locali (e01_baseline.json, e02_roi_crop.json)
+└── results/                    # Report JSON dei benchmark locali (e01_baseline.json, e02_roi_crop.json, e03_multi_tile.json)
 ```
 
 ---
@@ -119,5 +131,5 @@ kaggriculture-agent/
 
 ### 3. Esecuzione del Benchmark Locale
 ```bash
-.\.venv\Scripts\python.exe scripts/run_eval.py --opponents pass,random,starter --episodes 10 --output results/e02_roi_crop.json
+.\.venv\Scripts\python.exe scripts/run_eval.py --opponents pass,random,starter --episodes 10 --output results/e03_multi_tile.json
 ```

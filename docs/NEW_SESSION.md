@@ -2,7 +2,7 @@
 
 ## Stato del progetto
 
-Il progetto ha completato e consolidato due iterazioni sperimentali supervisionate.
+Il progetto ha completato e consolidato tre iterazioni sperimentali supervisionate.
 
 Metodo adottato:
 
@@ -23,281 +23,132 @@ Stato Git atteso:
 
 Ultimo commit consolidato:
 
-`107e82b — Finalize E02 documentation`
+`Finalize E03 multi-tile scaling experiment`
 
 Tag disponibili:
 
 - `v0.1-e01-baseline`
 - `v0.2-e02-roicrop`
+- `v0.3-e03-multitile`
+
+---
+
+## Progressione Sperimentale
+
+`E01 operational baseline → E02 economic crop selection → E03 production scaling`
 
 ---
 
 ## E01 — Baseline
 
-Strategia:
-
-`CarrotLoopAgent`
-
-Caratteristiche principali:
+Strategia: `CarrotLoopAgent`
 
 - coltura fissa `CARROT`;
 - singola tile `(4, 4)`;
 - nessun movimento;
-- ciclo operativo:
+- ciclo operativo: `BUY_SEED → PLANT → WATER → HARVEST → SELL`
 
-`BUY_SEED → PLANT → WATER → HARVEST → SELL`
-
-Baseline quantitativa definitiva ricostruita dai dati persistenti:
-
-- Mean Final Money: `$3567.63`;
-- Sample Std Dev (`ddof=1`): `± $205.38`;
+Risultati benchmark locale:
+- Mean Final Money: `$3567.63 ± $205.38`;
 - Median Final Money: `$3528.00`;
 - Overall Win Rate: `66.67%`;
-- Win Rate vs `starter`: `0.00%`;
-- Draw Rate vs `starter`: `100.00%`.
+- Win Rate vs `starter`: `0.00%` (100% pareggi).
 
-Tag:
-
-`v0.1-e01-baseline`
-
-La submission Kaggle E01 era stata validata inizialmente con rating osservato `600.0`.
-
-In uno screenshot successivo il rating E01 risultava `328.4`.
-
-Il rating Kaggle è dinamico e non deve essere confuso con le metriche del benchmark locale.
+Tag: `v0.1-e01-baseline`
 
 ---
 
 ## E02 — Dynamic Crop Selection & ROI Scaling
 
-Strategia:
+Strategia: `ROICropAgent`
 
-`ROICropAgent`
+Variabile sperimentale: **selezione dinamica della coltura basata sul ROI/giorno e sulla liquidità disponibile**.
 
-Variabile sperimentale modificata rispetto a E01:
+Formula: `NetProfitPerDay = ((SellPrice * 2.0) - SeedPrice) / Days`
 
-**selezione dinamica della coltura in funzione del ROI/giorno e della liquidità disponibile**
+Risultati benchmark locale:
+- Mean Final Money: `$5857.17 ± $132.37` (`+64.18%` vs E01);
+- Median Final Money: `$5837.00`;
+- Overall Win Rate: `100.00%`;
+- Win Rate vs `starter`: `100.00%`.
 
-Formula implementata:
+Tag: `v0.2-e02-roicrop`
 
-`NetProfitPerDay(c) = ((SellPrice_c × Yield_c) - SeedPrice_c) / Days_c`
+Submission Kaggle E02: Status `Complete`, rating iniziale osservato `600.0` (successivamente `285.1`).
 
-L'esperimento mantiene invariati:
+---
 
-- singola tile `(4, 4)`;
-- assenza di movimento;
-- infrastruttura di benchmark;
-- durata degli episodi;
-- avversari;
-- ciclo operativo fondamentale.
+## E03 — Multi-Tile Scaling
 
-Tag:
+Strategia: `MultiTileROIAgent`
 
-`v0.2-e02-roicrop`
+Variabile sperimentale: **espansione della coltivazione da 1 tile a un cluster compatto 2×2 di 4 tile adiacenti `{(4,4), (4,3), (3,4), (3,3)}` con spatial task prioritization (`HARVEST > PLANT > WATER`) e navigazione Manhattan**.
 
-### Risultati benchmark locale E02
+Modifiche abilitanti:
+- Bug fix del formato delle azioni di movimento (`["NORTH"]`, `["SOUTH"]`, `["EAST"]`, `["WEST"]`).
+- Coda di priorità delle tile e tie-breaking deterministico `(y, x)`.
+- Acquisto semi matched al numero di tile vuote gestite.
 
+### Risultati benchmark locale E03
 - Total Episodes: `30`;
 - Completion Rate: `100.00%`;
 - Disqualification Rate: `0.00%`;
-- Overall Win Rate: `100.00%`;
-- Win Rate vs `starter`: `100.00%`;
-- Mean Final Money: `$5857.17`;
-- Sample Std Dev (`ddof=1`): `± $132.37`;
-- Median Final Money: `$5837.00`;
-- Agent Mean Turn Latency: `0.0267 ms/turno`.
+- Overall Win Rate: `100.00%` (30W / 0L / 0D);
+- Win Rate vs `pass`: `100.00%` ($15,257.00);
+- Win Rate vs `random`: `100.00%` ($14,284.10);
+- Win Rate vs `starter`: `100.00%` ($14,506.30);
+- Mean Final Money: **`$14682.47`**;
+- Sample Std Dev (`ddof=1`): **`± $1164.33`**;
+- Median Final Money: **`$14146.00`**;
+- Agent Mean Turn Latency: **`0.0698 ms/turno`**.
 
-Confronto E01 → E02:
+Confronto E02 → E03:
+- Mean Final Money: `$5857.17 → $14682.47`;
+- Incremento assoluto: `+$8825.30`;
+- Incremento percentuale: **`+150.68%`**;
+- Ipotesi Economica E03: **SUPPORTATA**.
 
-- Mean Final Money: `$3567.63 → $5857.17`;
-- incremento assoluto: `+$2289.53`;
-- incremento percentuale: `+64.18%`;
-- Win Rate vs `starter`: `0% → 100%`.
+### VERIFY Osservabile
+- Episodio completo 720 step vs `starter`: Finale **$14,226.00** vs $3,421.00;
+- Utilizzo reale di tutte e 4 le tile;
+- Movimento direzionale verificato;
+- Nessuna irrigation starvation (4 watering + 3 step = 7h/giorno, 17h buffer);
+- Zero deadlock, zero oscillazioni, zero disqualification.
 
-Ipotesi E02:
+### REVIEW & SHIP
+- Experimental Integrity: `PASSED`
+- Operational Readiness: `READY FOR SHIP`
+- Economic Hypothesis: `SUPPORTED`
+- SHIP: **`PASSED`**
+- Evidenza visuale Kaggle: [`docs/screenshots/E03-001_kaggle_submission_successful.png`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/screenshots/E03-001_kaggle_submission_successful.png)
+- Descrizione sottomissione: `E03 supervised iteration: Multi-Tile ROI Agent 2x2 cluster`
+- Status Kaggle: **`Complete`**
+- Skill Rating iniziale E03 osservato: **`600.0`** (Rating E02 nello stesso screenshot: `285.1`).
 
-`SUPPORTATA nelle condizioni sperimentali testate`
-
----
-
-## Evidenza osservabile del miglioramento E02
-
-La simulation analysis ha mostrato che il miglioramento non deriva genericamente da una strategia complessa, ma soprattutto dal fatto che la regola ROI identifica `MELON` come coltura economicamente dominante nelle condizioni osservate.
-
-Principali evidenze:
-
-- `MELON` risulta Rank 1 sia con il modello implementato `Yield=2` sia utilizzando `max_yield`;
-- i primi due cicli completati e venduti sono `MELON`;
-- l'irrigazione consente di raggiungere la resa massima;
-- i due raccolti completati producono un profitto netto complessivo di circa `+$3117`;
-- nella parte finale della stagione viene osservata anche la selezione di `STRAWBERRY`.
-
-Conclusione interpretativa consolidata:
-
-> E02 migliora principalmente perché la regola ROI identifica `MELON` come coltura economicamente dominante nelle condizioni osservate.
-
----
-
-## Limiti osservati in E02
-
-Le evidenze hanno fatto emergere quattro dimensioni ancora non ottimizzate.
-
-### 1. End-of-Season Horizon
-
-L'agente può acquistare o piantare una coltura che non ha tempo di maturare prima della fine della stagione.
-
-Nell'episodio osservato sono stati spesi soldi per semi in coda stagione che non hanno prodotto ricavi entro il turno 719.
-
-### 2. Single-Tile Limitation
-
-Il farmer continua a operare esclusivamente sulla casella `(4, 4)`.
-
-La griglia disponibile rimane largamente inutilizzata.
-
-### 3. Immediate Selling
-
-Il raccolto viene venduto immediatamente.
-
-Non esiste ancora alcuna strategia di market timing.
-
-### 4. Yield Model Simplification
-
-La formula ROI utilizza:
-
-`Yield = 2`
-
-mentre l'ambiente dispone di `max_yield` specifici per coltura.
-
-La semplificazione non altera la scelta iniziale di `MELON`, che rimane Rank 1, ma limita la precisione economica del modello.
-
----
-
-## SHIP E02
-
-La submission standalone:
-
-`submission/submission.py`
-
-è stata:
-
-- rigenerata;
-- verificata con la suite di test;
-- caricata realmente su Kaggle;
-- completata con Status `Complete`.
-
-Rating iniziale osservato E02:
-
-`600.0`
-
-Valutazione SHIP:
-
-`PASSED WITH OBSERVATIONS`
-
-Interpretazione corretta:
-
-> E02 ha superato la validazione esterna Kaggle ed è entrata nel sistema competitivo con rating iniziale osservato `600.0`. Il benchmark locale dimostra il miglioramento rispetto a E01 nelle condizioni sperimentali testate; il confronto competitivo esterno richiede invece l'osservazione dell'evoluzione successiva del rating Kaggle.
-
-Non confrontare direttamente:
-
-- Mean Final Money locale;
-- Kaggle Skill Rating.
-
-Misurano aspetti differenti.
-
----
-
-## Evidenze principali E02
-
-Implementation Plan:
-
-`docs/plans/E02_Dynamic_Crop_Selection_&_ROI_Scaling.md`
-
-Benchmark:
-
-`results/e02_roi_crop.json`
-
-BUILD:
-
-`docs/versions/E02_build_antigravity.md`
-
-VERIFY REVIEW:
-
-`docs/versions/E02_verify_review_antigravity.md`
-
-Simulation Analysis:
-
-`docs/versions/E02_simulation_analysis.md`
-
-SHIP REVIEW:
-
-`docs/versions/E02_ship_review_antigravity.md`
-
-Screenshot Kaggle:
-
-- `docs/screenshots/E02-004_kaggle_submission_ready.png`
-- `docs/screenshots/E02-005_kaggle_submission_successful.png`
-
-Prompt E02:
-
-`docs/prompts/E02-01_start.md`
-
-fino a:
-
-`docs/prompts/E02-15_final_consolidation.md`
+Tag: `v0.3-e03-multitile`
 
 ---
 
 ## Punto di partenza della prossima sessione
 
-Non iniziare automaticamente E03.
+Non iniziare automaticamente E04.
 
-La prossima attività consiste nel decidere quale **singola variabile sperimentale** modificare rispetto a E02.
+La prossima attività consiste nell'analizzare le evidenze ed individuare la successiva **singola variabile sperimentale**.
 
-Le principali candidate emerse dalle evidenze sono:
+Prima di scegliere E04:
+1. Osservare l'evoluzione del Kaggle Skill Rating per E03 sul leaderboard globale;
+2. Confrontarla con i dati di E01 ed E02;
+3. Riesaminare le evidenze locali di benchmark;
+4. Identificare il principale limite residuo dell'agente.
 
-- End-of-Season Horizon;
-- espansione multi-tile;
-- market timing della vendita;
-- utilizzo di `max_yield` nella formula ROI.
-
-Prima di scegliere, confrontare:
-
-1. impatto potenziale;
-2. isolamento sperimentale;
-3. complessità introdotta;
-4. capacità di attribuire il risultato alla singola modifica;
-5. valore didattico e metodologico dell'esperimento.
+Le principali candidate per le prossime iterazioni rimangono:
+- End-of-Season Horizon (evitare acquisto/semina di colture che non maturano entro il turno 720);
+- Market Timing (gestione dinamica del momento di vendita);
+- Modello economico con `max_yield` specifico per coltura;
+- Scaling geografico oltre le 4 tile (sblocco nuovi quadranti via `BUY_LAND`).
 
 La successiva iterazione deve continuare a mantenere la logica:
 
 **una modifica strategica principale per esperimento**
-
-e deve essere definita solo dopo revisione delle evidenze E02.
-
-## Post-SHIP observation
-
-Dopo la chiusura e il tagging di E02 (`v0.2-e02-roicrop`), l'evoluzione
-del Kaggle Skill Rating ha fornito una nuova evidenza competitiva.
-
-- E01 `CarrotLoopAgent`: Skill Rating osservato `328.4`.
-- E02 `ROICropAgent`: Skill Rating osservato `273.0`.
-- Il leaderboard continua a mostrare il profilo con rating `328.4`,
-  corrispondente alla migliore performance osservata di E01.
-- Evidenze:
-  - `docs/screenshots/E02-006_kaggle_rating_e02_below_e01.png`
-  - `docs/screenshots/E02-007_kaggle_leaderboard_e01.png`
-
-Questa osservazione non modifica i risultati del benchmark locale E02:
-`ROICropAgent` migliora il Mean Final Money da `$3567.63` a `$5857.17`
-(`+64.18%`) nelle condizioni sperimentali testate.
-
-Mostra invece che l'ottimizzazione locale basata sul ROI della coltura
-non si traduce automaticamente in una migliore performance competitiva
-contro gli agenti presenti sulla piattaforma Kaggle.
-
-La prossima iterazione non deve quindi partire automaticamente da una
-soluzione già decisa. Deve prima analizzare la divergenza tra benchmark
-locale e comportamento competitivo, utilizzando le evidenze disponibili,
-per formulare una nuova ipotesi sperimentale E03.
 
 <!-- END OF DOCUMENT -->

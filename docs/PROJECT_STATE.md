@@ -1,83 +1,72 @@
 # Project State
 
-**Last update:** 2026-08-19
+**Last update:** 2026-08-24
 
 ## Current phase
 
-E02 completed & consolidated — Dynamic Crop Selection & ROI Scaling (`ROICropAgent`) implemented, benchmarked, verified, reviewed, and documentally consolidated. Kaggle validation SHIP PASSED WITH OBSERVATIONS (Status `Complete`, initial observed rating `600.0`). Ready for version tag `v0.2-e02-roicrop`.
+E03 completed & consolidated — Multi-Tile Scaling (`MultiTileROIAgent`) implemented, benchmarked, verified, reviewed, shipped to Kaggle (Status `Complete`, initial observed rating `600.0`). Ready for version tag `v0.3-e03-multitile`.
 
 ## Objective
 
 Develop and evaluate a competitive agent for the Kaggle Kaggriculture
 competition using Google Antigravity as the coding agent.
 
-The project is also an empirical test of the supervised development method:
+The project is an empirical test of the supervised development method:
 
-DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP
+`DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP`
 
 ## Repository state
 
 - Tag Git Baseline: `v0.1-e01-baseline` (main aligned with origin/main).
-- Tag Git E02: ready for `v0.2-e02-roicrop`.
+- Tag Git E02: `v0.2-e02-roicrop`.
+- Tag Git E03: ready for `v0.3-e03-multitile`.
 - Modular package structure under `src/agricola/`.
-- `README.md` updated with E01 baseline, E02 evolution, iteration table, and documentation links.
-- Virtual environment `.venv` with Python 3.12 and `kaggle-environments`.
-- Strategy `ROICropAgent` implemented in `src/agricola/strategy/roi_crop.py`.
-- Entrypoint `src/agricola/agent.py` updated to run `ROICropAgent`.
-- Standalone submission bundle `submission/submission.py` updated, verified, and submitted to Kaggle.
-- Unit tests (`tests/test_roi_crop.py`) added; full test suite 100% passing (7/7).
+- `README.md` updated with E01 baseline, E02 dynamic crop selection, E03 multi-tile scaling, iteration table, and documentation links.
+- Strategy `MultiTileROIAgent` implemented in `src/agricola/strategy/multi_tile_roi.py` managing a 2x2 compact grid cluster `{(4,4), (4,3), (3,4), (3,3)}`.
+- Entrypoint `src/agricola/agent.py` updated to run `MultiTileROIAgent`.
+- Standalone submission bundle `submission/submission.py` updated, verified, and uploaded to Kaggle (Status `Complete`).
+- Unit test suite (`tests/test_actions.py`, `tests/test_multi_tile.py`, `tests/test_roi_crop.py`, `tests/test_baseline.py`, `tests/test_submission.py`) 100% passing (14/14).
 - Benchmark evaluation runner (`scripts/run_eval.py`) with per-turn agent latency tracking.
 - Evidence files generated and consolidated under `docs/versions/`:
-  - `docs/versions/E02_build_antigravity.md`
-  - `docs/versions/E02_verify_review_antigravity.md`
-  - `docs/versions/E02_simulation_analysis.md`
-  - `docs/versions/E02_ship_review_antigravity.md`
+  - `docs/versions/E03_build_antigravity.md`
+  - `docs/versions/E03_verify_antigravity.md`
+  - `docs/versions/E03_review_antigravity.md`
+  - `docs/versions/E03_ship_antigravity.md`
 
-## Verified E01 Baseline Operational Cycle
+## Experimental Progression
 
-`BUY_SEED → PLANT → WATER → PASS → HARVEST → PLANT → SELL`
+`E01 operational baseline → E02 economic crop selection → E03 production scaling`
 
-Key observations from E01 VERIFY trace:
-1. Farmer remains immobile on initial tile `(4, 4)`.
-2. Uses exclusively `CARROT` crop.
-3. Next cycle's seed is pre-purchased as a buffer (`seeds == 0` triggers `BUY_SEED`).
-4. `farmer` and `market` actions operate as independent channels in the same turn.
-5. Watering increases crop yield (`yield_units = 2`).
-6. Harvested crops are sold immediately upon availability in `shed`.
-7. Seed cost and crop selling price are distinct economic variables: seed cost is defined statically by the crop configuration, while selling price is exposed dynamically by the market.
-8. Rich `GameState` fields (grid map, opponent state, other crops, dynamic market prices) remain unexploited.
+## Benchmark Metrics Comparison (E01 vs E02 vs E03)
 
-## Benchmark Metrics Comparison (E01 Baseline vs E02 ROICropAgent)
-
-| Metric | E01 Baseline (`CarrotLoopAgent`) | E02 Evolution (`ROICropAgent`) | Change / Delta |
-| :--- | :---: | :---: | :---: |
-| **Total Episodes** | 30 | 30 | — |
-| **Completion Rate** | 100.00% | 100.00% | 0.00% |
-| **Disqualification Rate** | 0.00% | 0.00% | 0.00% |
-| **Overall Win Rate** | 66.67% (20W / 0L / 10D) | **100.00%** (30W / 0L / 0D) | **+33.33%** |
-| **Win Rate vs `pass`** | 100.00% ($3594.30) | 100.00% ($5908.50) | +$2314.20 |
-| **Win Rate vs `random`** | 100.00% ($3577.00) | 100.00% ($5829.00) | +$2252.00 |
-| **Win Rate vs `starter`** | 0.00% Draw (10D / $3531.60) | **100.00% Win** (10W / $5834.00) | **0% → 100% Win** |
-| **Mean Final Money** | **$3567.63** | **$5857.17** | **+$2289.53 (+64.18%)** |
-| **Sample Std Dev (`ddof=1`)** | **± $205.38** | **± $132.37** | — |
-| **Population Std Dev (`ddof=0`)**| ± $201.93 | ± $130.14 | — |
-| **Median Final Money** | $3528.00 | $5837.00 | +$2309.00 |
-| **Agent Mean Turn Latency** | 0.0142 ms/turn | 0.0267 ms/turn | +0.0125 ms/turn |
-| **Simulation Step Time** | 3.69 ms/step | 3.45 ms/step | -0.24 ms/step |
-| **Kaggle Platform Status** | Validated (`600.0` initial rating) | **Complete** (initial observed rating `600.0`) | Validated |
+| Metric | E01 Baseline (`CarrotLoopAgent`) | E02 Evolution (`ROICropAgent`) | E03 Scaling (`MultiTileROIAgent`) | E02 → E03 Delta |
+| :--- | :---: | :---: | :---: | :---: |
+| **Managed Footprint** | Single tile `(4,4)` | Single tile `(4,4)` | **2x2 Cluster (4 tiles)** | **1 → 4 tiles** |
+| **Total Episodes** | 30 | 30 | 30 | — |
+| **Completion Rate** | 100.00% | 100.00% | **100.00%** | 0.00% |
+| **Disqualification Rate** | 0.00% | 0.00% | **0.00%** | 0.00% |
+| **Overall Win Rate** | 66.67% (20W / 0L / 10D) | 100.00% (30W / 0L / 0D) | **100.00% (30W / 0L / 0D)** | 0.00% |
+| **Win Rate vs `pass`** | 100.00% ($3594.30) | 100.00% ($5908.50) | **100.00% ($15257.00)** | +$9348.50 |
+| **Win Rate vs `random`** | 100.00% ($3577.00) | 100.00% ($5829.00) | **100.00% ($14284.10)** | +$8455.10 |
+| **Win Rate vs `starter`** | 0.00% Draw ($3531.60) | 100.00% Win ($5834.00) | **100.00% Win ($14506.30)** | +$8672.30 |
+| **Mean Final Money** | **$3567.63** | **$5857.17** | **$14682.47** | **+$8825.30 (+150.68%)** |
+| **Sample Std Dev (`ddof=1`)** | ± $205.38 | ± $132.37 | **± $1164.33** | — |
+| **Median Final Money** | $3528.00 | $5837.00 | **$14146.00** | **+$8309.00** |
+| **Agent Mean Turn Latency** | 0.0142 ms/turn | 0.0267 ms/turn | **0.0698 ms/turn** | +0.0431 ms/turn |
+| **Kaggle Platform Status** | Validated (`600.0`) | Complete (`600.0` → `285.1`) | **Complete (`600.0` initial)** | In observation |
 
 > *Note: Local benchmark metrics and Kaggle Skill Rating measure different aspects of the agent and must not be compared directly.*
 
-## Main Verified Interpretation & Observations of E02
+## Main Verified Interpretation & Observations of E03
 
-> **E02 migliora principalmente perché la regola ROI identifica `MELON` come coltura economicamente dominante nelle condizioni osservate.**
+> **E03 supporta l'ipotesi che il Multi-Tile Production Scaling incrementi significativamente il throughput e il capitale finale maturato (+150.68%) a parità di logica economica.**
 
 Key verified findings:
-1. `MELON` is Rank 1 under both the implemented `Yield=2` model and the environment's `max_yield = 6` watered yield.
-2. Completed sales cycles in the 720-step simulation generate over +$1600 gross revenue per harvest on tile `(4, 4)` vs +$140 for `CARROT`.
-3. Late in the season (Day 21), l'agente selects `STRAWBERRY` as its ROI rises above `MELON`.
-4. Open observations for future iterations: End-of-Season Horizon (unharvested late crops), Single-Tile Limitation `(4, 4)`, Immediate Selling (no market sell timing), and Yield Model Simplification (`Yield=2`).
+1. Managing 4 adjacent tiles `{(4,4), (4,3), (3,4), (3,3)}` scales production output linearly, generating up to +$14,000+ per episode.
+2. The directional movement action bug fix (`["NORTH"]`, `["SOUTH"]`, etc.) enabled valid farmer navigation across the grid.
+3. The strict spatial priority hierarchy (`HARVEST > PLANT > WATER`) ensures 0 watering starvation and 0 deadlock.
+4. Higher variance ($\pm \$1164.33$) reflects right-skewed revenue jumps when partial harvest cycles complete right near step 720.
 
 ## Next step
 
-Creazione del tag Git `v0.2-e02-roicrop`. Le evidenze raccolte in E02 saranno utilizzate per definire la successiva iterazione sperimentale.
+Creazione del commit e del tag Git `v0.3-e03-multitile`. Osservare l'evoluzione del Kaggle Skill Rating per definire la successiva iterazione sperimentale E04.

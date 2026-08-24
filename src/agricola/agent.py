@@ -2,10 +2,10 @@
 
 from typing import Dict, Any, Optional
 from agricola.core.state import GameState
-from agricola.strategy.roi_crop import ROICropAgent
+from agricola.strategy.multi_tile_roi import MultiTileROIAgent
 
 # Global agent instance for state persistence across turns if needed
-_agent_instance = ROICropAgent()
+_agent_instance = MultiTileROIAgent()
 
 
 def agent(observation: Dict[str, Any], configuration: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:

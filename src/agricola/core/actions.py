@@ -32,8 +32,15 @@ class ActionBuilder:
         return self
 
     def move(self, direction: str) -> "ActionBuilder":
-        """Set farmer action to MOVE in direction ('N', 'S', 'E', 'W')."""
-        self.farmer_action = ["MOVE", direction]
+        """Set farmer action to move in direction ('NORTH', 'SOUTH', 'EAST', 'WEST' or 'N', 'S', 'E', 'W')."""
+        dir_map = {
+            "N": "NORTH", "NORTH": "NORTH",
+            "S": "SOUTH", "SOUTH": "SOUTH",
+            "E": "EAST", "EAST": "EAST",
+            "W": "WEST", "WEST": "WEST",
+        }
+        target_dir = dir_map.get(direction.upper(), direction.upper())
+        self.farmer_action = [target_dir]
         return self
 
     def sell(self, product_name: str, quantity: int) -> "ActionBuilder":
