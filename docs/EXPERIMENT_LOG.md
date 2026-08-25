@@ -205,3 +205,77 @@ VERIFY: PASSED
 REVIEW: PASSED  
 CONSOLIDATE: PASSED  
 SHIP: PASSED (Tag: `v0.3-e03-multitile`)
+
+---
+
+## E04 — Initial NW Scaling (`NWClusterROIAgent`)
+
+**Date:** 2026-08-25  
+**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW  
+**Tool:** Google Antigravity  
+**Model:** Gemini 3.6 Flash  
+
+### Objective
+
+Valutare l'espansione del footprint produttivo dal cluster 2×2 (4 tile) di E03 a un cluster compatto 3×3 di **9 tile** `{(x,y) | x ∈ [2,4], y ∈ [2,4]}` all'interno del quadrante iniziale NW, gestito da un **singolo farmer** senza `BUY_LAND` e senza `HIRE`, al fine di misurare empiricamente il limite di lavorazione fisica del farmer e verificare l'insorgenza di water starvation.
+
+### Baseline E03 utilizzata per il confronto
+
+- **Footprint E03**: 4 tile (2×2 cluster)
+- **Mean Final Money E03**: **`$14682.47 ± $1164.33`**
+- **Median Final Money E03**: **`$14146.00`**
+- **Total Weed Conversions**: **0**
+
+### Observations & Actions
+
+1. **Competitive Gap Analysis (E04-01)**: Documentata in `docs/experiments/E04-01_Competitive_Gap_Analysis.md`. Identificati 4 gap principali (spaziale, orizzonte temporale, modello economico, metrologia).
+2. **Experimental Direction Decision (E04-02)**: Documentata in `docs/experiments/E04-02_Experimental_Direction_Decision.md`. Separata la variabile di scaling da `HIRE` e selezionata `Candidate C` (NW Scaling 4→9 tile).
+3. **Implementation & Unit Tests**:
+   - Creato `src/agricola/strategy/nw_cluster_roi.py` (`NWClusterROIAgent`).
+   - Creato `tests/test_nw_cluster.py` (5/5 unit test superati).
+   - Aggiornati `src/agricola/agent.py` e `scripts/build_submission.py`.
+4. **Metrologia di Water Starvation Integrata**:
+   - Aggiornato `src/agricola/evaluation/runner.py` per tracciare le conversioni in `WEED` (starvation severa) e la quota di irrigazioni mancate a fine giornata (`hour == 23`).
+
+### PLAN & Evidenze
+
+- Implementation Plan: [`docs/plans/E04_Initial_NW_Scaling.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/plans/E04_Initial_NW_Scaling.md)
+- Evidenza VERIFY: [`docs/versions/E04_verify_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E04_verify_antigravity.md)
+
+### Benchmark & Outcome (Valutazione Locale 30 Episodi)
+
+- **Suite di Test (`pytest tests/`)**: **19/19 test superati** (100% success rate in 2.06s).
+- **Benchmark Metric Summary E04**:
+  - Total Episodes: 30 (21.600 turni totali)
+  - Completion Rate: 100.00%
+  - Disqualification Rate: 0.00%
+  - Overall Win Rate: **100.00%** (30W / 0L / 0D)
+  - Win Rate vs `pass`: 100.00% ($11117.90)
+  - Win Rate vs `random`: 100.00% ($11505.50)
+  - Win Rate vs `starter`: 100.00% ($11074.00)
+  - Mean Final Money E04: **`$11232.47 ± $661.26`**
+  - Median Final Money E04: **`$11050.00`**
+  - Total Weed Conversions: **238 weeds** (7.93 weeds/episodio)
+  - Mean Unwatered End-of-Day Ratio: **3.33%**
+  - Agent Mean Turn Latency: **0.0570 ms/turno**
+
+### Confronto Quantitativo E03 $\rightarrow$ E04
+
+- **Delta Capitale Medio**: $11232.47 - 14682.47 = \mathbf{-\$3450.00 (-23.49\%)}$
+- **Total Weed Conversions**: $0 \rightarrow \mathbf{238\text{ weeds}}$
+- **Risultato Sperimentale**: **`FALSIFICATA / NON SUPPORTATA`**
+
+### Diagnosi Tecnico-Sperimentale
+
+- **Capacità Fisica Inadeguata per 1 Farmer**: Il singolo farmer non è in grado di percorrere e irrigare 9 tile su un cluster 3×3 mantenendo contemporaneamente la semina e la raccolta (`HARVEST > PLANT > WATER`).
+- **Morte delle Piante & Tile Bricking**: In 30 episodi, 238 piante sono morte per disidratazione (2 giorni di mancata irrigazione) trasformandosi in `WEED`. L'assenza dell'azione `DIG` ha reso tali tile definitivamente inutilizzabili per il resto della partita.
+- **Implicazione per E05**: Per scalare a $\ge 9$ tile senza soffrire di water starvation è indispensabile introdurre lavoratori aggiuntivi (`HIRE`) e/o bonifica automatica erbacce (`DIG`).
+
+### Method assessment
+
+DEFINE: PASSED  
+PLAN: PASSED  
+BUILD: PASSED  
+VERIFY: PASSED  
+REVIEW: PASSED (Hypothesis Falsified - Strategic Bottleneck Identified)  
+

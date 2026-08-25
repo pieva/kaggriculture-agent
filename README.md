@@ -19,7 +19,8 @@ Il progetto adotta rigorosamente il ciclo di sviluppo supervisionato:
 | :--- | :--- | :--- | ---: | ---: | :--- |
 | **E01** | `CarrotLoopAgent` | Baseline: monocultura statica `CARROT` | `$3567.63 ± $205.38` | 0.00% (100% Draw) | Validata (`v0.1-e01-baseline`) |
 | **E02** | `ROICropAgent` | Selezione dinamica coltura via ROI/giorno | `$5857.17 ± $132.37` | 100.00% Vittorie | Complete (`v0.2-e02-roicrop`) |
-| **E03** | `MultiTileROIAgent` | Espansione coltivazione su cluster 2x2 (4 tile) | **`$14682.47 ± $1164.33`** | **100.00% Vittorie** | **Complete** (`v0.3-e03-multitile`) |
+| **E03** | `MultiTileROIAgent` | Espansione coltivazione su cluster 2x2 (4 tile) | `$14682.47 ± $1164.33` | 100.00% Vittorie | Complete (`v0.3-e03-multitile`) |
+| **E04** | `NWClusterROIAgent` | NW Scaling su cluster 3x3 (9 tile, 1 farmer) | `$11232.47 ± $661.26` | 100.00% Vittorie | **Shipped / Falsified** (`v0.4-e04-nw-scaling`) |
 
 > *Nota metodologica: Le metriche del benchmark locale ($ capitale finale) ed il Kaggle Skill Rating misurano aspetti differenti dell'agente e non devono essere confrontati direttamente.*
 
@@ -29,10 +30,11 @@ Il progetto adotta rigorosamente il ciclo di sviluppo supervisionato:
 
 - **Baseline Tag**: `v0.1-e01-baseline` (main allineato con origin/main).
 - **Tag E02**: `v0.2-e02-roicrop`.
-- **Iterazione E03**: Completata, verificata, revisionata e consolidata (`v0.3-e03-multitile`).
-- **Strategia Corrente**: `MultiTileROIAgent` in `src/agricola/strategy/multi_tile_roi.py`.
-- **Submission Standalone**: Generata in `submission/submission.py` e verificata con successo su Kaggle.
-- **Suite di Test**: 14/14 test automatizzati superati (`pytest tests/`).
+- **Tag E03**: `v0.3-e03-multitile`.
+- **Tag E04**: `v0.4-e04-nw-scaling` (consolidata falsificazione dell'ipotesi 4→9 single farmer).
+- **Strategia Corrente**: `NWClusterROIAgent` in `src/agricola/strategy/nw_cluster_roi.py`.
+- **Submission Standalone**: Generata in `submission/submission.py` e verificata.
+- **Suite di Test**: 19/19 test automatizzati superati (`pytest tests/`).
 
 ---
 
@@ -60,6 +62,13 @@ Le evidenze analitiche e quantitative per ciascuna iterazione sono disponibili s
 - [Rapporto REVIEW E03](docs/versions/E03_review_antigravity.md)
 - [Rapporto SHIP E03](docs/versions/E03_ship_antigravity.md)
 - [Risultati Benchmark E03](results/e03_multi_tile.json)
+
+### Iterazione E04 (Initial NW Scaling)
+- [Competitive Gap Analysis E04-01](docs/experiments/E04-01_Competitive_Gap_Analysis.md)
+- [Experimental Direction Decision E04-02](docs/experiments/E04-02_Experimental_Direction_Decision.md)
+- [Implementation Plan E04](docs/plans/E04_Initial_NW_Scaling.md)
+- [Rapporto VERIFY E04](docs/versions/E04_verify_antigravity.md)
+- [Rapporto SHIP E04](docs/versions/E04_ship_antigravity.md)
 
 ### Registri di Progetto
 - [Experiment Log](docs/EXPERIMENT_LOG.md)

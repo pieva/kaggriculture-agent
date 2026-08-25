@@ -91,6 +91,10 @@ def run_episode(
     p0_latencies = wrapper_p0.latencies_ms if wrapper_p0 else []
     p1_latencies = wrapper_p1.latencies_ms if wrapper_p1 else []
 
+    # Compute Water Starvation Proxies
+    p0_starvation = _compute_starvation_metrics(env.steps, 0)
+    p1_starvation = _compute_starvation_metrics(env.steps, 1)
+
     return {
         "p0_reward": float(p0_reward),
         "p1_reward": float(p1_reward),
@@ -106,6 +110,61 @@ def run_episode(
         "p0_agent_max_latency_ms": float(np.max(p0_latencies)) if p0_latencies else 0.0,
         "p1_agent_mean_latency_ms": float(np.mean(p1_latencies)) if p1_latencies else 0.0,
         "p1_agent_max_latency_ms": float(np.max(p1_latencies)) if p1_latencies else 0.0,
+        "p0_starvation": p0_starvation,
+        "p1_starvation": p1_starvation,
+    }
+
+
+def _compute_starvation_metrics(env_steps: list, player_id: int) -> Dict[str, Any]:
+    """Compute water starvation proxies: severe (WEED count) and early warning (unwatered at end of day)."""
+    weed_count = 0
+    unwatered_end_of_day_count = 0
+    total_days = 0
+
+    for step_data in env_steps:
+        if not isinstance(step_data, list) or player_id >= len(step_data):
+            continue
+        p_step = step_data[player_id]
+        obs = p_step.get("observation", {}) if isinstance(p_step, dict) else {}
+        farms = obs.get("farms", []) if isinstance(obs, dict) else []
+        if not farms or player_id >= len(farms):
+            continue
+        farm = farms[player_id]
+        tiles = farm.get("tiles", [])
+        hour = obs.get("hour", 0)
+
+        # End-of-day check at hour 23 (turn before daily refresh)
+        if hour == 23:
+            total_days += 1
+            has_unwatered_plant = False
+            for row in tiles:
+                for t in row:
+                    if isinstance(t, dict) and t.get("kind") == "PLANT":
+                        if not t.get("watered_today", False):
+                            has_unwatered_plant = True
+                            break
+                if has_unwatered_plant:
+                    break
+            if has_unwatered_plant:
+                unwatered_end_of_day_count += 1
+
+    # Final step weed count
+    if env_steps:
+        last_step = env_steps[-1]
+        if isinstance(last_step, list) and player_id < len(last_step):
+            last_obs = last_step[player_id].get("observation", {}) if isinstance(last_step[player_id], dict) else {}
+            farms = last_obs.get("farms", []) if isinstance(last_obs, dict) else []
+            if farms and player_id < len(farms):
+                for row in farms[player_id].get("tiles", []):
+                    for t in row:
+                        if isinstance(t, dict) and t.get("kind") == "WEED":
+                            weed_count += 1
+
+    return {
+        "weed_count": weed_count,
+        "unwatered_end_of_day_count": unwatered_end_of_day_count,
+        "total_days": total_days,
+        "unwatered_end_of_day_ratio_pct": (unwatered_end_of_day_count / max(1, total_days)) * 100.0,
     }
 
 
@@ -130,6 +189,8 @@ def evaluate_agent(
     all_disqualified_count = 0
     all_agent_latencies = []
     all_sim_step_times = []
+    all_weed_counts = []
+    all_unwatered_ratios = []
 
     for opponent in opponents:
         print(f"Evaluating vs '{opponent}' ({episodes_per_opponent} episodes)...", flush=True)
@@ -154,6 +215,7 @@ def evaluate_agent(
                 opp_reward = ep["p1_reward"]
                 my_disqualified = ep["disqualified_p0"]
                 my_latency = ep["p0_agent_mean_latency_ms"]
+                my_starvation = ep.get("p0_starvation", {})
             else:
                 ep = run_episode(
                     opponent, agent_under_test, steps=steps_per_episode, seed=i * 100, track_p0=False, track_p1=True
@@ -162,6 +224,7 @@ def evaluate_agent(
                 opp_reward = ep["p0_reward"]
                 my_disqualified = ep["disqualified_p1"]
                 my_latency = ep["p1_agent_mean_latency_ms"]
+                my_starvation = ep.get("p1_starvation", {})
 
             all_episodes_count += 1
             if ep["completed"]:
@@ -172,6 +235,9 @@ def evaluate_agent(
             if my_latency > 0:
                 all_agent_latencies.append(my_latency)
             all_sim_step_times.append(ep["simulation_mean_step_time_ms"])
+
+            all_weed_counts.append(my_starvation.get("weed_count", 0))
+            all_unwatered_ratios.append(my_starvation.get("unwatered_end_of_day_ratio_pct", 0.0))
 
             opp_results["rewards"].append(my_reward)
             all_rewards.append(my_reward)
@@ -193,6 +259,7 @@ def evaluate_agent(
                 "completed": ep["completed"],
                 "disqualified": my_disqualified,
                 "agent_mean_latency_ms": my_latency,
+                "starvation": my_starvation,
             })
 
         opp_rewards_arr = np.array(opp_results["rewards"])
@@ -219,6 +286,8 @@ def evaluate_agent(
         "max_final_money": float(np.max(all_rewards_arr)),
         "agent_mean_turn_latency_ms": float(np.mean(all_agent_latencies)) if all_agent_latencies else 0.0,
         "simulation_mean_step_time_ms": float(np.mean(all_sim_step_times)) if all_sim_step_times else 0.0,
+        "total_weed_conversions": int(np.sum(all_weed_counts)),
+        "mean_unwatered_end_of_day_ratio_pct": float(np.mean(all_unwatered_ratios)) if all_unwatered_ratios else 0.0,
     }
 
     return results
