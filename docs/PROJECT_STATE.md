@@ -21,13 +21,14 @@ The project is an empirical test of the supervised development method:
 - Tag Git E02: `v0.2-e02-roicrop`.
 - Tag Git E03: `v0.3-e03-multitile`.
 - Tag Git E04: `v0.4-e04-nw-scaling` (falsificazione dell'ipotesi 4→9 single farmer).
-- Tag Git E05: `v0.5-e05-hire-multiworker` (validazione dello scaling multi-worker 9 tile).
+- Tag Git E05: `v0.5-e05-hire-multiworker` (validazione dello scaling multi-worker 9 tile, **Kaggle Score: 418.0** vs E03 278.3).
 - Modular package structure under `src/agricola/`.
 - Strategy `HIRENWClusterROIAgent` in `src/agricola/strategy/hire_nw_cluster_roi.py` managing 9 tiles with 1 farmer (4 tiles) and 1 hand (5 tiles).
 - Entrypoint `src/agricola/agent.py` updated to run `HIRENWClusterROIAgent`.
 - Standalone submission bundle `submission/submission.py` updated and verified.
 - Unit test suite (`pytest tests/`) 100% passing (25/25).
 - Benchmark evaluation runner (`src/agricola/evaluation/runner.py`) updated with dedicated output isolation (`results/e05_hire_multiworker.json`).
+- Validazione Esterna Kaggle: [`docs/versions/E05_kaggle_validation.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E05_kaggle_validation.md) (`EXTERNAL VALIDATION PASSED`, Score: `418.0`).
 
 ## Experimental Progression
 

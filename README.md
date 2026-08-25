@@ -79,6 +79,7 @@ Le evidenze analitiche e quantitative per ciascuna iterazione sono disponibili s
 - [Rapporto VERIFY E05](docs/versions/E05_verify_antigravity.md)
 - [Rapporto REVIEW E05](docs/versions/E05_review_antigravity.md)
 - [Rapporto SHIP E05](docs/versions/E05_ship_antigravity.md)
+- [Validazione Esterna Kaggle E05](docs/versions/E05_kaggle_validation.md)
 - [Risultati Benchmark E05](results/e05_hire_multiworker.json)
 
 ### Registri di Progetto
