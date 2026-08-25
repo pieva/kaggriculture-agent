@@ -333,6 +333,7 @@ Valutare l'introduzione di forza lavoro subordinata giornaliera tramite l'azione
 - **Economic Hypothesis**: **`SUPPORTED`**
 - **Worker Capacity Bottleneck**: **`STRONGLY SUPPORTED`**
 - **Starvation Status**: **`REDUCED BUT UNRESOLVED`**
+- **Kaggle External Validation**: **`PASSED`** (Skill Rating stabilizzato: **`439.7`**, +161.4 pts / +57.99% vs E03 278.3)
 - **Overall Evaluation**: **`STRONG SUCCESS`**
 
 ### Method assessment
@@ -343,5 +344,74 @@ BUILD: PASSED
 VERIFY: PASSED  
 REVIEW: PASSED  
 SHIP: PASSED (Tag: `v0.5-e05-hire-multiworker`)
+
+---
+
+## E06 — Water-First Scheduling (`WaterFirstHIRENWClusterROIAgent`)
+
+**Date:** 2026-08-25  
+**Phase:** DEFINE → PLAN → BUILD  
+**Tool:** Google Antigravity  
+**Model:** Gemini 3.6 Flash  
+
+### Objective
+
+Valutare l'inversione della priorità operativa dei worker da `HARVEST > PLANT > WATER` a `WATER > HARVEST > PLANT` (`WaterFirstHIRENWClusterROIAgent`), mantenendo 100% congelati tutti gli altri parametri rispetto alla baseline E05 Shipped (9 tile NW, 1 farmer + 1 hand a $1/giorno, 4:5 partitioning, ROI crop selection, Manhattan routing, 30 episodi benchmark).
+
+### Baseline E05 utilizzata per il confronto
+
+- **Mean Final Money E05:** **`$21568.93 ± $361.25`**
+- **Median Final Money E05:** **`$21442.00`**
+- **Total Weed Conversions E05:** **`176`** (5.87 weeds/ep)
+- **Mean Unwatered End-of-Day Ratio E05:** **`3.33%`**
+
+### Observations & Actions
+
+1. **DEFINE (E06-01):** Documentata l'analisi di definibilità in `docs/experiments/E06-01_Water_First_Capability_Analysis.md`. Concluso `GO`.
+2. **PLAN (E06-02):** Documentato il piano sperimentale isolato a variabile singola in `docs/plans/E06_Water_First_Scheduling.md`. Stabilito guardrail economico a $21200.00 e matrice decisionale.
+3. **BUILD (E06-03):**
+   - Creato `src/agricola/strategy/water_first_hire_nw_cluster_roi.py` (`WaterFirstHIRENWClusterROIAgent` come sottoclasse di `HIRENWClusterROIAgent`).
+   - Creato `tests/test_water_first_hire_nw_cluster.py` (5/5 unit test).
+   - Eseguita la suite completa `pytest tests/`: **30/30 test superati** (100% success rate in 1.93s).
+   - Eseguito il benchmark locale su 30 episodi: output isolato in `results/e06_water_first.json`.
+
+### Benchmark & Outcome (Valutazione Locale 30 Episodi)
+
+- **Benchmark Metric Summary E06 (`results/e06_water_first.json`)**:
+  - Total Episodes: 30 (21.600 turni totali)
+  - Completion Rate: **100.00%**
+  - Disqualification Rate: **0.00%**
+  - Overall Win Rate: **100.00%** (30W / 0L / 0D)
+  - Win Rate vs `pass`: 100.00% ($24593.30)
+  - Win Rate vs `random`: 100.00% ($24572.40)
+  - Win Rate vs `starter`: 100.00% ($24820.30)
+  - Mean Final Money E06: **`$24662.00 ± $1932.04`**
+  - Median Final Money E06: **`$25847.00`**
+  - Total Weed Conversions: **`70 weeds`** (2.33 weeds/episodio)
+  - Mean Unwatered End-of-Day Ratio: **8.11%**
+  - Agent Mean Turn Latency: **0.0822 ms/turno**
+
+### Confronto Quantitativo E05 $\rightarrow$ E06
+
+- **Delta Capitale Medio**: $24662.00 - 21568.93 = \mathbf{+\$3093.07 (+14.34\%)}$
+- **Delta Mediana Capitale**: $25847.00 - 21442.00 = \mathbf{+\$4405.00 (+20.54\%)}$
+- **Total Weed Conversions**: $176 \rightarrow \mathbf{70\text{ weeds (-60.23\%)}}
+- **Paired Seed Comparison (30/30 episodi)**:
+  - Mean Paired Money Delta: **`+$3093.07 ± $1942.60`**
+  - Episodes E06 Money > E05 Money: **`29 / 30 (96.7%)`**
+  - Mean Paired Weed Delta: **`-3.53 weeds/episodio`**
+  - Episodes E06 Weeds < E05 Weeds: **`30 / 30 (100.0%)`**
+- **Experimental Hypothesis Verdict**: **`SUPPORTED`** (Operational: `PARTIALLY SUPPORTED` / -60.23% weeds; Economic: `STRONGLY SUPPORTED` / +$3093.07 money)
+- **SHIP Recommendation**: **`SHIP CANDIDATE`**
+
+### Method assessment
+
+DEFINE: PASSED  
+PLAN: PASSED  
+BUILD: PASSED  
+VERIFY: PASSED WITH METRIC CAVEAT (`docs/versions/E06_verify_antigravity.md`)  
+REVIEW: PASSED (`docs/versions/E06_review_antigravity.md`, Verdict: `SUPPORTED`)  
+SHIP: PASSED (Tag: `v0.6-e06-water-first`, [`docs/versions/E06_ship_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E06_ship_antigravity.md))
+
 
 

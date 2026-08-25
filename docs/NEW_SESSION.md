@@ -128,4 +128,95 @@ La prossima sessione dovrà partire dalla scelta tra le candidate emerse dalla R
 4. **Candidate D — Multi-Hand Scaling (2+ HIRE):** Testare l'ingaggio di una seconda farm hand ($2/giorno).
 5. **Candidate E — Further Spatial Scaling:** Espandersi oltre le 9 tile sbloccando nuovi terreni.
 
+
+## E05 — HIRE / Multi-Worker Scaling — SHIPPED
+
+E05 è concluso e shipped.
+
+### Risultato locale consolidato
+
+- Agent: `HIRENWClusterROIAgent`
+- Footprint: 9 tile NW
+- Workers: 1 farmer + 1 farm hand giornaliera
+- Partitioning: 4:5 fisso
+- Policy: `HARVEST > PLANT > WATER`
+- Episodes: 30
+- Completion Rate: 100%
+- Disqualification Rate: 0%
+- Win Rate: 100%
+- Mean Final Money: `$21568.93 ± $361.25`
+- Median Final Money: `$21442.00`
+- Delta vs E04: `+$10336.46 / +92.02%`
+- Delta vs E03: `+$6886.46 / +46.90%`
+- Weed Conversions: `176`
+- Weed reduction vs E04: `-26.05%`
+- Mean Unwatered End-of-Day Ratio: `3.33%`
+
+Decisioni:
+
+- Economic Hypothesis: `SUPPORTED`
+- Worker Capacity Bottleneck: `STRONGLY SUPPORTED`
+- Starvation: `REDUCED BUT UNRESOLVED`
+- Experiment: `STRONG SUCCESS`
+
+Tag:
+
+`v0.5-e05-hire-multiworker`
+
+## Kaggle External Validation — VALIDATA & STABILIZZATA
+
+È stata effettuata la submission ufficiale Kaggle della standalone E05:
+
+`submission/submission.py` (`HIRENWClusterROIAgent`)
+
+Score osservato e stabilizzato: **`439.7`** (External Validation Passed, +161.4 pts / +57.99% vs E03 278.3).
+
+Riferimenti storici Kaggle attualmente disponibili:
+
+- E01: `600.0` storico
+- E02: `285.1` storico
+- E03: `278.3`
+- E04: nessuna submission
+- E05: `439.7` (stabilizzato)
+
+## E06 — Water-First Scheduling — SHIPPED
+
+E06 è concluso e shipped (`v0.6-e06-water-first`).
+
+### Risultato locale consolidato
+- Agent: `WaterFirstHIRENWClusterROIAgent`
+- Footprint: 9 tile NW
+- Workers: 1 farmer + 1 farm hand giornaliera ($1/giorno)
+- Partitioning: 4:5 fisso
+- Task Priority: `WATER > HARVEST > PLANT`
+- Episodes: 30
+- Completion Rate: 100%
+- Disqualification Rate: 0%
+- Win Rate: 100%
+- Mean Final Money: **`$24662.00 ± $1932.04`** (+14.34% vs E05)
+- Median Final Money: **`$25847.00`** (+20.54% vs E05)
+- Weed Conversions: **`70`** (-60.23% vs E05)
+- Mean Weed Rate: 2.33 weeds/episode
+- Paired Money Win Rate: 96.7% (29/30)
+- Paired Weed Win Rate: 100% (30/30)
+
+Decisioni:
+- Experimental Integrity: `PASSED`
+- Operational Result: `PARTIAL SUPPORT` (-60.23% weeds)
+- Economic Result: `ECONOMIC IMPROVEMENT` (+$3093.07 money)
+- Hypothesis Verdict: `SUPPORTED`
+- SHIP Status: `PASSED`
+- Tag Git: `v0.6-e06-water-first`
+
+## Punto di ripartenza per la prossima sessione (E07)
+
+Alla ripresa della prossima sessione:
+
+1. Iniziare l'esperimento **E07 — DEFINE** a partire dalle candidate valutate nella REVIEW E06.
+2. Candidate raccomandate per E07:
+   - **Candidate A — `DIG` / Weed Recovery:** Attivare `DIG` per eliminare le 70 erbacce residue e recuperare le tile morte.
+   - **Candidate B — Dynamic Worker Partitioning:** Bilanciare dinamicamente i carichi tra Farmer e Hand 1.
+   - **Candidate C — Dynamic Priority Scheduling:** Prioritizzare `WATER_URGENT > HARVEST > PLANT > WATER_NON_URGENT`.
+3. Non iniziare BUILD o benchmark prima di aver completato DEFINE e PLAN E07.
+
 <!-- END OF DOCUMENT -->

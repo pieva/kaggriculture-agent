@@ -28,7 +28,7 @@ Validate the performance of `HIRENWClusterROIAgent` (`submission/submission.py`)
 - **Submission Name / File:** `submission.py`
 - **Description:** `E05 - HIRENWClusterROIAgent - 9 tiles, 1 farmer + 1 daily hand`
 - **Kaggle Platform Status:** `Complete` (Green checkmark)
-- **Observed Kaggle Score:** **`418.0`**
+- **Observed Kaggle Score:** **`439.7`** *(misurato inizialmente a 418.0 e successivamente stabilizzato a 439.7 sul sistema di rating Kaggle)*
 
 ---
 
@@ -40,7 +40,7 @@ Validate the performance of `HIRENWClusterROIAgent` (`submission/submission.py`)
 | **E02** | `ROICropAgent` | 1 tile (4,4) | $5857.17 ± $132.37 | 285.1 | Complete | Rating iniziale 600.0, assestato a 285.1 |
 | **E03** | `MultiTileROIAgent` | 4 tiles (2×2) | $14682.47 ± $1164.33 | 278.3 | Complete | Rating osservato in screenshot precedente |
 | **E04** | `NWClusterROIAgent` | 9 tiles (3×3) | $11232.47 ± $661.26 | N/A | — | Falsificato nel benchmark locale |
-| **E05** | `HIRENWClusterROIAgent` | 9 tiles (3×3) | **`$21568.93 ± $361.25`** | **`418.0`** | **Complete** | **External Validation Passed (+139.7 pts vs E03)** |
+| **E05** | `HIRENWClusterROIAgent` | 9 tiles (3×3) | **`$21568.93 ± $361.25`** | **`439.7`** | **Complete** | **External Validation Passed (+161.4 pts vs E03)** |
 
 ---
 
@@ -48,12 +48,12 @@ Validate the performance of `HIRENWClusterROIAgent` (`submission/submission.py`)
 
 ### 5.1 Progression on Kaggle Platform (E03 $\rightarrow$ E05)
 - **E03 Kaggle Score:** `278.3`
-- **E05 Kaggle Score:** **`418.0`**
-- **Absolute Delta:** **`+139.7` points**
-- **Relative Delta:** **`+50.20%`**
+- **E05 Kaggle Score:** **`439.7`** *(inizialmente 418.0, poi stabilizzato a 439.7)*
+- **Absolute Delta:** **`+161.4` points**
+- **Relative Delta:** **`+57.99%`**
 
 ### 5.2 Methodological Interpretation
-1. **Strong External Validation:** The local benchmark improvement observed in E05 (`+92.02%` vs E04, `+46.90%` vs E03) is **strongly confirmed on Kaggle**, where the official skill rating increased from `278.3` to `418.0` (**`+50.20%`**).
+1. **Strong External Validation:** The local benchmark improvement observed in E05 (`+92.02%` vs E04, `+46.90%` vs E03) is **strongly confirmed on Kaggle**, where the official skill rating increased from `278.3` to `439.7` (**`+57.99%`**).
 2. **Consistency of Multi-Worker Scaling:** Introducing 1 daily farm hand (`HIRE` at $1/day) with 4:5 spatial partitioning successfully scales agricultural output in both local controlled environments and against real online platform opponents.
 
 ---
@@ -62,4 +62,4 @@ Validate the performance of `HIRENWClusterROIAgent` (`submission/submission.py`)
 
 > **`EXTERNAL VALIDATION PASSED`**
 
-*The external score of 418.0 (+50.20% vs E03) confirms that the E05 multi-worker scaling strategy translates cleanly to official Kaggle platform performance.*
+*The external score of 439.7 (+57.99% vs E03) confirms that the E05 multi-worker scaling strategy translates cleanly to official Kaggle platform performance.*

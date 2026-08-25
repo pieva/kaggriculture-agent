@@ -1,0 +1,511 @@
+{
+  "summary": {
+    "total_episodes": 30,
+    "completion_rate_pct": 100.0,
+    "disqualification_rate_pct": 0.0,
+    "overall_win_rate_pct": 100.0,
+    "overall_wins": 30,
+    "overall_losses": 0,
+    "overall_ties": 0,
+    "mean_final_money": 24662.0,
+    "std_final_money": 1932.0406482956478,
+    "median_final_money": 25847.0,
+    "min_final_money": 22184.0,
+    "max_final_money": 27873.0,
+    "agent_mean_turn_latency_ms": 0.08219670846561329,
+    "simulation_mean_step_time_ms": 4.571218425930796,
+    "total_weed_conversions": 70,
+    "mean_unwatered_end_of_day_ratio_pct": 8.11111111111111
+  },
+  "opponents": {
+    "pass": {
+      "episodes": [
+        {
+          "as_player": 0,
+          "my_reward": 25847.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.0699674551147237,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 0,
+          "my_reward": 25847.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.15194909765303488,
+          "starvation": {
+            "weed_count": 0,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 0,
+          "my_reward": 27873.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.06996940203549881,
+          "starvation": {
+            "weed_count": 2,
+            "unwatered_end_of_day_count": 3,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 10.0
+          }
+        },
+        {
+          "as_player": 0,
+          "my_reward": 22203.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.06697802477022724,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 3,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 10.0
+          }
+        },
+        {
+          "as_player": 0,
+          "my_reward": 22210.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.06549207199629142,
+          "starvation": {
+            "weed_count": 4,
+            "unwatered_end_of_day_count": 3,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 10.0
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 25847.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.06420612066429787,
+          "starvation": {
+            "weed_count": 1,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 22220.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.05657357312363258,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 3,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 10.0
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 25847.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.062344924472945956,
+          "starvation": {
+            "weed_count": 2,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 22192.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.10974075022167805,
+          "starvation": {
+            "weed_count": 2,
+            "unwatered_end_of_day_count": 3,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 10.0
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 25847.0,
+          "opp_reward": 3000.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.06981377102245521,
+          "starvation": {
+            "weed_count": 2,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        }
+      ],
+      "wins": 10,
+      "losses": 0,
+      "ties": 0,
+      "rewards": [
+        25847.0,
+        25847.0,
+        27873.0,
+        22203.0,
+        22210.0,
+        25847.0,
+        22220.0,
+        25847.0,
+        22192.0,
+        25847.0
+      ],
+      "win_rate_pct": 100.0,
+      "mean_reward": 24593.3,
+      "std_reward": 2034.8881566317102,
+      "median_reward": 25847.0
+    },
+    "random": {
+      "episodes": [
+        {
+          "as_player": 0,
+          "my_reward": 25847.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.06653365720534939,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 0,
+          "my_reward": 22199.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.07305799661882957,
+          "starvation": {
+            "weed_count": 1,
+            "unwatered_end_of_day_count": 3,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 10.0
+          }
+        },
+        {
+          "as_player": 0,
+          "my_reward": 22199.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.07780431105945679,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 3,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 10.0
+          }
+        },
+        {
+          "as_player": 0,
+          "my_reward": 22199.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.10793435391199274,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 3,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 10.0
+          }
+        },
+        {
+          "as_player": 0,
+          "my_reward": 25847.0,
+          "opp_reward": 300.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.06896453371701532,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 25847.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.058772881183078995,
+          "starvation": {
+            "weed_count": 2,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 27708.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.1314058428713132,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 3,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 10.0
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 25847.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.08385090279795737,
+          "starvation": {
+            "weed_count": 2,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 22184.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.0970970798945715,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 3,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 10.0
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 25847.0,
+          "opp_reward": 0.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.06989485413219484,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        }
+      ],
+      "wins": 10,
+      "losses": 0,
+      "ties": 0,
+      "rewards": [
+        25847.0,
+        22199.0,
+        22199.0,
+        22199.0,
+        25847.0,
+        25847.0,
+        27708.0,
+        25847.0,
+        22184.0,
+        25847.0
+      ],
+      "win_rate_pct": 100.0,
+      "mean_reward": 24572.4,
+      "std_reward": 2013.9153507533529,
+      "median_reward": 25847.0
+    },
+    "starter": {
+      "episodes": [
+        {
+          "as_player": 0,
+          "my_reward": 25847.0,
+          "opp_reward": 3421.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.10903588410658614,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 0,
+          "my_reward": 25687.0,
+          "opp_reward": 3421.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.07452197434116409,
+          "starvation": {
+            "weed_count": 0,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 0,
+          "my_reward": 25847.0,
+          "opp_reward": 3490.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.1281193318784558,
+          "starvation": {
+            "weed_count": 2,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 0,
+          "my_reward": 22195.0,
+          "opp_reward": 3573.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.09981015313712048,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 3,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 10.0
+          }
+        },
+        {
+          "as_player": 0,
+          "my_reward": 25847.0,
+          "opp_reward": 3451.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.07081251595977575,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 26187.0,
+          "opp_reward": 3596.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.06143476981449463,
+          "starvation": {
+            "weed_count": 1,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 22199.0,
+          "opp_reward": 3528.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.06348289314900966,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 3,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 10.0
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 26007.0,
+          "opp_reward": 3550.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.060853128669905235,
+          "starvation": {
+            "weed_count": 2,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 22206.0,
+          "opp_reward": 3515.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.07281168195599061,
+          "starvation": {
+            "weed_count": 2,
+            "unwatered_end_of_day_count": 3,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 10.0
+          }
+        },
+        {
+          "as_player": 1,
+          "my_reward": 26181.0,
+          "opp_reward": 3592.0,
+          "completed": true,
+          "disqualified": false,
+          "agent_mean_latency_ms": 0.10266731648935168,
+          "starvation": {
+            "weed_count": 3,
+            "unwatered_end_of_day_count": 2,
+            "total_days": 30,
+            "unwatered_end_of_day_ratio_pct": 6.666666666666667
+          }
+        }
+      ],
+      "wins": 10,
+      "losses": 0,
+      "ties": 0,
+      "rewards": [
+        25847.0,
+        25687.0,
+        25847.0,
+        22195.0,
+        25847.0,
+        26187.0,
+        22199.0,
+        26007.0,
+        22206.0,
+        26181.0
+      ],
+      "win_rate_pct": 100.0,
+      "mean_reward": 24820.3,
+      "std_reward": 1721.6014666582973,
+      "median_reward": 25847.0
+    }
+  }
+}
