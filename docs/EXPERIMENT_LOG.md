@@ -278,4 +278,70 @@ PLAN: PASSED
 BUILD: PASSED  
 VERIFY: PASSED  
 REVIEW: PASSED (Hypothesis Falsified - Strategic Bottleneck Identified)  
+SHIP: PASSED (Tag: `v0.4-e04-nw-scaling`)
+
+---
+
+## E05 — HIRE Multi-Worker Scaling (`HIRENWClusterROIAgent`)
+
+**Date:** 2026-08-25  
+**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP  
+**Tool:** Google Antigravity  
+**Model:** Gemini 3.6 Flash  
+
+### Objective
+
+Valutare l'introduzione di forza lavoro subordinata giornaliera tramite l'azione `HIRE` (1 farm hand al costo di $1/giorno) combinata con un partizionamento spaziale fisso 4:5 sul cluster compatto a 9 tile `{(x,y) | x ∈ [2,4], y ∈ [2,4]}`, al fine di eliminare il collo di bottiglia temporale del singolo farmer osservato in E04 e rendere il footprint a 9 tile economicamente sostenibile.
+
+### Baseline E04 e Riferimento E03 per il confronto
+
+- **E04 Control (9 tile, 1 farmer)**: Mean Final Money = **`$11232.47 ± $661.26`**, Total Weeds = **238**
+- **E03 Reference (4 tile, 1 farmer)**: Mean Final Money = **`$14682.47 ± $1164.33`**, Total Weeds = **0**
+
+### Observations & Actions
+
+1. **Capability & Semantics Audit (E05-01)**: Ispezionato `kaggriculture.py`. Verificato che `HIRE` costa $1/giorno per la prima hand, gli ingaggi si resettano a fine giornata (`hour == 23`), e la hand diventa attiva al turno successivo.
+2. **Implementation Plan (E05-02)**: Definito il trattamento isolato (1 daily HIRE, 4:5 spatial partitioning tra Farmer e Hand 1).
+3. **BUILD & Testing**:
+   - Estesi `GameState` (`hands_positions`, `hires_today`) e `ActionBuilder` (`hire()`, `add_hand_action()`).
+   - Creato `src/agricola/strategy/hire_nw_cluster_roi.py` (`HIRENWClusterROIAgent`).
+   - Creato `tests/test_hire_nw_cluster.py` (6/6 test superati, 25/25 suite completa).
+   - Generato e validato `submission/submission.py`.
+4. **Isolamento Risultati (E05-03B)**: Corretto il default in `scripts/run_eval.py` in `results/latest_eval.json` per evitare la sovrascrittura accidentale di `results/e01_baseline.json`.
+
+### Benchmark & Outcome (Valutazione Locale 30 Episodi)
+
+- **Benchmark Metric Summary E05 (`results/e05_hire_multiworker.json`)**:
+  - Total Episodes: 30 (21.600 turni totali)
+  - Completion Rate: 100.00%
+  - Disqualification Rate: 0.00%
+  - Overall Win Rate: **100.00%** (30W / 0L / 0D)
+  - Win Rate vs `pass`: 100.00% ($21554.60)
+  - Win Rate vs `random`: 100.00% ($21696.20)
+  - Win Rate vs `starter`: 100.00% ($21456.00)
+  - Mean Final Money E05: **`$21568.93 ± $361.25`**
+  - Median Final Money E05: **`$21442.00`**
+  - Total Weed Conversions: **176 weeds** (5.87 weeds/episodio)
+  - Mean Unwatered End-of-Day Ratio: **3.33%**
+  - Agent Mean Turn Latency: **0.0924 ms/turno**
+
+### Confronto Quantitativo
+
+- **Delta Capitale Medio vs E04**: $21568.93 - 11232.47 = \mathbf{+\$10336.46 (+92.02\%)}$
+- **Delta Capitale Medio vs E03**: $21568.93 - 14682.47 = \mathbf{+\$6886.46 (+46.90\%)}$
+- **Total Weed Conversions vs E04**: $238 \rightarrow \mathbf{176\text{ weeds (-26.05\%)}}
+- **Economic Hypothesis**: **`SUPPORTED`**
+- **Worker Capacity Bottleneck**: **`STRONGLY SUPPORTED`**
+- **Starvation Status**: **`REDUCED BUT UNRESOLVED`**
+- **Overall Evaluation**: **`STRONG SUCCESS`**
+
+### Method assessment
+
+DEFINE: PASSED  
+PLAN: PASSED  
+BUILD: PASSED  
+VERIFY: PASSED  
+REVIEW: PASSED  
+SHIP: PASSED (Tag: `v0.5-e05-hire-multiworker`)
+
 

@@ -55,6 +55,16 @@ class ActionBuilder:
             self.market_orders.append(["BUY_SEED", crop_name, int(quantity)])
         return self
 
+    def hire(self) -> "ActionBuilder":
+        """Add HIRE market order."""
+        self.market_orders.append(["HIRE"])
+        return self
+
+    def add_hand_action(self, action_list: List[str]) -> "ActionBuilder":
+        """Append action list for a farm hand."""
+        self.hands_actions.append(action_list)
+        return self
+
     def build(self) -> Dict[str, Any]:
         """Return the action dictionary formatted for Kaggle Environments."""
         return {

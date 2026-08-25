@@ -50,6 +50,21 @@ class GameState:
         """Return (x, y) coordinates of the farmer."""
         return (self.farmer_x, self.farmer_y)
 
+    @property
+    def hands_positions(self) -> List[Tuple[int, int]]:
+        """Return list of (x, y) coordinates for active farm hands."""
+        raw_hands = self.my_farm.get("hands", []) if isinstance(self.my_farm, dict) else []
+        if not isinstance(raw_hands, list):
+            return []
+        return [(p[0], p[1]) for p in raw_hands if isinstance(p, list) and len(p) >= 2]
+
+    @property
+    def hires_today(self) -> int:
+        """Return number of hires performed today."""
+        if isinstance(self.my_farm, dict):
+            return int(self.my_farm.get("hires_today", 0))
+        return 0
+
     def get_tile(self, x: int, y: int) -> Any:
         """Return tile info at (x, y). null/None if empty, 'LOCKED' if locked, or dict if tile content."""
         if 0 <= y < len(self.tiles) and 0 <= x < len(self.tiles[y]):

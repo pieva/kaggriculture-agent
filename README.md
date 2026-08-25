@@ -20,7 +20,8 @@ Il progetto adotta rigorosamente il ciclo di sviluppo supervisionato:
 | **E01** | `CarrotLoopAgent` | Baseline: monocultura statica `CARROT` | `$3567.63 ± $205.38` | 0.00% (100% Draw) | Validata (`v0.1-e01-baseline`) |
 | **E02** | `ROICropAgent` | Selezione dinamica coltura via ROI/giorno | `$5857.17 ± $132.37` | 100.00% Vittorie | Complete (`v0.2-e02-roicrop`) |
 | **E03** | `MultiTileROIAgent` | Espansione coltivazione su cluster 2x2 (4 tile) | `$14682.47 ± $1164.33` | 100.00% Vittorie | Complete (`v0.3-e03-multitile`) |
-| **E04** | `NWClusterROIAgent` | NW Scaling su cluster 3x3 (9 tile, 1 farmer) | `$11232.47 ± $661.26` | 100.00% Vittorie | **Shipped / Falsified** (`v0.4-e04-nw-scaling`) |
+| **E04** | `NWClusterROIAgent` | NW Scaling su cluster 3x3 (9 tile, 1 farmer) | `$11232.47 ± $661.26` | 100.00% Vittorie | Shipped / Falsified (`v0.4-e04-nw-scaling`) |
+| **E05** | `HIRENWClusterROIAgent` | Multi-Worker Scaling (9 tile, 1 farmer + 1 hand) | **`$21568.93 ± $361.25`** | **100.00% Vittorie** | **Complete** (`v0.5-e05-hire-multiworker`) |
 
 > *Nota metodologica: Le metriche del benchmark locale ($ capitale finale) ed il Kaggle Skill Rating misurano aspetti differenti dell'agente e non devono essere confrontati direttamente.*
 
@@ -31,10 +32,11 @@ Il progetto adotta rigorosamente il ciclo di sviluppo supervisionato:
 - **Baseline Tag**: `v0.1-e01-baseline` (main allineato con origin/main).
 - **Tag E02**: `v0.2-e02-roicrop`.
 - **Tag E03**: `v0.3-e03-multitile`.
-- **Tag E04**: `v0.4-e04-nw-scaling` (consolidata falsificazione dell'ipotesi 4→9 single farmer).
-- **Strategia Corrente**: `NWClusterROIAgent` in `src/agricola/strategy/nw_cluster_roi.py`.
+- **Tag E04**: `v0.4-e04-nw-scaling` (falsificazione 4→9 single farmer).
+- **Tag E05**: `v0.5-e05-hire-multiworker` (validazione dello scaling multi-worker 9 tile).
+- **Strategia Corrente**: `HIRENWClusterROIAgent` in `src/agricola/strategy/hire_nw_cluster_roi.py`.
 - **Submission Standalone**: Generata in `submission/submission.py` e verificata.
-- **Suite di Test**: 19/19 test automatizzati superati (`pytest tests/`).
+- **Suite di Test**: 25/25 test automatizzati superati (`pytest tests/`).
 
 ---
 
@@ -69,6 +71,15 @@ Le evidenze analitiche e quantitative per ciascuna iterazione sono disponibili s
 - [Implementation Plan E04](docs/plans/E04_Initial_NW_Scaling.md)
 - [Rapporto VERIFY E04](docs/versions/E04_verify_antigravity.md)
 - [Rapporto SHIP E04](docs/versions/E04_ship_antigravity.md)
+
+### Iterazione E05 (HIRE Multi-Worker Scaling)
+- [Capability Analysis E05-01](docs/experiments/E05-01_HIRE_Capability_Analysis.md)
+- [Implementation Plan E05](docs/plans/E05_HIRE_MultiWorker_Scaling.md)
+- [Rapporto BUILD E05](docs/versions/E05_build_antigravity.md)
+- [Rapporto VERIFY E05](docs/versions/E05_verify_antigravity.md)
+- [Rapporto REVIEW E05](docs/versions/E05_review_antigravity.md)
+- [Rapporto SHIP E05](docs/versions/E05_ship_antigravity.md)
+- [Risultati Benchmark E05](results/e05_hire_multiworker.json)
 
 ### Registri di Progetto
 - [Experiment Log](docs/EXPERIMENT_LOG.md)

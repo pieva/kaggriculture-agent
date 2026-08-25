@@ -35,8 +35,8 @@ def main():
     parser.add_argument(
         "--output",
         type=str,
-        default="results/e01_baseline.json",
-        help="Output JSON file path for metric report (default: results/e01_baseline.json)",
+        default="results/latest_eval.json",
+        help="Output JSON file path for metric report (default: results/latest_eval.json)",
     )
 
     args = parser.parse_args()
