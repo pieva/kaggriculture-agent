@@ -46,6 +46,21 @@ class GameState:
         self.market_inventory: Dict[str, int] = self.market.get("inventory", {}) or {}
 
     @property
+    def inventories(self) -> List[Dict[str, int]]:
+        """Return list of personal inventories for [farmer, *hands]."""
+        raw_invs = self.private.get("inventories", []) if isinstance(self.private, dict) else []
+        if not isinstance(raw_invs, list):
+            return [{}]
+        return [dict(inv) if isinstance(inv, dict) else {} for inv in raw_invs]
+
+    def get_worker_inventory_count(self, worker_id: int, item_name: str) -> int:
+        """Return amount of item_name in specific worker's inventory."""
+        invs = self.inventories
+        if 0 <= worker_id < len(invs):
+            return invs[worker_id].get(item_name, 0)
+        return 0
+
+    @property
     def farmer_position(self) -> Tuple[int, int]:
         """Return (x, y) coordinates of the farmer."""
         return (self.farmer_x, self.farmer_y)

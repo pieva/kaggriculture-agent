@@ -1,4 +1,7 @@
-"""Script to bundle the Agricola agent modules into a single standalone submission file for Kaggle."""
+"""Script to bundle the Agricola agent modules into a single standalone submission file for Kaggle.
+
+Supports bundling E07 HybridLivestockClusterROIAgent into submission/submission.py.
+"""
 
 import os
 from pathlib import Path
@@ -6,9 +9,10 @@ from pathlib import Path
 SUBMISSION_TEMPLATE = '''"""
 Standalone submission file for Kaggle Kaggriculture.
 Generated automatically by scripts/build_submission.py
+Strategy: E07 HybridLivestockClusterROIAgent
 """
 
-from typing import Dict, Any, List, Optional, Tuple
+from typing import Dict, Any, List, Optional, Tuple, Set
 
 # --- Core State Wrapper ---
 {state_code}
@@ -16,20 +20,18 @@ from typing import Dict, Any, List, Optional, Tuple
 # --- Action Builder ---
 {actions_code}
 
-# --- Base HIRE NW Cluster ROI Agent Strategy ---
-{strategy_code}
-
-# --- E06 Water-First HIRE NW Cluster ROI Agent Strategy ---
-{water_first_strategy_code}
+# --- E07 Hybrid Livestock Cluster ROI Agent Strategy ---
+{e07_strategy_code}
 
 # --- Kaggle Entrypoint ---
-_agent_instance = WaterFirstHIRENWClusterROIAgent()
+_config = CompetitiveConfig()
+_agent_instance = HybridLivestockClusterROIAgent(config=_config)
 
 def agent(observation: Dict[str, Any], configuration: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
     """Kaggle submission entry point."""
     try:
         state = GameState(observation)
-        return _agent_instance.act(state)
+        return _agent_instance.decide(state)
     except Exception:
         return {{"farmer": ["PASS"], "hands": [], "market": []}}
 '''
@@ -57,23 +59,20 @@ def build_submission(output_path: str = "submission/submission.py") -> None:
     with open(src_dir / "core" / "actions.py", "r", encoding="utf-8") as f:
         actions_code = clean_imports(f.read(), ["from typing import"])
 
-    with open(src_dir / "strategy" / "hire_nw_cluster_roi.py", "r", encoding="utf-8") as f:
-        strategy_code = clean_imports(
+    with open(src_dir / "strategy" / "hybrid_livestock_cluster_roi.py", "r", encoding="utf-8") as f:
+        e07_strategy_code = clean_imports(
             f.read(),
-            ["from typing import", "from agricola.core.state", "from agricola.core.actions"]
-        )
-
-    with open(src_dir / "strategy" / "water_first_hire_nw_cluster_roi.py", "r", encoding="utf-8") as f:
-        water_first_strategy_code = clean_imports(
-            f.read(),
-            ["from typing import", "from agricola.core.state", "from agricola.strategy.hire_nw_cluster_roi"]
+            [
+                "from typing import",
+                "from agricola.core.state",
+                "from agricola.core.actions",
+            ]
         )
 
     bundled_code = SUBMISSION_TEMPLATE.format(
         state_code=state_code.strip(),
         actions_code=actions_code.strip(),
-        strategy_code=strategy_code.strip(),
-        water_first_strategy_code=water_first_strategy_code.strip(),
+        e07_strategy_code=e07_strategy_code.strip(),
     )
 
     out_file = project_root / output_path

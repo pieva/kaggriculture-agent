@@ -208,15 +208,53 @@ Decisioni:
 - SHIP Status: `PASSED`
 - Tag Git: `v0.6-e06-water-first`
 
-## Punto di ripartenza per la prossima sessione (E07)
+## E07 — Competitive Baseline Reconstruction — VERIFICA PRESTAZIONALE COMPLETATA
 
-Alla ripresa della prossima sessione:
+La fase di verifica prestazionale `E07-08 — VERIFY Local Performance` è stata completata con successo (30 episodi controllati e paired):
+- **Strategy Implementation:** `HybridLivestockClusterROIAgent` in [`src/agricola/strategy/hybrid_livestock_cluster_roi.py`](file:///c:/Users/pietr/Projects/kaggriculture-agent/src/agricola/strategy/hybrid_livestock_cluster_roi.py)
+- **VERIFY Local Performance Report:** [`docs/versions/E07_verify_local_performance.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E07_verify_local_performance.md)
+- **Benchmark Data:** [`results/e07_competitive_baseline.json`](file:///c:/Users/pietr/Projects/kaggriculture-agent/results/e07_competitive_baseline.json)
 
-1. Iniziare l'esperimento **E07 — DEFINE** a partire dalle candidate valutate nella REVIEW E06.
-2. Candidate raccomandate per E07:
-   - **Candidate A — `DIG` / Weed Recovery:** Attivare `DIG` per eliminare le 70 erbacce residue e recuperare le tile morte.
-   - **Candidate B — Dynamic Worker Partitioning:** Bilanciare dinamicamente i carichi tra Farmer e Hand 1.
-   - **Candidate C — Dynamic Priority Scheduling:** Prioritizzare `WATER_URGENT > HARVEST > PLANT > WATER_NON_URGENT`.
-3. Non iniziare BUILD o benchmark prima di aver completato DEFINE e PLAN E07.
+### Sintesi Benchmark Locale (30 Episodi Paired)
+- **Decisione Finale VERIFY:** **`ARCHITECTURALLY VALID, ECONOMICALLY WEAK`**
+- **E07 Mean Final Money:** **`$15,364.57 ± $3,144.39`** (Median: `$15,990.50`, Min: `$7,253.00`, Max: `$18,423.00`, Win Rate vs Opponents: `100.0%`).
+- **Confronto vs E06 (`$25,180.30`):** Delta Medio **`-$9,815.73` (`-38.98%`)**, Delta Mediano **`-$9,856.50` (`-38.13%`)**, Paired Win Rate **`0/30 (0.0%)`**.
+- **Confronto vs E05 (`$21,485.87`):** Delta Medio **`-$6,121.30` (`-28.49%`)**, Delta Mediano **`-$5,451.50` (`-25.42%`)**, Paired Win Rate **`0/30 (0.0%)`**.
+
+### Cause Principali della Regressione Economica E07
+1. **Costo d'opportunità del Wheat (Causa Principale):** 6 delle 9 mattonelle Q0 riservate al Wheat ($25 ricavo lordo) anziché Carrots/Melons ($140-$250 ricavo lordo).
+2. **Capitale immobilizzato nel Livestock:** Bovini costano $400 + 5 mattonelle pascolo + 6 feed tiles + 14 giorni ciclo, generando solo $389.33 di Milk entro il giorno 30 (non ripagano il costo diretto di $573.34).
+3. **Espansione Terreni Q1 e Distanza di Spostamento:** L'acquisto di Q1 costa $1,000 cash al giorno 12. Gli spostamenti dei worker su 50 mattonelle aumentano il movement al 54.2%, aumentando le malerbe a 7.73/episodio (vs 2.1 in E06).
+
+## E08 — Productive Scale Optimization — DEFINE COMPLETED
+
+La fase `E08-01 — DEFINE Productive Scale Optimization` è stata completata con successo ([`docs/versions/E08_define_productive_scale.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E08_define_productive_scale.md)).
+
+### Punteggi Kaggle Rilevati
+- **E05:** `429.5`
+- **E06:** `375.7`
+- **E07:** `339.5` (sottoutilizzo del terreno acquistato: 24 tile coltive su 50 possedute).
+
+### Ipotesi e Configurazione E08 Selezionata (Scenario S2 — High Scale)
+- **Variabile Primaria Modificata:** **`PRODUCTIVE SCALE`** (Target productive tiles incrementato da **24 a 40**, land utilization da 48.0% a 80.0%).
+- **Crop Allocation:** 6 Wheat (feed), 22 Melon (+10 cash), 12 Carrot (+6 liquidity).
+- **Variabili Congelate da E07:**
+  - Workforce: 4 worker (1 Farmer + 3 Hands) — capacità ampiamente sufficiente (96 worker-turn/giorno, 54.2% carico produttivo).
+  - Livestock: 4 Cow, 2 Sheep, 6 Wheat feed loop.
+  - Land Expansion: Giorno 12 `BUY_LAND` Q1 ($1,000).
+  - Task Priority: `WATER > FEED > HARVEST > PLANT` (Water-First).
+  - Liquidation & Market Policy: Invariati.
+## E08 — Productive Scale Optimization — COMPLETED & CLOSED
+
+L'esperimento **E08 — Productive Scale Optimization** è stato completato e formalmente chiuso ([`docs/versions/E08_ship_productive_scale.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E08_ship_productive_scale.md)).
+
+### Sintesi Finale E08:
+1. **Esito Sperimentale:** Ipotesi falsificata. Lo scaling a 40 tile ha ridotto il Mean Final Money del **-10.81%** ($11,880.30 vs E07 $13,320.37).
+2. **Candidatura Kaggle:** **NON CANDIDATO.** La baseline shipped attiva in `src/agricola/agent.py` rimane **E06 `WaterFirstHIRENWClusterROIAgent`** ($25,000+).
+3. **Preservazione:** Il codice `HybridLivestockClusterROIAgent`, la suite di unit test (42/42 passati) ed i risultati JSON (`results/e08_productive_scale.json`) rimangono salvati come evidenza empirica.
+
+## Punto di ripartenza (Prossima Azione: E09-01 DEFINE)
+
+Procedere con la fase **E09-01 DEFINE — Livestock Subsystem Ablation (ON → OFF)** per isolare la causalità dell'allevamento rispetto alla baseline primaria E07 (24 tile, 4 worker).
 
 <!-- END OF DOCUMENT -->

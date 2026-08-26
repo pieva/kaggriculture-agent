@@ -31,6 +31,26 @@ class ActionBuilder:
         self.farmer_action = ["HARVEST"]
         return self
 
+    def build_pasture(self) -> "ActionBuilder":
+        """Set farmer action to BUILD_PASTURE current tile."""
+        self.farmer_action = ["BUILD_PASTURE"]
+        return self
+
+    def place(self, item_name: str) -> "ActionBuilder":
+        """Set farmer action to PLACE item on current tile."""
+        self.farmer_action = ["PLACE", item_name]
+        return self
+
+    def pickup(self, item_name: str, quantity: int = 1) -> "ActionBuilder":
+        """Set farmer action to PICKUP item from shed."""
+        self.farmer_action = ["PICKUP", item_name, int(quantity)]
+        return self
+
+    def feed(self) -> "ActionBuilder":
+        """Set farmer action to FEED animal on current tile."""
+        self.farmer_action = ["FEED"]
+        return self
+
     def move(self, direction: str) -> "ActionBuilder":
         """Set farmer action to move in direction ('NORTH', 'SOUTH', 'EAST', 'WEST' or 'N', 'S', 'E', 'W')."""
         dir_map = {
@@ -58,6 +78,17 @@ class ActionBuilder:
     def hire(self) -> "ActionBuilder":
         """Add HIRE market order."""
         self.market_orders.append(["HIRE"])
+        return self
+
+    def buy_land(self) -> "ActionBuilder":
+        """Add BUY_LAND market order."""
+        self.market_orders.append(["BUY_LAND"])
+        return self
+
+    def buy_animal(self, animal_name: str, quantity: int = 1) -> "ActionBuilder":
+        """Add BUY_ANIMAL market order."""
+        if quantity > 0:
+            self.market_orders.append(["BUY_ANIMAL", animal_name, int(quantity)])
         return self
 
     def add_hand_action(self, action_list: List[str]) -> "ActionBuilder":
