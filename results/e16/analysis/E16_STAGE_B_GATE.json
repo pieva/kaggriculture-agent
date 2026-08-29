@@ -1,0 +1,67 @@
+{
+  "analysis_code_hash": "f3d7d323a91af8dc7968b3338d011a757d5787993cce02932eeca2fde53d8fb2",
+  "design_id": "E16_TRAINING",
+  "eligible_cells": [],
+  "gate_status": "STAGE_B_BLOCKED_NO_CAPACITY_ANCHOR",
+  "input_result_hashes": {
+    "E16-A01-S1678077158-P0.json": "82ca238d6ffb21a159fd5198b4772b65e6bdcfe7abe40873f56587196928cfbc",
+    "E16-A01-S1678077158-P1.json": "b2fe4f21e37bba51786e5336ed148fb5fad2ab0645cfb59481baedf3e7c14fd0",
+    "E16-A01-S1802163452-P0.json": "4d4fde5da3fb41970724d17e75caf9d4934f13d585e97184d811454711c18bb5",
+    "E16-A01-S1802163452-P1.json": "3365d5c2eeb13de90f5f899243443e8e91013aecbe7d9240f66669cb923363d4",
+    "E16-A02-S1678077158-P0.json": "23fca5a9263a88d6d7ae73080f221257267335cd280fed3a3ca15c384d395b5e",
+    "E16-A02-S1678077158-P1.json": "46bda92245b0a302cf5c3ae526f7306fc704a24b70e27e573bd397fc59409b6a",
+    "E16-A02-S1802163452-P0.json": "89f95882e70a35f105e861b3b92b2e19429642a30b6c5a0d5b1506bea106d34a",
+    "E16-A02-S1802163452-P1.json": "32d1b2788fe34c61d64a5d993209d62e1a79e9040eb3907fa7e6768325e3b4f3",
+    "E16-A03-S1678077158-P0.json": "ad43a3583a30b9fee1286df0f9873b280d18b4bfaee312918b7a54a03f745e50",
+    "E16-A03-S1678077158-P1.json": "78362dc4dc4e04351ef964b3dd7cc8e3b2c73361818b6b911326b986e6aa1d31",
+    "E16-A03-S1802163452-P0.json": "57f4e75dc4e83dcb2b0352fedd58328c9089099905800cc346144d0fba8e855f",
+    "E16-A03-S1802163452-P1.json": "8382fac2b4cc6200b3a557ba57e9414d69cbe4775211dbc9f51e9005b0ae2358",
+    "E16-A04-S1678077158-P0.json": "648debdbee87afb13ea5408be5a752364b835caf24a5b5f0216d8eb53839d2f4",
+    "E16-A04-S1678077158-P1.json": "16da0bc3a6bc67082fba2715baf5e06912bdaff2e746de25d63048d7caf532eb",
+    "E16-A04-S1802163452-P0.json": "3a1224941711258313d2fedb056cd2da307a9a8fa749de380e8d98971e03ce44",
+    "E16-A04-S1802163452-P1.json": "0fdfa440b87677d39915f46d25c96fa643a4207e6b2fae4aff74a7bd7db9b763",
+    "E16-A05-S1678077158-P0.json": "0336980572de29ff6de1c1dd67ffba5d55f4b092f7f6e5c983afd74e23e10319",
+    "E16-A05-S1678077158-P1.json": "9b0c4c6630b42307c5d48c681c627f274228ed65d3bdad68e920eebca4cce1a4",
+    "E16-A05-S1802163452-P0.json": "650a68371147bd9e65511dc6025c269b6ed5bdffbc4d501c9fc9aac318967592",
+    "E16-A05-S1802163452-P1.json": "c2b3256159c6ef2fef1ecb6948676dfa46da7972a6ece5eaa1c85a8c50d8bdeb",
+    "E16-A06-S1678077158-P0.json": "9ad705e2c2181c38db794b2d9a1ff93d30699b9ba32fd2b449915c04b5f1904f",
+    "E16-A06-S1678077158-P1.json": "e721ebaeb950e2ae6d6a2f74217ef97a161355057a02aa47fc621fafb03b068c",
+    "E16-A06-S1802163452-P0.json": "92fd7e07eb62c6e21d5389dbb85863ad46ce30929828138c051e260880dbfbfa",
+    "E16-A06-S1802163452-P1.json": "a209a35730fec41183327cf59b4acb19b07e924080e2c0db525f2217d8c84026",
+    "E16-A07-S1678077158-P0.json": "425b9ce44d9e54176b0b3da120e686956add03daf3064768afaea648acae7117",
+    "E16-A07-S1678077158-P1.json": "e4d77432d6af0d5405608f05cfa2bbf4f83e41e2eb59c4c05c68cb38365cc9f6",
+    "E16-A07-S1802163452-P0.json": "4d1a1021330be46fbccde7ef5a67771cb6ac9272f83c8dabd1833cdc420f3315",
+    "E16-A07-S1802163452-P1.json": "c185a378c45ad4009845acd41e2e1ae62dd169cdbf4fcc2483bcd2ac6b441c6a"
+  },
+  "metrics_by_cell": {
+    "A02": {
+      "capacity_eligible": false,
+      "completion_rate": 1.0,
+      "crop_target": 10,
+      "episode_count": 4,
+      "median_crop_target_attainment": 0.2,
+      "median_post_ramp_watering_execution_rate": 0.0,
+      "median_watering_continuity": 0.0
+    },
+    "A04": {
+      "capacity_eligible": false,
+      "completion_rate": 1.0,
+      "crop_target": 25,
+      "episode_count": 4,
+      "median_crop_target_attainment": 0.12,
+      "median_post_ramp_watering_execution_rate": 0.0,
+      "median_watering_continuity": 0.0
+    },
+    "A07": {
+      "capacity_eligible": false,
+      "completion_rate": 1.0,
+      "crop_target": 17,
+      "episode_count": 4,
+      "median_crop_target_attainment": 0.08823529411764705,
+      "median_post_ramp_watering_execution_rate": 0.0,
+      "median_watering_continuity": 0.0
+    }
+  },
+  "selected_C_star": null,
+  "timestamp": "2026-08-29T17:15:51+00:00"
+}

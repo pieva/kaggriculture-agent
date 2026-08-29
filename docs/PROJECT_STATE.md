@@ -1,87 +1,103 @@
 # Project State
 
 **Last update:** 2026-08-29
-**Current State:** `E15 EPISTEMICALLY CLOSED` (Competitive Winner: Copilot 2–0)
+**Current State:** `E16-A-R1 COMPLETED / STAGE B BLOCKED` (Evidence Role: `TRAINING`)
+**Repository Test Suite:** `143/143 PASS`
 
 ---
 
-## 1. Current Phase: E15 — Pairwise Tournament (COMPLETED & EPISTEMICALLY CLOSED)
+## 1. Current Phase: E16 — Training Phase (Stage A-R1 Completed)
 
-- **E14 — Repository Isolation & Canonical Ontology (COMPLETED)**:
-  - Repository isolated across three independent candidate architectures: **Antigravity**, **Codex**, **Copilot**.
-  - Canonical Ontology established in `docs/model_specs/ONTOLOGY.md` containing exactly **64 canonical concept_ids**.
-  - All three independent model specs mapped 64/64 canonical concepts with zero missing/extra concepts.
-- **E15.0 — Pre-Tournament Freeze & Enforcement (COMPLETED)**:
-  - **7/7 Frozen Artifacts** committed and locked under `results/e15/freeze/` with SHA256 manifest `results/e15/freeze/FREEZE_MANIFEST.md`.
-  - **Copilot Ownership**: Independently verified and certified in `docs/model_specs/copilot/E15_0a_OWNERSHIP_VERIFICATION_REPORT.md`.
-  - **P0/P1 Environment Audit**: Certified `NO_MATERIAL_POSITION_BIAS_FOUND` in `results/e15/P0_P1_ENVIRONMENT_AUDIT.md`.
-  - **Freeze Enforcement Runner**: `scripts/run_e15_tournament.py` executes directly and exclusively from `results/e15/freeze/`, with SHA256 pre-execution validation and fail-closed abort.
-- **E15 Tournament Execution & Post-Match Consensus (COMPLETED)**:
-  - **M1 (Seed 1113294977)**: Antigravity ($8,672) vs Codex ($20,461) — Winner: **Codex**. Double ACK closed (`ACK_M1_CONSENSUS_ANTIGRAVITY`, `ACK_M1_CONSENSUS_CODEX`).
-  - **M2 (Seed 3033283457)**: Codex ($27,510) vs Copilot ($37,752) — Winner: **Copilot**. Double ACK closed (`ACK_M2_CONSENSUS_CODEX`, `ACK_M2_CONSENSUS_COPILOT`).
-  - **M3 (Seed 3122977751)**: Copilot ($26,629) vs Antigravity ($9,371) — Winner: **Copilot**. Double ACK closed (`ACK_M3_CONSENSUS_ANTIGRAVITY`, `ACK_M3_CONSENSUS_COPILOT`).
-- **Competitive Winner**: **Copilot (2–0)** (Codex: 1–1, Antigravity: 0–2). Tie-break not required.
-- **Frozen Artifacts**: `UNCHANGED`.
-- **Tournament Synthesis Artifact**: `results/e15/E15_FINAL_TOURNAMENT_SYNTHESIS.md`.
+### 1.1 E16-A Original Execution & Forensic Diagnosis
+- **Original Stage A:** Executed across all 28 episodes (A01–A07, 2 seeds, 2 seats vs Copilot E15 frozen).
+- **Forensic Diagnosis (`E16_STAGE_A_FORENSIC_DIAGNOSIS.md`):**
+  - Discovered measurement artifact: `id(farm)` reference mismatch caused `player: -1` in unit events, setting `watering_execution_rate = 0.0` in automated analysis.
+  - Discovered policy realization defect: `watering_dispatch_priority` was implemented as a fractional daily exclusion quota (`math.ceil(priority * needs)`), deliberately leaving (1-p) crops unwatered and inducing 2-day drought mortality.
+  - Discovered capital exhaustion in 25-crop cells: Day 0 expenditures drove cash to $300 operating floor, causing unrecoverable cash stall in A03/A06.
+- **Original Stage A Status:** Completed but causally contaminated; preserved intact under `results/e16/stage_a/` exclusively as forensic baseline evidence.
 
----
+### 1.2 Implementation Repair (R1, R2, R3)
+- **R1 (Watering Semantics):** Clarified and implemented priority as operational worker dispatch precedence over active crops, eliminating fractional drought exclusion.
+- **R2 (Ledger Attribution):** Fixed farm/player binding in `apply_unit_action` and event logger so that unit events are accurately attributed to player 0 or player 1.
+- **R3 (Derived Metrics & Gates):** Updated telemetry formulas, ramp windows, and gate verification logic.
+- **Repair Verification:** 143/143 tests passing (`pytest tests/`), instrumentation gate `PASS`, SHA256 hashes locked.
 
-## 2. Core Epistemic Findings & Two-Regime Empirical Model
-
-### Key Replicated Findings:
-1. **Antigravity Failure Mode Replication (M1 & M3)**:
-   - Systematically replicated across seeds: extremely low watering (34 vs 30), unharvested crop drop, high movement (5,019 vs 5,047), over-expanded nominal footprint (3Q, 12 hands, 18 pasture/livestock) with severely depressed active maintained crop surface (8–9 crops).
-2. **Copilot Policy Footprint Stability (M2 & M3)**:
-   - Replicated compact working set: high continuous watering (446 vs 439), compact livestock (5 pasture, 4 animals), 9 hands, intensive monetization (298 vs 302 sell orders).
-3. **State-Capacity Alignment & Monetized Capacity**:
-   - Nominal capacity $\neq$ activated/maintained/monetized capacity.
-   - Raw action volume or physical land scale without operational maintenance and monetization is counterproductive.
-
-### Two-Regime Empirical Model:
-1. **Regime A — Below Operational Threshold (Sub-threshold)**:
-   - When irrigation, dispatch, or maintenance fail, working surface collapses. Nominal assets amplify misalignment. Irrigation, dispatch, and basic maintenance dominate outcomes (observed in M1 and M3).
-2. **Regime B — Above Operational Threshold (Super-threshold)**:
-   - When watering and maintenance are stabilized, raw physical capacity ceases to be monotonically beneficial. Monetization quality, state-capacity alignment, capital timing, inventory-to-cash conversion, and sell-through dominate outcomes (observed in M2).
+### 1.3 Corrected Replication: E16-A-R1 Execution
+- **Replication Status:** `COMPLETE` (28/28 episodes executed under `results/e16/stage_a_r1/`).
+- **Failures:** 0 gameplay failures, 0 infrastructure failures.
+- **Integrity Check:** `PASS` (28 episodes, 0 unexpected seeds/cells, 0 hash mismatches, 0 unit actions with `player = -1`, strict treatment/opponent separation).
+- **Watering Repair Validation:**
+  - `watering_execution_rate`: 0.8898–0.9416 across HIGH cells (vs 0.0 in contaminated run).
+  - `watering_continuity`: ~0.96 across all HIGH cells.
+  - Synthetic daily drought successfully eliminated.
 
 ---
 
-## 3. Frozen Candidates & SHA256 Integrity Registry
+## 2. Quantitative Results: Stage A-R1
 
-All competitive executions strictly verified against `results/e15/freeze/FREEZE_MANIFEST.md`:
+### 2.1 Cell-by-Cell Final Money & Telemetry:
 
-| Artifact | Source Path | Frozen Path | SHA256 Checksum |
-|---|---|---|---|
-| **Canonical Ontology** | `docs/model_specs/ONTOLOGY.md` | `results/e15/freeze/ONTOLOGY_E15_FROZEN.md` | `5bab9c13cbf6d88b818ad6aca401fdb9bacc811d656dab4e39fe7d8c634e0bfa` |
-| **Antigravity MODEL_SPEC** | `docs/model_specs/antigravity/MODEL_SPEC_ANTIGRAVITY.md` | `results/e15/freeze/MODEL_SPEC_ANTIGRAVITY_E15_FROZEN.md` | `f4eb68d232586394ae83399ddc4405cf211ead57e3afa183c655611eb6943a46` |
-| **Codex MODEL_SPEC** | `docs/model_specs/codex/MODEL_SPEC_CODEX.md` | `results/e15/freeze/MODEL_SPEC_CODEX_E15_FROZEN.md` | `9e38dfe16b5e22b47df890abc105519920f5987de683e9da22638c0a5a57aed7` |
-| **Copilot MODEL_SPEC** | `docs/model_specs/copilot/MODEL_SPEC_COPILOT.md` | `results/e15/freeze/MODEL_SPEC_COPILOT_E15_FROZEN.md` | `d08dde958f929dab1a28f6a92343618d4b31a5b3cc12cf10c6673c92900d0686` |
-| **Antigravity Submission** | `submission/submission_antigravity.py` | `results/e15/freeze/submission_antigravity_E15_FROZEN.py` | `629c017271891e0b7d7a4b0e655df40b0aac66ee8af1bc00d5718fb8bdfd404d` |
-| **Codex Submission** | `submission/submission_codex.py` | `results/e15/freeze/submission_codex_E15_FROZEN.py` | `fe269bf365dd7167644e5867ca857f1f77d4009f9ce66c0e2afa3e78d6a4c9f3` |
-| **Copilot Submission** | `submission/submission_copilot.py` | `results/e15/freeze/submission_copilot_E15_FROZEN.py` | `604bd6201df08b3c4dbfb00c2e49bf8963c7a32b6bba6e14c04d046e308b8abb` |
+| Cell | Crop Target | Water Priority | Final Money (Median) | Final Money (Mean) | Watering Execution Rate | Watering Continuity | Crop Target Attainment |
+|---|---|---|---|---|---|---|---|
+| **A01** | 10 | 0.20 (LOW) | **$19,694.00** | $18,970.00 | 0.7241 | 0.7000 | 0.0000 |
+| **A02** | 10 | 0.70 (HIGH) | **$21,230.50** | $21,255.25 | 0.9316 | 0.9630 | 0.4750 |
+| **A03** | 25 | 0.20 (LOW) | **$11,903.50** | $12,112.00 | 0.8542 | 0.8750 | 0.1600 |
+| **A04** | 25 | 0.70 (HIGH) | **$19,987.00** | $19,522.50 | 0.8898 | 0.9600 | 0.3000 |
+| **A05** | 17 | 0.45 (MID) | **$26,619.50** | $25,499.25 | 0.9084 | 0.9000 | 0.3529 |
+| **A06** | 25 | 0.45 (MID) | **$21,570.50** | $21,500.25 | 0.8782 | 0.9630 | 0.2800 |
+| **A07** | 17 | 0.70 (HIGH) | **$27,076.00** | $26,832.50 | 0.9416 | 0.9615 | 0.4706 |
 
----
-
-## 4. Completed Tournament Summary
-
-| Match ID | Player 0 (P0) | Player 1 (P1) | Seed | Final Scores | Winner | Status |
-|---|---|---|:---:|:---:|:---:|:---:|
-| **M1** | Antigravity | Codex | `1113294977` | $8,672 vs $20,461 | **Codex** | `CLOSED (Double ACK)` |
-| **M2** | Codex | Copilot | `3033283457` | $27,510 vs $37,752 | **Copilot** | `CLOSED (Double ACK)` |
-| **M3** | Copilot | Antigravity | `3122977751` | $26,629 vs $9,371 | **Copilot** | `CLOSED (Double ACK)` |
-
-### Final Tournament Standings:
-1. **Copilot**: 2–0 (Competitive Winner)
-2. **Codex**: 1–1
-3. **Antigravity**: 0–2
+### 2.2 Primary Contrasts & Signals:
+- **A02 - A01:** Median **+$1,576.00** (Mean +$2,285.25) — *Direction reversed from negative to positive; HIGH watering is now beneficial even at Crop 10.*
+- **A04 - A03:** Median **+$8,587.00** (Mean +$7,410.50) — *Strong positive premium for HIGH watering at scale 25 preserved.*
+- **Primary Interaction `(A04 - A03) - (A02 - A01)`:** Median **+$5,180.50** (Mean +$5,125.25) — *Positive Capacity × Watering interaction preserved.*
+- **Working Region Non-Monotonicity (`A02 -> A07 -> A04`):** $21,230.50 → $27,076.00 → $19,987.00. *Crop 17 is the most economically promising operating region in Stage A-R1, but is NOT a capacity threshold nor an optimum.*
+- **Scale 25 Cash Floor Resolution:** A03 ($11.9k) and A06 ($21.5k) recovered from the $300 cash stall.
 
 ---
 
-## 5. Next Mandatory Phase: POST-E15 — MODEL CAPABILITY CHECK
+## 3. Capacity Gate C* & Stage B Status
+
+### 3.1 Frozen Capacity Evaluation:
+- **Criteria:** Completion Rate >= 0.80, Watering Execution Rate >= 0.60, Watering Continuity >= 0.75, Crop Target Attainment >= 0.80.
+- **Evaluation on HIGH Ladder:**
+  - **A02 (Crop 10):** Completion=1.0, WaterRate=0.9316, Continuity=0.9630, Attainment=**0.4750** (< 0.80) ➔ **CAPACITY_ELIGIBLE = NO**
+  - **A07 (Crop 17):** Completion=1.0, WaterRate=0.9416, Continuity=0.9615, Attainment=**0.4706** (< 0.80) ➔ **CAPACITY_ELIGIBLE = NO**
+  - **A04 (Crop 25):** Completion=1.0, WaterRate=0.8898, Continuity=0.9600, Attainment=**0.3000** (< 0.80) ➔ **CAPACITY_ELIGIBLE = NO**
+
+### 3.2 Gate Verdict:
+- **Selected C\*:** `NONE`
+- **Gate Status:** `STAGE_B_BLOCKED_NO_CAPACITY_ANCHOR`
+- **Stage B Executed:** `NO` (Frozen execution protocol strictly enforced; Stage B cannot run without a valid C* capacity anchor).
+
+---
+
+## 4. Epistemic Interpretation & Layer Separation
+
+1. **MODEL_VALIDITY:** `STRONGLY SUPPORTED`
+   - Theoretical model predictions regarding irrigation necessity, capital preservation, and surface/workforce alignment are validated.
+   - Failure modes in scale cells match theoretical predictions regarding unmaintained footprint costs.
+2. **POLICY_REALIZATION:** `NEW BOTTLENECK ISOLATED`
+   - The repair successfully eliminated WATER dispatch as the primary bottleneck.
+   - However, the policy fails to maintain the nominal crop working-set target (attainment 0.30–0.475 vs >= 0.80 required).
+   - Candidate causes include routing/transit overhead, workforce/action capacity allocation, seed replenishment pacing, planting/replanting timing, or other operational constraints. No single cause should be assumed without empirical diagnosis.
+3. **IMPLEMENTATION_FIDELITY:** `VERIFIED`
+   - Instrumentation and telemetry attribution fully verified with zero untracked unit events.
+
+---
+
+## 5. Decision & Next Session Agenda
 
 > [!IMPORTANT]
-> **MANDATORY GATE:** Run the Model Capability Check across Antigravity, Codex, and Copilot BEFORE authorizing any MODEL_SPEC revision or new submission code generation.
->
-> Rules:
-> 1. DO NOT MODIFY E15 FROZEN ARTIFACTS.
-> 2. DO NOT REVISE MODEL_SPEC BEFORE CAPABILITY CHECK.
-> 3. DO NOT GENERATE NEW SUBMISSIONS YET.
+> **E16 IS STOPPED FOR TODAY.**
+> - DO NOT EXECUTE STAGE B.
+> - DO NOT CREATE NEW EXPERIMENTS.
+> - DO NOT MODIFY MODEL_SPEC.
+> - DO NOT PREPARE KAGGLE SUBMISSIONS.
+
+### Next Session Agenda:
+1. Verify repository integrity and E16-A-R1 dataset state.
+2. Execute a forensic diagnosis of the low `crop_target_attainment` utilizing the existing 28 R1 runs.
+3. Identify and classify the new operational bottleneck (routing, capacity, replanting, market pacing).
+4. Decide the next TRAINING experiment design only after completing the diagnosis.
+5. Keep Stage B blocked until a valid C* anchor exists or an explicit methodological design decision is frozen.

@@ -1,0 +1,59 @@
+{
+  "config_path": "configs/e16/E16_R1_FROZEN_CONFIG.json",
+  "config_sha256": "f37496d1653cfc78672632c7fb779fc07ee93897a22341cf54f2242290e9f199",
+  "corrected_replication_id": "E16-A-R1",
+  "corrected_stage_a_results_path": "results/e16/stage_a_r1",
+  "design_id": "E16_TRAINING",
+  "engine_version": "kaggle-environments=1.32.7;python=3.12.13",
+  "environment_version": "1.32.7",
+  "evidence_role": "TRAINING",
+  "generated_at": "2026-08-29T20:27:11+00:00",
+  "git_commit": "d599d0e294e54cc67ee0f6e47a39f031fb3243cc",
+  "git_dirty_state": true,
+  "instrumentation_gate_status": "PASS",
+  "opponent_path": "results/e15/freeze/submission_copilot_E15_FROZEN.py",
+  "opponent_sha256": "604bd6201df08b3c4dbfb00c2e49bf8963c7a32b6bba6e14c04d046e308b8abb",
+  "original_stage_a_status": "PRESERVED_28_COMPLETED",
+  "predecessor_config_sha256": "4c6ca43025d5a95acd6b2c8c5eb51a17a4bc4cadd672146055c317d54864ec92",
+  "predecessor_treatment_build_sha256": "8a897209ca331f9be21e430107b2452bb5b26df9e8d5b88c015b052a5185355e",
+  "repair_reasons": [
+    "semantic clarification",
+    "implementation repair",
+    "telemetry repair"
+  ],
+  "seat_protocol": {
+    "mandatory": true,
+    "treatment_seats": [
+      0,
+      1
+    ]
+  },
+  "seed_list": [
+    1802163452,
+    1678077158
+  ],
+  "semantic_clarification_path": "docs/experiment_designs/e16/E16_WATERING_SEMANTICS_CLARIFICATION.md",
+  "semantic_clarification_sha256": "fce78407bcb800a5bcc145dd53a14c53f6ad2e3b62279aaa95450729c6c627d3",
+  "stage_a_cell_ids": [
+    "A01",
+    "A02",
+    "A03",
+    "A04",
+    "A05",
+    "A06",
+    "A07"
+  ],
+  "stage_a_status": "E16_A_R1_PLANNED_NOT_RUN",
+  "stage_b_cell_ids": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05"
+  ],
+  "stage_b_gate_status": "NOT_COMPUTED",
+  "stage_b_status": "BLOCKED_PENDING_CORRECTED_GATE",
+  "telemetry_schema_version": "e16.telemetry.v2",
+  "treatment_build_path": "results/e16/manifests/E16_TREATMENT_BUILD_R1.py",
+  "treatment_build_sha256": "7f331511a235e409833a726a324a4cda9881f3c8836a1ee260a2d6f36b78e1a8"
+}

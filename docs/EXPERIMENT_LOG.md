@@ -127,10 +127,10 @@ E15 is frozen as an immutable epistemic baseline. The formal next gate is **Mode
 
 ## E15.0 — Pre-Tournament Freeze, Governance & Enforcement
 
-**Date:** 2026-08-29  
-**Phase:** PRE-TOURNAMENT FREEZE & GOVERNANCE  
-**Authority:** Multi-Agent Consensus (Antigravity, Codex, Copilot)  
-**Status:** `ACCEPT_E15_FREEZE` (Certified by Codex E15.0d Review)  
+**Date:** 2026-08-29
+**Phase:** PRE-TOURNAMENT FREEZE & GOVERNANCE
+**Authority:** Multi-Agent Consensus (Antigravity, Codex, Copilot)
+**Status:** `ACCEPT_E15_FREEZE` (Certified by Codex E15.0d Review)
 
 ### Objective
 Congelare in modo verificabile e immutabile gli artefatti pre-match (ontologia, 3 MODEL_SPEC, 3 submission candidate), certificare l'integrità SHA256 dei 7 file frozen, auditare la simmetria P0/P1 dell'environment, e implementare l'enforcement del freeze nel runner prima di avviare il torneo E15.
@@ -163,9 +163,9 @@ Congelare in modo verificabile e immutabile gli artefatti pre-match (ontologia, 
 
 ## E14 — Repository Isolation & Canonical Ontology
 
-**Date:** 2026-08-28 to 2026-08-29  
-**Phase:** MODEL GOVERNANCE & REPOSITORY ISOLATION  
-**Authority:** Multi-Agent Architecture (Antigravity, Codex, Copilot)  
+**Date:** 2026-08-28 to 2026-08-29
+**Phase:** MODEL GOVERNANCE & REPOSITORY ISOLATION
+**Authority:** Multi-Agent Architecture (Antigravity, Codex, Copilot)
 
 ### Objective
 Isolare formalmente i perimetri di codice e i modelli concettuali dei tre agenti per eliminare cross-contamination, e costruire un'ontologia canonica comune (`docs/model_specs/ONTOLOGY.md`) per rendere i tre MODEL_SPEC empiricamente confrontabili.
@@ -185,9 +185,9 @@ Isolare formalmente i perimetri di codice e i modelli concettuali dei tre agenti
 
 ## E12-D1 — Top Player Temporal & Economic Benchmark (Pure Diagnostic Trajectory Audit)
 
-**Date:** 2026-08-27  
-**Phase:** TEMPORAL & ECONOMIC DIAGNOSTIC AUDIT  
-**Tool:** Google Antigravity  
+**Date:** 2026-08-27
+**Phase:** TEMPORAL & ECONOMIC DIAGNOSTIC AUDIT
+**Tool:** Google Antigravity
 
 ### Objective
 Effettuare un audit temporale ed economico comparativo tra E12-X1.3, E11-X1.7 e la Top Player Envelope ($70k–$85k) senza apportare alcuna modifica al codice di strategia durante D1, per identificare a quale turn e per quale causa nasce il gap di -$21k.
@@ -209,9 +209,9 @@ Effettuare un audit temporale ed economico comparativo tra E12-X1.3, E11-X1.7 e 
 - **Raccomandazione Ufficiale per X1.4**: **`E12-X1.4 WORKER EFFICIENCY & STAGED EXPANSION TIMING`**
 - **Regola**: Mantenere l'opening livestock centered di Cow #1, posticipare l'acquisto di Q1 al Giorno 4–5 e Q2 al Giorno 8–10, e vincolare i worker per quadrante eliminando il movimento trasversale.
 
-**Date:** 2026-08-27  
-**Phase:** PRE-BUILD DIAGNOSIS → BUILD → VERIFY → STAGE A0/A1/B PROVENANCE MATCH  
-**Tool:** Google Antigravity  
+**Date:** 2026-08-27
+**Phase:** PRE-BUILD DIAGNOSIS → BUILD → VERIFY → STAGE A0/A1/B PROVENANCE MATCH
+**Tool:** Google Antigravity
 
 ### Objective
 Far proseguire la crop engine centered oltre il plateau di 15 tile fin a raggiungere 24–26 active crop tiles, mantenendo invariato l'opening livestock validato di X1.2 (Cow #1 + Feed Ring + WHEAT buffer).
@@ -245,9 +245,9 @@ L'esperimento E12-X1.3 ha **completamente superato il Structural Success Gate**:
 3. La provenienza dei dati è verificata al **100%**.
 
 
-**Date:** 2026-08-27  
-**Phase:** PRE-BUILD DIAGNOSIS → BUILD → VERIFY → STAGE A0/A1/B PROVENANCE MATCH  
-**Tool:** Google Antigravity  
+**Date:** 2026-08-27
+**Phase:** PRE-BUILD DIAGNOSIS → BUILD → VERIFY → STAGE A0/A1/B PROVENANCE MATCH
+**Tool:** Google Antigravity
 
 ### Objective
 Combinare l'opening livestock validato in E12-X1.1 con il ripristino immediato della macchina agricola centered di E11-X1.7 (`E12-X1.1 livestock opening + E11-X1.7 crop engine = E12-X1.2 hybrid strategy`), evitando che la gestione animale monopolizzi capitale, tile e worker actions.
@@ -279,9 +279,9 @@ L'opening animale coesiste con la macchina agricola centered, generando oltre **
 
 ## E12-X1.1 — Feed-First Cow Pipeline (Engine Alignment & Single-Cow Bootstrap Verification)
 
-**Date:** 2026-08-27  
-**Phase:** DIAGNOSE → BUILD → VERIFY → PROVENANCE MATCH  
-**Tool:** Google Antigravity  
+**Date:** 2026-08-27
+**Phase:** DIAGNOSE → BUILD → VERIFY → PROVENANCE MATCH
+**Tool:** Google Antigravity
 
 ### Objective
 Isolare e risolvere il collo di bottiglia economico osservato in E12-X1.0 ($6,227.60) mediante l'implementazione della pipeline **Feed-First Cow Pipeline**, assicurando che Cow #1 non venga mai acquistata né posizionata finché non è presente WHEAT raccolto nello shed (`wheat_shed >= 1`), e verificando il ciclo completo `WHEAT -> FEED -> MILK -> SELL`.
@@ -312,9 +312,9 @@ L'ipotesi di redditività dell'allevamento bovino early-game rispetto ai crop ad
 
 ## E01 — Project definition, baseline implementation, benchmark runner & observable verification
 
-**Date:** 2026-08-18 to 2026-08-19  
-**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW → CONSOLIDATE → SHIP  
-**Tool:** Google Antigravity  
+**Date:** 2026-08-18 to 2026-08-19
+**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW → CONSOLIDATE → SHIP
+**Tool:** Google Antigravity
 **Model:** Gemini 3.6 Flash
 
 ### Objective
@@ -379,21 +379,21 @@ See `docs/prompts/E01-01_define_plan.md`, `docs/prompts/E01-02_review_feedback.m
 
 ### Method assessment
 
-DEF INE: PASSED  
-PLAN: PASSED  
-BUILD: PASSED  
-VERIFY: PASSED  
-REVIEW: PASSED  
-CONSOLIDATE: PASSED  
+DEF INE: PASSED
+PLAN: PASSED
+BUILD: PASSED
+VERIFY: PASSED
+REVIEW: PASSED
+CONSOLIDATE: PASSED
 SHIP: PASSED (Tag: `v0.1-e01-baseline`)
 
 ---
 
 ## E02 — Dynamic Crop Selection & ROI Scaling (`ROICropAgent`)
 
-**Date:** 2026-08-19  
-**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW → CONSOLIDATE → SHIP  
-**Tool:** Google Antigravity  
+**Date:** 2026-08-19
+**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW → CONSOLIDATE → SHIP
+**Tool:** Google Antigravity
 **Model:** Gemini 3.6 Flash
 
 ### Objective
@@ -434,21 +434,21 @@ Sostituire la monocultura statica di carote della baseline E01 (`CarrotLoopAgent
 
 ### Method assessment
 
-DEF INE: PASSED  
-PLAN: PASSED  
-BUILD: PASSED  
-VERIFY: PASSED  
-REVIEW: PASSED  
-CONSOLIDATE: PASSED  
+DEF INE: PASSED
+PLAN: PASSED
+BUILD: PASSED
+VERIFY: PASSED
+REVIEW: PASSED
+CONSOLIDATE: PASSED
 SHIP: PASSED WITH OBSERVATIONS (Tag: `v0.2-e02-roicrop`)
 
 ---
 
 ## E03 — Multi-Tile Scaling (`MultiTileROIAgent`)
 
-**Date:** 2026-08-24  
-**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW → CONSOLIDATE → SHIP  
-**Tool:** Google Antigravity  
+**Date:** 2026-08-24
+**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW → CONSOLIDATE → SHIP
+**Tool:** Google Antigravity
 **Model:** Gemini 3.6 Flash (High)
 
 ### Objective
@@ -508,22 +508,22 @@ Valutare l'impatto dell'espansione del footprint di coltivazione da 1 tile a un 
 
 ### Method assessment
 
-DEFINE: PASSED  
-PLAN: PASSED  
-BUILD: PASSED  
-VERIFY: PASSED  
-REVIEW: PASSED  
-CONSOLIDATE: PASSED  
+DEFINE: PASSED
+PLAN: PASSED
+BUILD: PASSED
+VERIFY: PASSED
+REVIEW: PASSED
+CONSOLIDATE: PASSED
 SHIP: PASSED (Tag: `v0.3-e03-multitile`)
 
 ---
 
 ## E04 — Initial NW Scaling (`NWClusterROIAgent`)
 
-**Date:** 2026-08-25  
-**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-25
+**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -583,21 +583,21 @@ Valutare l'espansione del footprint produttivo dal cluster 2×2 (4 tile) di E03 
 
 ### Method assessment
 
-DEFINE: PASSED  
-PLAN: PASSED  
-BUILD: PASSED  
-VERIFY: PASSED  
-REVIEW: PASSED (Hypothesis Falsified - Strategic Bottleneck Identified)  
+DEFINE: PASSED
+PLAN: PASSED
+BUILD: PASSED
+VERIFY: PASSED
+REVIEW: PASSED (Hypothesis Falsified - Strategic Bottleneck Identified)
 SHIP: PASSED (Tag: `v0.4-e04-nw-scaling`)
 
 ---
 
 ## E05 — HIRE Multi-Worker Scaling (`HIRENWClusterROIAgent`)
 
-**Date:** 2026-08-25  
-**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-25
+**Phase:** DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -648,21 +648,21 @@ Valutare l'introduzione di forza lavoro subordinata giornaliera tramite l'azione
 
 ### Method assessment
 
-DEFINE: PASSED  
-PLAN: PASSED  
-BUILD: PASSED  
-VERIFY: PASSED  
-REVIEW: PASSED  
+DEFINE: PASSED
+PLAN: PASSED
+BUILD: PASSED
+VERIFY: PASSED
+REVIEW: PASSED
 SHIP: PASSED (Tag: `v0.5-e05-hire-multiworker`)
 
 ---
 
 ## E06 — Water-First Scheduling (`WaterFirstHIRENWClusterROIAgent`)
 
-**Date:** 2026-08-25  
-**Phase:** DEFINE → PLAN → BUILD  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-25
+**Phase:** DEFINE → PLAN → BUILD
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -716,21 +716,21 @@ Valutare l'inversione della priorità operativa dei worker da `HARVEST > PLANT >
 
 ### Method assessment
 
-DEFINE: PASSED  
-PLAN: PASSED  
-BUILD: PASSED  
-VERIFY: PASSED WITH METRIC CAVEAT (`docs/versions/E06_verify_antigravity.md`)  
-REVIEW: PASSED (`docs/versions/E06_review_antigravity.md`, Verdict: `SUPPORTED`)  
+DEFINE: PASSED
+PLAN: PASSED
+BUILD: PASSED
+VERIFY: PASSED WITH METRIC CAVEAT (`docs/versions/E06_verify_antigravity.md`)
+REVIEW: PASSED (`docs/versions/E06_review_antigravity.md`, Verdict: `SUPPORTED`)
 SHIP: PASSED (Tag: `v0.6-e06-water-first`, [`docs/versions/E06_ship_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E06_ship_antigravity.md))
 
 ---
 
 ## E10 — Q1 Expansion Capital Protection (`Q1CapitalProtectedROIAgent`)
 
-**Date:** 2026-08-26  
-**Phase:** DEFINE → PLAN → BUILD → VERIFY → FREEZE → PACKAGE → SUBMIT  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-26
+**Phase:** DEFINE → PLAN → BUILD → VERIFY → FREEZE → PACKAGE → SUBMIT
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -750,10 +750,10 @@ Proteggere il capitale di $1,000.0 necessario all'acquisto del quadrante Q1 (`BU
 
 ## E11 — 3× Productive Mass Expansion
 
-**Date:** 2026-08-26  
-**Phase:** E11-01 DEFINE → E11-02 PLAN → E11-03 BUILD → E11-04 LOCAL SAFETY VERIFY  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-26
+**Phase:** E11-01 DEFINE → E11-02 PLAN → E11-03 BUILD → E11-04 LOCAL SAFETY VERIFY
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -785,10 +785,10 @@ Fase **BUILD & LOCAL SAFETY VERIFY di E11-01**: implementare la classe `Producti
 
 ## E11-R0 — Baseline Reproducibility Audit
 
-**Date:** 2026-08-27  
-**Phase:** AUDIT & TECHNICAL ISOLATION  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-27
+**Phase:** AUDIT & TECHNICAL ISOLATION
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -810,10 +810,10 @@ Diagnosticare ed isolare la causa dell'apparente collasso di riproducibilità os
 
 ## E11-X1.1A — HIRE Constraint Verification & E06 Reconciliation Audit
 
-**Date:** 2026-08-27  
-**Phase:** HIRE CONSTRAINT VERIFICATION & E06 RECONCILIATION AUDIT  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-27
+**Phase:** HIRE CONSTRAINT VERIFICATION & E06 RECONCILIATION AUDIT
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -821,15 +821,15 @@ Verificare il codice dell'environment per capire l'esatta regola di validazione 
 
 ### Key Outcomes & Findings
 
-1. **Verdetto Hard-Cap Workforce:** **`NO — WORKFORCE HARD-CAP FALSIFICATO`**  
+1. **Verdetto Hard-Cap Workforce:** **`NO — WORKFORCE HARD-CAP FALSIFICATO`**
    L'ispezione del codice dell'environment (`kaggriculture.py` L702–L710) e micro-test in `scratch/audit_hire_constraints.py` hanno dimostrato che l'ambiente non impone alcun vincolo di quadranti o terreno per l'azione `HIRE`. 1 Quadrante consente di assumere 2, 3, 4+ lavoratori se si inviano più ordini `HIRE` nel medesimo turno.
-2. **Meccanica Resettamento Hands Scoperta:**  
+2. **Meccanica Resettamento Hands Scoperta:**
    In Kaggriculture, le **Hands sono lavoratori giornalieri temporanei**, non dipendenti permanenti. Alla fine di ogni giorno (`_end_of_day`, L880–L881), `farm["hands"]` viene resettato a `[]`. I lavoratori desiderati per il giorno `D` devono essere assunti nel giorno `D`.
-3. **Causa Radice del Blocco HIRE in E11-X1.1:**  
+3. **Causa Radice del Blocco HIRE in E11-X1.1:**
    `ProductiveMassROIAgent` controllava `if hour == 0: builder.hire()`. Inviando un solo ordine `HIRE` al giorno, l'agente assumeva solo 1 Hand al giorno, rimanendo bloccato a 2 lavoratori (1 Farmer + 1 Hand).
-4. **Ricostruzione Evidenza Macchina E06:**  
+4. **Ricostruzione Evidenza Macchina E06:**
    Eseguito un run diagnostico macchina per `WaterFirstHIRENWClusterROIAgent` su `seed=0`: **`p0_reward = $25,847.00`** su 9 tile con 2 lavoratori.
-5. **Cause Radice del Divario E06 ($25.8k) vs E11-VB1 ($429):**  
+5. **Cause Radice del Divario E06 ($25.8k) vs E11-VB1 ($429):**
    - **Land Purchase Drain:** E11-VB1 spende $1,000 al Giorno 1 per comprare Q1, prosciugando la cassa. E06 spende $0 in terreno.
    - **Spazio & Movimento:** E06 gestisce 9 tile compatte vicine al capanno (distanza 1–3). E11-VB1 disperde 2 lavoratori su 50 tile, sprecando il ~60% dei passi in spostamento.
    - **Velocità di Turnover:** E06 ruota ROI dinamiche ad alta frequenza (Carrot/Wheat), mentre E11-VB1 blocca capitale in colture a lungo ciclo (Melon/Tomato).
@@ -839,10 +839,10 @@ Verificare il codice dell'environment per capire l'esatta regola di validazione 
 
 ## E11-X1.2 — E06 Productive Core Restoration & Corrected Multi-HIRE
 
-**Date:** 2026-08-27  
-**Phase:** BUILD + VERIFY  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-27
+**Phase:** BUILD + VERIFY
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -850,13 +850,13 @@ Ripristinare la capacità produttiva ed economica interna già dimostrata da E06
 
 ### Key Outcomes & Findings
 
-1. **Ripristino Core Produttivo Interno:**  
+1. **Ripristino Core Produttivo Interno:**
    Il benchmark macchina a 10 episodi (`E11-X1.2-20260827-093843`) attribuisce a E11-X1.2 un **Mean Final Money di $7,476.20** (+241.0% rispetto a E11-VB1 baseline di $2,192.20).
-2. **Superamento Gate di Produttività ($5k):**  
+2. **Superamento Gate di Produttività ($5k):**
    Con media di **$7,476.20** (min $6,883.00, max $7,877.00 tra i 10 seed), la variante rientra e supera pienamente la fascia di ripristino parziale ($5k–$15k), stabilizzando il flusso di cassa.
-3. **Validazione Multi-HIRE Engine:**  
+3. **Validazione Multi-HIRE Engine:**
    L'agente assume ed ingaggia correttamente 3 lavoratori (1 Farmer + 2 Hands) per sostenere il carico di irrigazione e piantumazione sul core compatto.
-4. **Verifica Provenance SHA-256:**  
+4. **Verifica Provenance SHA-256:**
    Risultati 100% verificati dall'autenticatore `verify_e11_run_provenance.py` (`PASS`).
 5. **Documento Prodotto:** [`docs/versions/E11_X1_2_e06_productive_core_restoration.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_2_e06_productive_core_restoration.md).
 
@@ -864,10 +864,10 @@ Ripristinare la capacità produttiva ed economica interna già dimostrata da E06
 
 ## E11-X1.3 — E06 Productive Unit Replication & Scaling
 
-**Date:** 2026-08-27  
-**Phase:** BUILD + VERIFY  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-27
+**Phase:** BUILD + VERIFY
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -875,17 +875,17 @@ Trattare **E06** (`WaterFirstHIRENWClusterROIAgent`) come Unità Produttiva Elem
 
 ### Key Outcomes & Findings
 
-1. **Subphase A (1× EPU Replication — 9 tile):**  
+1. **Subphase A (1× EPU Replication — 9 tile):**
    - Diagnostic A0 (seed 0): **$25,847.00** (**100.0% exact match** to E06 reference).
-   - Stage B Benchmark (5 paired episodes): **$26,888.40 Mean Money** (104.0% equivalence ratio vs E06 reference).  
+   - Stage B Benchmark (5 paired episodes): **$26,888.40 Mean Money** (104.0% equivalence ratio vs E06 reference).
    - **Gate A Verdict: `PASSED`**.
-2. **Subphase B (2× EPU Scaling — 18 tile):**  
+2. **Subphase B (2× EPU Scaling — 18 tile):**
    - Sequenza causale verificata: EPU1 produce su Q0 $\rightarrow$ accumula surplus ($\ge \$1,435$) $\rightarrow$ acquista Q1 al Giorno 14 $\rightarrow$ attiva EPU2 al Giorno 15 con Hand 2 (3 lavoratori totali).
    - Stage B Benchmark (5 paired episodes): **$28,727.40 Mean Money** (18/18 active tiles).
    - Scaling Ratio B: **1.07×** ($+\$1,839.00$ guadagno netto su cassa finale).
    - Scaling Efficiency B: **53.4%** ($\frac{1.068}{2}$).
    - **Gate B Verdict: `STOP GATE B ENFORCED`** (Efficiency B $53.4\% < 60.0\%$).
-3. **Diagnosi Causa Radice Bottleneck B:**  
+3. **Diagnosi Causa Radice Bottleneck B:**
    EPU2 viene attivata solo al Giorno 15 (dopo il raccolto MELON di EPU1). In 15 giorni rimanenti prima della fine dell'episodio (Giorno 30), EPU2 produce **+$2,839.00** lordi, lasciando un guadagno netto di **+$1,839.00** dopo il costo del terreno ($1,000) e dei semi.
 4. **Verifica Provenance SHA-256:** `PASS (100% MATCH)`.
 5. **Documento Prodotto:** [`docs/versions/E11_X1_3_e06_productive_unit_replication_scaling.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_3_e06_productive_unit_replication_scaling.md).
@@ -894,10 +894,10 @@ Trattare **E06** (`WaterFirstHIRENWClusterROIAgent`) come Unità Produttiva Elem
 
 ## E11-X1.3-B — Kaggle External Validation & README Reconciliation
 
-**Date:** 2026-08-27  
-**Phase:** SHIP EXPERIMENTAL  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-27
+**Phase:** SHIP EXPERIMENTAL
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -905,13 +905,13 @@ Congelare la configurazione verificata **E11-X1.3-B (2× EPU 18-tile Scaling)** 
 
 ### Key Outcomes & Findings
 
-1. **Submission Bundle Standalone Verificato:**  
+1. **Submission Bundle Standalone Verificato:**
    - Strategia: `ProductiveMassROIAgent` in modalità `E06_REPLICATED`, `epu_level = 2`, `enable_land_expansion = True`.
    - Generato via `scripts/build_submission.py` in `submission/submission.py`.
    - Audit codice: 0 import interni/file esterni rimasti unbundling.
    - Smoke test locale 720 turni: **$29,993.00** su seed 0 (18 tile attive, 3 lavoratori).
    - Test suite: **63/63 test superati (`pytest tests/`)**.
-2. **Reconciliation del README.md:**  
+2. **Reconciliation del README.md:**
    - Riallineata l'intera documentazione di repository dal livello E06 allo stato reale del progetto.
    - Esplicitati gli obiettivi competitivi ($50k minimo, $75k target competitivo, ~$70–75k+ benchmark top competitor).
    - Documentata la correzione metodologica della provenance (E11-R0 ... E11-R3) e la baseline verificata post-audit E11-VB1 ($429).
@@ -922,10 +922,10 @@ Congelare la configurazione verificata **E11-X1.3-B (2× EPU 18-tile Scaling)** 
 
 ## E11-X1.3-B2 — Cross-Boundary Multi-EPU Activation
 
-**Date:** 2026-08-27  
-**Phase:** BUILD + VERIFY  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-27
+**Phase:** BUILD + VERIFY
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -934,10 +934,10 @@ Verificare l'ipotesi se un singolo land purchase (Q1, $1,000) possa ospitare sia
 ### Key Outcomes & Findings
 
 1. **Audit Geometrico Riuscito:** 27 tile uniche e non sovrapposte rientrano interamente nei 2 Quadranti sbloccati (Q0 + Q1, 50 tile possedute).
-2. **Falsificazione Empirica del Benchmark Macchina:**  
-   - Mean Final Money B2: **$9,808.40** (vs **$28,727.40** in X1.3-B).  
+2. **Falsificazione Empirica del Benchmark Macchina:**
+   - Mean Final Money B2: **$9,808.40** (vs **$28,727.40** in X1.3-B).
    - Scaling Efficiency B2: **12.2%** (falsificato).
-3. **Causa Radice Falsificazione:**  
+3. **Causa Radice Falsificazione:**
    - L'acquisto immediato di Q1 al Giorno 0 prosciuga $1,000 di cassa iniziale ($3k $\rightarrow$ $2k$).
    - I semi per 27 tile ($2,160) superano la liquidità rimanente ($2,000), causando un **starvation di capitale operativo**.
    - Dimostrata la necessità fondamentale dell'acquisto derivato al Giorno 14 post-surplus ($14k+) implementato in `X1.3-B`.
@@ -948,10 +948,10 @@ Verificare l'ipotesi se un singolo land purchase (Q1, $1,000) possa ospitare sia
 
 ## E11-X1.3-B2R — Post-Surplus Spatially Equivalent 3× EPU Scaling
 
-**Date:** 2026-08-27  
-**Phase:** BUILD + VERIFY  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-27
+**Phase:** BUILD + VERIFY
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -959,17 +959,17 @@ Verificare la sequenza EPU1 $\rightarrow$ working capital surplus $\rightarrow$ 
 
 ### Key Outcomes & Findings
 
-1. **Ricerca Geometrica Bounded Stage G:**  
+1. **Ricerca Geometrica Bounded Stage G:**
    - Eseguita in **0.81s** (limit 60s rispettato, 2.225 candidati valutati).
    - Verdetto Rank 1: **`SPATIALLY EQUIVALENT`** ($\text{EPU2 avg int} = 2.00$, $\text{EPU3 avg int} = 2.06$ vs $\text{EPU1 avg int} = 2.00$).
    - Layout 1-land 27 tile inside Q0+Q1 ($x \in [0,9], y \in [0,4]$), zero sovrapposizioni.
-2. **Stage A0 Invariant Verification:**  
+2. **Stage A0 Invariant Verification:**
    - 1 episodio (seed 0), Money **$25,781.00**, Provenance **`PASS (100% Match)`**.
-3. **Stage B Benchmark (5 Episodi Accoppiati):**  
+3. **Stage B Benchmark (5 Episodi Accoppiati):**
    - Mean Final Money B2R: **$26,435.40** (vs Old B2 **$9,808.40** [+$16,627.00], vs A **$26,888.40** [-$453.00], vs B Candidate **$28,727.40** [-$2,292.00]).
    - Median: **$26,581.00**, Std: **$833.67**, Min: **$25,531.00**, Max: **$27,649.00**.
    - Provenance SHA-256: `PASS (100% Match)`.
-4. **Verdetto Architetturale ed Economico:**  
+4. **Verdetto Architetturale ed Economico:**
    - Architectural: **`VALIDATED`** (Spatial equivalence & 1-land 27-tile capacity).
    - Economic: **`SUB-OPTIMAL`** (L'acquisto land al Day 1 pre-surplus prosciuga $1,000 prima del primo raccolto EPU1; la policy post-surplus Day 14 di X1.3-B resta superiore).
    - Candidate: **`MAINTAIN X1.3-B`** ($28,727.40). No Kaggle submission per B2R.
@@ -979,10 +979,10 @@ Verificare la sequenza EPU1 $\rightarrow$ working capital surplus $\rightarrow$ 
 
 ## E11-X1.3-B3 — Fixed 3×3 EPU Strip Scaling & Kaggle Submission
 
-**Date:** 2026-08-27  
-**Phase:** BUILD + VERIFY + SUBMISSION BUNDLING  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-27
+**Phase:** BUILD + VERIFY + SUBMISSION BUNDLING
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -990,20 +990,20 @@ Implementare il layout fisso in striscia $3 \times 3$ contiguo per EPU1, EPU2 ed
 
 ### Key Outcomes & Findings
 
-1. **Layout Fisso $3 \times 3$ Contiguo (Nessuna Ricerca Geometrica):**  
-   - EPU1: $x \in [0,2], y \in [0,2]$ (9 tile)  
-   - EPU2: $x \in [3,5], y \in [0,2]$ (9 tile)  
-   - EPU3: $x \in [6,8], y \in [0,2]$ (9 tile)  
+1. **Layout Fisso $3 \times 3$ Contiguo (Nessuna Ricerca Geometrica):**
+   - EPU1: $x \in [0,2], y \in [0,2]$ (9 tile)
+   - EPU2: $x \in [3,5], y \in [0,2]$ (9 tile)
+   - EPU3: $x \in [6,8], y \in [0,2]$ (9 tile)
    - 27 tile uniche in 2Q (Q0+Q1, 1 land purchase).
-2. **Trigger Land Post-Surplus Reale:**  
+2. **Trigger Land Post-Surplus Reale:**
    - Il gate `cumulative_realized_revenue > 0` ha impedito l'acquisto pre-surplus al Day 1.
    - `BUY_LAND` si è attivato al **Day 13** post-raccolto EPU1.
-3. **Risultati Benchmark Stage B (5 Episodi Accoppiati):**  
+3. **Risultati Benchmark Stage B (5 Episodi Accoppiati):**
    - **Mean Money**: **$26,445.60**
    - **Median Money**: **$30,072.00**
    - **Peak Money**: **$31,460.00** (Seed 200)
    - Provenance SHA-256: `PASS (100% Match)`.
-4. **Verifica Bundle Standalone (`submission/submission.py`):**  
+4. **Verifica Bundle Standalone (`submission/submission.py`):**
    - Generato via `scripts/build_submission.py`.
    - Test suite automatica: **65/65 passed (`pytest tests/`)**.
    - Smoke test locale 720 turni: **$23,416.00** su seed 0.
@@ -1013,10 +1013,10 @@ Implementare il layout fisso in striscia $3 \times 3$ contiguo per EPU1, EPU2 ed
 
 ## E11-X1.4 — EPU Densification Before Replication (2×3×5 vs B3 3×3×3)
 
-**Date:** 2026-08-27  
-**Phase:** BUILD + VERIFY  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-27
+**Phase:** BUILD + VERIFY
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -1024,18 +1024,18 @@ Confrontare l'ipotesi B (**X1.4**: 2 EPU densificate a $3 \times 5 = 30$ tile) r
 
 ### Key Outcomes & Findings
 
-1. **Layout Densificato $2 \times 3 \times 5$ (30 Tile):**  
-   - EPU1: $x \in [0,2], y \in [0,4]$ (15 tile)  
-   - EPU2: $x \in [3,5], y \in [0,4]$ (15 tile)  
-   - EPU3: OFF (Disabilitata)  
+1. **Layout Densificato $2 \times 3 \times 5$ (30 Tile):**
+   - EPU1: $x \in [0,2], y \in [0,4]$ (15 tile)
+   - EPU2: $x \in [3,5], y \in [0,4]$ (15 tile)
+   - EPU3: OFF (Disabilitata)
    - 30 tile uniche in 2Q (Q0+Q1, 1 land purchase).
-2. **Risultati Benchmark Stage B (5 Episodi Accoppiati):**  
+2. **Risultati Benchmark Stage B (5 Episodi Accoppiati):**
    - **Mean Money**: **$27,209.20** (vs B3 **$26,445.60**, $+ \$763.60$)
    - **Median Money**: **$28,274.00** (vs B3 **$30,072.00**, $- \$1,798.00$)
    - **Std Dev**: **$2,604.28** (vs B3 **$5,687.21**, $-54.2\%$ varianza)
    - **Min Money**: **$22,555.00** (vs B3 **$20,014.00**, $+ \$2,541.00$ floor)
    - **Paired Wins**: B3 vince **3 su 5 episodi (60%)** ed esprime una ceiling superiore ($31,460.00).
-3. **Verdetto e Raccomandazione Notturna:**  
+3. **Verdetto e Raccomandazione Notturna:**
    - B3 vince nel testa a testa a 3 episodi su 5 e raggiunge il picco massimo di $31.5k.
    - B3 è già verificato semanticamente e pronto nel pacchetto standalone `submission/submission.py`.
    - **Raccomandazione**: Inviare **B3 (`E11-X1.3-B3 Fixed 3x3 3xEPU`)** a Kaggle.
@@ -1045,10 +1045,10 @@ Confrontare l'ipotesi B (**X1.4**: 2 EPU densificate a $3 \times 5 = 30$ tile) r
 
 ## E11-X1.5 — Centered 2×4×4 Productive Core
 
-**Date:** 2026-08-27  
-**Phase:** BUILD + VERIFY  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-27
+**Phase:** BUILD + VERIFY
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -1056,18 +1056,18 @@ Valutare l'ipotesi C (**X1.5**: 2 EPU centrali adiacenti da $4 \times 4 = 32$ ti
 
 ### Key Outcomes & Findings
 
-1. **Layout Centralizzato $2 \times 4 \times 4$ (32 Tile Target):**  
-   - EPU1: $x \in [1,4], y \in [1,4]$ (16 tile in Q0)  
-   - EPU2: $x \in [5,8], y \in [1,4]$ (16 tile in Q1)  
-   - EPU3: OFF (Disabilitata)  
+1. **Layout Centralizzato $2 \times 4 \times 4$ (32 Tile Target):**
+   - EPU1: $x \in [1,4], y \in [1,4]$ (16 tile in Q0)
+   - EPU2: $x \in [5,8], y \in [1,4]$ (16 tile in Q1)
+   - EPU3: OFF (Disabilitata)
    - 32 tile target uniche attorno allo shed.
-2. **Risultati Benchmark Stage B (5 Episodi Accoppiati):**  
+2. **Risultati Benchmark Stage B (5 Episodi Accoppiati):**
    - **Mean Money**: **$25,029.00** (vs B3 **$26,445.60**, vs X1.4 **$27,209.20**)
    - **Median Money**: **$24,154.00** (vs B3 **$30,072.00**, vs X1.4 **$28,274.00**)
    - **Std Dev**: **$2,001.35** (Varianza più bassa tra tutte)
    - **Min Money**: **$24,070.00** (Floor più alto)
    - **Peak Active Tiles**: 26 tile (La saturazione delle 16 tile di EPU1 ha ritardato l'avvio operativo di EPU2 in Q1).
-3. **Verdetto e Raccomandazione Notturna:**  
+3. **Verdetto e Raccomandazione Notturna:**
    - **Verdetto**: **`X1.5 NOT BETTER`**. Il carico economico per avviare 16 tile su EPU1 drena il capitale di lavoro e ritarda l'operatività di EPU2 in Q1.
    - **Raccomandazione**: Inviare **B3 (`E11-X1.3-B3 Fixed 3x3 3xEPU`)** a Kaggle (Median $30,072.00, Peak $31,460.00).
 4. **Documento Prodotto:** [`docs/versions/E11_X1_5_centered_2x4x4_productive_core.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_5_centered_2x4x4_productive_core.md).
@@ -1076,10 +1076,10 @@ Valutare l'ipotesi C (**X1.5**: 2 EPU centrali adiacenti da $4 \times 4 = 32$ ti
 
 ## E11-X1.6 — Progressive Center-Out 3×3 → 4×4 EPU Scaling
 
-**Date:** 2026-08-27  
-**Phase:** BUILD + VERIFY  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-27
+**Phase:** BUILD + VERIFY
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -1087,7 +1087,7 @@ Testare l'ipotesi **H11-X1.6**: densificazione progressiva center-out (EPU1 3×3
 
 ### Key Outcomes & Findings
 
-1. **Risultati Benchmark Stage B (5 Episodi Accoppiati):**  
+1. **Risultati Benchmark Stage B (5 Episodi Accoppiati):**
    - **Mean Money**: **$27,508.20** (MEDIA PIÙ ALTA DI TUTTI I CANDIDATI! $+1,062.60$ vs B3, $+299.00$ vs X1.4, $+2,479.20$ vs X1.5)
    - **Median Money**: **$29,095.00** (Secondo solo a B3 $30.0k)
    - **Max Money (Peak Ceiling)**: **$34,634.00** (RECORD ASSOLUTO DI TUTTI GLI ESPERIMENTI SU SEED 200! $+3,174.00$ sopra B3!)
@@ -1095,10 +1095,10 @@ Testare l'ipotesi **H11-X1.6**: densificazione progressiva center-out (EPU1 3×3
      - **3 su 5 (60%) vs B3**
      - **3 su 5 (60%) vs X1.4**
      - **4 su 5 (80%) vs X1.5**
-2. **Bundle & Semantic Equivalence:**  
+2. **Bundle & Semantic Equivalence:**
    - Bundle generato in `submission/submission.py`.
    - Test di equivalenza semantica deterministica: **100% MATCH** su seed 0 ($29,297.00).
-3. **Verdetto e Raccomandazione Notturna:**  
+3. **Verdetto e Raccomandazione Notturna:**
    - **Verdetto**: **`X1.6 CLEAR WINNER`**.
    - **Raccomandazione Notturna**: Caricare **`E11-X1.6 — Progressive Center-Out 3×3 → 4×4 EPU Scaling`** su Kaggle per la validazione esterna!
 4. **Documento Prodotto:** [`docs/versions/E11_X1_6_progressive_center_out_epu_scaling.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_6_progressive_center_out_epu_scaling.md).
@@ -1107,10 +1107,10 @@ Testare l'ipotesi **H11-X1.6**: densificazione progressiva center-out (EPU1 3×3
 
 ## E11-X1.7 — Corner-Pruned Center-Out EPU Scaling
 
-**Date:** 2026-08-27  
-**Phase:** BUILD + VERIFY  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-27
+**Phase:** BUILD + VERIFY
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -1118,7 +1118,7 @@ Testare l'ipotesi **H11-X1.7**: rendere 26 tile il target deliberato ed esplicit
 
 ### Key Outcomes & Findings
 
-1. **Risultati Benchmark Stage B (5 Episodi Accoppiati):**  
+1. **Risultati Benchmark Stage B (5 Episodi Accoppiati):**
    - **Mean Money**: **$28,083.80** (NUOVO RECORD ASSOLUTO! $+575.60$ vs X1.6, $+1,638.20$ vs B3)
    - **Median Money**: **$30,081.00** (NUOVO RECORD ASSOLUTO! $+9.00$ vs B3, $+986.00$ vs X1.6)
    - **Peak Ceiling**: **$33,371.00** su seed 200.
@@ -1127,10 +1127,10 @@ Testare l'ipotesi **H11-X1.7**: rendere 26 tile il target deliberato ed esplicit
      - **3 su 5 (60%) vs B3**
      - **3 su 5 (60%) vs X1.4**
      - **4 su 5 (80%) vs X1.5**
-2. **Bundle & Semantic Equivalence:**  
+2. **Bundle & Semantic Equivalence:**
    - Bundle generato in `submission/submission.py`.
    - Test di equivalenza semantica deterministica: **100% MATCH** su seed 0 ($30,220.00).
-3. **Verdetto e Raccomandazione Notturna:**  
+3. **Verdetto e Raccomandazione Notturna:**
    - **Verdetto**: **`X1.7 CLEAR WINNER`**.
    - **Raccomandazione Notturna**: Caricare **`E11-X1.7 Corner-Pruned Center-Out 26t`** su Kaggle!
 4. **Documento Prodotto:** [`docs/versions/E11_X1_7_corner_pruned_center_out_26t.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_7_corner_pruned_center_out_26t.md).
@@ -1139,10 +1139,10 @@ Testare l'ipotesi **H11-X1.7**: rendere 26 tile il target deliberato ed esplicit
 
 ## E12-X1.0 — Centered Hybrid Farm Scaling (Cow-First + Progressive 2×2 Core)
 
-**Date:** 2026-08-27  
-**Phase:** BUILD + VERIFY  
-**Tool:** Google Antigravity  
-**Model:** Gemini 3.6 Flash  
+**Date:** 2026-08-27
+**Phase:** BUILD + VERIFY
+**Tool:** Google Antigravity
+**Model:** Gemini 3.6 Flash
 
 ### Objective
 
@@ -1150,12 +1150,12 @@ Testare l'ipotesi **H12**: strategia ibrida `cow-first` con core 2×2 riservato 
 
 ### Key Outcomes & Findings
 
-1. **Risultati Benchmark Stage B (5 Episodi Accoppiati):**  
+1. **Risultati Benchmark Stage B (5 Episodi Accoppiati):**
    - **Mean Money**: **$6,227.60** vs X1.7 **$28,083.80**
    - **Active Pastures**: **4 Pasture** costruite progressivamente
    - **Active Cows Placed**: **4 Cow** posizionate
    - **Milk Harvested**: **0 unità** (Collo di bottiglia: il grano è stato seminato ma non raccolto nel shed in tempo utile per il FEED quotidiano, portando alla mancata produzione di latte)
-2. **Verdetto e Candidato Corrente:**  
+2. **Verdetto e Candidato Corrente:**
    - **Verdetto**: **`Outcome C: Feed Bottleneck`**.
    - **Candidato Corrente Kaggle**: **`E11-X1.7 Corner-Pruned Center-Out 26t`** rimane il **CAMPIONE ASSOLUTO** ($28,083.80 Mean Money, $30,081.00 Median Money) pronto in `submission/submission.py`.
 3. **Documento Prodotto:** [`docs/versions/E12_X1_0_centered_hybrid_farm_scaling.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E12_X1_0_centered_hybrid_farm_scaling.md).
@@ -1164,9 +1164,9 @@ Testare l'ipotesi **H12**: strategia ibrida `cow-first` con core 2×2 riservato 
 
 ## E12-X1.12 — TRUEBELIEF Economic Engine Reconstruction
 
-**Date:** 2026-08-28  
-**Phase:** BUILD + VERIFY + MANUAL KAGGLE UPLOAD  
-**Tool:** Codex  
+**Date:** 2026-08-28
+**Phase:** BUILD + VERIFY + MANUAL KAGGLE UPLOAD
+**Tool:** Codex
 **Model:** GPT-5
 
 ### Input principale
@@ -1223,9 +1223,9 @@ X1.12 viene pubblicata pur non raggiungendo 80k perche diventa la baseline del n
 
 ## E12-X1.12 — Model Correction: Livestock and Q2 Are Not Hard Constraints
 
-**Date:** 2026-08-28  
-**Phase:** MODEL CORRECTION  
-**Tool:** Codex  
+**Date:** 2026-08-28
+**Phase:** MODEL CORRECTION
+**Tool:** Codex
 **Model:** GPT-5
 
 ### Evidence
@@ -1255,9 +1255,9 @@ Nessun miglioramento numerico viene registrato per questa correzione: e un aggio
 
 ## E12-X1.13 — Dynamic Allocation Verification Build
 
-**Date:** 2026-08-28  
-**Phase:** BUILD + VERIFY  
-**Tool:** Codex  
+**Date:** 2026-08-28
+**Phase:** BUILD + VERIFY
+**Tool:** Codex
 **Model:** GPT-5
 
 ### Objective
@@ -1296,9 +1296,9 @@ Implementare una nuova modalita separata `E12_DYNAMIC_ALLOCATION_X113` per verif
 
 ## E13 — Multi-Agent Blind Forensic Replay Analysis (Episode 101971376)
 
-**Date:** 2026-08-28  
-**Phase:** FORENSIC / MULTI-AGENT BENCHMARK  
-**Tool / Agents:** Antigravity, Codex, Copilot (independent blind analyses, post-hoc consolidation)  
+**Date:** 2026-08-28
+**Phase:** FORENSIC / MULTI-AGENT BENCHMARK
+**Tool / Agents:** Antigravity, Codex, Copilot (independent blind analyses, post-hoc consolidation)
 **Primary Source:** `docs/benchmark/101971376.json` (Seed: `1630102796`, Steps: `720`)
 
 ### 1. Episode Identification & Macro Outcome
@@ -1353,7 +1353,7 @@ All three independent analyses (Antigravity, Codex, Copilot) converge on the fol
 
 > **Conclusione E13:** La nostra carenza principale nell'episodio 101971376 non è la quantità di capacità acquistata, ma la conversione della capacità disponibile in lavoro produttivo e monetizzazione.
 
-**Catena economica di riferimento:**  
+**Catena economica di riferimento:**
 `worker-turn → productive action → output/inventory → SELL → cash → reinvestment → compounded capacity`
 
 ### 7. Limitations & Open Questions
@@ -1362,10 +1362,115 @@ All three independent analyses (Antigravity, Codex, Copilot) converge on the fol
 - Transactional HIRE/BUY_LAND exact cost & per-transaction P/L under dynamic market pricing: `INFERRED / DERIVED`.
 - Local ↔ Kaggle Fidelity (Seed 0 candidate local `$37,543` vs Kaggle `$8,690`): separate problem requiring dedicated same-seed/same-code trace.
 
+---
 
+## E14 — Repository Isolation & Canonical Ontology
 
+**Date:** 2026-08-28
+**Phase:** FORMALIZATION & ISOLATION
+**Tool / Modeler:** Antigravity, Codex, Copilot
 
+### Objective
+Isolare l'architettura del repository per consentire a tre modeler indipendenti (Antigravity, Codex, Copilot) di formalizzare le candidate feature emerse da E01–E13 in una **Ontologia Canonica a 64 concetti** (`docs/model_specs/ONTOLOGY.md`) e tre `MODEL_SPEC` indipendenti.
 
+### Key Outcomes & Findings
+1. **Ontologia Canonica (64 Concetti):** Mappatura 1-a-1 completata senza concetti mancanti o extra.
+2. **Tripla Specifica di Modello:**
+   - Antigravity MODEL_SPEC: `docs/model_specs/antigravity/MODEL_SPEC_ANTIGRAVITY.md`
+   - Codex MODEL_SPEC: `docs/model_specs/codex/MODEL_SPEC_CODEX.md`
+   - Copilot MODEL_SPEC: `docs/model_specs/copilot/MODEL_SPEC_COPILOT.md`
+3. **Generazione e Isolamento Submission:** Ciascun modeler ha prodotto una policy submission standalone conforme alla propria specifica.
 
+---
 
+## E15 — Pre-Tournament Freeze & Pairwise Tournament
 
+**Date:** 2026-08-29
+**Phase:** TOURNAMENT & FEATURE DISCRIMINATION
+**Evidence Role:** `TRAINING EVIDENCE`
+
+### Tournament Results & Consensus
+- **M1 (Seed 1113294977):** Antigravity ($8,672) vs Codex ($20,461) — Winner: **Codex**.
+- **M2 (Seed 3033283457):** Codex ($27,510) vs Copilot ($37,752) — Winner: **Copilot**.
+- **M3 (Seed 3122977751):** Copilot ($26,629) vs Antigravity ($9,371) — Winner: **Copilot**.
+- **Standings:** Copilot (2–0), Codex (1–1), Antigravity (0–2). Winner: **Copilot**.
+- **Two-Regime Model Established:**
+  - *Regime A (Sub-threshold):* When irrigation or maintenance fails, working surface collapses and nominal assets amplify losses.
+  - *Regime B (Super-threshold):* When irrigation is stabilized, monetization quality and inventory conversion dominate.
+
+---
+
+## E16-A — Stage A Frozen Training & Forensic Diagnosis
+
+**Date:** 2026-08-29
+**Phase:** TRAINING / STAGE A FROZEN EXECUTION
+**Evidence Role:** `TRAINING EVIDENCE` (Forensic Baseline)
+
+### Objective
+Eseguire i 28 episodi frozen del DOE E16 Stage A (Celle A01–A07, 2 seed: 1802163452, 1678077158, 2 seat vs Copilot E15 frozen) per valutare l'interazione tra `watering_dispatch_priority` (0.20, 0.45, 0.70) e `crop_working_set_target` (10, 17, 25).
+
+### Outcome & Forensic Diagnosis (`E16_STAGE_A_FORENSIC_DIAGNOSIS.md`)
+1. **Contaminazione Telemetrica (Bug id(farm)):**
+   - Un mismatch nell'indicizzazione dell'oggetto `farm` ha assegnato `player: -1` a tutte le unit action nel ledger eventi.
+   - `successful_water` ha filtrato per `player == treatment_seat`, azzerando `watering_execution_rate = 0.0` e `watering_continuity = 0.0` nei report automatici, nonostante l'esecuzione di 50–95 azioni di irrigazione reali.
+2. **Difetto Semantico Priority-as-Quota:**
+   - La policy ha implementato `priority` come quota frazionaria (`math.ceil(priority * active_crops)`), escludendo deliberatamente (1-p) colture al giorno.
+   - Con la regola del motore Kaggriculture di morte per siccità a 2 giorni consecutivi (`consecutive_unwatered >= 2`), l'esclusione frazionaria ha causato la morte dell'intero contingente di colture entro 2–4 giorni.
+3. **Cash Stall a $300 nelle celle a 25 crop (A03, A06):**
+   - Spese iniziali incontrollate al Day 0 (Land $1,000 + Seeds $1,610 + Workforce $900) hanno portato la cassa al floor di $300.00 prima del primo raccolto, bloccando permanentemente il rinnovo dei lavoratori e acquisti livestock.
+4. **Preservazione:** I 28 run originali sono preservati intatti in `results/e16/stage_a/` come baseline forense.
+
+---
+
+## E16-A-R1 — Corrected Replication Execution & Gate C* Evaluation
+
+**Date:** 2026-08-29
+**Phase:** TRAINING / CORRECTED REPLICATION EXECUTION
+**Evidence Role:** `TRAINING EVIDENCE`
+**Test Suite:** `143/143 PASS`
+
+### Objective
+Rieseguire i 28 episodi Stage A con la build corretta R1 (`E16_TREATMENT_BUILD_R1.py`), config frozen R1 (`E16_R1_FROZEN_CONFIG.json`), ledger attribution corretta e priorità WATER implementata come precedenza operativa di dispatch anziché quota frazionaria.
+
+### Outcome & Validated Telemetry (28/28 Episodi Completati)
+- **Failures:** 0 gameplay failures, 0 infrastructure failures.
+- **Integrity Check:** `PASS` (0 unit action con `player: -1`, 0 hash mismatches).
+- **Watering Realization Validated:**
+  - HIGH `watering_execution_rate`: **0.8898 – 0.9416** (vs 0.0 originario).
+  - `watering_continuity`: **~0.96** in tutte le celle HIGH.
+  - La siccità sintetica indotta dal codice è stata completamente eliminata.
+
+### Risultati Economici Principali (Stage A-R1):
+
+| Cella | Crop Target | Water Priority | Final Money (Mediana) | Final Money (Media) | Water Exec Rate | Water Continuity | Crop Target Attainment |
+|---|---|---|---|---|---|---|---|
+| **A01** | 10 | 0.20 (LOW) | **$19,694.00** | $18,970.00 | 0.7241 | 0.7000 | 0.0000 |
+| **A02** | 10 | 0.70 (HIGH) | **$21,230.50** | $21,255.25 | 0.9316 | 0.9630 | 0.4750 |
+| **A03** | 25 | 0.20 (LOW) | **$11,903.50** | $12,112.00 | 0.8542 | 0.8750 | 0.1600 |
+| **A04** | 25 | 0.70 (HIGH) | **$19,987.00** | $19,522.50 | 0.8898 | 0.9600 | 0.3000 |
+| **A05** | 17 | 0.45 (MID) | **$26,619.50** | $25,499.25 | 0.9084 | 0.9000 | 0.3529 |
+| **A06** | 25 | 0.45 (MID) | **$21,570.50** | $21,500.25 | 0.8782 | 0.9630 | 0.2800 |
+| **A07** | 17 | 0.70 (HIGH) | **$27,076.00** | $26,832.50 | 0.9416 | 0.9615 | 0.4706 |
+
+### Contrasti Chiave (R1):
+- **A02 - A01:** Mediana **+$1,576.00** (Inversione di direzione rispetto a -$4,737 originale; HIGH water benefica anche a scale compatte).
+- **A04 - A03:** Mediana **+$8,587.00** (Forte premio positivo per HIGH water a scala 25 confermato).
+- **Interazione Primaria `(A04 - A03) - (A02 - A01)`:** Mediana **+$5,180.50** (Interazione positiva tra capacità e priorità di irrigazione confermata).
+- **Segnale Crop 17:** A07 ($27,076.00 mediana) è la regione economicamente più promettente osservata in Stage A-R1, ma **NON è una soglia di capacità né un optimum**.
+
+### Valutazione Gate di Capacità C*:
+- **A02:** Completion=1.0, WaterRate=0.9316, Continuity=0.9630, Attainment=**0.4750** (< 0.80) ➔ `NO`
+- **A07:** Completion=1.0, WaterRate=0.9416, Continuity=0.9615, Attainment=**0.4706** (< 0.80) ➔ `NO`
+- **A04:** Completion=1.0, WaterRate=0.8898, Continuity=0.9600, Attainment=**0.3000** (< 0.80) ➔ `NO`
+- **Selected C\*:** `NONE`
+- **Stage B Gate:** `STAGE_B_BLOCKED_NO_CAPACITY_ANCHOR`
+- **Stage B Eseguito:** `NO`
+
+### Interpretazione e Separazione Epistemica
+- **MODEL_VALIDITY:** Fortemente supportata (le predizioni teoriche su necessità di manutenzione, correlazione irrigazione-sopravvivenza e non-monotonia della superficie sono confermate).
+- **POLICY_REALIZATION:** Il repair ha rimosso WATER come collo di bottiglia primario. L'irrigazione HIGH viene ora realizzata (93–96%), ma la policy non raggiunge il target di superficie mantenuta (attainment 0.30–0.475 vs >= 0.80). Il nuovo problema da discriminare riguarda la realizzazione/mantenimento della superficie coltivata (routing, capacity/workforce allocation, replanting timing).
+- **IMPLEMENTATION_FIDELITY:** Verificata e conforme.
+
+### Decisione di Chiusura:
+- E16 è fermato per questa sessione. Stage B non eseguito.
+- Prossima sessione: diagnosi forense del basso `crop_target_attainment` sui 28 run R1 esistenti prima di qualsiasi nuovo esperimento.

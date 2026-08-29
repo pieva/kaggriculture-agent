@@ -1,0 +1,70 @@
+{
+  "analysis_code_hash": "47533c753886bbf18aa3fdd8b080a2bd1fd358b519370379af91a4491f2db4b1",
+  "design_id": "E16_TRAINING",
+  "eligible_cells": [],
+  "gate_status": "STAGE_B_BLOCKED_NO_CAPACITY_ANCHOR",
+  "input_result_hashes": {
+    "E16-A-R1-A01-S1678077158-P0.json": "75b0fe80e6f0b7ace435cee052cb01de7ecfaee9ee9bfd608c585fe8f1ead0c2",
+    "E16-A-R1-A01-S1678077158-P1.json": "762e4da2f716a53f152c362d63ca5c47a42142509653310d7e9e1cac026011eb",
+    "E16-A-R1-A01-S1802163452-P0.json": "641adcd95079cb336855737b6e70348e90f6969867a825532a3fd3b2dba4b004",
+    "E16-A-R1-A01-S1802163452-P1.json": "3110f4ae0556992d46698ed54c0b160a12c4b91e052803520dacf20284a2a3bd",
+    "E16-A-R1-A02-S1678077158-P0.json": "6b58cceb2429c8e942a423098f79b63d37ed0b5c2e89cdce436a34a212a52759",
+    "E16-A-R1-A02-S1678077158-P1.json": "2a816de7d90ef6a5e88b1263a7330b56fade04ddb365c421cfa90cfe87452474",
+    "E16-A-R1-A02-S1802163452-P0.json": "c2b39f80cee8045f8c1196c087d300b0ab11417e5d05854d622374f88ffffd7a",
+    "E16-A-R1-A02-S1802163452-P1.json": "19c0d087a3b7b73c7fc24794f4b55fd9c7e74e0a22edf90fe9ff70620edaf57d",
+    "E16-A-R1-A03-S1678077158-P0.json": "e8fed3db26006518049827a3cb266f80badea30d12adc8fbc15110a20ffbdf68",
+    "E16-A-R1-A03-S1678077158-P1.json": "75ab1167a8ca48e09647c4e3c413830380b0ec3129f1ccfe97cee8ad5342ac62",
+    "E16-A-R1-A03-S1802163452-P0.json": "476e0f12c0d65c7856f2c0685344d687f032ee7d6287225d3c7c1d3db07620ad",
+    "E16-A-R1-A03-S1802163452-P1.json": "238141074e990abbb2fafb76a666d72424389c562b705e93f59ec9b81ec43d3d",
+    "E16-A-R1-A04-S1678077158-P0.json": "7a4bb8b1431b6ee7d6465d4285ab7e81bfc511a9891d98a5d91991279ef679f9",
+    "E16-A-R1-A04-S1678077158-P1.json": "e1c220abd8c878438f4857ede2980edff22646f76197bbfd5a58e71e4b0c6413",
+    "E16-A-R1-A04-S1802163452-P0.json": "a122981b1b0c0dcf543be9bbcf940479b2e4fe643c7cbd3c83c5d145686b3c40",
+    "E16-A-R1-A04-S1802163452-P1.json": "db9be8a71e76fe65de6a7f447f3a5637928a530eed6ad9dd470ef6a77bb01590",
+    "E16-A-R1-A05-S1678077158-P0.json": "42422c87bbff3ca92e56af2fc0b94be259f494a343603024a32f65cfd186dc44",
+    "E16-A-R1-A05-S1678077158-P1.json": "516a4838bf1cfa26b1c853d15e6473bb7f4ad0ce39d6254bbf00dba2e90467d3",
+    "E16-A-R1-A05-S1802163452-P0.json": "ad62bdaf0c43b8338e6caf940bad663d99bc2b0af71651797386837f12e21905",
+    "E16-A-R1-A05-S1802163452-P1.json": "826f1a44f32cd5941708ed2cf550d3d9ed3433968db865460cd54fba14a5efab",
+    "E16-A-R1-A06-S1678077158-P0.json": "2a59f0ce808d18183693471023d48191fb74db6efeb4d3614decd76a66b346f0",
+    "E16-A-R1-A06-S1678077158-P1.json": "f56cfebad64527eb60006410f4d4335afd773193b60a8135b1ee1dc3963ac199",
+    "E16-A-R1-A06-S1802163452-P0.json": "4782ec400262996670a0a89a4a15a08876e7b23c0b39b3e1baa538cfba8cf0c3",
+    "E16-A-R1-A06-S1802163452-P1.json": "7f352e3daed67813f733a5077d4b45e01a289c80e52f3375cae0f2f6f729e9f1",
+    "E16-A-R1-A07-S1678077158-P0.json": "ffff6db83803f7cdb50df453ee09c0d4b0bb37bd3604daaa592f058d19851ead",
+    "E16-A-R1-A07-S1678077158-P1.json": "7f03d7872b1bcacf04c2eb54bfcf684608293271c2cabef297d6964bb19283fe",
+    "E16-A-R1-A07-S1802163452-P0.json": "dc035ae25e2b76cff8bacb511670fcaf6fd5c96bc85e815772d7e45075ac5831",
+    "E16-A-R1-A07-S1802163452-P1.json": "40dac10ac46b7343653d1cf5cfa11cbdf39566daf7dc8b7a80a32a732b650776"
+  },
+  "metrics_by_cell": {
+    "A02": {
+      "capacity_eligible": false,
+      "completion_rate": 1.0,
+      "crop_target": 10,
+      "episode_count": 4,
+      "median_crop_target_attainment": 0.475,
+      "median_post_ramp_watering_execution_rate": 0.9316239316239316,
+      "median_watering_continuity": 0.9629629629629629,
+      "watering_metrics_observed": true
+    },
+    "A04": {
+      "capacity_eligible": false,
+      "completion_rate": 1.0,
+      "crop_target": 25,
+      "episode_count": 4,
+      "median_crop_target_attainment": 0.3,
+      "median_post_ramp_watering_execution_rate": 0.8897906779466722,
+      "median_watering_continuity": 0.96,
+      "watering_metrics_observed": true
+    },
+    "A07": {
+      "capacity_eligible": false,
+      "completion_rate": 1.0,
+      "crop_target": 17,
+      "episode_count": 4,
+      "median_crop_target_attainment": 0.47058823529411764,
+      "median_post_ramp_watering_execution_rate": 0.9415520351787123,
+      "median_watering_continuity": 0.9614814814814814,
+      "watering_metrics_observed": true
+    }
+  },
+  "selected_C_star": null,
+  "timestamp": "2026-08-29T20:38:49+00:00"
+}

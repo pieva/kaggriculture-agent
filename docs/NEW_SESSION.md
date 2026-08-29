@@ -1,68 +1,111 @@
-# NEW SESSION — Kaggriculture Agent
+# NEW SESSION --- Kaggriculture
 
-- **Phase**: `POST-E15 — MODEL CAPABILITY CHECK`
-- **Tournament Status**: `E15 EPISTEMICALLY CLOSED`
-- **Competitive Winner**: `Copilot (2–0)`
+- **Phase**: `POST-E16-A-R1 — CROP ATTAINMENT FORENSIC DIAGNOSIS`
+- **Training Stage**: `CAPACITY REALIZATION & WORKING SET MAINTENANCE`
+- **Tournament Status**: `E15 CLOSED (Copilot 2–0)`
+- **E16 Status**: `STAGE A-R1 COMPLETED (28/28) / STAGE B BLOCKED`
 - **Frozen Artifacts**: `UNCHANGED & LOCKED`
+- **Repository Tests**: `143/143 PASS`
 
 ---
 
-## 1. Critical Operational Governance
+## 1. Current Methodological Frame
+
+Kaggriculture is an experimental environment for the **training, tuning, and validation of explicit decision models**. The competition is the benchmark/environment, not the objective.
+
+```text
+replay / telemetry / experiments
+        ↓
+training evidence (E15 / E16)
+        ↓
+candidate feature / ontological mapping
+        ↓
+independent MODEL_SPECs
+        ↓
+executable treatment policies (frozen)
+        ↓
+controlled experiments (Stage A / Stage B)
+        ↓
+feature discrimination & capacity anchoring
+        ↓
+bottleneck diagnosis & error analysis
+        ↓
+parameter & hyperparameter tuning
+        ↓
+validation & generalization test
+```
+
+> **Victory != Model Validity. Defeat != Model Falsification.**
+> E15 and E16 provide **TRAINING EVIDENCE**, not validation evidence.
+> Observational peaks (e.g. Crop 17 in Stage A-R1) are candidate operating regions, NOT optima.
+
+---
+
+## 2. Experimental Status & E16-A-R1 Results
+
+### 2.1 E16-A Original vs E16-A-R1
+- **E16-A Original:** Completed across 28 episodes. Forensic analysis revealed a measurement artifact (`player: -1` in unit events) and a policy realization defect (fractional daily drought quota `ceil(priority * needs)`). Preserved as forensic evidence.
+- **Repair (R1/R2/R3):** Clarified priority as operational dispatch precedence, fixed event ledger player attribution, updated derived metrics. Test suite: 143/143 PASS.
+- **E16-A-R1 Execution:** 28/28 episodes completed. 0 gameplay failures, 0 infrastructure failures. Integrity check `PASS`.
+
+### 2.2 Validated Telemetry & Performance
+- **Watering Realization:**
+  - HIGH watering execution rate: `0.8898–0.9416` (vs 0.0 in contaminated run).
+  - Watering continuity: `~0.96` across HIGH cells.
+  - Synthetic daily drought successfully eliminated.
+- **Final Money Outcomes (Median):**
+  - **A01 (LOW, 10):** `$19,694.00`
+  - **A02 (HIGH, 10):** `$21,230.50`
+  - **A03 (LOW, 25):** `$11,903.50`
+  - **A04 (HIGH, 25):** `$19,987.00`
+  - **A05 (MID, 17):** `$26,619.50`
+  - **A06 (MID, 25):** `$21,570.50`
+  - **A07 (HIGH, 17):** `$27,076.00`
+- **Key Contrasts:**
+  - `A02 - A01`: Median **+$1,576.00** (Direction reversed from negative to positive).
+  - `A04 - A03`: Median **+$8,587.00** (Preserved strong positive premium for HIGH water).
+  - `Primary Interaction ((A04 - A03) - (A02 - A01))`: Median **+$5,180.50** (Preserved positive).
+  - `Crop 17 Operating Region`: A07 ($27,076.00) is the most economically promising cell, confirming non-monotonicity, but is NOT a capacity threshold or optimum.
+
+### 2.3 Capacity Gate C*
+- **Criteria (Frozen):** Completion >= 0.80, Watering Execution Rate >= 0.60, Watering Continuity >= 0.75, Crop Target Attainment >= 0.80.
+- **Outcome:**
+  - A02: Attainment = `0.4750` (< 0.80) ➔ `CAPACITY_ELIGIBLE = NO`
+  - A07: Attainment = `0.4706` (< 0.80) ➔ `CAPACITY_ELIGIBLE = NO`
+  - A04: Attainment = `0.3000` (< 0.80) ➔ `CAPACITY_ELIGIBLE = NO`
+- **Selected C\*:** `NONE`
+- **Stage B Gate:** `STAGE_B_BLOCKED_NO_CAPACITY_ANCHOR`
+- **Stage B Executed:** `NO`
+
+---
+
+## 3. Epistemic Interpretation & Layer Separation
+
+1. **MODEL_VALIDITY:** `STRONGLY SUPPORTED`
+   - Theoretical model predictions regarding irrigation necessity, capital preservation, and surface/workforce alignment are validated.
+2. **POLICY_REALIZATION:** `NEW BOTTLENECK TO BE DISCRIMINATED`
+   - The repair successfully removed WATER dispatch as the primary bottleneck.
+   - However, the policy fails to maintain the nominal crop working-set target.
+   - Candidate causes: routing/transit overhead, workforce/action capacity allocation, seed replenishment pacing, planting/replanting timing, or market pacing. No cause should be assumed without empirical diagnosis.
+3. **IMPLEMENTATION_FIDELITY:** `VERIFIED`
+   - Telemetry attribution and artifact separation fully verified.
+
+---
+
+## 4. Critical Operational Governance for Next Session
 
 > [!WARNING]
 > ```text
-> DO NOT MODIFY E15 FROZEN ARTIFACTS.
-> DO NOT REVISE MODEL_SPEC BEFORE CAPABILITY CHECK.
-> DO NOT GENERATE NEW SUBMISSIONS YET.
+> STOP E16 FOR TODAY.
+> DO NOT EXECUTE STAGE B.
+> DO NOT CREATE NEW EXPERIMENTS.
+> DO NOT MODIFY MODEL_SPEC.
+> DO NOT PREPARE KAGGLE SUBMISSIONS.
 > ```
 
----
-
-## 2. Next Session Starting Point: Model Capability Check
-
-The E15 pairwise tournament is concluded and epistemically synthesized in `results/e15/E15_FINAL_TOURNAMENT_SYNTHESIS.md`.
-
-Before authorizing any MODEL_SPEC revision or writing new code, execute the mandatory **Model Capability Check** protocol.
-
-### Mandatory Operational Sequence:
-
-1. **Verify Available Models**: Inspect and inventory available LLM models and runtime configurations for **Antigravity**, **Codex**, and **Copilot**.
-2. **Benchmark Reasoning Task**: Evaluate each agent runtime on the exact same E15-based reasoning and anomaly diagnostic benchmark:
-   - Causal reconstruction vs raw score correlation;
-   - Model validity vs policy realization vs implementation fidelity separation;
-   - Anomaly detection (e.g. HARVEST retry loops, water starvation);
-   - Transaction ledger vs requested market order distinction;
-   - Falsifiability of proposed parametric changes.
-3. **Select & Lock Runtimes**: Select the optimal runtime/model for each agent.
-4. **Create / Update Runtime Manifest**: Record chosen configurations in `AGENT_RUNTIME_MANIFEST.md`:
-   ```text
-   Antigravity:
-     IDE:
-     model:
-     reasoning_mode:
-
-   Codex:
-     IDE:
-     model:
-     reasoning_mode:
-
-   Copilot:
-     IDE:
-     model:
-     reasoning_mode:
-   ```
-5. **Independent MODEL_SPEC Revision**: Only after the capability check is certified, authorize each agent to update its independent `MODEL_SPEC_<AGENT>.md` without seeing the other agents' specs.
-6. **Cross-Review Protocol**: Agents perform reciprocal blind review of the revised MODEL_SPECs. Divergences arbitrated.
-7. **New Freeze Protocol**: Lock the next generation ontology, model specs, and submission candidates under a new freeze manifest.
-8. **New Submission Generation**: Only after the new freeze is committed, generate and verify the new submission files.
-
----
-
-## 3. Reference Summary of E15 Outcome
-
-- **M1 (Seed 1113294977)**: Antigravity ($8,672) vs Codex ($20,461) — Winner: **Codex** (`CLOSED`)
-- **M2 (Seed 3033283457)**: Codex ($27,510) vs Copilot ($37,752) — Winner: **Copilot** (`CLOSED`)
-- **M3 (Seed 3122977751)**: Copilot ($26,629) vs Antigravity ($9,371) — Winner: **Copilot** (`CLOSED`)
-- **Final Standings**: Copilot 2–0, Codex 1–1, Antigravity 0–2.
-- **Synthesis Document**: `results/e15/E15_FINAL_TOURNAMENT_SYNTHESIS.md`
-- **Integrity Status**: 7/7 Frozen SHA256 hashes intact.
+### Next Session Mandatory Workflow:
+1. **Verify repository state** and existing E16-A-R1 artifacts (`results/e16/stage_a_r1/`, `results/e16/analysis/`).
+2. **Perform Forensic Diagnosis** of the low `crop_target_attainment` using exclusively the 28 existing R1 runs and event ledgers.
+3. **Identify and classify the new operational bottleneck** across routing, workforce capacity, seed replenishment, and replanting loops.
+4. **Decide the next TRAINING experiment** only after completing the diagnosis.
+5. **Keep Stage B blocked** until a valid C* anchor exists or an explicit methodological decision is approved.

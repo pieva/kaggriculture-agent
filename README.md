@@ -1,161 +1,410 @@
-# Kaggriculture Agent
+# Kaggriculture --- Experimental Training of Decision Models
 
-Agente economico per la competizione Kaggle **Kaggriculture** sviluppato attraverso un approccio rigoroso, empirico e supervisionato.
+Kaggriculture è un laboratorio sperimentale per l'**addestramento, il
+tuning e la validazione di modelli decisionali espliciti** in un
+ambiente competitivo.
 
-## Overview del Progetto
+La competizione Kaggle **Kaggriculture** fornisce l'ambiente, le regole
+e un target economico osservabile. Non costituisce più l'obiettivo
+principale del progetto: è l'**ambiente sperimentale** nel quale
+formulare modelli strategici, trasformarli in policy eseguibili,
+raccogliere evidenza e revisionare progressivamente il modello.
 
-Kaggriculture è una simulazione economica turn-based 1v1 gestita tramite il pacchetto `kaggle-environments`.
-L'obiettivo è massimizzare il capitale finale (money/net worth) dell'azienda agricola al termine di una stagione di 30 giorni di gioco (720 turni).
+L'obiettivo non è soltanto produrre una submission con uno score
+maggiore, ma costruire un processo verificabile per stabilire:
 
-### Obiettivi Competitivi
-- **Target hard corrente (E12-X1.12):** **$80,000.00** su seed `0` e `421521921`.
-- **Baseline locale corrente:** **$42,491 / $48,313**.
-- **Riferimento competitivo:** `truebelief` episodio `101294736`, seed `421521921`, **$86,297**.
-- **Stato Kaggle:** X1.12 caricata manualmente, risultato esterno pending.
+-   quali variabili del sistema sono realmente **feature** utili
+    rispetto al target;
+-   quali relazioni esistono tra feature e performance;
+-   quali soglie separano regimi operativi differenti;
+-   quali parametri e iperparametri devono essere sottoposti a tuning;
+-   quando un miglioramento generalizza e quando è overfitting
+    sull'evidenza già osservata.
 
-Il progetto adotta rigorosamente il ciclo di sviluppo supervisionato:
+Il modello finale può essere una policy deterministica interamente
+scritta a mano.
 
-`DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP`
+> **Addestrare un modello non significa necessariamente addestrare una
+> rete neurale.**
 
----
+## Parallelo con il Machine Learning
 
-## Metodologia & Correzione della Provenance (E11-R0 ... E11-R3)
+  -----------------------------------------------------------------------
+  Machine Learning                    Kaggriculture
+  ----------------------------------- -----------------------------------
+  **Training data / evidence**        Replay, telemetria e osservazioni
+                                      degli esperimenti
 
-Durante la serie **E11**, un audit metodologico (E11-R0 ... E11-R2) ha evidenziato che alcuni dati storici di espansione erano derivati da metriche sintetiche non riproducibili sul codice macchina. Il repository è stato interamente bonificato:
+  **Feature space**                   Ontologia canonica delle variabili
+                                      e dei concetti osservabili
 
-1. **Config Isolation Restored (E11-R0):** Isolamento totale delle configurazioni e ripristino delle factory benchmark indipendenti.
-2. **Provenance Audit (E11-R2):** Ritirati i dati sintetici e introdotto il verificatore SHA-256 (`scripts/verify_e11_run_provenance.py`).
-3. **Verified Baseline (E11-R3 / E11-VB1):** Stabilita la baseline macchina autorevole **E11-VB1** ($429.00 Mean Money su 30 episodi verificati).
-4. **Append-Only Run Directories:** Tutti i run di benchmark generano directory append-only immutabili con snapshot `config.json`, `episodes.json` e fingerprint SHA-256.
+  **Model**                           `MODEL_SPEC_<AGENT>.md` del modello
+                                      decisionale
 
----
+  **Parameters**                      Valori quantitativi che
+                                      caratterizzano il comportamento
+                                      della policy
 
-## Tabella delle Iterazioni Sperimentali
+  **Hyperparameters**                 Soglie, target dimensionali,
+                                      timing, gating e configurazioni
+                                      sottoposte a selezione sperimentale
 
-| Versione | Architettura / Idee Chiave | Footprint / Land | Mean Local Money | Ruolo / Stato Sperimentale |
-| :--- | :--- | :--- | ---: | :--- |
-| **E01** | Monocultura statica `CARROT` | 1 tile (Q0) | `$3,567.63` | Riferimento storico (`v0.1-e01-baseline`) |
-| **E02** | Selezione dinamica ROI/giorno | 1 tile (Q0) | `$5,857.17` | Riferimento storico (`v0.2-e02-roicrop`) |
-| **E03** | Cluster 2x2 multi-tile | 4 tile (Q0) | `$14,682.47` | Riferimento storico (`v0.3-e03-multitile`) |
-| **E04** | Cluster 3x3 NW (Single Farmer) | 9 tile (Q0) | `$11,232.47` | Falsificato — sovraccarico farmer (`v0.4-e04-nw-scaling`) |
-| **E05** | Multi-Worker Scaling (1 Farmer + 1 Hand) | 9 tile (Q0) | `$21,568.93` | Validato su Kaggle (Score: 439.7) |
-| **E06** | Water-First Priority Scheduling | 9 tile (Q0) | **`$25,847.00`** | **Sanity Reference Storico** (`v0.6-e06-water-first`) |
-| **E07–E10** | Esperimenti espansione, livestock e capitale | 9–40 tile | Variable | Esperimenti storici intermedi |
-| **E11-VB1** | Baseline macchina verificata post-audit | 50 tile (2Q) | `$429.00` | Baseline autorevole verificata SHA-256 |
-| **E11-X1.2** | Ripristino core E06 + Multi-HIRE | 17 tile (2Q) | `$7,476.20` | Trattamento verificato localmente |
-| **E11-X1.3-A** | Replica 1× EPU (E06 Replicated) | 9 tile (1Q) | **`$26,888.40`** | **Controllo Positivo Verificato (100% exact E06 match)** |
-| **E11-X1.3-B** | **Scaling 2× EPU (Causal Q1 Buy)** | **18 tile (2Q)** | **`$28,727.40`** | **Trattamento Corrente / Validazione Esterna Kaggle** |
-| **E11-X1.3-C** | Scaling 3× EPU | 27 tile (3Q) | — | *Bloccato (Stop Gate B in vigore su efficienza scaling)* |
+  **Target**                          Performance economica,
+                                      principalmente `final_money`
 
-> *Nota: $25,847.00 rappresenta il risultato verificato di E06 sul diagnostico Seed 0 vs Pass. $26,888.40 (X1.3-A) rappresenta la replica verificata su 5 episodi.*
+  **Training**                        Evidenza → revisione del modello →
+                                      implementazione → nuovo esperimento
 
----
+  **Feature discovery**               Individuazione delle variabili
+                                      candidate tramite esperimenti e
+                                      analisi di sensibilità
 
-## Architettura EPU (Elementary Productive Unit) & E11-X1.3
+  **Feature discrimination**          Verifica sperimentale dei concetti
+                                      realmente discriminanti
 
-L'esperimento **E11-X1.3** riorganizza l'agente considerando **E06** come un'**Unità Produttiva Elementare (EPU)** compatta:
-- **EPU Elementare (9 tile):** 4 tile Farmer + 5 tile Hand 1 in configurazione Water-First NW Cluster.
-- **Principio di Espansione:** L'acquisto di terreno (Q1, $1,000) non avviene a giorno fisso, ma come conseguenza diretta del surplus di cassa generato dall'EPU1 ($\ge \$1,435.00$ capitale operativo di sicurezza).
-- **Attivazione EPU2 (18 tile):** L'acquisto di Q1 al Giorno 14 sblocca EPU2 (9 tile NE in Q1) gestita da Hand 2 (3 lavoratori totali), portando il footprint a 18 tile attive.
+  **Initial bounding**                Prima delimitazione di soglie,
+                                      regimi e intervalli candidati
 
-### Risultati Verificati E11-X1.3:
-- **X1.3-A (1× EPU 9t):** Mean Money **$26,888.40** (Gate A Passed).
-- **X1.3-B (2× EPU 18t):** Mean Money **$28,727.40** (Scaling Ratio 1.07×, Scaling Efficiency 53.4%).
-- **Stop Gate B:** Attivato su efficienza locale ($53.4\% < 60.0\%$). La submission **X1.3-B** serve ad acquisire evidenza competitiva esterna su Kaggle prima di apportare ulteriori modifiche alla strategia.
+  **Hyperparameter tuning**           Esperimenti successivi per
+                                      restringere soglie e intervalli
 
----
+  **Validation**                      Valutazione su evidenza non
+                                      utilizzata per il tuning
+
+  **Error analysis**                  Analisi forense di telemetria,
+                                      failure mode e scostamenti model →
+                                      policy → execution
+
+  **Model comparison**                Confronto controllato tra modelli
+                                      alternativi
+
+  **Overfitting**                     Adattamento a seed, opponent o
+                                      evidenza già usata per revisionare
+                                      il modello
+
+  **Generalization**                  Stabilità su condizioni non
+                                      utilizzate durante training e
+                                      tuning
+
+  **Ablation**                        Rimozione o variazione controllata
+                                      di componenti del modello
+
+  **Model selection**                 Selezione sulla base di evidenza
+                                      comparativa e validation
+  -----------------------------------------------------------------------
+
+### Parametri, iperparametri e struttura
+
+Nel Machine Learning non è necessario rappresentare il fenomeno mediante
+una formula scelta esplicitamente dal progettista.
+
+In una regressione polinomiale, per esempio, i coefficienti sono
+**parametri appresi dai dati**, mentre il grado del polinomio può essere
+trattato come **iperparametro** e selezionato confrontando modelli
+differenti. Altre famiglie apprendono strutture operative: un Decision
+Tree può apprendere split e soglie, mentre profondità massima e altri
+vincoli configurano il processo di apprendimento.
+
+Kaggriculture applica gli stessi principi a un modello decisionale
+esplicito. Oggi molte soglie e configurazioni vengono formulate dai
+modeler e verificate sperimentalmente. Una possibile evoluzione è
+utilizzare modelli interpretabili, come Decision Tree, per apprendere
+dai dati soglie e interazioni tra feature.
+
+Occorre distinguere:
+
+-   **struttura del modello** --- quali feature e relazioni sono
+    considerate;
+-   **parametri** --- valori quantitativi del modello/policy;
+-   **iperparametri** --- configurazioni e soglie sottoposte a selezione
+    e tuning;
+-   **target** --- misura rispetto alla quale il modello viene valutato;
+-   **generalizzazione** --- capacità di funzionare su evidenza non
+    utilizzata per costruirlo.
+
+## Ciclo di addestramento sperimentale
+
+``` text
+osservazioni / replay
+        ↓
+analisi esplorativa e sensibilità
+        ↓
+candidate feature
+        ↓
+ontologia = feature space comune
+        ↓
+MODEL_SPEC indipendenti
+        ↓
+policy eseguibili
+        ↓
+esperimenti controllati
+        ↓
+telemetria + target
+        ↓
+feature discrimination / error analysis
+        ↓
+initial bounding
+        ↓
+parameter & hyperparameter tuning
+        ↓
+validation
+        ↓
+generalization test
+```
+
+L'**ontologia** definisce il feature space comune. I `MODEL_SPEC`
+formalizzano feature, relazioni e parametri. Le submission implementano
+i modelli come **policy eseguibili**.
+
+La telemetria consente di distinguere:
+
+1.  **MODEL_VALIDITY** --- il modello descrive adeguatamente il sistema?
+2.  **POLICY_REALIZATION** --- la policy traduce correttamente il
+    modello?
+3.  **IMPLEMENTATION_FIDELITY** --- l'esecuzione realizza effettivamente
+    la policy prevista?
+
+> **Victory ≠ Model Validity**\
+> **Defeat ≠ Model Falsification**
+
+## Evoluzione sperimentale
+
+### E01--E11 --- Exploratory Sensitivity / Candidate Feature Discovery
+
+La prima fase ha utilizzato prevalentemente esperimenti **One Factor At
+a Time (OFAT)**: una componente della strategia veniva modificata
+mantenendo il più possibile stabile il resto.
+
+Lo scopo era sviluppare **sensibilità empirica**: capire quali variabili
+sembravano influenzare il target, quali producevano effetti marginali,
+quali failure mode emergevano e quali dimensioni meritavano ulteriori
+esperimenti.
+
+L'output è stato un insieme di **candidate feature**, non una lista di
+feature già validate.
+
+### E12--E14 --- Feature Formalization / Competing Models
+
+Le osservazioni accumulate sono state trasformate in modelli strategici
+più espliciti. Sono stati introdotti la separazione
+model/policy/implementation, l'ontologia canonica, `MODEL_SPEC`
+indipendenti per Antigravity, Codex e Copilot e una disciplina più
+rigorosa sulla provenance dell'evidenza.
+
+Le candidate feature emerse dall'esplorazione sono così diventate
+concetti formalizzati e ipotesi confrontabili.
+
+### E15 --- Feature Discrimination & Initial Bounding
+
+E15 segna il passaggio dall'esplorazione all'**addestramento strutturato
+dei modelli**.
+
+Tre modelli indipendenti sono stati congelati e confrontati in un torneo
+pairwise controllato:
+
+  Match                           Risultato
+  ------------------------------- ----------------------------------------
+  M1 --- Antigravity vs Codex     `$8,672` vs `$20,461` --- **Codex**
+  M2 --- Codex vs Copilot         `$27,510` vs `$37,752` --- **Copilot**
+  M3 --- Copilot vs Antigravity   `$26,629` vs `$9,371` --- **Copilot**
+
+Classifica: **Copilot 2--0**, **Codex 1--1**, **Antigravity 0--2**.
+
+Il risultato competitivo non equivale alla selezione definitiva del
+modello. Il ruolo di E15 è:
+
+1.  stabilire se un concetto dell'ontologia mostra evidenza sufficiente
+    per essere trattato come **feature**;
+2.  stimare direzione o forma preliminare della relazione con il target;
+3.  identificare differenti regimi operativi;
+4.  ottenere una **prima soglia o un primo intervallo candidato**;
+5.  individuare confounder e variabili non discriminate;
+6.  progettare gli esperimenti di tuning successivi.
+
+E15 **non determina valori ottimali**. Per esempio, 17--18 animali
+perdenti contro 4--7 non implica `max_herd = 4`: suggerisce che
+`livestock_headcount` merita di essere trattato come feature e che
+l'evidenza fornisce un primo intervallo da restringere. Analogamente, i
+valori `WATER` osservati nei modelli vincenti delimitano regimi, non un
+optimum.
+
+### E16+ --- Parameter & Hyperparameter Tuning
+
+I round successivi devono essere progettati per **restringere
+progressivamente gli intervalli delle feature e degli iperparametri
+supportati**, non come semplici repliche del torneo.
+
+``` text
+livestock_headcount
+E15 initial bound: 4 ─────────────── 17
+                         ↓
+next round:       4 / 7 / 10 / 13 / 17
+                         ↓
+                  intervallo migliore
+                         ↓
+                     tuning fine
+```
+
+Ogni nuovo esperimento deve dichiarare **prima dell'esecuzione** il
+proprio ruolo:
+
+``` text
+TRAINING EVIDENCE
+VALIDATION EVIDENCE
+TEST EVIDENCE
+```
+
+L'evidenza usata per scegliere o restringere un parametro non può essere
+riutilizzata come prova indipendente della sua generalizzazione.
+
+## Protocollo di revisione dei MODEL_SPEC
+
+Dopo ogni round, la revisione non consiste nel copiare la strategia
+vincente. Ogni modeler deve riesaminare indipendentemente i concetti
+dell'ontologia e produrre:
+
+``` text
+concept_id
+feature_status
+relationship
+e15_evidence
+failure_region
+success_region
+candidate_threshold_or_interval
+confidence
+confounders
+next_test_values
+falsification_condition
+```
+
+`feature_status` distingue almeno:
+
+``` text
+FEATURE
+NOT_FEATURE
+UNRESOLVED
+```
+
+Una soglia osservata costituisce una **inizializzazione del search
+space**, non un valore ottimale. Il round successivo deve restringere o
+falsificare quell'intervallo.
+
+## Ruolo dei modeler
+
+Antigravity, Codex e Copilot sono **modeler indipendenti**. Ricevono la
+stessa ontologia e la stessa evidenza, ma revisionano separatamente i
+propri `MODEL_SPEC`.
+
+Devono distinguere evidenza da inferenza, identificare feature, valutare
+relazioni con il target, proporre range solo quando supportati,
+dichiarare confidence/confounder, progettare esperimenti discriminanti e
+definire condizioni di falsificazione.
+
+Le divergenze tra modeler sono informative: indicano le parti del
+modello sulle quali l'evidenza non consente ancora una conclusione
+robusta.
+
+## Stato corrente
+
+-   **E15**: `EPISTEMICALLY CLOSED`
+-   **Competitive winner**: `Copilot (2–0)`
+-   **Frozen integrity**: `7/7 PASS`
+-   **Test suite post-E15**: `102/102 PASS`
+-   **E15 closure commit**: `922015f`
+-   **Post-E15 maintenance commit**: `d599d0e`
+-   **Next gate**: `MODEL CAPABILITY CHECK`
+
+Il prossimo gate deve verificare che il runtime/model utilizzato da
+ciascun modeler sia adeguato al compito:
+
+> **feature identification → relationship inference → initial threshold
+> discovery → experiment design**
+
+senza overfitting sull'evidenza E15. Solo dopo viene autorizzata la
+revisione indipendente dei `MODEL_SPEC`.
 
 ## Stato del Repository & Artifacts
 
-- **Submission File Standalone:** `submission/submission.py` (generato automaticamente via `scripts/build_submission.py`).
-- **Trattamento Inserito in Submission:** `ProductiveMassROIAgent` in modalita `E12_TRUEBELIEF_ENGINE_X112` (X1.12 Q0+Q1, 7 Cow + 4 Sheep).
-- **Benchmark locale X1.12:** seed `0` `$42,491`; seed `421521921` `$48,313`; 80k gate FAIL.
-- **Stato Kaggle X1.12:** uploaded manually; external result pending.
-- **Correzione modello post-upload:** `Q0+Q1 only` e `7 Cow + 4 Sheep` sono evidenze/reference della candidate X1.12, non vincoli hard permanenti; il prossimo BUILD deve trattare Q2 e livestock come decisioni marginal-value + capacity-gated.
-- **Spec canonica del modello:** `docs/MODEL_SPEC.md`.
-- **Verifica candidate:** `results/e12/x112/submission_candidate_verification.json`.
+### Model specs correnti
 
----
+``` text
+docs/model_specs/antigravity/MODEL_SPEC_ANTIGRAVITY.md
+docs/model_specs/codex/MODEL_SPEC_CODEX.md
+docs/model_specs/copilot/MODEL_SPEC_COPILOT.md
+```
+
+### E15
+
+``` text
+results/e15/E15_FINAL_TOURNAMENT_SYNTHESIS.md
+results/e15/freeze/
+results/e15/M1_antigravity_vs_codex/
+results/e15/M2_codex_vs_copilot/
+results/e15/M3_copilot_vs_antigravity/
+```
+
+Gli artefatti sotto `results/e15/freeze/` sono immutabili.
 
 ## Ambiente Python
 
-La fonte canonica delle dipendenze è `pyproject.toml`. La directory `.venv` è un artifact locale disposable: non è fonte di verità e, se diventa incoerente, deve essere eliminata e ricreata dalla configurazione versionata del repository.
+La fonte canonica delle dipendenze è `pyproject.toml`. La directory
+`.venv` è un artifact locale disposable.
 
 Versione validata:
 
-- Python `3.12.13`
-- `kaggle-environments==1.32.7`
-- progetto installato in editable mode: `kaggriculture-agent==0.1.0`
+-   Python `3.12.13`
+-   `kaggle-environments==1.32.7`
+-   progetto installato in editable mode: `kaggriculture-agent==0.1.0`
 
-`pyproject.toml` dichiara `requires-python = ">=3.10,<3.14"` perché la ricostruzione con Python `3.14.4` ha fallito sulla dipendenza transitive `pygame` richiesta da `kaggle-environments`.
+`pyproject.toml` dichiara `requires-python = ">=3.10,<3.14"` per
+compatibilità con le dipendenze di `kaggle-environments`.
 
 ### Creazione ambiente
 
-PowerShell:
-
-```powershell
+``` powershell
 .\scripts\setup_env.ps1 -Recreate
-```
-
-Comandi manuali equivalenti, usando un Python 3.12 disponibile:
-
-```powershell
-<PYTHON_3_12>\python.exe -m venv .venv
-.\.venv\Scripts\python.exe -m pip install --upgrade pip
-.\.venv\Scripts\python.exe -m pip install --no-build-isolation -e .[dev]
 ```
 
 ### Verifica ambiente
 
-```powershell
+``` powershell
 .\.venv\Scripts\python.exe --version
 .\.venv\Scripts\python.exe -m pip check
-.\.venv\Scripts\python.exe -c "import kaggle_environments, agricola; print(kaggle_environments.__version__)"
-.\.venv\Scripts\python.exe -m py_compile src\agricola\core\state.py src\agricola\core\actions.py src\agricola\agent.py src\agricola\strategy\productive_mass_roi.py
-.\.venv\Scripts\python.exe -m pytest tests\test_hire_nw_cluster.py tests\test_water_first_hire_nw_cluster.py tests\test_submission_behavioral_equivalence.py
-.\.venv\Scripts\python.exe scripts\verify_x112_submission_candidate.py
+.\.venv\Scripts\pytest.exe tests/
+.\.venv\Scripts\python.exe scriptsun_e15_tournament.py --validate
 ```
 
-Un warning su `.pytest_cache` non è una failure se i test passano.
+### Environment discipline
 
-### Environment discipline per agenti
+Antigravity, Codex, Copilot e altri modeler devono seguire:
 
-Antigravity, Codex, Copilot e altri agenti devono seguire:
-
-`Repository configuration -> .venv -> verification`
-
-Regole:
-
-1. usare la `.venv` canonica del repository;
-2. non trattare pacchetti installati localmente come fonte di verità;
-3. non eseguire installazioni permanenti ad hoc senza aggiornare la configurazione versionata;
-4. prima di aggiungere o modificare una dipendenza, verificare la configurazione esistente, motivare la modifica, aggiornare il file dichiarativo ed eseguire `pip check` e test;
-5. non cambiare versione Python o dependency set silenziosamente;
-6. segnalare qualsiasi incompatibilità tra ambiente e repository.
-
-## Installazione ed Esecuzione
-
-```bash
-# Attivazione ambiente virtuale (Windows PowerShell)
-.\.venv\Scripts\activate
-
-# Esecuzione della suite completa di unit test
-.\.venv\Scripts\pytest tests/
-
-# Rigenerazione del file di submission standalone per Kaggle
-.\.venv\Scripts\python.exe scripts/build_submission.py
-
-# Verifica provenance di un run di benchmark
-.\.venv\Scripts\python.exe scripts/verify_e11_run_provenance.py results/e11/E11-X1.3-B-20260827-100010
+``` text
+Repository configuration → .venv → verification
 ```
 
----
+Non cambiare dipendenze, versione Python o configurazione dell'ambiente
+silenziosamente.
 
-## Registri di Progetto & Versioning
+## Installazione ed esecuzione
 
-- [Documento di Versione E11-X1.3-B](docs/versions/E11_X1_3_B_kaggle_external_validation.md)
-- [Documento di Versione E11-X1.3](docs/versions/E11_X1_3_e06_productive_unit_replication_scaling.md)
-- [Documento di Versione E11-VB1 Baseline](docs/versions/E11_R3_verified_baseline_reestablishment.md)
-- [Experiment Log Completo](docs/EXPERIMENT_LOG.md)
-- [Project State](docs/PROJECT_STATE.md)
-- [New Session Restart Point](docs/NEW_SESSION.md)
+``` powershell
+# Attivazione ambiente
+.\.venv\Scriptsctivate
+
+# Suite completa
+.\.venv\Scripts\pytest.exe tests/
+
+# Verifica integrità E15
+.\.venv\Scripts\python.exe scriptsun_e15_tournament.py --validate
+
+# Generazione submission — solo quando autorizzata dal protocollo
+.\.venv\Scripts\python.exe scriptsuild_submission.py
+```
+
+## Registri di progetto
+
+-   [Experiment Log](docs/EXPERIMENT_LOG.md)
+-   [Project State](docs/PROJECT_STATE.md)
+-   [New Session Restart Point](docs/NEW_SESSION.md)
+-   [E15 Final Tournament
+    Synthesis](results/e15/E15_FINAL_TOURNAMENT_SYNTHESIS.md)
