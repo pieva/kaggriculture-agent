@@ -1,0 +1,28 @@
+id,claim,verdict,confidence,evidence_type,evidence_summary,patch
+WF-01,Workforce Capacity First,PARTIALLY_SUPPORTED,HIGH,INFERRED,"8-12 peak hands correlate with maintained engines; X1.14 rejects monotonic hiring",REFRAME
+WF-02,fixed workforce count,CONTRADICTED,HIGH,OBSERVED,"Competitive peaks vary across 8 10 and 12 hands",REMOVE
+WF-03,workforce timing,PARTIALLY_SUPPORTED,MEDIUM,OBSERVED,"Hire timing varies by seed and trajectory",REFRAME
+WF-04,workforce utilization,SUPPORTED,MEDIUM,INFERRED,"Workforce must match surface logistics and monetization",KEEP
+WF-05,productive actions per Hand,PARTIALLY_SUPPORTED,MEDIUM,OBSERVED,"Raw counts expose throughput but not isolated causality",REFRAME
+WF-06,movement/logistics overhead,SUPPORTED,MEDIUM,INFERRED,"Movement is a large footprint-dependent action category",KEEP
+WF-07,backlog avoidance,PARTIALLY_SUPPORTED,HIGH,INFERRED,"Elite runs have low weeds but compact winner tolerates 145 weed tile-days",REFRAME
+PS-01,Productive Surface First,PARTIALLY_SUPPORTED,HIGH,INFERRED,"46-50 productive tiles accompany elite paths while 15-tile play also wins",REFRAME
+PS-02,physical utilization vs economic utilization,SUPPORTED,HIGH,INFERRED,"Larger surface can convert less cash than compact surface",KEEP
+PS-03,clean field / weed minimization,MIXED,HIGH,OBSERVED,"X1.14 lowers weeds while lowering final money",REFRAME
+LD-01,Dense Engine Before Expansion,MIXED,HIGH,INFERRED,"Useful guardrail in first three but fast Q2 paths expand early",DOWNGRADE
+LD-02,Land Discipline,PARTIALLY_SUPPORTED,HIGH,INFERRED,"Expansion needs activation and liquidity gates",REFRAME
+LD-03,Q0-only viability,SUPPORTED,HIGH,OBSERVED,"Sokolov reaches 50420 with NW only",KEEP
+LD-04,Q1 conditional expansion,SUPPORTED,HIGH,OBSERVED,"Q1 timing ranges from none to early and late expansion",KEEP
+LD-05,Q2 not priority,PARTIALLY_SUPPORTED,MEDIUM,INFERRED,"Not a universal requirement, not a rejected option",DOWNGRADE
+LD-06,Q2 conditional high-ceiling branch,SUPPORTED,HIGH,OBSERVED,"Three added episodes use Q2 and reach 96069-133035",KEEP
+LV-01,livestock as economic engine,SUPPORTED,MEDIUM,INFERRED,"Milk Wool Egg and Fertilizer recur in high-score sales",KEEP
+LV-02,fixed livestock targets,CONTRADICTED,HIGH,OBSERVED,"Mix varies from 4 cows to 15 cows and Goose use varies",REMOVE
+ME-01,multi-engine monetization,SUPPORTED,HIGH,OBSERVED,"Winners sell animal products fertilizer wheat and crops",KEEP
+CA-01,Deployable Capital,PARTIALLY_SUPPORTED,MEDIUM,INFERRED,"Cash-to-capacity chain is visible but payback is not native",REFRAME
+WF-08,HIRE based on marginal monetizable throughput,PARTIALLY_SUPPORTED,MEDIUM,CAUSAL_REQUIRED,"Aggressive hiring regresses required seeds",NEEDS_MORE_EVIDENCE
+PS-04,crop-maintenance priority,MIXED,HIGH,OBSERVED,"Weed improvements can coincide with lower money",REFRAME
+EG-01,horizon-aware shutdown,PARTIALLY_SUPPORTED,MEDIUM,INFERRED,"Endgame liquidation and labor are visible but optimum is unproven",NEEDS_MORE_EVIDENCE
+ME-02,market/logistics efficiency,SUPPORTED,MEDIUM,INFERRED,"High scores show diverse sales and substantial throughput",KEEP
+MK-01,Wheat BUY_PRODUCT / SELL loop,PARTIALLY_SUPPORTED,MEDIUM,OBSERVED,"Buying and selling is observed; profit ledger is not proven",NEEDS_MORE_EVIDENCE
+CA-02,causal Q2 payback,NOT_OBSERVABLE,LOW,CAUSAL_REQUIRED,"No matched no-Q2 counterfactual at same pre-purchase state",NEEDS_MORE_EVIDENCE
+CA-03,semantic backlog causality,NOT_OBSERVABLE,LOW,CAUSAL_REQUIRED,"Backlog is derived rather than a native raw field",NEEDS_MORE_EVIDENCE

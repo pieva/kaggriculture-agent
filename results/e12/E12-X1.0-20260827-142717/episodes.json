@@ -1,0 +1,3700 @@
+{
+  "run_id": "E12-X1.0-20260827-142717",
+  "episodes": [
+    {
+      "starting_money": 3000.0,
+      "final_money": 6040.0,
+      "minimum_cash": 1947.0,
+      "spending": {
+        "seeds": 4390.0,
+        "workforce": 1500.0,
+        "land": 3000.0,
+        "livestock": 3600.0
+      },
+      "realized_revenue": {
+        "MILK": 889.0,
+        "WOOL": 0.0,
+        "MELON": 9738.0,
+        "CARROT": 0.0,
+        "WHEAT": 5739.0,
+        "EGG": 0.0
+      },
+      "land_breakdown": {
+        "configured_crop_tiles": 80,
+        "peak_productive_tiles": 14,
+        "mean_daily_productive_tiles": 8.19,
+        "q0": {
+          "owned": 25,
+          "productive": 20,
+          "worked": 0,
+          "harvested": 0
+        },
+        "q1": {
+          "owned": 0,
+          "productive": 0,
+          "worked": 0,
+          "harvested": 0
+        },
+        "buy_land_step": 432
+      },
+      "workforce": {
+        "hires_count": 30,
+        "hire_attempted": 0,
+        "hire_accepted": 0,
+        "peak_simultaneous_workers": 2,
+        "worker_stats": {
+          "0": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "1": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "2": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "3": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          }
+        },
+        "action_steps": 0,
+        "movement_steps": 0,
+        "idle_steps": 0
+      },
+      "backlog": {
+        "mean_needs_water": 3.53,
+        "mean_harvest_ready": 0.99,
+        "mean_plant_pending": 26.14
+      },
+      "crops": {
+        "planted": 58,
+        "watered": 258,
+        "harvested": 47,
+        "weed_losses": 0
+      },
+      "livestock": {
+        "cows": 2,
+        "sheep": 0,
+        "pastures_built": 0,
+        "animals_placed": 9,
+        "feed_attempted": 0,
+        "feed_successful": 0,
+        "feed_consumed": 15,
+        "missed_feeds": 0,
+        "milk_harvested": 3,
+        "wool_harvested": 0
+      },
+      "wheat_accounting": {
+        "harvested": 0,
+        "bought": 0,
+        "fed": 0,
+        "sold": 0
+      },
+      "market": {
+        "orders_placed": 0,
+        "quantities_sold": {
+          "MILK": 0,
+          "WOOL": 0,
+          "MELON": 0,
+          "CARROT": 0,
+          "WHEAT": 0,
+          "EGG": 0
+        },
+        "unsold_shed_items": 0
+      },
+      "phase_history": [],
+      "event_count": 41,
+      "seed": 0,
+      "opponent": "pass",
+      "peak_simultaneous_workers": 2,
+      "peak_productive_tiles": 14,
+      "peak_active_tiles": 14,
+      "peak_workforce": 2,
+      "buy_land_day": 18,
+      "buy_land_step": 432,
+      "cows_acquired": 2,
+      "active_cow_count": 2,
+      "active_pasture_count": 4,
+      "turn_first_cow": 121,
+      "day_first_cow": 5,
+      "milk_harvested": 3,
+      "feed_consumed": 15,
+      "milk_revenue": 889.0,
+      "turn_telemetry_1_24": [
+        {
+          "turn": 1,
+          "day": 0,
+          "hour": 0,
+          "cash": 3000.0,
+          "farmer_pos": [
+            4,
+            4
+          ],
+          "farmer_act": [
+            "NORTH"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 0,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 2,
+          "day": 0,
+          "hour": 1,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            3
+          ],
+          "farmer_act": [
+            "NORTH"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 3,
+          "day": 0,
+          "hour": 2,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 4,
+          "day": 0,
+          "hour": 3,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 5,
+          "day": 0,
+          "hour": 4,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "WEST"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 6,
+          "day": 0,
+          "hour": 5,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 7,
+          "day": 0,
+          "hour": 6,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 8,
+          "day": 0,
+          "hour": 7,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "WEST"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 9,
+          "day": 0,
+          "hour": 8,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 10,
+          "day": 0,
+          "hour": 9,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 11,
+          "day": 0,
+          "hour": 10,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 12,
+          "day": 0,
+          "hour": 11,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 13,
+          "day": 0,
+          "hour": 12,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 14,
+          "day": 0,
+          "hour": 13,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 15,
+          "day": 0,
+          "hour": 14,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 16,
+          "day": 0,
+          "hour": 15,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 17,
+          "day": 0,
+          "hour": 16,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 18,
+          "day": 0,
+          "hour": 17,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 19,
+          "day": 0,
+          "hour": 18,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 20,
+          "day": 0,
+          "hour": 19,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 21,
+          "day": 0,
+          "hour": 20,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 22,
+          "day": 0,
+          "hour": 21,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 23,
+          "day": 0,
+          "hour": 22,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 24,
+          "day": 0,
+          "hour": 23,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 6,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        }
+      ],
+      "run_id": "E12-X1.0-20260827-142717",
+      "max_owned_quadrants": 1,
+      "q2_unlocked": false,
+      "q3_unlocked": false,
+      "delta_vs_b3": -24194.0,
+      "delta_vs_x16": -23257.0,
+      "delta_vs_x17": -24180.0
+    },
+    {
+      "starting_money": 3000.0,
+      "final_money": 5471.0,
+      "minimum_cash": 1164.0,
+      "spending": {
+        "seeds": 4390.0,
+        "workforce": 1500.0,
+        "land": 3000.0,
+        "livestock": 3600.0
+      },
+      "realized_revenue": {
+        "MILK": 710.0,
+        "WOOL": 0.0,
+        "MELON": 9738.0,
+        "CARROT": 0.0,
+        "WHEAT": 5151.0,
+        "EGG": 0.0
+      },
+      "land_breakdown": {
+        "configured_crop_tiles": 80,
+        "peak_productive_tiles": 14,
+        "mean_daily_productive_tiles": 8.19,
+        "q0": {
+          "owned": 25,
+          "productive": 20,
+          "worked": 0,
+          "harvested": 0
+        },
+        "q1": {
+          "owned": 0,
+          "productive": 0,
+          "worked": 0,
+          "harvested": 0
+        },
+        "buy_land_step": 432
+      },
+      "workforce": {
+        "hires_count": 30,
+        "hire_attempted": 0,
+        "hire_accepted": 0,
+        "peak_simultaneous_workers": 2,
+        "worker_stats": {
+          "0": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "1": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "2": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "3": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          }
+        },
+        "action_steps": 0,
+        "movement_steps": 0,
+        "idle_steps": 0
+      },
+      "backlog": {
+        "mean_needs_water": 3.53,
+        "mean_harvest_ready": 0.99,
+        "mean_plant_pending": 26.14
+      },
+      "crops": {
+        "planted": 58,
+        "watered": 258,
+        "harvested": 47,
+        "weed_losses": 0
+      },
+      "livestock": {
+        "cows": 2,
+        "sheep": 0,
+        "pastures_built": 0,
+        "animals_placed": 9,
+        "feed_attempted": 0,
+        "feed_successful": 0,
+        "feed_consumed": 15,
+        "missed_feeds": 0,
+        "milk_harvested": 3,
+        "wool_harvested": 0
+      },
+      "wheat_accounting": {
+        "harvested": 0,
+        "bought": 0,
+        "fed": 0,
+        "sold": 0
+      },
+      "market": {
+        "orders_placed": 0,
+        "quantities_sold": {
+          "MILK": 0,
+          "WOOL": 0,
+          "MELON": 0,
+          "CARROT": 0,
+          "WHEAT": 0,
+          "EGG": 0
+        },
+        "unsold_shed_items": 0
+      },
+      "phase_history": [],
+      "event_count": 41,
+      "seed": 100,
+      "opponent": "pass",
+      "peak_simultaneous_workers": 2,
+      "peak_productive_tiles": 14,
+      "peak_active_tiles": 14,
+      "peak_workforce": 2,
+      "buy_land_day": 18,
+      "buy_land_step": 432,
+      "cows_acquired": 2,
+      "active_cow_count": 2,
+      "active_pasture_count": 4,
+      "turn_first_cow": 121,
+      "day_first_cow": 5,
+      "milk_harvested": 3,
+      "feed_consumed": 15,
+      "milk_revenue": 710.0,
+      "turn_telemetry_1_24": [
+        {
+          "turn": 1,
+          "day": 0,
+          "hour": 0,
+          "cash": 3000.0,
+          "farmer_pos": [
+            4,
+            4
+          ],
+          "farmer_act": [
+            "NORTH"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 0,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 2,
+          "day": 0,
+          "hour": 1,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            3
+          ],
+          "farmer_act": [
+            "NORTH"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 3,
+          "day": 0,
+          "hour": 2,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 4,
+          "day": 0,
+          "hour": 3,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 5,
+          "day": 0,
+          "hour": 4,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "WEST"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 6,
+          "day": 0,
+          "hour": 5,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 7,
+          "day": 0,
+          "hour": 6,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 8,
+          "day": 0,
+          "hour": 7,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "WEST"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 9,
+          "day": 0,
+          "hour": 8,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 10,
+          "day": 0,
+          "hour": 9,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 11,
+          "day": 0,
+          "hour": 10,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 12,
+          "day": 0,
+          "hour": 11,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 13,
+          "day": 0,
+          "hour": 12,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 14,
+          "day": 0,
+          "hour": 13,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 15,
+          "day": 0,
+          "hour": 14,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 16,
+          "day": 0,
+          "hour": 15,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 17,
+          "day": 0,
+          "hour": 16,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 18,
+          "day": 0,
+          "hour": 17,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 19,
+          "day": 0,
+          "hour": 18,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 20,
+          "day": 0,
+          "hour": 19,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 21,
+          "day": 0,
+          "hour": 20,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 22,
+          "day": 0,
+          "hour": 21,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 23,
+          "day": 0,
+          "hour": 22,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 24,
+          "day": 0,
+          "hour": 23,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 6,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        }
+      ],
+      "run_id": "E12-X1.0-20260827-142717",
+      "max_owned_quadrants": 1,
+      "q2_unlocked": false,
+      "q3_unlocked": false,
+      "delta_vs_b3": -24601.0,
+      "delta_vs_x16": -23624.0,
+      "delta_vs_x17": -24610.0
+    },
+    {
+      "starting_money": 3000.0,
+      "final_money": 5094.0,
+      "minimum_cash": 1837.0,
+      "spending": {
+        "seeds": 4190.0,
+        "workforce": 1500.0,
+        "land": 3000.0,
+        "livestock": 3600.0
+      },
+      "realized_revenue": {
+        "MILK": 661.0,
+        "WOOL": 0.0,
+        "MELON": 9738.0,
+        "CARROT": 0.0,
+        "WHEAT": 4388.0,
+        "EGG": 0.0
+      },
+      "land_breakdown": {
+        "configured_crop_tiles": 80,
+        "peak_productive_tiles": 14,
+        "mean_daily_productive_tiles": 8.19,
+        "q0": {
+          "owned": 25,
+          "productive": 20,
+          "worked": 0,
+          "harvested": 0
+        },
+        "q1": {
+          "owned": 0,
+          "productive": 0,
+          "worked": 0,
+          "harvested": 0
+        },
+        "buy_land_step": 432
+      },
+      "workforce": {
+        "hires_count": 30,
+        "hire_attempted": 0,
+        "hire_accepted": 0,
+        "peak_simultaneous_workers": 2,
+        "worker_stats": {
+          "0": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "1": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "2": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "3": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          }
+        },
+        "action_steps": 0,
+        "movement_steps": 0,
+        "idle_steps": 0
+      },
+      "backlog": {
+        "mean_needs_water": 3.53,
+        "mean_harvest_ready": 0.99,
+        "mean_plant_pending": 26.14
+      },
+      "crops": {
+        "planted": 58,
+        "watered": 258,
+        "harvested": 47,
+        "weed_losses": 0
+      },
+      "livestock": {
+        "cows": 2,
+        "sheep": 0,
+        "pastures_built": 0,
+        "animals_placed": 9,
+        "feed_attempted": 0,
+        "feed_successful": 0,
+        "feed_consumed": 15,
+        "missed_feeds": 0,
+        "milk_harvested": 3,
+        "wool_harvested": 0
+      },
+      "wheat_accounting": {
+        "harvested": 0,
+        "bought": 0,
+        "fed": 0,
+        "sold": 0
+      },
+      "market": {
+        "orders_placed": 0,
+        "quantities_sold": {
+          "MILK": 0,
+          "WOOL": 0,
+          "MELON": 0,
+          "CARROT": 0,
+          "WHEAT": 0,
+          "EGG": 0
+        },
+        "unsold_shed_items": 0
+      },
+      "phase_history": [],
+      "event_count": 41,
+      "seed": 200,
+      "opponent": "random",
+      "peak_simultaneous_workers": 2,
+      "peak_productive_tiles": 14,
+      "peak_active_tiles": 14,
+      "peak_workforce": 2,
+      "buy_land_day": 18,
+      "buy_land_step": 432,
+      "cows_acquired": 2,
+      "active_cow_count": 2,
+      "active_pasture_count": 4,
+      "turn_first_cow": 121,
+      "day_first_cow": 5,
+      "milk_harvested": 3,
+      "feed_consumed": 15,
+      "milk_revenue": 661.0,
+      "turn_telemetry_1_24": [
+        {
+          "turn": 1,
+          "day": 0,
+          "hour": 0,
+          "cash": 3000.0,
+          "farmer_pos": [
+            4,
+            4
+          ],
+          "farmer_act": [
+            "NORTH"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 0,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 2,
+          "day": 0,
+          "hour": 1,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            3
+          ],
+          "farmer_act": [
+            "NORTH"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 3,
+          "day": 0,
+          "hour": 2,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 4,
+          "day": 0,
+          "hour": 3,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 5,
+          "day": 0,
+          "hour": 4,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "WEST"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 6,
+          "day": 0,
+          "hour": 5,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 7,
+          "day": 0,
+          "hour": 6,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 8,
+          "day": 0,
+          "hour": 7,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "WEST"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 9,
+          "day": 0,
+          "hour": 8,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 10,
+          "day": 0,
+          "hour": 9,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 11,
+          "day": 0,
+          "hour": 10,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 12,
+          "day": 0,
+          "hour": 11,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 13,
+          "day": 0,
+          "hour": 12,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 14,
+          "day": 0,
+          "hour": 13,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 15,
+          "day": 0,
+          "hour": 14,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 16,
+          "day": 0,
+          "hour": 15,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 17,
+          "day": 0,
+          "hour": 16,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 18,
+          "day": 0,
+          "hour": 17,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 19,
+          "day": 0,
+          "hour": 18,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 20,
+          "day": 0,
+          "hour": 19,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 21,
+          "day": 0,
+          "hour": 20,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 22,
+          "day": 0,
+          "hour": 21,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 23,
+          "day": 0,
+          "hour": 22,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 24,
+          "day": 0,
+          "hour": 23,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 6,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        }
+      ],
+      "run_id": "E12-X1.0-20260827-142717",
+      "max_owned_quadrants": 1,
+      "q2_unlocked": false,
+      "q3_unlocked": false,
+      "delta_vs_b3": -26366.0,
+      "delta_vs_x16": -29540.0,
+      "delta_vs_x17": -28277.0
+    },
+    {
+      "starting_money": 3000.0,
+      "final_money": 6780.0,
+      "minimum_cash": 1947.0,
+      "spending": {
+        "seeds": 3270.0,
+        "workforce": 1500.0,
+        "land": 3000.0,
+        "livestock": 3600.0
+      },
+      "realized_revenue": {
+        "MILK": 744.0,
+        "WOOL": 0.0,
+        "MELON": 9738.0,
+        "CARROT": 0.0,
+        "WHEAT": 5449.0,
+        "EGG": 0.0
+      },
+      "land_breakdown": {
+        "configured_crop_tiles": 80,
+        "peak_productive_tiles": 12,
+        "mean_daily_productive_tiles": 8.19,
+        "q0": {
+          "owned": 25,
+          "productive": 20,
+          "worked": 0,
+          "harvested": 0
+        },
+        "q1": {
+          "owned": 0,
+          "productive": 0,
+          "worked": 0,
+          "harvested": 0
+        },
+        "buy_land_step": 432
+      },
+      "workforce": {
+        "hires_count": 30,
+        "hire_attempted": 0,
+        "hire_accepted": 0,
+        "peak_simultaneous_workers": 2,
+        "worker_stats": {
+          "0": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "1": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "2": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "3": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          }
+        },
+        "action_steps": 0,
+        "movement_steps": 0,
+        "idle_steps": 0
+      },
+      "backlog": {
+        "mean_needs_water": 3.55,
+        "mean_harvest_ready": 0.97,
+        "mean_plant_pending": 26.24
+      },
+      "crops": {
+        "planted": 55,
+        "watered": 256,
+        "harvested": 46,
+        "weed_losses": 0
+      },
+      "livestock": {
+        "cows": 2,
+        "sheep": 0,
+        "pastures_built": 0,
+        "animals_placed": 9,
+        "feed_attempted": 0,
+        "feed_successful": 0,
+        "feed_consumed": 14,
+        "missed_feeds": 0,
+        "milk_harvested": 3,
+        "wool_harvested": 0
+      },
+      "wheat_accounting": {
+        "harvested": 0,
+        "bought": 0,
+        "fed": 0,
+        "sold": 0
+      },
+      "market": {
+        "orders_placed": 0,
+        "quantities_sold": {
+          "MILK": 0,
+          "WOOL": 0,
+          "MELON": 0,
+          "CARROT": 0,
+          "WHEAT": 0,
+          "EGG": 0
+        },
+        "unsold_shed_items": 0
+      },
+      "phase_history": [],
+      "event_count": 41,
+      "seed": 300,
+      "opponent": "random",
+      "peak_simultaneous_workers": 2,
+      "peak_productive_tiles": 12,
+      "peak_active_tiles": 12,
+      "peak_workforce": 2,
+      "buy_land_day": 18,
+      "buy_land_step": 432,
+      "cows_acquired": 2,
+      "active_cow_count": 2,
+      "active_pasture_count": 3,
+      "turn_first_cow": 121,
+      "day_first_cow": 5,
+      "milk_harvested": 3,
+      "feed_consumed": 14,
+      "milk_revenue": 744.0,
+      "turn_telemetry_1_24": [
+        {
+          "turn": 1,
+          "day": 0,
+          "hour": 0,
+          "cash": 3000.0,
+          "farmer_pos": [
+            4,
+            4
+          ],
+          "farmer_act": [
+            "NORTH"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 0,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 2,
+          "day": 0,
+          "hour": 1,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            3
+          ],
+          "farmer_act": [
+            "NORTH"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 3,
+          "day": 0,
+          "hour": 2,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 4,
+          "day": 0,
+          "hour": 3,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 5,
+          "day": 0,
+          "hour": 4,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "WEST"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 6,
+          "day": 0,
+          "hour": 5,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 7,
+          "day": 0,
+          "hour": 6,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 8,
+          "day": 0,
+          "hour": 7,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "WEST"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 9,
+          "day": 0,
+          "hour": 8,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 10,
+          "day": 0,
+          "hour": 9,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 11,
+          "day": 0,
+          "hour": 10,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 12,
+          "day": 0,
+          "hour": 11,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 13,
+          "day": 0,
+          "hour": 12,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 14,
+          "day": 0,
+          "hour": 13,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 15,
+          "day": 0,
+          "hour": 14,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 16,
+          "day": 0,
+          "hour": 15,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 17,
+          "day": 0,
+          "hour": 16,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 18,
+          "day": 0,
+          "hour": 17,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 19,
+          "day": 0,
+          "hour": 18,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 20,
+          "day": 0,
+          "hour": 19,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 21,
+          "day": 0,
+          "hour": 20,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 22,
+          "day": 0,
+          "hour": 21,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 23,
+          "day": 0,
+          "hour": 22,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 24,
+          "day": 0,
+          "hour": 23,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 6,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        }
+      ],
+      "run_id": "E12-X1.0-20260827-142717",
+      "max_owned_quadrants": 1,
+      "q2_unlocked": false,
+      "q3_unlocked": false,
+      "delta_vs_b3": -13234.0,
+      "delta_vs_x16": -15538.0,
+      "delta_vs_x17": -16611.0
+    },
+    {
+      "starting_money": 3000.0,
+      "final_money": 6642.0,
+      "minimum_cash": 1864.0,
+      "spending": {
+        "seeds": 3270.0,
+        "workforce": 1500.0,
+        "land": 3000.0,
+        "livestock": 3600.0
+      },
+      "realized_revenue": {
+        "MILK": 909.0,
+        "WOOL": 0.0,
+        "MELON": 9738.0,
+        "CARROT": 0.0,
+        "WHEAT": 4973.0,
+        "EGG": 0.0
+      },
+      "land_breakdown": {
+        "configured_crop_tiles": 80,
+        "peak_productive_tiles": 12,
+        "mean_daily_productive_tiles": 8.19,
+        "q0": {
+          "owned": 25,
+          "productive": 20,
+          "worked": 0,
+          "harvested": 0
+        },
+        "q1": {
+          "owned": 0,
+          "productive": 0,
+          "worked": 0,
+          "harvested": 0
+        },
+        "buy_land_step": 432
+      },
+      "workforce": {
+        "hires_count": 30,
+        "hire_attempted": 0,
+        "hire_accepted": 0,
+        "peak_simultaneous_workers": 2,
+        "worker_stats": {
+          "0": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "1": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "2": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "3": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          }
+        },
+        "action_steps": 0,
+        "movement_steps": 0,
+        "idle_steps": 0
+      },
+      "backlog": {
+        "mean_needs_water": 3.55,
+        "mean_harvest_ready": 0.97,
+        "mean_plant_pending": 26.24
+      },
+      "crops": {
+        "planted": 55,
+        "watered": 256,
+        "harvested": 46,
+        "weed_losses": 0
+      },
+      "livestock": {
+        "cows": 2,
+        "sheep": 0,
+        "pastures_built": 0,
+        "animals_placed": 9,
+        "feed_attempted": 0,
+        "feed_successful": 0,
+        "feed_consumed": 14,
+        "missed_feeds": 0,
+        "milk_harvested": 3,
+        "wool_harvested": 0
+      },
+      "wheat_accounting": {
+        "harvested": 0,
+        "bought": 0,
+        "fed": 0,
+        "sold": 0
+      },
+      "market": {
+        "orders_placed": 0,
+        "quantities_sold": {
+          "MILK": 0,
+          "WOOL": 0,
+          "MELON": 0,
+          "CARROT": 0,
+          "WHEAT": 0,
+          "EGG": 0
+        },
+        "unsold_shed_items": 0
+      },
+      "phase_history": [],
+      "event_count": 41,
+      "seed": 400,
+      "opponent": "starter",
+      "peak_simultaneous_workers": 2,
+      "peak_productive_tiles": 12,
+      "peak_active_tiles": 12,
+      "peak_workforce": 2,
+      "buy_land_day": 18,
+      "buy_land_step": 432,
+      "cows_acquired": 2,
+      "active_cow_count": 2,
+      "active_pasture_count": 3,
+      "turn_first_cow": 121,
+      "day_first_cow": 5,
+      "milk_harvested": 3,
+      "feed_consumed": 14,
+      "milk_revenue": 909.0,
+      "turn_telemetry_1_24": [
+        {
+          "turn": 1,
+          "day": 0,
+          "hour": 0,
+          "cash": 3000.0,
+          "farmer_pos": [
+            4,
+            4
+          ],
+          "farmer_act": [
+            "NORTH"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 0,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 2,
+          "day": 0,
+          "hour": 1,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            3
+          ],
+          "farmer_act": [
+            "NORTH"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 3,
+          "day": 0,
+          "hour": 2,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 0,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 4,
+          "day": 0,
+          "hour": 3,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 0,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 5,
+          "day": 0,
+          "hour": 4,
+          "cash": 2239.0,
+          "farmer_pos": [
+            4,
+            2
+          ],
+          "farmer_act": [
+            "WEST"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 6,
+          "day": 0,
+          "hour": 5,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 1,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 7,
+          "day": 0,
+          "hour": 6,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 1,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 8,
+          "day": 0,
+          "hour": 7,
+          "cash": 2229.0,
+          "farmer_pos": [
+            3,
+            2
+          ],
+          "farmer_act": [
+            "WEST"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 9,
+          "day": 0,
+          "hour": 8,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PLANT",
+            "MELON"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 2,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 10,
+          "day": 0,
+          "hour": 9,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "WATER"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 2,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 11,
+          "day": 0,
+          "hour": 10,
+          "cash": 2219.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 12,
+          "day": 0,
+          "hour": 11,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 13,
+          "day": 0,
+          "hour": 12,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 3,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 14,
+          "day": 0,
+          "hour": 13,
+          "cash": 2209.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 15,
+          "day": 0,
+          "hour": 14,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 16,
+          "day": 0,
+          "hour": 15,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 17,
+          "day": 0,
+          "hour": 16,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 18,
+          "day": 0,
+          "hour": 17,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 19,
+          "day": 0,
+          "hour": 18,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 20,
+          "day": 0,
+          "hour": 19,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 4,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 21,
+          "day": 0,
+          "hour": 20,
+          "cash": 2199.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 22,
+          "day": 0,
+          "hour": 21,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 23,
+          "day": 0,
+          "hour": 22,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 5,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 4,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        },
+        {
+          "turn": 24,
+          "day": 0,
+          "hour": 23,
+          "cash": 2189.0,
+          "farmer_pos": [
+            2,
+            2
+          ],
+          "farmer_act": [
+            "PASS"
+          ],
+          "owned_quadrants": 1,
+          "active_pastures": 0,
+          "active_cows": 0,
+          "cows_owned": 0,
+          "wheat_tiles": 6,
+          "other_crop_tiles": 3,
+          "wheat_inventory": 3,
+          "milk_inventory": 0,
+          "feed_consumed_cum": 0,
+          "milk_harvested_cum": 0,
+          "milk_revenue_cum": 0.0,
+          "total_revenue_cum": 0.0
+        }
+      ],
+      "run_id": "E12-X1.0-20260827-142717",
+      "max_owned_quadrants": 1,
+      "q2_unlocked": false,
+      "q3_unlocked": false,
+      "delta_vs_b3": -13806.0,
+      "delta_vs_x16": -15555.0,
+      "delta_vs_x17": -16714.0
+    }
+  ]
+}

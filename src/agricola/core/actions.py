@@ -75,6 +75,12 @@ class ActionBuilder:
             self.market_orders.append(["BUY_SEED", crop_name, int(quantity)])
         return self
 
+    def buy_product(self, product_name: str, quantity: int) -> "ActionBuilder":
+        """Add BUY_PRODUCT market order."""
+        if quantity > 0:
+            self.market_orders.append(["BUY_PRODUCT", product_name, int(quantity)])
+        return self
+
     def hire(self) -> "ActionBuilder":
         """Add HIRE market order."""
         self.market_orders.append(["HIRE"])

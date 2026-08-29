@@ -1,0 +1,7162 @@
+{
+  "metadata": {
+    "timestamp": "2026-08-26 16:25:36",
+    "benchmark_duration_sec": 637.1828837394714,
+    "episodes_per_agent": 30,
+    "opponents": [
+      "pass",
+      "random",
+      "starter"
+    ]
+  },
+  "e09_config": {
+    "target_quadrants": 2,
+    "expansion_day": 12,
+    "target_productive_tiles": 40,
+    "wheat_tiles": 6,
+    "melon_tiles": 22,
+    "carrot_tiles": 12,
+    "target_cows": 4,
+    "target_sheep": 2,
+    "feed_safety_buffer": 3,
+    "stop_sheep_buy_day": 18,
+    "stop_cow_buy_day": 20,
+    "target_workers": 4,
+    "minimum_cash_after_hire": 200.0,
+    "cash_reserve": 300.0,
+    "melon_plant_cutoff_day": 18,
+    "all_plant_cutoff_day": 26,
+    "inventory_flush_start_day": 27,
+    "spatial_partitioning": true,
+    "cross_boundary_water_assist": true
+  },
+  "summary": {
+    "E05": {
+      "agent_name": "HIRENWClusterROIAgent",
+      "total_episodes": 30,
+      "completed": 30,
+      "completion_rate_pct": 100.0,
+      "disqualified": 0,
+      "disqualification_rate_pct": 0.0,
+      "wins": 30,
+      "draws": 0,
+      "losses": 0,
+      "win_rate_pct": 100.0,
+      "mean_final_money": 21495.866666666665,
+      "std_dev_money": 212.4510058461891,
+      "median_final_money": 21442.0,
+      "min_final_money": 21282.0,
+      "max_final_money": 22568.0,
+      "total_weed_count": 177,
+      "mean_weed_count": 5.9,
+      "mean_latency_ms": 0.09793167405230273,
+      "opponent_breakdown": {
+        "pass": {
+          "n": 10,
+          "wins": 10,
+          "draws": 0,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "mean_final_money": 21554.6,
+          "std_dev_money": 356.0724645349595,
+          "median_final_money": 21442.0
+        },
+        "random": {
+          "n": 10,
+          "wins": 10,
+          "draws": 0,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "mean_final_money": 21477.0,
+          "std_dev_money": 81.81958472422384,
+          "median_final_money": 21442.0
+        },
+        "starter": {
+          "n": 10,
+          "wins": 10,
+          "draws": 0,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "mean_final_money": 21456.0,
+          "std_dev_money": 77.20103626247513,
+          "median_final_money": 21442.0
+        }
+      }
+    },
+    "E06": {
+      "agent_name": "WaterFirstHIRENWClusterROIAgent",
+      "total_episodes": 30,
+      "completed": 30,
+      "completion_rate_pct": 100.0,
+      "disqualified": 0,
+      "disqualification_rate_pct": 0.0,
+      "wins": 30,
+      "draws": 0,
+      "losses": 0,
+      "win_rate_pct": 100.0,
+      "mean_final_money": 24731.366666666665,
+      "std_dev_money": 1859.1908785782339,
+      "median_final_money": 25847.0,
+      "min_final_money": 22180.0,
+      "max_final_money": 27873.0,
+      "total_weed_count": 65,
+      "mean_weed_count": 2.1666666666666665,
+      "mean_latency_ms": 0.09595054238158165,
+      "opponent_breakdown": {
+        "pass": {
+          "n": 10,
+          "wins": 10,
+          "draws": 0,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "mean_final_money": 24593.3,
+          "std_dev_money": 2144.9604528858904,
+          "median_final_money": 25847.0
+        },
+        "random": {
+          "n": 10,
+          "wins": 10,
+          "draws": 0,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "mean_final_money": 24780.5,
+          "std_dev_money": 1791.9716174587638,
+          "median_final_money": 25847.0
+        },
+        "starter": {
+          "n": 10,
+          "wins": 10,
+          "draws": 0,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "mean_final_money": 24820.3,
+          "std_dev_money": 1814.7272859088835,
+          "median_final_money": 25847.0
+        }
+      }
+    },
+    "E07": {
+      "agent_name": "HybridLivestockClusterROIAgent (24 tiles)",
+      "total_episodes": 30,
+      "completed": 30,
+      "completion_rate_pct": 100.0,
+      "disqualified": 0,
+      "disqualification_rate_pct": 0.0,
+      "wins": 28,
+      "draws": 0,
+      "losses": 2,
+      "win_rate_pct": 93.33333333333333,
+      "mean_final_money": 12578.733333333334,
+      "std_dev_money": 6141.920574236522,
+      "median_final_money": 10164.0,
+      "min_final_money": 89.0,
+      "max_final_money": 22784.0,
+      "total_weed_count": 586,
+      "mean_weed_count": 19.533333333333335,
+      "mean_latency_ms": 0.3460517713686086,
+      "opponent_breakdown": {
+        "pass": {
+          "n": 10,
+          "wins": 9,
+          "draws": 0,
+          "losses": 1,
+          "win_rate_pct": 90.0,
+          "mean_final_money": 10987.8,
+          "std_dev_money": 6070.572493595641,
+          "median_final_money": 9790.5
+        },
+        "random": {
+          "n": 10,
+          "wins": 10,
+          "draws": 0,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "mean_final_money": 13219.0,
+          "std_dev_money": 5538.6851428034,
+          "median_final_money": 10492.0
+        },
+        "starter": {
+          "n": 10,
+          "wins": 9,
+          "draws": 0,
+          "losses": 1,
+          "win_rate_pct": 90.0,
+          "mean_final_money": 13529.4,
+          "std_dev_money": 7053.484059511142,
+          "median_final_money": 14648.0
+        }
+      }
+    },
+    "E08": {
+      "agent_name": "HybridLivestockClusterROIAgent (40 tiles)",
+      "total_episodes": 30,
+      "completed": 30,
+      "completion_rate_pct": 100.0,
+      "disqualified": 0,
+      "disqualification_rate_pct": 0.0,
+      "wins": 27,
+      "draws": 0,
+      "losses": 3,
+      "win_rate_pct": 90.0,
+      "mean_final_money": 11468.533333333333,
+      "std_dev_money": 6643.059856532324,
+      "median_final_money": 9994.0,
+      "min_final_money": 89.0,
+      "max_final_money": 22784.0,
+      "total_weed_count": 626,
+      "mean_weed_count": 20.866666666666667,
+      "mean_latency_ms": 0.33847838641832145,
+      "opponent_breakdown": {
+        "pass": {
+          "n": 10,
+          "wins": 9,
+          "draws": 0,
+          "losses": 1,
+          "win_rate_pct": 90.0,
+          "mean_final_money": 10987.8,
+          "std_dev_money": 6070.572493595641,
+          "median_final_money": 9790.5
+        },
+        "random": {
+          "n": 10,
+          "wins": 9,
+          "draws": 0,
+          "losses": 1,
+          "win_rate_pct": 90.0,
+          "mean_final_money": 9888.4,
+          "std_dev_money": 6916.925460218739,
+          "median_final_money": 9948.5
+        },
+        "starter": {
+          "n": 10,
+          "wins": 9,
+          "draws": 0,
+          "losses": 1,
+          "win_rate_pct": 90.0,
+          "mean_final_money": 13529.4,
+          "std_dev_money": 7053.484059511142,
+          "median_final_money": 14648.0
+        }
+      }
+    },
+    "E09_01": {
+      "agent_name": "LivestockAblationROIAgent (40 tiles)",
+      "total_episodes": 30,
+      "completed": 30,
+      "completion_rate_pct": 100.0,
+      "disqualified": 0,
+      "disqualification_rate_pct": 0.0,
+      "wins": 30,
+      "draws": 0,
+      "losses": 0,
+      "win_rate_pct": 100.0,
+      "mean_final_money": 22899.2,
+      "std_dev_money": 7892.99466091555,
+      "median_final_money": 27672.0,
+      "min_final_money": 5788.0,
+      "max_final_money": 28408.0,
+      "total_weed_count": 567,
+      "mean_weed_count": 18.9,
+      "mean_latency_ms": 0.18726778395303842,
+      "opponent_breakdown": {
+        "pass": {
+          "n": 10,
+          "wins": 10,
+          "draws": 0,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "mean_final_money": 23040.9,
+          "std_dev_money": 7568.513202736717,
+          "median_final_money": 27672.0
+        },
+        "random": {
+          "n": 10,
+          "wins": 10,
+          "draws": 0,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "mean_final_money": 21724.5,
+          "std_dev_money": 9300.143430793598,
+          "median_final_money": 27507.0
+        },
+        "starter": {
+          "n": 10,
+          "wins": 10,
+          "draws": 0,
+          "losses": 0,
+          "win_rate_pct": 100.0,
+          "mean_final_money": 23932.2,
+          "std_dev_money": 7363.8392583096365,
+          "median_final_money": 27729.5
+        }
+      }
+    }
+  },
+  "deltas": {
+    "E09_01_vs_E08_PRIMARY": {
+      "mean_money_delta": 11430.666666666668,
+      "mean_money_pct_delta": 99.669821191899,
+      "median_money_delta": 17678.0
+    },
+    "E09_01_vs_E07_SECONDARY": {
+      "mean_money_delta": 10320.466666666667,
+      "mean_money_pct_delta": 82.04694696339324,
+      "median_money_delta": 17508.0
+    },
+    "E09_01_vs_E06_SHIPPED": {
+      "mean_money_delta": -1832.1666666666642,
+      "mean_money_pct_delta": -7.40827100807206,
+      "gap_to_E06": 1832.1666666666642
+    }
+  },
+  "paired": {
+    "E09_01_vs_E08": {
+      "better": 26,
+      "equal": 0,
+      "worse": 4,
+      "better_pct": 86.66666666666667,
+      "mean_paired_delta": 11430.666666666666,
+      "median_paired_delta": 13078.5,
+      "std_dev_paired_delta": 10087.737432434844
+    },
+    "E09_01_vs_E07": {
+      "better": 26,
+      "equal": 0,
+      "worse": 4,
+      "better_pct": 86.66666666666667,
+      "mean_paired_delta": 10320.466666666667,
+      "median_paired_delta": 8959.5,
+      "std_dev_paired_delta": 8554.319399893968
+    },
+    "E09_01_vs_E06": {
+      "better": 21,
+      "equal": 0,
+      "worse": 9,
+      "better_pct": 70.0,
+      "mean_paired_delta": -1832.1666666666667,
+      "median_paired_delta": 1838.0,
+      "std_dev_paired_delta": 8273.289643363667
+    }
+  },
+  "e09_diagnostics": {
+    "land": {
+      "configured_crop_tiles": 40,
+      "mean_peak_productive_tiles": 23.2,
+      "mean_daily_productive_tiles": 15.89166666666667,
+      "mean_q0_harvested": 88.03333333333333,
+      "mean_q1_harvested": 86.26666666666667,
+      "mean_q0_worked": 968.7,
+      "mean_q1_worked": 918.1
+    },
+    "workforce_shares": {
+      "mean_action_steps": 705.0666666666667,
+      "mean_movement_steps": 1356.0333333333333,
+      "mean_idle_steps": 175.2,
+      "mean_productive_share_pct": 31.687598699955327,
+      "mean_movement_share_pct": 60.68825209879281,
+      "mean_idle_share_pct": 7.62414920125186
+    },
+    "backlog": {
+      "mean_needs_water": 6.428333333333333,
+      "mean_harvest_ready": 1.9349999999999998,
+      "mean_plant_pending": 16.069000000000003
+    },
+    "capital_liquidity": {
+      "mean_minimum_cash": 220.76666666666668,
+      "mean_seed_spending": 4568.0,
+      "mean_melon_revenue": 24683.333333333332
+    }
+  },
+  "raw_results": {
+    "E05": [
+      {
+        "agent": "E05",
+        "opponent": "pass",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 0,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.23662197333663412,
+        "weed_count": 7,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "pass",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 1,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.16296356113339996,
+        "weed_count": 4,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "pass",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 2,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22568.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.07568998537537991,
+        "weed_count": 6,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "pass",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 3,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.07726092028181601,
+        "weed_count": 6,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "pass",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 4,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.0685564666838801,
+        "weed_count": 7,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "pass",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 5,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.06698525555416299,
+        "weed_count": 5,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "pass",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 6,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.06422976447043938,
+        "weed_count": 6,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "pass",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 7,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.0764043149713204,
+        "weed_count": 6,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "pass",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 8,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.13840472845746637,
+        "weed_count": 5,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "pass",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 9,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.058963978067247694,
+        "weed_count": 6,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "random",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 10,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.1465566082299274,
+        "weed_count": 7,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "random",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 11,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.06408275248190085,
+        "weed_count": 4,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "random",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 12,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.1299874845734164,
+        "weed_count": 6,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "random",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 13,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.14250667737239922,
+        "weed_count": 6,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "random",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 14,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.061123088677057555,
+        "weed_count": 7,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "random",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 15,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.06541335402815622,
+        "weed_count": 6,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "random",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 16,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21542.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.09926467044576899,
+        "weed_count": 5,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "random",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 17,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.07063087697046315,
+        "weed_count": 7,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "random",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 18,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21692.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.061662308904128625,
+        "weed_count": 5,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "random",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 19,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.06197983274684496,
+        "weed_count": 7,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "starter",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 20,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3421.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.09882489885741091,
+        "weed_count": 7,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "starter",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 21,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21282.0,
+        "opp_reward": 3421.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.07034228128278744,
+        "weed_count": 4,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "starter",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 22,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3490.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.08773199015106586,
+        "weed_count": 6,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "starter",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 23,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3573.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.07221057136078081,
+        "weed_count": 6,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "starter",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 24,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3451.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.09407844039532505,
+        "weed_count": 7,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "starter",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 25,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21542.0,
+        "opp_reward": 3596.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.06613991840487354,
+        "weed_count": 5,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "starter",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 26,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3528.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.067083588127767,
+        "weed_count": 6,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "starter",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 27,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21542.0,
+        "opp_reward": 3550.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.12280542328331998,
+        "weed_count": 6,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "starter",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 28,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21442.0,
+        "opp_reward": 3515.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.1849036170584208,
+        "weed_count": 5,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      },
+      {
+        "agent": "E05",
+        "opponent": "starter",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 29,
+        "completed": true,
+        "disqualified": false,
+        "reward": 21542.0,
+        "opp_reward": 3592.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.14454088988552008,
+        "weed_count": 7,
+        "unwatered_end_of_day_ratio_pct": 3.3333333333333335
+      }
+    ],
+    "E06": [
+      {
+        "agent": "E06",
+        "opponent": "pass",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 0,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25847.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.08279388049625182,
+        "weed_count": 3,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "pass",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 1,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25847.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.1454008344861372,
+        "weed_count": 0,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "pass",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 2,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27873.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.13378539714594379,
+        "weed_count": 2,
+        "unwatered_end_of_day_ratio_pct": 10.0
+      },
+      {
+        "agent": "E06",
+        "opponent": "pass",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 3,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22203.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.10107635450452276,
+        "weed_count": 3,
+        "unwatered_end_of_day_ratio_pct": 10.0
+      },
+      {
+        "agent": "E06",
+        "opponent": "pass",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 4,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22210.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.0739949949666008,
+        "weed_count": 4,
+        "unwatered_end_of_day_ratio_pct": 10.0
+      },
+      {
+        "agent": "E06",
+        "opponent": "pass",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 5,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25847.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.14294909623546087,
+        "weed_count": 1,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "pass",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 6,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22220.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.06875827483009024,
+        "weed_count": 3,
+        "unwatered_end_of_day_ratio_pct": 10.0
+      },
+      {
+        "agent": "E06",
+        "opponent": "pass",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 7,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25847.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.1136662042796902,
+        "weed_count": 2,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "pass",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 8,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22192.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.11771501729106829,
+        "weed_count": 2,
+        "unwatered_end_of_day_ratio_pct": 10.0
+      },
+      {
+        "agent": "E06",
+        "opponent": "pass",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 9,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25847.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.10160987620968605,
+        "weed_count": 2,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "random",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 10,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22184.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.08587760482273571,
+        "weed_count": 4,
+        "unwatered_end_of_day_ratio_pct": 10.0
+      },
+      {
+        "agent": "E06",
+        "opponent": "random",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 11,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25847.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.0858716261916391,
+        "weed_count": 0,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "random",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 12,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22192.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.07471126816410349,
+        "weed_count": 3,
+        "unwatered_end_of_day_ratio_pct": 10.0
+      },
+      {
+        "agent": "E06",
+        "opponent": "random",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 13,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22180.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.07114394924762725,
+        "weed_count": 3,
+        "unwatered_end_of_day_ratio_pct": 10.0
+      },
+      {
+        "agent": "E06",
+        "opponent": "random",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 14,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25847.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.13977329548505318,
+        "weed_count": 3,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "random",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 15,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25847.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.09393115299306966,
+        "weed_count": 2,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "random",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 16,
+        "completed": true,
+        "disqualified": false,
+        "reward": 26007.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.07387955873163213,
+        "weed_count": 1,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "random",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 17,
+        "completed": true,
+        "disqualified": false,
+        "reward": 26007.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.07294395064834054,
+        "weed_count": 2,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "random",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 18,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25847.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.06130987212258768,
+        "weed_count": 1,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "random",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 19,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25847.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.0706479850034741,
+        "weed_count": 2,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "starter",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 20,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25847.0,
+        "opp_reward": 3421.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.11063838294695581,
+        "weed_count": 3,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "starter",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 21,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25687.0,
+        "opp_reward": 3421.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.09737287936874656,
+        "weed_count": 0,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "starter",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 22,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25847.0,
+        "opp_reward": 3490.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.07354979266014898,
+        "weed_count": 2,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "starter",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 23,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22195.0,
+        "opp_reward": 3573.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.11826870896269324,
+        "weed_count": 3,
+        "unwatered_end_of_day_ratio_pct": 10.0
+      },
+      {
+        "agent": "E06",
+        "opponent": "starter",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 24,
+        "completed": true,
+        "disqualified": false,
+        "reward": 25847.0,
+        "opp_reward": 3451.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.0993592492324172,
+        "weed_count": 3,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "starter",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 25,
+        "completed": true,
+        "disqualified": false,
+        "reward": 26187.0,
+        "opp_reward": 3596.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.07086592403879086,
+        "weed_count": 1,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "starter",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 26,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22199.0,
+        "opp_reward": 3528.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.08343282348045014,
+        "weed_count": 3,
+        "unwatered_end_of_day_ratio_pct": 10.0
+      },
+      {
+        "agent": "E06",
+        "opponent": "starter",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 27,
+        "completed": true,
+        "disqualified": false,
+        "reward": 26007.0,
+        "opp_reward": 3550.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.11446856992689683,
+        "weed_count": 2,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      },
+      {
+        "agent": "E06",
+        "opponent": "starter",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 28,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22206.0,
+        "opp_reward": 3515.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.129198888802489,
+        "weed_count": 2,
+        "unwatered_end_of_day_ratio_pct": 10.0
+      },
+      {
+        "agent": "E06",
+        "opponent": "starter",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 29,
+        "completed": true,
+        "disqualified": false,
+        "reward": 26181.0,
+        "opp_reward": 3592.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.06952085817214594,
+        "weed_count": 3,
+        "unwatered_end_of_day_ratio_pct": 6.666666666666667
+      }
+    ],
+    "E07": [
+      {
+        "agent": "E07",
+        "opponent": "pass",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 0,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9181.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.32963783101998634,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "pass",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 1,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9308.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.2367264273484472,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "pass",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 2,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9181.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3647532661203217,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "pass",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 3,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22784.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.43229832976502114,
+        "weed_count": 21,
+        "unwatered_end_of_day_ratio_pct": 43.333333333333336
+      },
+      {
+        "agent": "E07",
+        "opponent": "pass",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 4,
+        "completed": true,
+        "disqualified": false,
+        "reward": 10829.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.2359770512356007,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333
+      },
+      {
+        "agent": "E07",
+        "opponent": "pass",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 5,
+        "completed": true,
+        "disqualified": false,
+        "reward": 10016.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3089184972544373,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "pass",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 6,
+        "completed": true,
+        "disqualified": false,
+        "reward": 132.0,
+        "opp_reward": 3000.0,
+        "win": false,
+        "draw": false,
+        "loss": true,
+        "latency_ms": 0.19858011270592169,
+        "weed_count": 34,
+        "unwatered_end_of_day_ratio_pct": 50.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "pass",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 7,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9565.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.363044089557388,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "pass",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 8,
+        "completed": true,
+        "disqualified": false,
+        "reward": 10055.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.5415108457067787,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "pass",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 9,
+        "completed": true,
+        "disqualified": false,
+        "reward": 18827.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.4689344925474329,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 50.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "random",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 10,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22045.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.2505592457815404,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "random",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 11,
+        "completed": true,
+        "disqualified": false,
+        "reward": 11239.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3019937444271025,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "random",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 12,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9291.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.2221728798768824,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "random",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 13,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22146.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3905898468149243,
+        "weed_count": 21,
+        "unwatered_end_of_day_ratio_pct": 43.333333333333336
+      },
+      {
+        "agent": "E07",
+        "opponent": "random",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 14,
+        "completed": true,
+        "disqualified": false,
+        "reward": 18983.0,
+        "opp_reward": 100.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.24122656475213747,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 46.666666666666664
+      },
+      {
+        "agent": "E07",
+        "opponent": "random",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 15,
+        "completed": true,
+        "disqualified": false,
+        "reward": 8296.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.2409933230118186,
+        "weed_count": 21,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333
+      },
+      {
+        "agent": "E07",
+        "opponent": "random",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 16,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9094.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.23532114302550386,
+        "weed_count": 22,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "random",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 17,
+        "completed": true,
+        "disqualified": false,
+        "reward": 10216.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.273844232861735,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "random",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 18,
+        "completed": true,
+        "disqualified": false,
+        "reward": 10768.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.217601253588908,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "random",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 19,
+        "completed": true,
+        "disqualified": false,
+        "reward": 10112.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.26762336673880815,
+        "weed_count": 16,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333
+      },
+      {
+        "agent": "E07",
+        "opponent": "starter",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 20,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9175.0,
+        "opp_reward": 3499.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3410788615310619,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "starter",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 21,
+        "completed": true,
+        "disqualified": false,
+        "reward": 18827.0,
+        "opp_reward": 3460.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3429307365629392,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 50.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "starter",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 22,
+        "completed": true,
+        "disqualified": false,
+        "reward": 18827.0,
+        "opp_reward": 3441.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.4720952732926325,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 50.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "starter",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 23,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22472.0,
+        "opp_reward": 3616.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3138905409231305,
+        "weed_count": 21,
+        "unwatered_end_of_day_ratio_pct": 43.333333333333336
+      },
+      {
+        "agent": "E07",
+        "opponent": "starter",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 24,
+        "completed": true,
+        "disqualified": false,
+        "reward": 18973.0,
+        "opp_reward": 3504.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.43348219554601897,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 46.666666666666664
+      },
+      {
+        "agent": "E07",
+        "opponent": "starter",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 25,
+        "completed": true,
+        "disqualified": false,
+        "reward": 10469.0,
+        "opp_reward": 3768.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3635328235843003,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 76.66666666666667
+      },
+      {
+        "agent": "E07",
+        "opponent": "starter",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 26,
+        "completed": true,
+        "disqualified": false,
+        "reward": 89.0,
+        "opp_reward": 3441.0,
+        "win": false,
+        "draw": false,
+        "loss": true,
+        "latency_ms": 0.3859827540081735,
+        "weed_count": 38,
+        "unwatered_end_of_day_ratio_pct": 53.333333333333336
+      },
+      {
+        "agent": "E07",
+        "opponent": "starter",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 27,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9362.0,
+        "opp_reward": 3512.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.5921773306160171,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E07",
+        "opponent": "starter",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 28,
+        "completed": true,
+        "disqualified": false,
+        "reward": 8273.0,
+        "opp_reward": 3483.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.5413272614967757,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333
+      },
+      {
+        "agent": "E07",
+        "opponent": "starter",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 29,
+        "completed": true,
+        "disqualified": false,
+        "reward": 18827.0,
+        "opp_reward": 3664.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.4727488193565122,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 50.0
+      }
+    ],
+    "E08": [
+      {
+        "agent": "E08",
+        "opponent": "pass",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 0,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9181.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.37825298404919505,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "pass",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 1,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9308.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.33435521560548825,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "pass",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 2,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9181.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3116495131096584,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "pass",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 3,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22784.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.35446036577235096,
+        "weed_count": 21,
+        "unwatered_end_of_day_ratio_pct": 43.333333333333336
+      },
+      {
+        "agent": "E08",
+        "opponent": "pass",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 4,
+        "completed": true,
+        "disqualified": false,
+        "reward": 10829.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.22832100018625756,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333
+      },
+      {
+        "agent": "E08",
+        "opponent": "pass",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 5,
+        "completed": true,
+        "disqualified": false,
+        "reward": 10016.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3061770527560124,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "pass",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 6,
+        "completed": true,
+        "disqualified": false,
+        "reward": 132.0,
+        "opp_reward": 3000.0,
+        "win": false,
+        "draw": false,
+        "loss": true,
+        "latency_ms": 0.26627913893295013,
+        "weed_count": 34,
+        "unwatered_end_of_day_ratio_pct": 50.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "pass",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 7,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9565.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.2619246196102802,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "pass",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 8,
+        "completed": true,
+        "disqualified": false,
+        "reward": 10055.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3975810839630073,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "pass",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 9,
+        "completed": true,
+        "disqualified": false,
+        "reward": 18827.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3349851172155751,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 50.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "random",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 10,
+        "completed": true,
+        "disqualified": false,
+        "reward": 10785.0,
+        "opp_reward": 220.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.32714937466438937,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "random",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 11,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9925.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.23199679842931173,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "random",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 12,
+        "completed": true,
+        "disqualified": false,
+        "reward": 18827.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3086885943185015,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 50.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "random",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 13,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22085.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.29222141891090986,
+        "weed_count": 21,
+        "unwatered_end_of_day_ratio_pct": 43.333333333333336
+      },
+      {
+        "agent": "E08",
+        "opponent": "random",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 14,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9972.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3747616130962284,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333
+      },
+      {
+        "agent": "E08",
+        "opponent": "random",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 15,
+        "completed": true,
+        "disqualified": false,
+        "reward": 8232.0,
+        "opp_reward": 70.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.36756661723812156,
+        "weed_count": 21,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333
+      },
+      {
+        "agent": "E08",
+        "opponent": "random",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 16,
+        "completed": true,
+        "disqualified": false,
+        "reward": 99.0,
+        "opp_reward": 250.0,
+        "win": false,
+        "draw": false,
+        "loss": true,
+        "latency_ms": 0.19763796658271998,
+        "weed_count": 38,
+        "unwatered_end_of_day_ratio_pct": 53.333333333333336
+      },
+      {
+        "agent": "E08",
+        "opponent": "random",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 17,
+        "completed": true,
+        "disqualified": false,
+        "reward": 149.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.19900222462427095,
+        "weed_count": 34,
+        "unwatered_end_of_day_ratio_pct": 56.666666666666664
+      },
+      {
+        "agent": "E08",
+        "opponent": "random",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 18,
+        "completed": true,
+        "disqualified": false,
+        "reward": 11306.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.24451947170640023,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "random",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 19,
+        "completed": true,
+        "disqualified": false,
+        "reward": 7504.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.22945285309106112,
+        "weed_count": 23,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333
+      },
+      {
+        "agent": "E08",
+        "opponent": "starter",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 20,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9175.0,
+        "opp_reward": 3499.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3379691216993626,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "starter",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 21,
+        "completed": true,
+        "disqualified": false,
+        "reward": 18827.0,
+        "opp_reward": 3460.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.4000770525879878,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 50.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "starter",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 22,
+        "completed": true,
+        "disqualified": false,
+        "reward": 18827.0,
+        "opp_reward": 3441.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.47717941665869096,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 50.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "starter",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 23,
+        "completed": true,
+        "disqualified": false,
+        "reward": 22472.0,
+        "opp_reward": 3616.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3461710726894096,
+        "weed_count": 21,
+        "unwatered_end_of_day_ratio_pct": 43.333333333333336
+      },
+      {
+        "agent": "E08",
+        "opponent": "starter",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 24,
+        "completed": true,
+        "disqualified": false,
+        "reward": 18973.0,
+        "opp_reward": 3504.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.4412906769966196,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 46.666666666666664
+      },
+      {
+        "agent": "E08",
+        "opponent": "starter",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 25,
+        "completed": true,
+        "disqualified": false,
+        "reward": 10469.0,
+        "opp_reward": 3768.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3402656488579093,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 76.66666666666667
+      },
+      {
+        "agent": "E08",
+        "opponent": "starter",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 26,
+        "completed": true,
+        "disqualified": false,
+        "reward": 89.0,
+        "opp_reward": 3441.0,
+        "win": false,
+        "draw": false,
+        "loss": true,
+        "latency_ms": 0.31004645567003936,
+        "weed_count": 38,
+        "unwatered_end_of_day_ratio_pct": 53.333333333333336
+      },
+      {
+        "agent": "E08",
+        "opponent": "starter",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 27,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9362.0,
+        "opp_reward": 3512.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.5827616155082788,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 60.0
+      },
+      {
+        "agent": "E08",
+        "opponent": "starter",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 28,
+        "completed": true,
+        "disqualified": false,
+        "reward": 8273.0,
+        "opp_reward": 3483.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.4729065358877099,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333
+      },
+      {
+        "agent": "E08",
+        "opponent": "starter",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 29,
+        "completed": true,
+        "disqualified": false,
+        "reward": 18827.0,
+        "opp_reward": 3664.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.4987009721309444,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 50.0
+      }
+    ],
+    "E09_01": [
+      {
+        "agent": "E09_01",
+        "opponent": "pass",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 0,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27672.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.17053741535563047,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27672.0,
+          "minimum_cash": 248.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2212.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13467.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "pass",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 1,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27698.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.15782392068904655,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27698.0,
+          "minimum_cash": 248.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2212.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13473.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "pass",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 2,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27672.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.1648056992136657,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27672.0,
+          "minimum_cash": 248.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2212.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13467.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "pass",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 3,
+        "completed": true,
+        "disqualified": false,
+        "reward": 24876.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.18239902754693768,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 43.333333333333336,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 24876.0,
+          "minimum_cash": 211.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 27000.0,
+            "CARROT": 420.0,
+            "WHEAT": 900.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 25,
+            "mean_daily_productive_tiles": 16.25,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 872,
+              "harvested": 67
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 1088,
+              "harvested": 75
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 277,
+                "movement": 408,
+                "idle": 34
+              },
+              "1": {
+                "productive": 213,
+                "movement": 416,
+                "idle": 37
+              },
+              "2": {
+                "productive": 139,
+                "movement": 342,
+                "idle": 70
+              },
+              "3": {
+                "productive": 92,
+                "movement": 215,
+                "idle": 106
+              }
+            },
+            "action_steps": 721,
+            "movement_steps": 1381,
+            "idle_steps": 247
+          },
+          "backlog": {
+            "mean_needs_water": 6.58,
+            "mean_harvest_ready": 1.8,
+            "mean_plant_pending": 15.71
+          },
+          "crops": {
+            "planted": 86,
+            "watered": 545,
+            "harvested": 38,
+            "weed_losses": 52
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 36,
+            "bought": 24,
+            "fed": 0,
+            "sold": 36
+          },
+          "market": {
+            "orders_placed": 17,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 108,
+              "CARROT": 12,
+              "WHEAT": 36,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2142.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 14957.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "pass",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 4,
+        "completed": true,
+        "disqualified": false,
+        "reward": 28004.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.1667151583801639,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 28004.0,
+          "minimum_cash": 248.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2214.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13481.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "pass",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 5,
+        "completed": true,
+        "disqualified": false,
+        "reward": 10117.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.20557454552744958,
+        "weed_count": 21,
+        "unwatered_end_of_day_ratio_pct": 56.666666666666664,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 10117.0,
+          "minimum_cash": 164.0,
+          "spending": {
+            "seeds": 3560.0,
+            "workforce": 61.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 6000.0,
+            "CARROT": 2520.0,
+            "WHEAT": 700.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 13.09,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 962,
+              "harvested": 79
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 679,
+              "harvested": 83
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 50,
+            "hire_attempted": 50,
+            "hire_accepted": 50,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 302,
+                "movement": 413,
+                "idle": 4
+              },
+              "1": {
+                "productive": 150,
+                "movement": 341,
+                "idle": 14
+              },
+              "2": {
+                "productive": 124,
+                "movement": 250,
+                "idle": 16
+              },
+              "3": {
+                "productive": 75,
+                "movement": 148,
+                "idle": 29
+              }
+            },
+            "action_steps": 651,
+            "movement_steps": 1152,
+            "idle_steps": 63
+          },
+          "backlog": {
+            "mean_needs_water": 5.61,
+            "mean_harvest_ready": 2.22,
+            "mean_plant_pending": 18.87
+          },
+          "crops": {
+            "planted": 93,
+            "watered": 440,
+            "harvested": 39,
+            "weed_losses": 79
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 28,
+            "bought": 24,
+            "fed": 0,
+            "sold": 28
+          },
+          "market": {
+            "orders_placed": 16,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 24,
+              "CARROT": 72,
+              "WHEAT": 28,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 164.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 8537.0
+            }
+          ],
+          "event_count": 54
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "pass",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 6,
+        "completed": true,
+        "disqualified": false,
+        "reward": 19288.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.167079415769473,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 50.0,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 19288.0,
+          "minimum_cash": 364.0,
+          "spending": {
+            "seeds": 4760.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 21000.0,
+            "CARROT": 315.0,
+            "WHEAT": 600.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.46,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 963,
+              "harvested": 74
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 1061,
+              "harvested": 81
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 253,
+                "movement": 443,
+                "idle": 23
+              },
+              "1": {
+                "productive": 209,
+                "movement": 426,
+                "idle": 31
+              },
+              "2": {
+                "productive": 161,
+                "movement": 349,
+                "idle": 41
+              },
+              "3": {
+                "productive": 95,
+                "movement": 243,
+                "idle": 75
+              }
+            },
+            "action_steps": 718,
+            "movement_steps": 1461,
+            "idle_steps": 170
+          },
+          "backlog": {
+            "mean_needs_water": 6.75,
+            "mean_harvest_ready": 1.84,
+            "mean_plant_pending": 15.5
+          },
+          "crops": {
+            "planted": 97,
+            "watered": 546,
+            "harvested": 30,
+            "weed_losses": 45
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 24,
+            "bought": 24,
+            "fed": 0,
+            "sold": 24
+          },
+          "market": {
+            "orders_placed": 12,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 84,
+              "CARROT": 9,
+              "WHEAT": 24,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2308.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 4282.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "pass",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 7,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9140.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.136379135049807,
+        "weed_count": 22,
+        "unwatered_end_of_day_ratio_pct": 56.666666666666664,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 9140.0,
+          "minimum_cash": 164.0,
+          "spending": {
+            "seeds": 3560.0,
+            "workforce": 61.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 6000.0,
+            "CARROT": 2520.0,
+            "WHEAT": 700.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 13.09,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 962,
+              "harvested": 79
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 679,
+              "harvested": 83
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 50,
+            "hire_attempted": 50,
+            "hire_accepted": 50,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 302,
+                "movement": 413,
+                "idle": 4
+              },
+              "1": {
+                "productive": 150,
+                "movement": 341,
+                "idle": 14
+              },
+              "2": {
+                "productive": 124,
+                "movement": 250,
+                "idle": 16
+              },
+              "3": {
+                "productive": 75,
+                "movement": 148,
+                "idle": 29
+              }
+            },
+            "action_steps": 651,
+            "movement_steps": 1152,
+            "idle_steps": 63
+          },
+          "backlog": {
+            "mean_needs_water": 5.61,
+            "mean_harvest_ready": 2.22,
+            "mean_plant_pending": 18.87
+          },
+          "crops": {
+            "planted": 93,
+            "watered": 440,
+            "harvested": 39,
+            "weed_losses": 79
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 28,
+            "bought": 24,
+            "fed": 0,
+            "sold": 28
+          },
+          "market": {
+            "orders_placed": 16,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 24,
+              "CARROT": 72,
+              "WHEAT": 28,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 164.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 7916.0
+            }
+          ],
+          "event_count": 54
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "pass",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 8,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27954.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.16749276480377134,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27954.0,
+          "minimum_cash": 216.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2172.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13442.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "pass",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 9,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27988.0,
+        "opp_reward": 3000.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.16176328532558365,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27988.0,
+          "minimum_cash": 256.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2228.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13507.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "random",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 10,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27781.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.23904339567743896,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27781.0,
+          "minimum_cash": 216.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2172.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13439.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "random",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 11,
+        "completed": true,
+        "disqualified": false,
+        "reward": 11426.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.14323657796289435,
+        "weed_count": 20,
+        "unwatered_end_of_day_ratio_pct": 56.666666666666664,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 11426.0,
+          "minimum_cash": 84.0,
+          "spending": {
+            "seeds": 3560.0,
+            "workforce": 61.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 6000.0,
+            "CARROT": 2520.0,
+            "WHEAT": 700.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 13.09,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 962,
+              "harvested": 79
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 679,
+              "harvested": 83
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 50,
+            "hire_attempted": 50,
+            "hire_accepted": 50,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 302,
+                "movement": 413,
+                "idle": 4
+              },
+              "1": {
+                "productive": 150,
+                "movement": 341,
+                "idle": 14
+              },
+              "2": {
+                "productive": 124,
+                "movement": 250,
+                "idle": 16
+              },
+              "3": {
+                "productive": 75,
+                "movement": 148,
+                "idle": 29
+              }
+            },
+            "action_steps": 651,
+            "movement_steps": 1152,
+            "idle_steps": 63
+          },
+          "backlog": {
+            "mean_needs_water": 5.61,
+            "mean_harvest_ready": 2.22,
+            "mean_plant_pending": 18.87
+          },
+          "crops": {
+            "planted": 93,
+            "watered": 440,
+            "harvested": 39,
+            "weed_losses": 79
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 28,
+            "bought": 24,
+            "fed": 0,
+            "sold": 28
+          },
+          "market": {
+            "orders_placed": 16,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 24,
+              "CARROT": 72,
+              "WHEAT": 28,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 84.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 9199.0
+            }
+          ],
+          "event_count": 54
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "random",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 12,
+        "completed": true,
+        "disqualified": false,
+        "reward": 8208.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.22691919326507623,
+        "weed_count": 21,
+        "unwatered_end_of_day_ratio_pct": 56.666666666666664,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 8208.0,
+          "minimum_cash": 84.0,
+          "spending": {
+            "seeds": 3560.0,
+            "workforce": 61.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 6000.0,
+            "CARROT": 2520.0,
+            "WHEAT": 700.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 13.09,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 962,
+              "harvested": 79
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 679,
+              "harvested": 83
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 50,
+            "hire_attempted": 50,
+            "hire_accepted": 50,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 302,
+                "movement": 413,
+                "idle": 4
+              },
+              "1": {
+                "productive": 150,
+                "movement": 341,
+                "idle": 14
+              },
+              "2": {
+                "productive": 124,
+                "movement": 250,
+                "idle": 16
+              },
+              "3": {
+                "productive": 75,
+                "movement": 148,
+                "idle": 29
+              }
+            },
+            "action_steps": 651,
+            "movement_steps": 1152,
+            "idle_steps": 63
+          },
+          "backlog": {
+            "mean_needs_water": 5.61,
+            "mean_harvest_ready": 2.22,
+            "mean_plant_pending": 18.87
+          },
+          "crops": {
+            "planted": 93,
+            "watered": 440,
+            "harvested": 39,
+            "weed_losses": 79
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 28,
+            "bought": 24,
+            "fed": 0,
+            "sold": 28
+          },
+          "market": {
+            "orders_placed": 16,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 24,
+              "CARROT": 72,
+              "WHEAT": 28,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 84.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 7328.0
+            }
+          ],
+          "event_count": 54
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "random",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 13,
+        "completed": true,
+        "disqualified": false,
+        "reward": 24598.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.1753621703267657,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 43.333333333333336,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 24598.0,
+          "minimum_cash": 230.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 27000.0,
+            "CARROT": 420.0,
+            "WHEAT": 900.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 25,
+            "mean_daily_productive_tiles": 16.25,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 872,
+              "harvested": 67
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 1088,
+              "harvested": 75
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 277,
+                "movement": 408,
+                "idle": 34
+              },
+              "1": {
+                "productive": 213,
+                "movement": 416,
+                "idle": 37
+              },
+              "2": {
+                "productive": 139,
+                "movement": 342,
+                "idle": 70
+              },
+              "3": {
+                "productive": 92,
+                "movement": 215,
+                "idle": 106
+              }
+            },
+            "action_steps": 721,
+            "movement_steps": 1381,
+            "idle_steps": 247
+          },
+          "backlog": {
+            "mean_needs_water": 6.58,
+            "mean_harvest_ready": 1.8,
+            "mean_plant_pending": 15.71
+          },
+          "crops": {
+            "planted": 86,
+            "watered": 545,
+            "harvested": 38,
+            "weed_losses": 52
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 36,
+            "bought": 24,
+            "fed": 0,
+            "sold": 36
+          },
+          "market": {
+            "orders_placed": 17,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 108,
+              "CARROT": 12,
+              "WHEAT": 36,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2161.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 14976.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "random",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 14,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27515.0,
+        "opp_reward": 70.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.17804561894625343,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27515.0,
+          "minimum_cash": 256.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2228.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13468.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "random",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 15,
+        "completed": true,
+        "disqualified": false,
+        "reward": 5788.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.2863671784761967,
+        "weed_count": 20,
+        "unwatered_end_of_day_ratio_pct": 56.666666666666664,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 5788.0,
+          "minimum_cash": 164.0,
+          "spending": {
+            "seeds": 3560.0,
+            "workforce": 61.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 4000.0,
+            "CARROT": 2100.0,
+            "WHEAT": 700.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 12.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 957,
+              "harvested": 86
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 657,
+              "harvested": 93
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 50,
+            "hire_attempted": 50,
+            "hire_accepted": 50,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 305,
+                "movement": 405,
+                "idle": 9
+              },
+              "1": {
+                "productive": 146,
+                "movement": 339,
+                "idle": 20
+              },
+              "2": {
+                "productive": 124,
+                "movement": 252,
+                "idle": 14
+              },
+              "3": {
+                "productive": 71,
+                "movement": 151,
+                "idle": 30
+              }
+            },
+            "action_steps": 646,
+            "movement_steps": 1147,
+            "idle_steps": 73
+          },
+          "backlog": {
+            "mean_needs_water": 5.4,
+            "mean_harvest_ready": 2.15,
+            "mean_plant_pending": 19.12
+          },
+          "crops": {
+            "planted": 93,
+            "watered": 431,
+            "harvested": 38,
+            "weed_losses": 84
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 28,
+            "bought": 24,
+            "fed": 0,
+            "sold": 28
+          },
+          "market": {
+            "orders_placed": 14,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 16,
+              "CARROT": 60,
+              "WHEAT": 28,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 164.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 5133.0
+            }
+          ],
+          "event_count": 54
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "random",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 16,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27707.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.1669101553395266,
+        "weed_count": 21,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27707.0,
+          "minimum_cash": 256.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2224.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13470.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "random",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 17,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27499.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.16811487921649623,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27499.0,
+          "minimum_cash": 248.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2212.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13452.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "random",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 18,
+        "completed": true,
+        "disqualified": false,
+        "reward": 28315.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.1651716285148151,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 28315.0,
+          "minimum_cash": 256.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2224.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13514.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "random",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 19,
+        "completed": true,
+        "disqualified": false,
+        "reward": 28408.0,
+        "opp_reward": 0.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.1673091780031631,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 28408.0,
+          "minimum_cash": 256.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2228.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13516.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "starter",
+        "seed": 0,
+        "position": "P0",
+        "episode_idx": 0,
+        "global_idx": 20,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27726.0,
+        "opp_reward": 3526.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.1632858110495917,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27726.0,
+          "minimum_cash": 248.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2214.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13469.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "starter",
+        "seed": 100,
+        "position": "P0",
+        "episode_idx": 1,
+        "global_idx": 21,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27475.0,
+        "opp_reward": 3418.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.16289151996446669,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27475.0,
+          "minimum_cash": 256.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2224.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13462.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "starter",
+        "seed": 200,
+        "position": "P0",
+        "episode_idx": 2,
+        "global_idx": 22,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27733.0,
+        "opp_reward": 3512.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.16280890135444256,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27733.0,
+          "minimum_cash": 256.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2224.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13476.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "starter",
+        "seed": 300,
+        "position": "P0",
+        "episode_idx": 3,
+        "global_idx": 23,
+        "completed": true,
+        "disqualified": false,
+        "reward": 24895.0,
+        "opp_reward": 3690.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.15458581458792733,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 43.333333333333336,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 24895.0,
+          "minimum_cash": 230.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 27000.0,
+            "CARROT": 420.0,
+            "WHEAT": 900.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 25,
+            "mean_daily_productive_tiles": 16.25,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 872,
+              "harvested": 67
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 1088,
+              "harvested": 75
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 277,
+                "movement": 408,
+                "idle": 34
+              },
+              "1": {
+                "productive": 213,
+                "movement": 416,
+                "idle": 37
+              },
+              "2": {
+                "productive": 139,
+                "movement": 342,
+                "idle": 70
+              },
+              "3": {
+                "productive": 92,
+                "movement": 215,
+                "idle": 106
+              }
+            },
+            "action_steps": 721,
+            "movement_steps": 1381,
+            "idle_steps": 247
+          },
+          "backlog": {
+            "mean_needs_water": 6.58,
+            "mean_harvest_ready": 1.8,
+            "mean_plant_pending": 15.71
+          },
+          "crops": {
+            "planted": 86,
+            "watered": 545,
+            "harvested": 38,
+            "weed_losses": 52
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 36,
+            "bought": 24,
+            "fed": 0,
+            "sold": 36
+          },
+          "market": {
+            "orders_placed": 17,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 108,
+              "CARROT": 12,
+              "WHEAT": 36,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2161.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 14976.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "starter",
+        "seed": 400,
+        "position": "P0",
+        "episode_idx": 4,
+        "global_idx": 24,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27764.0,
+        "opp_reward": 3536.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.15797635837638122,
+        "weed_count": 19,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27764.0,
+          "minimum_cash": 256.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2228.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13485.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "starter",
+        "seed": 500,
+        "position": "P1",
+        "episode_idx": 5,
+        "global_idx": 25,
+        "completed": true,
+        "disqualified": false,
+        "reward": 11181.0,
+        "opp_reward": 3762.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.14372350423310537,
+        "weed_count": 21,
+        "unwatered_end_of_day_ratio_pct": 56.666666666666664,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 11181.0,
+          "minimum_cash": 84.0,
+          "spending": {
+            "seeds": 3560.0,
+            "workforce": 61.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 6000.0,
+            "CARROT": 2520.0,
+            "WHEAT": 700.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 13.09,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 962,
+              "harvested": 79
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 679,
+              "harvested": 83
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 50,
+            "hire_attempted": 50,
+            "hire_accepted": 50,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 302,
+                "movement": 413,
+                "idle": 4
+              },
+              "1": {
+                "productive": 150,
+                "movement": 341,
+                "idle": 14
+              },
+              "2": {
+                "productive": 124,
+                "movement": 250,
+                "idle": 16
+              },
+              "3": {
+                "productive": 75,
+                "movement": 148,
+                "idle": 29
+              }
+            },
+            "action_steps": 651,
+            "movement_steps": 1152,
+            "idle_steps": 63
+          },
+          "backlog": {
+            "mean_needs_water": 5.61,
+            "mean_harvest_ready": 2.22,
+            "mean_plant_pending": 18.87
+          },
+          "crops": {
+            "planted": 93,
+            "watered": 440,
+            "harvested": 39,
+            "weed_losses": 79
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 28,
+            "bought": 24,
+            "fed": 0,
+            "sold": 28
+          },
+          "market": {
+            "orders_placed": 16,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 24,
+              "CARROT": 72,
+              "WHEAT": 28,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 84.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 9011.0
+            }
+          ],
+          "event_count": 54
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "starter",
+        "seed": 600,
+        "position": "P1",
+        "episode_idx": 6,
+        "global_idx": 26,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27895.0,
+        "opp_reward": 3576.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.2824292069376137,
+        "weed_count": 17,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27895.0,
+          "minimum_cash": 228.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 96
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 97,
+                "movement": 216,
+                "idle": 100
+              }
+            },
+            "action_steps": 723,
+            "movement_steps": 1422,
+            "idle_steps": 204
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.12
+          },
+          "crops": {
+            "planted": 86,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 35
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2308.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13446.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "starter",
+        "seed": 700,
+        "position": "P1",
+        "episode_idx": 7,
+        "global_idx": 27,
+        "completed": true,
+        "disqualified": false,
+        "reward": 9015.0,
+        "opp_reward": 3514.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.2793542399901446,
+        "weed_count": 22,
+        "unwatered_end_of_day_ratio_pct": 56.666666666666664,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 9015.0,
+          "minimum_cash": 164.0,
+          "spending": {
+            "seeds": 3560.0,
+            "workforce": 61.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 6000.0,
+            "CARROT": 2520.0,
+            "WHEAT": 700.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 13.09,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 962,
+              "harvested": 79
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 679,
+              "harvested": 83
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 50,
+            "hire_attempted": 50,
+            "hire_accepted": 50,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 302,
+                "movement": 413,
+                "idle": 4
+              },
+              "1": {
+                "productive": 150,
+                "movement": 341,
+                "idle": 14
+              },
+              "2": {
+                "productive": 124,
+                "movement": 250,
+                "idle": 16
+              },
+              "3": {
+                "productive": 75,
+                "movement": 148,
+                "idle": 29
+              }
+            },
+            "action_steps": 651,
+            "movement_steps": 1152,
+            "idle_steps": 63
+          },
+          "backlog": {
+            "mean_needs_water": 5.61,
+            "mean_harvest_ready": 2.22,
+            "mean_plant_pending": 18.87
+          },
+          "crops": {
+            "planted": 93,
+            "watered": 440,
+            "harvested": 39,
+            "weed_losses": 79
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 28,
+            "bought": 24,
+            "fed": 0,
+            "sold": 28
+          },
+          "market": {
+            "orders_placed": 16,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 24,
+              "CARROT": 72,
+              "WHEAT": 28,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 164.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 7899.0
+            }
+          ],
+          "event_count": 54
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "starter",
+        "seed": 800,
+        "position": "P1",
+        "episode_idx": 8,
+        "global_idx": 28,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27798.0,
+        "opp_reward": 3548.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.3465432539305058,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27798.0,
+          "minimum_cash": 228.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2192.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13447.0
+            }
+          ],
+          "event_count": 75
+        }
+      },
+      {
+        "agent": "E09_01",
+        "opponent": "starter",
+        "seed": 900,
+        "position": "P1",
+        "episode_idx": 9,
+        "global_idx": 29,
+        "completed": true,
+        "disqualified": false,
+        "reward": 27840.0,
+        "opp_reward": 3592.0,
+        "win": true,
+        "draw": false,
+        "loss": false,
+        "latency_ms": 0.1673845647768181,
+        "weed_count": 18,
+        "unwatered_end_of_day_ratio_pct": 63.33333333333333,
+        "telemetry": {
+          "starting_money": 3000.0,
+          "final_money": 27840.0,
+          "minimum_cash": 256.0,
+          "spending": {
+            "seeds": 4880.0,
+            "workforce": 89.0,
+            "land": 1000.0,
+            "livestock": 0.0
+          },
+          "realized_revenue": {
+            "MILK": 0.0,
+            "WOOL": 0.0,
+            "MELON": 31500.0,
+            "CARROT": 630.0,
+            "WHEAT": 800.0,
+            "EGG": 0.0
+          },
+          "land_breakdown": {
+            "configured_crop_tiles": 40,
+            "peak_productive_tiles": 23,
+            "mean_daily_productive_tiles": 16.85,
+            "q0": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 987,
+              "harvested": 95
+            },
+            "q1": {
+              "owned": 25,
+              "productive": 20,
+              "worked": 973,
+              "harvested": 89
+            },
+            "buy_land_step": 288
+          },
+          "workforce": {
+            "hires_count": 71,
+            "hire_attempted": 71,
+            "hire_accepted": 71,
+            "peak_simultaneous_workers": 4,
+            "worker_stats": {
+              "0": {
+                "productive": 266,
+                "movement": 440,
+                "idle": 13
+              },
+              "1": {
+                "productive": 193,
+                "movement": 447,
+                "idle": 26
+              },
+              "2": {
+                "productive": 167,
+                "movement": 319,
+                "idle": 65
+              },
+              "3": {
+                "productive": 96,
+                "movement": 216,
+                "idle": 101
+              }
+            },
+            "action_steps": 722,
+            "movement_steps": 1422,
+            "idle_steps": 205
+          },
+          "backlog": {
+            "mean_needs_water": 6.7,
+            "mean_harvest_ready": 1.86,
+            "mean_plant_pending": 15.11
+          },
+          "crops": {
+            "planted": 87,
+            "watered": 562,
+            "harvested": 40,
+            "weed_losses": 33
+          },
+          "livestock": {
+            "cows": 0,
+            "sheep": 0,
+            "pastures_built": 0,
+            "animals_placed": 0,
+            "feed_attempted": 0,
+            "feed_successful": 0,
+            "feed_consumed": 0,
+            "missed_feeds": 0,
+            "milk_harvested": 0,
+            "wool_harvested": 0
+          },
+          "wheat_accounting": {
+            "harvested": 32,
+            "bought": 24,
+            "fed": 0,
+            "sold": 32
+          },
+          "market": {
+            "orders_placed": 19,
+            "quantities_sold": {
+              "MILK": 0,
+              "WOOL": 0,
+              "MELON": 126,
+              "CARROT": 18,
+              "WHEAT": 32,
+              "EGG": 0
+            },
+            "unsold_shed_items": 0
+          },
+          "phase_history": [
+            {
+              "step": 120,
+              "day": 5,
+              "hour": 0,
+              "from": "OPENING",
+              "to": "SCALE",
+              "cash": 1156.0
+            },
+            {
+              "step": 384,
+              "day": 16,
+              "hour": 0,
+              "from": "SCALE",
+              "to": "PRODUCE",
+              "cash": 2228.0
+            },
+            {
+              "step": 648,
+              "day": 27,
+              "hour": 0,
+              "from": "PRODUCE",
+              "to": "LIQUIDATE",
+              "cash": 13498.0
+            }
+          ],
+          "event_count": 75
+        }
+      }
+    ]
+  }
+}

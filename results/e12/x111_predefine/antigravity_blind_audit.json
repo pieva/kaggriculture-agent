@@ -1,0 +1,164 @@
+{
+  "context": {
+    "branch": "main",
+    "working_tree": "Clean checkout except untracked prompts/results",
+    "strategy_mode": "E12_CONTINUOUS_SURFACE_X110",
+    "excluded_sources_blind": [
+      "docs/prompts/E12-X1.10 — Audit economico della Continuous Productive Surface.md",
+      "results/e12/x110/x110_economic_audit.json"
+    ]
+  },
+  "benchmarks": {
+    "baseline_x110": {
+      "seed_0": {
+        "final_money": 0.0,
+        "min_cash": 0.0,
+        "max_cash": 1000.0,
+        "total_revenue": 15020.0,
+        "total_spending": 77708.0,
+        "spending_land": 3000.0,
+        "spending_hires": 18200.0,
+        "spending_seeds": 25260.0,
+        "spending_products": 27748.0,
+        "spending_livestock": 3500.0,
+        "rev_by_product": {"WHEAT": 786.0, "CARROT": 1889.0, "TOMATO": 2925.0, "STRAWBERRY": 0.0, "MELON": 9420.0, "MILK": 0.0},
+        "productive_tile_days": 870,
+        "q0_tile_days": 450,
+        "q1_tile_days": 299,
+        "q2_tile_days": 121,
+        "actions": {"MOVE": 2059, "PLANT": 291, "WATER": 835, "HARVEST": 88, "FEED": 28, "COLLECT": 0, "DROP": 18, "IDLE": 873}
+      },
+      "seed_421521921": {
+        "final_money": 743.0,
+        "min_cash": 14.0,
+        "max_cash": 1500.0,
+        "total_revenue": 26392.0,
+        "total_spending": 48204.0,
+        "spending_land": 3000.0,
+        "spending_hires": 20000.0,
+        "spending_seeds": 12720.0,
+        "spending_products": 8484.0,
+        "spending_livestock": 4000.0,
+        "rev_by_product": {"WHEAT": 8258.0, "CARROT": 2074.0, "TOMATO": 4213.0, "STRAWBERRY": 1348.0, "MELON": 10499.0, "MILK": 0.0},
+        "productive_tile_days": 1026,
+        "q0_tile_days": 514,
+        "q1_tile_days": 338,
+        "q2_tile_days": 174,
+        "actions": {"MOVE": 2821, "PLANT": 337, "WATER": 1077, "HARVEST": 119, "FEED": 73, "COLLECT": 0, "DROP": 24, "IDLE": 862}
+      }
+    },
+    "counterfactual_x110_q0q1": {
+      "seed_0": {
+        "final_money": 19416.0,
+        "min_cash": 14.0,
+        "max_cash": 19416.0,
+        "total_revenue": 40039.0,
+        "total_spending": 43156.0,
+        "spending_land": 1000.0,
+        "spending_hires": 20400.0,
+        "spending_seeds": 9360.0,
+        "spending_products": 8396.0,
+        "spending_livestock": 4000.0,
+        "rev_by_product": {"WHEAT": 9559.0, "CARROT": 1889.0, "TOMATO": 10312.0, "STRAWBERRY": 2420.0, "MELON": 15859.0, "MILK": 0.0},
+        "productive_tile_days": 915,
+        "q0_tile_days": 543,
+        "q1_tile_days": 372,
+        "q2_tile_days": 0,
+        "actions": {"MOVE": 2926, "PLANT": 215, "WATER": 1066, "HARVEST": 188, "FEED": 3, "COLLECT": 0, "DROP": 32, "IDLE": 973}
+      },
+      "seed_421521921": {
+        "final_money": 17606.0,
+        "min_cash": 14.0,
+        "max_cash": 17606.0,
+        "total_revenue": 37023.0,
+        "total_spending": 42000.0,
+        "spending_land": 1000.0,
+        "spending_hires": 20400.0,
+        "spending_seeds": 9360.0,
+        "spending_products": 7240.0,
+        "spending_livestock": 4000.0,
+        "rev_by_product": {"WHEAT": 8299.0, "CARROT": 2074.0, "TOMATO": 7747.0, "STRAWBERRY": 3044.0, "MELON": 15859.0, "MILK": 0.0},
+        "productive_tile_days": 915,
+        "q0_tile_days": 543,
+        "q1_tile_days": 372,
+        "q2_tile_days": 0,
+        "actions": {"MOVE": 2926, "PLANT": 215, "WATER": 1066, "HARVEST": 188, "FEED": 3, "COLLECT": 0, "DROP": 32, "IDLE": 973}
+      }
+    },
+    "baseline_x19": {
+      "seed_0": {
+        "final_money": 9190.0,
+        "min_cash": 160.0,
+        "max_cash": 9190.0,
+        "total_revenue": 21562.0,
+        "total_spending": 36736.0,
+        "spending_land": 3000.0,
+        "spending_hires": 22100.0,
+        "spending_seeds": 3840.0,
+        "spending_products": 3796.0,
+        "spending_livestock": 4000.0,
+        "rev_by_product": {"WHEAT": 1662.0, "CARROT": 4023.0, "TOMATO": 0.0, "STRAWBERRY": 0.0, "MELON": 12402.0, "MILK": 3475.0},
+        "productive_tile_days": 311,
+        "q0_tile_days": 248,
+        "q1_tile_days": 54,
+        "q2_tile_days": 9,
+        "actions": {"MOVE": 2675, "PLANT": 136, "WATER": 462, "HARVEST": 122, "FEED": 166, "COLLECT": 0, "DROP": 159, "IDLE": 2074}
+      },
+      "seed_421521921": {
+        "final_money": 10566.0,
+        "min_cash": 190.0,
+        "max_cash": 10566.0,
+        "total_revenue": 22514.0,
+        "total_spending": 36376.0,
+        "spending_land": 3000.0,
+        "spending_hires": 22100.0,
+        "spending_seeds": 2880.0,
+        "spending_products": 4396.0,
+        "spending_livestock": 4000.0,
+        "rev_by_product": {"WHEAT": 1698.0, "CARROT": 5109.0, "TOMATO": 0.0, "STRAWBERRY": 0.0, "MELON": 12336.0, "MILK": 3371.0},
+        "productive_tile_days": 278,
+        "q0_tile_days": 215,
+        "q1_tile_days": 57,
+        "q2_tile_days": 6,
+        "actions": {"MOVE": 2682, "PLANT": 120, "WATER": 410, "HARVEST": 105, "FEED": 193, "COLLECT": 0, "DROP": 173, "IDLE": 2111}
+      }
+    }
+  },
+  "root_causes": [
+    {
+      "rank": 1,
+      "category": "Premature Q2 Land Expansion & Capital Dilution",
+      "impact": "PRIMARY",
+      "evidence": "Buying Q2 in X1.10 drops final cash from ~19.4k (Q0+Q1 counterfactual) to ~0-743 (baseline X1.10). Q2 adds $2000 land cost, over $18k extra seed/product spend, and dilutes worker focus without increasing harvest throughput.",
+      "causal_mechanism": "Q2 activation triggers aggressive planting of high-cost seeds across 75 tiles. Workers spend turns moving between Q0, Q1, and Q2 instead of watering and harvesting. Total spend spikes to $77.7k while revenue drops to $15.0k."
+    },
+    {
+      "rank": 2,
+      "category": "Complete Breakdown of Livestock Milk Monetization",
+      "impact": "PRIMARY",
+      "evidence": "X1.10 spends $4000 on cows (8 cows bought) and feeds them, but performs EXACTLY 0 COLLECT actions. Milk revenue in X1.10 is $0.0 across all seeds (vs $3.4k in X1.9).",
+      "causal_mechanism": "Workers never visit pasture tiles to perform COLLECT. The $4000 cow purchase + wheat feed costs are 100% pure capital loss with zero return."
+    },
+    {
+      "rank": 3,
+      "category": "Unchecked BUY_PRODUCT Wheat Buffer Expenditures",
+      "impact": "MATERIAL",
+      "evidence": "_x110_required_wheat_buffer triggers $7.2k - $27.7k in BUY_PRODUCT Wheat purchases at market prices to maintain buffers for cows that generate zero Milk revenue.",
+      "causal_mechanism": "The strategy buys Wheat at retail prices instead of growing it or capping feed buffers, causing massive cash drain throughout midgame and endgame."
+    },
+    {
+      "rank": 4,
+      "category": "Low Harvest Frequency per Productive Tile-Day",
+      "impact": "MATERIAL",
+      "evidence": "In Q0+Q1 counterfactual, 915 productive tile-days yield only 188 harvests (0.20 harvests / tile-day). Revenue / tile-day is $43.76 gross, but net contribution is -$3.4 / tile-day due to seed/hire costs.",
+      "causal_mechanism": "Tiles are kept occupied by long-cycle crops or unharvested mature crops because workers are busy watering or moving rather than harvesting."
+    },
+    {
+      "rank": 5,
+      "category": "Workforce Cost Overhead Without Proportional Throughput",
+      "impact": "MINOR",
+      "evidence": "Workforce hires cost $20,400 in Q0+Q1 (6-8 hands). Workers execute 2926 MOVE actions and 973 IDLE/PASS actions.",
+      "causal_mechanism": "Hiring 6-8 hands is expensive. Without tight spatial clustering or automation of harvest/water routes, worker actions are lost in travel distance."
+    }
+  ]
+}

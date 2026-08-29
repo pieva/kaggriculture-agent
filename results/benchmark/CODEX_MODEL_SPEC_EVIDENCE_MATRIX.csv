@@ -1,0 +1,25 @@
+claim_id,claim,classification,confidence,evidence_type,primary_evidence,patch_plan
+1,Workforce Capacity First,MIXED,MEDIUM,CAUSAL_REQUIRED,"Strong replays use peak hands 8/10/12/12/12/12; Q2 elite replays use 12 hands and high productive surface, but X1.14 aggressive workforce regressed required seeds.",REFRAME
+2,Fixed workforce size target,NOT_SUPPORTED,HIGH,OBSERVED,"Peak hands vary: Sokolov 8, Hutchinson 10, truebelief 12, Q2 top replays 12. No single hand count explains score.",REMOVE
+3,Workforce timing matters,PARTIALLY_SUPPORTED,MEDIUM,INFERRED,"High scores correlate with sustained hiring and throughput; last/first hire timing needs finer ledger extraction before a causal claim.",REFRAME
+4,Workforce utilization/value per action,PARTIALLY_SUPPORTED,MEDIUM,INFERRED,"Q2 replays convert 3103-3229 productive actions into 96k-133k; Sokolov has fewer productive actions but dense monetization. Productive action count alone is insufficient.",REFRAME
+5,Backlog avoidance,SUPPORTED,HIGH,OBSERVED,"Elite Q1/Q2 competitors show low weed tile-days: 10, 11, 5, 26, 24. Sokolov is a counterexample at 145 but still lower/more monetized than our comparable failure.",KEEP
+6,Productive Surface First,MIXED,HIGH,OBSERVED,"Q2 elite replays peak at 75 productive tiles and Q1 elites at 46-50, but Sokolov wins with only 15 peak productive tiles.",REFRAME
+7,Dense Engine Before Expansion,PARTIALLY_SUPPORTED,MEDIUM,INFERRED,"Sokolov proves compact density can beat our Q1 run; Q2 winners expand early and still monetize. Density matters, but not necessarily before expansion in all seeds.",REFRAME
+8,Land Discipline,SUPPORTED,HIGH,OBSERVED,"Poor or premature expansion loses: our 101294736 side bought Q2 Day 8 with low cash/productive base and scored 6825. But disciplined Q2 wins exist.",REFRAME
+9,Q1 conditional expansion,SUPPORTED,HIGH,OBSERVED,"Q1 is used by truebelief and Hutchinson, absent in Sokolov, and used before Q2 in the high-scoring 3Q replays. Requiredness is false; conditional value is supported.",KEEP
+10,Q2 conditional only / not priority,MIXED,HIGH,OBSERVED,"Old 3-replay batch had no competitor Q2, but new Q2 files include 96k-133k scores with Q2 Day 9-11 and 75 peak productive tiles.",DOWNGRADE
+11,Livestock as economic engine,SUPPORTED,HIGH,OBSERVED,"All strong competitors include livestock products: Milk, Fertilizer, Wool and sometimes Egg. Final livestock ranges from 4 Cow/2 Sheep to 13 Cow/2 Sheep and 6 Cow/9 Sheep.",KEEP
+12,Fixed livestock targets are invalid,SUPPORTED,HIGH,OBSERVED,"Observed livestock mixes differ: 9C/5S, 7C/4S/2G, 4C/2S, 6C/9S, 13C/2S, 12C.",KEEP
+13,Multi-engine monetization,SUPPORTED,HIGH,OBSERVED,"Every competitor sells multiple channels: Wheat, Milk, Fertilizer, premium crops, Wool, and sometimes Egg/Tomato.",KEEP
+14,Deployable Capital,NOT_OBSERVABLE,MEDIUM,INFERRED,"Cash is visible, but committed working capital, expected payback and activation cost are not directly present in replay state summaries.",NEEDS_MORE_EVIDENCE
+15,Horizon-aware shutdown,PARTIALLY_SUPPORTED,LOW,INFERRED,"Endgame liquidation/no-planting can be inferred from late sells and final cash, but requires per-day action ledger to classify precisely.",NEEDS_MORE_EVIDENCE
+16,HIRE based on marginal monetizable throughput,NOT_OBSERVABLE,MEDIUM,CAUSAL_REQUIRED,"The desired decision rule is not directly observable from replay actions; only realized hires and output are visible.",NEEDS_MORE_EVIDENCE
+17,Crop-maintenance priority,PARTIALLY_SUPPORTED,HIGH,OBSERVED,"Low weeds accompany elite scores in most replays, but X1.14 reduced weeds while lowering money and Sokolov tolerated 145 weed tile-days.",REFRAME
+18,Physical utilization vs economic utilization,SUPPORTED,HIGH,OBSERVED,"Sokolov beats our higher-surface run with lower peak productive tiles; Q2 top runs show high physical utilization plus high monetization.",KEEP
+19,Market/logistics efficiency,PARTIALLY_SUPPORTED,MEDIUM,INFERRED,"High sell counts and broad products imply collection/sell throughput, but exact uncollected yield and route efficiency need a ledger.",REFRAME
+20,Wheat BUY_PRODUCT / SELL loop,MIXED,HIGH,OBSERVED,"Competitors buy and sell Wheat; our comparable sides sell extreme Wheat volumes. Without price/inventory ledger, profit/waste cannot be concluded.",REFRAME
+21,Day-1 diversified opening,PARTIALLY_SUPPORTED,MEDIUM,OBSERVED,"Diversified buys are visible across competitors, but exact Day-1 constants differ and are reference trajectories only.",REFRAME
+22,Q0+Q1 only as sufficient envelope,MIXED,HIGH,OBSERVED,"Two 86k/90k Q1-only elites support sufficiency, Sokolov Q0-only beats us, but Q2 elites reach 96k-133k.",DOWNGRADE
+23,Crop allocation horizon-aware,PARTIALLY_SUPPORTED,LOW,INFERRED,"Crop/product mixes vary and late liquidation is plausible, but horizon-aware intent is not directly observable.",NEEDS_MORE_EVIDENCE
+24,Clean field as causal objective,MIXED,HIGH,CAUSAL_REQUIRED,"Low weeds correlate with elite Q1/Q2 results, but X1.14 clean-field variants regressed and Sokolov wins despite high weeds.",REFRAME

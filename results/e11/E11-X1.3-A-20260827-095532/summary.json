@@ -1,0 +1,36 @@
+{
+  "run_id": "E11-X1.3-A-20260827-095532",
+  "subphase": "A",
+  "stage": "A0",
+  "episodes_count": 1,
+  "git_info": {
+    "git_sha": "4445aa0cabecc690b30caf0a45bcca4c8714faec",
+    "is_dirty": true
+  },
+  "config_sha256": "254b75452c2f3184e28cc10131ccc1f4cb8ed35c72b4efdabc2b96d44a11ef6c",
+  "episodes_sha256": "83143347070ed143f5a56d9bc35781faf14a702b2e26cf0247f98884eac7d9bc",
+  "equivalence_metrics": {
+    "control_name": "E06",
+    "control_mean_money": 25847.0,
+    "e06_seed0_ref_money": 25847.0,
+    "equivalence_ratio_vs_e06_seed0": 1.0
+  },
+  "economy": {
+    "mean_money": 25847.0,
+    "median_money": 25847.0,
+    "std_money": 0.0,
+    "min_money": 25847.0,
+    "max_money": 25847.0
+  },
+  "land": {
+    "q2_unlock_rate": 0.0,
+    "q3_unlock_rate": 0.0,
+    "mean_owned_quadrants": 1.0
+  },
+  "production": {
+    "mean_peak_active_tiles": 9.0
+  },
+  "workforce": {
+    "mean_peak_workforce": 2.0
+  }
+}

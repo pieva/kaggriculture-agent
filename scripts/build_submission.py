@@ -1,7 +1,4 @@
-"""Script to bundle the Agricola agent modules into a single standalone submission file for Kaggle.
-
-Supports bundling E07 HybridLivestockClusterROIAgent into submission/submission.py.
-"""
+"""Script to bundle the Agricola agent modules into a single standalone submission file for Kaggle."""
 
 import os
 from pathlib import Path
@@ -9,7 +6,7 @@ from pathlib import Path
 SUBMISSION_TEMPLATE = '''"""
 Standalone submission file for Kaggle Kaggriculture.
 Generated automatically by scripts/build_submission.py
-Strategy: E07 HybridLivestockClusterROIAgent
+Strategy: E12-X1.12 Truebelief Economic Engine Reconstruction ProductiveMassROIAgent
 """
 
 from typing import Dict, Any, List, Optional, Tuple, Set
@@ -20,21 +17,32 @@ from typing import Dict, Any, List, Optional, Tuple, Set
 # --- Action Builder ---
 {actions_code}
 
-# --- E07 Hybrid Livestock Cluster ROI Agent Strategy ---
-{e07_strategy_code}
+# --- Shared Config & Telemetry ---
+{telemetry_code}
+
+# --- E11 Productive Mass ROI Agent Strategy ---
+{e11_strategy_code}
 
 # --- Kaggle Entrypoint ---
-_config = CompetitiveConfig()
-_agent_instance = HybridLivestockClusterROIAgent(config=_config)
+_config = ProductiveMassConfig(
+    productive_core_mode="E12_TRUEBELIEF_ENGINE_X112",
+    enable_land_expansion=True,
+    target_cows=7,
+    target_sheep=4,
+    max_workers=6,
+    stop_hire_day=1,
+)
+_agent_instance = ProductiveMassROIAgent(config=_config)
 
 def agent(observation: Dict[str, Any], configuration: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
-    """Kaggle submission entry point."""
+    """Kaggle submission entry point for E12-X1.12 baseline candidate."""
     try:
         state = GameState(observation)
-        return _agent_instance.decide(state)
+        return _agent_instance.act(state)
     except Exception:
         return {{"farmer": ["PASS"], "hands": [], "market": []}}
 '''
+
 
 
 def clean_imports(code: str, remove_internal_imports: list) -> str:
@@ -60,8 +68,10 @@ def build_submission(output_path: str = "submission/submission.py") -> None:
         actions_code = clean_imports(f.read(), ["from typing import"])
 
     with open(src_dir / "strategy" / "hybrid_livestock_cluster_roi.py", "r", encoding="utf-8") as f:
-        e07_strategy_code = clean_imports(
-            f.read(),
+        hybrid_code = f.read()
+        config_end_idx = hybrid_code.find("class HybridLivestockClusterROIAgent:")
+        telemetry_code = clean_imports(
+            hybrid_code[:config_end_idx],
             [
                 "from typing import",
                 "from agricola.core.state",
@@ -69,10 +79,22 @@ def build_submission(output_path: str = "submission/submission.py") -> None:
             ]
         )
 
+    with open(src_dir / "strategy" / "productive_mass_roi.py", "r", encoding="utf-8") as f:
+        e11_strategy_code = clean_imports(
+            f.read(),
+            [
+                "from typing import",
+                "from agricola.core.state",
+                "from agricola.core.actions",
+                "from agricola.strategy.hybrid_livestock_cluster_roi",
+            ]
+        )
+
     bundled_code = SUBMISSION_TEMPLATE.format(
         state_code=state_code.strip(),
         actions_code=actions_code.strip(),
-        e07_strategy_code=e07_strategy_code.strip(),
+        telemetry_code=telemetry_code.strip(),
+        e11_strategy_code=e11_strategy_code.strip(),
     )
 
     out_file = project_root / output_path

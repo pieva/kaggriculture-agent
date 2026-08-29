@@ -1,54 +1,70 @@
 # Project State
 
-**Last update:** 2026-08-26
+**Last update:** 2026-08-29
+**Current State:** `PRE-TOURNAMENT CHECKPOINT COMPLETE` (Ready for E15 Match Execution)
 
-## Current phase
+---
 
-E08 — Productive Scale Optimization: **E08 COMPLETED & CLOSED** (`E08 FALSIFIED — SHIPPED BASELINE E06 REMAINS ACTIVE`). Documenti di riferimento: [`docs/versions/E08_review_productive_scale.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E08_review_productive_scale.md), [`docs/versions/E08_review_corrections.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E08_review_corrections.md) e [`docs/versions/E08_ship_productive_scale.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E08_ship_productive_scale.md). Baseline Shipped corrente: E06 `WaterFirstHIRENWClusterROIAgent` (`v0.6-e06-water-first`).
+## 1. Current Phase: E15.0 — Pre-Tournament Freeze & Governance (COMPLETED)
 
-## Objective
+- **E14 — Repository Isolation & Canonical Ontology (COMPLETED)**:
+  - Repository isolated across three independent candidate architectures: **Antigravity**, **Codex**, **Copilot**.
+  - Canonical Ontology established in `docs/model_specs/ONTOLOGY.md` containing exactly **64 canonical concept_ids**.
+  - All three independent `MODEL_SPEC.md` files mapped 64/64 canonical concepts with zero missing/extra concepts.
+- **E15.0 — Pre-Tournament Freeze & Enforcement (COMPLETED)**:
+  - **7/7 Frozen Artifacts** committed and locked under `results/e15/freeze/` with SHA256 manifest `results/e15/freeze/FREEZE_MANIFEST.md`.
+  - **Copilot Ownership**: Independently verified and certified in `docs/model_specs/copilot/E15_0a_OWNERSHIP_VERIFICATION_REPORT.md`.
+  - **P0/P1 Environment Audit**: Certified `NO_MATERIAL_POSITION_BIAS_FOUND` in `results/e15/P0_P1_ENVIRONMENT_AUDIT.md`.
+  - **Freeze Enforcement Runner**: `scripts/run_e15_tournament.py` executes directly and exclusively from `results/e15/freeze/`, with SHA256 pre-execution validation and fail-closed abort.
+  - **Final Certification**: Codex E15.0d review issued `ACCEPT_E15_FREEZE`.
+- **Match Status**: **0 / 3 matches executed** (`NO MATCH EXECUTED`).
 
-Develop and evaluate a competitive agent for the Kaggle Kaggriculture
-competition using Google Antigravity as the coding agent.
+---
 
-The project is an empirical test of the supervised development method:
+## 2. Frozen Candidates & SHA256 Integrity Registry
 
-`DEFINE → PLAN → BUILD → VERIFY → REVIEW → SHIP`
+All competitive executions use exclusively the frozen artifacts verified in `results/e15/freeze/FREEZE_MANIFEST.md`:
 
-## Repository state
+| Artifact | Source Path | Frozen Path | SHA256 Checksum |
+|---|---|---|---|
+| **Canonical Ontology** | `docs/model_specs/ONTOLOGY.md` | `results/e15/freeze/ONTOLOGY_E15_FROZEN.md` | `5bab9c13cbf6d88b818ad6aca401fdb9bacc811d656dab4e39fe7d8c634e0bfa` |
+| **Antigravity MODEL_SPEC** | `docs/model_specs/antigravity/MODEL_SPEC.md` | `results/e15/freeze/MODEL_SPEC_ANTIGRAVITY_E15_FROZEN.md` | `f4eb68d232586394ae83399ddc4405cf211ead57e3afa183c655611eb6943a46` |
+| **Codex MODEL_SPEC** | `docs/model_specs/codex/MODEL_SPEC.md` | `results/e15/freeze/MODEL_SPEC_CODEX_E15_FROZEN.md` | `9e38dfe16b5e22b47df890abc105519920f5987de683e9da22638c0a5a57aed7` |
+| **Copilot MODEL_SPEC** | `docs/model_specs/copilot/MODEL_SPEC.md` | `results/e15/freeze/MODEL_SPEC_COPILOT_E15_FROZEN.md` | `d08dde958f929dab1a28f6a92343618d4b31a5b3cc12cf10c6673c92900d0686` |
+| **Antigravity Submission** | `submission/submission_antigravity.py` | `results/e15/freeze/submission_antigravity_E15_FROZEN.py` | `629c017271891e0b7d7a4b0e655df40b0aac66ee8af1bc00d5718fb8bdfd404d` |
+| **Codex Submission** | `submission/submission_codex.py` | `results/e15/freeze/submission_codex_E15_FROZEN.py` | `fe269bf365dd7167644e5867ca857f1f77d4009f9ce66c0e2afa3e78d6a4c9f3` |
+| **Copilot Submission** | `submission/submission_copilot.py` | `results/e15/freeze/submission_copilot_E15_FROZEN.py` | `604bd6201df08b3c4dbfb00c2e49bf8963c7a32b6bba6e14c04d046e308b8abb` |
 
-- Tag Git Baseline: `v0.1-e01-baseline`.
-- Tag Git E02: `v0.2-e02-roicrop`.
-- Tag Git E03: `v0.3-e03-multitile`.
-- Tag Git E04: `v0.4-e04-nw-scaling` (falsificazione dell'ipotesi 4→9 single farmer).
-- Tag Git E05: `v0.5-e05-hire-multiworker` (validazione dello scaling multi-worker 9 tile, Kaggle Score: 439.7).
-- Tag Git E06: `v0.6-e06-water-first` (validazione Water-First scheduling 9 tile, **Mean Money: $25180.30**, shipped baseline attiva).
-- E07 Strategy Class: `HybridLivestockClusterROIAgent` in [`src/agricola/strategy/hybrid_livestock_cluster_roi.py`](file:///c:/Users/pietr/Projects/kaggriculture-agent/src/agricola/strategy/hybrid_livestock_cluster_roi.py) (**ARCHITECTURALLY VALID, ECONOMICALLY WEAK**, Kaggle Score: 339.5).
-- E08 Closure Report: [`docs/versions/E08_ship_productive_scale.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E08_ship_productive_scale.md) (**FALSIFIED HYPOTHESIS**, Mean Money: **$11,880.30**, -10.8% vs E07).
-- Entrypoint `src/agricola/agent.py` running E06 `WaterFirstHIRENWClusterROIAgent` (E06 shipped baseline attiva).
-- Unit test suite (`pytest tests/`) 100% passing (**42/42**).
+---
 
-## Experimental Progression
+## 3. Pre-Declared Tournament Schedule & Seeds
 
-`E01 operational baseline → E02 economic crop selection → E03 production scaling (4 tiles) → E04 NW scaling (9 tiles, single farmer, falsified) → E05 multi-worker HIRE (9 tiles, 2 workers, shipped) → E06 Water-First Scheduling (shipped) → E07 Competitive Baseline Reconstruction → E08 Productive Scale Optimization (FALSIFIED, CLOSED) → E09 Livestock Subsystem Ablation (NEXT)`
+Tournament plan defined in `results/e15/TOURNAMENT_PLAN.md`:
 
-## Benchmark Metrics Comparison (E01 vs E02 vs E03 vs E04 vs E05 vs E06 vs E07 vs E08)
+| Match ID | Player 0 (P0) | Player 1 (P1) | Pre-Declared Seed | Status |
+|---|---|---|:---:|:---:|
+| **M1** | Antigravity | Codex | `1113294977` | `READY (NEXT ACTION)` |
+| **M2** | Codex | Copilot | `3033283457` | `FROZEN_PENDING_M1` |
+| **M3** | Copilot | Antigravity | `3122977751` | `FROZEN_PENDING_M2` |
 
-| Metric | E01 Baseline | E02 Evolution | E03 Scaling | E04 NW Scaling | E05 Multi-Worker | E06 Water-First | E07 Competitive | E08 Productive Scale |
-| :--- | :---: | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| **Strategy** | `CarrotLoopAgent` | `ROICropAgent` | `MultiTileROIAgent` | `NWClusterROIAgent` | `HIRENWClusterROIAgent` | `WaterFirstHIRENWClusterROIAgent` | `HybridLivestockClusterROIAgent` | `HybridLivestockClusterROIAgent` |
-| **Task Priority** | Statica | Statica | `HARVEST > PLANT > WATER` | `HARVEST > PLANT > WATER` | `HARVEST > PLANT > WATER` | **`WATER > HARVEST > PLANT`** | `WATER > FEED > HARVEST > PLANT` | `WATER > FEED > HARVEST > PLANT` |
-| **Workers** | 1 farmer | 1 farmer | 1 farmer | 1 farmer | 1 farmer + 1 hand | **1 farmer + 1 hand** | 1 farmer + 3 hands | 1 farmer + 3 hands |
-| **Footprint** | 1 tile (4,4) | 1 tile (4,4) | 4 tiles (2x2) | 9 tiles (3x3) | 9 tiles (3x3) | **9 tiles (3x3)** | 50 tiles (24 productive) | 50 tiles (40 productive) |
-| **Total Episodes** | 30 | 30 | 30 | 30 | 30 | **30** | 30 | 30 |
-| **Completion Rate** | 100.00% | 100.00% | 100.00% | 100.00% | 100.00% | **100.00%** | 100.00% | 100.00% |
-| **Disqualification Rate** | 0.00% | 0.00% | 0.00% | 0.00% | 0.00% | **0.00%** | 0.00% | 0.00% |
-| **Overall Win Rate** | 66.67% | 100.00% | 100.00% | 100.00% | 100.00% | **100.00%** | 93.33% | 93.33% |
-| **Mean Final Money** | **$3567.63** | **$5857.17** | **$14682.47** | **$11232.47** | **$21568.93** | **`$24662.00`** | **$13320.37** | **$11880.30** |
-| **Sample Std Dev (`ddof=1`)** | ± $205.38 | ± $132.37 | ± $1164.33 | ± $661.26 | ± $361.25 | **± $1932.04** | ± $6328.16 | ± $6475.07 |
-| **Median Final Money** | $3528.00 | $5837.00 | $14146.00 | $11050.00 | $21442.00 | **`$25847.00`** | $10262.00 | $9790.50 |
-| **Kaggle Score** | 600.0 | 285.1 | 278.3 | N/A | **429.5** | 375.7 | 339.5 | N/A |
+### Pre-Declared Tie-Breaking Criteria:
+1. **Primary**: Number of head-to-head match wins (W-L record).
+2. **Tie-Break (if all 1–1)**: Aggregate signed final-money differential $D_i = \sum (\text{final\_money}_i - \text{final\_money}_{\text{opponent}})$.
 
-## Next step
+---
 
-Esperimento E08 formalmente chiuso (falsificato). La shipped baseline attiva rimane E06. Iniziare la fase **E09-01 DEFINE — Livestock Subsystem Ablation**: formulazione dell'esperimento di ablazione controllata Livestock `ON` (E07) $\rightarrow$ `OFF` (E09).
+## 4. Python Environment & Verification
+
+- **Python**: `3.12.13` (via `.venv`)
+- **Kaggle Environments**: `1.32.7` (`kaggriculture` v0.1.0)
+- **Validation Command**: `python scripts/run_e15_tournament.py --validate`
+- **Validation Status**: `FREEZE INTEGRITY: PASS` | `M1/M2/M3: READY` | `NO MATCH EXECUTED`
+
+---
+
+## 5. Next Immediate Action for New Session
+
+```powershell
+python scripts/run_e15_tournament.py --match M1
+```
+*Strict rule: Do NOT run M2 or M3 until M1 has been executed and evaluated through the neutral post-match review protocol.*

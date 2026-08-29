@@ -4,11 +4,11 @@ from typing import Dict, Any, List, Optional, Tuple
 
 # Constants for crop parameters from kaggriculture environment
 CROPS = {
-    "WHEAT": {"seed": 10, "max_yield_day": 4, "water_needed": True},
-    "CARROT": {"seed": 20, "max_yield_day": 3, "water_needed": True},
-    "TOMATO": {"seed": 50, "max_yield_day": 8, "water_needed": True},
-    "STRAWBERRY": {"seed": 100, "max_yield_day": 10, "water_needed": True},
-    "MELON": {"seed": 80, "max_yield_day": 12, "water_needed": True},
+    "WHEAT": {"seed": 10, "first_yield_day": 2, "max_yield_day": 4, "interval": 0, "max_yield": 6, "ongoing": False, "water_needed": True},
+    "CARROT": {"seed": 20, "first_yield_day": 2, "max_yield_day": 3, "interval": 0, "max_yield": 4, "ongoing": False, "water_needed": True},
+    "TOMATO": {"seed": 50, "first_yield_day": 8, "max_yield_day": 8, "interval": 1, "max_yield": 4, "ongoing": True, "water_needed": True},
+    "STRAWBERRY": {"seed": 100, "first_yield_day": 10, "max_yield_day": 10, "interval": 2, "max_yield": 4, "ongoing": True, "water_needed": True},
+    "MELON": {"seed": 80, "first_yield_day": 10, "max_yield_day": 12, "interval": 0, "max_yield": 6, "ongoing": False, "water_needed": True},
 }
 
 

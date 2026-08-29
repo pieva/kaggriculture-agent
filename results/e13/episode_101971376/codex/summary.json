@@ -1,0 +1,162 @@
+{
+  "action_totals": {
+    "Harith Al-Ani": {
+      "crop_care": 1333,
+      "harvest_collect": 314,
+      "idle": 634,
+      "livestock_care": 704,
+      "logistics": 686,
+      "market": 939,
+      "movement": 3464,
+      "productive_action_share": 0.4256,
+      "productive_actions": 3037,
+      "total_worker_actions": 7135
+    },
+    "Pietro Valocchi": {
+      "crop_care": 259,
+      "harvest_collect": 398,
+      "idle": 205,
+      "livestock_care": 636,
+      "logistics": 646,
+      "market": 749,
+      "movement": 4936,
+      "productive_action_share": 0.2739,
+      "productive_actions": 1939,
+      "total_worker_actions": 7080
+    }
+  },
+  "episode_id": 101971376,
+  "final_daily": {
+    "harith": {
+      "coop_tiles": 0,
+      "crop_by_type": {
+        "STRAWBERRY": 3,
+        "WHEAT": 2
+      },
+      "crop_tiles": 5,
+      "daily_money_delta": 7101,
+      "day": 30,
+      "empty_owned_tiles": 47,
+      "episode_id": 101971376,
+      "hands": 7,
+      "harvest_ready_tiles": 2,
+      "inventory": {
+        "WHEAT": 11
+      },
+      "livestock_by_type": {
+        "COW": 8,
+        "SHEEP": 7
+      },
+      "money": 133049,
+      "owned_tiles": 75,
+      "pasture_tiles": 17,
+      "phase": "D26-D30",
+      "player_id": 1,
+      "player_name": "Harith Al-Ani",
+      "productive_tiles": 22,
+      "quadrant_count": 3,
+      "quadrants": "NE,NW,SW",
+      "seed": 1630102796,
+      "unwatered_tiles": 2,
+      "weed_tiles": 6,
+      "worker_turns_available": 8
+    },
+    "pietro": {
+      "coop_tiles": 0,
+      "crop_by_type": {},
+      "crop_tiles": 0,
+      "daily_money_delta": -825,
+      "day": 30,
+      "empty_owned_tiles": 54,
+      "episode_id": 101971376,
+      "hands": 12,
+      "harvest_ready_tiles": 0,
+      "inventory": {
+        "CARROT": 6,
+        "MELON": 10,
+        "STRAWBERRY": 19,
+        "WHEAT": 38
+      },
+      "livestock_by_type": {
+        "COW": 13,
+        "SHEEP": 4
+      },
+      "money": 7123,
+      "owned_tiles": 75,
+      "pasture_tiles": 18,
+      "phase": "D26-D30",
+      "player_id": 0,
+      "player_name": "Pietro Valocchi",
+      "productive_tiles": 18,
+      "quadrant_count": 3,
+      "quadrants": "NE,NW,SW",
+      "seed": 1630102796,
+      "unwatered_tiles": 0,
+      "weed_tiles": 3,
+      "worker_turns_available": 13
+    }
+  },
+  "market_totals": {
+    "Harith Al-Ani": {
+      "buy_quantities": {
+        "BUY_LAND": 2,
+        "COW": 8,
+        "MELON": 17,
+        "SHEEP": 12,
+        "STRAWBERRY": 42,
+        "WHEAT": 404
+      },
+      "estimated_buy_value_excluding_hire_unknown": 45694.0,
+      "estimated_sell_value": 171870.0,
+      "sell_quantities": {
+        "FERTILIZER": 228,
+        "MELON": 84,
+        "MILK": 208,
+        "STRAWBERRY": 239,
+        "WHEAT": 253,
+        "WOOL": 162
+      }
+    },
+    "Pietro Valocchi": {
+      "buy_quantities": {
+        "BUY_LAND": 2,
+        "CARROT": 6,
+        "COW": 14,
+        "MELON": 20,
+        "SHEEP": 4,
+        "STRAWBERRY": 63,
+        "WHEAT": 916
+      },
+      "estimated_buy_value_excluding_hire_unknown": 77082.0,
+      "estimated_sell_value": 83418.0,
+      "sell_quantities": {
+        "FERTILIZER": 16,
+        "MILK": 242,
+        "WHEAT": 712,
+        "WOOL": 84
+      }
+    }
+  },
+  "material_divergence": {
+    "day": 12,
+    "land_gap": 1,
+    "livestock_gap": 7,
+    "money_gap": 2419,
+    "productive_gap": 41
+  },
+  "names": [
+    "Pietro Valocchi",
+    "Harith Al-Ani"
+  ],
+  "rewards": [
+    7123.0,
+    133049.0
+  ],
+  "seed": 1630102796,
+  "sha256": "7afdf3b8672c1828bf7520e8f5973f69ad11e8378155a77aa7c4b5eaf4480db4",
+  "statuses": [
+    "DONE",
+    "DONE"
+  ],
+  "steps": 720
+}

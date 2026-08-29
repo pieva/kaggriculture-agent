@@ -1,0 +1,37 @@
+claim_id,claim,episode_id,competitor,evidence,classification,confidence,evidence_type,notes
+LD-01,Q2 is required for >100k competitive tier,101462495,Ryo Hasegawa,"Q2 Day 10 ($1876), 3Q, final $130,072",SUPPORTED,HIGH,OBSERVED,Highest tier uses Q2
+LD-02,Q2 is required for >100k competitive tier,101462495,Crop Dusta,"Q2 Day 8 ($410), 3Q, final $126,754",SUPPORTED,HIGH,OBSERVED,Fast Q2 on Day 8
+LD-03,Q2 is required for >100k competitive tier,101761797,Ryo Hasegawa,"Q2 Day 10 ($2271), 3Q, final $105,273",SUPPORTED,HIGH,OBSERVED,Consistent Q2 usage
+LD-04,Q2 is required for >100k competitive tier,101761797,Crop Dusta,"Q2 Day 8 ($496), 3Q, final $96,069",SUPPORTED,HIGH,OBSERVED,Fast Q2 on Day 8
+LD-05,Q2 is required for >100k competitive tier,101891362,Subramanya N,"Q2 Day 10 ($3393), 3Q, final $107,914",SUPPORTED,HIGH,OBSERVED,Consistent Q2 usage
+LD-06,Q2 is required for >100k competitive tier,101891362,Crop Dusta,"Q2 Day 8 ($1748), 3Q, final $133,035",SUPPORTED,HIGH,OBSERVED,Record score with Q2
+LD-07,Q2 not priority / structurally rejected,all,top_players,"6/6 >$96k runs use Q2",CONTRADICTED,HIGH,OBSERVED,Directly falsified by top tier
+LD-08,Q1 expansion timing is early (Day 5-6),101462495,Crop Dusta,"Q1 Day 5 Hour 2 ($505)",SUPPORTED,HIGH,OBSERVED,Much earlier than Day 11
+LD-09,Q1 expansion timing is early (Day 5-6),101761797,Ryo Hasegawa,"Q1 Day 5 Hour 1 ($416)",SUPPORTED,HIGH,OBSERVED,Fast Q1 expansion
+LD-10,Q0-only is competitive for mid-tier,101717011,Alexander Sokolov,"NW only, final $50,420 beats our 2Q $24,314",SUPPORTED,HIGH,OBSERVED,Viable for ~50k but capped
+LV-01,Day-1 Livestock Opening (Cows+Sheep on Day 1),101462495,Crop Dusta,"Buys 2 Cow + 2 Sheep + 4 Hands on Day 1 Turn 1",SUPPORTED,HIGH,OBSERVED,Universal top-tier opening
+LV-02,Day-1 Livestock Opening (Cows+Sheep on Day 1),101462495,Ryo Hasegawa,"Buys 2 Cow + 2 Sheep + 5 Hands + Wheat on Day 1 Turn 1",SUPPORTED,HIGH,OBSERVED,Universal top-tier opening
+LV-03,Day-1 Livestock Opening (Cows+Sheep on Day 1),101891362,Subramanya N,"Buys 2 Sheep + 2 Cow + 6 Hands on Day 1 Turn 1",SUPPORTED,HIGH,OBSERVED,Universal top-tier opening
+LV-04,Day-1 Livestock Opening (Cows+Sheep on Day 1),101717011,Alexander Sokolov,"Buys 4 Cow + 1 Sheep on Day 1 Turn 1",SUPPORTED,HIGH,OBSERVED,Sokolov also opened livestock
+LV-05,Livestock is primary economic engine (54-64% rev),101462495,Ryo Hasegawa,"Livestock rev $97.4k (64.2% of total)",SUPPORTED,HIGH,OBSERVED,Milk+Wool+Fertilizer dominate
+LV-06,Livestock is primary economic engine (54-64% rev),101891362,Subramanya N,"Livestock rev $96.5k (63.9% of total)",SUPPORTED,HIGH,OBSERVED,15 cows generate massive milk
+LV-07,Livestock is primary economic engine (54-64% rev),101891362,Crop Dusta,"Livestock rev $84.9k (56.2% of total)",SUPPORTED,HIGH,OBSERVED,Majority of revenue
+LV-08,Fixed livestock target 7 Cow / 4 Sheep,all,top_players,"Top players maintain 12-15 Cows and 2-9 Sheep",CONTRADICTED,HIGH,OBSERVED,3Q supports much larger herds
+LV-09,Livestock removal is catastrophic,X1.14,counterfactual,"Variant F (0 livestock) collapsed to $439-$519",SUPPORTED,HIGH,CAUSAL_REQUIRED,Causal proof of livestock value
+PS-01,Peak productive 75 tiles (full 3Q saturation),101462495,Crop Dusta,"75 peak tiles (60 crop, 22 pasture)",SUPPORTED,HIGH,OBSERVED,Physical maximum on 3 quadrants
+PS-02,Peak productive 75 tiles (full 3Q saturation),101462495,Ryo Hasegawa,"75 peak tiles (60 crop, 16 pasture)",SUPPORTED,HIGH,OBSERVED,Physical maximum on 3 quadrants
+PS-03,Peak productive 75 tiles (full 3Q saturation),101891362,Crop Dusta,"75 peak tiles (60 crop, 15 pasture)",SUPPORTED,HIGH,OBSERVED,Physical maximum on 3 quadrants
+PS-04,Clean field is primary bottleneck,101717011,Alexander Sokolov,"148 weed TDs with $50,420",NOT_SUPPORTED,HIGH,OBSERVED,Tolerates weeds without collapsing
+PS-05,Clean field is primary bottleneck,X1.14,counterfactual,"Weeds reduced 137->6 but money dropped $42k->$31k",CONTRADICTED,HIGH,CAUSAL_REQUIRED,Weed priority destroyed value
+PS-06,Productive action ratio dictates score (0.35-0.40),101462495,Ryo Hasegawa,"Productive ratio 0.405 (2748 prod acts)",SUPPORTED,HIGH,OBSERVED,High worker efficiency
+PS-07,Productive action ratio dictates score (0.35-0.40),101891362,Crop Dusta,"Productive ratio 0.382 (2617 prod acts)",SUPPORTED,HIGH,OBSERVED,High worker efficiency
+WF-01,Workforce capacity (peak 12 hands, mean ~10),101462495,Ryo Hasegawa,"Peak 12, mean 9.93 hands",SUPPORTED,HIGH,OBSERVED,Sustained large workforce
+WF-02,Workforce capacity (peak 12 hands, mean ~10),101891362,Subramanya N,"Peak 12, mean 10.27 hands",SUPPORTED,HIGH,OBSERVED,Sustained large workforce
+WF-03,Workforce aggressive helps on Q0/Q1 seed,X1.14,counterfactual,"Seed 1273000467 rose $43.0k->$54.2k",SUPPORTED,HIGH,CAUSAL_REQUIRED,Helps when properly utilized
+WF-04,Hands drop to 0 on Day 29,101462495,Crop Dusta,"Maintains 12 hands on Day 29-30",CONTRADICTED,HIGH,OBSERVED,Keeps hands to harvest/sell
+ME-01,Multi-engine monetization (6-8 products),101462495,Crop Dusta,"Sells Milk, Wool, Fertilizer, Wheat, Strawberry, Melon, Carrot",SUPPORTED,HIGH,OBSERVED,Diverse revenue channels
+ME-02,Multi-engine monetization (6-8 products),101891362,Subramanya N,"Sells Milk, Wool, Fertilizer, Wheat, Strawberry, Melon, Carrot, Tomato",SUPPORTED,HIGH,OBSERVED,Diverse revenue channels
+ME-03,Fertilizer is major revenue stream ($20k-$27k),101891362,Subramanya N,"272 Fertilizer sold = $27,200",SUPPORTED,HIGH,OBSERVED,Pasture byproduct is highly lucrative
+CD-01,Deployable Capital as observable metric,all,all,"Internal reserve calculations not observable in replay",NOT_OBSERVABLE,N/A,INFERRED,Conceptual framework only
+WL-01,Wheat loop is wasteful for X1.12,101705751,Pietro Valocchi,"2071 Wheat bought, 1863 sold (net -208), low score",PARTIALLY_SUPPORTED,MEDIUM,OBSERVED,High volume anomaly on weak score
+WL-02,Wheat loop can be profitable trading,101761797,Crop Dusta,"2509 Wheat bought, 2624 sold (net +115), $96k score",SUPPORTED,MEDIUM,OBSERVED,Active trading on high score

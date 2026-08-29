@@ -1,0 +1,11 @@
+variant,label,seed,final_money,mean_crop_tiles,peak_crop_tiles,mean_productive_tiles,peak_productive_tiles,weed_tile_days,harvested_empty_tile_days,unwatered_tile_days,productive_actions,movement_actions,productive_to_movement_ratio,owned_quadrants_final,q2_purchased,q2_purchase_day,q2_time_to_activation,q2_payback_proxy
+A,X1.12 baseline unchanged,0,42491.0,17.47,26,24.63,35,137,309,137,1427,3627,0.393,2,False,,,
+A,X1.12 baseline unchanged,421521921,48313.0,17.47,26,24.63,35,129,317,137,1427,3627,0.393,2,False,,,
+B,"livestock dynamic gate, Q2 disabled",0,34230.0,21.53,37,28.73,46,56,288,111,1011,4228,0.239,2,False,,,
+B,"livestock dynamic gate, Q2 disabled",421521921,30389.0,21.53,37,28.73,46,56,288,111,1011,4228,0.239,2,False,,,
+C,"livestock gate + workload HIRE, Q2 disabled",0,1311.0,11.77,21,19.1,25,41,661,79,465,959,0.485,2,False,,,
+C,"livestock gate + workload HIRE, Q2 disabled",421521921,2329.0,12,21,19.33,25,50,645,85,471,969,0.486,2,False,,,
+D,livestock gate + workload HIRE + dynamic Q2,0,1311.0,11.77,21,19.1,25,41,661,79,465,959,0.485,2,False,,,
+D,livestock gate + workload HIRE + dynamic Q2,421521921,2329.0,12,21,19.33,25,50,645,85,471,969,0.486,2,False,,,
+E,D + crop-SLA-first assignment,0,9673.0,12.5,20,13.53,21,30,605,81,538,1469,0.366,2,False,,,
+E,D + crop-SLA-first assignment,421521921,8988.0,11.73,20,13.33,21,33,623,66,504,1469,0.343,2,False,,,

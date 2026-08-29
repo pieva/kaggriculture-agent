@@ -1,0 +1,31 @@
+{
+  "run_id": "E11-X1.2-20260827-093348",
+  "stage": "A",
+  "episodes_count": 1,
+  "git_info": {
+    "git_sha": "4445aa0cabecc690b30caf0a45bcca4c8714faec",
+    "is_dirty": true
+  },
+  "config_sha256": "31f9db281e838185999a9fa5a0085c63dda4ce8cb5b053e71bd8eb34337181e1",
+  "episodes_sha256": "2ac3874aee7e88dc00b0f1f7b60622c6720eab652a535b7cd8de39f7dd61403b",
+  "hashes": {
+    "config_sha256": "31f9db281e838185999a9fa5a0085c63dda4ce8cb5b053e71bd8eb34337181e1",
+    "episodes_sha256": "2ac3874aee7e88dc00b0f1f7b60622c6720eab652a535b7cd8de39f7dd61403b"
+  },
+  "baseline_vb1": {
+    "mean_money": 429.0,
+    "unlock_3q_rate": 0.0
+  },
+  "treatment_x1_2": {
+    "mean_final_money": 1518.0,
+    "std_final_money": 0.0,
+    "median_final_money": 1518.0,
+    "min_final_money": 1518.0,
+    "max_final_money": 1518.0,
+    "unlock_3q_rate": 0.0,
+    "unlock_4q_rate": 0.0,
+    "mean_owned_quadrants": 2.0,
+    "mean_peak_workforce": 2.0,
+    "mean_peak_active_tiles": 15.0
+  }
+}

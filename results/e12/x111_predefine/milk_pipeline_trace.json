@@ -1,0 +1,49 @@
+{
+  "engine_mechanics": {
+    "cow": {
+      "cost": 400,
+      "structure": "PASTURE",
+      "first_yield_day": 8,
+      "interval": 2,
+      "max_held": 6,
+      "product": "MILK"
+    },
+    "harvest_action_name": "HARVEST",
+    "feed_action_name": "FEED",
+    "escape_rule": "consecutive_unfed >= 2"
+  },
+  "failure_modes_identified": [
+    {
+      "rank": 1,
+      "category": "WORKER ASSIGNMENT FAILURE",
+      "location": "src/agricola/strategy/productive_mass_roi.py:2181, 2184, 2207",
+      "bug_description": "_x19_hand_livestock_support_action checks 'if target == state.farmer_position' instead of 'if (hx, hy) == target'. Farm hands never execute HARVEST or FEED on animal tiles."
+    },
+    {
+      "rank": 2,
+      "category": "TIMING & GATING FAILURE",
+      "location": "src/agricola/strategy/productive_mass_roi.py:1967",
+      "bug_description": "Cow purchases are gated behind 'state.day >= 20' (if owned >= 3) or 'state.day >= 27' (if owned == 2). Because first_yield_day = 8, cows placed on Day 20/27 reach milk readiness on Day 28-35 (after episode ends)."
+    },
+    {
+      "rank": 3,
+      "category": "SELLING / INVENTORY TRANSFER DISCONNECT",
+      "location": "src/agricola/strategy/productive_mass_roi.py:1978",
+      "bug_description": "builder.sell('MILK', qty) only sells milk inside private['shed']. Milk collected in worker inventory is not sold unless explicit DROP at (4,4) occurs."
+    }
+  ],
+  "benchmark_runs": {
+    "scenario_a_baseline_x110": {
+      "seed_0": {"cows_placed": 4, "placed_day": 20, "milk_sold": 0, "milk_revenue": 0.0, "final_money": 0.0},
+      "seed_421521921": {"cows_placed": 4, "placed_day": 20, "milk_sold": 0, "milk_revenue": 0.0, "final_money": 743.0}
+    },
+    "scenario_b_q0q1_counterfactual": {
+      "seed_0": {"cows_placed": 4, "placed_day": 27, "milk_sold": 0, "milk_revenue": 0.0, "final_money": 19416.0},
+      "seed_421521921": {"cows_placed": 4, "placed_day": 27, "milk_sold": 0, "milk_revenue": 0.0, "final_money": 17606.0}
+    },
+    "scenario_c_early_buy_day2_fixed": {
+      "seed_0": {"cows_placed": 4, "placed_day": 17, "milk_sold": 8, "milk_revenue": 2718.0, "final_money": 17208.0},
+      "seed_421521921": {"cows_placed": 4, "placed_day": 17, "milk_sold": 8, "milk_revenue": 2420.0, "final_money": 15408.0}
+    }
+  }
+}

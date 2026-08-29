@@ -1,0 +1,132 @@
+{
+  "run_id": "E11-X1.4-20260827-115318",
+  "episodes": [
+    {
+      "starting_money": 3000.0,
+      "final_money": 22555.0,
+      "minimum_cash": 907.0,
+      "spending": {
+        "seeds": 4780.0,
+        "workforce": 45.0,
+        "land": 1000.0,
+        "livestock": 0.0
+      },
+      "realized_revenue": {
+        "MILK": 0.0,
+        "WOOL": 0.0,
+        "MELON": 25416.0,
+        "CARROT": 0.0,
+        "WHEAT": 0.0,
+        "EGG": 0.0,
+        "STRAWBERRY": 2009.0
+      },
+      "land_breakdown": {
+        "configured_crop_tiles": 80,
+        "peak_productive_tiles": 24,
+        "mean_daily_productive_tiles": 11.89,
+        "q0": {
+          "owned": 25,
+          "productive": 20,
+          "worked": 0,
+          "harvested": 0
+        },
+        "q1": {
+          "owned": 0,
+          "productive": 0,
+          "worked": 0,
+          "harvested": 0
+        },
+        "buy_land_step": 336
+      },
+      "workforce": {
+        "hires_count": 45,
+        "hire_attempted": 0,
+        "hire_accepted": 0,
+        "peak_simultaneous_workers": 3,
+        "worker_stats": {
+          "0": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "1": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "2": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          },
+          "3": {
+            "productive": 0,
+            "movement": 0,
+            "idle": 0
+          }
+        },
+        "action_steps": 0,
+        "movement_steps": 0,
+        "idle_steps": 0
+      },
+      "backlog": {
+        "mean_needs_water": 6.16,
+        "mean_harvest_ready": 1.43,
+        "mean_plant_pending": 18.74
+      },
+      "crops": {
+        "planted": 46,
+        "watered": 430,
+        "harvested": 166,
+        "weed_losses": 0
+      },
+      "livestock": {
+        "cows": 0,
+        "sheep": 0,
+        "pastures_built": 0,
+        "animals_placed": 0,
+        "feed_attempted": 0,
+        "feed_successful": 0,
+        "feed_consumed": 0,
+        "missed_feeds": 0,
+        "milk_harvested": 0,
+        "wool_harvested": 0
+      },
+      "wheat_accounting": {
+        "harvested": 0,
+        "bought": 0,
+        "fed": 0,
+        "sold": 0
+      },
+      "market": {
+        "orders_placed": 0,
+        "quantities_sold": {
+          "MILK": 0,
+          "WOOL": 0,
+          "MELON": 0,
+          "CARROT": 0,
+          "WHEAT": 0,
+          "EGG": 0
+        },
+        "unsold_shed_items": 0
+      },
+      "phase_history": [],
+      "event_count": 46,
+      "seed": 0,
+      "opponent": "pass",
+      "buy_land_day": 14,
+      "buy_land_step": 336,
+      "actual_trigger_value": 1300.0,
+      "epu1_9t_activation_day": 0,
+      "epu1_15t_activation_day": 0,
+      "epu2_activation_day": null,
+      "day_reaching_27_active_tiles": null,
+      "day_reaching_30_active_tiles": null,
+      "run_id": "E11-X1.4-20260827-115318",
+      "max_owned_quadrants": 1,
+      "peak_active_tiles": 0,
+      "peak_workforce": 1,
+      "delta_vs_b3": -7679.0
+    }
+  ]
+}

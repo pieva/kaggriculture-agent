@@ -1,0 +1,6391 @@
+{
+  "timestamp": "2026-08-28 12:58:20 +0200",
+  "git": {
+    "branch": "main",
+    "commit": "4445aa0 Close E08 productive scale experiment",
+    "status_short": [
+      "M README.md",
+      " M docs/EXPERIMENT_LOG.md",
+      " M docs/NEW_SESSION.md",
+      " M docs/PROJECT_STATE.md",
+      " M scripts/build_submission.py",
+      " M src/agricola/agent.py",
+      " M src/agricola/core/actions.py",
+      " M src/agricola/core/state.py",
+      " M submission/submission.py",
+      "?? docs/101294736.json",
+      "?? docs/prompts/E09-01B_define_revision_antigravity.md",
+      "?? docs/prompts/E09-01_define_antigravity.md",
+      "?? docs/prompts/E09-03_build_antigravity.md",
+      "?? docs/prompts/E09-05B_review_correction_antigravity.md",
+      "?? docs/prompts/E09-05_review_antigravity.md",
+      "?? docs/prompts/E09-06_kaggle_external_validation_antigravity.md",
+      "?? docs/prompts/E10-01_kaggle_overnight_antigravity.md",
+      "?? \"docs/prompts/E11-01 \\342\\200\\224 DEFINE \\342\\200\\224 3\\303\\227 Productive Mass Expansion.md\"",
+      "?? \"docs/prompts/E11-01A \\342\\200\\224 Correzione DEFINE + PLAN \\342\\200\\224 3\\303\\227 Productive Mass Expansion.md\"",
+      "?? \"docs/prompts/E11-01B \\342\\200\\224 BUILD \\342\\200\\224 ProductiveMassROIAgent.md\"",
+      "?? \"docs/prompts/E11-02 \\342\\200\\224 BUILD + VERIFY \\342\\200\\224 Expansion Capital Protection.md\"",
+      "?? \"docs/prompts/E11-03 \\342\\200\\224 BUILD + VERIFY \\342\\200\\224 Expansion Gate Unlock.md\"",
+      "?? \"docs/prompts/E11-04 \\342\\200\\224 BUILD + VERIFY \\342\\200\\224 Seed\\342\\200\\223Expansion Synchronization.md\"",
+      "?? \"docs/prompts/E11-05 \\342\\200\\224 BUILD + VERIFY \\342\\200\\224 Staged Expansion Capital Release.md\"",
+      "?? \"docs/prompts/E11-06 \\342\\200\\224 BUILD + VERIFY \\342\\200\\224 Workforce\\342\\200\\223Land Co-Scaling.md\"",
+      "?? \"docs/prompts/E11-B1 \\342\\200\\224 Competitor Expansion Timing Audit.md\"",
+      "?? \"docs/prompts/E11-R0 \\342\\200\\224 Baseline Reproducibility Audit.md\"",
+      "?? \"docs/prompts/E11-R1 \\342\\200\\224 E11-03 Historical Behavioral Reconstruction.md\"",
+      "?? \"docs/prompts/E11-R2 \\342\\200\\224 Historical Benchmark Provenance Audit.md\"",
+      "?? \"docs/prompts/E11-R3 \\342\\200\\224 Verified Baseline Re-establishment.md\"",
+      "?? docs/prompts/E11_X1_1A_hire_constraint_e06_reconciliation.md",
+      "?? docs/prompts/E11_X1_1_pre3q_workforce_productivity_scaling.md",
+      "?? docs/prompts/E11_X1_2_e06_productive_core_restoration.md",
+      "?? docs/prompts/E11_X1_3_B2R_RESTART_bounded_geometry.md",
+      "?? docs/prompts/E11_X1_3_B2R_post_surplus_spatially_equivalent_3x_epu.md",
+      "?? docs/prompts/E11_X1_3_B2_cross_boundary_multi_epu_activation.md",
+      "?? docs/prompts/E11_X1_3_B3_fast_fixed_layout_submission.md",
+      "?? docs/prompts/E11_X1_3_B_kaggle_validation_readme_reconciliation.md",
+      "?? docs/prompts/E11_X1_3_e06_productive_unit_replication_scaling.md",
+      "?? docs/prompts/E11_X1_4_epu_densification_2x3x5.md",
+      "?? docs/prompts/E11_X1_5_centered_2x4x4_productive_core.md",
+      "?? docs/prompts/E11_X1_6_progressive_center_out_epu_scaling.md",
+      "?? docs/prompts/E11_X1_7_corner_pruned_center_out_26t.md",
+      "?? docs/prompts/E11_X1_verified_3q_capital_accumulation.md",
+      "?? \"docs/prompts/E12-X1.10 \\342\\200\\224 Audit economico della Continuous Productive Surface.md\"",
+      "?? \"docs/prompts/E12-X1.10 \\342\\200\\224 Continuous Productive Surface.md\"",
+      "?? docs/prompts/E12-X1.11_BUILD_Handoff_Codex.md",
+      "?? docs/prompts/E12-X1.11_DEFINE_80K_Q0Q1_Antigravity.md",
+      "?? docs/prompts/E12-X1.11_DEFINE_Review_80K_Antigravity.md",
+      "?? docs/prompts/E12-X1.11_TRUEBELIEF_Benchmark.md",
+      "?? docs/prompts/E12-X1.11_pre-DEFINE_Milk_Pipeline_Verification_Antigravity.md",
+      "?? docs/prompts/E12-X1.11_pre-DEFINE_Q0-Q1_Economic_Density_Audit_Antigravity.md",
+      "?? \"docs/prompts/E12-X1.8 \\342\\200\\224 Audit Day-1 Productive Mass e Workforce.md\"",
+      "?? \"docs/prompts/E12-X1.8 \\342\\200\\224 Implementazione livestock-first verificabile.md\"",
+      "?? \"docs/prompts/E12-X1.9 \\342\\200\\224 Audit competitivo vs truebelief.md\"",
+      "?? \"docs/prompts/E12-X1.9 \\342\\200\\224 Growth-First Concurrent Architecture.md\"",
+      "?? docs/prompts/E12_CONSOLIDATE_STATE_AND_COMMIT.md",
+      "?? docs/prompts/E12_D1_top_player_temporal_economic_benchmark.md",
+      "?? docs/prompts/E12_D2_weed_mechanics_productive_surface_retention.md",
+      "?? docs/prompts/E12_D3_marginal_capacity_roi_audit.md",
+      "?? docs/prompts/E12_TRUEBELIEF_101294736_FULL_REPLAY_ANALYSIS.md",
+      "?? docs/prompts/E12_X1_1_feed_first_cow_pipeline.md",
+      "?? docs/prompts/E12_X1_2_hybrid_crop_recovery.md",
+      "?? docs/prompts/E12_X1_3_hybrid_full_crop_scaling.md",
+      "?? docs/prompts/E12_X1_4_worker_locality_readiness_gated_expansion.md",
+      "?? docs/prompts/E12_X1_5_working_set_retention_4_tiles_per_worker.md",
+      "?? docs/prompts/E12_X1_6_functional_workforce_hybrid_economic_scaling.md",
+      "?? docs/prompts/E12_X1_7_kaggle_external_validation.md",
+      "?? docs/prompts/E12_X1_7_workforce_capacity_scaling.md",
+      "?? docs/prompts/E12_define_centered_hybrid_farm_scaling.md",
+      "?? docs/prompts/E12_plan_revision_build_gate.md",
+      "?? docs/prompts/Kaggriculture_Q0_Q1_coordinates.xlsx",
+      "?? docs/screenshots/Copilot.png",
+      "?? docs/versions/E09_build_livestock_ablation.md",
+      "?? docs/versions/E09_define_livestock_ablation.md",
+      "?? docs/versions/E09_kaggle_external_validation.md",
+      "?? docs/versions/E09_review_livestock_ablation.md",
+      "?? docs/versions/E09_verify_competitive_evidence.md",
+      "?? docs/versions/E09_verify_local_performance.md",
+      "?? docs/versions/E10_build_q1_capital_protection.md",
+      "?? docs/versions/E10_define_q1_capital_protection.md",
+      "?? docs/versions/E10_kaggle_overnight_validation.md",
+      "?? docs/versions/E10_plan_q1_capital_protection.md",
+      "?? docs/versions/E11_02_expansion_capital_protection.md",
+      "?? docs/versions/E11_03_expansion_gate_unlock.md",
+      "?? docs/versions/E11_04_seed_expansion_synchronization.md",
+      "?? docs/versions/E11_05_staged_expansion_capital_release.md",
+      "?? docs/versions/E11_06_workforce_land_co_scaling.md",
+      "?? docs/versions/E11_B1_competitor_expansion_timing_audit.md",
+      "?? docs/versions/E11_R0_baseline_reproducibility_audit.md",
+      "?? docs/versions/E11_R1_e11_03_historical_behavioral_reconstruction.md",
+      "?? docs/versions/E11_R2_historical_benchmark_provenance_audit.md",
+      "?? docs/versions/E11_R3_verified_baseline_reestablishment.md",
+      "?? docs/versions/E11_X1_1A_hire_constraint_e06_reconciliation.md",
+      "?? docs/versions/E11_X1_1_pre3q_workforce_productivity_scaling.md",
+      "?? docs/versions/E11_X1_2_e06_productive_core_restoration.md",
+      "?? docs/versions/E11_X1_3_B2R_post_surplus_spatially_equivalent_3x_epu.md",
+      "?? docs/versions/E11_X1_3_B2_cross_boundary_multi_epu_activation.md",
+      "?? docs/versions/E11_X1_3_B3_fixed_3x3_epu_submission.md",
+      "?? docs/versions/E11_X1_3_B_kaggle_external_validation.md",
+      "?? docs/versions/E11_X1_3_e06_productive_unit_replication_scaling.md",
+      "?? docs/versions/E11_X1_4_epu_densification_before_replication.md",
+      "?? docs/versions/E11_X1_5_centered_2x4x4_productive_core.md",
+      "?? docs/versions/E11_X1_6_progressive_center_out_epu_scaling.md",
+      "?? docs/versions/E11_X1_7_corner_pruned_center_out_26t.md",
+      "?? docs/versions/E11_X1_verified_3q_capital_accumulation.md",
+      "?? docs/versions/E11_build_productive_mass_expansion.md",
+      "?? docs/versions/E11_define_productive_mass_expansion.md",
+      "?? docs/versions/E11_plan_productive_mass_expansion.md",
+      "?? docs/versions/E12-X1.11_DEFINE_80K_Q0Q1.md",
+      "?? docs/versions/E12_D1_top_player_temporal_economic_benchmark.md",
+      "?? docs/versions/E12_D2_weed_mechanics_productive_surface_retention.md",
+      "?? docs/versions/E12_D3_marginal_capacity_roi_audit.md",
+      "?? docs/versions/E12_X1_0_centered_hybrid_farm_scaling.md",
+      "?? docs/versions/E12_X1_1_feed_first_cow_pipeline.md",
+      "?? docs/versions/E12_X1_2_hybrid_crop_recovery.md",
+      "?? docs/versions/E12_X1_3_hybrid_full_crop_scaling.md",
+      "?? docs/versions/E12_X1_4_worker_locality_readiness_expansion.md",
+      "?? docs/versions/E12_X1_5_working_set_retention_4_tiles_per_worker.md",
+      "?? docs/versions/E12_X1_6_functional_workforce_hybrid_economic_scaling.md",
+      "?? docs/versions/E12_X1_7_corrective_architecture_audit.md",
+      "?? docs/versions/E12_X1_7_kaggle_external_validation.md",
+      "?? docs/versions/E12_X1_7_submission_provenance_opening_audit.md",
+      "?? docs/versions/E12_X1_7_workforce_capacity_scaling.md",
+      "?? results/e09_livestock_ablation.json",
+      "?? results/e10_q1_capital_protection.json",
+      "?? results/e11/",
+      "?? results/e11_productive_mass.json",
+      "?? results/e12/",
+      "?? scripts/benchmark_e09_performance.py",
+      "?? scripts/benchmark_e10_performance.py",
+      "?? scripts/benchmark_e11_performance.py",
+      "?? scripts/benchmark_e11_vb1.py",
+      "?? scripts/benchmark_e11_x1.py",
+      "?? scripts/benchmark_e11_x1_1.py",
+      "?? scripts/benchmark_e11_x1_2.py",
+      "?? scripts/benchmark_e11_x1_3.py",
+      "?? scripts/benchmark_e11_x1_3_b2.py",
+      "?? scripts/benchmark_e11_x1_3_b2r.py",
+      "?? scripts/benchmark_e11_x1_3_b3.py",
+      "?? scripts/benchmark_e11_x1_4.py",
+      "?? scripts/benchmark_e11_x1_5.py",
+      "?? scripts/benchmark_e11_x1_6.py",
+      "?? scripts/benchmark_e11_x1_7.py",
+      "?? scripts/benchmark_e12_x1.py",
+      "?? scripts/benchmark_e12_x1_11.py",
+      "?? scripts/benchmark_e12_x1_11_truebelief.py",
+      "?? scripts/verify_e11_run_provenance.py",
+      "?? src/agricola/strategy/livestock_ablation_roi.py",
+      "?? src/agricola/strategy/productive_mass_roi.py",
+      "?? src/agricola/strategy/q1_capital_protected_roi.py",
+      "?? tests/test_e09_livestock_ablation.py",
+      "?? tests/test_e10_q1_capital_protection.py",
+      "?? tests/test_e11_productive_mass.py",
+      "?? tests/test_e12_centered_hybrid.py",
+      "?? tests/test_e12_livestock_first_architecture.py",
+      "?? tests/test_e12_x1_4_locality_expansion.py",
+      "?? tests/test_e12_x1_5_working_set_retention.py",
+      "?? tests/test_e12_x1_6_functional_workforce.py",
+      "?? tests/test_e12_x1_7_workforce_capacity_scaling.py",
+      "?? tests/test_e12_x1_8_livestock_first.py",
+      "?? tests/test_e12_x1_9_growth_first.py",
+      "?? tests/test_submission_behavioral_equivalence.py"
+    ],
+    "dirty": true
+  },
+  "submission": {
+    "path": "C:\\Users\\pietr\\Projects\\kaggriculture-agent\\submission\\submission.py",
+    "sha256": "c5e42e237584ed006a68841c59d55ccd3d46799fb4254515cd33f6391637a30c"
+  },
+  "local_repro": {
+    "run_id": "E12-X1.11-20260828-103722",
+    "seed0_final_money": 29858.0,
+    "seed421521921_final_money": 24827.0,
+    "owned_quadrants_all_q0q1": true
+  },
+  "x111": {
+    "seed": 421521921,
+    "final_money": 24827.0,
+    "owned_quadrants": 2,
+    "peak_productive_tiles": 27,
+    "peak_workforce": 4,
+    "realized_revenue": {
+      "MILK": 0.0,
+      "WOOL": 0.0,
+      "MELON": 27318.0,
+      "CARROT": 0.0,
+      "WHEAT": 0.0,
+      "EGG": 0.0,
+      "STRAWBERRY": 1819.0
+    },
+    "spending": {
+      "seeds": 4140.0,
+      "land": 1000.0,
+      "workforce": 62.0,
+      "livestock": 0.0
+    },
+    "snapshots": [
+      {
+        "day": 1,
+        "turn": 47,
+        "money": 2278.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 1,
+        "owned_tiles": 25,
+        "active_crop_tiles": 9,
+        "pasture_tiles": 0,
+        "active_animals": 0,
+        "weed_tiles": 0,
+        "idle_owned_tiles": 16,
+        "productive_utilization": 0.36,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 9
+        },
+        "mature_crops_waiting": 0,
+        "shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "worker_inventories": [
+          {},
+          {}
+        ],
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 9,
+            "crop": 9,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 16,
+            "utilization": 0.36
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 9,
+            "WATER": 4,
+            "PASS": 10
+          },
+          "hands": {
+            "MOVE": 9,
+            "WATER": 5,
+            "PASS": 8
+          },
+          "market": {
+            "HIRE": 1
+          },
+          "plant": {},
+          "sell": {}
+        }
+      },
+      {
+        "day": 2,
+        "turn": 71,
+        "money": 2277.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 1,
+        "owned_tiles": 25,
+        "active_crop_tiles": 9,
+        "pasture_tiles": 0,
+        "active_animals": 0,
+        "weed_tiles": 0,
+        "idle_owned_tiles": 16,
+        "productive_utilization": 0.36,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 9
+        },
+        "mature_crops_waiting": 0,
+        "shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "worker_inventories": [
+          {},
+          {}
+        ],
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 9,
+            "crop": 9,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 16,
+            "utilization": 0.36
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 9,
+            "WATER": 4,
+            "PASS": 10
+          },
+          "hands": {
+            "MOVE": 9,
+            "WATER": 5,
+            "PASS": 8
+          },
+          "market": {
+            "HIRE": 1
+          },
+          "plant": {},
+          "sell": {}
+        }
+      },
+      {
+        "day": 5,
+        "turn": 143,
+        "money": 2274.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 1,
+        "owned_tiles": 25,
+        "active_crop_tiles": 9,
+        "pasture_tiles": 0,
+        "active_animals": 0,
+        "weed_tiles": 0,
+        "idle_owned_tiles": 16,
+        "productive_utilization": 0.36,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 9
+        },
+        "mature_crops_waiting": 0,
+        "shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "worker_inventories": [
+          {},
+          {}
+        ],
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 9,
+            "crop": 9,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 16,
+            "utilization": 0.36
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 9,
+            "WATER": 4,
+            "PASS": 10
+          },
+          "hands": {
+            "MOVE": 9,
+            "WATER": 5,
+            "PASS": 8
+          },
+          "market": {
+            "HIRE": 1
+          },
+          "plant": {},
+          "sell": {}
+        }
+      },
+      {
+        "day": 8,
+        "turn": 215,
+        "money": 2271.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 1,
+        "owned_tiles": 25,
+        "active_crop_tiles": 9,
+        "pasture_tiles": 0,
+        "active_animals": 0,
+        "weed_tiles": 0,
+        "idle_owned_tiles": 16,
+        "productive_utilization": 0.36,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 9
+        },
+        "mature_crops_waiting": 0,
+        "shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "worker_inventories": [
+          {},
+          {}
+        ],
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 9,
+            "crop": 9,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 16,
+            "utilization": 0.36
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 9,
+            "WATER": 4,
+            "PASS": 10
+          },
+          "hands": {
+            "MOVE": 9,
+            "WATER": 5,
+            "PASS": 8
+          },
+          "market": {
+            "HIRE": 1
+          },
+          "plant": {},
+          "sell": {}
+        }
+      },
+      {
+        "day": 10,
+        "turn": 263,
+        "money": 2269.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 1,
+        "owned_tiles": 25,
+        "active_crop_tiles": 9,
+        "pasture_tiles": 0,
+        "active_animals": 0,
+        "weed_tiles": 1,
+        "idle_owned_tiles": 15,
+        "productive_utilization": 0.36,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 9
+        },
+        "mature_crops_waiting": 0,
+        "shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "worker_inventories": [
+          {},
+          {}
+        ],
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 9,
+            "crop": 9,
+            "pasture": 0,
+            "weed": 1,
+            "idle": 15,
+            "utilization": 0.36
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 9,
+            "WATER": 4,
+            "PASS": 10
+          },
+          "hands": {
+            "MOVE": 9,
+            "WATER": 5,
+            "PASS": 8
+          },
+          "market": {
+            "HIRE": 1
+          },
+          "plant": {},
+          "sell": {}
+        }
+      },
+      {
+        "day": 15,
+        "turn": 383,
+        "money": 12038.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 3,
+        "owned_tiles": 50,
+        "active_crop_tiles": 26,
+        "pasture_tiles": 0,
+        "active_animals": 0,
+        "weed_tiles": 1,
+        "idle_owned_tiles": 23,
+        "productive_utilization": 0.52,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 17,
+          "MELON": 9
+        },
+        "mature_crops_waiting": 0,
+        "shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "worker_inventories": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 15,
+            "crop": 15,
+            "pasture": 0,
+            "weed": 1,
+            "idle": 9,
+            "utilization": 0.6
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 11,
+            "crop": 11,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 14,
+            "utilization": 0.44
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 9,
+            "WATER": 4,
+            "PASS": 10
+          },
+          "hands": {
+            "MOVE": 31,
+            "WATER": 22,
+            "PASS": 9,
+            "PLANT": 4
+          },
+          "market": {
+            "HIRE": 3
+          },
+          "plant": {},
+          "sell": {}
+        }
+      },
+      {
+        "day": 20,
+        "turn": 503,
+        "money": 12018.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 3,
+        "owned_tiles": 50,
+        "active_crop_tiles": 27,
+        "pasture_tiles": 0,
+        "active_animals": 0,
+        "weed_tiles": 2,
+        "idle_owned_tiles": 21,
+        "productive_utilization": 0.54,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 18,
+          "MELON": 9
+        },
+        "mature_crops_waiting": 0,
+        "shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "worker_inventories": [
+          {},
+          {},
+          {},
+          {}
+        ],
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 15,
+            "crop": 15,
+            "pasture": 0,
+            "weed": 2,
+            "idle": 8,
+            "utilization": 0.6
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 12,
+            "crop": 12,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 13,
+            "utilization": 0.48
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 9,
+            "WATER": 4,
+            "PASS": 10
+          },
+          "hands": {
+            "MOVE": 32,
+            "WATER": 23,
+            "PASS": 11
+          },
+          "market": {
+            "HIRE": 3
+          },
+          "plant": {},
+          "sell": {}
+        }
+      },
+      {
+        "day": 25,
+        "turn": 623,
+        "money": 21303.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 3,
+        "owned_tiles": 50,
+        "active_crop_tiles": 27,
+        "pasture_tiles": 0,
+        "active_animals": 0,
+        "weed_tiles": 2,
+        "idle_owned_tiles": 21,
+        "productive_utilization": 0.54,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 27,
+          "MELON": 0
+        },
+        "mature_crops_waiting": 17,
+        "shed": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "COW": 0,
+          "SHEEP": 0
+        },
+        "worker_inventories": [
+          {},
+          {
+            "MELON": 12
+          },
+          {
+            "STRAWBERRY": 1
+          },
+          {}
+        ],
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 15,
+            "crop": 15,
+            "pasture": 0,
+            "weed": 2,
+            "idle": 8,
+            "utilization": 0.6
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 12,
+            "crop": 12,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 13,
+            "utilization": 0.48
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 9,
+            "WATER": 4,
+            "PASS": 10
+          },
+          "hands": {
+            "MOVE": 22,
+            "HARVEST": 35,
+            "WATER": 6,
+            "PLANT": 2,
+            "PASS": 1
+          },
+          "market": {
+            "SELL": 2,
+            "HIRE": 3,
+            "BUY_SEED": 2
+          },
+          "plant": {
+            "STRAWBERRY": 2
+          },
+          "sell": {
+            "STRAWBERRY": 2,
+            "MELON": 42
+          }
+        }
+      }
+    ],
+    "final_snapshot": {
+      "day": 29,
+      "turn": 719,
+      "money": 24827.0,
+      "owned_quadrants": [
+        "NW",
+        "NE"
+      ],
+      "hands": 3,
+      "owned_tiles": 50,
+      "active_crop_tiles": 9,
+      "pasture_tiles": 0,
+      "active_animals": 0,
+      "weed_tiles": 20,
+      "idle_owned_tiles": 21,
+      "productive_utilization": 0.18,
+      "crop_counts": {
+        "WHEAT": 0,
+        "CARROT": 0,
+        "TOMATO": 0,
+        "STRAWBERRY": 9,
+        "MELON": 0
+      },
+      "mature_crops_waiting": 0,
+      "shed": {
+        "WHEAT": 0,
+        "CARROT": 0,
+        "TOMATO": 0,
+        "STRAWBERRY": 0,
+        "MELON": 0,
+        "EGG": 0,
+        "MILK": 0,
+        "WOOL": 0,
+        "FERTILIZER": 0,
+        "GOOSE": 0,
+        "COW": 0,
+        "SHEEP": 0
+      },
+      "worker_inventories": [
+        {},
+        {},
+        {},
+        {}
+      ],
+      "quadrants": {
+        "NW": {
+          "owned": 25,
+          "productive": 9,
+          "crop": 9,
+          "pasture": 0,
+          "weed": 8,
+          "idle": 8,
+          "utilization": 0.36
+        },
+        "NE": {
+          "owned": 25,
+          "productive": 0,
+          "crop": 0,
+          "pasture": 0,
+          "weed": 12,
+          "idle": 13,
+          "utilization": 0.0
+        },
+        "SW": {
+          "owned": 0,
+          "productive": 0,
+          "crop": 0,
+          "pasture": 0,
+          "weed": 0,
+          "idle": 0,
+          "utilization": 0.0
+        },
+        "SE": {
+          "owned": 0,
+          "productive": 0,
+          "crop": 0,
+          "pasture": 0,
+          "weed": 0,
+          "idle": 0,
+          "utilization": 0.0
+        }
+      },
+      "actions": {
+        "farmer": {
+          "MOVE": 9,
+          "WATER": 4,
+          "PASS": 10
+        },
+        "hands": {
+          "MOVE": 9,
+          "PASS": 52,
+          "WATER": 5
+        },
+        "market": {
+          "HIRE": 3
+        },
+        "plant": {},
+        "sell": {}
+      }
+    }
+  },
+  "truebelief": {
+    "source": "docs\\101294736.json",
+    "episode_id": 101294736,
+    "raw_sha256": "6281fdd32497c9db28e3d924ad8a55b12f841a5b1309164328679aa4f5ee8695",
+    "schema_version": 1,
+    "module_version": "1.32.7",
+    "engine_version": "0.1.0",
+    "configuration": {
+      "actTimeout": 1,
+      "boardSize": 10,
+      "episodeSteps": 720,
+      "farmHandCostMult": 1,
+      "marketParams": {},
+      "maxMarketOrdersPerTurn": 10,
+      "runTimeout": 1200,
+      "seed": null,
+      "shedCapacity": 100,
+      "startingMoney": 3000,
+      "townCenterSellInterval": 24,
+      "townShopSellInterval": 4,
+      "townShopUnlockInterval": 3,
+      "turnsPerDay": 24,
+      "weedSpawnChance": 0.005
+    },
+    "steps": 720,
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "rewards": [
+      6825.0,
+      86297.0
+    ],
+    "seed": 421521921,
+    "agent_index": 1,
+    "observed_final_money": 86297.0,
+    "snapshots": [
+      {
+        "day": 1,
+        "raw_day": 0,
+        "hour": 23,
+        "money": 928.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 5,
+        "owned_tiles": 25,
+        "active_crop_tiles": 21,
+        "pasture_tiles": 4,
+        "active_animals": 0,
+        "livestock_counts": {},
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 6,
+          "STRAWBERRY": 7,
+          "MELON": 8
+        },
+        "shed": {},
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 12
+        },
+        "worker_inventory": {},
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 21,
+            "pasture": 4,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "BUILD_PASTURE": 2,
+            "MOVE": 7,
+            "PLANT": 4,
+            "WATER": 4,
+            "PASS": 6
+          },
+          "hands": {
+            "MOVE": 37,
+            "BUILD_PASTURE": 2,
+            "PLANT": 17,
+            "WATER": 17,
+            "PASS": 37
+          },
+          "market": {
+            "HIRE": 5,
+            "BUY_SEED:MELON": 11,
+            "BUY_SEED:STRAWBERRY": 10,
+            "BUY_SEED:WHEAT": 18
+          },
+          "market_orders": {
+            "HIRE": 5,
+            "BUY_SEED": 4
+          },
+          "sell": {},
+          "buy_seed": {
+            "MELON": 11,
+            "STRAWBERRY": 10,
+            "WHEAT": 18
+          },
+          "buy_product": {},
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 2,
+        "raw_day": 1,
+        "hour": 23,
+        "money": 916.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 5,
+        "owned_tiles": 25,
+        "active_crop_tiles": 21,
+        "pasture_tiles": 4,
+        "active_animals": 0,
+        "livestock_counts": {},
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 6,
+          "STRAWBERRY": 7,
+          "MELON": 8
+        },
+        "shed": {},
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 12
+        },
+        "worker_inventory": {},
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 21,
+            "pasture": 4,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PASS": 12,
+            "MOVE": 8,
+            "WATER": 4
+          },
+          "hands": {
+            "PASS": 63,
+            "MOVE": 35,
+            "WATER": 17
+          },
+          "market": {
+            "HIRE": 5
+          },
+          "market_orders": {
+            "HIRE": 5
+          },
+          "sell": {},
+          "buy_seed": {},
+          "buy_product": {},
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 3,
+        "raw_day": 2,
+        "hour": 23,
+        "money": 904.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 5,
+        "owned_tiles": 25,
+        "active_crop_tiles": 21,
+        "pasture_tiles": 4,
+        "active_animals": 0,
+        "livestock_counts": {},
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 6,
+          "STRAWBERRY": 7,
+          "MELON": 8
+        },
+        "shed": {},
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 12
+        },
+        "worker_inventory": {},
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 21,
+            "pasture": 4,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PASS": 12,
+            "MOVE": 8,
+            "WATER": 4
+          },
+          "hands": {
+            "PASS": 63,
+            "MOVE": 35,
+            "WATER": 17
+          },
+          "market": {
+            "HIRE": 5
+          },
+          "market_orders": {
+            "HIRE": 5
+          },
+          "sell": {},
+          "buy_seed": {},
+          "buy_product": {},
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 4,
+        "raw_day": 3,
+        "hour": 23,
+        "money": 892.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 5,
+        "owned_tiles": 25,
+        "active_crop_tiles": 21,
+        "pasture_tiles": 4,
+        "active_animals": 0,
+        "livestock_counts": {},
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 6,
+          "STRAWBERRY": 7,
+          "MELON": 8
+        },
+        "shed": {},
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 12
+        },
+        "worker_inventory": {},
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 21,
+            "pasture": 4,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PASS": 12,
+            "MOVE": 8,
+            "WATER": 4
+          },
+          "hands": {
+            "PASS": 63,
+            "MOVE": 35,
+            "WATER": 17
+          },
+          "market": {
+            "HIRE": 5
+          },
+          "market_orders": {
+            "HIRE": 5
+          },
+          "sell": {},
+          "buy_seed": {},
+          "buy_product": {},
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 5,
+        "raw_day": 4,
+        "hour": 23,
+        "money": 876.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 5,
+        "owned_tiles": 25,
+        "active_crop_tiles": 21,
+        "pasture_tiles": 4,
+        "active_animals": 0,
+        "livestock_counts": {},
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 6,
+          "STRAWBERRY": 7,
+          "MELON": 8
+        },
+        "shed": {},
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 6
+        },
+        "worker_inventory": {
+          "COW": 1
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 21,
+            "pasture": 4,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PASS": 1,
+            "MOVE": 14,
+            "HARVEST": 1,
+            "PLANT": 1,
+            "WATER": 5,
+            "PLACE": 1,
+            "PICKUP": 1
+          },
+          "hands": {
+            "PASS": 14,
+            "MOVE": 70,
+            "HARVEST": 5,
+            "PLANT": 5,
+            "WATER": 16,
+            "PLACE": 5
+          },
+          "market": {
+            "HIRE": 5,
+            "SELL:WHEAT": 18,
+            "BUY_ANIMAL:COW": 1
+          },
+          "market_orders": {
+            "HIRE": 5,
+            "SELL": 4,
+            "BUY_ANIMAL": 1
+          },
+          "sell": {
+            "WHEAT": 18
+          },
+          "buy_seed": {},
+          "buy_product": {},
+          "buy_animal": {
+            "COW": 1
+          }
+        }
+      },
+      {
+        "day": 6,
+        "raw_day": 5,
+        "hour": 23,
+        "money": 864.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 5,
+        "owned_tiles": 25,
+        "active_crop_tiles": 21,
+        "pasture_tiles": 4,
+        "active_animals": 0,
+        "livestock_counts": {},
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 6,
+          "STRAWBERRY": 7,
+          "MELON": 8
+        },
+        "shed": {},
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 6
+        },
+        "worker_inventory": {
+          "COW": 1
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 21,
+            "pasture": 4,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PASS": 11,
+            "PICKUP": 1,
+            "MOVE": 8,
+            "WATER": 4
+          },
+          "hands": {
+            "PASS": 62,
+            "MOVE": 36,
+            "WATER": 17
+          },
+          "market": {
+            "HIRE": 5
+          },
+          "market_orders": {
+            "HIRE": 5
+          },
+          "sell": {},
+          "buy_seed": {},
+          "buy_product": {},
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 7,
+        "raw_day": 6,
+        "hour": 23,
+        "money": 852.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 5,
+        "owned_tiles": 25,
+        "active_crop_tiles": 21,
+        "pasture_tiles": 4,
+        "active_animals": 0,
+        "livestock_counts": {},
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 6,
+          "STRAWBERRY": 7,
+          "MELON": 8
+        },
+        "shed": {},
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 6
+        },
+        "worker_inventory": {
+          "COW": 1
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 21,
+            "pasture": 4,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PASS": 11,
+            "PICKUP": 1,
+            "MOVE": 8,
+            "WATER": 4
+          },
+          "hands": {
+            "PASS": 62,
+            "MOVE": 36,
+            "WATER": 17
+          },
+          "market": {
+            "HIRE": 5
+          },
+          "market_orders": {
+            "HIRE": 5
+          },
+          "sell": {},
+          "buy_seed": {},
+          "buy_product": {},
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 8,
+        "raw_day": 7,
+        "hour": 23,
+        "money": 840.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 5,
+        "owned_tiles": 25,
+        "active_crop_tiles": 21,
+        "pasture_tiles": 4,
+        "active_animals": 0,
+        "livestock_counts": {},
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 6,
+          "STRAWBERRY": 7,
+          "MELON": 8
+        },
+        "shed": {},
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 6
+        },
+        "worker_inventory": {
+          "COW": 1
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 21,
+            "pasture": 4,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PASS": 11,
+            "PICKUP": 1,
+            "MOVE": 8,
+            "WATER": 4
+          },
+          "hands": {
+            "PASS": 62,
+            "MOVE": 36,
+            "WATER": 17
+          },
+          "market": {
+            "HIRE": 5
+          },
+          "market_orders": {
+            "HIRE": 5
+          },
+          "sell": {},
+          "buy_seed": {},
+          "buy_product": {},
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 9,
+        "raw_day": 8,
+        "hour": 23,
+        "money": 718.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 5,
+        "owned_tiles": 25,
+        "active_crop_tiles": 21,
+        "pasture_tiles": 4,
+        "active_animals": 0,
+        "livestock_counts": {},
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 6,
+          "STRAWBERRY": 7,
+          "MELON": 8
+        },
+        "shed": {},
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 4
+        },
+        "worker_inventory": {
+          "COW": 2,
+          "WHEAT": 3
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 21,
+            "pasture": 4,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PASS": 1,
+            "PICKUP": 1,
+            "MOVE": 16,
+            "HARVEST": 1,
+            "WATER": 4,
+            "PLANT": 1
+          },
+          "hands": {
+            "PASS": 15,
+            "MOVE": 67,
+            "HARVEST": 5,
+            "WATER": 17,
+            "PLANT": 5,
+            "PLACE": 5,
+            "PICKUP": 1
+          },
+          "market": {
+            "HIRE": 5,
+            "BUY_SEED:WHEAT": 4,
+            "SELL:WHEAT": 15,
+            "BUY_ANIMAL:COW": 1
+          },
+          "market_orders": {
+            "HIRE": 5,
+            "BUY_SEED": 2,
+            "SELL": 5,
+            "BUY_ANIMAL": 1
+          },
+          "sell": {
+            "WHEAT": 15
+          },
+          "buy_seed": {
+            "WHEAT": 4
+          },
+          "buy_product": {},
+          "buy_animal": {
+            "COW": 1
+          }
+        }
+      },
+      {
+        "day": 10,
+        "raw_day": 9,
+        "hour": 23,
+        "money": 684.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 5,
+        "owned_tiles": 25,
+        "active_crop_tiles": 21,
+        "pasture_tiles": 4,
+        "active_animals": 1,
+        "livestock_counts": {
+          "COW": 1
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 6,
+          "STRAWBERRY": 7,
+          "MELON": 8
+        },
+        "shed": {
+          "WHEAT": 3
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 4
+        },
+        "worker_inventory": {
+          "COW": 1
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 21,
+            "pasture": 4,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PLACE": 3,
+            "PICKUP": 3,
+            "FEED": 1,
+            "CARE": 1,
+            "MOVE": 8,
+            "WATER": 2,
+            "PASS": 6
+          },
+          "hands": {
+            "PASS": 55,
+            "MOVE": 41,
+            "WATER": 19
+          },
+          "market": {
+            "SELL:WHEAT": 3,
+            "HIRE": 5,
+            "BUY_PRODUCT:WHEAT": 4
+          },
+          "market_orders": {
+            "SELL": 1,
+            "HIRE": 5,
+            "BUY_PRODUCT": 2
+          },
+          "sell": {
+            "WHEAT": 3
+          },
+          "buy_seed": {},
+          "buy_product": {
+            "WHEAT": 4
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 11,
+        "raw_day": 10,
+        "hour": 23,
+        "money": 1794.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 5,
+        "owned_tiles": 50,
+        "active_crop_tiles": 17,
+        "pasture_tiles": 4,
+        "active_animals": 3,
+        "livestock_counts": {
+          "COW": 3
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 29,
+        "productive_utilization": 0.42,
+        "crop_counts": {
+          "WHEAT": 6,
+          "STRAWBERRY": 8,
+          "MELON": 3
+        },
+        "shed": {
+          "COW": 4,
+          "WHEAT": 4
+        },
+        "seeds": {
+          "MELON": 8,
+          "STRAWBERRY": 13,
+          "WHEAT": 26
+        },
+        "worker_inventory": {
+          "FERTILIZER": 1,
+          "WHEAT": 1,
+          "MELON": 24,
+          "STRAWBERRY": 7
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 21,
+            "crop": 17,
+            "pasture": 4,
+            "weed": 0,
+            "idle": 4,
+            "utilization": 0.84
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 25,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PASS": 1,
+            "PICKUP": 2,
+            "FEED": 2,
+            "MOVE": 11,
+            "WATER": 3,
+            "HARVEST": 2,
+            "PLACE": 2,
+            "COLLECT_FERTILIZER": 1
+          },
+          "hands": {
+            "PASS": 5,
+            "MOVE": 67,
+            "CARE": 1,
+            "WATER": 22,
+            "HARVEST": 13,
+            "PLANT": 4,
+            "PLACE": 2,
+            "PICKUP": 1
+          },
+          "market": {
+            "HIRE": 5,
+            "BUY_PRODUCT:WHEAT": 4,
+            "BUY_SEED:MELON": 8,
+            "SELL:MELON": 24,
+            "BUY_LAND": 1,
+            "BUY_ANIMAL:COW": 5,
+            "BUY_SEED:STRAWBERRY": 11,
+            "BUY_SEED:WHEAT": 22
+          },
+          "market_orders": {
+            "HIRE": 5,
+            "BUY_PRODUCT": 2,
+            "BUY_SEED": 7,
+            "SELL": 2,
+            "BUY_LAND": 1,
+            "BUY_ANIMAL": 3
+          },
+          "sell": {
+            "MELON": 24
+          },
+          "buy_seed": {
+            "MELON": 8,
+            "STRAWBERRY": 11,
+            "WHEAT": 22
+          },
+          "buy_product": {
+            "WHEAT": 4
+          },
+          "buy_animal": {
+            "COW": 5
+          }
+        }
+      },
+      {
+        "day": 12,
+        "raw_day": 11,
+        "hour": 23,
+        "money": 5223.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 6,
+        "owned_tiles": 50,
+        "active_crop_tiles": 22,
+        "pasture_tiles": 9,
+        "active_animals": 8,
+        "livestock_counts": {
+          "SHEEP": 2,
+          "COW": 6
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 19,
+        "productive_utilization": 0.62,
+        "crop_counts": {
+          "WHEAT": 6,
+          "STRAWBERRY": 11,
+          "MELON": 5
+        },
+        "shed": {
+          "SHEEP": 1,
+          "WHEAT": 13
+        },
+        "seeds": {
+          "MELON": 6,
+          "STRAWBERRY": 10,
+          "WHEAT": 26
+        },
+        "worker_inventory": {
+          "COW": 3,
+          "FERTILIZER": 2,
+          "WHEAT": 11,
+          "SHEEP": 2
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 23,
+            "crop": 19,
+            "pasture": 4,
+            "weed": 0,
+            "idle": 2,
+            "utilization": 0.92
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 8,
+            "crop": 3,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 17,
+            "utilization": 0.32
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 14,
+            "PICKUP": 3,
+            "FEED": 2,
+            "BUILD_PASTURE": 1,
+            "WATER": 1,
+            "PLACE": 1,
+            "COLLECT_FERTILIZER": 2
+          },
+          "hands": {
+            "MOVE": 77,
+            "BUILD_PASTURE": 4,
+            "PICKUP": 12,
+            "FEED": 5,
+            "PLACE": 4,
+            "PASS": 1,
+            "WATER": 21,
+            "CARE": 7,
+            "PLANT": 5
+          },
+          "market": {
+            "BUY_PRODUCT:WHEAT": 26,
+            "HIRE": 6,
+            "SELL:MELON": 24,
+            "SELL:STRAWBERRY": 7,
+            "SELL:FERTILIZER": 1,
+            "BUY_ANIMAL:COW": 2,
+            "BUY_ANIMAL:SHEEP": 5
+          },
+          "market_orders": {
+            "BUY_PRODUCT": 11,
+            "HIRE": 6,
+            "SELL": 3,
+            "BUY_ANIMAL": 7
+          },
+          "sell": {
+            "MELON": 24,
+            "STRAWBERRY": 7,
+            "FERTILIZER": 1
+          },
+          "buy_seed": {},
+          "buy_product": {
+            "WHEAT": 26
+          },
+          "buy_animal": {
+            "COW": 2,
+            "SHEEP": 5
+          }
+        }
+      },
+      {
+        "day": 13,
+        "raw_day": 12,
+        "hour": 23,
+        "money": 4969.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 9,
+        "owned_tiles": 50,
+        "active_crop_tiles": 25,
+        "pasture_tiles": 11,
+        "active_animals": 10,
+        "livestock_counts": {
+          "SHEEP": 3,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 14,
+        "productive_utilization": 0.72,
+        "crop_counts": {
+          "WHEAT": 1,
+          "STRAWBERRY": 15,
+          "MELON": 9
+        },
+        "shed": {
+          "COW": 1
+        },
+        "seeds": {
+          "MELON": 4,
+          "STRAWBERRY": 7,
+          "WHEAT": 25
+        },
+        "worker_inventory": {
+          "STRAWBERRY": 7,
+          "WHEAT": 40,
+          "COW": 1,
+          "FERTILIZER": 3,
+          "SHEEP": 2
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 23,
+            "crop": 17,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 2,
+            "utilization": 0.92
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 13,
+            "crop": 8,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 12,
+            "utilization": 0.52
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 13,
+            "PICKUP": 1,
+            "FEED": 1,
+            "CARE": 1,
+            "WATER": 5,
+            "HARVEST": 3
+          },
+          "hands": {
+            "PICKUP": 10,
+            "COLLECT_FERTILIZER": 4,
+            "MOVE": 101,
+            "PASS": 29,
+            "FEED": 8,
+            "CARE": 9,
+            "PLACE": 2,
+            "HARVEST": 10,
+            "BUILD_PASTURE": 2,
+            "WATER": 19,
+            "PLANT": 9
+          },
+          "market": {
+            "HIRE": 9,
+            "SELL:FERTILIZER": 3,
+            "BUY_PRODUCT:WHEAT": 7,
+            "BUY_SEED:MELON": 2,
+            "BUY_SEED:STRAWBERRY": 1
+          },
+          "market_orders": {
+            "HIRE": 9,
+            "SELL": 1,
+            "BUY_PRODUCT": 2,
+            "BUY_SEED": 2
+          },
+          "sell": {
+            "FERTILIZER": 3
+          },
+          "buy_seed": {
+            "MELON": 2,
+            "STRAWBERRY": 1
+          },
+          "buy_product": {
+            "WHEAT": 7
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 14,
+        "raw_day": 13,
+        "hour": 23,
+        "money": 6515.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 10,
+        "owned_tiles": 50,
+        "active_crop_tiles": 37,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 2,
+        "productive_utilization": 0.96,
+        "crop_counts": {
+          "WHEAT": 8,
+          "STRAWBERRY": 19,
+          "MELON": 10
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1,
+          "WHEAT": 5
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 18
+        },
+        "worker_inventory": {
+          "WHEAT": 28,
+          "FERTILIZER": 4
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 19,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 23,
+            "crop": 18,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 2,
+            "utilization": 0.92
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 11,
+            "PICKUP": 1,
+            "FEED": 1,
+            "CARE": 1,
+            "WATER": 6,
+            "PLANT": 4
+          },
+          "hands": {
+            "MOVE": 133,
+            "PICKUP": 8,
+            "WATER": 31,
+            "PASS": 22,
+            "FEED": 10,
+            "CARE": 10,
+            "PLACE": 1,
+            "PLANT": 8,
+            "COLLECT_FERTILIZER": 4
+          },
+          "market": {
+            "HIRE": 10,
+            "SELL:STRAWBERRY": 7,
+            "SELL:WHEAT": 10,
+            "SELL:FERTILIZER": 3,
+            "BUY_PRODUCT:WHEAT": 14
+          },
+          "market_orders": {
+            "HIRE": 10,
+            "SELL": 3,
+            "BUY_PRODUCT": 7
+          },
+          "sell": {
+            "STRAWBERRY": 7,
+            "WHEAT": 10,
+            "FERTILIZER": 3
+          },
+          "buy_seed": {},
+          "buy_product": {
+            "WHEAT": 14
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 15,
+        "raw_day": 14,
+        "hour": 23,
+        "money": 6595.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 10,
+        "owned_tiles": 50,
+        "active_crop_tiles": 39,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 10,
+          "STRAWBERRY": 19,
+          "MELON": 10
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1,
+          "WHEAT": 7
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 15
+        },
+        "worker_inventory": {
+          "FERTILIZER": 5,
+          "STRAWBERRY": 7,
+          "WHEAT": 26
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 19,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 20,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 13,
+            "PICKUP": 1,
+            "FEED": 3,
+            "CARE": 1,
+            "WATER": 3,
+            "HARVEST": 2,
+            "COLLECT_FERTILIZER": 1
+          },
+          "hands": {
+            "COLLECT_FERTILIZER": 6,
+            "MOVE": 136,
+            "WATER": 37,
+            "PLANT": 3,
+            "PASS": 14,
+            "PICKUP": 7,
+            "FEED": 8,
+            "CARE": 10,
+            "HARVEST": 5,
+            "DIG": 1,
+            "PLACE": 1
+          },
+          "market": {
+            "HIRE": 10,
+            "SELL:FERTILIZER": 6,
+            "BUY_PRODUCT:WHEAT": 11
+          },
+          "market_orders": {
+            "HIRE": 10,
+            "SELL": 2,
+            "BUY_PRODUCT": 8
+          },
+          "sell": {
+            "FERTILIZER": 6
+          },
+          "buy_seed": {},
+          "buy_product": {
+            "WHEAT": 11
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 16,
+        "raw_day": 15,
+        "hour": 23,
+        "money": 8326.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 9,
+        "owned_tiles": 50,
+        "active_crop_tiles": 39,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 10,
+          "STRAWBERRY": 19,
+          "MELON": 10
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1,
+          "WHEAT": 7
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 15
+        },
+        "worker_inventory": {
+          "WHEAT": 26,
+          "FERTILIZER": 5
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 19,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 20,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 15,
+            "PICKUP": 1,
+            "FEED": 3,
+            "CARE": 1,
+            "WATER": 4
+          },
+          "hands": {
+            "MOVE": 124,
+            "COLLECT_FERTILIZER": 6,
+            "PLACE": 2,
+            "PASS": 15,
+            "PICKUP": 7,
+            "FEED": 8,
+            "CARE": 10,
+            "WATER": 35
+          },
+          "market": {
+            "SELL:STRAWBERRY": 7,
+            "HIRE": 9,
+            "SELL:FERTILIZER": 6,
+            "BUY_PRODUCT:WHEAT": 11
+          },
+          "market_orders": {
+            "SELL": 3,
+            "HIRE": 9,
+            "BUY_PRODUCT": 8
+          },
+          "sell": {
+            "STRAWBERRY": 7,
+            "FERTILIZER": 6
+          },
+          "buy_seed": {},
+          "buy_product": {
+            "WHEAT": 11
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 17,
+        "raw_day": 16,
+        "hour": 23,
+        "money": 8844.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 10,
+        "owned_tiles": 50,
+        "active_crop_tiles": 39,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 10,
+          "STRAWBERRY": 19,
+          "MELON": 10
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1,
+          "WHEAT": 4
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 14
+        },
+        "worker_inventory": {
+          "STRAWBERRY": 6,
+          "WHEAT": 29,
+          "FERTILIZER": 2
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 19,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 20,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 14,
+            "PICKUP": 1,
+            "FEED": 3,
+            "WATER": 4,
+            "HARVEST": 2
+          },
+          "hands": {
+            "COLLECT_FERTILIZER": 7,
+            "MOVE": 140,
+            "PASS": 13,
+            "PICKUP": 7,
+            "FEED": 8,
+            "CARE": 11,
+            "WATER": 34,
+            "HARVEST": 5,
+            "PLANT": 1,
+            "PLACE": 1
+          },
+          "market": {
+            "HIRE": 10,
+            "SELL:FERTILIZER": 10,
+            "BUY_PRODUCT:WHEAT": 11,
+            "SELL:WHEAT": 3
+          },
+          "market_orders": {
+            "HIRE": 10,
+            "SELL": 3,
+            "BUY_PRODUCT": 8
+          },
+          "sell": {
+            "FERTILIZER": 10,
+            "WHEAT": 3
+          },
+          "buy_seed": {},
+          "buy_product": {
+            "WHEAT": 11
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 18,
+        "raw_day": 17,
+        "hour": 23,
+        "money": 10810.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 10,
+        "owned_tiles": 50,
+        "active_crop_tiles": 39,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 17,
+          "STRAWBERRY": 12,
+          "MELON": 10
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 4
+        },
+        "worker_inventory": {
+          "MILK": 6,
+          "WHEAT": 47,
+          "WOOL": 11,
+          "FERTILIZER": 5
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 19,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 20,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 9,
+            "HARVEST": 1,
+            "PICKUP": 1,
+            "FEED": 3,
+            "CARE": 1,
+            "WATER": 5,
+            "DIG": 2,
+            "PLANT": 2
+          },
+          "hands": {
+            "COLLECT_FERTILIZER": 9,
+            "MOVE": 122,
+            "PLACE": 1,
+            "HARVEST": 10,
+            "PICKUP": 6,
+            "PASS": 11,
+            "FEED": 8,
+            "CARE": 10,
+            "WATER": 34,
+            "DIG": 5,
+            "PLANT": 12
+          },
+          "market": {
+            "HIRE": 10,
+            "SELL:STRAWBERRY": 7,
+            "SELL:FERTILIZER": 6,
+            "BUY_PRODUCT:WHEAT": 11,
+            "SELL:WHEAT": 7,
+            "BUY_SEED:WHEAT": 4
+          },
+          "market_orders": {
+            "HIRE": 10,
+            "SELL": 4,
+            "BUY_PRODUCT": 6,
+            "BUY_SEED": 2
+          },
+          "sell": {
+            "STRAWBERRY": 7,
+            "FERTILIZER": 6,
+            "WHEAT": 7
+          },
+          "buy_seed": {
+            "WHEAT": 4
+          },
+          "buy_product": {
+            "WHEAT": 11
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 19,
+        "raw_day": 18,
+        "hour": 23,
+        "money": 17467.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 11,
+        "owned_tiles": 50,
+        "active_crop_tiles": 39,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 17,
+          "STRAWBERRY": 12,
+          "MELON": 10
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1,
+          "WHEAT": 8
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 4
+        },
+        "worker_inventory": {
+          "WHEAT": 25,
+          "FERTILIZER": 3,
+          "MILK": 6,
+          "WOOL": 5
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 19,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 20,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 13,
+            "PICKUP": 1,
+            "FEED": 2,
+            "WATER": 4,
+            "COLLECT_FERTILIZER": 1,
+            "PLACE": 2,
+            "PASS": 1
+          },
+          "hands": {
+            "COLLECT_FERTILIZER": 10,
+            "MOVE": 146,
+            "PICKUP": 5,
+            "FEED": 9,
+            "HARVEST": 5,
+            "PASS": 20,
+            "CARE": 11,
+            "WATER": 35,
+            "PLANT": 2,
+            "PLACE": 6
+          },
+          "market": {
+            "HIRE": 11,
+            "SELL:WOOL": 11,
+            "SELL:MILK": 12,
+            "SELL:FERTILIZER": 13,
+            "SELL:WHEAT": 23,
+            "BUY_SEED:WHEAT": 2
+          },
+          "market_orders": {
+            "HIRE": 11,
+            "SELL": 10,
+            "BUY_SEED": 2
+          },
+          "sell": {
+            "WOOL": 11,
+            "MILK": 12,
+            "FERTILIZER": 13,
+            "WHEAT": 23
+          },
+          "buy_seed": {
+            "WHEAT": 2
+          },
+          "buy_product": {},
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 20,
+        "raw_day": 19,
+        "hour": 23,
+        "money": 24778.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 12,
+        "owned_tiles": 50,
+        "active_crop_tiles": 39,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "productive_utilization": 1.0,
+        "crop_counts": {
+          "WHEAT": 17,
+          "STRAWBERRY": 12,
+          "MELON": 10
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1,
+          "WHEAT": 27
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 4
+        },
+        "worker_inventory": {
+          "FERTILIZER": 5,
+          "MILK": 6,
+          "WHEAT": 6
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 19,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 20,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PASS": 1,
+            "PICKUP": 1,
+            "FEED": 2,
+            "MOVE": 14,
+            "WATER": 4,
+            "COLLECT_FERTILIZER": 1,
+            "PLACE": 1
+          },
+          "hands": {
+            "MOVE": 164,
+            "PLACE": 12,
+            "PASS": 20,
+            "HARVEST": 5,
+            "PICKUP": 6,
+            "FEED": 9,
+            "CARE": 11,
+            "WATER": 35,
+            "COLLECT_FERTILIZER": 9
+          },
+          "market": {
+            "HIRE": 12,
+            "SELL:MILK": 21,
+            "SELL:WOOL": 11,
+            "SELL:FERTILIZER": 8,
+            "BUY_PRODUCT:WHEAT": 11
+          },
+          "market_orders": {
+            "HIRE": 12,
+            "SELL": 10,
+            "BUY_PRODUCT": 7
+          },
+          "sell": {
+            "MILK": 21,
+            "WOOL": 11,
+            "FERTILIZER": 8
+          },
+          "buy_seed": {},
+          "buy_product": {
+            "WHEAT": 11
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 21,
+        "raw_day": 20,
+        "hour": 23,
+        "money": 27587.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 10,
+        "owned_tiles": 50,
+        "active_crop_tiles": 37,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 2,
+        "productive_utilization": 0.96,
+        "crop_counts": {
+          "WHEAT": 18,
+          "STRAWBERRY": 12,
+          "MELON": 7
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1,
+          "WHEAT": 3
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 4
+        },
+        "worker_inventory": {
+          "FERTILIZER": 7,
+          "MELON": 18,
+          "WHEAT": 30,
+          "WOOL": 8,
+          "MILK": 6,
+          "STRAWBERRY": 1
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 23,
+            "crop": 17,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 2,
+            "utilization": 0.92
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 25,
+            "crop": 20,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 1.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PLACE": 1,
+            "PICKUP": 1,
+            "FEED": 3,
+            "MOVE": 11,
+            "HARVEST": 2,
+            "WATER": 4,
+            "PLANT": 1,
+            "COLLECT_FERTILIZER": 1
+          },
+          "hands": {
+            "MOVE": 132,
+            "PASS": 19,
+            "PLACE": 4,
+            "PICKUP": 6,
+            "FEED": 8,
+            "HARVEST": 8,
+            "CARE": 11,
+            "WATER": 35,
+            "PLANT": 1,
+            "COLLECT_FERTILIZER": 6
+          },
+          "market": {
+            "SELL:FERTILIZER": 5,
+            "HIRE": 10,
+            "SELL:MILK": 12,
+            "BUY_PRODUCT:WHEAT": 11,
+            "SELL:WHEAT": 3,
+            "BUY_SEED:WHEAT": 2
+          },
+          "market_orders": {
+            "SELL": 5,
+            "HIRE": 10,
+            "BUY_PRODUCT": 7,
+            "BUY_SEED": 2
+          },
+          "sell": {
+            "FERTILIZER": 5,
+            "MILK": 12,
+            "WHEAT": 3
+          },
+          "buy_seed": {
+            "WHEAT": 2
+          },
+          "buy_product": {
+            "WHEAT": 11
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 22,
+        "raw_day": 21,
+        "hour": 23,
+        "money": 35307.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 12,
+        "owned_tiles": 50,
+        "active_crop_tiles": 34,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 5,
+        "productive_utilization": 0.9,
+        "crop_counts": {
+          "WHEAT": 17,
+          "STRAWBERRY": 12,
+          "MELON": 5
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 5
+        },
+        "worker_inventory": {
+          "STRAWBERRY": 3,
+          "WHEAT": 64,
+          "MELON": 12,
+          "WOOL": 4,
+          "FERTILIZER": 5,
+          "MILK": 9
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 22,
+            "crop": 16,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 3,
+            "utilization": 0.88
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 23,
+            "crop": 18,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 2,
+            "utilization": 0.92
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 13,
+            "PICKUP": 1,
+            "FEED": 3,
+            "CARE": 1,
+            "HARVEST": 3,
+            "WATER": 2,
+            "PLANT": 1
+          },
+          "hands": {
+            "MOVE": 155,
+            "COLLECT_FERTILIZER": 9,
+            "PASS": 11,
+            "PLACE": 4,
+            "PICKUP": 7,
+            "FEED": 8,
+            "HARVEST": 21,
+            "CARE": 10,
+            "WATER": 33,
+            "PLANT": 12
+          },
+          "market": {
+            "SELL:MILK": 9,
+            "HIRE": 12,
+            "SELL:MELON": 18,
+            "SELL:WOOL": 8,
+            "SELL:FERTILIZER": 11,
+            "SELL:STRAWBERRY": 1,
+            "BUY_PRODUCT:WHEAT": 11,
+            "SELL:WHEAT": 11,
+            "BUY_SEED:WHEAT": 14
+          },
+          "market_orders": {
+            "SELL": 11,
+            "HIRE": 12,
+            "BUY_PRODUCT": 8,
+            "BUY_SEED": 8
+          },
+          "sell": {
+            "MILK": 9,
+            "MELON": 18,
+            "WOOL": 8,
+            "FERTILIZER": 11,
+            "STRAWBERRY": 1,
+            "WHEAT": 11
+          },
+          "buy_seed": {
+            "WHEAT": 14
+          },
+          "buy_product": {
+            "WHEAT": 11
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 23,
+        "raw_day": 22,
+        "hour": 23,
+        "money": 44125.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 11,
+        "owned_tiles": 50,
+        "active_crop_tiles": 31,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 8,
+        "productive_utilization": 0.84,
+        "crop_counts": {
+          "WHEAT": 18,
+          "STRAWBERRY": 12,
+          "MELON": 1
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 4
+        },
+        "worker_inventory": {
+          "FERTILIZER": 7,
+          "MELON": 18,
+          "WHEAT": 45,
+          "STRAWBERRY": 3,
+          "WOOL": 4,
+          "MILK": 6
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 21,
+            "crop": 15,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 4,
+            "utilization": 0.84
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 21,
+            "crop": 16,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 4,
+            "utilization": 0.84
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "COLLECT_FERTILIZER": 2,
+            "PICKUP": 1,
+            "FEED": 3,
+            "MOVE": 14,
+            "WATER": 3,
+            "HARVEST": 1
+          },
+          "hands": {
+            "MOVE": 144,
+            "PASS": 13,
+            "WATER": 33,
+            "PLACE": 8,
+            "COLLECT_FERTILIZER": 10,
+            "PICKUP": 7,
+            "FEED": 8,
+            "CARE": 11,
+            "HARVEST": 14,
+            "PLANT": 3
+          },
+          "market": {
+            "SELL:FERTILIZER": 10,
+            "HIRE": 11,
+            "SELL:MELON": 18,
+            "SELL:MILK": 11,
+            "SELL:WHEAT": 45,
+            "SELL:STRAWBERRY": 5,
+            "SELL:WOOL": 4,
+            "BUY_SEED:WHEAT": 2
+          },
+          "market_orders": {
+            "SELL": 14,
+            "HIRE": 11,
+            "BUY_SEED": 2
+          },
+          "sell": {
+            "FERTILIZER": 10,
+            "MELON": 18,
+            "MILK": 11,
+            "WHEAT": 45,
+            "STRAWBERRY": 5,
+            "WOOL": 4
+          },
+          "buy_seed": {
+            "WHEAT": 2
+          },
+          "buy_product": {},
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 24,
+        "raw_day": 23,
+        "hour": 23,
+        "money": 53135.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 12,
+        "owned_tiles": 50,
+        "active_crop_tiles": 30,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 9,
+        "productive_utilization": 0.82,
+        "crop_counts": {
+          "WHEAT": 18,
+          "STRAWBERRY": 12
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1,
+          "WHEAT": 13
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 4
+        },
+        "worker_inventory": {
+          "WHEAT": 20,
+          "FERTILIZER": 7,
+          "STRAWBERRY": 5,
+          "MILK": 9
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 20,
+            "crop": 14,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 5,
+            "utilization": 0.8
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 21,
+            "crop": 16,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 4,
+            "utilization": 0.84
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PLACE": 1,
+            "PICKUP": 1,
+            "FEED": 4,
+            "MOVE": 16,
+            "WATER": 2
+          },
+          "hands": {
+            "MOVE": 164,
+            "PLACE": 16,
+            "PASS": 15,
+            "PICKUP": 4,
+            "FEED": 7,
+            "HARVEST": 14,
+            "CARE": 11,
+            "WATER": 29,
+            "COLLECT_FERTILIZER": 11
+          },
+          "market": {
+            "SELL:MILK": 9,
+            "SELL:MELON": 24,
+            "SELL:WHEAT": 12,
+            "SELL:STRAWBERRY": 5,
+            "SELL:FERTILIZER": 11,
+            "HIRE": 12,
+            "SELL:WOOL": 12,
+            "BUY_PRODUCT:WHEAT": 6
+          },
+          "market_orders": {
+            "SELL": 17,
+            "HIRE": 12,
+            "BUY_PRODUCT": 3
+          },
+          "sell": {
+            "MILK": 9,
+            "MELON": 24,
+            "WHEAT": 12,
+            "STRAWBERRY": 5,
+            "FERTILIZER": 11,
+            "WOOL": 12
+          },
+          "buy_seed": {},
+          "buy_product": {
+            "WHEAT": 6
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 25,
+        "raw_day": 24,
+        "hour": 23,
+        "money": 57172.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 11,
+        "owned_tiles": 50,
+        "active_crop_tiles": 30,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 9,
+        "productive_utilization": 0.82,
+        "crop_counts": {
+          "WHEAT": 18,
+          "STRAWBERRY": 12
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1,
+          "WHEAT": 2
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 4
+        },
+        "worker_inventory": {
+          "FERTILIZER": 5,
+          "STRAWBERRY": 5,
+          "WHEAT": 31,
+          "MILK": 9,
+          "WOOL": 4
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 20,
+            "crop": 14,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 5,
+            "utilization": 0.8
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 21,
+            "crop": 16,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 4,
+            "utilization": 0.84
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 15,
+            "PICKUP": 1,
+            "FEED": 3,
+            "CARE": 1,
+            "HARVEST": 2,
+            "WATER": 1,
+            "COLLECT_FERTILIZER": 1
+          },
+          "hands": {
+            "PLACE": 9,
+            "MOVE": 154,
+            "PASS": 16,
+            "PICKUP": 7,
+            "FEED": 8,
+            "CARE": 10,
+            "HARVEST": 9,
+            "WATER": 29,
+            "PLANT": 2,
+            "COLLECT_FERTILIZER": 7
+          },
+          "market": {
+            "SELL:MILK": 9,
+            "SELL:STRAWBERRY": 5,
+            "SELL:FERTILIZER": 10,
+            "HIRE": 11,
+            "BUY_PRODUCT:WHEAT": 11,
+            "SELL:WHEAT": 6,
+            "BUY_SEED:WHEAT": 2
+          },
+          "market_orders": {
+            "SELL": 10,
+            "HIRE": 11,
+            "BUY_PRODUCT": 8,
+            "BUY_SEED": 2
+          },
+          "sell": {
+            "MILK": 9,
+            "STRAWBERRY": 5,
+            "FERTILIZER": 10,
+            "WHEAT": 6
+          },
+          "buy_seed": {
+            "WHEAT": 2
+          },
+          "buy_product": {
+            "WHEAT": 11
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 26,
+        "raw_day": 25,
+        "hour": 23,
+        "money": 62344.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 11,
+        "owned_tiles": 50,
+        "active_crop_tiles": 30,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 9,
+        "productive_utilization": 0.82,
+        "crop_counts": {
+          "WHEAT": 18,
+          "STRAWBERRY": 12
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 5
+        },
+        "worker_inventory": {
+          "STRAWBERRY": 7,
+          "WHEAT": 66,
+          "FERTILIZER": 5,
+          "WOOL": 4,
+          "MILK": 9
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 20,
+            "crop": 14,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 5,
+            "utilization": 0.8
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 21,
+            "crop": 16,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 4,
+            "utilization": 0.84
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PLACE": 1,
+            "PICKUP": 1,
+            "FEED": 3,
+            "MOVE": 13,
+            "CARE": 1,
+            "HARVEST": 3,
+            "PLANT": 1,
+            "WATER": 1
+          },
+          "hands": {
+            "MOVE": 142,
+            "COLLECT_FERTILIZER": 7,
+            "PASS": 11,
+            "PLACE": 2,
+            "PICKUP": 7,
+            "FEED": 8,
+            "HARVEST": 22,
+            "CARE": 10,
+            "WATER": 29,
+            "PLANT": 12
+          },
+          "market": {
+            "SELL:WOOL": 4,
+            "HIRE": 11,
+            "SELL:MILK": 12,
+            "SELL:STRAWBERRY": 5,
+            "SELL:FERTILIZER": 7,
+            "BUY_PRODUCT:WHEAT": 11,
+            "SELL:WHEAT": 6,
+            "BUY_SEED:WHEAT": 14
+          },
+          "market_orders": {
+            "SELL": 7,
+            "HIRE": 11,
+            "BUY_PRODUCT": 8,
+            "BUY_SEED": 4
+          },
+          "sell": {
+            "WOOL": 4,
+            "MILK": 12,
+            "STRAWBERRY": 5,
+            "FERTILIZER": 7,
+            "WHEAT": 6
+          },
+          "buy_seed": {
+            "WHEAT": 14
+          },
+          "buy_product": {
+            "WHEAT": 11
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 27,
+        "raw_day": 26,
+        "hour": 23,
+        "money": 70890.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 11,
+        "owned_tiles": 50,
+        "active_crop_tiles": 30,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 9,
+        "productive_utilization": 0.82,
+        "crop_counts": {
+          "WHEAT": 18,
+          "STRAWBERRY": 12
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 4
+        },
+        "worker_inventory": {
+          "FERTILIZER": 6,
+          "STRAWBERRY": 4,
+          "WHEAT": 40,
+          "WOOL": 4,
+          "MILK": 6
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 20,
+            "crop": 14,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 5,
+            "utilization": 0.8
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 21,
+            "crop": 16,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 4,
+            "utilization": 0.84
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "COLLECT_FERTILIZER": 2,
+            "PICKUP": 1,
+            "FEED": 2,
+            "MOVE": 12,
+            "HARVEST": 2,
+            "WATER": 2,
+            "PLANT": 1,
+            "PLACE": 2
+          },
+          "hands": {
+            "MOVE": 163,
+            "PLACE": 8,
+            "COLLECT_FERTILIZER": 9,
+            "PICKUP": 8,
+            "FEED": 9,
+            "PASS": 1,
+            "CARE": 11,
+            "HARVEST": 11,
+            "WATER": 28,
+            "PLANT": 2
+          },
+          "market": {
+            "SELL:FERTILIZER": 10,
+            "HIRE": 11,
+            "SELL:MILK": 12,
+            "SELL:STRAWBERRY": 8,
+            "SELL:WHEAT": 57,
+            "SELL:WOOL": 8,
+            "BUY_SEED:WHEAT": 2
+          },
+          "market_orders": {
+            "SELL": 13,
+            "HIRE": 11,
+            "BUY_SEED": 2
+          },
+          "sell": {
+            "FERTILIZER": 10,
+            "MILK": 12,
+            "STRAWBERRY": 8,
+            "WHEAT": 57,
+            "WOOL": 8
+          },
+          "buy_seed": {
+            "WHEAT": 2
+          },
+          "buy_product": {},
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 28,
+        "raw_day": 27,
+        "hour": 23,
+        "money": 77325.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 11,
+        "owned_tiles": 50,
+        "active_crop_tiles": 29,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 0,
+        "idle_owned_tiles": 10,
+        "productive_utilization": 0.8,
+        "crop_counts": {
+          "WHEAT": 18,
+          "STRAWBERRY": 11
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1,
+          "WHEAT": 6
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 4
+        },
+        "worker_inventory": {
+          "STRAWBERRY": 5,
+          "WHEAT": 27,
+          "FERTILIZER": 8,
+          "MILK": 6
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 19,
+            "crop": 13,
+            "pasture": 6,
+            "weed": 0,
+            "idle": 6,
+            "utilization": 0.76
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 21,
+            "crop": 16,
+            "pasture": 5,
+            "weed": 0,
+            "idle": 4,
+            "utilization": 0.84
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "PLACE": 1,
+            "PICKUP": 1,
+            "FEED": 3,
+            "MOVE": 13,
+            "CARE": 1,
+            "HARVEST": 2,
+            "WATER": 2,
+            "DIG": 1
+          },
+          "hands": {
+            "MOVE": 152,
+            "PLACE": 8,
+            "PASS": 16,
+            "COLLECT_FERTILIZER": 12,
+            "PICKUP": 7,
+            "FEED": 8,
+            "HARVEST": 10,
+            "CARE": 10,
+            "WATER": 27
+          },
+          "market": {
+            "SELL:WHEAT": 7,
+            "SELL:FERTILIZER": 10,
+            "HIRE": 11,
+            "SELL:MILK": 12,
+            "SELL:STRAWBERRY": 6,
+            "SELL:WOOL": 8,
+            "BUY_PRODUCT:WHEAT": 11
+          },
+          "market_orders": {
+            "SELL": 12,
+            "HIRE": 11,
+            "BUY_PRODUCT": 8
+          },
+          "sell": {
+            "WHEAT": 7,
+            "FERTILIZER": 10,
+            "MILK": 12,
+            "STRAWBERRY": 6,
+            "WOOL": 8
+          },
+          "buy_seed": {},
+          "buy_product": {
+            "WHEAT": 11
+          },
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 29,
+        "raw_day": 28,
+        "hour": 23,
+        "money": 85048.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 0,
+        "owned_tiles": 50,
+        "active_crop_tiles": 23,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 3,
+        "idle_owned_tiles": 13,
+        "productive_utilization": 0.68,
+        "crop_counts": {
+          "WHEAT": 15,
+          "STRAWBERRY": 8
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 4
+        },
+        "worker_inventory": {
+          "STRAWBERRY": 1,
+          "WHEAT": 7,
+          "WOOL": 4
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 14,
+            "crop": 8,
+            "pasture": 6,
+            "weed": 2,
+            "idle": 9,
+            "utilization": 0.56
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 20,
+            "crop": 15,
+            "pasture": 5,
+            "weed": 1,
+            "idle": 4,
+            "utilization": 0.8
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "MOVE": 15,
+            "HARVEST": 8,
+            "PLACE": 1
+          },
+          "hands": {
+            "MOVE": 5,
+            "PLACE": 4,
+            "PASS": 2
+          },
+          "market": {
+            "SELL:FERTILIZER": 8,
+            "SELL:STRAWBERRY": 5,
+            "SELL:WHEAT": 33,
+            "SELL:MILK": 15
+          },
+          "market_orders": {
+            "SELL": 6
+          },
+          "sell": {
+            "FERTILIZER": 8,
+            "STRAWBERRY": 5,
+            "WHEAT": 33,
+            "MILK": 15
+          },
+          "buy_seed": {},
+          "buy_product": {},
+          "buy_animal": {}
+        }
+      },
+      {
+        "day": 30,
+        "raw_day": 29,
+        "hour": 23,
+        "money": 86297.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 0,
+        "owned_tiles": 50,
+        "active_crop_tiles": 16,
+        "pasture_tiles": 11,
+        "active_animals": 11,
+        "livestock_counts": {
+          "SHEEP": 4,
+          "COW": 7
+        },
+        "weed_tiles": 7,
+        "idle_owned_tiles": 16,
+        "productive_utilization": 0.54,
+        "crop_counts": {
+          "WHEAT": 12,
+          "STRAWBERRY": 4
+        },
+        "shed": {
+          "COW": 2,
+          "SHEEP": 1
+        },
+        "seeds": {
+          "MELON": 3,
+          "STRAWBERRY": 3,
+          "WHEAT": 4
+        },
+        "worker_inventory": {
+          "MILK": 4,
+          "WHEAT": 4,
+          "WOOL": 2
+        },
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 10,
+            "crop": 4,
+            "pasture": 6,
+            "weed": 3,
+            "idle": 12,
+            "utilization": 0.4
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 17,
+            "crop": 12,
+            "pasture": 5,
+            "weed": 4,
+            "idle": 4,
+            "utilization": 0.68
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "crop": 0,
+            "pasture": 0,
+            "weed": 0,
+            "idle": 0,
+            "utilization": 0.0
+          }
+        },
+        "actions": {
+          "farmer": {
+            "HARVEST": 9,
+            "MOVE": 15
+          },
+          "hands": {},
+          "market": {
+            "SELL:WOOL": 4,
+            "SELL:WHEAT": 9,
+            "SELL:STRAWBERRY": 1
+          },
+          "market_orders": {
+            "SELL": 3
+          },
+          "sell": {
+            "WOOL": 4,
+            "WHEAT": 9,
+            "STRAWBERRY": 1
+          },
+          "buy_seed": {},
+          "buy_product": {},
+          "buy_animal": {}
+        }
+      }
+    ],
+    "final_snapshot": {
+      "day": 30,
+      "raw_day": 29,
+      "hour": 23,
+      "money": 86297.0,
+      "owned_quadrants": [
+        "NW",
+        "NE"
+      ],
+      "hands": 0,
+      "owned_tiles": 50,
+      "active_crop_tiles": 16,
+      "pasture_tiles": 11,
+      "active_animals": 11,
+      "livestock_counts": {
+        "SHEEP": 4,
+        "COW": 7
+      },
+      "weed_tiles": 7,
+      "idle_owned_tiles": 16,
+      "productive_utilization": 0.54,
+      "crop_counts": {
+        "WHEAT": 12,
+        "STRAWBERRY": 4
+      },
+      "shed": {
+        "COW": 2,
+        "SHEEP": 1
+      },
+      "seeds": {
+        "MELON": 3,
+        "STRAWBERRY": 3,
+        "WHEAT": 4
+      },
+      "worker_inventory": {
+        "MILK": 4,
+        "WHEAT": 4,
+        "WOOL": 2
+      },
+      "quadrants": {
+        "NW": {
+          "owned": 25,
+          "productive": 10,
+          "crop": 4,
+          "pasture": 6,
+          "weed": 3,
+          "idle": 12,
+          "utilization": 0.4
+        },
+        "NE": {
+          "owned": 25,
+          "productive": 17,
+          "crop": 12,
+          "pasture": 5,
+          "weed": 4,
+          "idle": 4,
+          "utilization": 0.68
+        },
+        "SW": {
+          "owned": 0,
+          "productive": 0,
+          "crop": 0,
+          "pasture": 0,
+          "weed": 0,
+          "idle": 0,
+          "utilization": 0.0
+        },
+        "SE": {
+          "owned": 0,
+          "productive": 0,
+          "crop": 0,
+          "pasture": 0,
+          "weed": 0,
+          "idle": 0,
+          "utilization": 0.0
+        }
+      },
+      "actions": {
+        "farmer": {
+          "HARVEST": 9,
+          "MOVE": 15
+        },
+        "hands": {},
+        "market": {
+          "SELL:WOOL": 4,
+          "SELL:WHEAT": 9,
+          "SELL:STRAWBERRY": 1
+        },
+        "market_orders": {
+          "SELL": 3
+        },
+        "sell": {
+          "WOOL": 4,
+          "WHEAT": 9,
+          "STRAWBERRY": 1
+        },
+        "buy_seed": {},
+        "buy_product": {},
+        "buy_animal": {}
+      }
+    }
+  },
+  "historical_x19": {
+    "seed": 421521921,
+    "local_final_money": 8714.0,
+    "observed_kaggle_x19_final_money": 6825,
+    "observed_truebelief_final_money": 86297,
+    "milestones": [
+      {
+        "day": 1,
+        "turn": 24,
+        "money": 2753.0,
+        "owned_quadrants": [
+          "NW"
+        ],
+        "hands": 4,
+        "wheat_inventory": 0,
+        "other_crop_inventory": 0,
+        "animal_product_inventory": 0,
+        "inventory_value_local": 0.0,
+        "inventory_value_replay_snapshot": 0,
+        "total_liquidatable_local": 2753.0,
+        "crop_counts": {
+          "WHEAT": 21,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "active_animals": 0,
+        "animal_positions": [],
+        "core_a_animals": 0,
+        "core_b_animals": 0,
+        "off_core_animals": 0,
+        "owned_tiles": 25,
+        "usable_owned_tiles": 25,
+        "active_crop_tiles": 21,
+        "pasture_tiles": 4,
+        "weed_tiles": 0,
+        "idle_owned_tiles": 0,
+        "working_set_utilization": 1.0,
+        "radius5_owned_tiles": 24,
+        "radius5_crop_tiles": 20,
+        "radius5_pasture_tiles": 4,
+        "radius5_idle_tiles": 0,
+        "radius5_utilization": 1.0,
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 0,
+            "productive": 0,
+            "utilization": 0.0
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "utilization": 0.0
+          }
+        },
+        "worker_turn_capacity": 116,
+        "productive_actions": 47,
+        "movement": 43,
+        "idle": 26,
+        "farmer_actions": {
+          "MOVE": 6,
+          "BUILD_PASTURE": 4,
+          "PASS": 14
+        },
+        "hand_actions": {
+          "MOVE": 37,
+          "PLANT": 21,
+          "WATER": 22,
+          "PASS": 12
+        },
+        "hands_hired": 4,
+        "plant_actions": {
+          "WHEAT": 21,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "water_actions": 22,
+        "harvest_actions": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "harvest_units": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "feed_events": 0,
+        "wheat_purchased": 0,
+        "wheat_sold": 0,
+        "wheat_feed_consumed": 0,
+        "sales_units": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0
+        },
+        "sales_revenue_estimate": {
+          "WHEAT": 0.0,
+          "CARROT": 0.0,
+          "TOMATO": 0.0,
+          "STRAWBERRY": 0.0,
+          "MELON": 0.0,
+          "EGG": 0.0,
+          "MILK": 0.0,
+          "WOOL": 0.0,
+          "FERTILIZER": 0.0
+        },
+        "cow_bought": 0,
+        "land_bought": 0,
+        "new_weeds": 0,
+        "lost_to_weed": 0,
+        "harvested_but_not_replanted": 0
+      },
+      {
+        "day": 2,
+        "turn": 48,
+        "money": 741.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 5,
+        "wheat_inventory": 0,
+        "other_crop_inventory": 0,
+        "animal_product_inventory": 0,
+        "inventory_value_local": 0.0,
+        "inventory_value_replay_snapshot": 0,
+        "total_liquidatable_local": 741.0,
+        "crop_counts": {
+          "WHEAT": 26,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "active_animals": 0,
+        "animal_positions": [],
+        "core_a_animals": 0,
+        "core_b_animals": 0,
+        "off_core_animals": 0,
+        "owned_tiles": 50,
+        "usable_owned_tiles": 50,
+        "active_crop_tiles": 26,
+        "pasture_tiles": 8,
+        "weed_tiles": 0,
+        "idle_owned_tiles": 16,
+        "working_set_utilization": 0.68,
+        "radius5_owned_tiles": 48,
+        "radius5_crop_tiles": 25,
+        "radius5_pasture_tiles": 8,
+        "radius5_idle_tiles": 15,
+        "radius5_utilization": 0.688,
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 25,
+            "utilization": 1.0
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 9,
+            "utilization": 0.36
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "utilization": 0.0
+          }
+        },
+        "worker_turn_capacity": 139,
+        "productive_actions": 39,
+        "movement": 86,
+        "idle": 14,
+        "farmer_actions": {
+          "PASS": 14,
+          "MOVE": 6,
+          "BUILD_PASTURE": 4
+        },
+        "hand_actions": {
+          "MOVE": 80,
+          "WATER": 30,
+          "PLANT": 5
+        },
+        "hands_hired": 5,
+        "plant_actions": {
+          "WHEAT": 5,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "water_actions": 30,
+        "harvest_actions": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "harvest_units": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "feed_events": 0,
+        "wheat_purchased": 0,
+        "wheat_sold": 0,
+        "wheat_feed_consumed": 0,
+        "sales_units": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0
+        },
+        "sales_revenue_estimate": {
+          "WHEAT": 0.0,
+          "CARROT": 0.0,
+          "TOMATO": 0.0,
+          "STRAWBERRY": 0.0,
+          "MELON": 0.0,
+          "EGG": 0.0,
+          "MILK": 0.0,
+          "WOOL": 0.0,
+          "FERTILIZER": 0.0
+        },
+        "cow_bought": 0,
+        "land_bought": 1,
+        "new_weeds": 0,
+        "lost_to_weed": 0,
+        "harvested_but_not_replanted": 0
+      },
+      {
+        "day": 5,
+        "turn": 120,
+        "money": 1558.0,
+        "owned_quadrants": [
+          "NW",
+          "NE"
+        ],
+        "hands": 6,
+        "wheat_inventory": 16,
+        "other_crop_inventory": 0,
+        "animal_product_inventory": 0,
+        "inventory_value_local": 352.0,
+        "inventory_value_replay_snapshot": 816,
+        "total_liquidatable_local": 1910.0,
+        "crop_counts": {
+          "WHEAT": 18,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "active_animals": 0,
+        "animal_positions": [],
+        "core_a_animals": 0,
+        "core_b_animals": 0,
+        "off_core_animals": 0,
+        "owned_tiles": 50,
+        "usable_owned_tiles": 50,
+        "active_crop_tiles": 18,
+        "pasture_tiles": 8,
+        "weed_tiles": 0,
+        "idle_owned_tiles": 24,
+        "working_set_utilization": 0.52,
+        "radius5_owned_tiles": 48,
+        "radius5_crop_tiles": 18,
+        "radius5_pasture_tiles": 8,
+        "radius5_idle_tiles": 22,
+        "radius5_utilization": 0.542,
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 22,
+            "utilization": 0.88
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 4,
+            "utilization": 0.16
+          },
+          "SW": {
+            "owned": 0,
+            "productive": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "utilization": 0.0
+          }
+        },
+        "worker_turn_capacity": 162,
+        "productive_actions": 28,
+        "movement": 48,
+        "idle": 86,
+        "farmer_actions": {
+          "PASS": 24
+        },
+        "hand_actions": {
+          "MOVE": 48,
+          "WATER": 24,
+          "PLANT": 4,
+          "PASS": 62
+        },
+        "hands_hired": 6,
+        "plant_actions": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "water_actions": 24,
+        "harvest_actions": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "harvest_units": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "feed_events": 0,
+        "wheat_purchased": 0,
+        "wheat_sold": 4,
+        "wheat_feed_consumed": 0,
+        "sales_units": {
+          "WHEAT": 4,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0
+        },
+        "sales_revenue_estimate": {
+          "WHEAT": 88.0,
+          "CARROT": 0.0,
+          "TOMATO": 0.0,
+          "STRAWBERRY": 0.0,
+          "MELON": 0.0,
+          "EGG": 0.0,
+          "MILK": 0.0,
+          "WOOL": 0.0,
+          "FERTILIZER": 0.0
+        },
+        "cow_bought": 0,
+        "land_bought": 0,
+        "new_weeds": 0,
+        "lost_to_weed": 0,
+        "harvested_but_not_replanted": 0
+      },
+      {
+        "day": 8,
+        "turn": 192,
+        "money": 289.0,
+        "owned_quadrants": [
+          "NW",
+          "NE",
+          "SW"
+        ],
+        "hands": 6,
+        "wheat_inventory": 16,
+        "other_crop_inventory": 0,
+        "animal_product_inventory": 0,
+        "inventory_value_local": 336.0,
+        "inventory_value_replay_snapshot": 816,
+        "total_liquidatable_local": 625.0,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 8,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 8
+        },
+        "active_animals": 0,
+        "animal_positions": [],
+        "core_a_animals": 0,
+        "core_b_animals": 0,
+        "off_core_animals": 0,
+        "owned_tiles": 75,
+        "usable_owned_tiles": 75,
+        "active_crop_tiles": 16,
+        "pasture_tiles": 8,
+        "weed_tiles": 0,
+        "idle_owned_tiles": 51,
+        "working_set_utilization": 0.32,
+        "radius5_owned_tiles": 67,
+        "radius5_crop_tiles": 16,
+        "radius5_pasture_tiles": 8,
+        "radius5_idle_tiles": 43,
+        "radius5_utilization": 0.358,
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 14,
+            "utilization": 0.56
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 10,
+            "utilization": 0.4
+          },
+          "SW": {
+            "owned": 25,
+            "productive": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "utilization": 0.0
+          }
+        },
+        "worker_turn_capacity": 162,
+        "productive_actions": 32,
+        "movement": 49,
+        "idle": 81,
+        "farmer_actions": {
+          "PASS": 24
+        },
+        "hand_actions": {
+          "MOVE": 49,
+          "PLANT": 16,
+          "WATER": 16,
+          "PASS": 57
+        },
+        "hands_hired": 6,
+        "plant_actions": {
+          "WHEAT": 0,
+          "CARROT": 8,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 8
+        },
+        "water_actions": 16,
+        "harvest_actions": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "harvest_units": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "feed_events": 0,
+        "wheat_purchased": 0,
+        "wheat_sold": 0,
+        "wheat_feed_consumed": 0,
+        "sales_units": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0
+        },
+        "sales_revenue_estimate": {
+          "WHEAT": 0.0,
+          "CARROT": 0.0,
+          "TOMATO": 0.0,
+          "STRAWBERRY": 0.0,
+          "MELON": 0.0,
+          "EGG": 0.0,
+          "MILK": 0.0,
+          "WOOL": 0.0,
+          "FERTILIZER": 0.0
+        },
+        "cow_bought": 0,
+        "land_bought": 1,
+        "new_weeds": 0,
+        "lost_to_weed": 0,
+        "harvested_but_not_replanted": 0
+      },
+      {
+        "day": 10,
+        "turn": 240,
+        "money": 604.0,
+        "owned_quadrants": [
+          "NW",
+          "NE",
+          "SW"
+        ],
+        "hands": 8,
+        "wheat_inventory": 16,
+        "other_crop_inventory": 4,
+        "animal_product_inventory": 0,
+        "inventory_value_local": 484.0,
+        "inventory_value_replay_snapshot": 1028,
+        "total_liquidatable_local": 1088.0,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 8
+        },
+        "active_animals": 0,
+        "animal_positions": [],
+        "core_a_animals": 0,
+        "core_b_animals": 0,
+        "off_core_animals": 0,
+        "owned_tiles": 75,
+        "usable_owned_tiles": 75,
+        "active_crop_tiles": 8,
+        "pasture_tiles": 8,
+        "weed_tiles": 0,
+        "idle_owned_tiles": 59,
+        "working_set_utilization": 0.213,
+        "radius5_owned_tiles": 67,
+        "radius5_crop_tiles": 8,
+        "radius5_pasture_tiles": 8,
+        "radius5_idle_tiles": 51,
+        "radius5_utilization": 0.239,
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 9,
+            "utilization": 0.36
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 7,
+            "utilization": 0.28
+          },
+          "SW": {
+            "owned": 25,
+            "productive": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "utilization": 0.0
+          }
+        },
+        "worker_turn_capacity": 208,
+        "productive_actions": 33,
+        "movement": 84,
+        "idle": 91,
+        "farmer_actions": {
+          "PASS": 24
+        },
+        "hand_actions": {
+          "MOVE": 84,
+          "WATER": 22,
+          "HARVEST": 8,
+          "PASS": 67,
+          "DROP": 3
+        },
+        "hands_hired": 8,
+        "plant_actions": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "water_actions": 22,
+        "harvest_actions": {
+          "WHEAT": 0,
+          "CARROT": 8,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "harvest_units": {
+          "WHEAT": 0,
+          "CARROT": 16,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "feed_events": 0,
+        "wheat_purchased": 0,
+        "wheat_sold": 0,
+        "wheat_feed_consumed": 0,
+        "sales_units": {
+          "WHEAT": 0,
+          "CARROT": 12,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0
+        },
+        "sales_revenue_estimate": {
+          "WHEAT": 0.0,
+          "CARROT": 424.0,
+          "TOMATO": 0.0,
+          "STRAWBERRY": 0.0,
+          "MELON": 0.0,
+          "EGG": 0.0,
+          "MILK": 0.0,
+          "WOOL": 0.0,
+          "FERTILIZER": 0.0
+        },
+        "cow_bought": 0,
+        "land_bought": 0,
+        "new_weeds": 2,
+        "lost_to_weed": 0,
+        "harvested_but_not_replanted": 8
+      },
+      {
+        "day": 15,
+        "turn": 360,
+        "money": 465.0,
+        "owned_quadrants": [
+          "NW",
+          "NE",
+          "SW"
+        ],
+        "hands": 8,
+        "wheat_inventory": 16,
+        "other_crop_inventory": 0,
+        "animal_product_inventory": 0,
+        "inventory_value_local": 352.0,
+        "inventory_value_replay_snapshot": 816,
+        "total_liquidatable_local": 817.0,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 8
+        },
+        "active_animals": 0,
+        "animal_positions": [],
+        "core_a_animals": 0,
+        "core_b_animals": 0,
+        "off_core_animals": 0,
+        "owned_tiles": 75,
+        "usable_owned_tiles": 75,
+        "active_crop_tiles": 8,
+        "pasture_tiles": 8,
+        "weed_tiles": 0,
+        "idle_owned_tiles": 59,
+        "working_set_utilization": 0.213,
+        "radius5_owned_tiles": 67,
+        "radius5_crop_tiles": 8,
+        "radius5_pasture_tiles": 8,
+        "radius5_idle_tiles": 51,
+        "radius5_utilization": 0.239,
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 9,
+            "utilization": 0.36
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 7,
+            "utilization": 0.28
+          },
+          "SW": {
+            "owned": 25,
+            "productive": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "utilization": 0.0
+          }
+        },
+        "worker_turn_capacity": 208,
+        "productive_actions": 8,
+        "movement": 29,
+        "idle": 171,
+        "farmer_actions": {
+          "PASS": 24
+        },
+        "hand_actions": {
+          "MOVE": 29,
+          "WATER": 8,
+          "PASS": 147
+        },
+        "hands_hired": 8,
+        "plant_actions": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "water_actions": 8,
+        "harvest_actions": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "harvest_units": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "feed_events": 0,
+        "wheat_purchased": 0,
+        "wheat_sold": 0,
+        "wheat_feed_consumed": 0,
+        "sales_units": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0
+        },
+        "sales_revenue_estimate": {
+          "WHEAT": 0.0,
+          "CARROT": 0.0,
+          "TOMATO": 0.0,
+          "STRAWBERRY": 0.0,
+          "MELON": 0.0,
+          "EGG": 0.0,
+          "MILK": 0.0,
+          "WOOL": 0.0,
+          "FERTILIZER": 0.0
+        },
+        "cow_bought": 0,
+        "land_bought": 0,
+        "new_weeds": 1,
+        "lost_to_weed": 0,
+        "harvested_but_not_replanted": 0
+      },
+      {
+        "day": 20,
+        "turn": 480,
+        "money": 8066.0,
+        "owned_quadrants": [
+          "NW",
+          "NE",
+          "SW"
+        ],
+        "hands": 8,
+        "wheat_inventory": 21,
+        "other_crop_inventory": 4,
+        "animal_product_inventory": 0,
+        "inventory_value_local": 602.0,
+        "inventory_value_replay_snapshot": 1283,
+        "total_liquidatable_local": 8668.0,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 14,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "active_animals": 6,
+        "animal_positions": [
+          {
+            "xy": [
+              3,
+              3
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              4,
+              3
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              5,
+              3
+            ],
+            "animal": "COW",
+            "fed": false,
+            "yield": 0
+          },
+          {
+            "xy": [
+              3,
+              4
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              4,
+              4
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              5,
+              4
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          }
+        ],
+        "core_a_animals": 4,
+        "core_b_animals": 2,
+        "off_core_animals": 0,
+        "owned_tiles": 75,
+        "usable_owned_tiles": 75,
+        "active_crop_tiles": 14,
+        "pasture_tiles": 8,
+        "weed_tiles": 0,
+        "idle_owned_tiles": 53,
+        "working_set_utilization": 0.293,
+        "radius5_owned_tiles": 67,
+        "radius5_crop_tiles": 14,
+        "radius5_pasture_tiles": 8,
+        "radius5_idle_tiles": 45,
+        "radius5_utilization": 0.328,
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 15,
+            "utilization": 0.6
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 7,
+            "utilization": 0.28
+          },
+          "SW": {
+            "owned": 25,
+            "productive": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "utilization": 0.0
+          }
+        },
+        "worker_turn_capacity": 208,
+        "productive_actions": 62,
+        "movement": 146,
+        "idle": 0,
+        "farmer_actions": {
+          "PICKUP": 7,
+          "DROP": 3,
+          "MOVE": 10,
+          "FEED": 2,
+          "PLACE": 2
+        },
+        "hand_actions": {
+          "MOVE": 136,
+          "PICKUP": 9,
+          "FEED": 9,
+          "WATER": 20,
+          "HARVEST": 2,
+          "DROP": 4,
+          "DIG": 3,
+          "PLANT": 1
+        },
+        "hands_hired": 8,
+        "plant_actions": {
+          "WHEAT": 0,
+          "CARROT": 1,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "water_actions": 20,
+        "harvest_actions": {
+          "WHEAT": 0,
+          "CARROT": 2,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "harvest_units": {
+          "WHEAT": 0,
+          "CARROT": 4,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "feed_events": 11,
+        "wheat_purchased": 12,
+        "wheat_sold": 0,
+        "wheat_feed_consumed": 11,
+        "sales_units": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0
+        },
+        "sales_revenue_estimate": {
+          "WHEAT": 0.0,
+          "CARROT": 0.0,
+          "TOMATO": 0.0,
+          "STRAWBERRY": 0.0,
+          "MELON": 0.0,
+          "EGG": 0.0,
+          "MILK": 0.0,
+          "WOOL": 0.0,
+          "FERTILIZER": 0.0
+        },
+        "cow_bought": 0,
+        "land_bought": 0,
+        "new_weeds": 0,
+        "lost_to_weed": 0,
+        "harvested_but_not_replanted": 2
+      },
+      {
+        "day": 25,
+        "turn": 600,
+        "money": 7591.0,
+        "owned_quadrants": [
+          "NW",
+          "NE",
+          "SW"
+        ],
+        "hands": 8,
+        "wheat_inventory": 27,
+        "other_crop_inventory": 15,
+        "animal_product_inventory": 0,
+        "inventory_value_local": 1191.0,
+        "inventory_value_replay_snapshot": 2172,
+        "total_liquidatable_local": 8782.0,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 2,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "active_animals": 8,
+        "animal_positions": [
+          {
+            "xy": [
+              5,
+              2
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              3,
+              3
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              4,
+              3
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              5,
+              3
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              3,
+              4
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              4,
+              4
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              5,
+              4
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              6,
+              4
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          }
+        ],
+        "core_a_animals": 4,
+        "core_b_animals": 3,
+        "off_core_animals": 1,
+        "owned_tiles": 75,
+        "usable_owned_tiles": 75,
+        "active_crop_tiles": 2,
+        "pasture_tiles": 8,
+        "weed_tiles": 1,
+        "idle_owned_tiles": 65,
+        "working_set_utilization": 0.133,
+        "radius5_owned_tiles": 67,
+        "radius5_crop_tiles": 2,
+        "radius5_pasture_tiles": 8,
+        "radius5_idle_tiles": 57,
+        "radius5_utilization": 0.149,
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 6,
+            "utilization": 0.24
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 4,
+            "utilization": 0.16
+          },
+          "SW": {
+            "owned": 25,
+            "productive": 0,
+            "utilization": 0.0
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "utilization": 0.0
+          }
+        },
+        "worker_turn_capacity": 208,
+        "productive_actions": 66,
+        "movement": 134,
+        "idle": 8,
+        "farmer_actions": {
+          "PICKUP": 8,
+          "DROP": 8,
+          "PASS": 8
+        },
+        "hand_actions": {
+          "MOVE": 134,
+          "PICKUP": 10,
+          "FEED": 18,
+          "DROP": 5,
+          "WATER": 8,
+          "HARVEST": 6,
+          "PLANT": 2,
+          "DIG": 1
+        },
+        "hands_hired": 8,
+        "plant_actions": {
+          "WHEAT": 0,
+          "CARROT": 2,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "water_actions": 8,
+        "harvest_actions": {
+          "WHEAT": 0,
+          "CARROT": 6,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "harvest_units": {
+          "WHEAT": 0,
+          "CARROT": 15,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "feed_events": 18,
+        "wheat_purchased": 8,
+        "wheat_sold": 0,
+        "wheat_feed_consumed": 18,
+        "sales_units": {
+          "WHEAT": 0,
+          "CARROT": 6,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 0,
+          "WOOL": 0,
+          "FERTILIZER": 0
+        },
+        "sales_revenue_estimate": {
+          "WHEAT": 0.0,
+          "CARROT": 174.0,
+          "TOMATO": 0.0,
+          "STRAWBERRY": 0.0,
+          "MELON": 0.0,
+          "EGG": 0.0,
+          "MILK": 0.0,
+          "WOOL": 0.0,
+          "FERTILIZER": 0.0
+        },
+        "cow_bought": 0,
+        "land_bought": 0,
+        "new_weeds": 1,
+        "lost_to_weed": 0,
+        "harvested_but_not_replanted": 6
+      },
+      {
+        "day": 30,
+        "turn": 720,
+        "money": 8714.0,
+        "owned_quadrants": [
+          "NW",
+          "NE",
+          "SW"
+        ],
+        "hands": 8,
+        "wheat_inventory": 27,
+        "other_crop_inventory": 0,
+        "animal_product_inventory": 3,
+        "inventory_value_local": 1458.0,
+        "inventory_value_replay_snapshot": 2163,
+        "total_liquidatable_local": 10172.0,
+        "crop_counts": {
+          "WHEAT": 0,
+          "CARROT": 11,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "active_animals": 8,
+        "animal_positions": [
+          {
+            "xy": [
+              5,
+              2
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 1
+          },
+          {
+            "xy": [
+              3,
+              3
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              4,
+              3
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              5,
+              3
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              3,
+              4
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              4,
+              4
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              5,
+              4
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 0
+          },
+          {
+            "xy": [
+              6,
+              4
+            ],
+            "animal": "COW",
+            "fed": true,
+            "yield": 1
+          }
+        ],
+        "core_a_animals": 4,
+        "core_b_animals": 3,
+        "off_core_animals": 1,
+        "owned_tiles": 75,
+        "usable_owned_tiles": 75,
+        "active_crop_tiles": 11,
+        "pasture_tiles": 8,
+        "weed_tiles": 1,
+        "idle_owned_tiles": 56,
+        "working_set_utilization": 0.253,
+        "radius5_owned_tiles": 67,
+        "radius5_crop_tiles": 11,
+        "radius5_pasture_tiles": 8,
+        "radius5_idle_tiles": 48,
+        "radius5_utilization": 0.284,
+        "quadrants": {
+          "NW": {
+            "owned": 25,
+            "productive": 11,
+            "utilization": 0.44
+          },
+          "NE": {
+            "owned": 25,
+            "productive": 4,
+            "utilization": 0.16
+          },
+          "SW": {
+            "owned": 25,
+            "productive": 4,
+            "utilization": 0.16
+          },
+          "SE": {
+            "owned": 0,
+            "productive": 0,
+            "utilization": 0.0
+          }
+        },
+        "worker_turn_capacity": 208,
+        "productive_actions": 73,
+        "movement": 135,
+        "idle": 0,
+        "farmer_actions": {
+          "PICKUP": 8,
+          "DROP": 8,
+          "HARVEST": 4,
+          "MOVE": 4
+        },
+        "hand_actions": {
+          "MOVE": 131,
+          "PICKUP": 10,
+          "FEED": 18,
+          "DROP": 5,
+          "WATER": 11,
+          "DIG": 4,
+          "PLANT": 5
+        },
+        "hands_hired": 8,
+        "plant_actions": {
+          "WHEAT": 0,
+          "CARROT": 5,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "water_actions": 11,
+        "harvest_actions": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "harvest_units": {
+          "WHEAT": 0,
+          "CARROT": 0,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0
+        },
+        "feed_events": 18,
+        "wheat_purchased": 8,
+        "wheat_sold": 0,
+        "wheat_feed_consumed": 18,
+        "sales_units": {
+          "WHEAT": 0,
+          "CARROT": 6,
+          "TOMATO": 0,
+          "STRAWBERRY": 0,
+          "MELON": 0,
+          "EGG": 0,
+          "MILK": 3,
+          "WOOL": 0,
+          "FERTILIZER": 0
+        },
+        "sales_revenue_estimate": {
+          "WHEAT": 0.0,
+          "CARROT": 162.0,
+          "TOMATO": 0.0,
+          "STRAWBERRY": 0.0,
+          "MELON": 0.0,
+          "EGG": 0.0,
+          "MILK": 599.0,
+          "WOOL": 0.0,
+          "FERTILIZER": 0.0
+        },
+        "cow_bought": 0,
+        "land_bought": 0,
+        "new_weeds": 1,
+        "lost_to_weed": 1,
+        "harvested_but_not_replanted": 0
+      }
+    ],
+    "crop_summary": {
+      "WHEAT": {
+        "active_days": 6,
+        "planted_actions": 44,
+        "harvested_units_estimate": 90,
+        "sales_units_ordered": 74,
+        "gross_revenue_estimate": 1684.0,
+        "tile_days": 91,
+        "revenue_per_occupied_tile_day_estimate": 18.505
+      },
+      "CARROT": {
+        "active_days": 15,
+        "planted_actions": 69,
+        "harvested_units_estimate": 85,
+        "sales_units_ordered": 85,
+        "gross_revenue_estimate": 2665.0,
+        "tile_days": 133,
+        "revenue_per_occupied_tile_day_estimate": 20.038
+      },
+      "TOMATO": {
+        "active_days": 0,
+        "planted_actions": 0,
+        "harvested_units_estimate": 0,
+        "sales_units_ordered": 0,
+        "gross_revenue_estimate": 0.0,
+        "tile_days": 0,
+        "revenue_per_occupied_tile_day_estimate": 0.0
+      },
+      "STRAWBERRY": {
+        "active_days": 0,
+        "planted_actions": 0,
+        "harvested_units_estimate": 0,
+        "sales_units_ordered": 0,
+        "gross_revenue_estimate": 0.0,
+        "tile_days": 0,
+        "revenue_per_occupied_tile_day_estimate": 0.0
+      },
+      "MELON": {
+        "active_days": 11,
+        "planted_actions": 8,
+        "harvested_units_estimate": 48,
+        "sales_units_ordered": 48,
+        "gross_revenue_estimate": 12336.0,
+        "tile_days": 81,
+        "revenue_per_occupied_tile_day_estimate": 152.296
+      }
+    },
+    "livestock": {
+      "cow_purchase_cost": 3200,
+      "feed_cost_if_purchased_at_base": 4825,
+      "milk_harvested_units_estimate": 0,
+      "milk_sold_orders": 11,
+      "milk_revenue_estimate": 2221.0,
+      "milk_ending_inventory": 3,
+      "animal_events": [
+        {
+          "animal_number": 1,
+          "turn": 420,
+          "day": 18,
+          "position": [
+            4,
+            4
+          ],
+          "feed_buffer": 16,
+          "cash": 6423.0,
+          "pasture_count": 8
+        },
+        {
+          "animal_number": 2,
+          "turn": 425,
+          "day": 18,
+          "position": [
+            4,
+            4
+          ],
+          "feed_buffer": 15,
+          "cash": 5910.0,
+          "pasture_count": 8
+        },
+        {
+          "animal_number": 3,
+          "turn": 441,
+          "day": 19,
+          "position": [
+            4,
+            4
+          ],
+          "feed_buffer": 12,
+          "cash": 7331.0,
+          "pasture_count": 8
+        },
+        {
+          "animal_number": 4,
+          "turn": 447,
+          "day": 19,
+          "position": [
+            4,
+            4
+          ],
+          "feed_buffer": 15,
+          "cash": 7083.0,
+          "pasture_count": 8
+        },
+        {
+          "animal_number": 5,
+          "turn": 468,
+          "day": 20,
+          "position": [
+            5,
+            4
+          ],
+          "feed_buffer": 14,
+          "cash": 8242.0,
+          "pasture_count": 8
+        },
+        {
+          "animal_number": 6,
+          "turn": 477,
+          "day": 20,
+          "position": [
+            5,
+            4
+          ],
+          "feed_buffer": 17,
+          "cash": 8154.0,
+          "pasture_count": 8
+        },
+        {
+          "animal_number": 7,
+          "turn": 499,
+          "day": 21,
+          "position": [
+            6,
+            4
+          ],
+          "feed_buffer": 19,
+          "cash": 8064.0,
+          "pasture_count": 8
+        },
+        {
+          "animal_number": 8,
+          "turn": 528,
+          "day": 22,
+          "position": [
+            6,
+            4
+          ],
+          "feed_buffer": 23,
+          "cash": 8375.0,
+          "pasture_count": 8
+        }
+      ],
+      "final_layout": {
+        "animals": [
+          {
+            "xy": [
+              5,
+              2
+            ],
+            "animal": "COW",
+            "fed": false,
+            "yield": 1
+          },
+          {
+            "xy": [
+              3,
+              3
+            ],
+            "animal": "COW",
+            "fed": false,
+            "yield": 1
+          },
+          {
+            "xy": [
+              4,
+              3
+            ],
+            "animal": "COW",
+            "fed": false,
+            "yield": 0
+          },
+          {
+            "xy": [
+              5,
+              3
+            ],
+            "animal": "COW",
+            "fed": false,
+            "yield": 0
+          },
+          {
+            "xy": [
+              3,
+              4
+            ],
+            "animal": "COW",
+            "fed": false,
+            "yield": 1
+          },
+          {
+            "xy": [
+              4,
+              4
+            ],
+            "animal": "COW",
+            "fed": false,
+            "yield": 0
+          },
+          {
+            "xy": [
+              5,
+              4
+            ],
+            "animal": "COW",
+            "fed": false,
+            "yield": 0
+          },
+          {
+            "xy": [
+              6,
+              4
+            ],
+            "animal": "COW",
+            "fed": false,
+            "yield": 2
+          }
+        ],
+        "core_a_count": 4,
+        "core_b_count": 3,
+        "off_core_count": 1,
+        "off_core_animals": [
+          {
+            "xy": [
+              5,
+              2
+            ],
+            "animal": "COW",
+            "fed": false,
+            "yield": 1
+          }
+        ]
+      },
+      "net_livestock_contribution_estimate": -5804.0
+    }
+  },
+  "comparison": {
+    "absolute_gap": 61470.0,
+    "ratio_truebelief_over_x111": 3.475933459540017,
+    "x111_pct_of_truebelief": 0.2876925037950334
+  }
+}

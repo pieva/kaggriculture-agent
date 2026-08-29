@@ -1,0 +1,10 @@
+claim,classification,evidence,counterevidence,confidence,observability
+Q2 alone explains win,NOT_SUPPORTED,Q2 timing is observed but must be read with throughput/revenue,Other capacity and sales differences,HIGH,OBSERVED
+More Hands alone explains win,PARTIALLY_SUPPORTED,Final hands 7 vs 12; action counts differ materially,Hands can be underutilized or expensive,MEDIUM,OBSERVED
+More livestock alone explains win,PARTIALLY_SUPPORTED,Final cows/sheep 8/7 vs 13/4; product revenue is measurable,Livestock care and sales timing also matter,MEDIUM,OBSERVED
+Cleaner field explains win,PARTIALLY_SUPPORTED,Final weeds 6 vs 3; clean capacity is not revenue by itself,Different planting/land area,MEDIUM,OBSERVED
+More surface explains win,PARTIALLY_SUPPORTED,Final productive tiles 22 vs 18,Output per tile varies,HIGH,OBSERVED
+Mostly crop revenue,MIXED,Crop sales value 89446 vs 38100,Prices and unsold inventory,HIGH,DERIVED
+Mostly livestock-product revenue,SUPPORTED,Milk/wool/egg sales value 65441 vs 43933; fertilizer is separate at 16983 vs 1385,Some product production states are private,HIGH,DERIVED
+Gap starts mainly late game,CONTRADICTED,"First material divergence is day 1, not late game",Compounding can amplify early differences,HIGH,DERIVED
+Architectures economically similar,CONTRADICTED,"Final cash, action mix, surface and revenue composition diverge",Raw replay does not expose intent,HIGH,DERIVED
