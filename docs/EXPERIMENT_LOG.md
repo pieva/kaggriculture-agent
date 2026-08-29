@@ -2,6 +2,10 @@
 
 | Experiment | Title | Result Summary | Status | Key Takeaways & Decisions |
 |---|---|---|:---:|---|
+| E15 | Pairwise Tournament Final Synthesis | Copilot 2–0, Codex 1–1, Antigravity 0–2; Epistemically Closed | **E15 CLOSED** | Copilot competitive winner. Replicated fingerprints: Antigravity sub-threshold failure mode (M1/M3), Copilot compact policy footprint (M2/M3). Two-regime empirical model supported. 7/7 frozen artifacts unchanged. Next gate: Model Capability Check. |
+| E15-M3 | Copilot vs Antigravity Consensus Verification | Copilot `$26,629` vs Antigravity `$9,371`; consensus closed | **M3 CLOSED** | `ACK_M3_CONSENSUS_ANTIGRAVITY` and `ACK_M3_CONSENSUS_COPILOT` received. Winner: Copilot. Replicated Antigravity M1 failure mode. |
+| E15-M2 | Codex vs Copilot Consensus Verification | Copilot `$37,752` vs Codex `$27,510`; consensus closed | **M2 CLOSED** | `ACK_M2_CONSENSUS_CODEX` and `ACK_M2_CONSENSUS_COPILOT` received. Winner: Copilot. Super-threshold regime discrimination. |
+| E15-M1 | Antigravity vs Codex Consensus Verification | Codex `$20,461` vs Antigravity `$8,672`; consensus closed | **M1 CLOSED** | `ACK_M1_CONSENSUS_ANTIGRAVITY` received, no blocking errors; `ACK_M1_CONSENSUS_CODEX` received, no blocking errors; M1 status: `CLOSED`; M2 status: `AUTHORIZED`. |
 | E15.0 | Pre-Tournament Freeze & Enforcement | ACCEPT_E15_FREEZE (7/7 SHA256 Match) | **FREEZE CERTIFIED** | Enforced frozen execution from `results/e15/freeze/`, SHA256 manifest integrity verified, fail-closed runner, P0/P1 audit certified (`NO_MATERIAL_POSITION_BIAS_FOUND`), Copilot ownership certified, pre-declared seeds (M1=1113294977, M2=3033283457, M3=3122977751). Next action: RUN M1 ONLY. |
 | E14 | Repository Isolation & Canonical Ontology | 64/64 Canonical Concepts Mapped | **ONTOLOGY CANONICALIZED** | Decoupled Antigravity, Codex, Copilot codebases and MODEL_SPECs. Consolidated 64 canonical concept_ids across 8 economic domains in `docs/model_specs/ONTOLOGY.md`. All three models mapped 64/64 concepts with independent assessments. |
 | E13 | Multi-Agent Forensic Replay Analysis | Episode 101971376 ($133k vs $7.1k) | **FORENSIC CONSENSUS** | Independent blind replay analysis revealed ~14.5x watering delta (1,145 vs 79), $76.5k cash crop gap, and Day 1/Day 12 operational divergence vs physical capacity parity (292 vs 291 HIREs, 75 tiles). |
@@ -16,6 +20,110 @@
 | E12-X1.4 | Worker Locality & Readiness Expansion | 33.6% Mov, 64.1% Prod, 496.7% Yield | **PASS** | Strict worker regional locality, emergent readiness unlocks (Q1 D7, Q2 D22). |
 
 ## Recent Experiments Log
+
+## E15 — Final Tournament Synthesis & Epistemic Closure
+
+**Date:** 2026-08-29
+**Phase:** TOURNAMENT SYNTHESIS & EPISTEMIC CLOSURE
+**Authority:** Multi-Agent Consensus (Antigravity, Codex, Copilot)
+**Status:** `EPISTEMICALLY CLOSED` | `FROZEN ARTIFACTS UNCHANGED`
+**Final Synthesis Document:** `results/e15/E15_FINAL_TOURNAMENT_SYNTHESIS.md`
+
+### Final Tournament Standings & Match Results
+
+| Match | Pairing | Seed | Final Scores | Winner | Consensus Status |
+|---|---|:---:|:---:|:---:|:---:|
+| **M1** | Antigravity (P0) vs Codex (P1) | `1113294977` | $8,672 vs $20,461 | **Codex** | Double ACK (`ANTIGRAVITY`, `CODEX`) |
+| **M2** | Codex (P0) vs Copilot (P1) | `3033283457` | $27,510 vs $37,752 | **Copilot** | Double ACK (`CODEX`, `COPILOT`) |
+| **M3** | Copilot (P0) vs Antigravity (P1) | `3122977751` | $26,629 vs $9,371 | **Copilot** | Double ACK (`ANTIGRAVITY`, `COPILOT`) |
+
+- **Competitive Standings**:
+  1. **Copilot**: 2–0 (Competitive Winner)
+  2. **Codex**: 1–1
+  3. **Antigravity**: 0–2
+- **Tie-Break**: Not required.
+
+### Core Cross-Match Findings & Epistemic Verdicts
+
+1. **Replicated Policy Fingerprints**:
+   - **Antigravity (M1 & M3)**: Replicated failure mode across distinct seeds and opponents. Extremely low watering (34 vs 30), high movement overhead (5,019 vs 5,047), unharvested crop drop, large nominal scale (3Q, 12 hands, 18 pasture/livestock) with severely depressed active maintained crop surface (8–9 crops).
+   - **Copilot (M2 & M3)**: Replicated stable policy footprint. Compact working set (max 25–28 crops), high continuous watering (446 vs 439), tightly controlled livestock (5 pasture, 4 animals), 9 hands, intensive monetization (298 vs 302 sell orders).
+2. **Two-Regime Empirical Model**:
+   - **Regime A (Below Operational Threshold)**: Irrigation, dispatch, and basic maintenance dominate outcomes. Adding nominal scale when maintenance fails amplifies collapse (M1, M3).
+   - **Regime B (Above Operational Threshold)**: When watering and maintenance are stable, raw volume ceases to drive profit monotonically. Monetization quality, state-capacity alignment, capital timing, inventory-to-cash conversion, and sell-through dominate outcomes (M2).
+3. **Agent Verdicts**:
+   - **Copilot**: `MODEL_VALIDITY = SUBSTANTIALLY_SUPPORTED`, `POLICY_REALIZATION = SUPPORTED`, `GENERALIZATION = PARTIALLY_SUPPORTED, NOT_ESTABLISHED`.
+   - **Codex**: `MODEL_VALIDITY = PARTIALLY_TO_SUBSTANTIALLY_SUPPORTED`, `POLICY_REALIZATION = PARTIALLY_SUPPORTED`.
+   - **Antigravity**: `MODEL_VALIDITY = PARTIALLY_SUPPORTED`, `POLICY_REALIZATION = STRONGLY_WEAKENED`, `IMPLEMENTATION_FIDELITY = STRONGLY_WEAKENED`.
+
+### Transition to Post-E15 Phase
+
+E15 is frozen as an immutable epistemic baseline. The formal next gate is **Model Capability Check** across available LLM runtimes for Antigravity, Codex, and Copilot before any MODEL_SPEC revisions or code generation.
+
+---
+
+## E15-M3 — Consensus Verification
+
+**Date:** 2026-08-29
+**Phase:** M3 CONSENSUS VERIFICATION
+**Authority:** Multi-Agent Consensus (Antigravity, Copilot)
+**Status:** `M3 CLOSED` | `E15 TOURNAMENT COMPLETE`
+
+### Result
+
+- **M3**: Copilot (P0) vs Antigravity (P1)
+- **Seed**: `3122977751`
+- **Final Money**: Copilot `$26,629` vs Antigravity `$9,371`
+- **Delta**: `+$17,258` Copilot
+- **Consensus Verification**: `ACK_M3_CONSENSUS_ANTIGRAVITY` and `ACK_M3_CONSENSUS_COPILOT` received, no blocking errors.
+- **Key Finding**: Replicated M1 failure pattern on Antigravity; confirmed Copilot compact footprint stability.
+
+---
+
+## E15-M2 — Consensus Verification
+
+**Date:** 2026-08-29
+**Phase:** M2 CONSENSUS VERIFICATION
+**Authority:** Multi-Agent Consensus (Codex, Copilot)
+**Status:** `M2 CLOSED` | `M3 AUTHORIZED`
+
+### Result
+
+- **M2**: Codex (P0) vs Copilot (P1)
+- **Seed**: `3033283457`
+- **Final Money**: Copilot `$37,752` vs Codex `$27,510`
+- **Delta**: `+$10,242` Copilot
+- **Consensus Verification**: `ACK_M2_CONSENSUS_CODEX` and `ACK_M2_CONSENSUS_COPILOT` received, no blocking errors.
+- **Key Finding**: Super-threshold regime discrimination; compact working set + intensive monetization surpassed larger physical working set.
+
+---
+
+## E15-M1 — Consensus Verification
+
+**Date:** 2026-08-29
+**Phase:** M1 CONSENSUS VERIFICATION
+**Authority:** Multi-Agent Consensus (Antigravity, Codex)
+**Status:** `M1 CLOSED` | `M2 AUTHORIZED`
+
+### Result
+
+- **M1**: Antigravity (P0) vs Codex (P1)
+- **Seed**: `1113294977`
+- **Final Money**: Codex `$20,461` vs Antigravity `$8,672`
+- **Delta**: `+$11,789` Codex
+
+### Consensus Verification
+
+- `ACK_M1_CONSENSUS_ANTIGRAVITY` — received, no blocking errors.
+- `ACK_M1_CONSENSUS_CODEX` — received, no blocking errors.
+- M1 status: `CLOSED`.
+- M2 status: `AUTHORIZED`.
+
+### Governance
+
+- No frozen artifact modified.
+- No M1 raw artifact modified.
+- M2 remains pending explicit operational approval.
 
 ## E15.0 — Pre-Tournament Freeze, Governance & Enforcement
 
@@ -1253,7 +1361,6 @@ All three independent analyses (Antigravity, Codex, Copilot) converge on the fol
 - Opponent internal intent: `NOT_OBSERVABLE`.
 - Transactional HIRE/BUY_LAND exact cost & per-transaction P/L under dynamic market pricing: `INFERRED / DERIVED`.
 - Local ↔ Kaggle Fidelity (Seed 0 candidate local `$37,543` vs Kaggle `$8,690`): separate problem requiring dedicated same-seed/same-code trace.
-
 
 
 
