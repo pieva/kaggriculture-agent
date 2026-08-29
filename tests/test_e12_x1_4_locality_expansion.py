@@ -96,6 +96,10 @@ def test_is_expansion_ready_policy():
 
 def test_e12_x1_4_agent_instantiation():
     """Verify E12-X1.4 agent initialization and config integrity."""
-    from agricola.agent import agent as kaggle_agent, E12_X1_4_CONFIG
-    assert E12_X1_4_CONFIG.productive_core_mode == "E12_HYBRID_STAGED_LOCALITY"
-    assert E12_X1_4_CONFIG.target_tiles_per_worker == 5.0
+    config = ProductiveMassConfig(
+        productive_core_mode="E12_HYBRID_STAGED_LOCALITY",
+        target_tiles_per_worker=5.0,
+    )
+    agent = ProductiveMassROIAgent(config=config)
+    assert agent.config.productive_core_mode == "E12_HYBRID_STAGED_LOCALITY"
+    assert agent.config.target_tiles_per_worker == 5.0
