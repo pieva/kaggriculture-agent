@@ -18,7 +18,7 @@ This specification defines the Copilot workstream only. It is intentionally sepa
 - No agent-specific overwrite of the other candidates' results or submissions
 
 ### Repository hygiene for this phase
-- Maintain a Copilot-specific model file at `docs/model_specs/copilot/MODEL_SPEC.md`
+- Maintain a Copilot-specific model file at `docs/model/model_specs/copilot/MODEL_SPEC_COPILOT.md`
 - Preserve `docs/MODEL_SPEC.md` as a historical artifact only
 - Build the final candidate as `submission_copilot.py`
 
@@ -102,7 +102,7 @@ The list below is ordered by economic impact, not by confidence. A parameter can
 
 ## 9. Canonical Ontology Mapping (E14.6)
 
-This section maps all 64 canonical concepts from `docs/model_specs/ONTOLOGY.md` to the Copilot model. The mapping preserves Copilot's independent judgment on ranking, importance, and implementation while enabling semantic interoperability for E15.
+This section maps all 64 canonical concepts from `docs/model/ontology/ONTOLOGY.md` to the Copilot model. The mapping preserves Copilot's independent judgment on ranking, importance, and implementation while enabling semantic interoperability for E15.
 
 | concept_id | usage | mapping | local_term | model_assessment | evidence/confidence reference |
 |---|---|---|---|---|---|

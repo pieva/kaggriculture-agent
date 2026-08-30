@@ -1,7 +1,7 @@
 # POST-E15 — MODEL_SPEC INDEPENDENT REVISION
 ## MODELER_ID = COPILOT
 
-**Stato del documento:** candidate MODEL_SPEC revision. Non sostituisce [MODEL_SPEC_COPILOT_E15_FROZEN.md](../../../results/e15/freeze/MODEL_SPEC_COPILOT_E15_FROZEN.md) e non è il MODEL_SPEC definitivo del round successivo. Nessun artefatto frozen è stato modificato. Nessun file oltre al presente è stato toccato. Non ho letto capability check o revisioni prodotte da Antigravity o Codex (verificato: [docs/model_specs/post_e15/](.) non conteneva altri file al momento della scrittura).
+**Stato del documento:** candidate MODEL_SPEC revision. Non sostituisce [MODEL_SPEC_COPILOT_E15_FROZEN.md](../../../../results/e15/freeze/MODEL_SPEC_COPILOT_E15_FROZEN.md) e non è il MODEL_SPEC definitivo del round successivo. Nessun artefatto frozen è stato modificato. Nessun file oltre al presente è stato toccato. Non ho letto capability check o revisioni prodotte da Antigravity o Codex (verificato: [docs/model/model_specs/post_e15/](.) non conteneva altri file al momento della scrittura).
 
 `Victory != Model Validity.` `Defeat != Model Falsification.`
 
@@ -9,12 +9,14 @@
 
 ## 0. Legenda di provenienza
 
-| Tag | Significato | Fonte |
+Ogni affermazione in questo documento è esplicitamente etichettata con la sua fonte epistemica primaria:
+
+| Tag | Significato | Fonte primaria |
 |---|---|---|
-| **[FRAME]** | METHODOLOGICAL FRAME | [README.md](../../../README.md), [ONTOLOGY_E15_FROZEN.md](../../../results/e15/freeze/ONTOLOGY_E15_FROZEN.md) |
-| **[SPEC-DECL]** | E15 FROZEN MODEL DECLARATION (Copilot, *ex ante*) | [MODEL_SPEC_COPILOT_E15_FROZEN.md](../../../results/e15/freeze/MODEL_SPEC_COPILOT_E15_FROZEN.md) |
-| **[E15-EVIDENCE]** | PRIMARY E15 EVIDENCE | `summary.json`/`telemetry.json` M1–M3, `E15_M*_NEUTRAL_FORENSIC_ANALYSIS.md`, `E15_M*_CONSENSUS.md` |
-| **[SELF-CHECK]** | POST-E15 SELF CAPABILITY CHECK (Copilot) | [COPILOT_CAPABILITY_CHECK.md](../../../results/post_e15/capability_check/COPILOT_CAPABILITY_CHECK.md) |
+| **[FRAME]** | METHODOLOGICAL FRAME | [README.md](../../../../README.md), [ONTOLOGY_E15_FROZEN.md](../../../../results/e15/freeze/ONTOLOGY_E15_FROZEN.md) |
+| **[SPEC-DECL]** | E15 FROZEN MODEL DECLARATION (Copilot, *ex ante*) | [MODEL_SPEC_COPILOT_E15_FROZEN.md](../../../../results/e15/freeze/MODEL_SPEC_COPILOT_E15_FROZEN.md) |
+| **[PRIMARY-E15]** | MATCH OBSERVATION (E15, *ex post*) | Match M2/M3 JSON, replay visuale, E15 tournament synthesis |
+| **[SELF-CHECK]** | POST-E15 SELF CAPABILITY CHECK (Copilot) | [COPILOT_CAPABILITY_CHECK.md](../../../../results/post_e15/capability_check/COPILOT_CAPABILITY_CHECK.md) |
 | **[INFERENCE]** | Inferenza autonoma prodotta in questa revisione | Ragionamento originale in questo documento |
 
 ---
@@ -481,4 +483,4 @@ expected_information_gain: Basso nel breve termine (bloccato da vincoli di scope
 
 ---
 
-**Chiusura:** baseline reconstruction, concept-by-concept revision, feature interaction map, observability requirements, candidate training priorities, changeset ed epistemic audit sono completati. Non è stata proposta alcuna E16 definitiva, alcun arbitraggio cross-model, alcuna policy o codice. Questo documento è stato salvato come unico artefatto in `docs/model_specs/post_e15/COPILOT_MODEL_SPEC_REVISION.md`; nessun altro file è stato modificato.
+**Chiusura:** baseline reconstruction, concept-by-concept revision, feature interaction map, observability requirements, candidate training priorities, changeset ed epistemic audit sono completati. Non è stata proposta alcuna E16 definitiva, alcun arbitraggio cross-model, alcuna policy o codice. Questo documento è stato salvato come unico artefatto in `docs/model/model_specs/post_e15/COPILOT_MODEL_SPEC_REVISION.md`; nessun altro file è stato modificato.

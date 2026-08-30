@@ -4,7 +4,7 @@
 - **Stato:** CANONICAL
 - **Data:** 2026-08-29
 - **Ambito:** vocabolario semantico comune per Antigravity, Codex e Copilot
-- **Destinazione repository:** `docs/model_specs/ONTOLOGY.md`
+- **Destinazione repository:** `docs/model/ontology/ONTOLOGY.md`
 
 ---
 

@@ -34,10 +34,10 @@ post-E15 è usato soltanto come riferimento descrittivo aggiuntivo dei gap.
 
 Fonti riutilizzate, senza nuova analisi engine:
 
-- `docs/model/KAGGRICULTURE_STATE_MACHINE_C1.md`;
-- `docs/model_specs/ONTOLOGY.md`;
+- `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C1.md`;
+- `docs/model/ontology/ONTOLOGY.md`;
 - `results/e15/freeze/MODEL_SPEC_CODEX_E15_FROZEN.md`;
-- `docs/model_specs/post_e15/POST_E15_CONSOLIDATED_MODEL_SPEC_FINAL.md`;
+- `docs/model/model_specs/post_e15/POST_E15_CONSOLIDATED_MODEL_SPEC_FINAL.md`;
 - `E16_TILE_LIFECYCLE_FEATURE_AUDIT.md`;
 - `E16_TILE_LIFECYCLE_FEATURE_SCHEMA.json`;
 - `E16_TILE_STATE_TRANSITIONS.csv`;

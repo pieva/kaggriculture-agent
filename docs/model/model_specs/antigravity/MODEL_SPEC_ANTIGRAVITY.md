@@ -4,8 +4,8 @@
 - **Document Version**: `E14.6-ANTIGRAVITY`
 - **Specification Authority**: Antigravity (Independent Strategy & Optimization Workstream)
 - **Status**: `FROZEN_PRE_E15` (Canonical Ontology Aligned)
-- **Canonical Model Path**: `docs/model_specs/antigravity/MODEL_SPEC.md`
-- **Semantic Source of Truth**: `docs/model_specs/ONTOLOGY.md`
+- **Canonical Model Path**: `docs/model/model_specs/antigravity/MODEL_SPEC_ANTIGRAVITY.md`
+- **Semantic Source of Truth**: `docs/model/ontology/ONTOLOGY.md`
 - **Implementation Source**: `src/agricola/strategy/antigravity/` (`AntigravityROIAgent`, `AntigravityConfig`)
 - **Standalone Submission Output**: `submission/submission_antigravity.py`
 - **Primary Replay Benchmarks**: 
@@ -164,7 +164,7 @@ The following hypotheses require targeted empirical ablation in upcoming builds:
 
 ## 8. Canonical Ontology Mapping
 
-The table below maps all **64 canonical concept_ids** from `docs/model_specs/ONTOLOGY.md` to Antigravity's independent model, declaring usage, semantic mapping, local terminology, model assessment, and internal reference anchors.
+The table below maps all **64 canonical concept_ids** from `docs/model/ontology/ONTOLOGY.md` to Antigravity's independent model, declaring usage, semantic mapping, local terminology, model assessment, and internal reference anchors.
 
 | concept_id | usage | mapping | local_term | model_assessment | evidence/confidence reference |
 |---|:---:|:---:|---|---|---|

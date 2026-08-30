@@ -33,12 +33,23 @@ Kaggriculture separa esplicitamente la rappresentazione del dominio dalla policy
 
 La **Model Foundation** è costituita da quattro artefatti coordinati:
 
-| Artefatto | Funzione | Domanda |
-|---|---|---|
-| `ONTOLOGY.md` | Vocabolario canonico del dominio, entità, concetti e relazioni condivise. | **Che cosa esiste e che cosa significa?** |
-| `KAGGRICULTURE_STATE_MACHINE_C1.md` | Stati, transizioni, condizioni dell'engine ed evoluzione temporale. | **Come evolve il sistema?** |
-| `KAGGRICULTURE_FEATURE_MODEL_C1.md` | Informazioni osservabili o derivabili al decision time, con semantica, provenienza e limiti. | **Che cosa può conoscere l'agente quando decide?** |
-| `MODEL_SPEC_<AGENT>.md` | Uso dei concetti e delle feature ammissibili nel modello decisionale. | **Come viene usata l'informazione per decidere?** |
+| Artefatto | Percorso canonico | Funzione | Domanda |
+|---|---|---|---|
+| `ONTOLOGY.md` | `docs/model/ontology/` | Vocabolario canonico del dominio, entità, concetti e relazioni condivise. | **Che cosa esiste e che cosa significa?** |
+| `KAGGRICULTURE_STATE_MACHINE_C1.md` | `docs/model/state_machine/` | Stati, transizioni, condizioni dell'engine ed evoluzione temporale. | **Come evolve il sistema?** |
+| `KAGGRICULTURE_FEATURE_MODEL_C1.md` | `docs/model/feature_model/` | Informazioni osservabili o derivabili al decision time, con semantica, provenienza e limiti. | **Che cosa può conoscere l'agente quando decide?** |
+| `MODEL_SPEC_<AGENT>.md` | `docs/model/model_specs/` | Uso dei concetti e delle feature ammissibili nel modello decisionale. | **Come viene usata l'informazione per decidere?** |
+
+```text
+docs/model/
+├── ontology/
+├── state_machine/
+├── feature_model/
+├── model_specs/
+└── reviews/
+```
+
+`reviews/` è la sede di governance/evidence review e reconciliation della Foundation e non costituisce un quinto artefatto del modello decisionale.
 
 L'**Ontologia** definisce ciò che esiste e il significato condiviso dei concetti; non prescrive policy, soglie o priorità. La **State Machine** descrive la dinamica del dominio e separa le regole native dell'engine dagli stati derivati. Il **Feature Model** è il contratto informativo tra dominio e modello decisionale e distingue stato osservabile, feature derivabili al decision time, contesto della policy, telemetria post-action e outcome di training/valutazione. Il **MODEL_SPEC** è consumer della foundation e traduce concetti e feature ammissibili in una rappresentazione decisionale verificabile.
 
@@ -409,9 +420,9 @@ revisione indipendente dei `MODEL_SPEC`.
 ### Model specs correnti
 
 ``` text
-docs/model_specs/antigravity/MODEL_SPEC_ANTIGRAVITY.md
-docs/model_specs/codex/MODEL_SPEC_CODEX.md
-docs/model_specs/copilot/MODEL_SPEC_COPILOT.md
+docs/model/model_specs/antigravity/MODEL_SPEC_ANTIGRAVITY.md
+docs/model/model_specs/codex/MODEL_SPEC_CODEX.md
+docs/model/model_specs/copilot/MODEL_SPEC_COPILOT.md
 ```
 
 ### E15

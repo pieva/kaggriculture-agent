@@ -5,7 +5,7 @@ DOCUMENTO: ANTIGRAVITY_FOUNDATION_REVIEW_R1.md
 RUOLO: Revisore Indipendente della Foundation Metodologica e Semantica
 STATO: COMPLETE / INDEPENDENT REVIEW DELIVERABLE
 DATA: 2026-08-30
-DESTINAZIONE: results/foundation_review/antigravity/ANTIGRAVITY_FOUNDATION_REVIEW_R1.md
+DESTINAZIONE: docs/model/reviews/antigravity/ANTIGRAVITY_FOUNDATION_REVIEW_R1.md
 ```
 
 ---

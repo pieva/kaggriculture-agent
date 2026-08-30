@@ -216,7 +216,7 @@ Codex modeling factor.
 | `final_money_outcome` | USED | FULL | final money benchmark outcome | Final money is the main benchmark outcome for candidate validity. | Primary Evidence; Current Candidate |
 ## Isolation and Validity Rules
 
-- Codex model intelligence lives in `docs/model_specs/codex/MODEL_SPEC.md`.
+- Codex model intelligence lives in `docs/model/model_specs/codex/MODEL_SPEC_CODEX.md`.
 - Codex build output is exactly `submission/submission_codex.py`.
 - Codex may share parser, state, action and Kaggle environment infrastructure.
 - Codex must not depend on other-agent strategy directories, benchmark scripts or submission artifacts.
