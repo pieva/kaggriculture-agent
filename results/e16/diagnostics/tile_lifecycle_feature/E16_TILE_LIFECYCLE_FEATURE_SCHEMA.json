@@ -1,0 +1,95 @@
+{
+  "schema_id": "e16.tile_lifecycle_feature.audit.v1",
+  "status": "PROPOSAL_ONLY_NOT_IMPLEMENTED",
+  "scope": "assigned crop working-set tiles",
+  "clock": {
+    "canonical_step": "day * turnsPerDay + hour",
+    "reason": "day/hour are shared online observations and avoid the R1 seat-1 observation.step telemetry defect",
+    "source_variables": [
+      "observation.day",
+      "observation.hour",
+      "configuration.turnsPerDay"
+    ]
+  },
+  "tile_lifecycle_state": {
+    "type": "DERIVED_CATEGORICAL_FEATURE",
+    "online_available": true,
+    "future_leakage": false,
+    "source_variables": [
+      "working_set_member",
+      "tile",
+      "tile.kind",
+      "tile.crop",
+      "tile.planted_day",
+      "tile.yield_units",
+      "tile.max_lifespan_step",
+      "observation.day"
+    ],
+    "precedence": [
+      "OUT_OF_SCOPE",
+      "LOST_WEED",
+      "EMPTY_ASSIGNED",
+      "RETIREMENT_DUE",
+      "HARVEST_READY",
+      "GROWING"
+    ],
+    "values": {
+      "OUT_OF_SCOPE": "not a crop working-set member, locked, or a non-crop structure",
+      "EMPTY_ASSIGNED": "working-set member with tile is None; includes never planted and post-harvest non-ongoing soil because both require PLANT",
+      "GROWING": "PLANT for which valid HARVEST is false and future scheduled production remains possible",
+      "HARVEST_READY": "PLANT with yield_units > 0 and day - planted_day >= crop.first_yield_day",
+      "RETIREMENT_DUE": "ongoing PLANT after final scheduled production has been harvested: yield_units == 0, max_lifespan_step >= 0, and no future production remains",
+      "LOST_WEED": "tile.kind == WEED"
+    },
+    "deliberate_non_values": {
+      "POST_HARVEST_REPLANT_DUE": "redundant with EMPTY_ASSIGNED for non-ongoing crops; transition provenance may be logged but is not needed for dispatch",
+      "CARE_DUE": "orthogonal to growth/readiness and represented inside crop_decay_risk_window",
+      "AT_RISK": "too coarse; the structured mechanical causes below retain action and deadline semantics"
+    }
+  },
+  "harvest_ready": {
+    "type": "DERIVED_PREDICATE_NOT_A_SEPARATE_FEATURE",
+    "definition": "tile.kind == 'PLANT' and tile.yield_units > 0 and day - tile.planted_day >= CROPS[tile.crop].first_yield_day",
+    "online_available": true,
+    "future_leakage": false
+  },
+  "crop_decay_risk_window": {
+    "type": "DERIVED_STRUCTURED_TIMING_CONSTRAINT",
+    "online_available": true,
+    "future_leakage": false,
+    "evidence_status_proposed": "ENGINE_VERIFIED_WITH_R1_LONGITUDINAL_TELEMETRY_GAP",
+    "components": {
+      "care_due": "tile.kind == 'PLANT' and not tile.watered_today",
+      "water_loss_at_eod_if_unserved": "care_due and tile.consecutive_unwatered + 1 >= 2",
+      "action_phases_until_eod_refresh": "turnsPerDay - hour, including the current action phase",
+      "lifespan_decay_started": "tile.max_lifespan_step >= 0 and canonical_step >= tile.max_lifespan_step",
+      "next_lifespan_decay_phase": "the first phase >= max(max_lifespan_step, canonical_step) with even offset from max_lifespan_step",
+      "lifespan_loss_phase_if_no_action": "next_lifespan_decay_phase + 2 * (max(1, yield_units) - 1), only after max_lifespan_step is known",
+      "empty_random_weed_eligible": "working_set_member and tile is None at an end-of-day refresh"
+    },
+    "limits": [
+      "The hidden random draw and episode seed are not online observations, so empty-tile random WEED has no deterministic time_to_loss.",
+      "lifespan_loss_phase_if_no_action is a mechanical no-intervention deadline, not a prediction of what the future policy will do.",
+      "A single scalar risk score is rejected because water, lifespan, and empty-tile random hazard have different actions and observability."
+    ]
+  },
+  "indispensable_context": {
+    "working_set_member": {
+      "type": "POLICY_ASSIGNMENT_CONTEXT",
+      "reason": "distinguishes actionable EMPTY_ASSIGNED from irrelevant empty farm surface"
+    }
+  },
+  "derived_not_duplicated": [
+    "harvest_ready_valid",
+    "replant_due",
+    "care_due_state_category"
+  ],
+  "ontology_mapping": {
+    "crop_care_action_flow": "risk conditions define valid WATER, PLANT, HARVEST, and lifecycle-clearance demand",
+    "crop_harvest_action_flow": "HARVEST_READY excludes immature requests and separates ongoing from non-ongoing aftermath",
+    "crop_care_completion_rate": "denominator can be built from explicit tile-day WATER obligations plus readiness/turnover obligations",
+    "crop_decay_risk_window": "promote engine semantics from rule-needed to engine-verified, while retaining empirical validation qualification",
+    "crop_surface_maintained": "count only working-set PLANT states compatible with continued production under a declared maintenance rule",
+    "maintained_productive_surface": "consume the maintained crop component without collapsing crop/pasture breakdown"
+  }
+}

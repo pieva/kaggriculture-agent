@@ -3,7 +3,7 @@
 - **MODELER_ID:** `CODEX`
 - **Status:** `INDEPENDENT PROPOSAL - NOT FROZEN`
 - **Evidence role:** `TRAINING / INITIAL BOUNDING + INTERACTION DISCRIMINATION`
-- **Canonical input:** `docs/model/model_specs/post_e15/POST_E15_CONSOLIDATED_MODEL_SPEC_FINAL.md`
+- **Canonical input:** `docs/model/model_specs/POST_E15_CONSOLIDATED_MODEL_SPEC_FINAL.md`
 - **Independence:** no E16 proposal from another modeler was read.
 
 E16 is training evidence. Its results may revise features, relationships, and initial bounds, but may not later be presented as independent validation or test evidence. Numerical settings below are experimental probes and controls, never optima.

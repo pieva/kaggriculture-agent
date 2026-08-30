@@ -1,0 +1,22 @@
+{
+  "candidate_id": "CODEX_C2",
+  "schema_version": "model_spec_c2.codex.v1",
+  "crop_working_set_target": 17,
+  "crop_pattern": [
+    "WHEAT",
+    "STRAWBERRY",
+    "WHEAT",
+    "STRAWBERRY",
+    "MELON"
+  ],
+  "watering_dispatch_priority": 0.7,
+  "livestock_headcount_target": 4,
+  "pasture_allocation_target": 5,
+  "quadrants_owned": 2,
+  "workforce_headcount": 10,
+  "livestock_species": "COW",
+  "operating_cash_floor": 300,
+  "endgame_shutdown_steps": 48,
+  "turns_per_day": 24,
+  "minimum_post_plant_action_phases": 1
+}

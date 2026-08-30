@@ -1,111 +1,107 @@
-# NEW SESSION --- Kaggriculture
+# NEW SESSION — MODEL_SPEC TOURNAMENT C2
 
-- **Phase**: `POST-E16-A-R1 — CROP ATTAINMENT FORENSIC DIAGNOSIS`
-- **Training Stage**: `CAPACITY REALIZATION & WORKING SET MAINTENANCE`
-- **Tournament Status**: `E15 CLOSED (Copilot 2–0)`
-- **E16 Status**: `STAGE A-R1 COMPLETED (28/28) / STAGE B BLOCKED`
-- **Frozen Artifacts**: `UNCHANGED & LOCKED`
-- **Repository Tests**: `143/143 PASS`
+- **Phase:** `MODEL_SPEC TOURNAMENT C2`
+- **Status:** `READY TO RUN`
+- **Foundation C2:** `UPSTREAM_READY_FOR_MODEL_SPEC` (Blockers Closed, NOT FROZEN)
+- **Candidates:** `3/3 TOURNAMENT_READY`
+- **Repository Validation:** `168 passed` | `git diff --check PASS`
+- **Tournament Status:** `NOT RUN`
+- **Kaggle Validation:** `NOT RUN`
 
 ---
 
-## 1. Current Methodological Frame
-
-Kaggriculture is an experimental environment for the **training, tuning, and validation of explicit decision models**. The competition is the benchmark/environment, not the objective.
+## 1. Foundation C2 Status
 
 ```text
-replay / telemetry / experiments
-        ↓
-training evidence (E15 / E16)
-        ↓
-candidate feature / ontological mapping
-        ↓
-independent MODEL_SPECs
-        ↓
-executable treatment policies (frozen)
-        ↓
-controlled experiments (Stage A / Stage B)
-        ↓
-feature discrimination & capacity anchoring
-        ↓
-bottleneck diagnosis & error analysis
-        ↓
-parameter & hyperparameter tuning
-        ↓
-validation & generalization test
+FOUNDATION C2:
+- upstream-ready for MODEL_SPEC
+- Feature Model blockers closed
+- Foundation C2: NOT FROZEN (upstream-ready, non-blocking for tournament)
 ```
 
-> **Victory != Model Validity. Defeat != Model Falsification.**
-> E15 and E16 provide **TRAINING EVIDENCE**, not validation evidence.
-> Observational peaks (e.g. Crop 17 in Stage A-R1) are candidate operating regions, NOT optima.
+- **Ontology C2:** `docs/model/ontology/ONTOLOGY_C2.md`
+- **State Machine C2:** `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2.md`
+- **Feature Model C2:** `docs/model/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2.md`
 
 ---
 
-## 2. Experimental Status & E16-A-R1 Results
+## 2. The Three C2 Candidates
 
-### 2.1 E16-A Original vs E16-A-R1
-- **E16-A Original:** Completed across 28 episodes. Forensic analysis revealed a measurement artifact (`player: -1` in unit events) and a policy realization defect (fractional daily drought quota `ceil(priority * needs)`). Preserved as forensic evidence.
-- **Repair (R1/R2/R3):** Clarified priority as operational dispatch precedence, fixed event ledger player attribution, updated derived metrics. Test suite: 143/143 PASS.
-- **E16-A-R1 Execution:** 28/28 episodes completed. 0 gameplay failures, 0 infrastructure failures. Integrity check `PASS`.
+| Candidato | MODEL_SPEC | Candidate Executable | Configuration | Build Verification |
+|---|---|---|---|---|
+| **Antigravity C2** | `docs/model/model_specs/antigravity/MODEL_SPEC_ANTIGRAVITY_C2.md` | `src/agricola/strategy/antigravity/agent_c2.py` | `src/agricola/strategy/antigravity/c2_config.py` | `results/model_spec_c2/antigravity/BUILD_VERIFICATION.md` |
+| **Codex C2** | `docs/model/model_specs/codex/MODEL_SPEC_CODEX_C2.md` | `src/agricola/strategy/codex_c2.py` | `configs/model_spec_c2/CODEX_C2_CONFIG.json` | `results/model_spec_c2/codex/BUILD_VERIFICATION.md` |
+| **Copilot C2** | `docs/model/model_specs/copilot/MODEL_SPEC_COPILOT_C2.md` | `src/agricola/strategy/copilot/agent_c2.py` | `src/agricola/strategy/copilot/c2_config.py` | `results/model_spec_c2/copilot/BUILD_VERIFICATION.md` |
 
-### 2.2 Validated Telemetry & Performance
-- **Watering Realization:**
-  - HIGH watering execution rate: `0.8898–0.9416` (vs 0.0 in contaminated run).
-  - Watering continuity: `~0.96` across HIGH cells.
-  - Synthetic daily drought successfully eliminated.
-- **Final Money Outcomes (Median):**
-  - **A01 (LOW, 10):** `$19,694.00`
-  - **A02 (HIGH, 10):** `$21,230.50`
-  - **A03 (LOW, 25):** `$11,903.50`
-  - **A04 (HIGH, 25):** `$19,987.00`
-  - **A05 (MID, 17):** `$26,619.50`
-  - **A06 (MID, 25):** `$21,570.50`
-  - **A07 (HIGH, 17):** `$27,076.00`
-- **Key Contrasts:**
-  - `A02 - A01`: Median **+$1,576.00** (Direction reversed from negative to positive).
-  - `A04 - A03`: Median **+$8,587.00** (Preserved strong positive premium for HIGH water).
-  - `Primary Interaction ((A04 - A03) - (A02 - A01))`: Median **+$5,180.50** (Preserved positive).
-  - `Crop 17 Operating Region`: A07 ($27,076.00) is the most economically promising cell, confirming non-monotonicity, but is NOT a capacity threshold or optimum.
-
-### 2.3 Capacity Gate C*
-- **Criteria (Frozen):** Completion >= 0.80, Watering Execution Rate >= 0.60, Watering Continuity >= 0.75, Crop Target Attainment >= 0.80.
-- **Outcome:**
-  - A02: Attainment = `0.4750` (< 0.80) ➔ `CAPACITY_ELIGIBLE = NO`
-  - A07: Attainment = `0.4706` (< 0.80) ➔ `CAPACITY_ELIGIBLE = NO`
-  - A04: Attainment = `0.3000` (< 0.80) ➔ `CAPACITY_ELIGIBLE = NO`
-- **Selected C\*:** `NONE`
-- **Stage B Gate:** `STAGE_B_BLOCKED_NO_CAPACITY_ANCHOR`
-- **Stage B Executed:** `NO`
+Tutti e 3 i candidati sono dichiarati `TOURNAMENT_READY: YES`.
 
 ---
 
-## 3. Epistemic Interpretation & Layer Separation
+## 3. Obiettivo della Prossima Sessione
 
-1. **MODEL_VALIDITY:** `STRONGLY SUPPORTED`
-   - Theoretical model predictions regarding irrigation necessity, capital preservation, and surface/workforce alignment are validated.
-2. **POLICY_REALIZATION:** `NEW BOTTLENECK TO BE DISCRIMINATED`
-   - The repair successfully removed WATER dispatch as the primary bottleneck.
-   - However, the policy fails to maintain the nominal crop working-set target.
-   - Candidate causes: routing/transit overhead, workforce/action capacity allocation, seed replenishment pacing, planting/replanting timing, or market pacing. No cause should be assumed without empirical diagnosis.
-3. **IMPLEMENTATION_FIDELITY:** `VERIFIED`
-   - Telemetry attribution and artifact separation fully verified.
+> **Obiettivo:**
+> Verificare se il lavoro sulla Foundation C2 e sui tre MODEL_SPEC si traduce in migliore policy realization e performance.
+
+Il torneo deve rispondere alla domanda fondamentale:
+> *Quale dei tre MODEL_SPEC corregge meglio i meccanismi che hanno performato peggio, e quali modifiche decisionali producono un miglioramento verificabile?*
 
 ---
 
-## 4. Critical Operational Governance for Next Session
+## 4. Protocollo Iniziale della Prossima Sessione
 
-> [!WARNING]
-> ```text
-> STOP E16 FOR TODAY.
-> DO NOT EXECUTE STAGE B.
-> DO NOT CREATE NEW EXPERIMENTS.
-> DO NOT MODIFY MODEL_SPEC.
-> DO NOT PREPARE KAGGLE SUBMISSIONS.
-> ```
+La nuova sessione deve partire direttamente dall'esecuzione del torneo seguendo questo ordine:
 
-### Next Session Mandatory Workflow:
-1. **Verify repository state** and existing E16-A-R1 artifacts (`results/e16/stage_a_r1/`, `results/e16/analysis/`).
-2. **Perform Forensic Diagnosis** of the low `crop_target_attainment` using exclusively the 28 existing R1 runs and event ledgers.
-3. **Identify and classify the new operational bottleneck** across routing, workforce capacity, seed replenishment, and replanting loops.
-4. **Decide the next TRAINING experiment** only after completing the diagnosis.
-5. **Keep Stage B blocked** until a valid C* anchor exists or an explicit methodological decision is approved.
+1. **Verificare l'integrità dei tre candidati** (verificare che nessun artefatto sia stato alterato o corrotto).
+2. **Definire e congelare un solo protocollo comune di torneo** (stessi avversari, stessi seed, stesse regole di configurazione).
+3. **Stessa telemetria ed instrumentation comune.**
+4. **Stesso budget sperimentale.**
+5. **Eseguire i tre candidati** in condizioni rigorosamente identiche.
+6. **Confrontare outcome economici e meccanismi causali.**
+7. **Produrre tre POST-TOURNAMENT REVIEW indipendenti** (una per ciascun agente).
+8. **Confrontare le tre review.**
+9. **Selezionare il candidato più promettente.**
+10. **Eseguire la validazione esterna Kaggle.**
+
+---
+
+## 5. Metriche Computabili da Preservare
+
+Nel confronto del torneo utilizzare esclusivamente metriche supportate dall'ambiente e dall'infrastruttura di telemetria:
+
+- `final_money` (outcome economico principale)
+- `completion` (completamento partita/step)
+- `crop_target_attainment` (realizzazione del target di colture)
+- `active_crop_surface` / `maintained_productive_surface`
+- `watering_execution` & `watering_continuity`
+- `premature_harvest_count`
+- `failed_action_count` & `no_op_action_count`
+- `WEED/lost_tile_count` & `lost_tile_persistence`
+- `replant_latency`
+- `movement_share` & `productive_action_share`
+- `workforce_utilization`
+- `inventory state` (shed storage vs overflow loss)
+- `market activity`
+- `livestock contribution` (se rilevante nel mix)
+
+---
+
+## 6. Review Post-Torneo Già Contrattualizzate
+
+Dopo l'esecuzione del torneo, ciascun agente (Antigravity, Codex, Copilot) dovrà analizzare tutti e tre i concorrenti secondo la catena causale obbligatoria:
+
+```text
+RISULTATO
+    ↓
+MECCANISMO OSSERVATO
+    ↓
+DECISIONE MODEL_SPEC
+    ↓
+SPIEGAZIONE CAUSALE
+    ↓
+MODIFICA PROPOSTA
+    ↓
+PREVISIONE VERIFICABILE
+```
+
+> [!NOTE]
+> La review post-torneo non fa parte della chiusura corrente e sarà eseguita nella prossima sessione.

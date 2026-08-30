@@ -1474,3 +1474,33 @@ Rieseguire i 28 episodi Stage A con la build corretta R1 (`E16_TREATMENT_BUILD_R
 ### Decisione di Chiusura:
 - E16 è fermato per questa sessione. Stage B non eseguito.
 - Prossima sessione: diagnosi forense del basso `crop_target_attainment` sui 28 run R1 esistenti prima di qualsiasi nuovo esperimento.
+
+---
+
+## MODEL_SPEC C2 Build Phase — Foundation Closure & Candidate Verification
+
+**Date:** 2026-08-30
+**Phase:** MODEL_SPEC C2 BUILD & VERIFICATION
+**Evidence Role:** `BUILD & VERIFICATION EVIDENCE`
+**Test Suite:** `168 passed`
+**Repository Hygiene:** `git diff --check PASS`
+
+### Summary & Outcomes
+1. **Foundation C2 Blocker Closure:**
+   - Formal vocabulary and lifecycle states consolidated (`ONTOLOGY_C2.md`).
+   - 11-phase engine loop, state transitions, and FEED+CARE EOD mechanics verified (`KAGGRICULTURE_STATE_MACHINE_C2.md`).
+   - Canonical feature contracts established and all known blockers closed (`KAGGRICULTURE_FEATURE_MODEL_C2.md`).
+   - Foundation C2 declared `UPSTREAM_READY_FOR_MODEL_SPEC` and `NOT FROZEN` (non-blocking for tournament).
+2. **3 Independent MODEL_SPEC C2 Builds & Executables:**
+   - **Antigravity C2:** `MODEL_SPEC_ANTIGRAVITY_C2.md` -> `src/agricola/strategy/antigravity/agent_c2.py` (`TOURNAMENT_READY: YES`)
+   - **Codex C2:** `MODEL_SPEC_CODEX_C2.md` -> `src/agricola/strategy/codex_c2.py` (`TOURNAMENT_READY: YES`)
+   - **Copilot C2:** `MODEL_SPEC_COPILOT_C2.md` -> `src/agricola/strategy/copilot/agent_c2.py` (`TOURNAMENT_READY: YES`)
+3. **Validation Status:**
+   - Repository regression suite: `168 passed` (all candidate suites green).
+   - Candidate verification reports: 3/3 `TOURNAMENT_READY: YES`.
+   - Tournament: `NOT RUN`.
+   - Post-tournament reviews: `PENDING`.
+   - Kaggle validation: `NOT RUN`.
+
+### Next Step
+- **Next Experiment:** `MODEL_SPEC TOURNAMENT C2` (frozen common protocol, same seeds/opponents/telemetry, independent 3-way evaluation).
