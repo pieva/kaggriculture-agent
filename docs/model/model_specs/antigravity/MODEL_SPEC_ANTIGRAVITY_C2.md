@@ -202,7 +202,39 @@ Le previsioni saranno validate attraverso il protocollo standard:
 
 ---
 
-## 12. POST-TOURNAMENT REVIEW CONTRACT
+## 13. C2 PERFORMANCE ITERATION — ECONOMIC OPTIMIZATION (`HYP-AGY-PERF-01`)
+
+### 13.1 Diagnosi Post-ReTournament C2
+Nel ReTournament C2, Antigravity C2 ha ottenuto il 1° posto assoluto con un **Mean Final Money di $16.671,00** (5W - 1L - 0T), azzerando completamente i failure mode forensi (0 harvest falliti, 0 unhandled exception). Tuttavia, l'analisi economica disaggregata ha rivelato due colli di bottiglia monetari:
+1. **Premature Non-Ongoing Harvest:** per colture non-ongoing (`WHEAT`, `MELON`), la policy effettuava la raccolta a `first_yield_day` (yield=1) anziché attendere `max_yield_day` (yield=6), rinunciando a un fatturato unitario del +500% (Wheat: $25 vs $150; Melon: $250 vs $1.500);
+2. **Underutilized Working Set & Sub-optimal Crop Mix:** una superficie colturale limitata a 17 tile e un mix sbilanciato non saturavano la capacità lavorativa dei 10 worker (240 ore/giorno).
+
+### 13.2 Ipotesi Causale `HYP-AGY-PERF-01`
+> **Accoppiando una maturazione biologica a resa massima (`max_yield_gating`) su colture non-ongoing con un'espansione del working-set compatto a 24 tile (NW + NE) e un crop mix ad alto rendimento (Wheat 20%, Strawberry 45%, Melon 35%), supportato da rotazione biologica di fine stagione e prioritizzazione della liquidità di vendita, Antigravity C2 satura la capacità produttiva dei 10 worker e supera stabilmente il benchmark economico di $23.000 (rendimento atteso > $25.000).**
+
+### 13.3 Interventi Decisionali Implementati
+1. **Max-Yield Harvest Readiness Gate (`CRP-10` esteso):**
+   - Colture ongoing (`STRAWBERRY`, `TOMATO`): raccolta immediata ad ogni ciclo biologico (`age >= first_yield_day` e `yield > 0`);
+   - Colture non-ongoing (`WHEAT`, `MELON`): raccolta differita fino al raggiungimento di `max_yield` (yield >= 6) o `max_yield_day` (Day 4 per Wheat, Day 12 per Melon) o fine stagione (Day >= 28).
+2. **Working-Set Ottimale (24 Crop Tiles compatti su 2 Quadranti):**
+   - Allocazione di 24 tile arabili distribuite in Row 0 (10), Row 1 (10) e Row 2 centrale (4), adiacenti allo shed (4,4), eliminando i costi di acquisto superfluo dei quadranti SW/SE ($2.000 risparmiati).
+3. **Crop Mix & Rotazione Biologica di Fine Stagione:**
+   - Quotas nominali: **Wheat 20%, Strawberry 45%, Melon 35%**;
+   - Cutoff biologico: dopo il Day 18, sostituzione delle quote Melon con Wheat (poiché Melon richiede 12 giorni di maturazione); dopo il Day 20, sostituzione delle quote Strawberry con Wheat (richiede 10 giorni); arresto acquisto semi dopo il Day 26.
+4. **Liquidity & Hiring Priority Protection:**
+   - Esecuzione prioritaria delle vendite di shed a costo 0 prima di qualsiasi spesa;
+   - Prioritizzazione assoluta dell'assunzione quotidiana dei 10 worker ($88/giorno) con floor di cassa $50 per garantire al 100% l'irrigazione mattutina.
+
+### 13.4 Risultati Preflight Reali
+- **Mean Final Money (6 match P0/P1 vs Frozen Codex C2):** **$25.120,33** (Superamento target > $23.000 con margine +$2.120,33);
+- **Range per match:** $24.821,00 – $25.639,00;
+- **Harvest No-ops:** 0;
+- **Watering Compliance:** 100%;
+- **Eccezioni / Fallback:** 0.
+
+---
+
+## 14. POST-TOURNAMENT REVIEW CONTRACT
 
 Al termine del torneo a tre, Antigravity si impegna formalmente a:
 1. Ricevere ed esaminare integralmente i log e le telemetrie di **tutti e tre i concorrenti** (Antigravity, Codex, Copilot);

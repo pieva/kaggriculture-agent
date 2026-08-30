@@ -2,13 +2,13 @@
 
 ```text
 AGENT_ID = COPILOT
-STATO = CANDIDATE C2 / NOT FROZEN
+STATO = CANDIDATE C2 / PERFORMANCE ITERATION / FROZEN FOR NEXT TOURNAMENT
 TOURNAMENT_READY = YES
 ```
 
 ## 1. Scopo e ipotesi operativa
 
-Il concorrente COPILOT costruisce una policy C2 centrata su un principio di prevenzione: evitare gli errori già diagnosticati in E16, prima di ricorrere a recovery e riassegnazione. La causa prioritaria non è la scarsità di semi o il timing di mercato, ma la combinazione di:
+Il concorrente COPILOT costruisce una policy C2 centrata su un principio di prevenzione: evitare gli errori già diagnosticati in E16, prima di ricorrere a recovery e riassegnazione. La performance iteration corregge il limite di capacità osservato nel retournament: il ciclo minimo era realizzato, ma un core di quattro tile e un solo worker non poteva generare throughput competitivo.
 
 - premature HARVEST dispatch;
 - irrigazione intermittente non corretta;
@@ -53,14 +53,39 @@ Il nostro modello assegna massima priorità a due meccanismi:
 1. bloccare HARVEST prematuro con una gate `harvest_ready` rigorosa;
 2. impedire la perdita di tile in `LOST_WEED` o in `RETIREMENT_DUE` senza clearance preventiva.
 
-## 4. Meccanismi NON prioritari
+## 4. Ipotesi causale performance iteration
 
-- market timing: secondario rispetto alla pulizia e alla continuità del working set;
-- seed scarcity: non è il collo di bottiglia principale in E16 R1;
+```text
+HYPOTHESIS_ID: COPILOT_C2_PI_H1_SERVICEABLE_NW_THROUGHPUT
+OBSERVED_PROBLEM: mean final money $4,154, active max 4, workforce max 1,
+  no land expansion e minimum cash $2,920 nel retournament valido.
+EVIDENCE: PLANT/WATER/HARVEST/MOVE Copilot producevano state transition;
+  non esiste evidenza di un service o biological failure nel core, mentre
+  $2,920 di capitale restavano inutilizzati.
+CAUSAL_MECHANISM: il working set 3x3 configurato con raggio 1 era ulteriormente
+  ridotto a quattro tile raggiunte da un farmer senza hand. Il throughput di
+  raccolto e vendita era quindi limitato dalla capacità, non dalla correttezza
+  del lifecycle.
+MODEL_CHANGE: lavorare tutte le 25 tile possedute nel quadrante NW con una
+  workforce totale di 9, assegnazione greedy a target distinti, WHEAT rapido,
+  semina entro day 27 e vendita/reinvestimento continui.
+EXPECTED_INTERMEDIATE_EFFECT: active surface >=20 e workforce >=9 in preflight
+  P0/P1, con WATER, HARVEST e SELL che producono transizioni osservabili.
+EXPECTED_ECONOMIC_EFFECT: maggiore massa serviceable e throughput monetizzato;
+  direzione final_money UP verso mean >$23,000 nel prossimo tournament.
+FALSIFICATION_CONDITION: se P0 o P1 non raggiunge 20 PLANT e 9 unità, oppure
+  non osserva WATER, HARVEST e SELL effect, H1 è falsificata. Il target
+  economico resta falsificato dal prossimo tournament se mean <=$23,000.
+```
+
+## 5. Meccanismi NON prioritari
+
+- market timing e ottimizzazione dei prezzi: secondari rispetto alla pulizia e alla continuità del working set;
+- seed scarcity oltre il bootstrap del working set: non è il collo di bottiglia principale in E16 R1;
 - pure scale-up aggressiva: non produce beneficio se le azioni sono sprecate;
 - livestock-first: fuori dal perimetro di questa versione per ridurre complessità non causale.
 
-## 5. Feature C2 consumate
+## 6. Feature C2 consumate
 
 | feature_id | runtime source | calculation point | decision phase | consumer | fallback behavior |
 |---|---|---|---|---|---|
@@ -72,29 +97,34 @@ Il nostro modello assegna massima priorità a due meccanismi:
 | `consecutive_unwatered` | tile object | pre-action | WATER policy | missed-water prevention | enforce WATER if count >= 1 |
 | `max_lifespan_step` | tile object | pre-action | DIG prevention | exit lifecycle | clear on retirement |
 | `tile_lifecycle_state` | derived classifier | pre-action | action arbitration | state gating | default PASS |
+| `player` | observation.player | pre-action | player binding | own-farm selection | P0 only if missing |
+| `private.seeds` | observation.private | pre-action | bootstrap / PLANT | seed balance | buy WHEAT for empty core |
+| `private.shed` | observation.private | pre-action | market sale | harvested inventory | SELL crop units |
 
-## 6. Regole decisionali
+## 7. Regole decisionali
 
 1. `HARVEST` è consentito solo se `harvest_ready == true`.
 2. `WATER` è prioritario su tile PLANT non irrigate, specialmente quando `consecutive_unwatered + 1 >= 2`.
 3. `DIG` è eseguito su `LOST_WEED` e su `RETIREMENT_DUE` per ripristinare il tile.
 4. La policy preferisce la prevenzione rispetto alla recovery.
 5. I tile vuoti o `EMPTY_ASSIGNED` possono essere riempiti con il crop preferito solo se ci sono semi disponibili.
+6. Con zero o insufficienti semi nel quadrante NW, la policy emette `BUY_SEED WHEAT` fino al fabbisogno delle tile vuote più una riserva di due seed.
+7. Le unità raccolte depositate nello shed sono vendute con `SELL`; il capitale risultante finanzia il bootstrap e i replant successivi.
+8. A ogni giorno la policy riassume fino a una workforce totale di nove unità, entro il limite di dieci ordini market.
 
-## 7. Priorità / arbitration
+## 8. Priorità / arbitration
 
 ```text
-1. safety / irreversible loss prevention
-2. harvest readiness validity
-3. water maintenance
-4. preventive DIG
-5. replant / recovery
-6. PASS
+1. harvest readiness validity
+2. water maintenance / irreversible loss prevention
+3. preventive DIG
+4. replant / recovery
+5. PASS
 ```
 
 La priorità non usa una matrice avanzata: usa una gerarchia deterministica e localmente verificabile.
 
-## 8. Tile lifecycle policy
+## 9. Tile lifecycle policy
 
 La classificazione è:
 
@@ -116,7 +146,7 @@ Regole applicate:
 - `PLANT` + non matured -> `GROWING`;
 - `PLANT` + `yield_units == 0` + lifespan reached -> `RETIREMENT_DUE`.
 
-## 9. WATER policy
+## 10. WATER policy
 
 La policy applica una regola conservativa:
 
@@ -134,7 +164,7 @@ if tile.kind == PLANT and not watered_today and consecutive_unwatered + 1 >= 2:
 
 Questo evita il falso problema dei missed-WATER ma non ripristina eccessivamente la semantica R1 correggere.
 
-## 10. HARVEST policy
+## 11. HARVEST policy
 
 ```text
 harvest_ready =
@@ -145,13 +175,15 @@ harvest_ready =
 
 Niente `yield_units > 0` da solo. La policy rifiuta tutte le azioni `HARVEST` non conformi.
 
-## 11. PLANT / replant policy
+## 12. PLANT / replant policy
 
 - se tile vuota e ci sono semi disponibili, plantare una crop preferita (`WHEAT` di default);
 - il replant è secondario rispetto al mantenimento delle tile già attive;
+- al primo stato reale con zero seed, acquistare i semi WHEAT necessari a riempire tutte le 25 tile NW serviceable;
+- non avviare PLANT dopo day 27, perché WHEAT non raggiunge il primo yield entro l'orizzonte rimanente;
 - la policy non assume un optimum economico di mezzo ciclo; il comportamento è espressamente conservativo.
 
-## 12. DIG preventive / recovery policy
+## 13. DIG preventive / recovery policy
 
 ```text
 if tile lifecycle in {LOST_WEED, RETIREMENT_DUE}: DIG
@@ -159,38 +191,50 @@ if tile lifecycle in {LOST_WEED, RETIREMENT_DUE}: DIG
 
 La policy usa `DIG` come azione di ripristino/clearance, ma non come soluzione primaria ai problemi evitabili; il suo compito è contenere il danno.
 
-## 13. Workforce / movement policy
+## 14. Workforce / movement policy
 
-La policy usa il worker locale in modo semplice e verificabile:
+La policy usa le 25 tile possedute del quadrante NW come `OWNED_SURFACE` e
+`SERVICEABLE_SURFACE`; `ACTIVE_SURFACE` conta le tile PLANT e
+`PRODUCTIVE_SURFACE` solo quelle che ricevono WATER, HARVEST e vendita effettiva.
+Ogni turno assegna greedy un target distinto a farmer e hand, minimizzando la
+distanza Manhattan dell'unità disponibile.
 
-- se il worker è su tile in `LOST_WEED` o `RETIREMENT_DUE`, `DIG`;
-- se il worker è su una crop da raccogliere, `HARVEST` solo se `harvest_ready`;
-- se la crop è non irrigata, `WATER`;
-- altrimenti `PASS`.
+1. assegnare `HARVEST_READY`;
+2. assegnare PLANT non irrigate;
+3. assegnare `LOST_WEED` o `RETIREMENT_DUE`;
+4. assegnare tile vuote per `PLANT`, limitate ai seed realmente disponibili;
+5. altrimenti `PASS`.
 
-Non si introduce un routing complesso non supportato dall'evidenza.
+Il worker emette un movimento cardinale verso il target se non è già sulla tile.
+Questa è una limitata allocazione serviceable NW, non routing globale o
+espansione territoriale.
 
-## 14. Inventory / market policy
+## 15. Inventory / market policy
 
-In questa fase la policy non introduce nuovi vincoli di mercato. Le transazioni di mercato sono lasciate invarianti, con il solo requisito di non distorcere la gestione operativa del working set.
+La policy usa il mercato solo per chiudere il loop produttivo minimo:
 
-## 15. Livestock policy
+- `BUY_SEED WHEAT` colma il deficit tra semi disponibili e tutte le 25 tile NW, più la riserva, rispettando il capitale disponibile;
+- `SELL` vende tutte le unità crop presenti nello shed;
+- `HIRE` riporta la workforce a nove; `SELL`, `HIRE` e `BUY_SEED` sono troncati a dieci ordini, senza ordini speculativi;
+- non sono introdotti market timing, espansione fondiaria o livestock.
+
+## 16. Livestock policy
 
 Non usata in questa versione C2. `UNCHANGED` / `DEFERRED` per ridurre la superficie del modello e rispettare il principio di Minimal Causal Intervention.
 
-## 16. Failure containment
+## 17. Failure containment
 
 La policy contiene i fallimenti principali:
 
 - missing/invalid diagnostic data -> default conservative PASS;
 - temporarily unavailable feature -> fallback to `PASS` or strict rejection;
 - insufficient workforce -> no speculative over-allocation;
-- insufficient cash -> no forced expansion;
-- insufficient seed/inventory -> no plant action;
+- insufficient cash -> acquisto semi limitato alla quantità finanziabile, senza espansione forzata;
+- insufficient seed -> bootstrap `BUY_SEED` per le tile vuote del core;
 - LOST_WEED -> DIG;
-- action failure -> conservative no-op fallback.
+- nessun fallback silenzioso per un errore di runtime: il preflight real-engine P0/P1 è requisito di freeze.
 
-## 17. Expected mechanism changes
+## 18. Expected mechanism changes
 
 ```text
 EVIDENZA
@@ -198,28 +242,35 @@ EVIDENZA
 premature HARVEST + WEED persistence
     ↓
 feature `harvest_ready` + lifecycle classifier
+    + bootstrap seed + bounded routing + crop sales
     ↓
-strict action gate + preventive DIG
+strict action gate + preventive DIG + productive loop
     ↓
-less failed/no-op HARVEST
+25-tile serviceable mass + nine-worker throughput
     ↓
-better productive action share
+higher maintained and monetized output
     ↓
-higher crop persistence and target attainment
+higher economic capacity
 ```
 
-## 18. Previsioni verificabili
+## 19. Previsioni preregistrate
 
-P1. `premature_harvest_count` deve diminuire materialmente.
-P2. `maintained_productive_surface` deve migliorare relativamente al pattern E16.
-P3. `WEED/lost_tile_count` deve diminuire.
-P4. `replant_latency` deve diminuire dove la policy la prioritizza.
-P5. `productive_action_share` non deve peggiorare strutturalmente.
-P6. `watering_execution` e `watering_continuity` non devono regredire materialmente.
-P7. `crop_target_attainment` deve migliorare rispetto al failure pattern E16.
-P8. `final_money` viene misurato, non assunto.
+```text
+EXPECTED_DIRECTION_FINAL_MONEY: UP
+TARGET_MEAN_FINAL_MONEY: > 23000
 
-## 19. Metriche di verifica
+METRIC_A: active_surface / workforce
+CURRENT_VALUE: active max 4, workforce max 1
+EXPECTED_VALUE_OR_DIRECTION: >=20 active tile e >=9 workforce nel preflight
+WHY_CAUSAL: H1 aumenta soltanto la capacità che può essere servita e monetizzata.
+
+METRIC_B: WATER / HARVEST / SELL state-transition effects
+CURRENT_VALUE: ciclo corretto ma throughput di quattro tile
+EXPECTED_VALUE_OR_DIRECTION: effect osservabili su working set >=20 in P0 e P1
+WHY_CAUSAL: dimostra che la massa aggiunta è serviceable e non sola superficie.
+```
+
+## 20. Metriche di verifica
 
 - `final_money`
 - `completion`
@@ -242,14 +293,14 @@ P8. `final_money` viene misurato, non assunto.
 
 Se una metrica non è computabile nel runner comune, la documentazione indica `NOT_CURRENTLY_COMPUTABLE`.
 
-## 20. Assunzioni e limiti
+## 21. Assunzioni e limiti
 
 - il modello non pretende di ottimizzare il rendimento assoluto su tutte le seed, ma di ridurre il failure pattern stabilito;
 - l'intervallo di validità è limitato alla Foundation C2 e ai suoi invarianti;
 - il modello non introduce threshold non supportati senza evidenza; i parametri restano configurabili e dichiarati come policy envelope;
 - questa versione non sostituisce il torneo comune e non si fonda su dati del concorrente avversario.
 
-## 21. POST-TOURNAMENT REVIEW CONTRACT
+## 22. POST-TOURNAMENT REVIEW CONTRACT
 
 Dopo il torneo locale a tre, il concorrente COPILOT riceverà i risultati di ANTIGRAVITY, CODEX e COPILOT e ripeterà la stessa domanda causale:
 

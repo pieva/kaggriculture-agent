@@ -1,22 +1,37 @@
 {
   "candidate_id": "CODEX_C2",
-  "schema_version": "model_spec_c2.codex.v1",
-  "crop_working_set_target": 17,
+  "schema_version": "model_spec_c2.codex.v3",
+  "crop_working_set_target": 25,
+  "bootstrap_crop_target": 10,
+  "max_wheat_plants_per_day": 2,
+  "bootstrap_crop_pattern": [
+    "WHEAT",
+    "WHEAT",
+    "STRAWBERRY",
+    "WHEAT",
+    "MELON"
+  ],
   "crop_pattern": [
     "WHEAT",
-    "STRAWBERRY",
     "WHEAT",
     "STRAWBERRY",
+    "MELON",
     "MELON"
   ],
   "watering_dispatch_priority": 0.7,
   "livestock_headcount_target": 4,
   "pasture_allocation_target": 5,
   "quadrants_owned": 2,
-  "workforce_headcount": 10,
+  "workforce_headcount": 8,
+  "bootstrap_workforce_headcount": 5,
   "livestock_species": "COW",
   "operating_cash_floor": 300,
   "endgame_shutdown_steps": 48,
   "turns_per_day": 24,
-  "minimum_post_plant_action_phases": 1
+  "minimum_post_plant_action_phases": 1,
+  "land_expansion_min_active": 8,
+  "land_expansion_min_cash": 1600,
+  "livestock_activation_min_crop_fraction": 0.8,
+  "livestock_activation_min_cash": 1500,
+  "crop_horizon_margin_steps": 24
 }

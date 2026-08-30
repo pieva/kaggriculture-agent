@@ -1,0 +1,229 @@
+{
+  "protocol": "CODEX_C2_YIELD_DENSITY_REAL_ENGINE_PREFLIGHT_V3",
+  "seed": 26083001,
+  "episode_steps": 360,
+  "opponent": "inert_agent",
+  "runs": [
+    {
+      "seat": 0,
+      "status": "DONE",
+      "steps_observed": 360,
+      "player_values": [
+        0
+      ],
+      "own_farm_binding_verified": true,
+      "error_count": 0,
+      "fallback_count": 0,
+      "last_exception": null,
+      "unit_actions": {
+        "BUILD_PASTURE": 5,
+        "DIG": 15,
+        "DROP": 21,
+        "HARVEST": 24,
+        "MOVE": 963,
+        "PASS": 478,
+        "PLANT": 30,
+        "WATER": 184
+      },
+      "market_orders": {
+        "BUY_LAND": 1,
+        "BUY_SEED": 11,
+        "HIRE": 65,
+        "SELL": 19
+      },
+      "mechanism": {
+        "crop_plant_attempts": {
+          "MELON": 9,
+          "STRAWBERRY": 5,
+          "WHEAT": 16
+        },
+        "effective_crop_harvests": {
+          "MELON": 6,
+          "STRAWBERRY": 14,
+          "WHEAT": 4
+        },
+        "effective_crop_harvest_units": {
+          "MELON": 34,
+          "STRAWBERRY": 15,
+          "WHEAT": 9
+        },
+        "yield_per_effective_harvest": {
+          "MELON": 5.666666666666667,
+          "STRAWBERRY": 1.0714285714285714,
+          "WHEAT": 2.25
+        },
+        "ordered_sell_quantities": {
+          "MELON": 34,
+          "STRAWBERRY": 15,
+          "WHEAT": 9
+        },
+        "observed_sell_drawdown": {
+          "MELON": 34,
+          "STRAWBERRY": 13,
+          "WHEAT": 9
+        },
+        "daily_water_coverage": {
+          "0": 0.7619047619047619,
+          "1": 1.0,
+          "2": 1.0,
+          "3": 1.0,
+          "4": 0.36363636363636365,
+          "5": 0.5454545454545454,
+          "6": 0.8125,
+          "7": 1.0,
+          "8": 0.7142857142857143,
+          "9": 0.6428571428571429,
+          "10": 0.5,
+          "11": 0.7142857142857143,
+          "12": 0.8333333333333334,
+          "13": 1.0,
+          "14": 1.0
+        },
+        "mean_daily_water_coverage": 0.7925505050505051,
+        "movement_share": 0.5598837209302325
+      },
+      "state_transitions": {
+        "active_surface_changes": 33,
+        "plant_effect_count": 19,
+        "water_effect_count": 120,
+        "movement_effect_count": 289,
+        "first_plant_effect_step": 3,
+        "first_water_effect_step": 4,
+        "first_movement_effect_step": 2
+      },
+      "productive_state": {
+        "max_active_surface": 22,
+        "final_active_surface": 5,
+        "max_quadrants": 2,
+        "max_pastures": 5,
+        "max_cows": 0
+      },
+      "economic_cycle": {
+        "initial_cash": 3000.0,
+        "final_cash": 11310.0,
+        "min_cash": 300.0,
+        "max_cash": 11310.0,
+        "first_sell_cash_gain_step": 125,
+        "sell_cash_gain_count": 17,
+        "cycle_observed": true
+      },
+      "failures": [
+        "WHEAT yield/effective harvest is 2.250, expected >= 3.0"
+      ],
+      "passed": false
+    },
+    {
+      "seat": 1,
+      "status": "DONE",
+      "steps_observed": 360,
+      "player_values": [
+        1
+      ],
+      "own_farm_binding_verified": true,
+      "error_count": 0,
+      "fallback_count": 0,
+      "last_exception": null,
+      "unit_actions": {
+        "BUILD_PASTURE": 5,
+        "DIG": 15,
+        "DROP": 23,
+        "HARVEST": 25,
+        "MOVE": 972,
+        "PASS": 519,
+        "PLANT": 29,
+        "WATER": 180
+      },
+      "market_orders": {
+        "BUY_LAND": 1,
+        "BUY_SEED": 11,
+        "HIRE": 65,
+        "SELL": 22
+      },
+      "mechanism": {
+        "crop_plant_attempts": {
+          "MELON": 9,
+          "STRAWBERRY": 5,
+          "WHEAT": 15
+        },
+        "effective_crop_harvests": {
+          "MELON": 6,
+          "STRAWBERRY": 15,
+          "WHEAT": 4
+        },
+        "effective_crop_harvest_units": {
+          "MELON": 33,
+          "STRAWBERRY": 15,
+          "WHEAT": 9
+        },
+        "yield_per_effective_harvest": {
+          "MELON": 5.5,
+          "STRAWBERRY": 1.0,
+          "WHEAT": 2.25
+        },
+        "ordered_sell_quantities": {
+          "MELON": 33,
+          "STRAWBERRY": 15,
+          "WHEAT": 9
+        },
+        "observed_sell_drawdown": {
+          "MELON": 28,
+          "STRAWBERRY": 11,
+          "WHEAT": 9
+        },
+        "daily_water_coverage": {
+          "0": 0.7619047619047619,
+          "1": 1.0,
+          "2": 1.0,
+          "3": 1.0,
+          "4": 0.36363636363636365,
+          "5": 0.5454545454545454,
+          "6": 0.8666666666666667,
+          "7": 1.0,
+          "8": 0.7692307692307693,
+          "9": 0.6923076923076923,
+          "10": 0.46153846153846156,
+          "11": 0.6666666666666666,
+          "12": 1.0,
+          "13": 1.0,
+          "14": 1.0
+        },
+        "mean_daily_water_coverage": 0.8084937284937285,
+        "movement_share": 0.5497737556561086
+      },
+      "state_transitions": {
+        "active_surface_changes": 30,
+        "plant_effect_count": 17,
+        "water_effect_count": 118,
+        "movement_effect_count": 293,
+        "first_plant_effect_step": 3,
+        "first_water_effect_step": 4,
+        "first_movement_effect_step": 2
+      },
+      "productive_state": {
+        "max_active_surface": 22,
+        "final_active_surface": 5,
+        "max_quadrants": 2,
+        "max_pastures": 5,
+        "max_cows": 0
+      },
+      "economic_cycle": {
+        "initial_cash": 3000.0,
+        "final_cash": 10668.0,
+        "min_cash": 300.0,
+        "max_cash": 10668.0,
+        "first_sell_cash_gain_step": 125,
+        "sell_cash_gain_count": 21,
+        "cycle_observed": true
+      },
+      "failures": [
+        "WHEAT yield/effective harvest is 2.250, expected >= 3.0"
+      ],
+      "passed": false
+    }
+  ],
+  "failures": [
+    "P0: WHEAT yield/effective harvest is 2.250, expected >= 3.0",
+    "P1: WHEAT yield/effective harvest is 2.250, expected >= 3.0"
+  ],
+  "passed": false
+}

@@ -1,0 +1,120 @@
+{
+  "protocol": "CODEX_C2_REMEDIATION_REAL_ENGINE_PREFLIGHT_V1",
+  "seed": 26083001,
+  "episode_steps": 360,
+  "opponent": "inert_agent",
+  "runs": [
+    {
+      "seat": 0,
+      "status": "DONE",
+      "steps_observed": 360,
+      "player_values": [
+        0
+      ],
+      "own_farm_binding_verified": true,
+      "error_count": 0,
+      "fallback_count": 0,
+      "last_exception": null,
+      "unit_actions": {
+        "BUILD_PASTURE": 5,
+        "DIG": 23,
+        "DROP": 68,
+        "HARVEST": 69,
+        "MOVE": 2277,
+        "PASS": 340,
+        "PLANT": 84,
+        "WATER": 215
+      },
+      "market_orders": {
+        "BUY_LAND": 1,
+        "BUY_SEED": 56,
+        "HIRE": 120,
+        "SELL": 62
+      },
+      "state_transitions": {
+        "active_surface_changes": 109,
+        "plant_effect_count": 55,
+        "water_effect_count": 135,
+        "movement_effect_count": 345,
+        "first_plant_effect_step": 3,
+        "first_water_effect_step": 4,
+        "first_movement_effect_step": 2
+      },
+      "productive_state": {
+        "max_active_surface": 23,
+        "final_active_surface": 5,
+        "max_quadrants": 2,
+        "max_pastures": 5,
+        "max_cows": 0
+      },
+      "economic_cycle": {
+        "initial_cash": 3000.0,
+        "final_cash": 7895.0,
+        "min_cash": 379.0,
+        "max_cash": 7895.0,
+        "first_sell_cash_gain_step": 53,
+        "sell_cash_gain_count": 60,
+        "cycle_observed": true
+      },
+      "failures": [],
+      "passed": true
+    },
+    {
+      "seat": 1,
+      "status": "DONE",
+      "steps_observed": 360,
+      "player_values": [
+        1
+      ],
+      "own_farm_binding_verified": true,
+      "error_count": 0,
+      "fallback_count": 0,
+      "last_exception": null,
+      "unit_actions": {
+        "BUILD_PASTURE": 5,
+        "DIG": 23,
+        "DROP": 68,
+        "HARVEST": 69,
+        "MOVE": 2265,
+        "PASS": 352,
+        "PLANT": 84,
+        "WATER": 215
+      },
+      "market_orders": {
+        "BUY_LAND": 1,
+        "BUY_SEED": 56,
+        "HIRE": 120,
+        "SELL": 62
+      },
+      "state_transitions": {
+        "active_surface_changes": 109,
+        "plant_effect_count": 55,
+        "water_effect_count": 135,
+        "movement_effect_count": 345,
+        "first_plant_effect_step": 3,
+        "first_water_effect_step": 4,
+        "first_movement_effect_step": 2
+      },
+      "productive_state": {
+        "max_active_surface": 23,
+        "final_active_surface": 5,
+        "max_quadrants": 2,
+        "max_pastures": 5,
+        "max_cows": 0
+      },
+      "economic_cycle": {
+        "initial_cash": 3000.0,
+        "final_cash": 7895.0,
+        "min_cash": 379.0,
+        "max_cash": 7895.0,
+        "first_sell_cash_gain_step": 53,
+        "sell_cash_gain_count": 60,
+        "cycle_observed": true
+      },
+      "failures": [],
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "passed": true
+}

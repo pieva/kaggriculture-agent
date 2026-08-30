@@ -1,6 +1,7 @@
 """Tests for Antigravity C2 Model Specification and Policy Implementation."""
 
 import pytest
+import kaggle_environments
 from typing import Any, Dict
 
 from agricola.strategy.antigravity.c2_config import AntigravityC2Config
@@ -12,7 +13,7 @@ def test_antigravity_c2_harvest_readiness_rejection_and_acceptance():
     """Verify CRP-10 harvest_ready rejects premature harvest and accepts mature harvest."""
     policy = AntigravityC2Policy()
 
-    # Wheat: first_yield_day = 3
+    # Wheat: first_yield_day = 2
     premature_wheat = {
         "kind": "PLANT",
         "crop": "WHEAT",
@@ -20,24 +21,29 @@ def test_antigravity_c2_harvest_readiness_rejection_and_acceptance():
         "yield_units": 5,
         "watered_today": True,
     }
-    # On day 0, 1, 2: premature! Must reject
+    # On day 0, 1: premature! Must reject
     assert not policy.is_harvest_ready(premature_wheat, current_day=0)
     assert not policy.is_harvest_ready(premature_wheat, current_day=1)
+
+    # On day 2: premature for non-ongoing wheat when yield_units=5 < 6 and age=2 < 4
     assert not policy.is_harvest_ready(premature_wheat, current_day=2)
-
-    # On day 3: mature! Must accept
-    assert policy.is_harvest_ready(premature_wheat, current_day=3)
+    # On day 4: max yield day reached! Must accept
     assert policy.is_harvest_ready(premature_wheat, current_day=4)
+    # Or if yield_units == 6 (max yield): Must accept even at day 2
+    max_wheat = dict(premature_wheat, yield_units=6)
+    assert policy.is_harvest_ready(max_wheat, current_day=2)
 
-    # Melon: first_yield_day = 8
+    # Melon: first_yield_day = 10, max_yield_day = 12, max_yield = 6
     premature_melon = {
         "kind": "PLANT",
         "crop": "MELON",
         "planted_day": 1,
-        "yield_units": 10,
+        "yield_units": 4,
     }
-    assert not policy.is_harvest_ready(premature_melon, current_day=8)  # 8 - 1 = 7 < 8
-    assert policy.is_harvest_ready(premature_melon, current_day=9)   # 9 - 1 = 8 >= 8
+    assert not policy.is_harvest_ready(premature_melon, current_day=9)   # 9 - 1 = 8 < 10
+    assert not policy.is_harvest_ready(premature_melon, current_day=10)  # 10 - 1 = 9 < 10
+    assert not policy.is_harvest_ready(premature_melon, current_day=11)  # age 10 < 12 and yield 4 < 6
+    assert policy.is_harvest_ready(premature_melon, current_day=13)      # 13 - 1 = 12 >= 12 (max yield day)
 
     # Zero yield units is never harvest ready even if age is sufficient
     zero_yield_plant = {
@@ -61,12 +67,12 @@ def test_antigravity_c2_tile_lifecycle_classification():
     weed_tile = {"kind": "WEED"}
     assert policy.classify_tile_lifecycle(pos, weed_tile, current_day=1, engine_step=24) == "LOST_WEED"
 
-    # 3. GROWING (premature wheat)
+    # 3. GROWING (premature wheat, day 1, planted day 1 -> age 0 < 2)
     growing_wheat = {"kind": "PLANT", "crop": "WHEAT", "planted_day": 1, "yield_units": 5}
-    assert policy.classify_tile_lifecycle(pos, growing_wheat, current_day=2, engine_step=48) == "GROWING"
+    assert policy.classify_tile_lifecycle(pos, growing_wheat, current_day=1, engine_step=24) == "GROWING"
 
-    # 4. HARVEST_READY (mature wheat)
-    mature_wheat = {"kind": "PLANT", "crop": "WHEAT", "planted_day": 1, "yield_units": 5}
+    # 4. HARVEST_READY (mature wheat at max yield, day 4, planted day 1 -> age 3 >= 2 and yield 6 >= 6)
+    mature_wheat = {"kind": "PLANT", "crop": "WHEAT", "planted_day": 1, "yield_units": 6}
     assert policy.classify_tile_lifecycle(pos, mature_wheat, current_day=4, engine_step=96) == "HARVEST_READY"
 
     # 5. RETIREMENT_DUE (exhausted strawberry after max lifespan step)
@@ -115,13 +121,11 @@ def test_antigravity_c2_recovery_and_preventive_dig_dispatch():
                 "hires_today": 0,
             }
         ],
-        "private": [
-            {
-                "shed": {},
-                "seeds": {"WHEAT": 5, "STRAWBERRY": 5, "MELON": 5},
-                "inventories": [{}, {}],
-            }
-        ],
+        "private": {
+            "shed": {},
+            "seeds": {"WHEAT": 5, "STRAWBERRY": 5, "MELON": 5},
+            "inventories": [{}, {}],
+        },
     }
 
     actions = policy.decide_actions(obs, player_index=0)
@@ -163,13 +167,11 @@ def test_antigravity_c2_no_premature_harvest_dispatch():
                 "hires_today": 0,
             }
         ],
-        "private": [
-            {
-                "shed": {},
-                "seeds": {"WHEAT": 5},
-                "inventories": [{}],
-            }
-        ],
+        "private": {
+            "shed": {},
+            "seeds": {"WHEAT": 5},
+            "inventories": [{}],
+        },
     }
 
     actions = policy.decide_actions(obs, player_index=0)
@@ -178,7 +180,7 @@ def test_antigravity_c2_no_premature_harvest_dispatch():
 
 
 def test_antigravity_c2_agent_callable_interface():
-    """Verify AntigravityC2Agent acts as a compliant Kaggle callable entrypoint."""
+    """Verify AntigravityC2Agent acts as a compliant Kaggle callable entrypoint with dict private."""
     agent = AntigravityC2Agent()
 
     tiles = [["LOCKED" for _ in range(10)] for _ in range(10)]
@@ -190,6 +192,7 @@ def test_antigravity_c2_agent_callable_interface():
         "hour": 0,
         "turnsPerDay": 24,
         "max_steps": 720,
+        "player": 0,
         "farms": [
             {
                 "money": 1500.0,
@@ -200,13 +203,11 @@ def test_antigravity_c2_agent_callable_interface():
                 "hires_today": 0,
             }
         ],
-        "private": [
-            {
-                "shed": {},
-                "seeds": {"WHEAT": 10},
-                "inventories": [{}],
-            }
-        ],
+        "private": {
+            "shed": {},
+            "seeds": {"WHEAT": 10},
+            "inventories": [{}],
+        },
     }
 
     result = agent(obs)
@@ -217,7 +218,82 @@ def test_antigravity_c2_agent_callable_interface():
     assert isinstance(result["farmer"], list)
     assert isinstance(result["hands"], list)
     assert isinstance(result["market"], list)
+    assert agent.error_count == 0
+    assert agent.last_exception is None
 
-    # Test error containment fallback on invalid state
-    fallback_result = agent({"invalid": "state"})
+    # Test error containment fallback on non-dict / invalid input
+    fallback_result = agent(None)
     assert fallback_result == {"farmer": ["PASS"], "hands": [], "market": []}
+    assert agent.error_count == 1
+    assert agent.last_exception is not None
+
+
+def test_antigravity_c2_player1_support():
+    """Verify AntigravityC2Agent correctly reads player 1 state when player == 1."""
+    agent = AntigravityC2Agent()
+
+    tiles_p0 = [["LOCKED" for _ in range(10)] for _ in range(10)]
+    tiles_p1 = [["LOCKED" for _ in range(10)] for _ in range(10)]
+    tiles_p1[0][0] = None
+
+    obs = {
+        "step": 0,
+        "day": 0,
+        "hour": 0,
+        "turnsPerDay": 24,
+        "max_steps": 720,
+        "player": 1,
+        "farms": [
+            {
+                "money": 500.0,
+                "farmer": [0, 0],
+                "hands": [],
+                "tiles": tiles_p0,
+                "unlocked_quadrants": ["NW"],
+                "hires_today": 0,
+            },
+            {
+                "money": 3000.0,
+                "farmer": [4, 4],
+                "hands": [],
+                "tiles": tiles_p1,
+                "unlocked_quadrants": ["NW"],
+                "hires_today": 0,
+            },
+        ],
+        "private": {
+            "shed": {},
+            "seeds": {"WHEAT": 10},
+            "inventories": [{}],
+        },
+    }
+
+    result = agent(obs)
+    assert agent.error_count == 0
+    assert agent.last_exception is None
+    assert isinstance(result, dict)
+    # Market orders should be generated based on P1's money ($3000.0)
+    assert len(result["market"]) > 0
+
+
+def test_antigravity_c2_real_engine_smoke_48_steps():
+    """Run real 48-step smoke test in kaggle_environments in both P0 and P1 positions."""
+    agent_p0 = AntigravityC2Agent()
+    agent_p1 = AntigravityC2Agent()
+
+    env = kaggle_environments.make("kaggriculture", configuration={"episodeSteps": 48})
+    env.run([agent_p0, agent_p1])
+
+    # 1. Verify zero internal exceptions / fallbacks in agent
+    assert agent_p0.error_count == 0, f"P0 raised exception: {agent_p0.last_exception}"
+    assert agent_p1.error_count == 0, f"P1 raised exception: {agent_p1.last_exception}"
+
+    # 2. Verify game status completed cleanly
+    assert env.state[0].status == "DONE"
+    assert env.state[1].status == "DONE"
+
+    # 3. Verify observable state transitions (money modified, farm active, not 720 PASS)
+    final_money_p0 = float(env.state[0].observation.farms[0].money)
+    final_money_p1 = float(env.state[1].observation.farms[1].money)
+    assert final_money_p0 != 3000.0, "P0 remained completely inactive"
+    assert final_money_p1 != 3000.0, "P1 remained completely inactive"

@@ -11,13 +11,11 @@ class CopilotC2Agent:
         self.config = config or CopilotC2Config()
         self.policy = CopilotC2Policy(config=self.config)
 
-    def __call__(self, obs: Dict[str, Any]) -> Dict[str, Any]:
-        actions = self.policy.decide_actions(obs, player_index=0)
-        if not actions:
-            return {"farmer": ["PASS"], "hands": [], "market": []}
-        farmer = actions[0]
-        hands = actions[1:]
-        return {"farmer": farmer, "hands": hands, "market": []}
+    def __call__(
+        self, obs: Dict[str, Any], configuration: Optional[Any] = None
+    ) -> Dict[str, Any]:
+        player_index = int(obs.get("player", 0))
+        return self.policy.decide(obs, player_index=player_index)
 
     def act(self, state: Any) -> Dict[str, Any]:
         obs = state.raw_obs if hasattr(state, "raw_obs") else state

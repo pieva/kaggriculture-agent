@@ -186,3 +186,86 @@ def test_copilot_c2_agent_callable_interface():
     assert isinstance(result["farmer"], list)
     assert isinstance(result["hands"], list)
     assert isinstance(result["market"], list)
+
+
+def test_copilot_c2_agent_uses_own_p1_farm_and_private_state():
+    """P1 must make decisions from farms[1] and its per-player private dictionary."""
+    agent = CopilotC2Agent()
+    tiles = [["LOCKED" for _ in range(10)] for _ in range(10)]
+    tiles[4][4] = None
+    opponent_tiles = [["LOCKED" for _ in range(10)] for _ in range(10)]
+    opponent_tiles[4][4] = {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 0,
+        "yield_units": 5,
+        "watered_today": False,
+    }
+    obs = {
+        "step": 0,
+        "day": 0,
+        "player": 1,
+        "farms": [
+            {"money": 3000.0, "farmer": [4, 4], "hands": [], "tiles": opponent_tiles},
+            {"money": 3000.0, "farmer": [4, 4], "hands": [], "tiles": tiles},
+        ],
+        "private": {"shed": {}, "seeds": {}, "inventories": [{}]},
+    }
+
+    result = agent(obs)
+
+    assert result["farmer"] == ["PASS"]
+    assert result["market"].count(["HIRE"]) == 8
+    assert ["BUY_SEED", "WHEAT", 3] in result["market"]
+
+
+def test_copilot_c2_routes_to_an_empty_working_tile_after_planting():
+    """The farmer expands the bounded core instead of remaining on the spawn tile."""
+    agent = CopilotC2Agent()
+    tiles = [["LOCKED" for _ in range(10)] for _ in range(10)]
+    for y in range(3, 6):
+        for x in range(3, 6):
+            tiles[y][x] = None
+    tiles[4][4] = {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 0,
+        "yield_units": 0,
+        "watered_today": True,
+    }
+    obs = {
+        "step": 1,
+        "day": 0,
+        "player": 0,
+        "farms": [{"money": 2990.0, "farmer": [4, 4], "hands": [], "tiles": tiles}],
+        "private": {"shed": {}, "seeds": {"WHEAT": 8}, "inventories": [{}]},
+    }
+
+    result = agent(obs)
+
+    assert result["farmer"] in (["NORTH"], ["SOUTH"], ["EAST"], ["WEST"])
+
+
+def test_copilot_c2_assigns_distinct_plant_targets_to_available_workers():
+    """The scale-up policy must not send multiple workers to one empty tile."""
+    policy = CopilotC2Policy()
+    tiles = [["LOCKED" for _ in range(10)] for _ in range(10)]
+    for y in range(5):
+        for x in range(5):
+            tiles[y][x] = None
+    obs = {
+        "step": 1,
+        "day": 0,
+        "player": 0,
+        "farms": [{
+            "money": 2900.0,
+            "farmer": [4, 4],
+            "hands": [[4, 3], [3, 4]],
+            "tiles": tiles,
+        }],
+        "private": {"shed": {}, "seeds": {"WHEAT": 3}, "inventories": [{}, {}, {}]},
+    }
+
+    actions = policy.decide_actions(obs)
+
+    assert actions == [["PLANT", "WHEAT"], ["PLANT", "WHEAT"], ["PLANT", "WHEAT"]]

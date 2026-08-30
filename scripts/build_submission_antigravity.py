@@ -1,51 +1,50 @@
-"""Script to bundle the independent Antigravity agent into a standalone submission file for Kaggle."""
+"""Build script to bundle the frozen Antigravity C2 candidate into standalone submission_antigravity.py."""
 
 from pathlib import Path
 from typing import List, Optional
-import re
+
+PROJECT_ROOT = Path(__file__).resolve().parents[1]
+ANTIGRAVITY_DIR = PROJECT_ROOT / "src" / "agricola" / "strategy" / "antigravity"
 
 SUBMISSION_TEMPLATE = '''"""
 Standalone submission file for Kaggle Kaggriculture.
-Generated automatically for Antigravity Independent Strategy Model (E14).
+Generated automatically from frozen Antigravity C2 Candidate (C2 Performance Iteration).
 """
 
-from typing import Dict, Any, List, Optional, Tuple, Set
+from __future__ import annotations
+
 from dataclasses import dataclass, field
 import math
+from typing import Any, Dict, List, Optional, Set, Tuple
 
 # ==========================================
-# --- Core State Wrapper ---
-# ==========================================
-{state_code}
-
-# ==========================================
-# --- Action Builder ---
-# ==========================================
-{actions_code}
-
-# ==========================================
-# --- Antigravity Strategy Config & Agent ---
+# --- Antigravity C2 Configuration ---
 # ==========================================
 {config_code}
 
+# ==========================================
+# --- Antigravity C2 Decision Policy ---
+# ==========================================
+{policy_code}
+
+# ==========================================
+# --- Antigravity C2 Agent Class ---
+# ==========================================
 {agent_code}
 
 # ==========================================
 # --- Kaggle Entrypoint ---
 # ==========================================
-_antigravity_config = AntigravityConfig()
-_antigravity_agent = AntigravityROIAgent(config=_antigravity_config)
+_agent_instance = AntigravityC2Agent()
+
 
 def agent(observation: Dict[str, Any], configuration: Optional[Dict[str, Any]] = None) -> Dict[str, Any]:
-    """Kaggle submission entry point for Antigravity Independent Strategy Agent."""
-    try:
-        state = GameState(observation)
-        return _antigravity_agent.act(state)
-    except Exception:
-        return {{"farmer": ["PASS"], "hands": [], "market": []}}
+    """Kaggle submission entry point for Antigravity C2 Strategy Agent."""
+    return _agent_instance(observation, configuration)
 '''
 
-def clean_imports(code: str, remove_prefixes: list) -> str:
+
+def clean_imports(code: str, remove_prefixes: List[str]) -> str:
     lines = code.split("\n")
     cleaned = []
     for line in lines:
@@ -55,60 +54,46 @@ def clean_imports(code: str, remove_prefixes: list) -> str:
         cleaned.append(line)
     return "\n".join(cleaned)
 
-def build_submission(output_paths: Optional[List[str]] = None) -> None:
-    if output_paths is None:
-        output_paths = ["submission/submission_antigravity.py"]
-        
-    project_root = Path(__file__).resolve().parent.parent
-    src_dir = project_root / "src" / "agricola"
 
-    with open(src_dir / "core" / "state.py", "r", encoding="utf-8") as f:
-        state_code = clean_imports(f.read(), [
-            "from typing import",
-            "from dataclasses import",
-            "import math",
-        ])
+def build_submission_antigravity(output_path: Optional[str] = None) -> Path:
+    out_file = Path(output_path) if output_path else PROJECT_ROOT / "submission" / "submission_antigravity.py"
+    out_file.parent.mkdir(parents=True, exist_ok=True)
 
-    with open(src_dir / "core" / "actions.py", "r", encoding="utf-8") as f:
-        actions_code = clean_imports(f.read(), [
-            "from typing import",
-            "from dataclasses import",
-            "import math",
-            "from agricola.core.state",
-        ])
-
-    with open(src_dir / "strategy" / "antigravity" / "config.py", "r", encoding="utf-8") as f:
+    with open(ANTIGRAVITY_DIR / "c2_config.py", "r", encoding="utf-8") as f:
         config_code = clean_imports(f.read(), [
-            "from typing import",
+            "from __future__ import annotations",
             "from dataclasses import",
+            "from typing import",
             "import math",
-            "from agricola.core.state",
-            "from agricola.core.actions",
         ])
 
-    with open(src_dir / "strategy" / "antigravity" / "agent.py", "r", encoding="utf-8") as f:
-        agent_code = clean_imports(f.read(), [
-            "from typing import",
+    with open(ANTIGRAVITY_DIR / "c2_policy.py", "r", encoding="utf-8") as f:
+        policy_code = clean_imports(f.read(), [
+            "from __future__ import annotations",
             "from dataclasses import",
+            "from typing import",
             "import math",
-            "from agricola.core.state",
-            "from agricola.core.actions",
-            "from agricola.strategy.antigravity",
+            "from agricola.strategy.antigravity.c2_config",
+        ])
+
+    with open(ANTIGRAVITY_DIR / "agent_c2.py", "r", encoding="utf-8") as f:
+        agent_code = clean_imports(f.read(), [
+            "from __future__ import annotations",
+            "from typing import",
+            "from agricola.strategy.antigravity.c2_config",
+            "from agricola.strategy.antigravity.c2_policy",
         ])
 
     bundled_code = SUBMISSION_TEMPLATE.format(
-        state_code=state_code.strip(),
-        actions_code=actions_code.strip(),
         config_code=config_code.strip(),
+        policy_code=policy_code.strip(),
         agent_code=agent_code.strip(),
     )
 
-    for rel_path in output_paths:
-        out_file = project_root / rel_path
-        out_file.parent.mkdir(parents=True, exist_ok=True)
-        with open(out_file, "w", encoding="utf-8") as f:
-            f.write(bundled_code)
-        print(f"Successfully generated standalone submission at: {out_file}")
+    out_file.write_text(bundled_code, encoding="utf-8")
+    print(f"Generated Antigravity standalone submission at: {out_file}")
+    return out_file
+
 
 if __name__ == "__main__":
-    build_submission()
+    build_submission_antigravity()

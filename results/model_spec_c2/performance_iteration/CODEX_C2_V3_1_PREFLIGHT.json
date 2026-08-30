@@ -1,0 +1,1568 @@
+{
+  "protocol": "CODEX_C2_YIELD_WINDOW_REAL_ENGINE_PREFLIGHT_V3.1",
+  "seed": 26083001,
+  "episode_steps": 360,
+  "opponent": "inert_agent",
+  "runs": [
+    {
+      "seat": 0,
+      "status": "DONE",
+      "steps_observed": 360,
+      "player_values": [
+        0
+      ],
+      "own_farm_binding_verified": true,
+      "error_count": 0,
+      "fallback_count": 0,
+      "last_exception": null,
+      "unit_actions": {
+        "BUILD_PASTURE": 5,
+        "DIG": 11,
+        "DROP": 16,
+        "HARVEST": 24,
+        "MOVE": 1024,
+        "PASS": 410,
+        "PLANT": 28,
+        "WATER": 184
+      },
+      "market_orders": {
+        "BUY_LAND": 1,
+        "BUY_SEED": 11,
+        "HIRE": 65,
+        "SELL": 18
+      },
+      "mechanism": {
+        "crop_plant_attempts": {
+          "MELON": 9,
+          "STRAWBERRY": 5,
+          "WHEAT": 14
+        },
+        "effective_crop_harvests": {
+          "MELON": 7,
+          "STRAWBERRY": 13,
+          "WHEAT": 4
+        },
+        "effective_crop_harvest_units": {
+          "MELON": 39,
+          "STRAWBERRY": 15,
+          "WHEAT": 9
+        },
+        "yield_per_effective_harvest": {
+          "MELON": 5.571428571428571,
+          "STRAWBERRY": 1.1538461538461537,
+          "WHEAT": 2.25
+        },
+        "ordered_sell_quantities": {
+          "MELON": 39,
+          "STRAWBERRY": 15,
+          "WHEAT": 9
+        },
+        "observed_sell_drawdown": {
+          "MELON": 33,
+          "STRAWBERRY": 14,
+          "WHEAT": 9
+        },
+        "wheat_harvest_events": [
+          {
+            "step": 122,
+            "day": 5,
+            "position": [
+              4,
+              3
+            ],
+            "planted_day": 0,
+            "yield": 2,
+            "watered_today": false
+          },
+          {
+            "step": 127,
+            "day": 5,
+            "position": [
+              4,
+              2
+            ],
+            "planted_day": 0,
+            "yield": 1,
+            "watered_today": false
+          },
+          {
+            "step": 140,
+            "day": 5,
+            "position": [
+              0,
+              0
+            ],
+            "planted_day": 1,
+            "yield": 4,
+            "watered_today": true
+          },
+          {
+            "step": 269,
+            "day": 11,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 6,
+            "yield": 2,
+            "watered_today": false
+          }
+        ],
+        "wheat_water_events": [
+          {
+            "step": 4,
+            "day": 0,
+            "position": [
+              4,
+              3
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 7,
+            "day": 0,
+            "position": [
+              4,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 7,
+            "day": 0,
+            "position": [
+              3,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 10,
+            "day": 0,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 14,
+            "day": 0,
+            "position": [
+              1,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 15,
+            "day": 0,
+            "position": [
+              3,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 16,
+            "day": 0,
+            "position": [
+              0,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 21,
+            "day": 0,
+            "position": [
+              4,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 24,
+            "day": 0,
+            "position": [
+              2,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 26,
+            "day": 1,
+            "position": [
+              4,
+              3
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 28,
+            "day": 1,
+            "position": [
+              4,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 30,
+            "day": 1,
+            "position": [
+              4,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 30,
+            "day": 1,
+            "position": [
+              3,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 30,
+            "day": 1,
+            "position": [
+              1,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 32,
+            "day": 1,
+            "position": [
+              3,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 32,
+            "day": 1,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 34,
+            "day": 1,
+            "position": [
+              2,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 37,
+            "day": 1,
+            "position": [
+              0,
+              0
+            ],
+            "planted_day": 1,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 43,
+            "day": 1,
+            "position": [
+              0,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 50,
+            "day": 2,
+            "position": [
+              4,
+              3
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 52,
+            "day": 2,
+            "position": [
+              4,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 54,
+            "day": 2,
+            "position": [
+              3,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 54,
+            "day": 2,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 54,
+            "day": 2,
+            "position": [
+              1,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 56,
+            "day": 2,
+            "position": [
+              0,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 57,
+            "day": 2,
+            "position": [
+              3,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 57,
+            "day": 2,
+            "position": [
+              2,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 59,
+            "day": 2,
+            "position": [
+              4,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 64,
+            "day": 2,
+            "position": [
+              0,
+              0
+            ],
+            "planted_day": 1,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 74,
+            "day": 3,
+            "position": [
+              4,
+              3
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 76,
+            "day": 3,
+            "position": [
+              4,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 78,
+            "day": 3,
+            "position": [
+              3,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 78,
+            "day": 3,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 78,
+            "day": 3,
+            "position": [
+              1,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 80,
+            "day": 3,
+            "position": [
+              0,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 81,
+            "day": 3,
+            "position": [
+              3,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 81,
+            "day": 3,
+            "position": [
+              2,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 83,
+            "day": 3,
+            "position": [
+              4,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 88,
+            "day": 3,
+            "position": [
+              0,
+              0
+            ],
+            "planted_day": 1,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 105,
+            "day": 4,
+            "position": [
+              0,
+              0
+            ],
+            "planted_day": 1,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 108,
+            "day": 4,
+            "position": [
+              2,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 110,
+            "day": 4,
+            "position": [
+              3,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 112,
+            "day": 4,
+            "position": [
+              4,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 115,
+            "day": 4,
+            "position": [
+              4,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 117,
+            "day": 4,
+            "position": [
+              3,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 119,
+            "day": 4,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 138,
+            "day": 5,
+            "position": [
+              0,
+              0
+            ],
+            "planted_day": 1,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 161,
+            "day": 6,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 6,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 166,
+            "day": 6,
+            "position": [
+              1,
+              1
+            ],
+            "planted_day": 6,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 178,
+            "day": 7,
+            "position": [
+              1,
+              1
+            ],
+            "planted_day": 6,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 180,
+            "day": 7,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 6,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 197,
+            "day": 8,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 6,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 200,
+            "day": 8,
+            "position": [
+              1,
+              1
+            ],
+            "planted_day": 6,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 234,
+            "day": 9,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 6,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 237,
+            "day": 9,
+            "position": [
+              1,
+              1
+            ],
+            "planted_day": 6,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 259,
+            "day": 10,
+            "position": [
+              1,
+              1
+            ],
+            "planted_day": 6,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 262,
+            "day": 10,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 6,
+            "yield_before": 3,
+            "yield_after": 4
+          }
+        ],
+        "daily_water_coverage": {
+          "0": 0.7619047619047619,
+          "1": 1.0,
+          "2": 1.0,
+          "3": 0.9545454545454546,
+          "4": 0.3181818181818182,
+          "5": 0.5909090909090909,
+          "6": 0.9333333333333333,
+          "7": 1.0,
+          "8": 0.5714285714285714,
+          "9": 0.5714285714285714,
+          "10": 0.5714285714285714,
+          "11": 0.7142857142857143,
+          "12": 0.8571428571428571,
+          "13": 1.0,
+          "14": 1.0
+        },
+        "mean_daily_water_coverage": 0.7896392496392496,
+        "movement_share": 0.6016451233842538
+      },
+      "state_transitions": {
+        "active_surface_changes": 31,
+        "plant_effect_count": 17,
+        "water_effect_count": 122,
+        "movement_effect_count": 302,
+        "first_plant_effect_step": 3,
+        "first_water_effect_step": 4,
+        "first_movement_effect_step": 2
+      },
+      "productive_state": {
+        "max_active_surface": 22,
+        "final_active_surface": 5,
+        "max_quadrants": 2,
+        "max_pastures": 5,
+        "max_cows": 0
+      },
+      "economic_cycle": {
+        "initial_cash": 3000.0,
+        "final_cash": 12149.0,
+        "min_cash": 300.0,
+        "max_cash": 12149.0,
+        "first_sell_cash_gain_step": 125,
+        "sell_cash_gain_count": 17,
+        "cycle_observed": true
+      },
+      "failures": [
+        "WHEAT yield/effective harvest is 2.250, expected >= 3.0"
+      ],
+      "passed": false
+    },
+    {
+      "seat": 1,
+      "status": "DONE",
+      "steps_observed": 360,
+      "player_values": [
+        1
+      ],
+      "own_farm_binding_verified": true,
+      "error_count": 0,
+      "fallback_count": 0,
+      "last_exception": null,
+      "unit_actions": {
+        "BUILD_PASTURE": 5,
+        "DIG": 10,
+        "DROP": 16,
+        "HARVEST": 25,
+        "MOVE": 1047,
+        "PASS": 382,
+        "PLANT": 27,
+        "WATER": 182
+      },
+      "market_orders": {
+        "BUY_LAND": 1,
+        "BUY_SEED": 11,
+        "HIRE": 65,
+        "SELL": 19
+      },
+      "mechanism": {
+        "crop_plant_attempts": {
+          "MELON": 9,
+          "STRAWBERRY": 5,
+          "WHEAT": 13
+        },
+        "effective_crop_harvests": {
+          "MELON": 7,
+          "STRAWBERRY": 12,
+          "WHEAT": 4
+        },
+        "effective_crop_harvest_units": {
+          "MELON": 38,
+          "STRAWBERRY": 13,
+          "WHEAT": 9
+        },
+        "yield_per_effective_harvest": {
+          "MELON": 5.428571428571429,
+          "STRAWBERRY": 1.0833333333333333,
+          "WHEAT": 2.25
+        },
+        "ordered_sell_quantities": {
+          "MELON": 38,
+          "STRAWBERRY": 15,
+          "WHEAT": 9
+        },
+        "observed_sell_drawdown": {
+          "MELON": 32,
+          "STRAWBERRY": 12,
+          "WHEAT": 9
+        },
+        "wheat_harvest_events": [
+          {
+            "step": 122,
+            "day": 5,
+            "position": [
+              4,
+              3
+            ],
+            "planted_day": 0,
+            "yield": 2,
+            "watered_today": false
+          },
+          {
+            "step": 127,
+            "day": 5,
+            "position": [
+              4,
+              2
+            ],
+            "planted_day": 0,
+            "yield": 1,
+            "watered_today": false
+          },
+          {
+            "step": 140,
+            "day": 5,
+            "position": [
+              0,
+              0
+            ],
+            "planted_day": 1,
+            "yield": 4,
+            "watered_today": true
+          },
+          {
+            "step": 269,
+            "day": 11,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 6,
+            "yield": 2,
+            "watered_today": false
+          }
+        ],
+        "wheat_water_events": [
+          {
+            "step": 4,
+            "day": 0,
+            "position": [
+              4,
+              3
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 7,
+            "day": 0,
+            "position": [
+              4,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 7,
+            "day": 0,
+            "position": [
+              3,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 10,
+            "day": 0,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 14,
+            "day": 0,
+            "position": [
+              1,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 15,
+            "day": 0,
+            "position": [
+              3,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 16,
+            "day": 0,
+            "position": [
+              0,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 21,
+            "day": 0,
+            "position": [
+              4,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 24,
+            "day": 0,
+            "position": [
+              2,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 26,
+            "day": 1,
+            "position": [
+              4,
+              3
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 28,
+            "day": 1,
+            "position": [
+              4,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 30,
+            "day": 1,
+            "position": [
+              4,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 30,
+            "day": 1,
+            "position": [
+              3,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 30,
+            "day": 1,
+            "position": [
+              1,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 32,
+            "day": 1,
+            "position": [
+              3,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 32,
+            "day": 1,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 34,
+            "day": 1,
+            "position": [
+              2,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 37,
+            "day": 1,
+            "position": [
+              0,
+              0
+            ],
+            "planted_day": 1,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 43,
+            "day": 1,
+            "position": [
+              0,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 50,
+            "day": 2,
+            "position": [
+              4,
+              3
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 52,
+            "day": 2,
+            "position": [
+              4,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 54,
+            "day": 2,
+            "position": [
+              3,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 54,
+            "day": 2,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 54,
+            "day": 2,
+            "position": [
+              1,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 56,
+            "day": 2,
+            "position": [
+              0,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 57,
+            "day": 2,
+            "position": [
+              3,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 57,
+            "day": 2,
+            "position": [
+              2,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 59,
+            "day": 2,
+            "position": [
+              4,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 64,
+            "day": 2,
+            "position": [
+              0,
+              0
+            ],
+            "planted_day": 1,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 74,
+            "day": 3,
+            "position": [
+              4,
+              3
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 76,
+            "day": 3,
+            "position": [
+              4,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 78,
+            "day": 3,
+            "position": [
+              3,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 78,
+            "day": 3,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 78,
+            "day": 3,
+            "position": [
+              1,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 80,
+            "day": 3,
+            "position": [
+              0,
+              4
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 81,
+            "day": 3,
+            "position": [
+              3,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 81,
+            "day": 3,
+            "position": [
+              2,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 83,
+            "day": 3,
+            "position": [
+              4,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 88,
+            "day": 3,
+            "position": [
+              0,
+              0
+            ],
+            "planted_day": 1,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 105,
+            "day": 4,
+            "position": [
+              0,
+              0
+            ],
+            "planted_day": 1,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 108,
+            "day": 4,
+            "position": [
+              2,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 110,
+            "day": 4,
+            "position": [
+              3,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 112,
+            "day": 4,
+            "position": [
+              4,
+              0
+            ],
+            "planted_day": 0,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 115,
+            "day": 4,
+            "position": [
+              4,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 117,
+            "day": 4,
+            "position": [
+              3,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 119,
+            "day": 4,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 0,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 138,
+            "day": 5,
+            "position": [
+              0,
+              0
+            ],
+            "planted_day": 1,
+            "yield_before": 3,
+            "yield_after": 4
+          },
+          {
+            "step": 161,
+            "day": 6,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 6,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 166,
+            "day": 6,
+            "position": [
+              0,
+              4
+            ],
+            "planted_day": 6,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 178,
+            "day": 7,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 6,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 189,
+            "day": 7,
+            "position": [
+              0,
+              4
+            ],
+            "planted_day": 6,
+            "yield_before": 1,
+            "yield_after": 1
+          },
+          {
+            "step": 197,
+            "day": 8,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 6,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 202,
+            "day": 8,
+            "position": [
+              0,
+              4
+            ],
+            "planted_day": 6,
+            "yield_before": 1,
+            "yield_after": 2
+          },
+          {
+            "step": 235,
+            "day": 9,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 6,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 240,
+            "day": 9,
+            "position": [
+              0,
+              4
+            ],
+            "planted_day": 6,
+            "yield_before": 2,
+            "yield_after": 3
+          },
+          {
+            "step": 263,
+            "day": 10,
+            "position": [
+              2,
+              2
+            ],
+            "planted_day": 6,
+            "yield_before": 3,
+            "yield_after": 4
+          }
+        ],
+        "daily_water_coverage": {
+          "0": 0.7619047619047619,
+          "1": 1.0,
+          "2": 1.0,
+          "3": 0.9545454545454546,
+          "4": 0.3181818181818182,
+          "5": 0.5909090909090909,
+          "6": 1.0,
+          "7": 1.0,
+          "8": 0.5,
+          "9": 0.5,
+          "10": 0.6428571428571429,
+          "11": 0.5,
+          "12": 0.8888888888888888,
+          "13": 1.0,
+          "14": 1.0
+        },
+        "mean_daily_water_coverage": 0.7771524771524772,
+        "movement_share": 0.6180637544273908
+      },
+      "state_transitions": {
+        "active_surface_changes": 29,
+        "plant_effect_count": 16,
+        "water_effect_count": 123,
+        "movement_effect_count": 303,
+        "first_plant_effect_step": 3,
+        "first_water_effect_step": 4,
+        "first_movement_effect_step": 2
+      },
+      "productive_state": {
+        "max_active_surface": 22,
+        "final_active_surface": 5,
+        "max_quadrants": 2,
+        "max_pastures": 5,
+        "max_cows": 0
+      },
+      "economic_cycle": {
+        "initial_cash": 3000.0,
+        "final_cash": 11895.0,
+        "min_cash": 300.0,
+        "max_cash": 11895.0,
+        "first_sell_cash_gain_step": 125,
+        "sell_cash_gain_count": 18,
+        "cycle_observed": true
+      },
+      "failures": [
+        "WHEAT yield/effective harvest is 2.250, expected >= 3.0"
+      ],
+      "passed": false
+    }
+  ],
+  "failures": [
+    "P0: WHEAT yield/effective harvest is 2.250, expected >= 3.0",
+    "P1: WHEAT yield/effective harvest is 2.250, expected >= 3.0"
+  ],
+  "passed": false
+}

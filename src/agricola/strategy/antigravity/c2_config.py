@@ -10,14 +10,14 @@ class AntigravityC2Config:
 
     # Land & Layout
     quadrants_owned: int = 2
-    crop_working_set_target: int = 17
-    pasture_allocation_target: int = 4
-    livestock_headcount_target: int = 4
+    crop_working_set_target: int = 24
+    pasture_allocation_target: int = 0
+    livestock_headcount_target: int = 0
     livestock_species: str = "COW"
 
     # Workforce
     workforce_headcount: int = 10
-    operating_cash_floor: float = 300.0
+    operating_cash_floor: float = 50.0
     endgame_shutdown_steps: int = 48
 
     # Lifecycle Gates & Policies
@@ -28,7 +28,7 @@ class AntigravityC2Config:
 
     # Crop Quotas
     crop_mix_weights: Dict[str, float] = field(
-        default_factory=lambda: {"WHEAT": 0.4, "STRAWBERRY": 0.4, "MELON": 0.2}
+        default_factory=lambda: {"WHEAT": 0.20, "STRAWBERRY": 0.45, "MELON": 0.35}
     )
 
     def to_dict(self) -> Dict[str, Any]:

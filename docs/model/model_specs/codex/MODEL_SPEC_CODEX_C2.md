@@ -1,284 +1,221 @@
-# MODEL_SPEC CODEX C2
+# MODEL_SPEC CODEX C2 — Staggered harvest service V4
 
 ```text
 AGENT_ID: CODEX
-STATUS: CANDIDATE C2 / PRE-REGISTERED / NOT TOURNAMENT TESTED
-FOUNDATION: C2 CANDIDATE / NOT FROZEN
-HYPOTHESIS_ID: CODEX-C2-LIFECYCLE-REALIZATION-V1
+BUILD_ID: CODEX-C2-STAGGERED-HARVEST-SERVICE-V4
+STATUS: VERIFY COMPLETE / CORE MECHANISM CONFIRMED / TOURNAMENT READY
+HYPOTHESIS_ID: CODEX-C2-STAGGERED-HARVEST-SERVICE-V4
+TARGET_MEAN_FINAL_MONEY: >23000
 ```
 
-## 1. Scopo e ipotesi operativa
+## 1. Tesi causale
 
-Questo MODEL_SPEC è un'ipotesi causale implementabile per il `MODEL_SPEC TOURNAMENT C2`. La tesi è che il principale limite R1 non fosse una carenza primaria di WATER, seed o cash, ma l'incapacità del dispatcher di trasformare capacità nominale in manutenzione persistente del working set.
-
-L'intervento Codex è deliberatamente stretto:
+La V3.2 dimostra che la WHEAT raggiunge yield 3, ma non che la policy riesca a
+raccoglierla prima del decay. Nove tile della stessa coorte diventano ready
+insieme; soltanto due sono completate nella finestra utile di 24 step.
 
 ```text
-tile lifecycle state
-    -> action eligibility corretta
-    -> arbitration per deadline engine
-    -> prevenzione delle perdite deterministiche
-    -> recovery residuale delle tile LOST_WEED
+PLANT burst day 0
+    -> maturity sincronizzata day 4
+    -> 9 HARVEST simultaneamente ready
+    -> routing/inventory service backlog
+    -> 7/9 deadline miss
+    -> decay di yield già prodotto
+    -> monetized output insufficiente
 ```
 
-Il target 17 è usato come `candidate operating region` configurabile. Non è un optimum, non è `C*` e non deriva da tuning del candidato.
+La V4 distribuisce il carico alla sorgente: ammette al massimo due nuove PLANT
+WHEAT effettive per giorno, pari alla capacità on-time osservata. Non attende
+più yield e non aumenta la capacità nominale.
 
-## 2. Evidenza utilizzata
+## 2. Evidenza congelata
 
-- E16 Stage A-R1 completato: 28/28 episodi, Stage B bloccato, `C*=NONE`.
-- 5.804 tentativi crop-HARVEST prematuri, 655 validi, nessun'altra famiglia di failure HARVEST.
-- Il predicato engine richiede `PLANT`, `yield_units > 0` e `day - planted_day >= first_yield_day`.
-- 329 ingressi WEED osservati: 314 con precedente PLANT, 3 con precedente EMPTY, 12 unresolved.
-- Zero azioni DIG in R1; una WEED nel working set era quindi un sink persistente.
-- WATER execution HIGH tra 0,8898 e 0,9416 e continuity circa 0,96: WATER resta essenziale ma non è il bottleneck primario residuo.
-- A07 HIGH/17 ha attainment corretto 0,4706 e median money 27.076: regione diagnostica interessante, non optimum.
-- Routing e workforce intermittente amplificano il problema, ma non lo spiegano da soli: i gap restano anche a capacità piena.
-- Seed stockout e market pacing non sono supportati come causa primaria.
+Preflight V3.2, seed neutrale `26083001`, identico in P0/P1 sulla prima wave:
 
-## 3. Diagnosi causale prioritaria
+| Metrica | Valore |
+|---|---:|
+| WHEAT a yield 3 entro day 3 | 9 |
+| economic-ready step | 96 |
+| decay start step | 120 |
+| finestra utile | 24 step |
+| completion step | 108, 117, 123, 125 |
+| completion prima del decay | 2/9 |
+| deadline miss | 7/9 = 77,78% |
+| ready-to-completed latency | 12, 21, 27, 29 step |
+| HARVEST yield>=3 | P0 50,00%; P1 66,67% |
 
-```text
-yield_units > 0 usato come readiness
-    -> HARVEST prematuri / no-op
-    -> slot e movimento sprecati
-    -> minore capacità utile per WATER, HARVEST valido e PLANT
+La resa biologica esiste prima della deadline. Il limite dominante è il
+`SERVICE_PEAK`, amplificato da routing e inventory handling; non è una nuova
+evidenza a favore di ulteriore attesa biologica.
 
-perdita crop o random EMPTY spawn
-    -> LOST_WEED
-    -> nessun DIG
-    -> nessun replant
-    -> gap del working set assorbente
-```
+## 3. Capacità economica
 
-Il meccanismo primario è `POLICY_REALIZATION`: eligibility e lifecycle non erano rappresentati nel dispatch. Il meccanismo secondario è l'amplificazione da routing/workforce intermittente.
-
-## 4. Meccanismi non prioritari
-
-| Sottosistema | Trattamento | Motivo |
-|---|---|---|
-| Crop mix | `UNCHANGED` | Mantiene WHEAT/STRAWBERRY/MELON 40/40/20 per isolare il lifecycle. |
-| Workforce target | `UNCHANGED` | Conserva 10 hands; l'insufficienza nominale non è causa unica. |
-| Routing | `UNCHANGED` | Nearest-task deterministico; contributo causale non identificato indipendentemente. |
-| Market/cash | `UNCHANGED` | Floor 300 e pacing E16; secondari, non causa primaria. |
-| Livestock | `NOT_CAUSALLY_PRIORITIZED` | Mantiene COW target 4 e pasture 5 senza nuova logica economica. |
-| Land | `UNCHANGED` | Due quadranti; nessuna nuova espansione. |
-| Random WEED prediction | `FORBIDDEN` | Il draw futuro non è osservabile. |
-
-## 5. Feature C2 consumate
-
-Il consumer mapping minimo è incorporato qui. Tutti i fallback sono fail-closed e non usano outcome futuri.
-
-| feature_id | runtime source | calculation point | decision phase | consumer | fallback behavior |
-|---|---|---|---|---|---|
-| TMP-01 | `observation.step` | ingresso policy | pre-action | deadline lifespan e shutdown | non emettere azione dipendente da lifespan |
-| TMP-02 | `observation.day` | ingresso policy | pre-action | maturity e calendario crop | non emettere HARVEST crop |
-| TMP-03 | `observation.hour` | ingresso policy | pre-action | planting serviceable prima di EOD | non emettere PLANT |
-| TMP-05 | `hour`, `turnsPerDay` | raccolta task | pre-action | gate PLANT tardivo | nessuna nuova PLANT |
-| FRM-02 | `farm.tiles` | ogni decisione | pre-action snapshot | classificazione full working set | PASS per target non leggibile |
-| FRM-03 | piano statico prime 17 `CROP_POSITIONS` | inizializzazione/config | pre-action | scope del classifier | posizione esterna `OUT_OF_SCOPE` |
-| CRP-01 | valore tile nativo / `kind` | scansione working set | pre-action | classifier | diagnostic invalid, nessuna azione distruttiva |
-| CRP-02 | `crop` + regole statiche C2 | scansione PLANT | pre-action | maturity/ongoing | WATER consentito se osservabile; HARVEST/DIG bloccati |
-| CRP-03 | `planted_day` | scansione PLANT | pre-action | crop age | HARVEST bloccato |
-| CRP-05 | `yield_units` | scansione PLANT | pre-action | readiness/retirement | HARVEST bloccato se mancante/non valido |
-| CRP-06 | `watered_today` | scansione PLANT | pre-action | WATER need | stato mancante trattato come non servito |
-| CRP-07 | `consecutive_unwatered` | scansione PLANT | pre-action | loss boundary EOD | priorità WATER conservativa |
-| CRP-08 | `max_lifespan_step` | scansione PLANT | pre-action | decay/retirement | nessuna inferenza retirement dal solo crossing |
-| CRP-09 | derivazione locale `classify_tile_lifecycle` | scansione working set | pre-action | task generation | diagnostic error fuori lifecycle |
-| CRP-10 | kind/yield/age/rule | scansione PLANT | pre-action | eligibility HARVEST | HARVEST non emesso |
-| CRP-11 | PLANT e non `watered_today` | scansione PLANT | pre-action | generazione WATER | WATER conservativo se flag assente |
-| CRP-12 | care due e counter + 1 >= 2 | scansione PLANT | pre-action | coda WATER critica | assume critica se counter non valido |
-| CRP-13 | step >= `max_lifespan_step` | scansione PLANT | pre-decay action phase | HARVEST urgente | nessuna promozione a retirement |
-| CRP-17 | CRP-11/12/13 + lifecycle | arbitration | pre-action | ordinamento preventivo | ordine WATER-first conservativo |
-| CRP-18 | count PLANT nel working set | market planning | pre-market | seed deficit / target tracking | nessuna espansione oltre target |
-| WRK-01 | farmer/hands positions | arbitration | pre-action | nearest-task routing | PASS per posizione invalida |
-| WRK-02 | `1 + len(hands)` | ingresso policy | pre-action | capacità corrente | task prioritari serviti per primi |
-| INV-01 | `private.seeds` | scansione EMPTY | pre-action/pre-market | PLANT e BUY_SEED | PLANT bloccato senza seed |
-| INV-02 | `private.shed` | unit/market planning | pre-action/pre-market | pickup, feed, sell | nessun ordine non coperto |
-| INV-03 | `private.inventories` | unit planning | pre-action | carry/drop/place/feed | ritorno/drop conservativo |
-| MKT-01 | market prices/inventory | market phase | pre-market | acquisti/vendite E16 | nessun ordine se quote invalida |
-| MKT-03 | money meno floor policy | market phase | pre-market | protezione cash | ordine rifiutato sotto floor |
-
-## 6. Regole decisionali
-
-La classificazione locale è totale per il dominio engine valido:
-
-```text
-not in working set or tile == "LOCKED" -> OUT_OF_SCOPE
-tile is None                           -> EMPTY_ASSIGNED
-tile.kind == WEED                      -> LOST_WEED
-invalid PLANT diagnostics              -> DIAGNOSTIC_ERROR
-
-ready = PLANT and yield_units > 0
-        and day - planted_day >= first_yield_day
-
-retired = PLANT and crop.ongoing
-          and yield_units == 0
-          and max_lifespan_step >= 0
-
-ready                                  -> HARVEST_READY
-retired                                -> RETIREMENT_DUE
-other valid PLANT                      -> GROWING
-```
-
-`max_lifespan_step >= 0` indica che la produzione ongoing finale è stata emessa; non basta da solo: readiness con yield positivo ha precedenza, e retirement richiede ongoing con yield zero.
-
-## 7. Priorità e arbitration
-
-Le code sono ordinate così:
-
-1. `HARVEST_READY` con decay dovuto nell'engine step corrente;
-2. WATER con `water_loss_at_eod_if_unserved`;
-3. altri WATER dovuti nel giorno corrente;
-4. HARVEST valido non immediatamente a rischio;
-5. `RETIREMENT_DUE -> DIG` preventive clearance;
-6. `LOST_WEED -> DIG` recovery residuale;
-7. task livestock E16 invariati;
-8. `EMPTY_ASSIGNED -> PLANT` soltanto se resta almeno una action phase successiva prima di EOD;
-9. PASS.
-
-Inventory carry, PLACE/FEED e drop restano precondizioni forti prima delle code generali. Ogni target è riservato a un solo worker per step. Multi-occupancy è ammessa dall'engine ma non è assunta come capacità doppia.
-
-## 8. Tile lifecycle policy
-
-| Stato | Azione policy | Divieto |
-|---|---|---|
-| `OUT_OF_SCOPE` | nessuna task crop | nessun PLANT/WATER/HARVEST/DIG crop |
-| `EMPTY_ASSIGNED` | PLANT se seed, non shutdown e serviceable prima di EOD | nessuna PLANT tardiva non servibile |
-| `GROWING` | WATER secondo rischio; attesa maturità | HARVEST vietato |
-| `HARVEST_READY` | HARVEST, con precedenza al decay imminente | nessun readiness basato sul solo yield |
-| `RETIREMENT_DUE` | DIG preventivo, poi replant | nessun WATER/attesa passiva |
-| `LOST_WEED` | DIG recovery residuale, poi replant | nessun PLANT diretto su WEED |
-
-## 9. WATER policy
-
-Il livello HIGH E16 resta invariato; cambia soltanto l'ordinamento meccanico fra need già validi. Una PLANT non irrigata con `consecutive_unwatered + 1 >= 2` entra nella coda critica. Le altre PLANT non irrigate restano WATER-due ma sotto i decay-HARVEST immediati.
-
-Una nuova PLANT nasce con counter 1. La policy non pianta nell'ultima action phase del giorno: deve esistere almeno una fase successiva per WATER. Questo è un vincolo di sicurezza configurabile, non un optimum.
-
-## 10. HARVEST policy
-
-HARVEST crop è emesso esclusivamente se `CRP-10 harvest_ready` è vero. Per WHEAT e MELON il yield iniziale non autorizza HARVEST prima della maturity. Per STRAWBERRY:
-
-- HARVEST intermedio azzera yield e lascia `GROWING` con produzione futura;
-- HARVEST finale azzera yield; con `max_lifespan_step >= 0` la tile diventa `RETIREMENT_DUE` al passo decisionale successivo.
-
-## 11. PLANT e replant policy
-
-Il piano stabile usa il pattern ripetuto WHEAT/STRAWBERRY/WHEAT/STRAWBERRY/MELON sulle prime 17 posizioni, ottenendo quota 7/7/3 senza riassegnare le posizioni già attive. EMPTY e post-HARVEST non-ongoing condividono la stessa regola PLANT. Seed disponibile e finestra WATER serviceable sono precondizioni.
-
-## 12. DIG preventive/recovery policy
-
-`DIG` ha due cause distinte:
-
-- preventive: `RETIREMENT_DUE`, prima del decay a WEED;
-- recovery: `LOST_WEED`, sotto tutte le azioni preventive vive.
-
-DIG non sostituisce WATER o HARVEST e non viene emesso su una PLANT `GROWING`/`HARVEST_READY`.
-
-## 13. Workforce e movement policy
-
-Il target resta 10 hands più farmer. Il routing nearest-task e la reservation E16 restano invariati per evitare un secondo trattamento non identificabile. La sola modifica è la qualità e priorità delle task offerte al router. Se la workforce è insufficiente, il prefisso di coda preserva prima le perdite deterministiche più imminenti.
-
-## 14. Inventory e market policy
-
-Acquisto della seconda land, seed replenishment, hire renewal, COW/feed, vendite e floor 300 restano quelli E16. Il floor è una scelta policy, non una regola engine né un optimum. Il calcolo seed usa il target e il conteggio PLANT corrente; la presenza di WEED non genera acquisti infiniti perché il deficit include seed già posseduti.
-
-## 15. Livestock policy
-
-`NOT_CAUSALLY_PRIORITIZED`. Target COW 4 e pasture 5 restano invariati. FEED, CARE, HARVEST animale e fertilizer mantengono il comportamento condiviso. Il candidato non usa livestock per spiegare o mascherare il crop-attainment failure.
-
-## 16. Failure containment
-
-| Failure | Comportamento |
+| Livello | Definizione V4 |
 |---|---|
-| diagnostics tile/crop mancanti | WATER conservativo se PLANT osservabile; nessun HARVEST o DIG distruttivo |
-| feature temporaneamente indisponibile | task dipendente bloccata, altre code continuano |
-| workforce insufficiente | serve il prefisso preventivo, nessuna promessa di serviceability |
-| cash insufficiente | market order rifiutato sotto floor |
-| seed insufficiente | nessun PLANT; BUY_SEED entro floor/slot |
-| tile non serviceable | resta in coda al passo seguente; nessuna prediction futura |
-| `LOST_WEED` | DIG residuale e replant successivo |
-| movement contention | reservation per target; co-location engine non trattata come conflitto |
-| action failure | stato ricalcolato dallo snapshot successivo, nessun optimistic state update |
-| input top-level invalido | entrypoint del futuro runner deve fallire a PASS senza azioni market |
+| `OWNED_SURFACE` | tile non-LOCKED nei quadranti acquistati |
+| `ACTIVE_SURFACE` | PLANT osservate nel working set |
+| `SERVICEABLE_SURFACE` | PLANT con domanda temporale entro la capacità della finestra |
+| `PRODUCTIVE_SURFACE` | PLANT che completano HARVEST prima del decay distruttivo |
+| `MONETIZED_OUTPUT` | output depositato e venduto con effetto osservato |
 
-## 17. Expected mechanism changes
+Una tile biologicamente pronta non genera valore se il sistema non dispone
+della capacità temporale e logistica per raccoglierla prima del decadimento.
 
-```text
-5.804 premature HARVEST evidence
-    -> CRP-10 exact readiness
-    -> zero dispatch intenzionale prima di maturity
-    -> meno action failure/no-op
+## 4. Macchina a stati harvest locale
 
-329 observed WEED entries + zero DIG
-    -> CRP-09 LOST_WEED
-    -> recovery DIG residuale
-    -> tile nuovamente EMPTY_ASSIGNED e replantabile
+Gli stati non modificano la Foundation C2 e derivano soltanto dallo snapshot:
 
-ongoing final production
-    -> CRP-08 + CRP-09 RETIREMENT_DUE
-    -> preventive DIG
-    -> minore esposizione a lifespan WEED
+| Stato | Predicato | Consumer |
+|---|---|---|
+| `ENGINE_HARVEST_ELIGIBLE` | PLANT, yield>0, age>=first_yield_day | blocco di legalità |
+| `ECONOMIC_HARVEST_READY` | engine eligible e age>=economic_harvest_day | accesso al servizio |
+| `HARVEST_SERVICE_PENDING` | economic ready, completion non ancora osservata | coda HARVEST |
+| `HARVEST_DEADLINE_RISK` | service pending e step vicino/oltre `max_lifespan_step` | urgenza e telemetry miss |
+| `HARVEST_COMPLETED` | transizione HARVEST con yield ridotto/tile rimossa | throughput e monetization |
 
-new PLANT counter = 1
-    -> CRP-12 + TMP-05
-    -> niente PLANT nell'ultima phase
-    -> minore perdita same-day
-```
-
-## 18. Previsioni verificabili preregistrate
-
-Queste previsioni sono fissate prima di qualsiasi test economico del candidato:
-
-1. `premature_harvest_count` intenzionale deve essere 0 quando i campi diagnostici sono validi.
-2. `failed_action_count` e `no_op_action_count` crop devono diminuire materialmente rispetto al failure pattern R1 matched.
-3. La persistenza di PLANT nel working set deve aumentare rispetto ad A07 R1; non è preregistrata una grandezza economica.
-4. Ogni `LOST_WEED` osservata e serviceable deve diventare DIG-eligible; `lost_tile_persistence` deve diminuire.
-5. La latenza recovery-DIG-to-replant deve essere inferiore alla persistenza right-censored R1; la replant latency complessiva è attesa sotto la mediana A07 di 22,5 step, ma dipende dal routing.
-6. `productive_action_share` non deve peggiorare strutturalmente e dovrebbe aumentare eliminando task HARVEST impossibili.
-7. WATER execution non deve perdere più di 0,05 e continuity più di 0,03 rispetto al matched HIGH/17 R1; il confronto resta paired e non assume equivalenza fra run.
-8. `crop_target_attainment` target 17 è atteso maggiore di 0,4706; questa è una previsione falsificabile, non un optimum dichiarato.
-9. `final_money` deve essere misurato senza previsione direzionale forte: la correzione meccanica può non monetizzarsi integralmente nel primo torneo.
-10. DIG su PLANT viva deve avvenire soltanto per `RETIREMENT_DUE`; recovery e preventive clearance devono essere separabili nei log.
-
-## 19. Metriche di verifica
-
-| Metrica | Stato computabilità |
-|---|---|
-| final_money, completion | computabile dal summary |
-| crop_target_attainment, active_crop_surface | computabile; dichiarare window/scope |
-| watering_execution, watering_continuity | computabile con telemetry E16 v2 |
-| premature_harvest_count | computabile da requested/applied action + maturity fields |
-| failed_action_count, no_op_action_count | computabile dal ledger execution-aware |
-| WEED/lost_tile_count | full-board richiede nuova snapshot; actor-local è lower bound |
-| lost_tile_persistence | `NOT_CURRENTLY_COMPUTABLE` in modo completo con soli ledger R1 actor-local |
-| replant_latency | computabile per transizioni/eventi osservati; right-censoring esplicito |
-| movement_share, productive_action_share | computabile dal ledger con tassonomia versionata |
-| workforce_utilization | computabile da actor events/capacity state |
-| inventory e market activity | computabile da summary/market ledger |
-| livestock contribution | computabile ma secondaria per questa ipotesi |
-
-## 20. Assunzioni e limiti
-
-- La schedule crop statica è parte dell'engine; nessun outcome futuro è letto.
-- `max_lifespan_step >= 0` è usato solo insieme a ongoing e yield zero per retirement.
-- Il target 17, il floor 300 e i controlli E16 sono policy/configuration, non Foundation optima.
-- Il nearest-task routing può restare un collo di bottiglia; non viene risolto in questo candidato.
-- Il gate PLANT tardivo garantisce solo una action phase disponibile, non che un worker completerà WATER.
-- La recovery DIG riduce l'assorbimento ma non dimostra che tutte le tile saranno ripiantate rapidamente.
-- Il candidato non è stato valutato economicamente prima del torneo.
-
-## POST-TOURNAMENT REVIEW CONTRACT
-
-Dopo il torneo locale a tre, Codex analizzerà i risultati ANTIGRAVITY, CODEX e COPILOT con lo stesso schema causale:
+Gli stati tile persistenti restano:
 
 ```text
-RISULTATO
-    -> MECCANISMO OSSERVATO
-    -> DECISIONE MODEL_SPEC
-    -> SPIEGAZIONE CAUSALE
-    -> MODIFICA PROPOSTA
-    -> PREVISIONE VERIFICABILE
+OUT_OF_SCOPE
+EMPTY_ASSIGNED
+GROWING
+YIELD_ACCUMULATING
+HARVEST_READY
+RETIREMENT_DUE
+LOST_WEED
 ```
 
-La review non razionalizzerà vittoria o sconfitta e non userà il solo `final_money` come criterio di qualità. Verificherà separatamente correzione meccanica, persistence, action efficiency, WATER, attainment e monetizzazione.
+Per WHEAT: first yield day 2, economic day 4, soglia pre-harvest 3,
+`max_lifespan_step=(planted_day+5)*turnsPerDay`. `HARVEST_DEADLINE_RISK` non
+autorizza un HARVEST illegale e non sostituisce la loss-boundary WATER.
+
+## 5. Trattamento V4: load shaping
+
+```text
+MAX_WHEAT_PLANTS_PER_DAY: 2
+```
+
+Regola:
+
+1. contare nel working set le WHEAT osservate con `planted_day == day`;
+2. calcolare `remaining_daily_slots = max(0, 2 - observed_today)`;
+3. generare al massimo quel numero di task `PLANT WHEAT` nello step;
+4. continuare a generare normalmente PLANT STRAWBERRY/MELON;
+5. al successivo snapshot il conteggio osservato sostituisce ogni prenotazione;
+6. WATER, HARVEST, DIG e crop già vive non sono mai bloccati dal cap.
+
+Il cap è un limite di coorte, non una riduzione del target: le posizioni WHEAT
+vuote vengono riempite nei giorni successivi. Il valore 2 è preregistrato dalla
+capacità V3.2 di due completion prima del decay, non da ricerca parametrica.
+
+## 6. Parametri invariati
+
+| Parametro | Valore |
+|---|---:|
+| bootstrap/full crop target | 10 / 25 |
+| bootstrap mix | 60/20/20 WHEAT/STRAWBERRY/MELON |
+| full mix | 40/20/40 |
+| bootstrap/full workforce | 5 / 8 hands |
+| land gate | active>=8, cash>=1.600 |
+| pasture/COW cap | 5 / 4 |
+| livestock gate | active>=80%, cash>=1.500 |
+| cash floor | 300 |
+| quadrants | 2 |
+| crop horizon margin | 24 step |
+
+Layout, routing sticky, reservation, inventory handling, market, lifecycle,
+terminal horizon e soglie biologiche V3.2 restano invariati per isolare lo
+staggering.
+
+## 7. Arbitration invariata
+
+1. HARVEST con decay già iniziato;
+2. WATER con perdita EOD imminente;
+3. WATER nella finestra `YIELD_ACCUMULATING`;
+4. WATER di completamento sotto soglia economica;
+5. HARVEST economicamente ready;
+6. WATER ordinario;
+7. DIG retirement;
+8. DIG recovery;
+9. PLANT soggetta al solo cap di coorte WHEAT;
+10. task livestock/pasture.
+
+## 8. Consumer mapping V4
+
+| Feature | Calcolo | Consumer | Fallback |
+|---|---|---|---|
+| `day`, `planted_day`, crop | conteggio coorte ogni decisione | gate PLANT WHEAT | nessuna nuova WHEAT se diagnostica invalida |
+| `yield_units`, crop age | snapshot tile | economic readiness | HARVEST bloccato se invalido |
+| `max_lifespan_step`, step | snapshot tile | risk/miss telemetry | nessuna inferenza deadline |
+| worker positions | snapshot farm | routing esistente | PASS su posizione invalida |
+| tile transition | snapshot successivo | HARVEST_COMPLETED | evento non contato se ambiguo |
+
+Tutti gli altri consumer/fallback V3.2, own-player binding, factory isolata e
+SAFE_PASS restano invariati.
+
+## 9. Previsioni preregistrate
+
+```text
+EXPECTED_DIRECTION_FINAL_MONEY: UP
+TARGET_MEAN_FINAL_MONEY: >23000
+
+MAX_WHEAT_PLANT_COHORT_PER_DAY:
+current = 9
+expected <= 2 in P0 and P1
+
+PEAK_SIMULTANEOUS_WHEAT_ECONOMIC_READY:
+current = 9
+expected <= 4 in P0 and P1
+
+WHEAT_HARVEST_DEADLINE_MISS_RATE:
+current = 77.78%
+expected <= 25% in P0 and P1
+
+FRACTION_WHEAT_HARVESTED_AT_YIELD_GE_3:
+current P0 = 50.00%
+current P1 = 66.67%
+expected >= 80% in P0 and P1
+
+HIGH_VALUE_REALIZATION:
+expected = effective MELON HARVEST and SELL in P0 and P1
+```
+
+La V4 è falsificata se una sola metrica essenziale fallisce in un seat, se il
+ciclo MELON scompare o se compaiono errori/fallback. Final cash del preflight
+non dimostra il target economico.
+
+## 10. Failure containment e gate
+
+`TOURNAMENT_READY: YES` richiede:
+
+- P0/P1 `DONE`, own-player binding, 0 error/fallback;
+- cap coorte, peak ready, miss rate e fraction yield tutti PASS;
+- ciclo MELON effettivo;
+- test Codex e repository PASS;
+- Ruff e `git diff --check` PASS;
+- nessun blocker noto.
+
+## 11. Limiti
+
+- Lo staggering può ritardare l'attainment nominale senza ridurne il target.
+- La distanza worker-target V3.2 non è disponibile; la latenza è il proxy.
+- La capacità osservata 2 potrebbe non generalizzare al torneo: sarà falsificata
+  dal protocollo comune, non ottimizzata nel preflight.
+- Nessun torneo comune, seed ufficiale, Kaggle, submission o C3 è autorizzato.
+
+## 12. Esito VERIFY V4
+
+Il preflight neutrale P0/P1 completa 360 step con own-player binding e zero
+error/fallback. In entrambi i seat:
+
+- coorte WHEAT massima 2;
+- peak simultaneo economic-ready 2;
+- deadline miss 0/15;
+- HARVEST WHEAT yield>=3: 15/15;
+- ciclo MELON con HARVEST e SELL effettivi.
+
+```text
+PREREGISTERED_CORE_MECHANISM: PASS
+TOURNAMENT_READY: YES
+TOURNAMENT_EXECUTED: NO
+```

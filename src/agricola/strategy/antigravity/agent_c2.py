@@ -15,6 +15,8 @@ class AntigravityC2Agent:
     def __init__(self, config: Optional[AntigravityC2Config] = None):
         self.config = config or AntigravityC2Config()
         self.policy = AntigravityC2Policy(config=self.config)
+        self.last_exception: Optional[Exception] = None
+        self.error_count: int = 0
 
     def act(self, observation: Dict[str, Any], player_index: int = 0) -> Dict[str, Any]:
         """Generate action dict for environment."""
@@ -35,6 +37,9 @@ class AntigravityC2Agent:
     ) -> Dict[str, Any]:
         """Standard Kaggle-compatible callable entrypoint."""
         try:
-            return self.act(observation)
-        except Exception:
+            player_index = int(observation.get("player", 0))
+            return self.act(observation, player_index=player_index)
+        except Exception as exc:
+            self.last_exception = exc
+            self.error_count += 1
             return {"farmer": ["PASS"], "hands": [], "market": []}
