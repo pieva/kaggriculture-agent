@@ -27,6 +27,87 @@ scritta a mano.
 > **Addestrare un modello non significa necessariamente addestrare una
 > rete neurale.**
 
+## Model Foundation
+
+Kaggriculture separa esplicitamente la rappresentazione del dominio dalla policy che controlla l'agente.
+
+La **Model Foundation** è costituita da quattro artefatti coordinati:
+
+| Artefatto | Funzione | Domanda |
+|---|---|---|
+| `ONTOLOGY.md` | Vocabolario canonico del dominio, entità, concetti e relazioni condivise. | **Che cosa esiste e che cosa significa?** |
+| `KAGGRICULTURE_STATE_MACHINE_C1.md` | Stati, transizioni, condizioni dell'engine ed evoluzione temporale. | **Come evolve il sistema?** |
+| `KAGGRICULTURE_FEATURE_MODEL_C1.md` | Informazioni osservabili o derivabili al decision time, con semantica, provenienza e limiti. | **Che cosa può conoscere l'agente quando decide?** |
+| `MODEL_SPEC_<AGENT>.md` | Uso dei concetti e delle feature ammissibili nel modello decisionale. | **Come viene usata l'informazione per decidere?** |
+
+L'**Ontologia** definisce ciò che esiste e il significato condiviso dei concetti; non prescrive policy, soglie o priorità. La **State Machine** descrive la dinamica del dominio e separa le regole native dell'engine dagli stati derivati. Il **Feature Model** è il contratto informativo tra dominio e modello decisionale e distingue stato osservabile, feature derivabili al decision time, contesto della policy, telemetria post-action e outcome di training/valutazione. Il **MODEL_SPEC** è consumer della foundation e traduce concetti e feature ammissibili in una rappresentazione decisionale verificabile.
+
+```text
+ENGINE
+   ↓
+ONTOLOGY
+   ↓
+STATE MACHINE
+   ↓
+FEATURE MODEL
+   ↓
+MODEL_SPEC
+   ↓
+POLICY / RUNTIME
+   ↓
+EXECUTION / TELEMETRY
+   ↓
+FORENSIC ANALYSIS
+   ↓
+NEW EVIDENCE
+   └──────────────→ FOUNDATION REVIEW
+```
+
+Una feature può essere semanticamente valida senza essere ancora sufficientemente definita per l'uso operativo. Feature con formula, denominatore, finestra temporale, fase di campionamento o provenienza incompleti devono rimanere esplicitamente qualificate come `PARTIALLY_KNOWN`, `CONDITIONAL` o equivalenti.
+
+Analogamente:
+
+```text
+MODEL_SPEC declares a feature USED
+                 ≠
+runtime demonstrably consumes that feature
+```
+
+La conformità richiede quindi tracciabilità fino all'esecuzione. Il mapping tra Feature Model e MODEL_SPEC deve essere versionato per consumer e distinguere almeno input disponibili alla policy, feature derivate nel runtime, telemetria post-action e outcome di valutazione.
+
+### Foundation Tournament
+
+I quattro artefatti non vengono aggiornati automaticamente dopo ogni esperimento. Nuove evidenze provenienti da replay, telemetria, forensic analysis, audit dell'engine o error analysis vengono prima sottoposte a review indipendente e reconciliation.
+
+Quando l'evidenza giustifica una revisione strutturale viene eseguito un **Foundation Tournament**. Non è un torneo di performance della policy: il suo obiettivo è migliorare correttezza, completezza, coerenza e verificabilità della rappresentazione condivisa.
+
+```text
+ENGINE EVIDENCE
+      ↓
+ONTOLOGY CONCEPT
+      ↓
+STATE / TRANSITION
+      ↓
+FEATURE
+      ↓
+MODEL_SPEC CONSUMER
+      ↓
+RUNTIME CONSUMPTION
+```
+
+Per ciascun artefatto `NO_CHANGE` è un risultato valido. Solo dopo review, reconciliation e freeze della foundation possono essere avviati nuovi cicli di policy training che dipendono dalle modifiche introdotte.
+
+### Stato corrente della Foundation
+
+```text
+CANDIDATE C1
+NOT FROZEN
+PENDING REVIEW / RECONCILIATION
+```
+
+Le versioni C1 di State Machine e Feature Model sono specifiche candidate, non artefatti congelati.
+
+
 ## Parallelo con il Machine Learning
 
   -----------------------------------------------------------------------
