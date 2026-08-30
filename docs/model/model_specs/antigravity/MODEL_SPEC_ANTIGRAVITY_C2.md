@@ -1,4 +1,4 @@
-# MODEL_SPEC C2 — ANTIGRAVITY
+﻿# MODEL_SPEC C2 â€” ANTIGRAVITY
 
 - **Modeler:** `ANTIGRAVITY`
 - **Fase:** Model Foundation C2 Tournament Build
@@ -18,7 +18,7 @@
 > **Quali meccanismi hanno causato le prestazioni insufficienti delle policy E15/E16 e quali interventi decisionali concreti, fondati sull'evidenza forense e sulla Foundation C2, garantiscono la massima efficacia operativa e monetizzazione?**
 
 ### 1.2 Ipotesi causale di Antigravity (C2 Core Hypothesis)
-La grave sotto-performance osservata nelle precedenti generazioni di policy (incluso il collasso di crop target attainment dal 100% nominale a $<50\%$ effettivo) **non è derivata da scarsità di semi, carenza idrica aggregata o vincoli di mercato**, ma da una triplice patologia di dispatching e lifecycle:
+La grave sotto-performance osservata nelle precedenti generazioni di policy (incluso il collasso di crop target attainment dal 100% nominale a $<50\%$ effettivo) **non Ã¨ derivata da scarsitÃ  di semi, carenza idrica aggregata o vincoli di mercato**, ma da una triplice patologia di dispatching e lifecycle:
 
 1. **Premature HARVEST Action Waste:** emissione compulsiva di comandi `HARVEST` su colture immature aventi `yield_units > 0` ma $\text{age} < \text{first\_yield\_day}$ (89.86% di tentativi di harvest falliti, 5.804 no-op);
 2. **Permanent WEED Sinks:** assenza totale di azioni `DIG` di recupero su tile infestate (`LOST_WEED`), che trasformava ogni perdita accidentale in un sink permanente e sterilizzava la superficie produttiva;
@@ -39,7 +39,7 @@ L'ipotesi di Antigravity C2 si fonda sull'evidenza empirica consolidata del data
 1. **Failure Rate di HARVEST:** 5.804 tentativi di harvest su 6.459 sono falliti (89.86%); il 100% dei fallimenti (5.804/5.804) era dovuto a raccolta antecedente `first_yield_day`;
 2. **Evoluzione del Decadimento a WEED:** 314 su 329 ingressi in stato `WEED` provenivano da piante vive per cause deterministiche e prevenibili (disidratazione a EOD o lifespan decay); solo 3 casi derivavano da spawn stocastico su tile vuote;
 3. **Assenza di Recovery:** 0 azioni `DIG` eseguite nel trattamento E16, con conseguente blocco irreversibile delle tile contaminate;
-4. **Disponibilità Risorse vs Esecuzione:** in configurazioni rappresentative come A07 (target 17 colture), la farm raggiungeva 15/17 colture attive a step 18, per poi collassare a 1 sola coltura attiva a fine partita, con 16 semi giacenti inutilizzati e 357 harvest prematuri falliti.
+4. **DisponibilitÃ  Risorse vs Esecuzione:** in configurazioni rappresentative come A07 (target 17 colture), la farm raggiungeva 15/17 colture attive a step 18, per poi collassare a 1 sola coltura attiva a fine partita, con 16 semi giacenti inutilizzati e 357 harvest prematuri falliti.
 
 ---
 
@@ -47,28 +47,28 @@ L'ipotesi di Antigravity C2 si fonda sull'evidenza empirica consolidata del data
 
 ```text
 Premature HARVEST Dispatch (5,804 no-ops) + No-DIG Policy
-                           ↓
+                           â†“
               Saturazione slot di movimento/azione
-                           ↓
+                           â†“
         Ritardo nell'irrigazione & perdita a EOD
-                           ↓
+                           â†“
               Generazione irreversibile di WEED
-                           ↓
+                           â†“
        Nessun Replant / Sterilizzazione del Working-Set
-                           ↓
+                           â†“
                  Crollo Attainment (< 50%)
 ```
 
-Antigravity stabilisce come **priorità P0 assoluta** la risoluzione di questa catena causale distruttiva.
+Antigravity stabilisce come **prioritÃ  P0 assoluta** la risoluzione di questa catena causale distruttiva.
 
 ---
 
 ## 4. Meccanismi NON prioritari (Deprioritized Scope)
 
 In ossequio al principio di parsimonia sperimentale, Antigravity dichiara esplicitamente non prioritari in C2:
-- **Espansione al 3° quadrante (Q2):** mantenuta la focalizzazione stabile su 2 quadranti (50 tile) con perimetro arabile compatto;
+- **Espansione al 3Â° quadrante (Q2):** mantenuta la focalizzazione stabile su 2 quadranti (50 tile) con perimetro arabile compatto;
 - **Ottimizzazione dinamica delle curve di prezzo di mercato:** l'acquisto seed e l'assunzione worker operano su ordini standard con cash floor di sicurezza;
-- **Scalamento multi-specie livestock aggressivo:** mantenimento di un comparto zootecnico conservativo proporzionato alle sole strutture già attive, per evitare crowding out della superficie arabile.
+- **Scalamento multi-specie livestock aggressivo:** mantenimento di un comparto zootecnico conservativo proporzionato alle sole strutture giÃ  attive, per evitare crowding out della superficie arabile.
 
 ---
 
@@ -84,9 +84,9 @@ In ossequio al principio di parsimonia sperimentale, Antigravity dichiara esplic
 | `FRM-03` | `working_set_member` | Configurazione interna | Step start | Tile classification | Filtro posizioni operative arabili | Posizioni Q0/Q1 |
 | `CRP-01` | `tile_kind` | `tile.kind` | Per-tile inspection | Task generator | Identificazione `PLANT`, `WEED`, `None`, ecc. | `OUT_OF_SCOPE` |
 | `CRP-02` | `crop_id_and_rules` | `tile.crop` + `CROPS` | Per-tile inspection | Task generator | Recupero `first_yield_day`, interval, ongoing | Default WHEAT |
-| `CRP-03` | `planted_day` | `tile.planted_day` | Per-tile inspection | Task generator | Calcolo età biologica | `day_current` |
-| `CRP-04` | `crop_age_days` | `day - planted_day` | Per-tile inspection | Task generator | Verifica maturità | `0` |
-| `CRP-05` | `yield_units` | `tile.yield_units` | Per-tile inspection | Task generator | Quantità raccoglibile | `0` |
+| `CRP-03` | `planted_day` | `tile.planted_day` | Per-tile inspection | Task generator | Calcolo etÃ  biologica | `day_current` |
+| `CRP-04` | `crop_age_days` | `day - planted_day` | Per-tile inspection | Task generator | Verifica maturitÃ  | `0` |
+| `CRP-05` | `yield_units` | `tile.yield_units` | Per-tile inspection | Task generator | QuantitÃ  raccoglibile | `0` |
 | `CRP-06` | `watered_today` | `tile.watered_today` | Per-tile inspection | Water dispatch | Predicato di bisogno idrico giornaliero | `False` |
 | `CRP-07` | `consecutive_unwatered` | `tile.consecutive_unwatered` | Per-tile inspection | Water dispatch | Rilevazione urgenza critica EOD loss | `1` |
 | `CRP-08` | `max_lifespan_step` | `tile.max_lifespan_step` | Per-tile inspection | Decay inspection | Prevenzione decadimento terminale | `9999` |
@@ -94,11 +94,11 @@ In ossequio al principio di parsimonia sperimentale, Antigravity dichiara esplic
 | `CRP-10` | `harvest_ready` | Predicato C2 | Task generator | Harvest dispatch | Abilitazione tassativa comando `HARVEST` | `False` |
 | `CRP-11` | `care_due` | Predicato C2 | Task generator | Water dispatch | Allerta manutenzione ordinaria | `False` |
 | `CRP-12` | `water_loss_at_eod_if_unserved` | Predicato C2 | Task generator | Water dispatch | Prioritizzazione massima emergenza idrica | `False` |
-| `INV-01` | `seed_inventory` | `private.seeds` | Step start | Plant / Market | Controllo disponibilità semina | `{}` |
+| `INV-01` | `seed_inventory` | `private.seeds` | Step start | Plant / Market | Controllo disponibilitÃ  semina | `{}` |
 | `INV-02` | `shed_inventory` | `private.shed` | Step start | Market / Feed | Rifornimento mangime e vendita | `{}` |
 | `INV-03` | `worker_inventory` | `private.inventories` | Per-worker | Worker dispatch | Gestione carico, drop e pickup | `{}` |
 | `WRK-01` | `unit_positions` | `farm.farmer` + `farm.hands` | Step start | Routing | Calcolo distanze Manhattan | `[(4,4)]` |
-| `WRK-02` | `workforce_headcount` | `1 + len(hands)` | Step start | Market HIRE | Scalamento capacità operativa | `1` |
+| `WRK-02` | `workforce_headcount` | `1 + len(hands)` | Step start | Market HIRE | Scalamento capacitÃ  operativa | `1` |
 
 ---
 
@@ -135,7 +135,7 @@ Ogni coordinata $[x, y]$ del perimetro di lavoro viene classificata deterministi
 ### 7.2 HARVEST Policy (`CRP-10`)
 $$\text{Emetti HARVEST} \iff \text{tile.kind} == \text{PLANT} \land \text{tile.yield\_units} > 0 \land (\text{day} - \text{tile.planted\_day}) \ge \text{first\_yield\_day}$$
 - **Non-ongoing (Wheat, Melon):** dopo HARVEST la tile torna `None` $\implies$ transizione a `EMPTY_ASSIGNED` $\implies$ nuovo `PLANT` indipendente;
-- **Ongoing (Strawberry):** dopo HARVEST la pianta azzera lo yield e torna in `GROWING`; se è stata raggiunta l'ultima produzione utile, la pianta transita in `RETIREMENT_DUE`.
+- **Ongoing (Strawberry):** dopo HARVEST la pianta azzera lo yield e torna in `GROWING`; se Ã¨ stata raggiunta l'ultima produzione utile, la pianta transita in `RETIREMENT_DUE`.
 
 ### 7.3 DIG Policy (Preventive vs Recovery)
 - **Preventive DIG:** emesso su `RETIREMENT_DUE` prima che intervengano i tick di decadimento;
@@ -153,8 +153,8 @@ $$\text{Emetti HARVEST} \iff \text{tile.kind} == \text{PLANT} \land \text{tile.y
 
 ### 7.6 Inventory ed Endgame Policy
 - Nessun obbligo di rientro manuale dei worker a EOD (drop automatico verificato);
-- Gestione della capienza shed: liquidazione programmata a mercato (`SELL`) prima di raggiungere la saturazione di 100 unità;
-- Shutdown window negli ultimi 48 step: interruzione delle semine a lungo ciclo per massimizzare la conversione in liquidità monetaria.
+- Gestione della capienza shed: liquidazione programmata a mercato (`SELL`) prima di raggiungere la saturazione di 100 unitÃ ;
+- Shutdown window negli ultimi 48 step: interruzione delle semine a lungo ciclo per massimizzare la conversione in liquiditÃ  monetaria.
 
 ---
 
@@ -162,7 +162,7 @@ $$\text{Emetti HARVEST} \iff \text{tile.kind} == \text{PLANT} \land \text{tile.y
 
 1. **Assenza di Semi:** se `private.seeds[crop] == 0`, la tile `EMPTY_ASSIGNED` attende l'approvvigionamento senza bloccare gli altri worker;
 2. **Cassa Insufficiente:** blocco cautelativo degli ordini di acquisto se `farm.money < operating_cash_floor` ($300);
-3. **Mancata Raggiungibilità:** se una tile è temporaneamente non servibile, il dispatcher assegna il task alternativo a priorità inferiore;
+3. **Mancata RaggiungibilitÃ :** se una tile Ã¨ temporaneamente non servibile, il dispatcher assegna il task alternativo a prioritÃ  inferiore;
 4. **Tile Contaminata:** l'infestazione `WEED` attiva immediatamente il task `recovery_dig_action` evitando il blocco permanente.
 
 ---
@@ -171,14 +171,14 @@ $$\text{Emetti HARVEST} \iff \text{tile.kind} == \text{PLANT} \land \text{tile.y
 
 Prima dell'esecuzione dei test di validazione, Antigravity pre-registra le seguenti previsioni:
 
-- **P1 (Harvest Correctness):** il numero di tentativi di harvest prematuri falliti crollerà a **0** (o $<1\%$ per soli edge cases di fine giornata);
-- **P2 (Working-Set Persistence):** il tasso di mantenimento della superficie colturale attiva rimarrà stabilmente sopra l'80% per l'intera durata dell'episodio;
-- **P3 (WEED Elimination):** la persistenza di tile `WEED` nel working-set si ridurrà di oltre il 90% grazie all'azione tempestiva di `recovery_dig_action`;
-- **P4 (Replant Latency):** la latenza media di ripiantumazione su tile raccolte scenderà da oltre 22 step a $<5$ step;
-- **P5 (Productive Action Share):** la frazione di azioni direttamente produttive aumenterà grazie all'azzeramento dei no-op da harvest prematuro;
-- **P6 (Watering Continuity):** l'indice di continuità idrica si manterrà $\ge 0.95$;
-- **P7 (Crop Target Attainment):** il crop target attainment corretto supererà la soglia di gate del **80%** (rispetto al 47% di E16 A07);
-- **P8 (Final Money):** il saldo monetario terminale medio rifletterà la completa conversione dell'output biologico in cassa, superando stabilmente i livelli di E16.
+- **P1 (Harvest Correctness):** il numero di tentativi di harvest prematuri falliti crollerÃ  a **0** (o $<1\%$ per soli edge cases di fine giornata);
+- **P2 (Working-Set Persistence):** il tasso di mantenimento della superficie colturale attiva rimarrÃ  stabilmente sopra l'80% per l'intera durata dell'episodio;
+- **P3 (WEED Elimination):** la persistenza di tile `WEED` nel working-set si ridurrÃ  di oltre il 90% grazie all'azione tempestiva di `recovery_dig_action`;
+- **P4 (Replant Latency):** la latenza media di ripiantumazione su tile raccolte scenderÃ  da oltre 22 step a $<5$ step;
+- **P5 (Productive Action Share):** la frazione di azioni direttamente produttive aumenterÃ  grazie all'azzeramento dei no-op da harvest prematuro;
+- **P6 (Watering Continuity):** l'indice di continuitÃ  idrica si manterrÃ  $\ge 0.95$;
+- **P7 (Crop Target Attainment):** il crop target attainment corretto supererÃ  la soglia di gate del **80%** (rispetto al 47% di E16 A07);
+- **P8 (Final Money):** il saldo monetario terminale medio rifletterÃ  la completa conversione dell'output biologico in cassa, superando stabilmente i livelli di E16.
 
 ---
 
@@ -197,20 +197,20 @@ Le previsioni saranno validate attraverso il protocollo standard:
 ## 11. Assunzioni e Limiti
 
 - Si assume che l'ambiente rispetti rigorosamente i parametri di `CROPS` (first_yield_day, interval, recipe);
-- Si assume che la simulazione locale mantenga piena fedeltà con l'interpreter ufficiale Kaggle;
-- L'allocazione a 2 quadranti è assunta come perimetro sufficiente per la validazione C2; l'estensione al 3° quadrante è differita alle fasi successive.
+- Si assume che la simulazione locale mantenga piena fedeltÃ  con l'interpreter ufficiale Kaggle;
+- L'allocazione a 2 quadranti Ã¨ assunta come perimetro sufficiente per la validazione C2; l'estensione al 3Â° quadrante Ã¨ differita alle fasi successive.
 
 ---
 
-## 13. C2 PERFORMANCE ITERATION — ECONOMIC OPTIMIZATION (`HYP-AGY-PERF-01`)
+## 13. C2 PERFORMANCE ITERATION â€” ECONOMIC OPTIMIZATION (`HYP-AGY-PERF-01`)
 
 ### 13.1 Diagnosi Post-ReTournament C2
-Nel ReTournament C2, Antigravity C2 ha ottenuto il 1° posto assoluto con un **Mean Final Money di $16.671,00** (5W - 1L - 0T), azzerando completamente i failure mode forensi (0 harvest falliti, 0 unhandled exception). Tuttavia, l'analisi economica disaggregata ha rivelato due colli di bottiglia monetari:
-1. **Premature Non-Ongoing Harvest:** per colture non-ongoing (`WHEAT`, `MELON`), la policy effettuava la raccolta a `first_yield_day` (yield=1) anziché attendere `max_yield_day` (yield=6), rinunciando a un fatturato unitario del +500% (Wheat: $25 vs $150; Melon: $250 vs $1.500);
-2. **Underutilized Working Set & Sub-optimal Crop Mix:** una superficie colturale limitata a 17 tile e un mix sbilanciato non saturavano la capacità lavorativa dei 10 worker (240 ore/giorno).
+Nel ReTournament C2, Antigravity C2 ha ottenuto il 1Â° posto assoluto con un **Mean Final Money di $16.671,00** (5W - 1L - 0T), azzerando completamente i failure mode forensi (0 harvest falliti, 0 unhandled exception). Tuttavia, l'analisi economica disaggregata ha rivelato due colli di bottiglia monetari:
+1. **Premature Non-Ongoing Harvest:** per colture non-ongoing (`WHEAT`, `MELON`), la policy effettuava la raccolta a `first_yield_day` (yield=1) anzichÃ© attendere `max_yield_day` (yield=6), rinunciando a un fatturato unitario del +500% (Wheat: $25 vs $150; Melon: $250 vs $1.500);
+2. **Underutilized Working Set & Sub-optimal Crop Mix:** una superficie colturale limitata a 17 tile e un mix sbilanciato non saturavano la capacitÃ  lavorativa dei 10 worker (240 ore/giorno).
 
 ### 13.2 Ipotesi Causale `HYP-AGY-PERF-01`
-> **Accoppiando una maturazione biologica a resa massima (`max_yield_gating`) su colture non-ongoing con un'espansione del working-set compatto a 24 tile (NW + NE) e un crop mix ad alto rendimento (Wheat 20%, Strawberry 45%, Melon 35%), supportato da rotazione biologica di fine stagione e prioritizzazione della liquidità di vendita, Antigravity C2 satura la capacità produttiva dei 10 worker e supera stabilmente il benchmark economico di $23.000 (rendimento atteso > $25.000).**
+> **Accoppiando una maturazione biologica a resa massima (`max_yield_gating`) su colture non-ongoing con un'espansione del working-set compatto a 24 tile (NW + NE) e un crop mix ad alto rendimento (Wheat 20%, Strawberry 45%, Melon 35%), supportato da rotazione biologica di fine stagione e prioritizzazione della liquiditÃ  di vendita, Antigravity C2 satura la capacitÃ  produttiva dei 10 worker e supera stabilmente il benchmark economico di $23.000 (rendimento atteso > $25.000).**
 
 ### 13.3 Interventi Decisionali Implementati
 1. **Max-Yield Harvest Readiness Gate (`CRP-10` esteso):**
@@ -220,14 +220,14 @@ Nel ReTournament C2, Antigravity C2 ha ottenuto il 1° posto assoluto con un **M
    - Allocazione di 24 tile arabili distribuite in Row 0 (10), Row 1 (10) e Row 2 centrale (4), adiacenti allo shed (4,4), eliminando i costi di acquisto superfluo dei quadranti SW/SE ($2.000 risparmiati).
 3. **Crop Mix & Rotazione Biologica di Fine Stagione:**
    - Quotas nominali: **Wheat 20%, Strawberry 45%, Melon 35%**;
-   - Cutoff biologico: dopo il Day 18, sostituzione delle quote Melon con Wheat (poiché Melon richiede 12 giorni di maturazione); dopo il Day 20, sostituzione delle quote Strawberry con Wheat (richiede 10 giorni); arresto acquisto semi dopo il Day 26.
+   - Cutoff biologico: dopo il Day 18, sostituzione delle quote Melon con Wheat (poichÃ© Melon richiede 12 giorni di maturazione); dopo il Day 20, sostituzione delle quote Strawberry con Wheat (richiede 10 giorni); arresto acquisto semi dopo il Day 26.
 4. **Liquidity & Hiring Priority Protection:**
    - Esecuzione prioritaria delle vendite di shed a costo 0 prima di qualsiasi spesa;
    - Prioritizzazione assoluta dell'assunzione quotidiana dei 10 worker ($88/giorno) con floor di cassa $50 per garantire al 100% l'irrigazione mattutina.
 
 ### 13.4 Risultati Preflight Reali
 - **Mean Final Money (6 match P0/P1 vs Frozen Codex C2):** **$25.120,33** (Superamento target > $23.000 con margine +$2.120,33);
-- **Range per match:** $24.821,00 – $25.639,00;
+- **Range per match:** $24.821,00 â€“ $25.639,00;
 - **Harvest No-ops:** 0;
 - **Watering Compliance:** 100%;
 - **Eccezioni / Fallback:** 0.
@@ -240,7 +240,24 @@ Al termine del torneo a tre, Antigravity si impegna formalmente a:
 1. Ricevere ed esaminare integralmente i log e le telemetrie di **tutti e tre i concorrenti** (Antigravity, Codex, Copilot);
 2. Applicare a ciascun modello la medesima analisi causale disaggregata:
    $$\text{Risultato} \longrightarrow \text{Meccanismo Osservato} \longrightarrow \text{Decisione MODEL\_SPEC} \longrightarrow \text{Spiegazione Causale} \longrightarrow \text{Modifica Proposta}$$
-3. Rifiutare qualsiasi razionalizzazione basata unicamente sul `final_money` complessivo, separando la validità dei meccanismi dall'efficienza di monetizzazione.
+3. Rifiutare qualsiasi razionalizzazione basata unicamente sul `final_money` complessivo, separando la validitÃ  dei meccanismi dall'efficienza di monetizzazione.
+
+---
+
+## 15. C2 PERIODIC MODEL EVOLUTION â€” PLAN-DRIVEN BASELINE + REACTIVE OVERRIDE (`HYP-AGY-PERIODIC-01`)
+
+### 15.1 Diagnosi Comparativa dei Benchmark Replay (Kaggle Q0â€“Q3)
+L'analisi forense dei 4 replay benchmark ad alto rendimento (**LuCcc** $56.7k a 1Q, **Gordeev** $88.6k a 3Q, **Dipin** $95.5k a 3Q, **ÐŸÐµÑ‚Ð°Ñ€** $95.5k a 4Q) ha falsificato l'approccio puramente threshold-centric / zero-livestock:
+1. **Separazione Architetturale Fondamentale:** la produzione di base Ã¨ governata da calendari biologici e cicli di servizio periodici prefissati (**PLAN**), mentre l'interazione con il mercato e la gestione delle anomalie costituiscono override reattivi (**REACT**).
+2. **Modulo Livestock Integrato (Cow + Sheep):** il bestiame non sottrae risorse alle colture ma genera liquiditÃ  quotidiana ($500â€“$1.200/giorno da Milk e Wool) e **Fertilizer**, accelerando la rotazione delle colture ed eliminando ogni rischio di liquiditÃ  salariale.
+3. **Plant Staggering vs Burst Planting:** la semina scaglionata linearizza il carico di irrigazione e azzera i picchi di servizio (`SERVICE_PEAK`) e il decay da mancata raccolta (`HARVEST_DEADLINE`).
+4. **Espansione Modulare Replicata:** l'espansione a 2Q/3Q Ã¨ formalizzata come replica di un modulo Q1 standard a regime, preservando la densitÃ  di servizio e la quota di lavoro produttivo (MOVE share < 25%).
+
+### 15.2 Specifica dei Cicli Biologici e di Servizio (`ENTITY_PERIOD_MODEL`)
+- **Cow Module (Pasture 1-2 passi da shed):** Feed + Care all'ora 0-3 $\implies$ 1 Milk/giorno ($120).
+- **Sheep Module:** Feed + Care all'ora 0-3 $\implies$ 1 Wool ogni 2 giorni ($150) + 1 Fertilizer ($40).
+- **Wheat Module:** Semina scaglionata (2-3/giorno) $\implies$ 50% mangime interno, 50% cash.
+- **Melon/Strawberry Waves:** Onde coordinate supportate da concimazione periodica.
 
 ---
 

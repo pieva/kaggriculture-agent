@@ -1,53 +1,310 @@
-# NEW SESSION — MODEL_SPEC C2 PERFORMANCE TOURNAMENT CLOSURE & KAGGLE VALIDATION
+﻿# NEW_SESSION â€” Kaggriculture
 
-- **Phase:** `MODEL_SPEC C2 — PERFORMANCE TOURNAMENT COMPLETED / SHIP PREPARED`
-- **Status:** `KAGGLE VALIDATION PENDING / FOUNDATION CONSOLIDATION PENDING`
-- **Gate Outcome:** `C2_PERFORMANCE_SUCCESS: YES` (Codex C2 V4 Mean $31.6k, Antigravity C2 Mean $27.6k)
-- **Primary Winner:** `Codex C2 V4` (Record 6W-0L-0T)
-- **Standalone Submission Artifacts:**
-  - `submission/submission_codex.py` (Certified Standalone C2 V4)
-  - `submission/submission_antigravity.py` (Certified Standalone C2)
-- **Repository Validation:** `182 passed` | `git diff --check PASS`
-- **Kaggle Validation:** `PENDING` (No unobservable scores recorded)
+## Ripresa consigliata
 
----
+La sessione precedente ha chiuso la fase di **Engine Contract / Period Ledger audit e independent review** per la revisione C2 della Foundation.
 
-## 1. Executive Summary & Results
+Non ripartire da MODEL_SPEC, codice o tournament.
 
-The **C2 Common Performance Tournament** was executed across 9 matches on 3 newly generated and frozen primary seeds (`1838889274`, `1619968655`, `710418712`).
+Il prossimo passo Ã¨:
 
 ```text
-1. Codex C2 V4:       Mean $31,579.50 | Median $31,130.50 | 6W-0L-0T (Primary Candidate)
-2. Antigravity C2:    Mean $27,565.17 | Median $27,726.00 | 3W-3L-0T
-3. Copilot C2:        Mean  $7,823.67 | Median  $7,742.00 | 0W-6L-0T
-
-Economic Gate (> $23,000): EXCEEDED by Codex V4 and Antigravity C2.
+FINAL ENGINE CONTRACT RECONCILIATION
+-> ENGINE CONTRACT FREEZE
+-> ONTOLOGY REVISION
 ```
 
-### Descriptions:
-- `C2 Codex V4 — Performance Iteration — Mean $31.6k local tournament`
-- `C2 Antigravity — Performance Iteration — Mean $27.6k local tournament`
+## Stato congelato al termine della sessione
+
+```text
+ENGINE_CONTRACT_AUDIT_COMPLETE: YES
+ANTIGRAVITY_INDEPENDENT_REVIEW_COMPLETE: YES
+COPILOT_INDEPENDENT_REVIEW_COMPLETE: YES
+AGG_01_STATUS: RESOLVED
+ENGINE_CONTRACT_PROVENANCE_INDEPENDENTLY_VERIFIED: YES
+ENGINE_CONTRACT_READY_FOR_RECONCILIATION_AND_FREEZE: YES
+
+MODEL_SPEC_REVISION_AUTHORIZED: NO
+BUILD_AUTHORIZED: NO
+TOURNAMENT_AUTHORIZED: NO
+KAGGLE_AUTHORIZED: NO
+```
+
+Fingerprint engine canonico:
+
+```text
+4378b60f61a3af22ed875969e1be7e7f11af0b0e050b51aa80c0778c4113207d
+```
+
+Engine:
+
+```text
+kaggle-environments 1.32.7
+Kaggriculture environment metadata 0.1.0
+turnsPerDay configurable, default 24
+episodeSteps default 720
+```
+
+## Documenti chiave da leggere per primi
+
+```text
+results/model_spec_c2/foundation_revision/
+CODEX_C2_ENGINE_CONTRACT_PERIOD_LEDGER_AUDIT.md
+
+results/model_spec_c2/foundation_revision/
+ANTIGRAVITY_C2_ENGINE_CONTRACT_REVIEW.md
+
+results/model_spec_c2/foundation_revision/
+COPILOT_C2_ENGINE_CONTRACT_INDEPENDENT_REVIEW.md
+
+results/model_spec_c2/foundation_revision/
+CODEX_C2_AGG_01_FINGERPRINT_CORRECTION.md
+
+results/model_spec_c2/foundation_revision/
+COPILOT_C2_AGG_01_REVERIFICATION.md
+```
+
+Foundation corrente da correggere successivamente:
+
+```text
+docs/model/ontology/ONTOLOGY_C2.md
+docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2.md
+docs/model/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2.md
+```
+
+## Conclusioni engine da trattare come canoniche dopo reconciliation
+
+### Clock
+
+```text
+step == day * turnsPerDay + hour
+EOD_STEP(d) = (d + 1) * turnsPerDay - 1
+STATE_t -> ACTION_t -> STATE_t+1
+```
+
+Non hardcodare 24/48/72/96 come periodi universali in step.
+
+### Species inventory
+
+Crops:
+
+```text
+WHEAT
+CARROT
+TOMATO
+STRAWBERRY
+MELON
+```
+
+Animals:
+
+```text
+GOOSE
+COW
+SHEEP
+```
+
+```text
+CHICKEN = NOT_SUPPORTED
+```
+
+### Crop periods
+
+```text
+WHEAT      first yield d0+2, max yield d0+4
+CARROT     first yield d0+2, max yield d0+3
+TOMATO     first event d0+8, interval 1 day
+STRAWBERRY first event d0+10, interval 2 days
+MELON      first yield d0+10, max yield d0+12
+```
+
+Distinguere sempre engine biological event da policy harvest timing.
+
+### Animal periods
+
+```text
+GOOSE first output d0+4, interval 1 day
+COW   first output d0+8, interval 2 days
+SHEEP first output d0+6, interval 3 days
+```
+
+Semantica decisiva:
+
+```text
+Base output = 1 anche senza FEED
+se l'animale non Ã¨ ancora fuggito e il production event Ã¨ scheduled.
+```
+
+`FEED`:
+
+- previene escape;
+- consente il consumo del pending care bonus;
+- contribuisce con CARE all'accumulo del bonus futuro;
+- non Ã¨ gate del base output.
+
+### Fertilizer
+
+```text
+BASE_INCREMENT_TOTAL = 1
+FERTILIZED_INCREMENT_TOTAL = 2
+FERTILIZER_UPLIFT = +1
+```
+
+Finestra:
+
+```text
+current_day .. current_day+2
+```
+
+Il fertilizer non accelera il biological clock.
+
+### Inventory
+
+```text
+MANUAL DROP: puÃ² perdere overflow
+EOD AUTO-DROP: puÃ² perdere overflow
+PLACE: conserva nel worker il residuo che non entra
+```
+
+## Serviceability
+
+Usare tre concetti distinti:
+
+```text
+ACTION_ELIGIBLE_NOW
+RESERVED_SERVICEABLE_BEFORE_DEADLINE
+REALIZED_SERVICEABLE_IN_WINDOW
+```
+
+Il secondo Ã¨ `POLICY_CONTEXT`, non engine fact.
+Il terzo Ã¨ post-hoc e non puÃ² essere usato come pre-action feature.
+
+## Foundation architecture da preservare
+
+Separare due macchine:
+
+### A. Environment / Domain State Machine
+
+Contiene:
+
+- clock;
+- crop lifecycle;
+- animal lifecycle;
+- worker lifecycle;
+- inventory;
+- market;
+- service needs;
+- legality;
+- EOD;
+- decay/loss;
+- transitions.
+
+NON contiene:
+
+- DEFINE;
+- crop choice;
+- exploration;
+- capacity reservation;
+- economic target.
+
+### B. Decision Lifecycle / Controller
+
+Separata e downstream rispetto al Feature Model.
+
+Schema consigliato:
+
+```text
+DECISION_OPEN
+-> DEFINED
+-> PLAN_FEASIBLE
+-> COMMITTED_EXECUTING
+-> REVIEW_READY
+-> DECISION_OPEN
+```
+
+`VERIFY` continuo durante `COMMITTED_EXECUTING`.
+
+Principio:
+
+```text
+REACT ai decision point.
+PLAN dopo il commitment.
+VERIFY durante l'esecuzione.
+REVIEW prima della decisione successiva.
+```
+
+## Reconciliation da fare subito
+
+La reconciliation finale deve:
+
+1. assumere il Codex Engine Contract corretto come baseline;
+2. registrare Antigravity come semantic PASS;
+3. registrare Copilot come semantic PASS con `AGG-01` successivamente risolto;
+4. mantenere gli ID/severity della discrepancy matrix Codex come baseline;
+5. non incorporare tacitamente le piccole variazioni classificatorie presenti nella review Antigravity;
+6. congelare fingerprint e procedura di serializzazione;
+7. produrre un verdetto unico:
+
+```text
+ENGINE_CONTRACT_FREEZE: YES/NO
+```
+
+Dato lo stato attuale, il risultato atteso Ã¨ `YES` salvo errore emerso durante la reconciliation documentale.
+
+## Dopo il freeze
+
+Procedere nell'ordine:
+
+```text
+ONTOLOGY
+-> ENVIRONMENT STATE MACHINE
+-> FEATURE MODEL
+-> DECISION LIFECYCLE CONTRACT
+-> VERTICAL CROSS-REVIEW
+-> FOUNDATION FREEZE
+```
+
+Solo dopo:
+
+```text
+ANTIGRAVITY MODEL_SPEC
+CODEX MODEL_SPEC
+COPILOT MODEL_SPEC
+```
+
+Nessun BUILD prima del Foundation freeze.
+
+## Performance gate prossimo round
+
+Questi target sono di progetto e NON devono entrare nella Foundation:
+
+```text
+< 50,000   = project failure gate
+50kâ€“80k    = material improvement but target miss
+>= 80,000  = project target
+```
+
+## Decisioni metodologiche da non perdere
+
+- Foundation period-centric, ma non rigid-clock.
+- Periodi engine espressi in giorni e parametrizzati con `turnsPerDay`.
+- Capacity reservation multidimensionale; `required_slots <= available_slots` non Ã¨ sufficiente da solo.
+- Action request != action execution != state transition.
+- Replay: `STATE_t -> ACTION_t -> STATE_t+1`.
+- Exploration by replacement Ã¨ possibile MODEL_SPEC/protocol choice, non obbligo Foundation.
+- Multi-Q expansion Ã¨ strategia, non legge causale del dominio.
+- Livestock non va assunto automaticamente come positivo: beneficio economico da isolare causalmente.
+- Foundation deve restare neutrale rispetto a mix, workforce, routing, expansion e market policy.
 
 ---
 
-## 2. Core Lesson Learned
+```text
+START_HERE:
+FINAL ENGINE CONTRACT RECONCILIATION + FREEZE
 
-> `ACTIVE_SURFACE` o peak tile count non sono sufficienti a spiegare la performance. La capacità produttiva deve essere convertita in:
-> $$\text{SERVICEABLE\_SURFACE} \longrightarrow \text{PRODUCTIVE\_SURFACE} \longrightarrow \text{MONETIZED\_OUTPUT}$$
-> Codex V4 ha inoltre dimostrato causalmente che la sincronizzazione delle maturity può creare `SERVICE_PEAK` e `HARVEST_DEADLINE` che superano la capacità logistica riducendo la resa monetizzabile, mentre il **plant staggering** elimina il collo di bottiglia e massimizza la conversione a yield pieno.
-
----
-
-## 3. Submission Artifacts (SHIP)
-
-Both standalone submission artifacts in `submission/` are fully regenerated, self-contained, and verified against frozen tournament candidates:
-1. `submission/submission_codex.py`: 100% exact step-by-step action equivalence on seeds `1838889274`, `1619968655`, `710418712`.
-2. `submission/submission_antigravity.py`: 100% exact step-by-step action equivalence on seeds `1838889274`, `1619968655`, `710418712`.
-
----
-
-## 4. Next Session Directives
-
-1. **Kaggle Validation:** Run external submissions for the certified standalone files as permitted/available.
-2. **Foundation Consolidation:** Following the C2 experimental closure, consolidate the empirical discoveries (lifecycle states, harvest deadlines, staging capacity) into the Model Foundation (`ONTOLOGY_C2`, `KAGGRICULTURE_STATE_MACHINE_C2`, `KAGGRICULTURE_FEATURE_MODEL_C2`).
-3. **Do NOT update state machine or start C3 prematurely** until Kaggle evidence is gathered and reviewed.
+DO_NOT_START:
+MODEL_SPEC
+BUILD
+TOURNAMENT
+KAGGLE
+```
