@@ -2,6 +2,7 @@
 
 | Experiment | Title | Result Summary | Status | Key Takeaways & Decisions |
 |---|---|---|:---:|---|
+| C2-FND | Model Foundation C2 Layer 1–5 Freeze & Governance Alignment | Layer 1–5 Frozen (PASS), 11/11 DLC corrections verified, governance aligned | **FOUNDATION FROZEN** | Complete period-centric Model Foundation (Engine Contract, Ontology C2, State Machine C2, Feature Model C2, Decision Lifecycle Contract C2). 0 P0 / 0 P1 open. Checkpoint committed. Next gate: Independent MODEL_SPEC C2 Revision & BUILD. |
 | E15 | Pairwise Tournament Final Synthesis | Copilot 2–0, Codex 1–1, Antigravity 0–2; Epistemically Closed | **E15 CLOSED** | Copilot competitive winner. Replicated fingerprints: Antigravity sub-threshold failure mode (M1/M3), Copilot compact policy footprint (M2/M3). Two-regime empirical model supported. 7/7 frozen artifacts unchanged. Next gate: Model Capability Check. |
 | E15-M3 | Copilot vs Antigravity Consensus Verification | Copilot `$26,629` vs Antigravity `$9,371`; consensus closed | **M3 CLOSED** | `ACK_M3_CONSENSUS_ANTIGRAVITY` and `ACK_M3_CONSENSUS_COPILOT` received. Winner: Copilot. Replicated Antigravity M1 failure mode. |
 | E15-M2 | Codex vs Copilot Consensus Verification | Copilot `$37,752` vs Codex `$27,510`; consensus closed | **M2 CLOSED** | `ACK_M2_CONSENSUS_CODEX` and `ACK_M2_CONSENSUS_COPILOT` received. Winner: Copilot. Super-threshold regime discrimination. |
@@ -20,6 +21,27 @@
 | E12-X1.4 | Worker Locality & Readiness Expansion | 33.6% Mov, 64.1% Prod, 496.7% Yield | **PASS** | Strict worker regional locality, emergent readiness unlocks (Q1 D7, Q2 D22). |
 
 ## Recent Experiments Log
+
+## C2-FND — Model Foundation C2 (Layer 1–5) Revision, Reconciliation & Final Freeze
+
+**Date:** 2026-08-31
+**Phase:** MODEL FOUNDATION C2 REVISION & GOVERNANCE ALIGNMENT
+**Authority:** Multi-Agent Consensus (Antigravity, Codex, Copilot)
+**Status:** `FOUNDATION FROZEN` | `GOVERNANCE ALIGNED` | `CHECKPOINT COMMITTED`
+**Key Documents:**
+- Engine Contract: `results/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md`
+- Ontology C2: `docs/model/ontology/ONTOLOGY_C2.md`
+- State Machine C2: `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2.md`
+- Feature Model C2: `docs/model/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2.md`
+- Decision Lifecycle Contract C2: `docs/model/decision_lifecycle/KAGGRICULTURE_DECISION_LIFECYCLE_CONTRACT_C2.md`
+- Final Freeze Reviews: `results/model_spec_c2/foundation_revision/FOUNDATION_FINAL_FREEZE_REVIEW.md`, `results/model_spec_c2/foundation_revision/DECISION_LIFECYCLE_TARGETED_FINAL_FREEZE_REVIEW.md`
+
+### Synthetic Milestones:
+1. **Engine Contract & Period Ledger Audit:** Verified engine facts (`kaggle-environments 1.32.7`), canonical fingerprint (`4378b60f...`), species inventory (Goose/Cow/Sheep), biological periods and inventory overflow semantics.
+2. **Model Foundation Layer 1–4 Revision:** Consolidated `CORR-01` .. `CORR-14` across Ontology, State Machine, and Feature Model via tri-agent cross-review and reconciliation.
+3. **Decision Lifecycle Contract C2 (Layer 5):** Draft 01 independent reviews, reconciliation (`DLC-CORR-01` .. `DLC-CORR-11`), Draft 02 consolidation, and Targeted Final Freeze Review PASS.
+4. **Governance Alignment & Checkpoint:** Synchronized `PROJECT_STATE.md`, `NEW_SESSION.md`, `EXPERIMENT_LOG.md`, `README.md` and created Git checkpoint.
+5. **Next Authorized Action:** Independent agent-specific MODEL_SPEC C2 revisions and BUILD (Antigravity, Codex, Copilot).
 
 ## E15 — Final Tournament Synthesis & Epistemic Closure
 

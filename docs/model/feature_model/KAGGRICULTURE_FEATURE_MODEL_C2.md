@@ -1,536 +1,622 @@
-# Kaggriculture Feature Model C2
+# Kaggriculture Feature Model C2 — Observable & Derivable Feature Specification
+
+- **Fase:** Model Foundation Cycle 2 (C2) / Tri-Agent Consolidated Pass
+- **Stato:** CONSOLIDATED C2 / READY FOR FINAL FREEZE
+- **Data:** 2026-08-31
+- **Ambito:** Rappresentazione formale, causale, period-aware, policy-neutral e no-leakage dello stato dell'ambiente ad uso dei controller
+- **Fonti normative congelate:**
+  - `results/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md` (FROZEN)
+  - `docs/model/ontology/ONTOLOGY_C2.md` (CONSOLIDATED)
+  - `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2.md` (CONSOLIDATED)
+  - `results/model_spec_c2/foundation_revision/CODEX_C2_ENGINE_CONTRACT_PERIOD_LEDGER_AUDIT.md` (FROZEN)
+- **Reconciliation Authority:** `results/model_spec_c2/foundation_revision/FOUNDATION_CROSS_REVIEW_RECONCILIATION.md` (CONSOLIDATED)
+- **Runtime di riferimento:** `kaggle-environments` 1.32.7 (`kaggriculture` 0.1.0) — Fingerprint: `4378b60f61a3af22ed875969e1be7e7f11af0b0e050b51aa80c0778c4113207d`
+- **Destinazione repository:** `docs/model/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2.md`
+
+---
+
+## 1. Scopo, perimetro e separazione architetturale
+
+Il **Kaggriculture Feature Model C2** costituisce il terzo layer normativo della Model Foundation Cycle 2 (C2). Esso formalizza la trasformazione dello stato grezzo dell'ambiente simulato in un insieme strutturato di **feature osservabili e derivabili a tempo $t$**.
+
+Il Feature Model risponde alla domanda fondamentale:
+> **Quali informazioni può conoscere o calcolare deterministicamente l'agente al tempo $t$, con quale formula, provenienza, livello di osservabilità, unità di misura, validità temporale e assenza di leakage futuro?**
+
+### 1.1 Confine architetturale: Rappresentazione dello Stato vs Policy Decisionale
+Il Feature Model modella **la rappresentazione descrittiva dello stato**, NON il processo decisionale o strategico dell'agente.
+
+In particolare:
+- **NON contiene scelte di policy:** non prescrive ranking di convenienza, decisioni di acquisto/semina, preferenze di espansione o soglie di profitto;
+- **Policy-Neutrality dell'Environment Feature Vector:** le feature derivate dell'ambiente dipendono unicamente dallo stato fisico/biologico primitivo e non dalle scelte di allocazione dell'agente;
+- **Quadripartizione Epistemica del Processo Operativo (CORR-13):**
+  1. `ACTION_REQUEST` ($A_t$): comando formulato dall'agente partendo da $S_t$;
+  2. `SNAPSHOT_ELIGIBILITY`: predicati di legalità `action_eligible_now` calcolati su $S_t$;
+  3. `EXECUTION_OUTCOME`: risultato effettivo dell'engine (`SUCCESS`, `NO_OP`, `REJECTED`);
+  4. `POST_STATE_EVIDENCE` ($S_{t+1}$): evidenza osservata nello stato risultante post-transizione;
+- **Separa il Policy Context:** le variabili deliberative generate dall'agente (`in_working_set`, `reserved_serviceable_before_deadline`, `livestock_serviceable_capacity`, `policy_retirement_due`, `market_orders_in_current_batch`) costituiscono un canale di input distinto verso il controller;
+- **Separa la Telemetria di Review:**
+  $$\text{REPLAY / EPISODE\_TRACE} \longrightarrow \text{POST\_HOC\_METRICS} \longrightarrow \text{OFFLINE\_REVIEW}$$
+
+---
+
+## 2. No-Future-Leakage Contract e Classi di Osservabilità
+
+### 2.1 Principio No-Future-Leakage
+$$\text{FEATURE}_t = f(\text{OBSERVATION}_t, \text{PRIVATE\_STATE}_t, \text{FROZEN\_CONTRACTS}, \text{PAST\_HISTORY}_{\le t})$$
+È categoricamente vietato l'accesso o l'incorporazione nel vettore di feature online a tempo $t$ di:
+1. Stati futuri dell'ambiente ($\text{STATE}_{t+1}, \dots$);
+2. Esiti di estrazioni RNG future (es. spawn casuale weed a EOD);
+3. Prezzi di mercato futuri o comportamenti futuri dell'avversario;
+4. Realizzazione effettiva a posteriori di servizi logistici (`realized_serviceable_in_window` $\to$ `POST-02`);
+5. Reward finale o cassa terminale (`final_money_outcome` $\to$ `POST-01`);
+6. Efficienza retrospettiva di routing (`necessary_transit_fraction` $\to$ `POST-29`, `routing_completion_efficiency` $\to$ `POST-30`);
+7. Onset retrospettivo di blocco economico (`economic_lock_in_onset` $\to$ `POST-31`).
+
+Tali grandezze sono classificate come `POST_HOC_METRIC` o `TELEMETRY_ONLY` e possono essere calcolate solo offline a fine episodio per scopi di review, diagnostica e replay analysis.
+
+### 2.2 Classi Canoniche di Osservabilità e Provenance
+
+| Classe di Osservabilità | Descrizione | Accessibilità Online ($t$) | Esempi |
+|---|---|:---:|---|
+| `ONLINE_OBSERVABLE` | Grandezza primitiva presente direttamente nell'osservazione pubblica o nello stato privato al tick corrente. | **SÌ** | `observation.step`, `observation.day`, `farm.money`, `private.seeds`, `farm.tiles[y][x]` |
+| `ONLINE_DERIVABLE` | Grandezza calcolata deterministicamente a tempo $t$ da campi osservabili e dal contratto normativo congelato. | **SÌ** | `crop_age_days`, `crop_harvest_readiness`, `tile_care_due_condition`, `action_eligible_now` |
+| `POLICY_CONTEXT` | Assegnazione, prenotazione o parametro deliberativo generato dalla policy decisionale dell'agente. | **SÌ (Context)** | `in_working_set`, `reserved_serviceable_before_deadline`, `livestock_serviceable_capacity`, `policy_retirement_due` |
+| `ACTION_BATCH_CONTEXT` | Conteggio o stato costruito dall'agente durante l'assemblaggio del batch di comandi dello step corrente. | **SÌ (Batch)** | `market_orders_in_current_batch`, `market_orders_remaining_turn` |
+| `ENGINE_INTERNAL` | Variabile interna dell'interpreter non esposta nelle osservazioni. | **NO** | `rng_internal_state`, `market_elasticity_weights` |
+| `TELEMETRY_ONLY` | Dato di telemetria intra-step registrato per tracciamento post-azione. | **NO (Post-action)** | `action_execution_result`, `transition_reason`, `market_transaction_value` |
+| `OUTCOME_ONLY` / `POST_HOC_METRIC` | Metrica o outcome calcolabile unicamente a fine episodio su log consolidati. | **NO (Review only)** | `final_money_outcome`, `realized_serviceable_in_window`, `routing_completion_efficiency` |
+
+---
+
+## 3. Schema Canonico del Feature Contract
+
+Ogni feature canonica nel catalogo soddisfa lo schema a 17 campi obbligatori:
 
 ```text
-CANDIDATE C2
-NOT FROZEN
-CONSUMER-NEUTRAL
-UPSTREAM:
-  - ONTOLOGY_C2 CANDIDATE
-  - STATE_MACHINE_C2 CANDIDATE
-DERIVED FROM FOUNDATION RECONCILIATION R1
-REMEDIATION R2: CODEX FEATURE MODEL C2 REVIEW R1
+┌──────────────────────────────┬────────────────────────────────────────────────────────────────────────┐
+│ CAMPO SCHEMA                 │ DEFINIZIONE E REQUISITI                                                │
+├──────────────────────────────┼────────────────────────────────────────────────────────────────────────┤
+│ feature_id                   │ Identificatore univoco e machine-friendly (es. TMP-01, CRP-09, LIV-02)│
+│ source_concept_id            │ Mapping concettuale verso ONTOLOGY_C2.md (o NONE_DIRECT)                │
+│ domain                       │ TIME, LAND, WORKFORCE, CROP, LIVESTOCK, INVENTORY, MARKET, ELIGIBILITY │
+│ semantic_type                │ RAW, PREDICATE, CATEGORICAL, NUMERIC_SCALAR, TIMING_CONSTRAINT,        │
+│                              │ AGGREGATE, SPATIAL_COORDINATE, STRUCT_OBJECT                           │
+│ epistemic_class              │ ENGINE_FACT, DERIVED_ENGINE_FACT, POLICY_CONTEXT, POST_HOC_METRIC      │
+│ evidence_status              │ ENGINE_VERIFIED, DERIVED, POLICY_DECLARED, POST_HOC_METRIC             │
+│ observability                │ ONLINE_OBSERVABLE, ONLINE_DERIVABLE, POLICY_CONTEXT, TELEMETRY_ONLY,   │
+│                              │ OUTCOME_ONLY                                                           │
+│ source_fields                │ Campi primitivi sorgente (es. observation.day, farm.tiles, private)    │
+│ formula / derivation         │ Regola o formula deterministica di calcolo                             │
+│ unit                         │ Unità fisica (step, days, tiles, units, $, boolean, ratio, categorical)│
+│ temporal_reference           │ Clock di riferimento: engine_step, current_day, intra_day_phase, EOD   │
+│ validity / preconditions     │ Condizioni di esistenza (es. tile.kind == PLANT)                       │
+│ nullability_state            │ Valore assunto se non applicabile (es. null, explicit NONE)            │
+│ update_frequency             │ Frequenza di tick: PER_STEP, PER_DAY, ON_DEMAND, TERMINAL_ONLY        │
+│ policy_dependency            │ NO (ENGINE) oppure esplicita dipendenza da contesto policy            │
+│ future_leakage_risk          │ NO (per tutte le feature online); YES se abusata come online           │
+│ notes                        │ Limitazioni, guardie associate e chiarimenti normativi                 │
+└──────────────────────────────┴────────────────────────────────────────────────────────────────────────┘
 ```
 
-## 1. Scope and remediation status
+---
 
-This file is a remediation pass against the Codex review of the C2 candidate. It addresses only the issues mandated by the review and does not add a new model layer, new policy, new runtime behavior, or any consumer-specific matrix.
+## 4. Master Canonical Feature Catalog (Materialized Feature Contract)
 
-The scope is restricted to:
+| feature_id | source_concept_id | domain | semantic_type | epistemic_class | evidence_status | observability | source_fields | formula / derivation | unit | temporal_ref | validity | nullability | update_freq | policy_dep | leakage_risk | notes |
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|:---:|:---:|---|
+| **TMP-01** | `canonical_clock_coordinate` | TIME | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `observation.step` | `identity` | step | engine_step | Always | None | PER_STEP | NO | NO | Clock primitivo dell'engine |
+| **TMP-02** | `canonical_clock_coordinate` | TIME | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `observation.day` | `identity` | day | current_day | Always | None | PER_STEP | NO | NO | Giorno biologico/contrattuale corrente |
+| **TMP-03** | `canonical_clock_coordinate` | TIME | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `observation.hour` | `identity` | hour | intra_day_phase | Always | None | PER_STEP | NO | NO | Fase infra-giornaliera $[0, T-1]$ |
+| **TMP-04** | `canonical_clock_coordinate` | TIME | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | Config parameter | `turnsPerDay` | step/day | configuration | Always | None | STATIC | NO | NO | Costante di discretizzazione $T$ |
+| **TMP-05** | `canonical_clock_coordinate` | TIME | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `day, hour, T` | $\text{day} \cdot T + \text{hour}$ | step | canonical_clock | Always | None | PER_STEP | NO | NO | Ricostruzione diagnostica canonica |
+| **TMP-06** | `canonical_clock_coordinate` | TIME | TIMING_CONSTRAINT | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `hour, T` | $(T - 1) - \text{hour}$ | step | intra_day_phase | Always | None | PER_STEP | NO | NO | Passi mancanti all'attivazione dell'EOD |
+| **TMP-07** | `canonical_clock_coordinate` | TIME | PREDICATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `hour, T` | $\text{hour} == T - 1$ | boolean | intra_day_phase | Always | None | PER_STEP | NO | NO | Indica se lo step corrente chiude la giornata |
+| **TMP-08** | `canonical_clock_coordinate` | TIME | TIMING_CONSTRAINT | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `step, T, episodeSteps` | $\lfloor (\text{episodeSteps} - 1 - \text{step}) / T \rfloor$ | day | current_day | Always | None | PER_STEP | NO | NO | Giorni interi residui prima del termine |
+| **TMP-09** | `canonical_clock_coordinate` | TIME | TIMING_CONSTRAINT | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `step, episodeSteps` | $\max(0, \text{episodeSteps} - 1 - \text{step})$ | step | engine_step | Always | None | PER_STEP | NO | NO | Step totali residui nell'episodio |
+| **TMP-10** | `canonical_clock_coordinate` | TIME | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `step, episodeSteps` | $\text{step} / (\text{episodeSteps} - 1)$ | ratio | engine_step | Always | None | PER_STEP | NO | NO | Progresso normalizzato $[0, 1]$ |
+| **FRM-01** | `current_money_state` | LAND | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `farms[player].money` | `identity` | \$ | engine_step | Always | None | PER_STEP | NO | NO | Cassa liquida spendibile online |
+| **FRM-02** | `activated_land_surface` | LAND | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `farms[player].tiles` | `identity` | grid | engine_step | Always | None | PER_STEP | NO | NO | Griglia bidimensionale nativa delle tile |
+| **FRM-03** | `land_surface_total` | LAND | AGGREGATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | `unlocked_quadrants, boardSize` | $\text{len}(\text{unlocked\_quadrants}) \times (\text{boardSize} // 2)^2$ | tiles | engine_step | Always | None | PER_STEP | NO | NO | Superficie totale posseduta (25 per quad su default 10x10) |
+| **FRM-04** | `activated_land_surface` | LAND | AGGREGATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `tiles` | $\text{count}(\text{kind} \in [\text{PLANT}, \text{COOP}, \text{PASTURE}])$ | tiles | engine_step | Always | None | PER_STEP | NO | NO | Superficie attualmente produttiva/edificata |
+| **FRM-05** | `crop_surface_maintained` | LAND | AGGREGATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `tiles` | $\text{count}(\text{kind} == \text{PLANT})$ | tiles | engine_step | Always | None | PER_STEP | NO | NO | Superficie occupata da piante vive |
+| **CRP-01** | `field_cleanliness_state` | CROP | CATEGORICAL | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.kind` | `identity` | categorical | engine_step | Valid $[x,y]$ | None | PER_STEP | NO | NO | Valore nativo: None, LOCKED, PLANT, WEED, COOP, PASTURE |
+| **CRP-02** | `NONE_DIRECT` | CROP | CATEGORICAL | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.crop` | `identity` | categorical | engine_step | `kind == PLANT` | `null` | PER_STEP | NO | NO | Specie vegetale: WHEAT, CARROT, TOMATO, STRAWBERRY, MELON |
+| **CRP-03** | `crop_horizon_alignment` | CROP | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.planted_day` | `identity` | day | current_day | `kind == PLANT` | `null` | PER_STEP | NO | NO | Giorno di semina biologica |
+| **CRP-04** | `crop_horizon_alignment` | CROP | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `day, planted_day` | $\text{current\_day} - \text{tile.planted\_day}$ | day | current_day | `kind == PLANT` | `null` | PER_STEP | NO | NO | Età biologica della pianta |
+| **CRP-05** | `crop_harvest_action_flow` | CROP | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.yield_units` | `identity` | units | engine_step | `kind == PLANT` | 0 | PER_STEP | NO | NO | Unità di resa accumulate sulla tile |
+| **CRP-06** | `crop_harvest_action_flow` | CROP | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | `tile.crop` | $\text{CROPS}[\text{crop}].\text{max\_yield}$ | units | static | `kind == PLANT` | `null` | STATIC | NO | NO | Resa massima biologica (6 Wheat/Melon, 4 altre) |
+| **CRP-07** | `crop_harvest_action_flow` | CROP | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `yield_units, max_yield` | $\text{yield\_units} / \text{max\_yield}$ | ratio | engine_step | `kind == PLANT` | `null` | PER_STEP | NO | NO | Frazione di resa accumulata $[0, 1]$ |
+| **CRP-08** | `first_yield_day` | CROP | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | `tile.crop` | $\text{CROPS}[\text{crop}].\text{first\_yield\_day}$ | day | static | `kind == PLANT` | `null` | STATIC | NO | NO | Giorno di prima raccolta legale |
+| **CRP-09** | `crop_harvest_readiness` | CROP | TIMING_CONSTRAINT | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `crop_age, first_yield` | $\max(0, \text{first\_yield} - \text{crop\_age})$ | day | current_day | `kind == PLANT` | `null` | PER_STEP | NO | NO | Giorni mancanti alla prima raccolta legale |
+| **CRP-10** | `crop_harvest_readiness` | CROP | PREDICATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `kind, yield, age, first_yield` | $\text{kind} == \text{PLANT} \land \text{yield} > 0 \land \text{age} \ge \text{first\_yield}$ | boolean | current_day | Valid $[x,y]$ | False | PER_STEP | NO | NO | Predicato formale di maturità legale |
+| **CRP-11** | `watering_execution_rate` | CROP | PREDICATE | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.watered_today` | `identity` | boolean | current_day | `kind == PLANT` | False | PER_STEP | NO | NO | Flag idrico intra-day |
+| **CRP-12** | `crop_decay_risk_window` | CROP | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.consecutive_unwatered` | `identity` | count | current_day | `kind == PLANT` | 0 | PER_STEP | NO | NO | Contatore di giorni consecutivi senza acqua |
+| **CRP-13** | `crop_decay_risk_window` | CROP | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.max_lifespan_step` | `identity` | step | engine_step | `kind == PLANT` | `null` | PER_STEP | NO | NO | Step di inizio del decadimento naturale |
+| **CRP-14** | `crop_decay_risk_window` | CROP | TIMING_CONSTRAINT | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `step, max_lifespan` | $\max(0, \text{max\_lifespan} - \text{step})$ | step | engine_step | `kind == PLANT` | `null` | PER_STEP | NO | NO | Step mancanti all'inizio del lifespan decay |
+| **CRP-15** | `crop_decay_risk_window` | CROP | PREDICATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `step, max_lifespan` | $\text{step} \ge \text{tile.max\_lifespan\_step}$ | boolean | engine_step | `kind == PLANT` | False | PER_STEP | NO | NO | Indica se il tick decay è attivo |
+| **CAR-01** | `crop_care_action_flow` | CROP | PREDICATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `kind, watered_today` | $\text{kind} == \text{PLANT} \land \text{watered\_today} == \text{False}$ | boolean | current_day | Valid $[x,y]$ | False | PER_STEP | NO | NO | Pianta non ancora irrigata nel giorno corrente |
+| **CAR-02** | `tile_care_due_condition` | CROP | PREDICATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `CAR-01, consecutive_unwatered` | $\text{CAR-01} \land \text{consecutive\_unwatered} == 1$ | boolean | current_day | Valid $[x,y]$ | False | PER_STEP | NO | NO | **Allerta critica anti-loss:** morte certa al prossimo EOD |
+| **CAR-03** | `crop_decay_risk_window` | CROP | PREDICATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `CAR-02` | Uguale a `CAR-02` | boolean | current_day | Valid $[x,y]$ | False | PER_STEP | NO | NO | Rischio di trasformazione deterministica in WEED |
+| **CAR-04** | `field_cleanliness_state` | CROP | PREDICATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `kind, unlocked` | $\text{kind} == \text{None} \land \text{tile\_unlocked}$ | boolean | current_day | Valid $[x,y]$ | False | PER_STEP | NO | NO | Esposizione stocastica al random weed spawn EOD |
+| **FRT-01** | `fertilizer_effect_window` | CROP | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.fertilized_until_day` | `identity` | day | current_day | `kind == PLANT` | 0 | PER_STEP | NO | NO | Ultimo giorno di efficacia fertilizzante inclusivo |
+| **FRT-02** | `fertilizer_effect_window` | CROP | PREDICATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `day, fertilized_until_day` | $\text{kind} == \text{PLANT} \land \text{day} \le \text{fertilized\_until}$ | boolean | current_day | `kind == PLANT` | False | PER_STEP | NO | NO | Indica se l'effetto fertilizzante è attivo oggi |
+| **FRT-03** | `fertilizer_effect_window` | CROP | TIMING_CONSTRAINT | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `day, fertilized_until_day` | $\max(0, \text{fertilized\_until} - \text{day} + 1)$ | days | current_day | `kind == PLANT` | 0 | PER_STEP | NO | NO | Giorni residui di effetto fertilizzante |
+| **FRT-04** | `crop_fertilizer_bonus` | CROP | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | `FRT-02, watered_today` | 2 unità se `FRT-02` $\land$ `watered_today` altrimenti 1 unità | units | event | `kind == PLANT` | 1 | PER_STEP | NO | NO | Resa incrementale a EOD (richiede irrigazione!) |
+| **FRT-05** | `crop_fertilizer_bonus` | CROP | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | `FRT-04` | **+1 unità netta** | units | event | `kind == PLANT` | 0 | PER_STEP | NO | NO | Uplift netto della fertilizzazione |
+| **LIV-01** | `livestock_headcount` | LIVESTOCK | CATEGORICAL | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.animal` | `identity` | categorical | engine_step | Structure tile | `null` | PER_STEP | NO | NO | Specie animale: GOOSE, COW, SHEEP (flat tile field) |
+| **LIV-02** | `pasture_capacity_alignment` | LIVESTOCK | CATEGORICAL | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.kind` | `identity` | categorical | engine_step | Valid $[x,y]$ | `null` | PER_STEP | NO | NO | Tipo struttura: COOP o PASTURE |
+| **LIV-03** | `livestock_headcount` | LIVESTOCK | PREDICATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `LIV-01` | $\text{LIV-01} \neq \text{null}$ | boolean | engine_step | Structure tile | False | PER_STEP | NO | NO | Struttura occupata da animale vivo |
+| **LIV-04** | `livestock_headcount` | LIVESTOCK | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `day, tile.placed_day` | $\text{current\_day} - \text{placed\_day}$ | day | current_day | `LIV-03 == True` | `null` | PER_STEP | NO | NO | Età di permanenza dell'animale |
+| **LIV-05** | `livestock_feed_action_flow` | LIVESTOCK | PREDICATE | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.fed_today` | `identity` | boolean | current_day | `LIV-03 == True` | False | PER_STEP | NO | NO | Flag alimentazione intra-day |
+| **LIV-06** | `livestock_care_action_flow` | LIVESTOCK | PREDICATE | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.cared_today` | `identity` | boolean | current_day | `LIV-03 == True` | False | PER_STEP | NO | NO | Flag cura intra-day |
+| **LIV-07** | `animal_escape_condition` | LIVESTOCK | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.consecutive_unfed` | `identity` | count | current_day | `LIV-03 == True` | 0 | PER_STEP | NO | NO | Giorni consecutivi a digiuno ($0, 1, 2$) |
+| **LIV-08** | `animal_escape_condition` | LIVESTOCK | PREDICATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `LIV-05, LIV-07` | $\text{consecutive\_unfed} == 1 \land \text{fed\_today} == \text{False}$ | boolean | current_day | `LIV-03 == True` | False | PER_STEP | NO | NO | **Allerta fuga EOD:** animale fuggirà se non nutrito |
+| **LIV-09** | `pending_care_bonus_accumulation` | LIVESTOCK | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.pending_care_bonus` | `identity` | count | current_day | `LIV-03 == True` | 0 | PER_STEP | NO | NO | Bonus di cura (resettato a 0 ad ogni produzione) |
+| **LIV-10** | `fertilizer_available_state` | LIVESTOCK | PREDICATE | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.fertilizer_available` | `identity` | boolean | current_day | Structure tile | False | PER_STEP | NO | NO | Flag fertilizzante prelevabile (non cumulativo) |
+| **LIV-11** | `livestock_base_production` | LIVESTOCK | RAW | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `tile.yield_units` | `identity` | units | current_day | Structure tile | 0 | PER_STEP | NO | NO | Resa accumulata sulla tile della struttura |
+| **LIV-12** | `livestock_product_flow` | LIVESTOCK | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | `tile.animal` | Giorno $d_0+4$ (Goose), $d_0+8$ (Cow), $d_0+6$ (Sheep) | day | static | `LIV-03 == True` | `null` | STATIC | NO | NO | Primo giorno biologico di produzione |
+| **LIV-13** | `livestock_product_flow` | LIVESTOCK | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | `tile.animal` | 1d (Goose), 2d (Cow), 3d (Sheep) | days | static | `LIV-03 == True` | `null` | STATIC | NO | NO | Intervallo biologico di produzione |
+| **LIV-14** | `livestock_base_production` | LIVESTOCK | PREDICATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `tile.animal, day, placed_day` | Calendario produzione programmata | boolean | current_day | `LIV-03 == True` | False | PER_STEP | NO | NO | Indica se oggi è un giorno di produzione |
+| **LIV-15** | `livestock_product_flow` | LIVESTOCK | TIMING_CONSTRAINT | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `tile.animal, day, placed_day` | Giorni mancanti al prossimo output biologico | days | current_day | `LIV-03 == True` | `null` | PER_STEP | NO | NO | Countdown prossimo output biologico |
+| **LIV-STRUCT** | `livestock_structural_capacity` | LIVESTOCK | AGGREGATE | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `tiles` | $\text{count}(\text{COOP}) + \text{count}(\text{PASTURE})$ | slots | engine_step | Always | 0 | PER_STEP | NO | NO | Capacità strutturale; max_held limita resa per tile |
+| **WRK-01** | `workforce_headcount` | WORKFORCE | CATEGORICAL | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `farmer, hands` | ID worker (`farmer`, `hand_0`, $\dots$) | string | engine_step | Active unit | `null` | PER_STEP | NO | NO | ID lavoratore |
+| **WRK-02** | `workforce_headcount` | WORKFORCE | CATEGORICAL | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `idx == 0` | `MAIN_FARMER` o `FARM_HAND` | categorical | engine_step | Active unit | `null` | PER_STEP | NO | NO | Ruolo lavoratore |
+| **WRK-03** | `worker_multi_occupancy` | WORKFORCE | SPATIAL_COORDINATE | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `farm.farmer / hands` | `identity` | $[x, y]$ | engine_step | Active unit | `null` | PER_STEP | NO | NO | Coordinate correnti (multi-occupancy ammessa) |
+| **WRK-04** | `worker_action_monetization_rate` | WORKFORCE | NUMERIC_SCALAR | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `private.inventories[idx]`| $\sum \text{items}$ in inv | units | engine_step | Active unit | 0 | PER_STEP | NO | NO | Somma merci trasportate (unbounded capacity!) |
+| **WRK-05** | `worker_action_monetization_rate` | WORKFORCE | STRUCT_OBJECT | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `private.inventories[idx]`| `identity` | dict | engine_step | Active unit | `{}` | PER_STEP | NO | NO | Inventario dettagliato worker (no carrying limit) |
+| **WRK-07** | `workforce_headcount` | WORKFORCE | PREDICATE | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `idx <= len(hands)` | `identity` | boolean | engine_step | Unit slot | False | PER_STEP | NO | NO | Lavoratore operativo nello step corrente |
+| **WRK-08** | `movement_overhead` | WORKFORCE | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `worker_pos, shed_pos` | $|x - x_{\text{shed}}| + |y - y_{\text{shed}}|$ | steps | engine_step | Active unit | `null` | PER_STEP | NO | NO | Distanza geometrica Manhattan dallo shed |
+| **WRK-09** | `movement_overhead` | WORKFORCE | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `worker_pos, target_pos`| $|x - x_{\text{target}}| + |y - y_{\text{target}}|$ | steps | engine_step | Target defined | `null` | PER_STEP | NO | NO | Distanza geometrica Manhattan dal target |
+| **INV-01** | `shed_inventory_integrity` | INVENTORY | NUMERIC_SCALAR | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `private.shed` | $\sum \text{items}$ in shed | units | engine_step | Always | 0 | PER_STEP | NO | NO | Totale beni stoccati nello shed centrale |
+| **INV-02** | `shed_inventory_integrity` | INVENTORY | STRUCT_OBJECT | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `private.shed` | `identity` | dict | engine_step | Always | `{}` | PER_STEP | NO | NO | Scorte dettagliate per item nello shed |
+| **INV-03** | `shed_inventory_integrity` | INVENTORY | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Configuration | `configuration.shedCapacity` | units | static | Always | 100 | STATIC | NO | NO | Capienza massima configurata dello shed |
+| **INV-04** | `shed_inventory_integrity` | INVENTORY | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `INV-01, INV-03` | $\max(0, \text{shedCapacity} - \text{shed\_total})$ | units | engine_step | Always | 0 | PER_STEP | NO | NO | Spazio residuo di stoccaggio nello shed |
+| **INV-05** | `planting_action_flow` | INVENTORY | STRUCT_OBJECT | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `private.seeds` | `identity` | dict | engine_step | Always | `{}` | PER_STEP | NO | NO | Sementi disponibili per specie colturale |
+| **INV-06** | `inventory_to_cash_conversion` | INVENTORY | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `worker_inv, INV-04` | $\min(\text{worker\_inv}, \text{INV-04})$ | units | engine_step | Active unit | 0 | PER_STEP | NO | NO | Quantità trasferibile con PLACE conservativo |
+| **INV-07** | `shed_overflow_loss` | INVENTORY | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `worker_inv, INV-04` | $\max(0, \text{worker\_inv} - \text{INV-04})$ | units | engine_step | Active unit | 0 | PER_STEP | NO | NO | Unità distrutte in caso di DROP distruttivo |
+| **INV-08** | `shed_overflow_loss` | INVENTORY | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `DERIVED` | `ONLINE_DERIVABLE` | `total_worker_inv, INV-04` | $\max(0, \sum \text{worker\_inv} - \text{INV-04})$ | units | engine_step | Always | 0 | PER_STEP | NO | NO | **Esposizione statica counterfactual EOD auto-drop** |
+| **MKT-01** | `current_money_state` | MARKET | NUMERIC_SCALAR | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `farms[player].money` | `identity` | \$ | engine_step | Always | None | PER_STEP | NO | NO | Saldo cassa spendibile online |
+| **MKT-02** | `dynamic_market_price_elasticity` | MARKET | STRUCT_OBJECT | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `market.prices` | `identity` | dict | engine_step | Always | `{}` | PER_STEP | NO | NO | Prezzi correnti quotati a mercato |
+| **MKT-03** | `dynamic_market_price_elasticity` | MARKET | STRUCT_OBJECT | `ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_OBSERVABLE` | `market.prices` | `identity` | dict | engine_step | Always | `{}` | PER_STEP | NO | NO | Prezzi correnti di vendita/acquisto a mercato |
+| **MKT-04** | `market_order_batch_limit` | MARKET | NUMERIC_SCALAR | `POLICY_CONTEXT` | `DERIVED` | `ACTION_BATCH_CONTEXT` | Controller batch | $\text{count}(\text{orders in current batch})$ | count | intra_day_phase | Pre-submission | 0 | PER_STEP | SÌ (Batch) | NO | Conteggio ordini formulati nel turno corrente |
+| **MKT-05** | `market_order_batch_limit` | MARKET | NUMERIC_SCALAR | `POLICY_CONTEXT` | `DERIVED` | `ACTION_BATCH_CONTEXT` | `MKT-04, MKT-LIMIT` | $\max(0, \text{maxOrders} - \text{MKT-04})$ | count | intra_day_phase | Pre-submission | 10 | PER_STEP | SÌ (Batch) | NO | Slot ordini residui nel turno corrente |
+| **MKT-06** | `land_purchase_timing` | MARKET | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | `unlocked_quadrants` | Costo prossimo quadrante da tabella engine | \$ | engine_step | Always | `null` | PER_STEP | NO | NO | Costo sblocco prossimo quadrante fondiario |
+| **MKT-07** | `hire_order_scheduling` | MARKET | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | `hires_today` | $\text{Fib}(\text{hires\_today}) \times \text{mult}$ | \$ | current_day | Always | None | PER_STEP | NO | NO | Costo assunzione prossimo farm hand oggi |
+| **MKT-08** | `NONE_DIRECT` | MARKET | STRUCT_OBJECT | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Configuration | Prezzo sementi per specie | dict | static | Always | `{}` | STATIC | NO | NO | Costo acquisto semi per specie |
+| **MKT-09** | `NONE_DIRECT` | MARKET | STRUCT_OBJECT | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Configuration | \$300 Goose, \$400 Cow, \$500 Sheep | dict | static | Always | None | STATIC | NO | NO | Prezzo fisso acquisto capi bestiame |
+| **MKT-LIMIT** | `market_order_batch_limit` | MARKET | NUMERIC_SCALAR | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Configuration | `configuration.maxMarketOrdersPerTurn` | count | static | Always | 10 | STATIC | NO | NO | Limite strutturale max ordini per turno |
+| **ELG-01** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, bounds | Opcode `NORTH`/`SOUTH`/`EAST`/`WEST` verso coordinate $\in [0, \text{dim}-1]$ | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità immediata movimento direzionale |
+| **ELG-02** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker slot | Opcode `PASS` (sempre valido per unit attiva) | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità pass |
+| **ELG-03** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, shed, shed_inv | Opcode `PICKUP <item> [n]`: adiacente a shed, `shed[item] > 0` | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità prelievo beni dallo shed (worker unbounded) |
+| **ELG-04** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, shed, inv | Opcode `PLACE <item> [n]` (Shed): adiacente a shed, $\text{worker\_inv}[item] > 0$, spazio shed $> 0$ | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità scarico conservativo su shed |
+| **ELG-05** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, structure, inv | Opcode `PLACE <animal>`: su struttura vuota corrispondente, animale in inv worker | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità collocazione animale in struttura |
+| **ELG-06** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, shed, inv | Opcode `DROP`: adiacente a shed, worker possiede $\ge 1$ beni in inventario | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità scarico manuale distruttivo |
+| **ELG-07** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, tile, seeds | Opcode `PLANT <crop>`: su tile libera posseduta, `seeds[crop] >= total_orders_in_batch` | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità semina colturale (batch atomic check) |
+| **ELG-08** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, tile | Opcode `WATER`: su tile `kind == PLANT`, $\text{watered\_today} == \text{False}$ | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità irrigazione pianta |
+| **ELG-09** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, tile | Opcode `HARVEST` (Crop): su `PLANT`, $\text{CRP-10} == \text{True}$ | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità raccolta colturale matura |
+| **ELG-10** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, tile | Opcode `HARVEST` (Animal): su struttura con animale, `output_available == True` | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità raccolta prodotto animale |
+| **ELG-11** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, tile, inv | Opcode `FERTILIZE`: su tile `PLANT`, $\text{worker\_inv}[\text{FERTILIZER}] \ge 1$ | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità fertilizzazione pianta |
+| **ELG-12** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, tile | Opcode `DIG`: su tile arabile (`PLANT`, `WEED`, o struttura vuota priva di animale) | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità rimozione/ripulitura tile |
+| **ELG-13** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, tile | Opcode `BUILD_COOP`: su tile posseduta con stato `None` (costo 0 cassa) | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità edificazione pollaio |
+| **ELG-14** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, tile | Opcode `BUILD_PASTURE`: su tile posseduta con stato `None` (costo 0 cassa) | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità edificazione pascolo |
+| **ELG-15** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, tile, inv | Opcode `FEED`: su struttura con animale, $\text{fed\_today} == \text{False}$, $\text{inv}[\text{WHEAT}] \ge 1$ | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità alimentazione animale |
+| **ELG-16** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, tile | Opcode `CARE`: su struttura con animale, $\text{cared\_today} == \text{False}$ | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità cura animale |
+| **ELG-17** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Worker pos, tile | Opcode `COLLECT_FERTILIZER`: su struttura con animale, `fertilizer_available == True` | boolean | engine_step | Active unit | False | PER_STEP | NO | NO | Idoneità raccolta fertilizzante animale |
+| **ELG-18** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Batch slots, money | Market `BUY_SEED <crop> <n>`: $\text{MKT-05} > 0$, $\text{money} \ge \text{cost}$ | boolean | engine_step | Player scope | False | PER_STEP | SÌ (Batch) | NO | Idoneità ordine acquisto semi |
+| **ELG-19** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Batch slots, money, shed | Market `BUY_PRODUCT <item> <n>`: $\text{MKT-05} > 0$, $\text{money} \ge \text{price}$, spazio shed $> 0$ | boolean | engine_step | Player scope | False | PER_STEP | SÌ (Batch) | NO | Idoneità ordine acquisto prodotti a mercato |
+| **ELG-20** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Batch slots, money, shed | Market `BUY_ANIMAL <animal> <n>`: $\text{MKT-05} > 0$, $\text{money} \ge \text{cost}$, spazio shed $> 0$ | boolean | engine_step | Player scope | False | PER_STEP | SÌ (Batch) | NO | Idoneità ordine acquisto animali |
+| **ELG-21** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Batch slots, shed_inv | Market `SELL <item> <n>`: $\text{MKT-05} > 0$, $\text{shed}[item] \ge 1$ | boolean | engine_step | Player scope | False | PER_STEP | SÌ (Batch) | NO | Idoneità ordine vendita merci a mercato |
+| **ELG-22** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Batch slots, money | Market `HIRE`: $\text{MKT-05} > 0$, $\text{money} \ge \text{hire\_cost}$ | boolean | engine_step | Player scope | False | PER_STEP | SÌ (Batch) | NO | Idoneità ordine assunzione farm hand |
+| **ELG-23** | `action_eligible_now` | ELIGIBILITY | PREDICATE | `DERIVED_ENGINE_FACT` | `ENGINE_VERIFIED` | `ONLINE_DERIVABLE` | Batch slots, money, locked | Market `BUY_LAND`: $\text{MKT-05} > 0$, $\text{money} \ge \text{land\_cost}$, quadranti residui | boolean | engine_step | Player scope | False | PER_STEP | SÌ (Batch) | NO | Idoneità ordine sblocco quadrante fondiario |
+| **POL-WS** | `crop_surface_maintained` | LAND | PREDICATE | `POLICY_CONTEXT` | `POLICY_DECLARED` | `POLICY_CONTEXT` | Policy assignment | Coordinate $[x,y] \in \text{working\_set}$ | boolean | decision_context | Valid $[x,y]$ | False | ON_DEMAND | SÌ (Policy) | NO | Assegnazione coordinata al working set operativo |
+| **POL-RES** | `reserved_serviceable_before_deadline` | TIME | PREDICATE | `POLICY_CONTEXT` | `POLICY_DECLARED` | `POLICY_CONTEXT` | Policy schedule | Worker pianificato per completare entro deadline | boolean | decision_context | Valid target | False | ON_DEMAND | SÌ (Policy) | NO | Prenotazione deliberativa di raggiungibilità |
+| **POL-CAP** | `livestock_serviceable_capacity` | LIVESTOCK | NUMERIC_SCALAR | `POLICY_CONTEXT` | `POLICY_DECLARED` | `POLICY_CONTEXT` | Policy plan | Numero capi zootecnici sostenibili logisticamente | count | decision_context | Player scope | 0 | ON_DEMAND | SÌ (Policy) | NO | Capacità deliberativa zootecnica pianificata |
+| **POL-RET** | `crop_care_action_flow` | CROP | PREDICATE | `POLICY_CONTEXT` | `POLICY_DECLARED` | `POLICY_CONTEXT` | Policy assignment | Flag deliberativo pianta candidata alla rimozione/DIG | boolean | decision_context | `kind == PLANT` | False | ON_DEMAND | SÌ (Policy) | NO | Overlay di policy per retirement deliberativo |
 
-- P0-01, P0-02, P1-01, P1-02, P1-03, P1-04, P2-01, P2-02
-- preserving NOTE-01 and NOTE-02
+---
 
-The resulting artifact is still a candidate and not frozen:
+## 5. Policy-Neutral Derived Tile Classifier
+
+Il classifier delle **Derived Tile Lifecycle Views** è rigorosamente **policy-neutral**: classifica lo stato fisico dell'ambiente basandosi unicamente sulle variabili engine-native e non sulla policy decisionale dell'agente.
+
+### 5.1 Algoritmo Canonico Environment-Derived (Cascata Deterministica) (CORR-07)
 
 ```text
-FEATURE MODEL C2 STATUS: CANDIDATE / NOT FROZEN
+┌────────────────────────────────────────────────────────────────────────────────────────────────────────┐
+│ CLASSIFIER AMBIENTALE CANONICO: classify_environment_tile(x, y) -> ENVIRONMENT_TILE_VIEW             │
+├────────────────────────────────────────────────────────────────────────────────────────────────────────┤
+│ 1. Se (x, y) è in quadrante non posseduto / "LOCKED"                  ==> OUT_OF_SCOPE                 │
+│ 2. Se tile.kind in ["COOP", "PASTURE"]                                ==> OUT_OF_SCOPE (non-arabile)   │
+│ 3. Se tile.kind == "WEED"                                             ==> LOST_WEED                    │
+│ 4. Se tile.kind == None (libera, sbloccata)                           ==> EMPTY_AVAILABLE              │
+│ 5. Se tile.kind == "PLANT":                                                                            │
+│    a. Se crop_harvest_readiness == True                               ==> HARVEST_READY                │
+│    b. Fallback per pianta viva in accrescimento                       ==> GROWING                      │
+│ 6. Fallback diagnostico                                               ==> DIAGNOSTIC_ERROR             │
+└────────────────────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-## 2. P0-01 resolution: a real canonical catalog
+### 5.2 Viste Derivate e Overlay di Policy
 
-The feature model contains a real catalog keyed by the canonical C1 IDs. The C2 candidate preserves the admissible canonical IDs validated in C1 and keeps the rejected deterministic RNG concept outside the admissible feature count. No silent 59 -> 74 expansion is accepted. The catalog is the common information contract and not a per-consumer usage map.
+| Vista Ambientale / Overlay | Formula Logica Chiusa | Epistemic Class | Policy Dependency |
+|---|---|---|:---:|
+| `OUT_OF_SCOPE` | `tile == "LOCKED" or tile.kind in ["COOP", "PASTURE"]` | `DERIVED_ENGINE_FACT` | **NO** |
+| `LOST_WEED` | `tile.kind == "WEED"` | `DERIVED_ENGINE_FACT` | **NO** |
+| `EMPTY_AVAILABLE` | `tile.kind == None and tile_unlocked` | `DERIVED_ENGINE_FACT` | **NO** |
+| `HARVEST_READY` | `tile.kind == "PLANT" and crop_harvest_readiness == True` | `DERIVED_ENGINE_FACT` | **NO** |
+| `GROWING` | `tile.kind == "PLANT" and crop_harvest_readiness == False` | `DERIVED_ENGINE_FACT` | **NO** |
+| `policy_retirement_due` (`POL-RET`) | Assegnato dal Decision Controller secondo criteri di policy downstream | `POLICY_CONTEXT` | **SÌ** |
+| `in_working_set` (`POL-WS`) | $[x, y] \in \text{policy\_assigned\_perimeter}$ | `POLICY_CONTEXT` | **SÌ** |
 
-ANTIGRAVITY_FOUNDATION_REVIEW_R1: READ
+---
 
-### 2.1 Real total and class counts
+## 6. Crop Features e Period Ledger
+
+$$\text{crop\_age\_days} = \text{current\_day} - \text{tile.planted\_day}$$
+
+$$\text{crop\_harvest\_readiness} \iff \begin{cases} \text{tile.kind} == \text{PLANT} \\ \text{tile.yield\_units} > 0 \\ \text{crop\_age\_days} \ge \text{CROPS}[\text{tile.crop}].\text{first\_yield\_day} \end{cases}$$
+
+### Parametri Biologici Frozen per Specie:
+- **`WHEAT`:** `first_yield_day = 2`, finestre resa $2 \dots 4$, `max_yield = 6`, non-ongoing, lifespan $(d_0 + 5) \cdot T$.
+- **`CARROT`:** `first_yield_day = 2`, finestre resa $2 \dots 3$, `max_yield = 4`, non-ongoing, lifespan $(d_0 + 4) \cdot T$.
+- **`TOMATO`:** `first_yield_day = 8`, intervallo 1 giorno (4 eventi), `max_yield = 4`, ongoing, lifespan $(d_0 + 12) \cdot T$.
+- **`STRAWBERRY`:** `first_yield_day = 10`, intervallo 2 giorni (4 eventi), `max_yield = 4`, ongoing, lifespan $(d_0 + 17) \cdot T$.
+- **`MELON`:** `first_yield_day = 10`, finestre resa $6 \dots 12$, `max_yield = 6`, non-ongoing, lifespan $(d_0 + 13) \cdot T$.
+
+---
+
+## 7. Crop Care, Allerte e Rischio di Perdita
+
+$$\text{not\_watered\_today} \iff \text{tile.kind} == \text{PLANT} \quad \land \quad \text{tile.watered\_today} == \text{False}$$
+
+$$\text{tile\_care\_due\_condition} \iff \text{not\_watered\_today} \quad \land \quad \text{tile.consecutive\_unwatered} == 1$$
+
+- `CAR-01` (`not_watered_today`): bisogno generico intra-day;
+- `CAR-02` (`tile_care_due_condition`): **allerta critica anti-loss** (morte certa al prossimo EOD se non irrigata);
+- `CAR-04` (`empty_random_weed_hazard`): esposizione stocastica delle tile libere al draw casuale EOD.
+
+---
+
+## 8. Fertilizer Features
+
+- `FRT-01..03`: finestra attiva $\text{current\_day} \dots \text{current\_day} + 2$ (3 giorni inclusivi);
+- `FRT-04..05`: resa incrementale EOD $= 2$ (richiede congiuntamente `was_watered == True`), resa base $= 1$, **uplift netto $= +1$**;
+- *Invarianza:* la fertilizzazione non accelera l'età biologica della pianta e non anticipa `first_yield_day`.
+
+---
+
+## 9. Livestock Subsystem Features
+
+Closed species set: `GOOSE` (Coop, \$300, max_held tile 4), `COW` (Pasture, \$400, max_held tile 6), `SHEEP` (Pasture, \$500, max_held tile 6). `CHICKEN = NOT_SUPPORTED`.
+
+- `LIV-05` (`fed_today`): impostato a `True` dall'azione intra-day `FEED` (richiede Wheat in inventario);
+- `LIV-07..08` (`consecutive_unfed`, `escape_at_next_eod_if_unfed`): aggiornato a EOD; fuga deterministica su $\text{consecutive\_unfed} \ge 2$;
+- `LIV-11..14` (`base_output = 1`): disaccoppiato da `FEED` nel giorno schedulato se l'animale non è fuggito;
+- `LIV-09` (`pending_care_bonus`): accumulato a EOD *dopo* la produzione e **resettato a 0 ad ogni giorno di produzione programmata**;
+- `LIV-10` (`fertilizer_available`): flag booleano non-cumulativo impostato a `True` a EOD per animali vivi.
+
+---
+
+## 10. Worker, Posizioni e Movimento Features
+
+- `WRK-03` (`worker_position`): coordinate $[x, y]$ con $\text{worker\_multi\_occupancy} = \text{allowed}$;
+- `WRK-04..05` (`worker_inventory`): scorte trasportate (inventario a capienza illimitata, `_inv_add`);
+- `WRK-08..09` (`geometric_distance_to_shed`, `geometric_distance_to_target`): distanze geometriche Manhattan;
+- `necessary_transit_fraction` e `routing_completion_efficiency` sono allocate a `POST-29` e `POST-30`.
+
+---
+
+## 11. Inventory, Storage e Semantica di Overflow
+
+- `INV-01..04`: capienza shed configurabile (`shedCapacity`, default 100 unità);
+- `INV-06` (`place_transferable_qty`): conservativo (l'eccedenza resta nel lavoratore);
+- `INV-07` (`manual_drop_overflow_qty`): distruttivo (l'eccedenza viene cancellata);
+- `INV-08` (`eod_auto_drop_overflow_if_state_unchanged`): **esposizione statica counterfactual allo stato corrente**.
+
+---
+
+## 12. Market, Capitale e Contesto Ordini
+
+- `MKT-01` (`current_money_state`): saldo liquido spendibile online;
+- `MKT-04` (`market_orders_in_current_batch`): conteggio ordini formulati nel batch corrente (`ACTION_BATCH_CONTEXT`);
+- `MKT-05` (`market_orders_remaining_turn`): slot residui nel turno ($\max(0, \text{maxOrders} - \text{MKT-04})$);
+- `MKT-LIMIT` (`market_order_batch_limit`): limite strutturale da configurazione (default 10);
+- `final_money_outcome` è classificata come `OUTCOME_ONLY` (`POST-01`).
+
+---
+
+## 13. Catalogo Action Eligibility (`action_eligible_now`)
+
+Formalizzati i 23 predicati deterministici `ELG-01` .. `ELG-23` per tutte le action/request forms supportate dall'engine (si veda Sezione 4 Master Catalog per la specifica esaustiva).
+
+---
+
+## 14. Serviceability Tripartition & Multi-Dimensional Capacity
+
+1. **`action_eligible_now` (`ONLINE_DERIVABLE`):** predicati deterministici validi al tick $t$ (`ELG-01`..`ELG-23`);
+2. **`reserved_serviceable_before_deadline` (`POLICY_CONTEXT`):** prenotazione logica di policy (`POL-RES`);
+3. **`realized_serviceable_in_window` (`POST_HOC_METRIC`):** consuntivo post-hoc a fine finestra (`POST-02`).
+
+Dimensioni di capacità separate: `shed_storage_capacity` (`INV-03`), `livestock_structural_capacity` (`LIV-STRUCT`), `livestock_output_storage_capacity` (`ANIMALS.max_held`), `livestock_serviceable_capacity` (`POL-CAP`), `market_batch_capacity` (`MKT-LIMIT`).
+
+---
+
+## 15. Struttura del Vettore di Feature e Livelli di Aggregazione
 
 ```text
-Real feature catalog total = 58
-ENGINE_STATE: 14
-RAW_OBSERVABLE: 5
-DERIVED_FEATURE: 33
-POLICY_CONTEXT: 2
-TELEMETRY_ONLY: 3
-OUTCOME_LABEL: 1
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ 1. GLOBAL FEATURES (TMP-01..10, MKT-01..03, MKT-06..09, MKT-LIMIT, FRM-01..05)        │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ 2. PER-TILE FEATURES (CRP-01..15, CAR-01..04, FRT-01..05, Environment Tile Views)     │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ 3. PER-ANIMAL FEATURES (LIV-01..15, LIV-STRUCT)                                        │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ 4. PER-WORKER FEATURES (WRK-01..05, WRK-07..09, ELG-01..23)                           │
+├────────────────────────────────────────────────────────────────────────────────────────┤
+│ 5. POLICY CONTEXT (POL-WS, POL-RES, POL-CAP, POL-RET, MKT-04, MKT-05)                  │
+└────────────────────────────────────────────────────────────────────────────────────────┘
 ```
 
-This total is the result of the admissible canonical catalog after excluding the rejected deterministic future-RNG record `REJ-01`, which remains only in the rejected ledger. Pure event and provenance fields are not counted as feature objects in this common model.
+---
 
-### 2.2 Canonical catalog
+## 16. Performance Decomposition Telemetry (Offline Review Only)
 
-| feature_id | name | information_class | type | ontology_mapping | state_machine_mapping | source_variables | derivation_or_formula | formula_version | granularity | authoritative_clock | sampling_phase | online_available | decision_time_available | future_leakage | evidence_status | validity_limits | CONTRACT_SCHEMA_COMPLETE | FEATURE_FORMULA_COMPLETE | freeze_ready |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| TMP-01 | step current | ENGINE_STATE | RAW | NONE_DIRECT | STEP_OPEN | observation.step | identity | v1 | episode-step | engine_step | current step | YES | YES | NO | ENGINE_VERIFIED | N/A | YES | YES | YES |
-| TMP-02 | day current | ENGINE_STATE | RAW | crop_horizon_alignment | global clock | observation.day | identity | v1 | day | day | current day | YES | YES | NO | ENGINE_VERIFIED | N/A | YES | YES | YES |
-| TMP-03 | hour current | ENGINE_STATE | RAW | crop_decay_risk_window | phase within day | observation.hour | identity | v1 | action phase | hour | current phase | YES | YES | NO | ENGINE_VERIFIED | N/A | YES | YES | YES |
-| TMP-04 | canonical_step | DERIVED_FEATURE | DERIVED | NONE_DIRECT | diagnostic reconstruction | day,hour,turnsPerDay | day*turnsPerDay+hour | v1 | action phase | canonical_step | post-sample diagnostics | YES | YES | NO | DERIVED | diagnostic only | YES | YES | NO |
-| TMP-05 | action_phases_until_eod_refresh | DERIVED_FEATURE | TIMING_CONSTRAINT | crop_decay_risk_window | pre-EOD action window | hour,turnsPerDay | turnsPerDay-hour inclusive | v1 | tile-day/action phase | hour | pre-refresh | YES | YES | NO | DERIVED | requires known turnsPerDay | YES | YES | NO |
-| FRM-01 | farm_money_current | ENGINE_STATE | RAW | operating_cash_buffer | farm state | farm.money | identity | v1 | player-step | engine_step | pre-action | YES | YES | NO | ENGINE_VERIFIED | not equal to buffer | YES | YES | YES |
-| FRM-02 | tile_grid_raw | RAW_OBSERVABLE | RAW | activated_land_surface, field_cleanliness_state | all tile states | farm.tiles | identity | v1 | player-board-step | engine_step | current board snapshot | YES | YES | NO | ENGINE_VERIFIED | snapshot scope only | YES | YES | YES |
-| FRM-03 | working_set_member | POLICY_CONTEXT | POLICY_ASSIGNMENT_CONTEXT | crop_surface_maintained | working-set membership | policy assignment | membership in working map | v1 | tile | N/A | decision context | YES | YES | NO | DERIVED | policy-only | YES | YES | YES |
-| FRM-04 | land_surface_total | DERIVED_FEATURE | AGGREGATE | land_surface_total | unlocked vs LOCKED | unlocked_quadrants or tile grid | count of owned or unlocked land | v1 | player-step | engine_step | current board | YES | YES | NO | ENGINE_VERIFIED | scope must be declared | YES | YES | YES |
-| FRM-05 | activated_land_surface | DERIVED_FEATURE | AGGREGATE | activated_land_surface | productive / structure tiles | tile grid + activation rule | count of active productive area | v1 | player-step/window | engine_step | pre-action | YES | YES | NO | PARTIALLY_KNOWN | board and ownership scope required | NO | NO | NO |
-| CRP-01 | tile_kind | ENGINE_STATE | CATEGORICAL | field_cleanliness_state | None, LOCKED, PLANT, WEED | tile.kind | normalize native tile value | v1 | tile-step | engine_step | current state | YES | YES | NO | ENGINE_VERIFIED | invalid values outside domain | YES | YES | YES |
-| CRP-02 | crop_id_and_rules | ENGINE_STATE | CATEGORICAL | crop_care_action_flow | ongoing / non-ongoing schedule | tile.crop + CROPS rules | lookup rule table | v1 | tile-cycle | engine_step | current state | YES | YES | NO | ENGINE_VERIFIED | requires valid crop metadata | YES | YES | YES |
-| CRP-03 | planted_day | ENGINE_STATE | RAW | crop_horizon_alignment | plant origin clock | tile.planted_day | identity | v1 | tile-cycle | engine_step | current state | YES | YES | NO | ENGINE_VERIFIED | only for PLANT | YES | YES | YES |
-| CRP-04 | crop_age_days | DERIVED_FEATURE | DERIVED | crop_horizon_alignment | growth / maturity | day, planted_day | day-planted_day | v1 | tile-step | day | pre-action | YES | YES | NO | DERIVED | requires valid day and planted_day | YES | YES | YES |
-| CRP-05 | yield_units | ENGINE_STATE | RAW | crop_harvest_action_flow | yield held by tile | tile.yield_units | identity | v1 | tile-step | engine_step | current state | YES | YES | NO | ENGINE_VERIFIED | not equivalent to harvest readiness | YES | YES | YES |
-| CRP-06 | watered_today | ENGINE_STATE | PREDICATE | watering_execution_rate | daily watering flag | tile.watered_today | identity | v1 | tile-day/step | day | pre-refresh and decision phase | YES | YES | NO | ENGINE_VERIFIED | reset daily by EOD | YES | YES | YES |
-| CRP-07 | consecutive_unwatered | ENGINE_STATE | RAW | crop_decay_risk_window | EOD care counter | tile.consecutive_unwatered | identity | v1 | tile-day | day | EOD refresh | YES | YES | NO | ENGINE_VERIFIED | requires valid day semantics | YES | YES | YES |
-| CRP-08 | max_lifespan_step | ENGINE_STATE | RAW | crop_decay_risk_window | onset decay | tile.max_lifespan_step | identity | v1 | tile-cycle | engine_step | current state | YES | YES | NO | ENGINE_VERIFIED | not enough alone for RETIREMENT_DUE | YES | YES | YES |
-| CRP-09 | tile_lifecycle_state | DERIVED_FEATURE | CATEGORICAL | crop_care_action_flow, crop_harvest_action_flow, crop_decay_risk_window | OUT_OF_SCOPE, EMPTY_ASSIGNED, GROWING, HARVEST_READY, RETIREMENT_DUE, LOST_WEED | tile, day, hour, working set, crop rules | precedence-based classifier | v2 | tile-step | engine_step | current state | YES | YES | NO | DERIVED | invalid inputs outside lifecycle are diagnostic errors | YES | YES | YES |
-| CRP-10 | harvest_ready | DERIVED_FEATURE | PREDICATE | crop_harvest_action_flow | GROWING to HARVEST_READY | tile.kind, tile.yield_units, tile.planted_day, day, crop rule | tile.kind == PLANT and yield_units > 0 and age >= first_yield_day | v2 | tile-step | day | action decision | YES | YES | NO | ENGINE_VERIFIED + DERIVED | not identical to yield_units > 0 | YES | YES | YES |
-| CRP-11 | care_due | DERIVED_FEATURE | PREDICATE | crop_care_completion_rate | orthogonal care state | tile.kind, tile.watered_today | PLANT and not watered today | v1 | tile-step | day|hour | pre-action and pre-refresh | YES | YES | NO | DERIVED | requires valid crop and current day | YES | YES | YES |
-| CRP-12 | water_loss_at_eod_if_unserved | DERIVED_FEATURE | PREDICATE | crop_decay_risk_window | deterministic EOD loss boundary | care_due, consecutive_unwatered | care_due and counter+1 >= 2 | v1 | tile-action phase | day | EOD refresh | YES | YES | NO | DERIVED | uses day-based EOD semantics | YES | YES | YES |
-| CRP-13 | lifespan_decay_started | DERIVED_FEATURE | PREDICATE | crop_decay_risk_window | decay phase | max_lifespan_step, engine_step | step >= max_lifespan_step and ongoing state active | v1 | tile-step | engine_step | pre-action and decay phase | YES | YES | NO | DERIVED | not by itself RETIREMENT_DUE | YES | YES | YES |
-| CRP-14 | next_lifespan_decay_phase | DERIVED_FEATURE | TIMING_CONSTRAINT | crop_decay_risk_window | next even-offset decay | max_lifespan_step, engine_step, turnsPerDay | next deterministic decay boundary | v1 | tile-action phase | engine_step | pre-action and decay phase | YES | YES | NO | DERIVED | requires engine phase contract | YES | YES | YES |
-| CRP-15 | lifespan_loss_phase_if_no_action | DERIVED_FEATURE | TIMING_CONSTRAINT | crop_decay_risk_window | deterministic no-action loss | max_lifespan_step, yield_units, action history | next decay step causing yield loss if no action | v1 | tile-cycle | engine_step | pre-action | YES | YES | NO | DERIVED | no final incoming outcome | YES | YES | YES |
-| CRP-16 | empty_random_weed_eligible | DERIVED_FEATURE | PREDICATE | crop_decay_risk_window, field_cleanliness_state | EMPTY_ASSIGNED to LOST_WEED exposure | tile, working set, EOD phase | empty tile eligible for weed-hazard draw | v1 | tile-EOD | day|hour | EOD exposure check | YES | YES | NO | DERIVED | stochastic spawn not deterministic | YES | YES | YES |
-| CRP-17 | crop_decay_risk_window | DERIVED_FEATURE | TIMING_CONSTRAINT | crop_decay_risk_window | structured multi-cause risk window | CRP-11, CRP-12, CRP-13, CRP-14, CRP-15, CRP-16 | multi-cause constraint object | v1 | tile-action phase | engine_step + day|hour | current decision window | YES | YES | NO | DERIVED | no scalar score | YES | YES | YES |
-| CRP-18 | active_crop_surface | DERIVED_FEATURE | AGGREGATE | crop_surface_maintained | count PLANT | tile grid, tile.kind | count(tile.kind == PLANT) | v1 | player-step | engine_step | current snapshot | YES | YES | NO | DERIVED | board scope and ownership scope required | NO | YES | NO |
-| CRP-19 | crop_surface_maintained | DERIVED_FEATURE | AGGREGATE | crop_surface_maintained | maintained lifecycle states | tile grid, tile lifecycle, maintenance rule | count of tiles in valid maintained set | v1 | player-day/window | engine_step | pre-refresh or decision phase | YES | YES | NO | PARTIALLY_KNOWN | active != maintained; formula incomplete unless scope is defined | NO | NO | NO |
-| CRP-20 | watering_execution_rate | DERIVED_FEATURE | AGGREGATE | watering_execution_rate | executed WATER over need | watering requests, execution events, care need | executed_water / eligible_water_need | v1 | player-day/window | engine_step | action or current window | YES | YES | NO | PARTIALLY_KNOWN | denominator must be canonical | NO | NO | NO |
-| CRP-21 | watering_continuity | DERIVED_FEATURE | AGGREGATE | watering_continuity | service persistence | daily watering records | consecutive or sustained service ratio | v1 | player-window | day | time-window based | YES | YES | NO | PARTIALLY_KNOWN | denominators and schedule lag not formalized | NO | NO | NO |
-| CRP-22 | crop_care_completion_rate | DERIVED_FEATURE | AGGREGATE | crop_care_completion_rate | completion of explicit needs | care events, care demand, tile states | completed care / declared care needs | v1 | player-day/window | day | current decision window | YES | YES | NO | PARTIALLY_KNOWN | denominator ambiguous | NO | NO | NO |
-| CRP-23 | crop_harvest_action_flow | DERIVED_FEATURE | AGGREGATE | crop_harvest_action_flow | readiness-to-collection flow | harvest requests, execution outcomes, yield | readiness events -> executed harvest breakdown | v1 | player-window | engine_step | action and follow-through | YES | YES | NO | PARTIALLY_KNOWN | request vs executed must be separated | NO | NO | NO |
-| CRP-24 | field_cleanliness_state | DERIVED_FEATURE | AGGREGATE | field_cleanliness_state | distribution of WEED | tile grid, tile.kind | map of clean vs weed-impacted tiles | v1 | board-step | engine_step | board snapshot | YES | YES | NO | PARTIALLY_KNOWN | weed mapping requires scope | NO | NO | NO |
-| CRP-25 | weed_backlog_cost | DERIVED_FEATURE | AGGREGATE | weed_backlog_cost | recovery burden | weed positions, action history, schedule | backlog cost proxy not canonical | v1 | player-window | engine_step | current window | YES | YES | NO | PARTIALLY_KNOWN | no stable formula | NO | NO | NO |
-| WRK-01 | unit_positions | RAW_OBSERVABLE | RAW | movement_overhead | worker positions | farmer, hands, tile positions | identity | v1 | unit-step | engine_step | current state | YES | YES | NO | ENGINE_VERIFIED | reachability and occupancy separate | YES | YES | YES |
-| WRK-02 | workforce_headcount | DERIVED_FEATURE | AGGREGATE | workforce_headcount | available workers | farmer, hands | 1 + len(hands) where applicable | v1 | player-step/day | engine_step | pre-action | YES | YES | NO | DERIVED | not equal to service capacity | YES | YES | YES |
-| WRK-03 | worker_capacity_available | DERIVED_FEATURE | AGGREGATE | worker_capacity_available | action slots available | active units, time windows, action rules | theoretical capacity with explicit denominator | v1 | player-step/window | engine_step | pre-action | YES | YES | NO | PARTIALLY_KNOWN | missing canonical denominator | NO | NO | NO |
-| WRK-04 | movement_overhead | DERIVED_FEATURE | AGGREGATE | movement_overhead | MOVE consumption | action history, unit positions | movement count or distance cost | v1 | player-window | engine_step | current window | YES | YES | NO | PARTIALLY_KNOWN | routing and contention not yet canonical | NO | NO | NO |
-| WRK-05 | action_dispatch_failure | DERIVED_FEATURE | AGGREGATE | action_dispatch_failure | no-effect or rejected action | requested, executed, state delta | classify request and execution mismatch | v1 | action/window | engine_step | post-action | YES | YES | NO | PARTIALLY_KNOWN | requires event provenance | NO | NO | NO |
-| WRK-06 | productive_action_share | DERIVED_FEATURE | AGGREGATE | productive_action_share | useful action composition | classified action history | useful actions / declared denominator | v1 | player-window | engine_step | current window | YES | YES | NO | PARTIALLY_KNOWN | denominator not canonical | NO | NO | NO |
-| LIV-01 | livestock_headcount | DERIVED_FEATURE | AGGREGATE | livestock_headcount | occupied animal structures | tile grid, animal id | count per species | v1 | player-step | engine_step | current board | YES | YES | NO | PARTIALLY_KNOWN | species scope required | NO | NO | NO |
-| LIV-02 | animal_service_state | DERIVED_FEATURE | CATEGORICAL | feed_availability, livestock_product_flow | fed / cared / unfed / yield flags | animal tile fields | tuple-like service state | v1 | animal-step | day|hour | current animal state | YES | YES | NO | PARTIALLY_KNOWN | requires explicit feed and care conjunction | NO | NO | NO |
-| LIV-03 | feed_availability | DERIVED_FEATURE | AGGREGATE | feed_availability | available WHEAT feed | shed, inventory, production | available feed by compartment | v1 | player-step | engine_step | current state | YES | YES | NO | PARTIALLY_KNOWN | inventory provenance and EOD semantics required | NO | NO | NO |
-| LIV-04 | pasture_surface_maintained | DERIVED_FEATURE | AGGREGATE | pasture_surface_maintained | functional pasture | tile grid, occupancy/service rule | maintained pasture count | v1 | player-day/window | engine_step | decision phase | YES | YES | NO | PARTIALLY_KNOWN | definition incomplete | NO | NO | NO |
-| LIV-05 | livestock_product_flow | DERIVED_FEATURE | AGGREGATE | livestock_product_flow | production-collection-sale | animal yield, harvest, inventory, sell | stage-wise product flow | v1 | player-window | day | current period | YES | YES | NO | PARTIALLY_KNOWN | product and price provenance not canonical | NO | NO | NO |
-| INV-01 | seed_inventory | ENGINE_STATE | RAW | planting_action_flow | PLANT resource | private.seeds | identity by crop | v1 | player-step | engine_step | current state | YES | YES | NO | ENGINE_VERIFIED | inventory is crop-specific | YES | YES | YES |
-| INV-02 | shed_inventory | ENGINE_STATE | RAW | shed_inventory_integrity, inventory_to_cash_conversion | persistent storage | private.shed | identity by item | v1 | player-step | engine_step | current state | YES | YES | NO | ENGINE_VERIFIED | real provenance across EOD transfer | YES | YES | YES |
-| INV-03 | worker_inventory | ENGINE_STATE | RAW | contract_inventory_loss | transient carried items | private.inventories | identity by unit and item | v1 | unit-step | engine_step | current state | YES | YES | NO | ENGINE_VERIFIED | not equal to return obligation | YES | YES | YES |
-| INV-04 | inventory_to_cash_conversion | DERIVED_FEATURE | AGGREGATE | inventory_to_cash_conversion | collected / stored / sold chain | inventory deltas, sell executions, cash deltas | converted quantity / value over window | v1 | player-window | engine_step | post-action or current window | YES | YES | NO | PARTIALLY_KNOWN | conversion and liquidated value semantics ambiguous | NO | NO | NO |
-| MKT-01 | market_state_current | RAW_OBSERVABLE | RAW | dynamic_market_price_elasticity | shared prices and inventory | observation market | identity | v1 | product-step | engine_step | current market state | YES | YES | NO | ENGINE_VERIFIED | requires current quote semantics | YES | YES | YES |
-| MKT-02 | market_transaction_value | TELEMETRY_ONLY | AGGREGATE | market_transaction_value | executed BUY / SELL value | realized quantity, realized price | sum executed_quantity * realized_price | v1 | order/transaction | engine_step | post-action | NO | NO | YES | TELEMETRY_ONLY | not pre-action input | YES | YES | NO |
-| MKT-03 | operating_cash_buffer | POLICY_CONTEXT | DERIVED | operating_cash_buffer | cash relative to declared obligations | current money + obligations model | money minus obligations | v1 | player-step/window | engine_step | decision phase | YES | YES | NO | PARTIALLY_KNOWN | obligations and threshold not canonical | NO | NO | NO |
-| MKT-04 | market_order_batch_limit | RAW_OBSERVABLE | TIMING_CONSTRAINT | market_order_batch_limit | market phase capacity | configuration max orders and remaining slots | structural limit and remaining slots | v1 | player-step | engine_step | current market phase | YES | YES | NO | ENGINE_VERIFIED | requires market config validity | YES | YES | YES |
-| GLB-01 | opponent_public_farm_state | RAW_OBSERVABLE | RAW | NONE_DIRECT | other public farm | farms[opponent] | identity | v1 | opponent-board-step | engine_step | current state | YES | YES | NO | ENGINE_VERIFIED | limited to public fields | YES | YES | YES |
-| GLB-02 | action_execution_result | TELEMETRY_ONLY | CATEGORICAL | action_dispatch_failure | requested / accepted / executed / no-op | wrapper event before and after | post-action attribution | v1 | action event | engine_step | post-action | NO | NO | YES | TELEMETRY_ONLY | not a decision-time input | YES | YES | NO |
-| GLB-03 | transition_reason | TELEMETRY_ONLY | CATEGORICAL | observability support | action / EOD / decay / RNG reason | instrumented transition log | post-transition attribution | v1 | transition event | engine_step | post-transition | NO | NO | YES | TELEMETRY_ONLY | not a policy input | YES | YES | NO |
-| LBL-01 | final_money_outcome | OUTCOME_LABEL | AGGREGATE | final_money_outcome | terminal reward | terminal money reward | identity at terminal state | v1 | episode/player | terminal state | terminal | NO | NO | YES | OUTCOME_LABEL | terminal only | YES | YES | NO |
+### 16.1 Saldo Finale e Serviceability Consuntiva
+- **`POST-01`** (`final_money_outcome`): saldo cassa finale dell'episodio a step terminale (Reward);
+- **`POST-02`** (`realized_serviceable_in_window`): frazione di bisogni colturali/animali effettivamente soddisfatti entro la deadline.
 
-### 2.3 Migration C1 -> C2
+### 16.2 Breakdown Ricavi Diretti Monetizzati a Mercato
+- **`POST-03`** (`revenue_by_crop_species`): ricavi monetari realizzati da vendite di ciascuna specie vegetale (`WHEAT`, `CARROT`, `TOMATO`, `STRAWBERRY`, `MELON`);
+- **`POST-04`** (`revenue_by_livestock_species`): ricavi monetari realizzati da vendite di ciascun prodotto animale (`EGG`, `MILK`, `WOOL`);
+- **`POST-05`** (`revenue_by_other_item_category`): ricavi realizzati da vendita di fertilizzante eccedente.
 
-The migration is exhaustive for the 59 canonical C1 IDs. No new feature IDs are introduced in C2 beyond the canonical IDs. This is a clarification and cleanup, not an expansion.
+### 16.3 Breakdown Costi Diretti di Investimento e Conduzione
+- **`POST-06`** (`seed_purchase_cost_by_crop`): spesa cassa per acquisto sementi per specie;
+- **`POST-07`** (`animal_purchase_cost_by_species`): spesa cassa per acquisto capi bestiame (`GOOSE`, `COW`, `SHEEP`);
+- **`POST-08`** (`structure_build_count_by_type`): conteggio strutture edificate per tipo (`COOP`, `PASTURE`), con costo monetario diretto pari a \$0;
+- **`POST-09`** (`wheat_market_purchase_cost_total`): spesa cassa complessiva in valuta per acquisto Wheat a mercato;
+- **`POST-10`** (`fertilizer_purchase_cost`): spesa cassa per acquisto fertilizzante a mercato;
+- **`POST-11`** (`hire_cost_total`): spesa complessiva per assunzione farm hands;
+- **`POST-12`** (`land_unlock_cost_total`): spesa per sblocco dei quadranti fondiari.
 
-| feature_id | C1 name/class | C2 name/class | change_type | reason | compatibility | replacement_or_split |
-|---|---|---|---|---|---|---|
-| TMP-01 | step current / RAW_OBSERVABLE | step current / ENGINE_STATE | CLARIFIED | explicit engine contract | compatible | N/A |
-| TMP-02 | day current / RAW_OBSERVABLE | day current / ENGINE_STATE | CLARIFIED | clock semantics clarified | compatible | N/A |
-| TMP-03 | hour current / RAW_OBSERVABLE | hour current / ENGINE_STATE | CLARIFIED | phase semantics clarified | compatible | N/A |
-| TMP-04 | canonical_step / DERIVED_FEATURE | canonical_step / DERIVED_FEATURE | CLARIFIED | preserved as diagnostic only | compatible | N/A |
-| TMP-05 | action_phases_until_eod_refresh / DERIVED_FEATURE | action_phases_until_eod_refresh / DERIVED_FEATURE | CLARIFIED | phase and clock precision fixed | compatible | N/A |
-| FRM-01 | farm_money_current / RAW_OBSERVABLE | farm_money_current / ENGINE_STATE | RECLASSIFIED | current money is not equal to cash buffer | compatible | N/A |
-| FRM-02 | tile_grid_raw / RAW_OBSERVABLE | tile_grid_raw / RAW_OBSERVABLE | UNCHANGED | retained | compatible | N/A |
-| FRM-03 | working_set_member / POLICY_CONTEXT | working_set_member / POLICY_CONTEXT | UNCHANGED | retained | compatible | N/A |
-| FRM-04 | land_surface_total / DERIVED_FEATURE | land_surface_total / DERIVED_FEATURE | UNCHANGED | retained | compatible | N/A |
-| FRM-05 | activated_land_surface / DERIVED_FEATURE | activated_land_surface / DERIVED_FEATURE | CLARIFIED | scope and board ownership clarified | compatible | N/A |
-| CRP-01 | tile_kind / RAW_OBSERVABLE | tile_kind / ENGINE_STATE | RECLASSIFIED | engine-native state semantics | compatible | N/A |
-| CRP-02 | crop_id_and_rules / RAW_OBSERVABLE | crop_id_and_rules / ENGINE_STATE | RECLASSIFIED | recipe metadata is engine-relevant state | compatible | N/A |
-| CRP-03 | planted_day / RAW_OBSERVABLE | planted_day / ENGINE_STATE | RECLASSIFIED | clock-source contract clarified | compatible | N/A |
-| CRP-04 | crop_age_days / DERIVED_FEATURE | crop_age_days / DERIVED_FEATURE | UNCHANGED | retained | compatible | N/A |
-| CRP-05 | yield_units / RAW_OBSERVABLE | yield_units / ENGINE_STATE | RECLASSIFIED | engine state and not policy abstraction | compatible | N/A |
-| CRP-06 | watered_today / RAW_OBSERVABLE | watered_today / ENGINE_STATE | RECLASSIFIED | daily care flag is engine state | compatible | N/A |
-| CRP-07 | consecutive_unwatered / RAW_OBSERVABLE | consecutive_unwatered / ENGINE_STATE | RECLASSIFIED | EOD care counter remains engine state | compatible | N/A |
-| CRP-08 | max_lifespan_step / RAW_OBSERVABLE | max_lifespan_step / ENGINE_STATE | RECLASSIFIED | engine state not derived | compatible | N/A |
-| CRP-09 | tile_lifecycle_state / DERIVED_FEATURE | tile_lifecycle_state / DERIVED_FEATURE | FORMULA_VERSIONED | total classifier and precedence formalized | compatible | N/A |
-| CRP-10 | harvest_ready / DERIVED_FEATURE | harvest_ready / DERIVED_FEATURE | FORMULA_VERSIONED | formula explicitly fixed with crop rule maturity gate | compatible | N/A |
-| CRP-11 | care_due / DERIVED_FEATURE | care_due / DERIVED_FEATURE | FORMULA_VERSIONED | clarified as orthogonal to lifecycle | compatible | N/A |
-| CRP-12 | water_loss_at_eod_if_unserved / DERIVED_FEATURE | water_loss_at_eod_if_unserved / DERIVED_FEATURE | UNCHANGED | retained | compatible | N/A |
-| CRP-13 | lifespan_decay_started / DERIVED_FEATURE | lifespan_decay_started / DERIVED_FEATURE | CLARIFIED | not equivalent to RETIREMENT_DUE | compatible | N/A |
-| CRP-14 | next_lifespan_decay_phase / DERIVED_FEATURE | next_lifespan_decay_phase / DERIVED_FEATURE | CLARIFIED | clock source corrected | compatible | N/A |
-| CRP-15 | lifespan_loss_phase_if_no_action / DERIVED_FEATURE | lifespan_loss_phase_if_no_action / DERIVED_FEATURE | CLARIFIED | corrected phase and no-action semantics | compatible | N/A |
-| CRP-16 | empty_random_weed_eligible / DERIVED_FEATURE | empty_random_weed_eligible / DERIVED_FEATURE | CLARIFIED | hazard semantics preserved | compatible | N/A |
-| CRP-17 | crop_decay_risk_window / DERIVED_FEATURE | crop_decay_risk_window / DERIVED_FEATURE | CLARIFIED | kept as structured risk object | compatible | N/A |
-| CRP-18 | active_crop_surface / DERIVED_FEATURE | active_crop_surface / DERIVED_FEATURE | FORMULA_VERSIONED | base formula count(tile.kind == PLANT) preserved | compatible | N/A |
-| CRP-19 | crop_surface_maintained / DERIVED_FEATURE | crop_surface_maintained / DERIVED_FEATURE | FORMULA_VERSIONED | maintained != active; formula remains incomplete | partial | N/A |
-| CRP-20 | watering_execution_rate / DERIVED_FEATURE | watering_execution_rate / DERIVED_FEATURE | CLARIFIED | denominator and phase clarified | partial | N/A |
-| CRP-21 | watering_continuity / DERIVED_FEATURE | watering_continuity / DERIVED_FEATURE | CLARIFIED | denominator and schedule clarified | partial | N/A |
-| CRP-22 | crop_care_completion_rate / DERIVED_FEATURE | crop_care_completion_rate / DERIVED_FEATURE | CLARIFIED | denominator still incomplete | partial | N/A |
-| CRP-23 | crop_harvest_action_flow / DERIVED_FEATURE | crop_harvest_action_flow / DERIVED_FEATURE | CLARIFIED | request / execution split required | partial | N/A |
-| CRP-24 | field_cleanliness_state / DERIVED_FEATURE | field_cleanliness_state / DERIVED_FEATURE | CLARIFIED | scope is board and use-case specific | partial | N/A |
-| CRP-25 | weed_backlog_cost / DERIVED_FEATURE | weed_backlog_cost / DERIVED_FEATURE | CLARIFIED | cost model kept out of freeze | partial | N/A |
-| WRK-01 | unit_positions / RAW_OBSERVABLE | unit_positions / RAW_OBSERVABLE | UNCHANGED | retained | compatible | N/A |
-| WRK-02 | workforce_headcount / DERIVED_FEATURE | workforce_headcount / DERIVED_FEATURE | UNCHANGED | retained | compatible | N/A |
-| WRK-03 | worker_capacity_available / DERIVED_FEATURE | worker_capacity_available / DERIVED_FEATURE | CLARIFIED | capacity semantics separated from serviceability | partial | N/A |
-| WRK-04 | movement_overhead / DERIVED_FEATURE | movement_overhead / DERIVED_FEATURE | CLARIFIED | routing and contention kept out of canonical formula | partial | N/A |
-| WRK-05 | action_dispatch_failure / DERIVED_FEATURE | action_dispatch_failure / DERIVED_FEATURE | CLARIFIED | request-execution split clarified | partial | N/A |
-| WRK-06 | productive_action_share / DERIVED_FEATURE | productive_action_share / DERIVED_FEATURE | CLARIFIED | denominator retained as open contract | partial | N/A |
-| LIV-01 | livestock_headcount / DERIVED_FEATURE | livestock_headcount / DERIVED_FEATURE | UNCHANGED | retained | compatible | N/A |
-| LIV-02 | animal_service_state / DERIVED_FEATURE | animal_service_state / DERIVED_FEATURE | CLARIFIED | FEED + CARE conjunction explicit | compatible | N/A |
-| LIV-03 | feed_availability / DERIVED_FEATURE | feed_availability / DERIVED_FEATURE | CLARIFIED | provenance preserved | partial | N/A |
-| LIV-04 | pasture_surface_maintained / DERIVED_FEATURE | pasture_surface_maintained / DERIVED_FEATURE | CLARIFIED | maintenance semantics separated from active surface | partial | N/A |
-| LIV-05 | livestock_product_flow / DERIVED_FEATURE | livestock_product_flow / DERIVED_FEATURE | CLARIFIED | timing and provenance clarified | partial | N/A |
-| INV-01 | seed_inventory / RAW_OBSERVABLE | seed_inventory / ENGINE_STATE | RECLASSIFIED | resource inventory is engine-owned state | compatible | N/A |
-| INV-02 | shed_inventory / RAW_OBSERVABLE | shed_inventory / ENGINE_STATE | RECLASSIFIED | state ownership corrected | compatible | N/A |
-| INV-03 | worker_inventory / RAW_OBSERVABLE | worker_inventory / ENGINE_STATE | RECLASSIFIED | transient carried items are engine state | compatible | N/A |
-| INV-04 | inventory_to_cash_conversion / DERIVED_FEATURE | inventory_to_cash_conversion / DERIVED_FEATURE | CLARIFIED | conversion semantics remain partial | partial | N/A |
-| MKT-01 | market_state_current / RAW_OBSERVABLE | market_state_current / RAW_OBSERVABLE | UNCHANGED | retained | compatible | N/A |
-| MKT-02 | market_transaction_value / TELEMETRY_ONLY | market_transaction_value / TELEMETRY_ONLY | UNCHANGED | retained as non-decision input | compatible | N/A |
-| MKT-03 | operating_cash_buffer / POLICY_CONTEXT | operating_cash_buffer / POLICY_CONTEXT | CLARIFIED | cash buffer is policy context + derived obligations | partial | N/A |
-| MKT-04 | market_order_batch_limit / RAW_OBSERVABLE | market_order_batch_limit / RAW_OBSERVABLE | UNCHANGED | retained | compatible | N/A |
-| GLB-01 | opponent_public_farm_state / RAW_OBSERVABLE | opponent_public_farm_state / RAW_OBSERVABLE | UNCHANGED | retained | compatible | N/A |
-| GLB-02 | action_execution_result / TELEMETRY_ONLY | action_execution_result / TELEMETRY_ONLY | UNCHANGED | retained as post-action event | compatible | N/A |
-| GLB-03 | transition_reason / TELEMETRY_ONLY | transition_reason / TELEMETRY_ONLY | UNCHANGED | retained as post-transition telemetry | compatible | N/A |
-| LBL-01 | final_money_outcome / OUTCOME_LABEL | final_money_outcome / OUTCOME_LABEL | UNCHANGED | retained as terminal outcome | compatible | N/A |
-| REJ-01 | time_to_random_weed deterministic / DERIVED_FEATURE | time_to_random_weed deterministic / REJECTED | DEPRECATED | deterministic future RNG is not valid online feature | incompatible | reject |
+### 16.4 Bilancio dei Flussi di Produzione Fisica (Generata, Raccolta, Venduta, Persa)
+- **`POST-13`** (`production_units_generated_by_crop_species`): unità biologiche maturate sulle piante per specie;
+- **`POST-14`** (`production_units_generated_by_livestock_species`): unità biologiche erogate dagli animali per specie;
+- **`POST-15`** (`production_units_harvested_by_crop_species`): unità vegetali effettivamente raccolte dai worker;
+- **`POST-16`** (`production_units_collected_by_livestock_species`): prodotti animali primari raccolti dai worker;
+- **`POST-17`** (`production_units_sold_by_crop_species`): unità vegetali vendute a mercato;
+- **`POST-18`** (`production_units_sold_by_livestock_species`): prodotti animali venduti a mercato;
+- **`POST-19`** (`production_units_lost_by_crop_species`): unità colturali distrutte per decadimento lifespan o weed;
+- **`POST-20`** (`production_units_lost_by_livestock_species`): prodotti animali persi per fuga del capo.
 
-## 3. P0-02 corrected lifecycle classifier
+### 16.5 Gestione Mangime, Bilancio Fertilizzante e Wheat Flow Accounting (CORR-09)
+- **`POST-21`** (`feed_consumption_units_by_livestock_species`): unità di Wheat effettivamente somministrate agli animali per specie;
+- **`POST-22`** (`fertilizer_generated_by_livestock_species`): eventi di generazione fertilizzante a EOD (tenendo conto della saturazione booleana);
+- **`POST-23`** (`fertilizer_collected_by_livestock_species`): unità di fertilizzante raccolte dai worker;
+- **`POST-24`** (`fertilizer_applied_by_crop_species`): unità fisiche di fertilizzante applicate alle colture per specie;
+- **`POST-25`** (`fertilizer_sold_units`): unità di fertilizzante vendute a mercato.
 
-The lifecycle classifier is replaced with a total, implementable predicate set for valid engine inputs. The valid lifecycle domain is:
+*Wheat Mass Balance Conservation Equation (Dimensionally Rigorous):*
+$$\text{Stock}_{t=0} + \text{Wheat Purchased Units} + \text{Wheat Harvested } (\text{POST-15}) = \text{Wheat Fed } (\text{POST-21}) + \text{Wheat Sold } (\text{POST-17}) + \text{Wheat Lost } (\text{POST-19}/\text{POST-32}) + \text{Stock}_{t=\text{end}}$$
+dove $\text{Stock} = \text{Shed Stock} + \sum \text{Worker Inv} + \sum \text{Tile Yield Units}$.
 
-```text
-OUT_OF_SCOPE
-EMPTY_ASSIGNED
-GROWING
-HARVEST_READY
-RETIREMENT_DUE
-LOST_WEED
+### 16.6 Timing e Attivazione Operativa
+- **`POST-26`** (`activation_day_by_category`): primo giorno in cui una specie vegetale/animale viene piantata o alloggiata;
+- **`POST-27`** (`first_realized_output_day_by_species`): primo giorno in cui viene raccolto un output per specie;
+- **`POST-28`** (`last_realized_output_day_by_species`): ultimo giorno di raccolta utile per specie.
+
+### 16.7 Assorbimento Risorse, Routing, Lock-in e Worker Action Decomposition
+- **`POST-29`** (`necessary_transit_fraction`): quota minima teorica di movimento rispetto ai passi totali eseguiti;
+- **`POST-30`** (`routing_completion_efficiency`): rapporto tra azioni utili e budget di passi lavoratore;
+- **`POST-31`** (`economic_lock_in_onset`): step diagnostico post-hoc consolidato di inizio blocco economico del capitale;
+- **`POST-32`** (`shed_overflow_losses_total`): unità distrutte per overflow dello shed centrale oltre capienza;
+- **`POST-33`** (`missed_water_weed_losses`): piante distrutte per disidratazione al 2° EOD consecutivo;
+- **`POST-34`** (`animal_escapes_total`): capi fuggiti per mancata alimentazione al 2° EOD consecutivo;
+- **`POST-35`** (`tile_days_occupied_by_crop_species`): giorni-terreno assorbiti da ciascuna specie vegetale;
+- **`POST-36`** (`structure_days_occupied_by_livestock_species`): giorni-struttura occupati da ciascuna specie animale;
+- **`POST-37`** (`worker_actions_by_category`): conteggio azioni ripartite su base **`EXECUTED SUCCESSFUL ACTIONS`** per tutte le 23 forme (`ELG-01`..`ELG-23`) articolate nelle macro-categorie:
+  - *Movement:* `MOVE` (North, South, East, West), `PASS`;
+  - *Logistics:* `PICKUP`, `PLACE` (Shed branch), `DROP` (manuale distruttivo);
+  - *Setup:* `BUILD_COOP`, `BUILD_PASTURE`, `PLACE` (Animal branch), `DIG`;
+  - *Crop Operations:* `PLANT`, `WATER`, `HARVEST` (Crop), `FERTILIZE`;
+  - *Livestock Operations:* `FEED`, `CARE`, `HARVEST` (Animal), `COLLECT_FERTILIZER`;
+  - *Market Orders:* `BUY_SEED`, `BUY_PRODUCT`, `BUY_ANIMAL`, `SELL`, `HIRE`, `BUY_LAND`;
+- **`POST-38`** (`direct_net_cash_contribution_by_species`): contributo monetario contabile netto diretto per specie ($\text{ricavi diretti} - \text{spese dirette dedicate}$);
+- **`POST-39`** (`feed_actions_by_livestock_species`): conteggio azioni `FEED` riuscite per specie animale (`GOOSE`, `COW`, `SHEEP`);
+- **`POST-40`** (`care_actions_by_livestock_species`): conteggio azioni `CARE` riuscite per specie animale (`GOOSE`, `COW`, `SHEEP`);
+- **`POST-41`** (`fertilizer_actions_by_crop_species`): conteggio azioni `FERTILIZE` riuscite per specie colturale (`WHEAT`, `CARROT`, `TOMATO`, `STRAWBERRY`, `MELON`);
+- **`POST-42`** (`productive_actions_by_category`): conteggio azioni che generano o realizzano direttamente output economico (`PLANT`, `HARVEST` Crop/Animal, `SELL`);
+- **`POST-43`** (`service_actions_by_category`): conteggio azioni di servizio e mantenimento biologico (`WATER`, `FEED`, `CARE`, `FERTILIZE`, `COLLECT_FERTILIZER`).
+
+---
+
+## 17. Metadata di Provenance dell'Episodio e Run (CORR-10)
+
+Ogni run sperimentale o di torneo associa stabilmente ai dati i seguenti metadati di provenance:
+- `run_id`: identificativo univoco dell'esperimento o sessione di benchmark;
+- `episode_id`: identificativo progressivo del match;
+- `(run_id, episode_id)`: chiave primaria composita univoca;
+- `seed`: seed numerico di inizializzazione della simulazione;
+- `agent_id`: identificativo del controllore/modello in esecuzione;
+- `model_spec_version`: versione formale del MODEL_SPEC adottato;
+- `foundation_version`: versione del layer normativo (`C2`);
+- `player_position`: indice del giocatore (`0` o `1`);
+- `opponent_id`: identificativo dell'avversario o configurazione baseline;
+- `engine_fingerprint`: hash SHA-256 canonico (`4378b60f61a3af22ed875969e1be7e7f11af0b0e050b51aa80c0778c4113207d`);
+- `configuration_hash`: hash immutabile della configurazione (`boardSize`, `turnsPerDay`, `shedCapacity`, `maxMarketOrdersPerTurn`, `episodeSteps`);
+- `configuration_snapshot`: dizionario serializzato dei parametri attivi;
+- `feature_schema_version`: versione dello schema del Feature Model;
+- `telemetry_schema_version`: versione dello schema di telemetria POST.
+
+---
+
+## 18. Diagramma Mermaid del Feature Model C2
+
+```mermaid
+flowchart TB
+%% ==========================================
+%% STILI PER CLASSI EPISTEMICHE
+%% ==========================================
+classDef rawObs fill:#e1f5fe,stroke:#0288d1,stroke-width:1.5px,color:#01579b;
+classDef derivedFact fill:#e8f5e9,stroke:#388e3c,stroke-width:1.5px,color:#1b5e20;
+classDef policyContext fill:#fff3e0,stroke:#f57c00,stroke-width:1.5px,color:#e65100;
+classDef controllerView fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1.5px,color:#4a148c;
+classDef postHocMetric fill:#ffebee,stroke:#d32f2f,stroke-width:1.5px,color:#b71c1c;
+
+%% ==========================================
+%% RAMO ONLINE (TEMPO REALE t)
+%% ==========================================
+subgraph ONLINE_PIPELINE ["Online Feature Pipeline (Execution Time t)"]
+    direction TB
+
+    subgraph RAW_LAYER ["1. Raw Environment Observations and Private State"]
+        RAW_CLK["Temporal Fields<br>(step, day, hour, turnsPerDay)"]:::rawObs
+        RAW_GRID["Board and Tiles<br>(tile.kind, crop, yield, watered, unwatered)"]:::rawObs
+        RAW_WORK["Workforce Fields<br>(positions, inventories, active status)"]:::rawObs
+        RAW_STORE["Storage and Market<br>(private.shed, private.seeds, market quotes)"]:::rawObs
+        RAW_CASH["Liquid Capital<br>(farm.money)"]:::rawObs
+    end
+
+    subgraph DERIVATION_LAYER ["2. Deterministic Derivations (Policy-Neutral, No Leakage)"]
+        DER_TIME["Parametric Temporal Features<br>(steps_until_eod, is_eod, days_remaining)"]:::derivedFact
+        DER_TILE["Policy-Neutral Tile Views<br>(OUT_OF_SCOPE..LOST_WEED)"]:::derivedFact
+        DER_CARE["Anti-Loss Alert Condition<br>(tile_care_due_condition)"]:::derivedFact
+        DER_CROP["Crop Biological Readiness<br>(crop_age, legal first_yield_day gate)"]:::derivedFact
+        DER_FERT["Fertilizer Active Window and Uplift<br>(day..day+2, net uplift +1)"]:::derivedFact
+        DER_LIV["Livestock State and Base Prod<br>(escape risk, scheduled day, pending bonus)"]:::derivedFact
+        DER_ELG["Action Eligibility Predicates<br>(action_eligible_now for 23 actions)"]:::derivedFact
+    end
+
+    subgraph ENV_FEATURE_VECTOR ["3. Environment Feature Vector (Pure State)"]
+        FV_GLOB["Global Features Vector<br>(clock, money, order limits, aggregates)"]:::controllerView
+        FV_TILE["Per-Tile Features Tensor<br>(views, readiness, care_due, yield)"]:::controllerView
+        FV_ANIMAL["Per-Animal Features Tensor<br>(species, feed/care flags, escape risk)"]:::controllerView
+        FV_WORK["Per-Worker Features Tensor<br>(position, inv, geometric dist, eligibility)"]:::controllerView
+    end
+
+    subgraph POLICY_LAYER ["4. Policy and Planning Context (Separate Input)"]
+        POL_WS["Working Set Map<br>(POL-WS in_working_set)"]:::policyContext
+        POL_RES["Planned Serviceability<br>(POL-RES reserved_serviceable)"]:::policyContext
+        POL_CAP["Serviceable Cap<br>(POL-CAP serviceable_capacity)"]:::policyContext
+        POL_RET["Retirement Due Overlay<br>(POL-RET policy_retirement_due)"]:::policyContext
+        POL_BAT["Batch Context<br>(MKT-04, MKT-05 orders_in_batch)"]:::policyContext
+    end
+
+    CONTROLLER["DECISION CONTROLLER<br>(Policy Logic / MODEL_SPEC)"]:::controllerView
+
+    RAW_CLK --> DER_TIME
+    RAW_GRID --> DER_TILE
+    RAW_GRID --> DER_CARE
+    RAW_GRID --> DER_CROP
+    RAW_GRID --> DER_FERT
+    RAW_WORK --> DER_ELG
+    RAW_STORE --> DER_ELG
+    RAW_CASH --> DER_ELG
+
+    DER_TIME --> FV_GLOB
+    RAW_CASH --> FV_GLOB
+    DER_TILE --> FV_TILE
+    DER_CARE --> FV_TILE
+    DER_CROP --> FV_TILE
+    DER_FERT --> FV_TILE
+    DER_LIV --> FV_ANIMAL
+    DER_ELG --> FV_WORK
+    RAW_WORK --> FV_WORK
+
+    FV_GLOB --> CONTROLLER
+    FV_TILE --> CONTROLLER
+    FV_ANIMAL --> CONTROLLER
+    FV_WORK --> CONTROLLER
+
+    POL_WS --> CONTROLLER
+    POL_RES --> CONTROLLER
+    POL_CAP --> CONTROLLER
+    POL_RET --> CONTROLLER
+    POL_BAT --> CONTROLLER
+end
+
+%% ==========================================
+%% RAMO OFFLINE (POST-HOC / REVIEW ONLY)
+%% ==========================================
+subgraph OFFLINE_PIPELINE ["Offline Review and Diagnostics Pipeline (Post-Episode Only)"]
+    direction TB
+    TRACE["Replay Log and Execution Trace<br>(episode metadata, full action history)"]:::postHocMetric
+
+    subgraph POST_HOC_METRICS ["Post-Hoc Metric Decomposition (POST-01..43)"]
+        MET_REWARD["Terminal Reward<br>(POST-01 final_money_outcome)"]:::postHocMetric
+        MET_SERV["Realized Serviceability<br>(POST-02 realized_serviceable)"]:::postHocMetric
+        MET_TRANS["Transit Efficiency<br>(POST-29 necessary_transit_fraction)"]:::postHocMetric
+        MET_ROUTE["Routing Efficiency<br>(POST-30 routing_completion_efficiency)"]:::postHocMetric
+        MET_LOCK["Economic Lock-in Onset<br>(POST-31 economic_lock_in_onset)"]:::postHocMetric
+        MET_LOSS["Decomposed Loss Metrics<br>(POST-32..34 weed, overflow, escape losses)"]:::postHocMetric
+        MET_ECON["Economic and Physical Decomposition<br>(POST-03..28, POST-35..43)"]:::postHocMetric
+    end
+
+    TRACE --> MET_REWARD
+    TRACE --> MET_SERV
+    TRACE --> MET_TRANS
+    TRACE --> MET_ROUTE
+    TRACE --> MET_LOCK
+    TRACE --> MET_LOSS
+    TRACE --> MET_ECON
+
+    MET_REWARD --> REVIEW_DASH["Offline Review Dashboard<br>(MODEL_SPEC evaluation and analysis)"]:::postHocMetric
+    MET_SERV --> REVIEW_DASH
+    MET_TRANS --> REVIEW_DASH
+    MET_ROUTE --> REVIEW_DASH
+    MET_LOCK --> REVIEW_DASH
+    MET_LOSS --> REVIEW_DASH
+    MET_ECON --> REVIEW_DASH
+end
 ```
 
-The classifier signature is:
+---
 
-```text
-classify_tile(tile, *, in_working_set, phase, day, hour, engine_step, crop_rules):
-    if invalid_container_or_missing_required_context:
-        return diagnostic_error_outside_lifecycle
-    if not in_working_set:
-        return OUT_OF_SCOPE
-    if tile == "LOCKED":
-        return OUT_OF_SCOPE
-    if tile is None:
-        return EMPTY_ASSIGNED
-    if tile.kind == "WEED":
-        return LOST_WEED
-    if tile.kind == "PLANT":
-        ready = (
-            tile.yield_units > 0
-            and day - tile.planted_day >= crop_rules[tile.crop].first_yield_day
-        )
-        retired = (
-            crop_rules[tile.crop].ongoing == True
-            and tile.yield_units == 0
-            and no_future_scheduled_production(tile, crop_rules, phase, day, hour)
-        )
-        if ready:
-            return HARVEST_READY
-        if retired:
-            return RETIREMENT_DUE
-        return GROWING
-    return OUT_OF_SCOPE
-```
+## 19. Matrice di Copertura delle Riconciliazioni Engine (14 Ref IDs)
 
-Important semantics:
+| Ref ID | Descrizione Prescrizione Frozen Engine Contract | Copertura nel Feature Model C2 | Feature IDs Coinvolte | Observability | Stato Validazione |
+|---|---|:---:|---|---|:---:|
+| **CLK-01** | Clock canonico parametrico in $T=\text{turnsPerDay}$; $\text{step} \equiv \text{day} \cdot T + \text{hour}$; $\text{EOD\_STEP}(d) = (d+1)T - 1$ | **COVERED** | `TMP-01` .. `TMP-10` | `ONLINE_OBSERVABLE` / `DERIVABLE` | Conforme |
+| **ANI-01** | Base animal output = 1 disaccoppiato da FEED; fuga su $\text{consecutive\_unfed} \ge 2$ a EOD | **COVERED** | `LIV-07`, `LIV-08`, `LIV-14`, `ELG-15` | `ONLINE_OBSERVABLE` / `DERIVABLE` | Conforme |
+| **ANI-02** | `pending_care_bonus` resettato a 0 ad ogni produzione programmata | **COVERED** | `LIV-06`, `LIV-09`, `ELG-16` | `ONLINE_OBSERVABLE` / `DERIVABLE` | Conforme |
+| **FER-01** | Incremento totale $=2$, base $=1$, uplift netto canonico $= +1$ (richiede `was_watered == True`) | **COVERED** | `FRT-04`, `FRT-05` | `ONLINE_DERIVABLE` | Conforme |
+| **FER-02** | Durata 3 giorni inclusivi (`day..day+2`); flag animale boolean non cumulativo | **COVERED** | `FRT-01` .. `FRT-03`, `LIV-10`, `ELG-17` | `ONLINE_OBSERVABLE` / `DERIVABLE` | Conforme |
+| **INV-01** | `PLACE` conservativo; `DROP` ed `EOD_AUTO_DROP` distruttivi su eccedenza | **COVERED** | `INV-06`, `INV-07`, `INV-08`, `ELG-04`, `ELG-06`| `ONLINE_DERIVABLE` | Conforme |
+| **INV-02** | Rinominazione canonica `shed_overflow_loss` ed eliminazione riferimenti obsoleti | **COVERED** | `INV-07`, `INV-08`, `POST-32` | `ONLINE_DERIVABLE` / `POST_HOC` | Conforme |
+| **SVC-01** | Tripartizione serviceability: `ACTION_ELIGIBLE_NOW` vs `RESERVED` vs `REALIZED` | **COVERED** | `ELG-01`..`ELG-23`, `POL-RES`, `POST-02` | `DERIVED` / `POLICY` / `POST_HOC` | Conforme |
+| **CAP-01** | Capacità come upper bound multi-dimensionale (worker inventory unbounded) | **COVERED** | `INV-04`, `MKT-LIMIT`, `LIV-STRUCT`, `POL-CAP` | `ONLINE_DERIVABLE` / `POLICY` | Conforme |
+| **OBS-01** | Allineamento causale $S_t \to A_t \to S_{t+1}$; quadripartizione epistemica | **COVERED** | `ELG-01` .. `ELG-23` | `ONLINE_DERIVABLE` | Conforme |
+| **HAR-01** | Early harvest immaturo è silent no-op (guardia legale su `first_yield_day`) | **COVERED** | `CRP-09`, `CRP-10`, `ELG-09` | `ONLINE_DERIVABLE` | Conforme |
+| **SPC-01** | Insieme chiuso 5 colture + 3 animali; `CHICKEN = NOT_SUPPORTED` | **COVERED** | `CRP-02`, `LIV-01`, `MKT-08`, `MKT-09` | `ONLINE_OBSERVABLE` | Conforme |
+| **PER-01** | Formule biologiche origin-relative in giorni parametrizzate in $T$ | **COVERED** | `CRP-04`, `CRP-08`, `CRP-14`, `LIV-12`, `LIV-15`| `ONLINE_DERIVABLE` | Conforme |
+| **AGG-01** | Validazione e conformità della pipeline di serializzazione canonica SHA-256 | **COVERED** | Metadati report e intestazione | Metadati | Fingerprint verificato |
 
-- `max_lifespan_step` alone does not define `RETIREMENT_DUE`.
-- `RETIREMENT_DUE` means the ongoing crop is exhausted after the final valid harvest and has no remaining scheduled production.
-- an ongoing crop with positive current yield remains `HARVEST_READY`.
-- invalid or missing input is not a lifecycle state.
+---
 
-### 3.1 Boundary test vectors
+## 20. Matrice di Mapping Concettuale Ontology $\to$ Feature Model
 
-| case | inputs | expected_state | reason |
+| Dominio Ontology | Concetto Canonico Ontology | Trattamento nel Feature Model C2 | Feature IDs / Mapping Esatti |
 |---|---|---|---|
-| LOCKED | tile.kind = LOCKED, in_working_set = true | OUT_OF_SCOPE | engine state marks a non-crop tile |
-| outside working set | tile.kind = PLANT, in_working_set = false | OUT_OF_SCOPE | not in active working set |
-| None inside working set | tile = None, in_working_set = true | EMPTY_ASSIGNED | assigned empty tile |
-| WEED | tile.kind = WEED | LOST_WEED | canonical loss state |
-| PLANT immature with yield > 0 | PLANT, yield > 0, age < first_yield_day | GROWING | not mature enough |
-| PLANT mature with yield > 0 | PLANT, yield > 0, age >= first_yield_day | HARVEST_READY | valid harvest maturity |
-| ongoing immediately after intermediate valid harvest | PLANT, yield == 0, valid maturity, future production exists | GROWING | yield has been transferred and the tile remains ongoing |
-| ongoing before future scheduled production | PLANT, yield == 0, upcoming output exists | GROWING | not exhausted yet |
-| ongoing at final production before valid harvest | PLANT, yield > 0, final production scheduled but not yet harvested | HARVEST_READY | final valid harvest still harvest-ready |
-| ongoing immediately after final valid harvest | PLANT, yield == 0, no production left | RETIREMENT_DUE | exhausted ongoing after final valid harvest |
-| non-ongoing before maturity | non-ongoing PLANT, age < first_yield_day | GROWING | not retirement-eligible |
-| invalid or missing input | tile missing or crop rule absent | diagnostic_error_outside_lifecycle | not a lifecycle state |
-
-## 4. P1-01 aggregate contracts
-
-The C2 catalog does not keep speculative aggregate formulas. Each aggregate still present in the common catalog must have a real contract. The following aggregate records are materialized and explicitly separated by schema completeness and formula completeness.
-
-| feature_id | scope | sampling_phase | window | numerator | denominator | zero_denominator_convention | dedup_key | source_class | formula_version | boundary_examples | online_available | decision_time_available | future_leakage | CONTRACT_SCHEMA_COMPLETE | FEATURE_FORMULA_COMPLETE | freeze_ready |
-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
-| CRP-18 | active working set, ownership scope | current board snapshot | current step | count(tile.kind == PLANT) | active board tiles in scope | 0 means no active crop tiles | board_scope+player_id | RAW_OBSERVABLE + DERIVED | v1 | all PLANT in scope | YES | YES | NO | NO | YES | NO |
-| CRP-19 | maintained productive crop tiles only | pre-refresh or decision phase | current day/window | count(tile in maintained set) | tiles in crop scope | 0 means no maintained crop tiles | board_scope+player_id+day | DERIVED_FEATURE | v1 | GROWING vs RETIREMENT_DUE vs HARVEST_READY | YES | YES | NO | NO | NO | NO |
-| CRP-20 | crop watering demand and execution | current day/window | player-day | executed watering actions | crop watering needs in scope | 0 if no need in scope | player_day | DERIVED_FEATURE | v1 | missed-water and watered-day examples | YES | YES | NO | NO | NO | NO |
-| CRP-21 | sequence of watering service days | current window | player-window | days with successful watering service | days in scope | 0 if no service window exists | player_window | DERIVED_FEATURE | v1 | daily service and gaps | YES | YES | NO | NO | NO | NO |
-| CRP-22 | care needs for valid crop tiles | current day/window | player-day | completed care actions | declared care needs | 0 if no care demand | player_day | DERIVED_FEATURE | v1 | water care and crop care examples | YES | YES | NO | NO | NO | NO |
-| CRP-23 | harvest demand and execution | action + follow-through | player-window | valid harvest requests and executed harvests | harvest-ready eligible tiles or requests | 0 if no eligible harvest | player_window | DERIVED_FEATURE | v1 | valid harvest vs no-op vs failed harvest | YES | YES | NO | NO | NO | NO |
-| CRP-24 | weed and clean tiles | current board snapshot | current step | count or map of weed-impacted tiles | all in-scope tiles | 0 if no weed tiles | board_scope | DERIVED_FEATURE | v1 | weed map and clean distribution | YES | YES | NO | NO | NO | NO |
-| CRP-25 | weed pressure and recovery burden | current window | player-window | recovery burden proxy or backlog count | tiles or capacity in scope | 0 if no backlog | player_window | DERIVED_FEATURE | v1 | nonzero backlog examples | YES | YES | NO | NO | NO | NO |
-| WRK-03 | active worker capacity | current window | player-step/window | available effective action slots | active workers or time slots in scope | 0 if no capacity | player_window | DERIVED_FEATURE | v1 | worker availability and over-capacity | YES | YES | NO | NO | NO | NO |
-| WRK-04 | routing and movement burden | current window | player-window | movement cost or count | units or tasks in scope | 0 if no movement | player_window | DERIVED_FEATURE | v1 | short vs long moves | YES | YES | NO | NO | NO | NO |
-| WRK-05 | dispatch results | post-action | action/window | failed or rejected actions | requested or eligible actions | 0 if no failed actions | action_id | DERIVED_FEATURE | v1 | no-op, reject, mismatch | YES | NO | NO | NO | NO | NO |
-| WRK-06 | useful actions out of total actions | current window | player-window | useful actions | total actions in scope | 0 if no actions in scope | player_window | DERIVED_FEATURE | v1 | harvest and care vs idle | YES | YES | NO | NO | NO | NO |
-| MKT-03 | current cash relative to obligations | decision phase | player-step/window | cash minus declared obligations | current cash or obligation envelope | 0 if no active obligation | player_step | POLICY_CONTEXT | v1 | buffer positive and negative | YES | YES | NO | NO | NO | NO |
-
-The rule remains explicit:
-
-```text
-FEATURE_FORMULA_COMPLETE = NO
-=> freeze_ready = NO
-```
-
-No missing formula is invented.
-
-## 5. P2-01 active_crop_surface base formula
-
-The base formula is preserved and materialized:
-
-```text
-active_crop_surface = count(tile.kind == PLANT)
-```
-
-This is a formula-complete and valid aggregate base under the common C2 catalog. The full contract still needs explicit board scope, ownership scope, and sampling-phase details, but the base count itself is valid.
-
-```text
-FEATURE_FORMULA_COMPLETE = YES
-CONTRACT_SCHEMA_COMPLETE = NO
-freeze_ready = NO
-```
-
-## 6. P1-02 materialize clock and phase records
-
-The C2 catalog records the time-dependent objects explicitly. The authoritative clock rule is:
-
-```text
-engine deadline based on step
-=> use engine_step
-```
-
-and `canonical_step` remains diagnostic.
-
-| feature_id | authoritative_clock | source | formula | sampling_phase | pre/post-action availability | future_leakage |
-|---|---|---|---|---|---|---|
-| TMP-01 | engine_step | observation.step | identity | current step | pre-action | NO |
-| TMP-04 | canonical_step | day,hour,turnsPerDay | day*turnsPerDay+hour | diagnostic | post-sample diagnostic | NO |
-| CRP-13 | engine_step | max_lifespan_step, tile state | step >= max_lifespan_step under active ongoing | pre-action and decay phase | pre-action | NO |
-| CRP-14 | engine_step | max_lifespan_step, decay cadence | next decay boundary | pre-action / decay phase | pre-action | NO |
-| CRP-15 | engine_step | max_lifespan_step, yield_units | next decay step leading to yield loss | pre-action | pre-action | NO |
-| CRP-11 | day|hour | tile.kind, watered_today | PLANT and not watered today | pre-action and pre-refresh | NO |
-| CRP-12 | day | care_due, consecutive_unwatered | care_due and counter+1 >= 2 | EOD refresh | pre-refresh | NO |
-| TMP-05 | hour|turnsPerDay | hour, turnsPerDay | pre-EOD action window | pre-action | NO |
-| fertilizer_effect_window | day | crop rules + fertilization state | day..day+2 window | current state and EOD refresh | pre-action and post-refresh | NO |
-| livestock production timing | day | animal feed / care regime | production day gating after feed and care conjunction | EOD to next production day | pre-action | NO |
-
-## 7. P1-03 FEED + CARE correction
-
-The required correction is explicit: the bonus accumulation at EOD is triggered only when both care and feed are present in the same cycle.
-
-```text
-cared_today == true
-AND
-fed_today == true
-```
-
-This must be interpreted as:
-
-- CARE action or flag = current-day care state
-- FEED action or flag = current-day feed state
-- pending_care_bonus accumulation at EOD = only if both are true
-- bonus consumption on eligible production day = derived from the stored pending bonus and the actual production-day trigger
-
-The previous simplification:
-
-```text
-CARE -> pending_care_bonus
-```
-
-is insufficient and therefore not used in the common Feature Model C2. The note for this task is:
-
-```text
-UPSTREAM LOCAL CORRECTION REQUIRED
-```
-
-This is a local upstream correction and is not rewritten here.
-
-## 8. P1-04 class enumeration and cleanup
-
-The real C2 catalog does not inflate policy context, telemetry-only, or outcome classes. The model keeps only the feature objects with explicit semantics and granularities. Pure event and provenance fields are moved to the downstream event schema and are not counted as feature objects.
-
-### 8.1 Membership by class
-
-```text
-DUPLICATE_CLASS_MEMBERSHIP: 0
-ENGINE_STATE = {TMP-01, TMP-02, TMP-03, FRM-01, CRP-01, CRP-02, CRP-03, CRP-05, CRP-06, CRP-07, CRP-08, INV-01, INV-02, INV-03}
-RAW_OBSERVABLE = {FRM-02, MKT-01, GLB-01, WRK-01, MKT-04}
-DERIVED_FEATURE = {TMP-04, TMP-05, FRM-04, FRM-05, CRP-04, CRP-09, CRP-10, CRP-11, CRP-12, CRP-13, CRP-14, CRP-15, CRP-16, CRP-17, CRP-18, CRP-19, CRP-20, CRP-21, CRP-22, CRP-23, CRP-24, CRP-25, WRK-02, WRK-03, WRK-04, WRK-05, WRK-06, LIV-01, LIV-02, LIV-03, LIV-04, LIV-05, INV-04}
-POLICY_CONTEXT = {FRM-03, MKT-03}
-TELEMETRY_ONLY = {MKT-02, GLB-02, GLB-03}
-OUTCOME_LABEL = {LBL-01}
-```
-
-This is the actual class structure of the corrected admissible catalog. `REJ-01` is kept only in the rejected ledger and is excluded from both the feature total and class membership. Event and provenance fields such as requested_quantity, executed_quantity, realized_price, cash_delta, transition_reason, and generic estimate are not counted as feature objects.
-
-## 9. P2-02 eligibility versus serviceability
-
-The distinction is formalized as follows.
-
-### 9.1 action_eligible_now
-
-```text
-action_eligible_now =
-    actor is in the required spatial relation or stand-by condition,
-    action preconditions are satisfied,
-    required current resources and inventory are available,
-    current action phase and engine timing permit the action.
-```
-
-This concerns execution in the current tick and does not include path-planning or future scheduling.
-
-### 9.2 serviceable_before_deadline
-
-```text
-serviceable_before_deadline =
-    estimate of whether an actor can reach the tile and complete the action before the deadline,
-    given current routing, scheduling, inventory, contention, timing, and policy memory.
-```
-
-This remains:
-
-```text
-PARTIALLY_KNOWN
-FEATURE_FORMULA_COMPLETE = NO
-freeze_ready = NO
-```
-
-It is not a guarantee and is not re-labeled as a deterministic feature.
-
-## 10. HARVEST and crop-risk preservation
-
-The core C2 preservation is retained:
-
-```text
-harvest_ready =
-    tile.kind == "PLANT"
-    AND tile.yield_units > 0
-    AND day - tile.planted_day >= first_yield_day
-```
-
-The causal separation is also preserved:
-
-```text
-missed-WATER deterministic
-lifespan deterministic
-EMPTY random-WEED eligibility / hazard
-```
-
-and the rejected deterministic concept remains:
-
-```text
-time_to_random_weed
-```
-
-The random WEED draw is not treated as a known countdown.
-
-## 11. Inventory provenance and market provenance cleanup
-
-### 11.1 Inventory provenance
-
-The common model separates:
-
-```text
-pre-EOD overflow risk / amount-if-unchanged
-```
-
-from:
-
-```text
-realized shed_overflow_eod_loss
-```
-
-The first may be a decision-time derived estimate if the formula and sources are explicitly declared. The second is a post-refresh event outcome and is not treated as a pre-action feature.
-
-The worker return obligation is not reintroduced as a generic rule.
-
-### 11.2 Market provenance
-
-The common model may retain:
-
-```text
-displayed_quote
-```
-
-if it is a real pre-request observable. The following are not counted as common feature objects unless a dedicated, formalized metric is created with its own ID, formula, and granularity:
-
-```text
-requested_quantity
-executed_quantity
-realized_price
-cash_delta
-```
-
-This keeps market semantics aligned with the fact that realized values are post-action and not pre-action decision input.
-
-## 12. Consumer neutrality
-
-The feature model remains consumer-neutral. The following remain forbidden as intrinsic feature properties:
-
-```text
-current_MODEL_SPEC_usage
-USED
-FULL
-NOT_USED
-```
-
-The model defines the common upstream contract. Consumer-specific matrices and runtime traces remain separate downstream artifacts.
-
-```text
-FEATURE MODEL = consumer-neutral
-CONSUMER MATRIX = consumer-specific
-RUNTIME TRACE = consumer-specific
-```
-
-The absence of a runtime mapping in the feature model is not a blocker for the feature model itself; it is a downstream requirement before full foundation freeze.
-
-## 13. Vertical consistency map
-
-| feature_id | Ontology C2 basis | State Machine C2 basis | Feature Model C2 representation | status | issue |
-|---|---|---|---|---|---|
-| CRP-09 | lifecycle semantics | lifecycle transitions | total classifier | OK | none |
-| CRP-10 | maturity and harvest readiness | harvest gate | predicate with crop rule | OK | none |
-| CRP-17 | risk structure | decay and weed hazard | structured multi-cause risk window | OK | none |
-| MKT-02 | transaction semantics | execution and settlement | telemetry-only metric | OK | not a decision input |
-| MKT-03 | cash and obligation concept | economic scheduling | policy-context plus derived buffer | PARTIAL | obligations not canonical |
-| CRP-19 | maintained surface semantics | tile lifecycle + maintenance | aggregate with incomplete formula | PARTIAL | formula incomplete |
-| REJ-01 | no valid random future event | rejected by engine semantics | rejected feature | OK | kept out of freeze |
-
-`NONE_DIRECT` remains valid when a concept is semantically relevant but not a dedicated feature object.
-
-## 14. Upstream local corrections required
-
-The C2 remediation keeps the common feature model correct, but it logs the required downstream local corrections that are outside this task:
-
-```text
-UPSTREAM LOCAL CORRECTION REQUIRED
-- state-machine wording for FEED + CARE accumulation must require both cared_today and fed_today at EOD
-- any downstream consumer contract using a simplified CARE -> pending_care_bonus transition must be rewritten
-- any aggregate formula without an explicit numerator, denominator, and phase must be marked NON-FROZEN and not consumed as policy input
-```
-
-This is a tracking note only. The remediation does not rewrite the state machine or any model spec.
-
-## 15. Verification
-
-The remediation was validated with the required repository checks.
-
-```text
-git diff --check: PASS
-pytest: PASS (143 tests collected, exit code 0)
-ruff: present in this environment; it reported pre-existing import-order issues in unrelated legacy files and did not create a regression in the feature-model document itself.
-```
-
-## 16. Final status
-
-```text
-FEATURE MODEL C2 REMEDIATION: COMPLETED
-P0-01: RESOLVED
-P0-02: RESOLVED
-P1 FINDINGS: RESOLVED
-FEATURE MODEL C2 STATUS: CANDIDATE / NOT FROZEN
-CODEX BLOCKER VERIFICATION REQUIRED: YES
-MODEL_SPEC C2: NOT STARTED
-FOUNDATION C2: NOT FROZEN
-```
-
-The feature model remains candidate and not frozen because the complete downstream consumer matrix and the model-spec-level contract remain out of scope for this task.
+| **A. Terreno** | `land_surface_total`, `activated_land_surface`, `crop_surface_maintained` | `FEATURE` (Aggregati online osservabili/derivabili) | `FRM-03`, `FRM-04`, `FRM-05` |
+| **A. Terreno** | `pasture_surface_maintained`, `maintained_productive_surface` | `FEATURE` (Aggregati online) | `FRM-04`, `LIV-STRUCT` |
+| **A. Terreno** | `land_activation_payback`, `pasture_arable_surface_tradeoff` | `CONTEXT_ONLY` / `POLICY_CONTEXT` | Demandato a decision/model_spec |
+| **B. Workforce**| `workforce_headcount`, `worker_capacity_available`, `worker_action_monetization_rate` | `FEATURE` (Metriche capacità e inventari) | `WRK-01`, `WRK-02`, `WRK-04`, `WRK-05` |
+| **B. Workforce**| `necessary_transit_fraction`, `routing_completion_efficiency` | `POST_HOC_ONLY` (Escluse da decision time) | `POST-29`, `POST-30` |
+| **B. Workforce**| `worker_multi_occupancy` | `FEATURE` (Proprietà fisica dello spazio) | `WRK-03`, `ELG-01` |
+| **C. Crop** | `crop_care_action_flow`, `planting_action_flow`, `crop_harvest_readiness`, `first_yield_day` | `FEATURE` (Feature biologiche online) | `CRP-04`, `CRP-08`, `CRP-10`, `ELG-07`, `ELG-09` |
+| **C. Crop** | `crop_fertilizer_bonus`, `fertilizer_effect_window` | `FEATURE` (Uplift $+1$, finestra $d..d+2$, richiede irrigazione) | `FRT-01` .. `FRT-05`, `ELG-11` |
+| **D. Livestock**| `livestock_headcount`, `livestock_base_production`, `pending_care_bonus_accumulation`, `animal_escape_condition` | `FEATURE` (Stato zootecnico online) | `LIV-01` .. `LIV-15`, `ELG-15`, `ELG-16` |
+| **D. Livestock**| `livestock_structural_capacity` vs `livestock_serviceable_capacity` | `FEATURE` vs `POLICY_CONTEXT` | `LIV-STRUCT` vs `POL-CAP` |
+| **E. Capitale** | `current_money_state`, `market_order_batch_limit` | `FEATURE` (Cassa online, batch limits) | `MKT-01`, `MKT-04`, `MKT-05`, `MKT-LIMIT`, `ELG-18`..`23` |
+| **E. Capitale** | `final_money_outcome` | `OUTCOME_ONLY` / `POST_HOC_ONLY` | `POST-01` |
+| **E. Capitale** | `economic_lock_in_onset` | `POST_HOC_ONLY` | `POST-31` |
+| **F. Storage** | `shed_inventory_integrity`, `shed_overflow_loss` | `FEATURE` (Capacità shed, overflow exposure) | `INV-01` .. `INV-08`, `ELG-04`, `ELG-06` |
+| **G. Campo** | `tile_lifecycle_state`, `tile_care_due_condition`, `preventive_dig_action`, `recovery_dig_action` | `FEATURE` (Classifier 5 viste, allerta anti-loss) | `CRP-01..10`, `CAR-02`, `ELG-12` |
+| **H. Vincoli** | `action_order_slot_pressure`, `state_capacity_alignment` | `FEATURE` / `CONTEXT_ONLY` | `MKT-05`, `LIV-STRUCT` |
+| **I. Clock** | `canonical_clock_coordinate`, `action_eligible_now` | `FEATURE` (Clock $T$, predicati ammissibilità) | `TMP-01` .. `TMP-10`, `ELG-01` .. `ELG-23` |
+| **I. Clock** | `reserved_serviceable_before_deadline` | `POLICY_CONTEXT` | `POL-RES` |
+| **I. Clock** | `realized_serviceable_in_window` | `POST_HOC_ONLY` | `POST-02` |
+
+---
+
+**Fine di KAGGRICULTURE_FEATURE_MODEL_C2 (Consolidation Pass completato).**

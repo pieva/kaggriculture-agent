@@ -20,56 +20,67 @@ Il modello finale può essere una policy deterministica interamente scritta a ma
 
 Kaggriculture separa esplicitamente la rappresentazione del dominio dalla policy che controlla l'agente.
 
-La **Model Foundation** è costituita da quattro artefatti coordinati:
+La **Model Foundation** (condivisa e neutrale) è articolata su **5 layer normativi coordinati**, a valle dei quali si collocano i **MODEL_SPEC specifici di ciascun agente**:
 
-| Artefatto | Percorso canonico | Funzione | Domanda |
-|---|---|---|---|
-| Ontologia | `docs/model/ontology/` | Vocabolario canonico del dominio, entità, concetti e relazioni condivise. | **Che cosa esiste e che cosa significa?** |
-| State Machine | `docs/model/state_machine/` | Stati, transizioni, condizioni dell'engine ed evoluzione temporale. | **Come evolve il sistema?** |
-| Feature Model | `docs/model/feature_model/` | Informazioni osservabili o derivabili al decision time, con semantica, provenienza e limiti. | **Che cosa può conoscere l'agente quando decide?** |
-| `MODEL_SPEC_<AGENT>.md` | `docs/model/model_specs/` | Uso dei concetti e delle feature ammissibili nel modello decisionale. | **Come viene usata l'informazione per decidere?** |
+| Layer | Artefatto | Percorso canonico | Funzione | Domanda |
+|---|---|---|---|---|
+| 1. Engine Contract | Frozen Engine Contract | `results/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md` | Ground truth formale e verificato delle regole e costanti della simulazione. | **Quali sono le regole e i vincoli primitivi del codice dell'ambiente?** |
+| 2. Ontologia | `ONTOLOGY_C2.md` | `docs/model/ontology/ONTOLOGY_C2.md` | Vocabolario canonico del dominio, entità, concetti e relazioni condivise. | **Che cosa esiste nel dominio e che cosa significa?** |
+| 3. State Machine | `KAGGRICULTURE_STATE_MACHINE_C2.md` | `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2.md` | Stati fisici, transizioni biologiche, guardie e ciclo causale dell'engine. | **Come evolve lo stato dell'ambiente?** |
+| 4. Feature Model | `KAGGRICULTURE_FEATURE_MODEL_C2.md` | `docs/model/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2.md` | Feature osservabili e derivabili online al decision time, con provenienza e no-leakage contract. | **Che cosa può conoscere l'agente quando decide?** |
+| 5. Decision Lifecycle | Decision Lifecycle Contract | `docs/model/decision_lifecycle/` | Modello comune del ciclo deliberativo dell'agente (fasi, invalidazioni, eccezioni). | **In quali stati cognitivi/operativi si trova la decisione dell'agente?** |
+| Downstream | `MODEL_SPEC_<AGENT>.md` | `docs/model/model_specs/` | Modello decisionale e strategico proprietario di ciascun agente (Antigravity, Codex, Copilot). | **Come usa l'agente le feature per formulare policy e azioni?** |
+
+*Nota sulla nomenclatura C2:* La sigla **C2** indica il **Cycle 2** (ciclo di revisione, audit e provenance della Foundation), non un componente architetturale o un modello di strategia.
 
 ```text
 docs/model/
 |-- ontology/
 |-- state_machine/
 |-- feature_model/
+|-- decision_lifecycle/
 |-- model_specs/
 `-- reviews/
 ```
 
-`reviews/` è la sede di governance, evidence review e reconciliation della Foundation e non costituisce un quinto artefatto del modello decisionale.
-
-L'**Ontologia** definisce ciò che esiste e il significato condiviso dei concetti; non prescrive policy, soglie o priorità. La **State Machine** descrive la dinamica del dominio e separa le regole native dell'engine dagli stati derivati. Il **Feature Model** è il contratto informativo tra dominio e modello decisionale. Il **MODEL_SPEC** è consumer della Foundation e traduce concetti e feature ammissibili in una rappresentazione decisionale verificabile.
+`reviews/` è la sede di governance, evidence review e reconciliation della Foundation e non costituisce un layer del modello decisionale.
 
 ```text
-ENGINE
-   |
-   v
-ONTOLOGY
-   |
-   v
+ENGINE CONTRACT
+      |
+      v
+   ONTOLOGY
+      |
+      v
 STATE MACHINE
-   |
-   v
+      |
+      v
 FEATURE MODEL
-   |
-   v
-MODEL_SPEC
-   |
-   v
-POLICY / RUNTIME
-   |
-   v
-EXECUTION / TELEMETRY
-   |
-   v
-FORENSIC ANALYSIS
-   |
-   v
-NEW EVIDENCE
-   |
-   +--------------------> FOUNDATION REVIEW
+      |
+      v
+DECISION LIFECYCLE CONTRACT
+      |
+      +-----------------------------+-----------------------------+
+      |                             |                             |
+      v                             v                             v
+MODEL_SPEC_ANTIGRAVITY      MODEL_SPEC_CODEX              MODEL_SPEC_COPILOT
+      |                             |                             |
+      v                             v                             v
+   POLICY                        POLICY                        POLICY
+      |                             |                             |
+      +-----------------------------+-----------------------------+
+                                    |
+                                    v
+                           EXECUTION / TELEMETRY
+                                    |
+                                    v
+                            FORENSIC ANALYSIS
+                                    |
+                                    v
+                              NEW EVIDENCE
+                                    |
+                                    v
+                           FOUNDATION REVIEW
 ```
 
 Una feature può essere semanticamente valida senza essere ancora sufficientemente definita per l'uso operativo. Feature con formula, denominatore, finestra temporale, fase di campionamento o provenienza incompleti devono rimanere esplicitamente qualificate come `PARTIALLY_KNOWN`, `CONDITIONAL` o equivalenti.
@@ -86,7 +97,7 @@ La conformità richiede tracciabilità fino all'esecuzione. Il mapping tra Featu
 
 ### Foundation Tournament
 
-I quattro artefatti non vengono aggiornati automaticamente dopo ogni esperimento. Nuove evidenze provenienti da replay, telemetria, forensic analysis, audit dell'engine o error analysis vengono prima sottoposte a review indipendente e reconciliation.
+I layer della Foundation non vengono aggiornati automaticamente dopo ogni esperimento. Nuove evidenze provenienti da replay, telemetria, forensic analysis, audit dell'engine o error analysis vengono prima sottoposte a review indipendente e reconciliation.
 
 Quando l'evidenza giustifica una revisione strutturale viene eseguito un **Foundation Tournament**. Non è un torneo di performance della policy: il suo obiettivo è migliorare correttezza, completezza, coerenza e verificabilità della rappresentazione condivisa.
 

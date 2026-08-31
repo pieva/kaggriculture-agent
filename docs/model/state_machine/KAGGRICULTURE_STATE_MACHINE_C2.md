@@ -1,532 +1,505 @@
-# Kaggriculture State Machine C2
+# Kaggriculture State Machine C2 — Environment & Domain Model
 
-```text
-CANDIDATE C2
-NOT FROZEN
-UPSTREAM: ONTOLOGY_C2 CANDIDATE
-DERIVED FROM FOUNDATION RECONCILIATION R1
-BASELINE DI RIFERIMENTO: KAGGRICULTURE_STATE_MACHINE_C1.md (C1)
-```
+- **Fase:** Model Foundation Cycle 2 (C2) / Tri-Agent Consolidated Pass
+- **Stato:** CONSOLIDATED C2 / READY FOR FINAL FREEZE
+- **Data:** 2026-08-31
+- **Ambito:** Macchina a stati canonica, causale e period-aware dell'ambiente di simulazione Kaggriculture
+- **Fonte normativa primaria:** `results/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md` (FROZEN)
+- **Ontologia di riferimento:** `docs/model/ontology/ONTOLOGY_C2.md` (CONSOLIDATED)
+- **Baseline di audit:** `results/model_spec_c2/foundation_revision/CODEX_C2_ENGINE_CONTRACT_PERIOD_LEDGER_AUDIT.md` (FROZEN)
+- **Reconciliation Authority:** `results/model_spec_c2/foundation_revision/FOUNDATION_CROSS_REVIEW_RECONCILIATION.md` (CONSOLIDATED)
+- **Runtime di riferimento:** `kaggle-environments` 1.32.7 (`kaggriculture` 0.1.0) — Fingerprint: `4378b60f61a3af22ed875969e1be7e7f11af0b0e050b51aa80c0778c4113207d`
+- **Destinazione repository:** `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2.md`
 
 ---
 
-## 1. Scopo, perimetro ed evidence status
+## 1. Scopo, perimetro e separazione architetturale
 
-Questo documento descrive la macchina a stati formale dell'ambiente di simulazione **Kaggriculture**, recepita come revisione mirata (`REVISE_LIGHT`) della State Machine C1 sulla base dell'arbitrato normativo della **Foundation Reconciliation R1** di Codex e del vocabolario canonico di **Ontology C2** (`docs/model/ontology/ONTOLOGY_C2.md`).
+Questo documento definisce la **macchina a stati formale dell'ambiente di simulazione Kaggriculture (Environment / Domain State Machine)**. Essa costituisce il secondo layer normativo della Model Foundation Cycle 2 (C2).
 
-La State Machine risponde alla domanda:
-> **Quali stati assume il sistema, attraverso quali fasi temporali evolve e quali transizioni sono ammesse dall'ambiente simulato?**
+La State Machine risponde alla domanda fondamentale:
+> **Come evolve lo stato dell'ambiente simulato, quali transizioni fisiche e biologiche sono ammesse, quali guardie le governano e in quale ordine causale avvengono?**
 
-Non è un `MODEL_SPEC`, non prescrive strategie, routing, soglie operative o pesi decisionali, e non introduce un classifier di policy. È una ricostruzione descrittiva e neutrale della dinamica dell'ambiente, dei suoi stati osservabili e degli stati derivati canonici.
+### 1.1 Separazione di principio: Dinamica dell'Ambiente vs Decision Lifecycle
+La State Machine modella **esclusivamente le leggi causali della simulazione**, non il processo cognitivo o decisionale dell'agente.
 
-### 1.1 Fonti e riuso dei dati
+In particolare:
+- **NON contiene stati deliberativi dell'agente:** concetti come `DEFINE`, `PLAN`, `PLAN_FEASIBLE`, `COMMITTED`, `VERIFY`, `REVIEW`, `DECISION_OPEN`, `COMMITTED_EXECUTING`, `REVIEW_READY` appartengono al layer condiviso **`DECISION LIFECYCLE CONTRACT`** e sono categoricamente esclusi da questo documento;
+- **NON prescrive scelte o strategie:** non include preferenze colturali, ranking di profitto, target di animali, calendari fissi di espansione, soglie di cassa, regole di dispatching o algoritmi di routing;
+- **Quadripartizione Epistemica del Processo Operativo (CORR-13):**
+  $$\text{STATE}_t \xrightarrow{\text{ACTION\_REQUEST}_t} \text{SNAPSHOT\_ELIGIBILITY} \xrightarrow{\text{EXECUTION\_OUTCOME}} \text{STATE}_{t+1} \xrightarrow{\text{POST\_STATE\_EVIDENCE}}$$
 
-Il documento consolida e integra:
-- `docs/model/ontology/ONTOLOGY_C2.md` (upstream semantico C2);
-- `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C1.md` (baseline C1);
-- `docs/model/reviews/reconciliation/CODEX_FOUNDATION_RECONCILIATION_R1.md` (arbitrato normativo R1);
-- `docs/model/reviews/antigravity/ANTIGRAVITY_FOUNDATION_REVIEW_R1.md`;
-- `docs/model/reviews/copilot/COPILOT_FOUNDATION_REVIEW_R1.md`;
-- `results/e16/diagnostics/tile_lifecycle_feature/E16_TILE_LIFECYCLE_FEATURE_AUDIT.md`;
-- `results/e16/diagnostics/e16_a_r1_crop_attainment/E16_A_R1_CROP_ATTAINMENT_FORENSIC_DIAGNOSIS.md`;
-- regole verificate nel codice sorgente (`kaggriculture.py`), schema (`kaggriculture.json`) e documentazione ufficiale.
+### 1.2 Evidence Status Canonici
 
-### 1.2 Evidence status canonici
-
-| Status | Significato in questo documento |
+| Status | Significato formale in questo documento |
 |---|---|
-| `ENGINE_VERIFIED` | Regola o dinamica osservata direttamente nel codice sorgente dell'ambiente (`kaggriculture.py`), schema o documentazione ufficiale, corroborata dai ledger empirici. |
-| `DERIVED` | Stato, predicato o relazione calcolabile deterministicamente da campi engine primitivi, pur non memorizzata dall'engine con quel nome specifico. |
-| `PARTIALLY_KNOWN` | Sottosistema di cui sono state verificate alcune transizioni fondamentali, ma la cui dinamica globale presenta componenti non ancora auditate end-to-end. |
-| `NOT_ANALYZED` | Parte deliberatamente non ricostruita o ambito strategico/economico non formalizzato; non viene completata per inferenza speculativa. |
+| `ENGINE_VERIFIED` | Regola, transizione, guardia o formula verificata direttamente nel codice sorgente dell'ambiente (`kaggriculture.py`), schema o ledger empirici congelati. |
+| `DERIVED_ENGINE_FACT` / `DERIVED` | Stato discreto, predicato o grandezza calcolabile deterministicamente da campi primitivi dell'engine senza gradi di libertà o assunzioni di strategia. |
+| `POLICY_CONTEXT` | Contesto, prenotazione o piano generato dalla sfera deliberativa dell'agente (es. `reserved_serviceable_before_deadline`, `in_working_set`, `policy_retirement_due`), esterno alle leggi causali dell'environment. |
+| `POST_HOC_METRIC` | Grandezza o evidenza ricostruibile unicamente a posteriori tramite log, telemetria o replay (es. `realized_serviceable_in_window`, `final_money_outcome`). |
 
 ---
 
 ## 2. Clock, fase e ciclo globale dell'engine
 
-### 2.1 Engine clock vs Diagnostic canonical clock
+### 2.1 Clock canonico parametrico ($T$) e configurazione
+L'orologio della simulazione è parametrizzato sulla costante di discretizzazione giornaliera $T = \text{turnsPerDay}$ (configurabile dall'engine; default $T=24$). Nessuna costante assoluta di step (es. 24, 48, 72) è assunta come universale.
 
-L'ambiente e l'infrastruttura diagnostica utilizzano due nozioni di clock che devono restare rigorosamente distinte:
+Le coordinate temporali canoniche soddisfano l'invariante universale:
+$$\text{step} \equiv \text{day} \cdot T + \text{hour}, \quad \text{con } \text{hour} \in [0, T-1]$$
 
-```text
-engine_step != canonical_step by definition
-```
+- $\text{day} = \lfloor \text{step} / T \rfloor$ (0-indexed, unità biologica e contrattuale fondamentale);
+- $\text{hour} = \text{step} \pmod T$ (fase infra-giornaliera);
+- **Trigger End-of-Day (EOD):** l'evento di fine giornata si attiva all'ultimo step di ciascun giorno:
+  $$\text{EOD\_STEP}(d) = (d + 1) \cdot T - 1 \iff (\text{step} + 1) \pmod T == 0$$
 
-| Orologio | Natura | Definizione | Ruolo | Status |
-|---|---|---|---|---|
-| `step` (o `engine_step`) | **Engine clock** | Contatore incrementale discreto degli step eseguiti dall'interpreter (`observation.step`). | **Orologio autorevole dell'engine**; governa tutte le regole e i controlli per-step (decay, timeout, limite episodio). | `ENGINE_VERIFIED` |
-| `day` | **Engine state** | Giorno di simulazione corrente (0-indexed). | Unità biologica e contrattuale fondamentale (refresh piante, animali, contratti). | `ENGINE_VERIFIED` |
-| `hour` | **Engine state** | Step/ora all'interno della giornata (`[0, turnsPerDay - 1]`). | Fase infra-giornaliera di avanzamento. | `ENGINE_VERIFIED` |
-| `turnsPerDay` | **Engine parameter** | Numero di step per giorno (default: 24). | Costante di discretizzazione giornaliera. | `ENGINE_VERIFIED` |
-| `canonical_step` | **Diagnostic clock** | $\text{canonical\_step} = \text{day} \times \text{turnsPerDay} + \text{hour}$ | **Ricostruzione diagnostica deterministica**; utilizzata nei framework di telemetria quando `observation.step` è difettosa o incompleta. | `DERIVED` |
+### 2.2 Phase Contract e ordine deterministico del ciclo di esecuzione (CORR-08, CORR-14)
+A ogni step $t$ dell'episodio, l'interpreter dell'ambiente esegue le operazioni secondo una sequenza deterministica ordinata in 11 fasi:
 
-*Regola di precisione C2:* le regole dell'engine operano nativamente su `step`, `day` e `hour`. `canonical_step` non sostituisce l'orologio dell'engine, ma costituisce uno strumento di allineamento e validazione per la telemetria.
+1. **Inizializzazione (`_initialize`):** se $\text{step} == 0$, creazione dello stato globale pubblico (`farms`, `market`, `town`) e privato (`private.shed`, `private.seeds`, `private.inventories`);
+2. **Ricezione azioni (`read_actions`):** lettura dei comandi inviati dai giocatori per il main farmer, per ciascun farm hand attivo e per il market;
+3. **Validazione atomica `PLANT`:** validazione aggregata delle richieste di semina same-player per specie; se la domanda aggregata per una specie nello step supera i semi posseduti in `private.seeds[crop]`, **tutte le azioni `PLANT` di quella specie nello step falliscono atomicamente (silent no-op)** (`kaggriculture.py:417-429`);
+4. **Esecuzione sequenziale azioni Worker (`_apply_unit_action`):** esecuzione ordinata per worker (Main Farmer, poi Hands in sequenza). Ogni azione muta lo stato immediatamente; i worker successivi osservano e operano sullo stato già mutato dai worker precedenti; se la guardia fallisce, l'azione è un silent no-op;
+5. **Market Orders Processing (`_process_market`):** elaborazione e regolamento degli ordini `BUY`, `SELL`, `BUY_LAND`, `HIRE` nel limite configurato di `maxMarketOrdersPerTurn` (default: 10 ordini/turno);
+6. **Town Consumption (`_town_consume`):** consumo programmato di beni dal market da parte della città;
+7. **Plant Lifespan Decay (`_decay_plants`):** tick di decadimento per-step; per le piante che hanno raggiunto $\text{step} \ge \text{max\_lifespan\_step}$, decremento di `yield_units` di 1 unità ogni 2 step fino a 0 e successiva trasformazione in `WEED`;
+8. **End-of-Day Refresh (EOD):** se $(\text{step} + 1) \pmod T == 0$, esecuzione della sequenza EOD all'interno della transizione che produce $S_{t+1}$ secondo la Sezione 2.3;
+9. **Aggiornamento coordinate temporali:** se EOD, $\text{day} \leftarrow \text{day} + 1$, $\text{hour} \leftarrow 0$; altrimenti $\text{hour} \leftarrow \text{hour} + 1$;
+10. **Emissione stato risultante $S_{t+1}$:** generazione dell'osservazione post-transizione;
+11. **Terminal Evaluation:** se $\text{step} + 1 \ge \text{episodeSteps}$, transizione a terminale e assegnazione del saldo monetario `farms[player].money` come `final_money_outcome`.
 
-### 2.2 Phase contract e ordine globale del loop
-
-Per ogni step attivo dell'episodio, l'engine esegue le operazioni secondo una sequenza deterministica e ordinata in 11 fasi:
-
-1. **Inizializzazione:** se la simulazione è al passo zero, l'engine inizializza la farm pubblica, il private state dei player, il market condiviso e la town (`_initialize`);
-2. **Lettura azioni:** ricezione dei vettori di comandi emessi da ciascun player per il main farmer e per ciascun farm hand attivo;
-3. **Validazione atomica `PLANT`:** validazione globale delle richieste di semina same-player per specifica crop; se la domanda istantanea supera i semi posseduti in `private.seeds[crop]`, tutte le azioni `PLANT` per quella crop vengono bloccate atomicamente nello step;
-4. **Applicazione azione Main Farmer:** esecuzione del comando del farmer (movimento, operazione su tile, build, ecc.);
-5. **Applicazione azioni Farm Hands:** esecuzione sequenziale dei comandi dei worker assunti;
-6. **Market Orders:** elaborazione e regolamento degli ordini di acquisto/vendita/assunzione (`BUY_SEED`, `BUY_LAND`, `BUY_ANIMAL`, `SELL`, `HIRE`) entro il limite di batch per step;
-7. **Town Consumption:** aggiornamento e consumo di beni dal market da parte della città secondo il calendario configurato (`_town_consume`);
-8. **Plant Lifespan Decay (`_decay_plants`):** tick di decadimento per-step; per le piante che hanno raggiunto `max_lifespan_step`, decremento di `yield_units` fino all'azzeramento o transizione a weed;
-9. **End-of-Day Refresh (EOD):** se lo step chiude la giornata (`(step + 1) % turnsPerDay == 0`), l'engine esegue la procedura di fine giornata nel seguente ordine:
-   - **Daily Refresh Plants (`_daily_refresh_plants`):** verifica irrigazione giornaliera (`watered_today`), aggiornamento contatore disidratazione (`consecutive_unwatered`), trasformazione in `WEED` per piante con $\ge 2$ giorni senza acqua; per le ongoing, incremento di resa biologica nei giorni di produzione prefissati;
-   - **Daily Refresh Animals (`_daily_refresh_animals`):** verifica alimentazione (`fed_today`) e cura (`cared_today`), accumulo/consumo di `pending_care_bonus`, erogazione del prodotto primario (Milk, Wool, Egg), fuga dell'animale se $\text{consecutive\_unfed} \ge 2$, generazione automatica di Fertilizer;
-   - **RNG Weed Spawn:** per ciascuna tile libera con stato `None`, estrazione casuale stocastica (draw $< \text{weedSpawnChance}$); se superata, la tile diventa `WEED`;
-   - **Drop automatico inventari worker (`_drop_inventories_to_shed`):** trasferimento automatico di tutti i beni trasportati dai worker nello shed centrale fino al limite di `shedCapacity` (100 unità); l'eccedenza costituisce `shed_overflow_eod_loss`;
-   - **Reset Farmer Spawn:** riposizionamento del main farmer sulla coordinata di spawn dello shed;
-   - **Rimozione Hands & Reset Hires:** rilascio di tutti i farm hands assunti e reset del contatore `hires_today = 0`;
-   - **Ricostruzione Inventari:** reinizializzazione dell'inventario vuoto per il giorno successivo;
-   - **Calendario Town/Shop:** eventuale aggiornamento periodico delle richieste town e delle offerte shop.
-10. **Aggiornamento coordinate temporali:** incremento di `day` e reset di `hour` (se a EOD), oppure incremento di `hour`;
-11. **Terminal Reward:** all'ultimo step dell'episodio, assegnazione del saldo monetario `farm.money` come reward terminale.
-
-### 2.3 Mappa dei clock e delle fasi per meccanica
-
-| Meccanica / Transizione | Clock governante | Fase di esecuzione | Natura del trigger |
-|---|---|---|---|
-| `HARVEST` crop readiness | `day` vs `planted_day` + `first_yield_day` | Fase 4/5 (Action Phase) | Predicato su `day`, validato a decision time |
-| Lifespan decay | `step` vs `max_lifespan_step` | Fase 8 (`_decay_plants`) | Deterministico per-step |
-| WATER deadline & Missed-WATER loss | `day` & `consecutive_unwatered` | Fase 9 (EOD Refresh) | Deterministico al cambio giorno |
-| Fertilizer window | `day` vs `fertilized_until_day` | Fase 9 (EOD) / Fase 4-5 (Action) | Deterministico su intervallo di giorni |
-| Livestock production & Escape | `day` & `consecutive_unfed` | Fase 9 (EOD Refresh) | Deterministico al cambio giorno |
-| Random EMPTY $\to$ WEED spawn | RNG draw a EOD | Fase 9 (EOD Refresh) | Stocastico al cambio giorno |
-| Shed Drop & Overflow loss | EOD trigger | Fase 9 (EOD Refresh) | Deterministico al cambio giorno |
-
----
-
-## 3. Stato della Farm, visibilità e tile
-
-### 3.1 Farm pubblica vs Private State
-
-L'ambiente separa nettamente i dati pubblici (visibili a tutti i player nelle osservazioni) dai dati privati:
-
-- **Stato Farm Pubblico (`farms[player_id]`):**
-  - `money`: cassa disponibile;
-  - `tiles[y][x]`: griglia bidimensionale dello stato delle tile;
-  - `farmer`: coordinate `[x, y]` e stato del main farmer;
-  - `hands`: lista di coordinate e inventari dei farm hands attivi;
-  - `unlocked_quadrants`: lista dei quadranti fondiari sbloccati;
-  - `hires_today`: numero di assunzioni eseguite nella giornata corrente.
-- **Stato Private (`private[player_id]`):**
-  - `shed`: inventario centralizzato dei beni stoccati (capacità 100);
-  - `seeds`: dizionario delle sementi possedute per crop;
-  - `inventories`: inventari correnti per ciascun worker.
-- **Stato Globale Condiviso:**
-  - `market`: scorte e prezzi correnti delle commodity;
-  - `town`: domanda di consumo urbano e stato shop.
-
-### 3.2 Valori nativi delle tile nell'engine
-
-| Valore nativo engine | Descrizione | Status |
-|---|---|---|
-| `None` | Tile vuota, sbloccata e disponibile per semina, pascolo o strutture. | `ENGINE_VERIFIED` |
-| `"LOCKED"` | Tile appartenente a un quadrante non ancora acquistato tramite `BUY_LAND`. | `ENGINE_VERIFIED` |
-| `{"kind": "PLANT", ...}` | Pianta viva con campi: `crop`, `planted_day`, `watered_today`, `consecutive_unwatered`, `yield_units`, `max_lifespan_step`, `fertilized_until_day`. | `ENGINE_VERIFIED` |
-| `{"kind": "WEED"}` | Erba infestante che blocca l'uso arabile della tile. | `ENGINE_VERIFIED` |
-| `{"kind": "COOP", ...}` | Struttura per avicoli (`GOOSE`), vuota o con animale alloggiato. | `ENGINE_VERIFIED` |
-| `{"kind": "PASTURE", ...}` | Recinto per bestiame (`COW`, `SHEEP`), vuoto o con animale alloggiato. | `ENGINE_VERIFIED` |
-
-### 3.3 Natura del Working Set
-
-Il concetto di `working_set_member`, le posizioni target prescelte (`CROP_POSITIONS`) e il dimensionamento del perimetro arabile **non sono stati memorizzati dall'engine**, ma costrutti della policy decisionale.
-
-La State Machine riconosce la separazione tra stato intrinseco della tile e classificazione contestuale:
-- Una tile nativa `None` situata in un'area assegnata dalla policy è derivabile come `EMPTY_ASSIGNED`;
-- La medesima tile `None`, se esterna al piano di allocazione corrente, è derivabile come `OUT_OF_SCOPE`.
-
----
-
-## 4. Lifecycle canonico Crop / Tile C2
-
-### 4.1 Categorie e stati del lifecycle canonico
-
-In conformità con `ONTOLOGY_C2`, la State Machine adotta **sei categorie/stati canonici candidati e semanticamente distinti**:
+### 2.3 Ordine causale dettagliato della sequenza EOD (Fase 8) (CORR-04, CORR-06)
 
 ```text
-OUT_OF_SCOPE       : tile non posseduta, non assegnata o occupata da struttura non-crop
-EMPTY_ASSIGNED     : tile posseduta, libera (None) e disponibile per nuova semina
-GROWING            : tile con PLANT attiva in accrescimento non ancora raccoglibile
-HARVEST_READY      : tile con PLANT matura soddisfacente il predicato formale di readiness
-RETIREMENT_DUE     : tile con PLANT esaurita/a fine ciclo che richiede rimozione programmata
-LOST_WEED          : tile caduta nello stato WEED (bloccata) che richiede bonifica
+[EOD Step: hour == T - 1]
+    │
+    ├─► 8.1. Daily Refresh Plants (_daily_refresh_plants)
+    │     ├─ Controllo idrico: se watered_today == True: consecutive_unwatered = 0
+    │     │                   altrimenti: consecutive_unwatered += 1
+    │     ├─ Reset: watered_today = False
+    │     ├─ Transizione WEED: se consecutive_unwatered >= 2: tile diventa {"kind": "WEED"}
+    │     └─ Produzione Ongoing: per piante con ciclo attivo in giorno di produzione biologica:
+    │          se was_watered == True E fertilized_until_day >= current_day:
+    │              yield_units += 2 (uplift netto +1)
+    │          altrimenti:
+    │              yield_units += 1
+    │          (fino al limite di max_yield della specie)
+    │
+    ├─► 8.2. Daily Refresh Animals (_daily_refresh_animals)
+    │     ├─ 1. Controllo alimentazione: se not fed_today: consecutive_unfed += 1
+    │     │                             altrimenti: consecutive_unfed = 0
+    │     ├─ 2. Transizione Fuga (Escape): se consecutive_unfed >= 2:
+    │     │      l'animale scappa, struttura torna EMPTY_STRUCTURE, tile["pending_care_bonus"] = 0
+    │     └─ 3. Per animali NON fuggiti (sopravvissuti):
+    │          ├─ Produzione Programmata del Giorno:
+    │          │    se giorno biologico di produzione:
+    │          │      base_output = 1 (erogato a schedule, DISACCOPPIATO da FEED!)
+    │          │      care_bonus = pending_care_bonus se fed_today == True altrimenti 0
+    │          │      yield_units = min(max_held, yield_units + base_output + care_bonus)
+    │          │      pending_care_bonus = 0 (RESET PROGRAMMATO AD OGNI PRODUZIONE!)
+    │          ├─ Accumulo Care Bonus (DOPO la produzione del giorno):
+    │          │    se fed_today == True AND cared_today == True:
+    │          │      pending_care_bonus += 1 (salvato per produzioni FUTURE)
+    │          ├─ Flag fertilizzante: fertilizer_available = True (boolean non cumulativo)
+    │          └─ Reset flags giornalieri: fed_today = False, cared_today = False
+    │
+    ├─► 8.3. Stocastico RNG Weed Spawn
+    │     └─ Per ciascuna tile None posseduta: estrazione RNG (se draw < weedSpawnChance -> tile diventa WEED)
+    │
+    ├─► 8.4. Auto-drop Inventari Worker allo Shed (_drop_inventories_to_shed)
+    │     ├─ Trasferimento di tutti i beni portati dai worker a private.shed fino a capienza shedCapacity (default 100)
+    │     └─ Distruzione irreversibile dell'eccedenza oltre capienza (shed_overflow_loss)
+    │
+    ├─► 8.5. Reset Workforce
+    │     ├─ Main Farmer riposizionato alla coordinata di spawn dello shed
+    │     ├─ Tutti i Farm Hands a contratto giornaliero vengono rimossi
+    │     └─ Reset hires_today = 0
+    │
+    └─► 8.6. Aggiornamento Mercato / Town Shop
 ```
 
-*Nota di governance C2:* questi sei stati descrivono l'insieme esaustivo dei ruoli del ciclo biologico; la formalizzazione dell'algoritmo di classificazione totale (con precedenze e predicati computazionali mutuamente esclusivi) appartiene al livello Feature Model C2.
-
-### 4.2 Predicato formale di HARVEST Readiness
-
-L'engine impone una netta separazione tra la presenza numerica di yield e la maturità di raccolta:
-
-$$\text{yield available} \neq \text{harvest ready}$$
-
-Il predicato canonico di maturità colturale è:
-
-$$\text{harvest\_ready}(\text{tile}, \text{current\_day}) \iff \begin{cases} \text{tile.kind} == \text{PLANT} \\ \text{tile.yield\_units} > 0 \\ \text{current\_day} - \text{tile.planted\_day} \ge \text{CROPS}[\text{tile.crop}].\text{first\_yield\_day} \end{cases}$$
-
-Un comando `HARVEST` emesso su una pianta prima di `first_yield_day` costituisce un no-op che non preleva beni e rischia di distruggere l'investimento temporale.
-
-### 4.3 Dinamica per tipologia di coltura
-
-#### A. Colture Non-Ongoing (es. Wheat, Melon, Carrot)
-- **Semina:** `EMPTY_ASSIGNED` $\xrightarrow{\text{PLANT}}$ `GROWING` (consuma 1 seed, imposta `consecutive_unwatered = 1`, `planted_day = day`);
-- **Accrescimento:** `GROWING` $\xrightarrow{\text{WATER}}$ `GROWING` (imposta `watered_today = true`; nella finestra di resa aggiunge yield base e l'eventuale bonus fertilizzante);
-- **Maturazione:** raggiunta al giorno `day >= planted_day + first_yield_day` $\implies$ `HARVEST_READY`;
-- **Raccolta:** `HARVEST_READY` $\xrightarrow{\text{HARVEST}}$ `EMPTY_ASSIGNED` (lo yield viene trasferito all'inventario del worker; la tile torna nativamente `None`);
-- *Nota:* la ripiantumazione successiva è un'azione indipendente `PLANT`, non un sottoprocesso implicito di HARVEST.
-
-#### B. Colture Ongoing (es. Strawberry, Tomato)
-- **Semina:** `EMPTY_ASSIGNED` $\xrightarrow{\text{PLANT}}$ `GROWING`;
-- **Produzione continua:** `yield_units` nasce a zero e viene incrementato a EOD secondo il calendario biologico (`interval`);
-- **Raccolte intermedie:** `HARVEST_READY` $\xrightarrow{\text{HARVEST}}$ `GROWING` (lo yield viene prelevato e azzerato; la pianta permane sulla tile e riavvia il ciclo di accrescimento);
-- **Fine ciclo biologico:** dopo l'ultima produzione utile consentita dalla durata biologica, la coltura transita semantamente in `RETIREMENT_DUE`;
-- **Clearance:** `RETIREMENT_DUE` $\xrightarrow{\text{preventive DIG}}$ `EMPTY_ASSIGNED` (rimuove la pianta esaurita prima che subisca decadimento/lifespan decay a WEED).
-
 ---
 
-## 5. Macchina WATER, allerta Care ed EOD Loss
+## 3. Crop & Tile State Machine
 
-### 5.1 Condizione ortogonale `tile_care_due_condition`
+### 3.1 Variabili Engine-Native e Derived Tile Lifecycle Views (CORR-07)
 
-`tile_care_due_condition` (o `care_due`) **non è uno stato strutturale del lifecycle**, ma una condizione di allerta ortogonale applicabile a qualsiasi tile con `kind == PLANT`:
+La State Machine separa rigorosamente le **variabili e stati primitivi memorizzati dall'engine** dalle **viste derivate di lifecycle**.
 
-$$\text{care\_due}(\text{tile}) \iff \text{tile.kind} == \text{PLANT} \quad \land \quad \text{tile.watered\_today} == \text{false}$$
+#### A. Stato e Variabili Engine-Native
+L'engine mantiene e muta deterministicamente le seguenti grandezze per ciascuna cella $[x, y]$:
+- **Ownership:** sblocco del quadrante fondiario (`unlocked_quadrants` vs `"LOCKED"`);
+- **`tile.kind`:** valore strutturale (`None`, `"LOCKED"`, `"PLANT"`, `"WEED"`, `"COOP"`, `"PASTURE"`);
+- **Specie vegetale (`crop`):** `WHEAT`, `CARROT`, `TOMATO`, `STRAWBERRY`, `MELON` (se `kind == "PLANT"`);
+- **Parametri di crescita:** `planted_day`, `yield_units`, `max_lifespan_step`;
+- **Flags idrici:** `watered_today` (Boolean), `consecutive_unwatered` (Intero $\ge 0$);
+- **Finestra fertilizzazione:** `fertilized_until_day` (Intero indicante l'ultimo giorno di efficacia);
+- **Strutture e Bestiame:** tipo struttura (`COOP`, `PASTURE`), specie animale (`animal`), `consecutive_unfed`, `fed_today`, `cared_today`, `pending_care_bonus`, `fertilizer_available`, `yield_units`.
 
-### 5.2 Meccanica deterministica di disidratazione a EOD
-
-- Alla semina, la nuova `PLANT` nasce con `watered_today = false` e `consecutive_unwatered = 1`;
-- Durante la giornata operativa, un'azione `WATER` imposta `watered_today = true`;
-- Alla fase di EOD Refresh (`_daily_refresh_plants`):
-  ```text
-  if tile.watered_today:
-      tile.consecutive_unwatered = 0
-  else:
-      tile.consecutive_unwatered += 1
-
-  tile.watered_today = false
-
-  if tile.consecutive_unwatered >= 2:
-      tile = {"kind": "WEED"}
-  ```
-
-### 5.3 Conseguenze deterministiche verificate
-1. **Day-0 Vulnerability:** poiché una pianta nasce con `consecutive_unwatered = 1`, se non riceve `WATER` nello stesso giorno di semina, al primo EOD raggiunge contatore 2 e diventa `WEED`;
-2. **One-Day Grace Period:** per una pianta già stabilizzata (`consecutive_unwatered = 0`), un singolo giorno non servito porta il contatore a 1 senza causare morte;
-3. **Loss Boundary:** il secondo EOD consecutivo senza irrigazione trasforma la pianta in `WEED` in modo deterministico e irreversibile.
-
----
-
-## 6. Cause di generazione WEED e semantica DIG
-
-### 6.1 Le tre famiglie causali distinte di WEED
-
-La State Machine riconosce e separa formalmente le tre cause di comparsa di `WEED`:
-
-| Famiglia causale | Tile sorgente | Meccanismo engine | Fase temporale | Natura deterministica | Prevenzione |
-|---|---|---|---|---|---|
-| **1. Missed-WATER Loss** | `PLANT` (`GROWING` / `HARVEST_READY`) | EOD con `consecutive_unwatered >= 2` | Fase 9 (EOD Refresh) | Deterministica | Irrigare entro EOD; non piantare oltre la capacità di servizio. |
-| **2. Lifespan Decay** | `PLANT` (`HARVEST_READY` / `RETIREMENT_DUE`) | Tick di `_decay_plants` che riduce `yield_units` fino all'azzeramento o limite lifespan | Fase 8 (Per-step Decay) | Deterministica | Raccogliere tempestivamente; eseguire preventive DIG su ongoing esaurite. |
-| **3. Random Spawn** | `None` (`EMPTY_ASSIGNED` / Farm aperta) | Draw RNG a EOD con probabilità `< weedSpawnChance` | Fase 9 (EOD Refresh) | Stocastica | Ridurre le tile vuote esposte; il seed non è prevedibile online. |
-
-*Regola di separazione C2:* non esiste un singolo concetto aggregato `time_to_weed`. Per le tile `None`, l'esposizione è modellabile come *hazard rate / eligibility*, mai come countdown deterministico.
-
-### 6.2 Distinzione semantica delle azioni DIG
-
-In conformità con `ONTOLOGY_C2`, l'azione atomica `DIG` copre due funzioni operative distinte:
+#### B. Derived Tile Lifecycle Views (5 Viste Ambientali Pure) (CORR-07)
+La partizione ambientale esaustiva dell'ambiente fisico consiste di **5 viste derivate deterministiche**:
 
 ```text
-preventive_dig_action : RETIREMENT_DUE  --DIG-->  EMPTY_ASSIGNED  (clearance programmata fisiologica)
-recovery_dig_action   : LOST_WEED       --DIG-->  EMPTY_ASSIGNED  (bonifica di emergenza da perdita)
+OUT_OF_SCOPE   : [DERIVED VIEW] tile non posseduta ("LOCKED") o struttura ("COOP", "PASTURE")
+LOST_WEED      : [DERIVED VIEW] tile infestata da "WEED" che blocca l'uso arabile
+EMPTY_AVAILABLE: [DERIVED VIEW] tile arabile sbloccata libera (None) e disponibile per semina/costruzione
+HARVEST_READY  : [DERIVED VIEW] tile con PLANT matura soddisfacente crop_harvest_readiness (yield_units > 0 e age >= first_yield_day)
+GROWING        : [DERIVED VIEW] tile con PLANT attiva in accrescimento non ancora matura
 ```
 
-- **`preventive_dig_action`:** operazione di manutenzione programmata per rimuovere una pianta a fine ciclo e ripristinare il terreno per una nuova semina;
-- **`recovery_dig_action`:** costo di riparazione a posteriori per recuperare un terreno degradato a causa di missed-water, lifespan scaduto o spawn stocastico. Non costituisce una strategia primaria per cause di perdita prevenibili.
+*Policy Overlays (Separate dal modello fisico):*
+- **`in_working_set` (`POL-WS`):** assegnazione deliberativa della tile al perimetro operativo dell'agente (`POLICY_CONTEXT`);
+- **`policy_retirement_due` (`POL-RET`):** marcatura deliberativa di una pianta da estirpare tramite `DIG` (`POLICY_CONTEXT`).
+
+### 3.2 Condizione ortogonale `tile_care_due_condition` (Anti-Loss Alert)
+$$\text{tile\_care\_due\_condition}(\text{tile}) \iff \text{tile.kind} == \text{PLANT} \quad \land \quad \text{tile.watered\_today} == \text{False} \quad \land \quad \text{tile.consecutive\_unwatered} == 1$$
+
+### 3.3 Predicato formale di HARVEST Readiness e Silent No-Op
+$$\text{crop\_harvest\_readiness} \iff \begin{cases} \text{tile.kind} == \text{PLANT} \\ \text{tile.yield\_units} > 0 \\ \text{current\_day} - \text{tile.planted\_day} \ge \text{first\_yield\_day} \end{cases}$$
+
+Se un worker emette `HARVEST` quando $\text{current\_day} - \text{tile.planted\_day} < \text{first\_yield\_day}$, l'azione è un **silent no-op**: la pianta **non viene distrutta** e il suo stato biologico rimane inalterato.
+
+### 3.4 Parametri biologici e period ledger delle colture
+
+| Specie | Tipo | `first_yield_day` | Water Yield Ages | Ongoing Interval | Max Yield | Max Lifespan ($\text{step}$) | Resa per Irrigazione (Base / Fert) |
+|---|---|:---:|:---:|:---:|:---:|:---:|:---:|
+| `WHEAT` | Non-Ongoing | **2** | Giorni $2 \dots 4$ | N/A | **6** | $(d_0 + 5) \cdot T$ | $1$ / $2$ (uplift $+1$) |
+| `CARROT` | Non-Ongoing | **2** | Giorni $2 \dots 3$ | N/A | **4** | $(d_0 + 4) \cdot T$ | $1$ / $2$ (uplift $+1$) |
+| `TOMATO` | Ongoing | **8** | N/A | **1 giorno** (4 eventi: d8, d9, d10, d11) | **4** | $(d_0 + 12) \cdot T$ | $1$ / $2$ a EOD refresh (se irrigata) |
+| `STRAWBERRY` | Ongoing | **10** | N/A | **2 giorni** (4 eventi: d10, d12, d14, d16) | **4** | $(d_0 + 17) \cdot T$ | $1$ / $2$ a EOD refresh (se irrigata) |
+| `MELON` | Non-Ongoing | **10** | Giorni $6 \dots 12$ | N/A | **6** | $(d_0 + 13) \cdot T$ | $1$ / $2$ (uplift $+1$) |
 
 ---
 
-## 7. Workforce, movimento e multi-occupancy
+## 4. Fertilizer State Machine
 
-### 7.1 Multi-occupancy verificata
+### 4.1 Applicazione e Finestra Temporale (`fertilizer_effect_window`)
+L'azione atomica `FERTILIZE` eseguita su una tile `PLANT` consuma 1 unità di `FERTILIZER` dal worker inventory e imposta:
+$$\text{fertilized\_until\_day} = \max(\text{precedente}, \text{current\_day} + 2)$$
+avente durata di **3 giorni di calendario inclusivi** ($\text{current\_day} \dots \text{current\_day} + 2$).
 
+### 4.2 Semantica di resa ed esclusioni causali (CORR-04)
+- **Resa e Uplift Netto:** L'incremento per evento passa da 1 a 2 ($\text{FERTILIZER\_UPLIFT} = \mathbf{+1}$) **se e solo se la pianta è stata irrigata nel giorno corrente** (`was_watered == True` $\land$ `fertilized_until_day >= current_day`).
+- **Invarianza Biologica:** Il fertilizzante **NON accelera l'età biologica (`age`)**, **NON anticipa `first_yield_day`** e **NON modifica la data di lifespan decay**.
+
+---
+
+## 5. Livestock State Machine
+
+### 5.1 Specie supportate, strutture e allocazione (CORR-01, CORR-05)
+
+| Specie | Costo Acquisto | Struttura Dedicata | Costo Costruzione | Max Held Tile Resa | Primo Output | Intervallo Produzione | Prodotto Primario | Prodotto Secondario |
+|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+| `GOOSE` | \$300 | `COOP` | **\$0 cassa** | 4 | **Giorno $d_0 + 4$** | **1 giorno** | `EGG` | `FERTILIZER` |
+| `COW` | \$400 | `PASTURE` | **\$0 cassa** | 6 | **Giorno $d_0 + 8$** | **2 giorni** | `MILK` | `FERTILIZER` |
+| `SHEEP` | \$500 | `PASTURE` | **\$0 cassa** | 6 | **Giorno $d_0 + 6$** | **3 giorni** | `WOOL` | `FERTILIZER` |
+
+*Nota:* `ANIMALS.max_held` è il limite di resa accumulabile sulla tile della struttura zootecnica. **L'inventario del lavoratore non ha limiti di capienza** (`kaggriculture.py:299-309`). `BUILD_COOP` e `BUILD_PASTURE` costano **0 cassa**.
+
+### 5.2 Struttura degli stati dell'entità animale
+```text
+EMPTY_STRUCTURE   : struttura costruita (COOP/PASTURE), priva di animale
+OCCUPIED_ANIMAL   : animale presente alloggiato (consecutive_unfed in [0, 1])
+ESCAPED_ANIMAL    : transizione a EOD su consecutive_unfed >= 2 -> la struttura torna EMPTY_STRUCTURE
+```
+
+### 5.3 Meccanica di alimentazione (`FEED`), fuga e disaccoppiamento produzione base
+- **Azione `FEED`:** richiede 1 `WHEAT` nel worker inventory. Consuma 1 Wheat e imposta **`fed_today = True`**;
+- **Aggiornamento Digiuno e Fuga a EOD:** se `fed_today == True` $\implies \text{consecutive\_unfed} = 0$; altrimenti $\text{consecutive\_unfed} += 1$. Se $\text{consecutive\_unfed} \ge 2$, l'animale fugge all'EOD;
+- **Produzione di Base (Disaccoppiata da FEED):** nel giorno biologico programmato, se l'animale non è fuggito, viene erogato **$\text{base\_output} = 1$**. `FEED` **NON è il gate abilitante del base output**.
+
+### 5.4 Meccanica di cura (`CARE`) e reset programmato del bonus (CORR-06)
+- **Azione `CARE`:** imposta `cared_today = True`;
+- **Ordine causale EOD di Consumo, Reset e Accumulo:**
+  1. *Consumo e Reset:* ad ogni giorno di produzione programmata, se `fed_today == True`, viene applicato il `pending_care_bonus` preesistente. **In ogni caso, a ogni produzione programmata, `pending_care_bonus` viene resettato a 0** (`kaggriculture.py:823-828`);
+  2. *Accumulo:* **dopo** la produzione, se `fed_today == True AND cared_today == True`, $\text{pending\_care\_bonus} \leftarrow \text{pending\_care\_bonus} + 1$ (salvato per produzioni future).
+
+### 5.5 Fertilizer Animale e raccolta
+- A ogni EOD in cui l'animale sopravvive, $\text{fertilizer\_available} = \text{True}$ (flag booleano non-cumulativo);
+- `COLLECT_FERTILIZER` trasferisce 1 `FERTILIZER` al worker inventory e reimposta $\text{fertilizer\_available} = \text{False}$.
+
+---
+
+## 6. Workforce, Movimento e Inventory State Machine
+
+### 6.1 Multi-Occupancy e Assenza di Collisioni
 $$\text{worker\_multi\_occupancy} \implies \text{ENGINE\_VERIFIED}$$
+L'engine consente a molteplici worker di occupare contemporaneamente la medesima coordinata spaziale $(x, y)$ senza collisioni fisiche.
 
-L'engine consente a più unità (Farmer e Farm Hands) di condividere contemporaneamente la medesima coordinata spaziale $[x, y]$ senza collisioni fisiche native, blocchi di movimento o invalidazione delle posizioni.
+### 6.2 Ciclo di vita dei Worker e Inventario (CORR-01)
+- **Main Farmer:** permanente, attivo dal tick 0. A ogni EOD viene riposizionato alla coordinata di spawn dello shed;
+- **Farm Hands:** assunti tramite `HIRE`. Operativi a $t+1$, hanno contratto giornaliero e vengono rimossi a EOD, con reset di $\text{hires\_today} = 0$;
+- **Capienza Inventario Worker:** l'inventario del lavoratore è un dizionario dinamico **privo di limite di carico** (`_inv_add` inserisce senza guardie di spazio).
 
-### 7.2 Need, Eligibility e Serviceability
-
-La State Machine formalizza la netta separazione tra stato della tile, idoneità dell'azione e fattibilità logistica:
+### 6.3 Semantica di scarico inventario e gestione Overflow
+L'ambiente modella tre modalità distinte di trasferimento merci verso lo shed centrale (`shedCapacity`, default 100):
 
 ```text
-tile_need                   : fabbisogno oggettivo della tile (es. care_due, harvest_ready)
-action_eligible_now         : worker presente sulla coordinata con precondizioni soddisfatte per agire al tick corrente
-serviceable_before_deadline : certezza che un worker raggiungerà ed eseguirà l'azione prima del verificarsi del vincolo di perdita
+┌────────────────────────────────────────────────────────────────────────────────────────┐
+│ MODALITÀ DI TRASFERIMENTO MERCI ALLO SHED                                              │
+├──────────────────┬─────────────────────────────────────────────────────────────────────┤
+│ 1. PLACE         │ CONSERVATIVO: trasferisce fino a capienza residua dello shed;        │
+│    (Azione tick) │ L'eccedenza rimane intatta nell'inventario del lavoratore.         │
+├──────────────────┼─────────────────────────────────────────────────────────────────────┤
+│ 2. MANUAL_DROP   │ DISTRUTTIVO: deposita fino a capienza residua dello shed;           │
+│    (Azione tick) │ L'intero inventario eccedente del lavoratore viene irreversibilmente │
+│                  │ CANCELLATO dall'ambiente (shed_overflow_loss).                      │
+├──────────────────┼─────────────────────────────────────────────────────────────────────┤
+│ 3. EOD_AUTO_DROP │ DISTRUTTIVO: procedura automatica di fine giornata;                │
+│    (Fase 8 EOD)  │ Trasferisce tutti gli inventari dei worker fino a capienza shed;     │
+│                  │ L'eccedenza totale viene DISTRUTTA (shed_overflow_loss).            │
+└──────────────────┴─────────────────────────────────────────────────────────────────────┘
 ```
 
-*Status di serviceability:* `serviceable_before_deadline` resta `PARTIALLY_KNOWN` a livello globale finché non viene accoppiato a un contratto esplicito di routing, posizionamento, inventario e budget di passi per-step.
+---
 
-### 7.3 Dinamica contrattuale e assunzioni (`HIRE`)
-- Il main farmer è permanente e riposizionato alla spawn tile dello shed a ogni EOD;
-- I farm hands sono assunti tramite ordini market `HIRE` e operano con inventari separati;
-- Il costo di assunzione giornaliero scala secondo la serie Fibonacci moltiplicata per `farmHandCostMult`;
-- A EOD, **tutti i farm hands vengono rimossi** e il contatore `hires_today` torna a 0; per operare il giorno successivo, la policy deve riemettere comandi `HIRE`.
+## 7. Market, Capitale e Monetizzazione State Machine
+
+### 7.1 Ordini di mercato e batch limit
+Gli ordini di mercato vengono elaborati nella Fase 5 del ciclo di step:
+- Ordini ammessi: `BUY_SEED`, `BUY_PRODUCT`, `BUY_ANIMAL`, `SELL`, `BUY_LAND`, `HIRE`;
+- **Limite di batch:** $\text{maxMarketOrdersPerTurn}$ ordini per turno (default 10); ordini eccedenti vengono ignorati;
+- **Prezzi dinamici:** i prezzi fluttuano in base alle scorte del market e ai consumi cittadini.
+
+### 7.2 Separazione Cassa Online vs Outcome Terminale
+- `current_money_state`: saldo liquido osservabile in tempo reale (`farms[player].money`);
+- `final_money_outcome`: saldo terminale a $\text{step} \ge \text{episodeSteps}$, costituente la reward della simulazione.
 
 ---
 
-## 8. Meccanica FERTILIZE C2
-
-La dinamica di fertilizzazione è promossa a `ENGINE_VERIFIED` nel perimetro delle regole accertate in `kaggriculture.py`:
-
-### 8.1 Finestra di persistenza (`fertilizer_effect_window`)
-All'applicazione di un'azione `FERTILIZE`, l'engine imposta:
-
-$$\text{tile.fertilized\_until\_day} = \max(\text{tile.fertilized\_until\_day}, \text{current\_day} + 2)$$
-
-L'effetto fertilizzante è attivo per **3 giorni consecutivi inclusivi** ($\text{day} \dots \text{day} + 2$).
-
-### 8.2 Bonus colturale verificato (`crop_fertilizer_bonus`)
-- **Colture Ongoing irrigate:** durante il refresh di EOD, se la fertilizzazione è attiva (`day <= fertilized_until_day`) e la pianta è stata irrigata (`watered_today == true`), l'engine eroga **+2 unità addizionali di yield**;
-- **Colture Non-Ongoing:** durante l'azione `WATER`, se la pianta si trova nella finestra di resa e la fertilizzazione è attiva, l'engine eroga **+2 unità addizionali di yield** per ciascuna irrigazione.
-
-*Confine:* la State Machine documenta la meccanica formale; la valutazione della convenienza economica, del ROI e della politica di acquisto/impiego di fertilizer appartiene ai singoli `MODEL_SPEC`.
-
----
-
-## 9. Livestock, Feed, Care e Accumulo Bonus
-
-**Evidence status complessivo: `PARTIALLY_KNOWN` (meccaniche core `ENGINE_VERIFIED`).**
-
-### 9.1 Parametri base delle specie animali
-
-| Specie | Struttura richiesta | Primo giorno produzione | Intervallo produzione | Prodotto primario | Prodotto secondario |
-|---|---|---:|---:|---|---|
-| `GOOSE` | `COOP` | Giorno 4 | 1 giorno | `EGG` | Fertilizer |
-| `COW` | `PASTURE` | Giorno 8 | 2 giorni | `MILK` | Fertilizer |
-| `SHEEP` | `PASTURE` | Giorno 6 | 3 giorni | `WOOL` | Fertilizer |
-
-### 9.2 Meccanica FEED + CARE e accumulo bonus
-- **Alimentazione (`FEED`):** richiede Wheat nell'inventario del worker; imposta `fed_today = true` sull'animale;
-- **Cura (`CARE`):** imposta `cared_today = true`;
-- **Accumulo bonus a EOD:** a fine giornata (`_daily_refresh_animals`), `pending_care_bonus` viene incrementato se e solo se l'animale è stato sia nutrito sia accudito nello stesso giorno (`fed_today == true` e `cared_today == true`); l'accumulo a EOD è semanticamente distinto dal consumo del bonus nei giorni di produzione;
-- **Produzione e consumo bonus a EOD:** nei giorni di produzione biologica prefissati:
-  - Se l'animale è alimentato (`fed_today == true`), l'engine genera il prodotto primario applicando l'eventuale moltiplicatore derivante dal `pending_care_bonus` accumulato, e consuma il bonus corrispondente;
-  - Se l'animale non è alimentato, la produzione non avviene e `consecutive_unfed` viene incrementato.
-- **Fuga dell'animale (Animal Escape):** se `consecutive_unfed >= 2`, l'animale scappa dalla struttura, che torna nello stato `EMPTY_STRUCTURE`.
-- **Generazione Fertilizer:** a ogni EOD, la presenza di animali attivi genera automaticamente unità di Fertilizer.
-
----
-
-## 10. Endgame e integrità dell'inventario (Shed Overflow EOD)
-
-### 10.1 Correzione formale `shed_overflow_eod_loss`
-
-$$\text{contract\_inventory\_loss} \xrightarrow{\text{CORREZIONE C2}} \text{shed\_overflow\_eod\_loss} \quad (\text{ENGINE\_VERIFIED})$$
-
-- Durante la procedura di fine giornata (Fase 9: `_drop_inventories_to_shed`), l'engine trasferisce **automaticamente e interamente** allo shed centrale (`private.shed`) tutti i beni trasportati da ciascun worker;
-- Lo shed ha una capacità massima strutturale di **100 unità totali** (`shedCapacity`);
-- Se la somma dei beni già presenti nello shed e dei beni scaricati dai worker eccede 100 unità, l'eccedenza oltre la capienza viene distrutta irreversibilmente (`shed_overflow_eod_loss`);
-- **Falsificazione definitiva:** non esiste alcuna perdita derivante dalla scadenza contrattuale del worker né alcun obbligo di far rientrare manualmente i worker allo shed prima del termine della giornata per salvare l'inventario.
-
----
-
-## 11. Diagramma Mermaid complessivo C2
+## 8. Diagramma Mermaid Complessivo C2 (Environment / Domain)
 
 ```mermaid
 flowchart TB
-    subgraph Global[Global Engine Cycle - 11 Phases]
-        U[1. UNINITIALIZED] -->|initialize| S[2. STEP_OPEN]
-        S -->|3. validate PLANT| V[PLANT_VALIDATED]
-        V -->|4. farmer action| FA[FARMER_APPLIED]
-        FA -->|5. hands actions| HA[HANDS_APPLIED]
-        HA -->|6. market orders| MO[MARKET_PROCESSED]
-        MO -->|7. town consume| TC[TOWN_CONSUMED]
-        TC -->|8. plant lifespan decay| PD[DECAY_APPLIED]
-        PD --> EOD{9. End of Day?}
-        EOD -->|no| NO[10. NEXT_HOUR_OBSERVATION]
-        EOD -->|yes| PR[9a. PLANT_REFRESH & WEED_CHECK]
-        PR --> AR[9b. ANIMAL_REFRESH & CARE_CONSUME]
-        AR --> WS[9c. RNG_WEED_SPAWN_ON_NONE]
-        WS --> SD[9d. AUTO_DROP_TO_SHED_OVERFLOW_LOSS]
-        SD --> WR[9e. WORKER_RESET_&_HANDS_REMOVED]
-        WR --> NO
-        NO -->|active episode| S
-        NO -->|11. max steps reached| END[11. DONE_REWARD_EQUALS_MONEY]
-    end
+%% ==========================================
+%% STILI PER CLASSI EPISTEMICHE
+%% ==========================================
+classDef enginePhase fill:#e1f5fe,stroke:#0288d1,stroke-width:1.5px,color:#01579b;
+classDef cropState fill:#e8f5e9,stroke:#388e3c,stroke-width:1.5px,color:#1b5e20;
+classDef animalState fill:#fff3e0,stroke:#f57c00,stroke-width:1.5px,color:#e65100;
+classDef storageState fill:#f3e5f5,stroke:#7b1fa2,stroke-width:1.5px,color:#4a148c;
+classDef marketState fill:#ede7f6,stroke:#512da8,stroke-width:1.5px,color:#311b92;
+classDef alertState fill:#ffebee,stroke:#d32f2f,stroke-width:1.5px,color:#b71c1c;
 
-    subgraph CropLifecycle[Crop & Tile Lifecycle C2]
-        OOS[OUT_OF_SCOPE] -->|BUY_LAND & assign| EA[EMPTY_ASSIGNED]
-        EA -->|PLANT action| G[GROWING]
-        G -->|WATER action| G
-        G -->|day >= planted + first_yield & yield > 0| HR[HARVEST_READY]
-        HR -->|HARVEST non-ongoing| EA
-        HR -->|HARVEST ongoing intermediate| G
-        HR -->|HARVEST ongoing final| RD[RETIREMENT_DUE]
-        RD -->|preventive DIG| EA
-        G -->|missed WATER: unwatered >= 2 at EOD| LW[LOST_WEED]
-        G -->|lifespan decay at phase 8| LW
-        HR -->|lifespan decay at phase 8| LW
-        RD -->|lifespan decay at phase 8| LW
-        EA -->|RNG draw < spawnChance at EOD| LW
-        LW -->|recovery DIG| EA
-    end
+%% ==========================================
+%% CICLO GLOBALE ENGINE & ACTION PIPELINE
+%% ==========================================
+subgraph GLOBAL_CYCLE ["1. Global Engine Cycle and Action Pipeline (T = turnsPerDay)"]
+    direction TB
+    S0["1. UNINITIALIZED<br>(step == 0)"]:::enginePhase --> S1["2. STEP_OPEN<br>(step = day*T + hour)"]:::enginePhase
+    S1 --> S2["3. READ_ACTION_REQUESTS<br>(Farmer, Hands, Market)"]:::enginePhase
+    S2 --> S3["4. VALIDATE_ACTIONS<br>(Atomic PLANT demand check)"]:::enginePhase
+    S3 -->|guard passed| S4["5. EXECUTE_ACTIONS<br>(_apply_unit_action per worker)"]:::enginePhase
+    S3 -->|guard failed| S4_NOOP["SILENT_NO_OP<br>(state unchanged)"]:::alertState
+    S4_NOOP --> S5["6. MARKET_ORDERS_PROCESSING<br>(maxMarketOrdersPerTurn)"]:::enginePhase
+    S4 --> S5
+    S5 --> S6["7. TOWN_CONSUMPTION<br>(_town_consume)"]:::enginePhase
+    S6 --> S7["8. PLANT_LIFESPAN_DECAY<br>(_decay_plants if step ge MLS)"]:::enginePhase
+    S7 --> EOD_CHECK{9. End of Day?<br>hour == T - 1}
 
-    subgraph OrthogonalCare[Orthogonal Tile Condition]
-        PLANT_ANY[PLANT Tile] -.->|watered_today == false| CD[tile_care_due_condition]
-        CD -.->|WATER action before EOD| PLANT_OK[Irrigated: counter reset]
-        CD -.->|unwatered 2nd EOD| LW
-    end
+    EOD_CHECK -->|No| NEXT_TICK["10. NEXT_HOUR_STEP<br>(hour += 1)"]:::enginePhase
+    EOD_CHECK -->|Yes| EOD_1["8.1. Daily Refresh Plants<br>(water check -> unwatered count -> WEED check -> ongoing yield)"]:::enginePhase
 
-    subgraph Workforce[Workforce Dynamics - ENGINE_VERIFIED]
-        MF[MAIN_FARMER] -->|MOVE / TILE_OP| MF
-        NH[NO_HANDS] -->|HIRE order| HANDS[HANDS_AVAILABLE]
-        HANDS -->|MOVE / TILE_OP| HANDS
-        HANDS -->|multi_occupancy co-location| HANDS
-        HANDS -->|EOD: contracts expire| NH
-        MF -->|EOD: reset to shed spawn| MF
-        WINV[WORKER_INVENTORIES] -->|EOD auto drop up to 100| SHED[SHED_STORAGE]
-        WINV -->|EOD overflow beyond 100| LOSS[shed_overflow_eod_loss]
-    end
+    EOD_1 --> EOD_2["8.2. Daily Refresh Animals<br>(escape check -> fertilizer avail -> base prod -> care reset/accumulation)"]:::enginePhase
+    EOD_2 --> EOD_3["8.3. Stochastic RNG Weed Spawn<br>(draw under weedSpawnChance on None tiles)"]:::enginePhase
+    EOD_3 --> EOD_4["8.4. Worker Inventories Auto-Drop<br>(transfer to shed up to capacity, excess lost)"]:::enginePhase
+    EOD_4 --> EOD_5["8.5. Workforce Reset<br>(Farmer to spawn, Hands removed, hires_today = 0)"]:::enginePhase
+    EOD_5 --> EOD_6["8.6. Town and Shop Updates<br>(calendar refresh)"]:::enginePhase
+    EOD_6 --> NEXT_DAY["10. NEXT_DAY_STEP<br>(day += 1, hour = 0)"]:::enginePhase
 
-    subgraph LivestockSub[Livestock Subsystem]
-        SOIL[None Tile] -->|BUILD_COOP / PASTURE| ES[EMPTY_STRUCTURE]
-        ES -->|PLACE animal| OS[OCCUPIED_STRUCTURE]
-        OS -->|FEED wheat| FED[fed_today = true]
-        OS -->|CARE action| CARE[cared_today = true]
-        FED & CARE -->|EOD: cared_today AND fed_today| ACC[accumulate pending_care_bonus]
-        FED -->|EOD production day| PROD[PRIMARY_YIELD_AVAILABLE]
-        ACC -->|consumed on fed production| PROD
-        PROD -->|HARVEST action| OS
-        OS -->|consecutive_unfed >= 2 at EOD| ES
-        ES -->|DIG action| SOIL
-    end
+    NEXT_TICK --> S1
+    NEXT_DAY --> S1
+    NEXT_TICK -->|episode completed| TERM["11. TERMINAL_EVALUATION<br>(reward = final_money_outcome)"]:::enginePhase
+    NEXT_DAY -->|episode completed| TERM
+end
+
+%% ==========================================
+%% CROP & TILE LIFECYCLE
+%% ==========================================
+subgraph CROP_LIFECYCLE ["2. Crop and Tile Lifecycle (5 Pure Derived Views)"]
+    direction TB
+    T_OUT["OUT_OF_SCOPE<br>(LOCKED tile or structure)"]:::cropState -->|BUY_LAND| T_EMP["EMPTY_AVAILABLE<br>(None tile posseduta)"]:::cropState
+    T_EMP -->|PLANT: seed required| T_GROW["GROWING<br>(age under first_yield_day)"]:::cropState
+    T_GROW -->|WATER action| T_GROW
+    T_GROW -->|FERTILIZE: window day..day+2| T_GROW
+    T_GROW -->|maturity: age ge first_yield_day and yield gt 0| T_READY["HARVEST_READY<br>(crop_harvest_readiness = True)"]:::cropState
+
+    T_READY -->|HARVEST non-ongoing| T_EMP
+    T_READY -->|HARVEST ongoing: yield reset| T_GROW
+    T_GROW -->|DIG action| T_EMP
+    T_READY -->|DIG action| T_EMP
+
+    T_GROW -->|missed water: 2nd EOD unwatered| T_WEED["LOST_WEED<br>(infestazione WEED)"]:::cropState
+    T_READY -->|missed water: 2nd EOD unwatered| T_WEED
+    T_GROW -->|lifespan decay at Phase 7| T_WEED
+    T_READY -->|lifespan decay at Phase 7| T_WEED
+    T_EMP -->|RNG draw under weedSpawnChance at EOD| T_WEED
+    T_WEED -->|recovery DIG action| T_EMP
+
+    T_GROW -.->|early HARVEST attempt| NO_OP_HARV["SILENT NO-OP<br>(guard fails, plant preserved)"]:::alertState
+end
+
+%% ==========================================
+%% ORTHOGONAL CARE CONDITION
+%% ==========================================
+subgraph CARE_ALERT ["3. Anti-Loss Care Alert Condition"]
+    direction TB
+    PLANT_ST["Tile PLANT: unwatered today"]:::cropState --> ALERT_CD["tile_care_due_condition<br>(consecutive_unwatered == 1 and not watered_today)"]:::alertState
+    ALERT_CD -->|WATER executed before EOD| OK_WATER["watered_today = True<br>(consecutive_unwatered reset to 0 at EOD)"]:::cropState
+    ALERT_CD -->|No WATER before EOD| T_WEED
+end
+
+%% ==========================================
+%% LIVESTOCK SUBSYSTEM
+%% ==========================================
+subgraph LIVESTOCK_SYSTEM ["4. Livestock Subsystem (GOOSE, COW, SHEEP - No CHICKEN)"]
+    direction TB
+    L_NONE["None Tile"]:::animalState -->|BUILD_COOP or BUILD_PASTURE: cost 0| L_EMPTY["EMPTY_STRUCTURE<br>(COOP o PASTURE vuota)"]:::animalState
+    L_EMPTY -->|PLACE animal from inventory| L_OCC["OCCUPIED_ANIMAL<br>(animale vivo nella struttura)"]:::animalState
+
+    L_OCC -->|FEED action: 1 Wheat consumed| L_FED["fed_today = True"]:::animalState
+    L_OCC -->|CARE action: grooming| L_CARED["cared_today = True"]:::animalState
+
+    L_OCC -->|EOD check 1: consecutive_unfed ge 2| L_ESCAPE["ANIMAL ESCAPE<br>(fuga a EOD)"]:::alertState
+    L_ESCAPE --> L_EMPTY
+
+    L_OCC -->|EOD check 2: animal survives| L_FERT["fertilizer_available = True<br>(boolean non-cumulativo)"]:::animalState
+    L_FERT -->|COLLECT_FERTILIZER action| WINV_FERT["Worker Inventory: FERTILIZER"]:::storageState
+
+    L_OCC -->|EOD check 3: scheduled production day| L_PROD_EVENT["Production Event<br>(Base output = 1 independent of FEED)"]:::animalState
+    L_PROD_EVENT -->|Yield available on tile| YIELD_AVAIL["Output Available<br>(EGG, MILK, WOOL, cap max_held)"]:::animalState
+    L_BONUS_EXISTING["Existing pending_care_bonus"]:::animalState -.->|consumed if fed_today == True| YIELD_AVAIL
+
+    L_FED -->|EOD check 4: after production| L_BONUS_ACC["Accumulate pending_care_bonus += 1<br>(saved for FUTURE production)"]:::animalState
+    L_CARED -->|EOD check 4: if fed_today and cared_today| L_BONUS_ACC
+    L_BONUS_ACC --> L_BONUS_EXISTING
+
+    YIELD_AVAIL -->|HARVEST action| WINV_PROD["Worker Inventory: Animal Product"]:::storageState
+    L_EMPTY -->|DIG action| L_NONE
+end
+
+%% ==========================================
+%% STORAGE, LOSS & INVENTORY
+%% ==========================================
+subgraph INVENTORY_STORAGE ["5. Storage, Inventory and Overflow Semantics"]
+    direction TB
+    WINV["Worker Inventory<br>(Unbounded Capacity)"]:::storageState
+    SHED["Central Shed Storage<br>(shedCapacity, default 100)"]:::storageState
+
+    WINV -->|PLACE action: conservative| SHED
+    WINV -.->|PLACE: excess retained in worker inventory| WINV
+
+    WINV -->|MANUAL_DROP action: destructive| SHED
+    WINV -->|MANUAL_DROP: excess destroyed| LOSS_MAN["shed_overflow_loss<br>(worker inventory deleted)"]:::alertState
+
+    WINV -->|EOD_AUTO_DROP: Phase 8.4| SHED
+    WINV -->|EOD_AUTO_DROP: excess destroyed| LOSS_EOD["shed_overflow_loss<br>(excess over capacity deleted)"]:::alertState
+end
+
+%% ==========================================
+%% MARKET & CAPITAL CONVERSION
+%% ==========================================
+subgraph MARKET_CAPITAL ["6. Market, Capital and Monetization Flow"]
+    direction TB
+    SHED -->|SELL orders: max per turn| MKT_EXEC["Market Transaction Execution<br>(observed_fill_price)"]:::marketState
+    MKT_EXEC -->|Realized revenue| CASH["current_money_state<br>(farms[player].money)"]:::marketState
+
+    CASH -->|BUY_SEED orders| SEEDS["private.seeds[crop]"]:::storageState
+    CASH -->|BUY_ANIMAL orders| WINV_ANIM["Worker Inventory (Animal)"]:::storageState
+    CASH -->|BUY_LAND orders| T_OUT
+    CASH -->|HIRE orders| HANDS_ACT["Farm Hands activated at step t+1"]:::enginePhase
+
+    CASH -->|At episode completion| TERM
+end
+
+%% ==========================================
+%% WORKFORCE MULTI-OCCUPANCY
+%% ==========================================
+subgraph WORKFORCE_SPATIAL ["7. Workforce Dynamics (ENGINE_VERIFIED)"]
+    direction TB
+    W_FARMER["Main Farmer<br>(permanent, respawn at EOD)"]:::enginePhase
+    W_HANDS["Farm Hands<br>(daily contract, removed at EOD)"]:::enginePhase
+    W_FARMER --> CO_LOC["Co-location on (x, y)<br>(No physical collision stall)"]:::enginePhase
+    W_HANDS --> CO_LOC
+end
 ```
 
 ---
 
-## 12. Tabella canonica delle transizioni C2
+## 9. Tabella Canonica delle Transizioni C2
 
-| subsystem | from_state | to_state | trigger | engine_condition | det/stoch | online_obs | action | evidence_status | evidence_source |
-|---|---|---|---|---|---|---|---|---|---|
-| global | `UNINITIALIZED` | `STEP_OPEN` | initialize | farm non presenti | deterministic | framework | none | `ENGINE_VERIFIED` | `kaggriculture.py::_initialize` |
-| global | `STEP_OPEN` | `PLANT_VALIDATED` | atomic check | same-player demand $\le$ seeds | deterministic | yes | none | `ENGINE_VERIFIED` | `interpreter` |
-| global | `PLANT_VALIDATED` | `ACTIONS_APPLIED` | action phase | player actions | deterministic | yes | farmer/hands actions | `ENGINE_VERIFIED` | `_apply_unit_action` |
-| global | `ACTIONS_APPLIED` | `MARKET_PROCESSED` | market phase | ordini validati | deterministic | partial | market orders | `ENGINE_VERIFIED` | `_process_market` |
-| global | `MARKET_PROCESSED` | `TOWN_CONSUMED` | town tick | schedule urbano | deterministic | yes | none | `ENGINE_VERIFIED` | `_town_consume` |
-| global | `TOWN_CONSUMED` | `DECAY_APPLIED` | step decay | plant con lifespan | deterministic | yes | none | `ENGINE_VERIFIED` | `_decay_plants` |
-| global | `DECAY_APPLIED` | `DAY_REFRESHED` | EOD tick | `(step+1) % turnsPerDay == 0` | mixed | yes/no (RNG) | preventive actions | `ENGINE_VERIFIED` | `_end_of_day` |
-| global | `DAY_REFRESHED` | `DONE` | episode end | `step >= max_steps` | deterministic | yes | none | `ENGINE_VERIFIED` | `interpreter` |
-| crop | `EMPTY_ASSIGNED` | `GROWING` | `PLANT` | tile `None`, seed $>0$ | deterministic | yes | `PLANT` | `ENGINE_VERIFIED` | tile audit T02 |
-| crop | `GROWING` | `GROWING` | `WATER` | `watered_today == false` | deterministic | yes | `WATER` | `ENGINE_VERIFIED` | tile audit T03 |
-| crop | `GROWING` | `HARVEST_READY` | maturity | $\text{day}-\text{planted} \ge \text{first\_yield} \land \text{yield}>0$ | deterministic | yes | none | `ENGINE_VERIFIED` | `ONTOLOGY_C2` |
-| crop | `HARVEST_READY` | `EMPTY_ASSIGNED` | non-ongoing harvest | harvest valido | deterministic | yes | `HARVEST` | `ENGINE_VERIFIED` | tile audit T06 |
-| crop | `HARVEST_READY` | `GROWING` | ongoing harvest | produzioni future residue | deterministic | yes | `HARVEST` | `ENGINE_VERIFIED` | tile audit T07 |
-| crop | `HARVEST_READY` | `RETIREMENT_DUE` | final ongoing harvest | produzioni esaurite | deterministic | yes | `HARVEST` | `DERIVED` | tile audit T08 |
-| crop | `GROWING` | `LOST_WEED` | missed WATER | EOD $\text{consecutive\_unwatered} \ge 2$ | deterministic | yes | preventive `WATER` | `ENGINE_VERIFIED` | tile audit T10 |
-| crop | `HARVEST_READY` | `LOST_WEED` | lifespan decay | decay porta yield a 0 | deterministic | yes | preventive `HARVEST` | `ENGINE_VERIFIED` | tile audit T12 |
-| crop | `RETIREMENT_DUE` | `LOST_WEED` | lifespan decay | tick decay su esaurita | deterministic | yes | `preventive_dig` | `ENGINE_VERIFIED` | tile audit T13 |
-| crop | `EMPTY_ASSIGNED` | `LOST_WEED` | random spawn | tile `None` a EOD, draw $< \text{chance}$ | stochastic | exposure yes, draw no | occupancy; `recovery_dig` | `ENGINE_VERIFIED` | tile audit T14 |
-| crop | `RETIREMENT_DUE` | `EMPTY_ASSIGNED` | preventive clear | ongoing esaurita | deterministic | yes | `preventive_dig_action` | `DERIVED` | `ONTOLOGY_C2` |
-| crop | `LOST_WEED` | `EMPTY_ASSIGNED` | recovery clear | tile `WEED` | deterministic | yes | `recovery_dig_action` | `DERIVED` | `ONTOLOGY_C2` |
-| worker | `POSITION_XY` | `POSITION_XY_NEXT` | movement | target in bounds | deterministic | yes | Move action | `ENGINE_VERIFIED` | `_apply_unit_action` |
-| worker | `CO_LOCATED` | `CO_LOCATED` | multi_occupancy | multiple units on $[x,y]$ | deterministic | yes | none / Move | `ENGINE_VERIFIED` | engine verification |
-| worker | `NO_HANDS` | `HANDS_AVAILABLE` | `HIRE` | valid order & cash | deterministic | yes | `HIRE` | `ENGINE_VERIFIED` | hire functions |
-| worker | `HANDS_AVAILABLE` | `NO_HANDS` | EOD contract reset | EOD refresh | deterministic | yes | renew `HIRE` next day | `ENGINE_VERIFIED` | `_end_of_day` |
-| worker | `WORKER_INVENTORY` | `SHED` | EOD auto drop | total $\le \text{shedCapacity}$ (100) | deterministic | yes | none | `ENGINE_VERIFIED` | `_drop_inventories_to_shed` |
-| worker | `WORKER_INVENTORY` | `OVERFLOW_LOSS` | EOD overflow | total $> \text{shedCapacity}$ (100) | deterministic | yes | sell/manage inventory | `ENGINE_VERIFIED` | `_drop_inventories_to_shed` |
-| livestock | `None` | `EMPTY_STRUCTURE` | build structure | tile `None` | deterministic | yes | `BUILD_COOP`/`PASTURE` | `ENGINE_VERIFIED` | `_apply_unit_action` |
-| livestock | `EMPTY_STRUCTURE` | `OCCUPIED_STRUCTURE` | place animal | matching animal in inventory | deterministic | yes | `PLACE` | `ENGINE_VERIFIED` | `_apply_unit_action` |
-| livestock | `OCCUPIED_STRUCTURE` | `FED_TODAY` | feed action | Wheat in inventory | deterministic | yes | `FEED` | `ENGINE_VERIFIED` | `_apply_unit_action` |
-| livestock | `OCCUPIED_STRUCTURE` | `CARED_TODAY` | care action | `cared_today == false` | deterministic | yes | `CARE` | `ENGINE_VERIFIED` | `_apply_unit_action` |
-| livestock | `OCCUPIED_STRUCTURE` | `BONUS_ACCUMULATED` | EOD care refresh | `fed_today == true` $\land$ `cared_today == true` | deterministic | yes | none | `ENGINE_VERIFIED` | `_daily_refresh_animals` |
-| livestock | `OCCUPIED_STRUCTURE` | `PRODUCT_YIELD` | EOD production | fed today & production day | deterministic | yes | `FEED` (+ bonus if accumulated) | `ENGINE_VERIFIED` | `_daily_refresh_animals` |
-| livestock | `OCCUPIED_STRUCTURE` | `EMPTY_STRUCTURE` | animal escape | EOD $\text{consecutive\_unfed} \ge 2$ | deterministic | yes | preventive `FEED` | `ENGINE_VERIFIED` | `_daily_refresh_animals` |
-
----
-
-## 13. Separazione rigorosa ENGINE vs POLICY
-
-| Entità / Meccanica | Dominio | Natura e Note di Governance |
-|---|---|---|
-| `None`, `"LOCKED"`, `PLANT`, `WEED`, `COOP`, `PASTURE` | **ENGINE** | Valori nativi della griglia delle tile. |
-| `watered_today`, `consecutive_unwatered`, `yield_units`, `max_lifespan_step` | **ENGINE** | Campi di stato nativo della pianta. |
-| `first_yield_day`, `ongoing`, `interval`, `max_yield`, `fertilized_until_day` | **ENGINE** | Costanti e parametri biologici definiti dall'ambiente. |
-| Soglia disidratazione EOD $\ge 2$ | **ENGINE** | Confine deterministico e inviolabile di perdita a WEED. |
-| Durata fertilizzante $\text{day} \dots \text{day}+2$ e bonus +2 yield | **ENGINE** | Regola nativa deterministica accertata nel codice. |
-| Multi-occupancy dei worker sulla stessa coordinata | **ENGINE** | Proprietà fisica dello spazio della simulazione. |
-| Drop automatico EOD e perdita per overflow oltre 100 | **ENGINE** | Meccanica di storage centralizzato; nessun rientro manuale richiesto. |
-| Random WEED spawn eligibility su tile `None` | **ENGINE** | Meccanismo stocastico; il draw RNG non è osservabile online. |
-| 6 stati del lifecycle (`OUT_OF_SCOPE` $\dots$ `LOST_WEED`) | **DERIVED** | Categorie concettuali neutrali derivate dallo stato primitivo. |
-| Condizione ortogonale `tile_care_due_condition` | **DERIVED** | Predicato di allerta istantaneo, ortogonale allo stato strutturale. |
-| Working set e appartenenza (`working_set_member`) | **POLICY** | Scelta discrezionale dell'agente di allocare specifiche tile. |
-| Target numerico di crop (es. 6, 8, 12 piante) | **POLICY** | Obiettivo strategico, non vincolo o limite dell'ambiente. |
-| Bande di priorità WATER (es. high/medium/low priority) | **POLICY** | Euristica di dispatching del decisore, non regola engine. |
-| Algoritmo di routing (nearest-task, BFS, reservation) | **POLICY** | Logica interna dell'agente; l'engine offre solo spostamento ortogonale. |
-| Target di 10 farm hands | **POLICY** | Scelta di scalamento; l'engine permette assunzioni fino a capienza cassa. |
-| Operating cash floor (es. \$300) | **POLICY** | Buffer prudenziale dell'agente; l'engine richiede solo cassa $>0$ per transazione. |
-| Mix colturale (es. 40% Wheat, 40% Strawberry, 20% Melon) | **POLICY** | Allocazione di portafoglio decisa dall'agente. |
-| Timing di acquisto dei quadranti fondiari | **POLICY** | Decisione di investimento; l'engine espone solo il costo di sblocco. |
-| Shutdown window negli ultimi 48 step | **POLICY** | Euristica di disimpegno per massimizzare la cassa terminale. |
-| `serviceable_before_deadline` | **POLICY / DERIVED** | Valutazione predittiva di raggiungibilità; non garantita a priori dall'engine. |
+| Subsystem | Stato Iniziale | Stato Finale | Trigger Event | Condizione / Guardia Engine | Natura | Osservabilità | Azione Coinvolta | Evidence Status |
+|---|---|---|---|---|---|---|---|:---:|
+| **Global** | `UNINITIALIZED` | `STEP_OPEN` | `_initialize` | $\text{step} == 0$ | Deterministica | Framework | None | `ENGINE_VERIFIED` |
+| **Global** | `STEP_OPEN` | `READ_ACTIONS` | Step Tick | Input comandi player | Deterministica | Online Obs | None | `ENGINE_VERIFIED` |
+| **Global** | `READ_ACTIONS` | `ACTIONS_VALIDATED` | Atomic Check | $\text{demand\_seeds} \le \text{seeds\_available}$ | Deterministica | Online Obs | None | `ENGINE_VERIFIED` |
+| **Global** | `ACTIONS_VALIDATED` | `ACTIONS_EXECUTED` | Action Phase | Guardie $\_apply\_unit\_action$ | Deterministica | Online Obs | Farmer/Hands actions | `ENGINE_VERIFIED` |
+| **Global** | `ACTIONS_VALIDATED` | `ACTIONS_EXECUTED` | Action Phase | Guardia fallita $\implies$ no-op | Deterministica | Online Obs | Silent no-op | `ENGINE_VERIFIED` |
+| **Global** | `ACTIONS_EXECUTED` | `MARKET_PROCESSED` | Market Phase | $\le \text{maxOrders}$, cassa/merci ok | Deterministica | Online Deriv | Market orders | `ENGINE_VERIFIED` |
+| **Global** | `MARKET_PROCESSED` | `TOWN_CONSUMED` | Town Tick | Schedule consumo urbano | Deterministica | Online Obs | None | `ENGINE_VERIFIED` |
+| **Global** | `TOWN_CONSUMED` | `DECAY_APPLIED` | Step Decay | $\text{step} \ge \text{max\_lifespan\_step}$ | Deterministica | Online Deriv | None | `ENGINE_VERIFIED` |
+| **Global** | `DECAY_APPLIED` | `DAY_REFRESHED` | EOD Trigger | $(\text{step} + 1) \pmod T == 0$ | Mista (RNG) | Online Obs | EOD procedure | `ENGINE_VERIFIED` |
+| **Global** | `DAY_REFRESHED` | `TERMINAL` | Episode End | $\text{step} + 1 \ge \text{episodeSteps}$ | Deterministica | Outcome Only | None | `ENGINE_VERIFIED` |
+| **Crop** | `OUT_OF_SCOPE` | `EMPTY_AVAILABLE` | `BUY_LAND` | Cassa $\ge$ costo sblocco quadrante | Deterministica | Online Obs | `BUY_LAND` | `ENGINE_VERIFIED` |
+| **Crop** | `EMPTY_AVAILABLE` | `GROWING` | `PLANT` | Tile `None` posseduta, seed $>0$ | Deterministica | Online Obs | `PLANT` | `ENGINE_VERIFIED` |
+| **Crop** | `GROWING` | `GROWING` | `WATER` | Tile `PLANT`, prima WATER del giorno | Deterministica | Online Obs | `WATER` | `ENGINE_VERIFIED` |
+| **Crop** | `GROWING` | `GROWING` | `FERTILIZE` | Worker ha `FERTILIZER`, tile `PLANT` | Deterministica | Online Obs | `FERTILIZE` | `ENGINE_VERIFIED` |
+| **Crop** | `GROWING` | `HARVEST_READY` | Biological Age | $\text{day} - \text{planted\_day} \ge \text{first\_yield\_day} \land \text{yield} > 0$ | Deterministica | Online Deriv | None | `ENGINE_VERIFIED` |
+| **Crop** | `GROWING` | `GROWING` (No-Op) | Early `HARVEST` | $\text{day} - \text{planted\_day} < \text{first\_yield\_day}$ | Deterministica | Online Deriv | `HARVEST` (No-op) | `ENGINE_VERIFIED` |
+| **Crop** | `HARVEST_READY` | `EMPTY_AVAILABLE` | Non-Ongoing `HARVEST` | Coltura non-ongoing matura | Deterministica | Online Obs | `HARVEST` | `ENGINE_VERIFIED` |
+| **Crop** | `HARVEST_READY` | `GROWING` | Ongoing `HARVEST` | Coltura ongoing (yield azzerato, pianta permane) | Deterministica | Online Obs | `HARVEST` | `ENGINE_VERIFIED` |
+| **Crop** | `GROWING` / `HARVEST_READY` | `EMPTY_AVAILABLE` | `DIG` Action | Worker esegue DIG su pianta | Deterministica | Online Obs | `DIG` | `ENGINE_VERIFIED` |
+| **Crop** | `GROWING` / `HARVEST_READY` | `LOST_WEED` | Missed WATER EOD | EOD con $\text{consecutive\_unwatered} \ge 2$ | Deterministica | Online Deriv | None (Mancata WATER) | `ENGINE_VERIFIED` |
+| **Crop** | `GROWING` / `HARVEST_READY` | `LOST_WEED` | Lifespan Decay | $\text{step} \ge \text{MLS}$ e resa scesa a 0 | Deterministica | Online Deriv | None | `ENGINE_VERIFIED` |
+| **Crop** | `EMPTY_AVAILABLE` | `LOST_WEED` | Random Weed Spawn | EOD su tile `None`, draw $< \text{chance}$ | Stocastica | Telemetry | None | `ENGINE_VERIFIED` |
+| **Crop** | `LOST_WEED` | `EMPTY_AVAILABLE` | Recovery `DIG` | Tile `WEED` bonificata dal worker | Deterministica | Online Obs | `recovery_dig_action` | `DERIVED_ENGINE_FACT` |
+| **Livestock** | `None` | `EMPTY_STRUCTURE` | `BUILD` | Tile `None` posseduta (costo 0 cassa) | Deterministica | Online Obs | `BUILD_COOP` / `BUILD_PASTURE` | `ENGINE_VERIFIED` |
+| **Livestock** | `EMPTY_STRUCTURE` | `OCCUPIED_ANIMAL` | `PLACE` | Struttura corrispondente vuota, animale in inv | Deterministica | Online Obs | `PLACE` | `ENGINE_VERIFIED` |
+| **Livestock** | `OCCUPIED_ANIMAL` | `OCCUPIED_ANIMAL` | `FEED` | Worker ha `WHEAT` (imposta `fed_today = True`) | Deterministica | Online Obs | `FEED` | `ENGINE_VERIFIED` |
+| **Livestock** | `OCCUPIED_ANIMAL` | `OCCUPIED_ANIMAL` | `CARE` | Animale presente (imposta `cared_today = True`) | Deterministica | Online Obs | `CARE` | `ENGINE_VERIFIED` |
+| **Livestock** | `OCCUPIED_ANIMAL` | `EMPTY_STRUCTURE` | Animal Escape | EOD con $\text{consecutive\_unfed} \ge 2$ | Deterministica | Online Deriv | None (Mancato FEED) | `ENGINE_VERIFIED` |
+| **Livestock** | `OCCUPIED_ANIMAL` | Output Disponibile | EOD Base Production | Giorno produzione, non fuggito (Base output $=1$) | Deterministica | Online Deriv | None (Schedule biologico) | `ENGINE_VERIFIED` |
+| **Livestock** | `OCCUPIED_ANIMAL` | Bonus Consumato & Reset | EOD Care Consumption | Giorno produzione, $\text{fed\_today} == \text{True}$ (reset bonus) | Deterministica | Online Deriv | None (Consuma e resetta) | `ENGINE_VERIFIED` |
+| **Livestock** | `OCCUPIED_ANIMAL` | Bonus Incrementato | EOD Care Accumulation | Dopo produzione: $\text{fed\_today} \land \text{cared\_today}$ | Deterministica | Online Deriv | None (Accumula per il futuro) | `ENGINE_VERIFIED` |
+| **Livestock** | `OCCUPIED_ANIMAL` | Flag Attivo | EOD Fertilizer Gen | Animale sopravvissuto a EOD | Deterministica | Online Obs | None | `ENGINE_VERIFIED` |
+| **Livestock** | Flag Attivo | Flag Disattivato | `COLLECT_FERTILIZER` | $\text{fertilizer\_available} == \text{True}$ | Deterministica | Online Obs | `COLLECT_FERTILIZER` | `ENGINE_VERIFIED` |
+| **Inventory** | `Worker Inventory` | `Central Shed` | `PLACE` to Shed | Adiacenza shed, spazio residuo | Deterministica | Online Obs | `PLACE` | `ENGINE_VERIFIED` |
+| **Inventory** | `Worker Inventory` | `shed_overflow_loss` | `MANUAL_DROP` | Adiacenza shed, eccedenza oltre capienza | Deterministica | Online Deriv | `DROP` | `ENGINE_VERIFIED` |
+| **Inventory** | `Worker Inventory` | `shed_overflow_loss` | `EOD_AUTO_DROP` | EOD refresh, somma inventari $>$ shedCapacity | Deterministica | Online Deriv | None (EOD trigger) | `ENGINE_VERIFIED` |
+| **Workforce** | `NO_HANDS` | `HANDS_ACTIVATED` | `HIRE` Order | Cassa $\ge \text{costo HIRE}$, slot ordine | Deterministica | Online Obs | `HIRE` (attivo da $t+1$) | `ENGINE_VERIFIED` |
+| **Workforce** | `HANDS_ACTIVATED` | `NO_HANDS` | EOD Contract Expiry | EOD refresh (Fase 8.5) | Deterministica | Online Obs | None (EOD reset) | `ENGINE_VERIFIED` |
 
 ---
 
-## 14. Matrice differenziale di revisione C1 $\to$ C2
+## 10. Audit di Policy Contamination e Separazioni Non Negoziabili
 
-| Elemento di analisi | Trattamento in C1 | Modifica adottata in C2 | Motivazione e fonte | Status C2 |
-|---|---|---|---|---|
-| **Inventory EOD Drop** | Menbullet su overflow, ma rischio di ambiguità su rientro manuale worker. | Esplicitato il drop automatico di tutti i worker; rimossa ogni idea di rientro forzato o perdita per scadenza contratto. | Finding R1, verifica `_drop_inventories_to_shed` in `kaggriculture.py`. | `CORRECTED` |
-| **HARVEST Readiness** | Formula corretta ma isolata; non sufficientemente distinta da yield disponibile. | Distinzione formale: $\text{yield available} \neq \text{harvest ready}$, vincolata da `first_yield_day`. | Finding R1, Forensic diagnosis E16-A-R1. | `CLARIFIED` |
-| **Lifecycle States** | 6 stati derivati elencati. | Inquadrati come categorie/stati canonici candidati; demandata la totalità del classifier a Feature Model C2. | Allineamento normativo Reconciliation R1 e Ontology C2. | `CLARIFIED` |
-| **Care Due Condition** | Presente come predicato. | Formalizzata come condizione ortogonale ai 6 stati strutturali del lifecycle. | R1 arbitrato, Ontology C2. | `CLARIFIED` |
-| **Cause di WEED** | Tabella a 3 cause. | Ribadita la distinzione netta tra le 3 famiglie; escluso il falso countdown deterministico per random spawn. | Finding R1, prevenzione policy leakage. | `UNCHANGED / CLARIFIED` |
-| **Semantica Azioni DIG** | DIG generico su PLANT/WEED. | Distinzione canonica tra `preventive_dig_action` e `recovery_dig_action`. | Ontology C2, R1 arbitrato. | `ADDED_SUPPORTED` |
-| **Worker Multi-occupancy** | Indicata come `PARTIALLY_KNOWN`. | Promossa a `ENGINE_VERIFIED` (ammissibilità fisica nativa sulla stessa coordinata). | Finding FND-08 / R1 arbitrato. | `PROMOTED_EVIDENCE` |
-| **Serviceability** | Spesso confusa con adiacenza. | Separati concettualmente `tile_need`, `action_eligible_now` e `serviceable_before_deadline`. | R1 arbitrato, Ontology C2. | `CLARIFIED` |
-| **FERTILIZE Meccanica** | `PARTIALLY_KNOWN`. | Durata `day..day+2` e bonus +2 yield su ongoing e non-ongoing promossi a `ENGINE_VERIFIED`. | Finding FND-07 / R1 arbitrato, codice engine. | `PROMOTED_EVIDENCE` |
-| **FEED + CARE Accumulo** | Bonus care parzialmente noto. | Formalizzato l'accumulo di `pending_care_bonus` a EOD (richiede `cared_today` AND `fed_today`) e il consumo distinto nei giorni di produzione con animale alimentato. | Finding FND-09 / R1 arbitrato. | `PROMOTED_EVIDENCE` |
-| **Engine Clock vs Canonical** | Indicato per superare difetto R1. | Formalizzata la separazione di principio: $\text{engine\_step} \neq \text{canonical\_step}$ by definition. | R1 arbitrato, rigore diagnostico. | `CLARIFIED` |
-| **Phase Contract** | Loop in 10 step. | Strutturato in 11 fasi deterministiche con mappatura puntuale clock/fase per meccanica. | R1 arbitrato, rigore formale. | `CLARIFIED` |
+La presente State Machine è integralmente bonificata da elementi di policy o deliberazione strategica:
+
+1. **Assenza di Stati Cognitivi/Deliberativi:** Nessuno stato appartiene al controller (`DEFINE`, `PLAN`, `VERIFY`, `REVIEW`, `COMMITTED`).
+2. **Assenza di Target o Preferenze Economiche:** Rimossa ogni indicazione di mix colturale preferito, ROI o convenienza relativa tra colture e animali.
+3. **Neutralità del Working Set:** L'assegnazione di quadranti o tile a un working set è una scelta di policy dell'agente (`POLICY_CONTEXT`).
+4. **Separazione Tripartita della Serviceability:**
+   - $\text{action\_eligible\_now}$: predicato deterministico online dell'environment (`DERIVED_ENGINE_FACT`);
+   - $\text{reserved\_serviceable\_before\_deadline}$: stima deliberativa di policy (`POLICY_CONTEXT`);
+   - $\text{realized\_serviceable\_in_window}$: metrica diagnostica post-hoc (`POST_HOC_METRIC`).
+5. **Capacità Strutturale vs Serviceable:**
+   - $\text{livestock\_structural\_capacity}$: limite fisico derivato da strutture (`COOP`/`PASTURE`) e regole di placement (`DERIVED_ENGINE_FACT`);
+   - $\text{livestock\_serviceable\_capacity}$: capacità pianificata sostenibile dalla policy (`POLICY_CONTEXT`).
 
 ---
 
-## 15. Known unknowns residui C2
+## 11. Impatto downstream per i layer successivi di Model Foundation C2
 
-### `PARTIALLY_KNOWN`
-- `serviceable_before_deadline`: richiede la formalizzazione del contratto computazionale di routing, reachability e budget di passi per-step;
-- Dettaglio dinamico completo delle quote di mercato e delle curve non lineari `marketParams`;
-- Macchina interna della town e calendario dettagliato di sblocco/consumo avanzato dello shop;
-- Validazione empirica ad alta scala delle specie CARROT e TOMATO.
+### Per `KAGGRICULTURE_FEATURE_MODEL_C2.md`:
+- **Derived Tile Classifier:** derivare le 5 lifecycle views pure (`OUT_OF_SCOPE`, `LOST_WEED`, `EMPTY_AVAILABLE`, `HARVEST_READY`, `GROWING`) dai campi engine-native tramite predicati deterministici;
+- **Governance `policy_retirement_due`:** trattare `policy_retirement_due` (`POL-RET`) e `in_working_set` (`POL-WS`) esclusivamente come feature di `POLICY_CONTEXT`;
+- **Readiness e Allerte:** implementare `crop_harvest_readiness` con guardie su `first_yield_day` ed età biologica, e `tile_care_due_condition` come feature di allerta ortogonale anti-loss ($\text{consecutive\_unwatered} == 1 \land \text{not watered\_today}$);
+- **Divieto Future Leakage:** vietare rigorosamente il consumo online di feature telemetriche o esiti post-hoc (`realized_serviceable_in_window`, `final_money_outcome`);
+- **Parametri Biologici:** implementare l'uplift netto fertilizzante $+1$ (richiede `was_watered == True`) e la finestra inclusiva $d \dots d+2$.
 
-### `NOT_ANALYZED`
-- Ottimalità economica o ROI comparativo di colture, bestiame e fertilizzante;
-- Modelli di previsione strategica o risposta competitiva dell'avversario;
-- Euristiche di dispatching o prioritizzazione operativa dei worker.
-
----
-
-## 16. Impatto downstream per Foundation C2
-
-La formalizzazione della State Machine C2 fornisce le basi contrattuali per i successivi moduli della Model Foundation:
-
-### FEATURE_MODEL_C2
-- **Classifier Totale Eseguibile:** implementare la logica formale deterministica per assegnare a ciascuna coordinata $[x, y]$ uno e un solo stato di `tile_lifecycle_state` tra i 6 candidati, definendo predicati chiusi, ordine di precedenza operativa e fallback;
-- **Derived Feature Clock/Phase:** associare a ciascuna feature derivata il momento esatto di calcolo all'interno delle 11 fasi del loop;
-- **Separazione Assi:** separare esplicitamente le feature di bisogno (`tile_need`), ammissibilità immediata (`action_eligible_now`) e fattibilità pianificata (`serviceable_before_deadline`);
-- **Contratti di Aggregazione:** documentare formalmente gli aggregatori (somme, medie, conteggi) senza assumere un singolo consumer;
-- **Supporto `NONE_DIRECT`:** confermare la liceità di mapping `NONE_DIRECT` per variabili tecniche di computazione.
-
-### MODEL_SPEC_C2
-- **External Consumer Matrix:** separare il catalogo delle feature dai contratti di consumo specifici per agente (Antigravity, Codex, Copilot);
-- **Rimozione Errori Operativi:** eliminare prescrizioni operative incompatibili con l'engine (es. rientro forzato dei worker a EOD o tentativi di HARVEST prematuri prima di `first_yield_day`);
-- **Dichiarazioni di Consumo Verificate:** certificare che ogni mapping `USED / FULL` corrisponda a codice realmente attivo ed eseguito nel runtime dell'agente.
-
-### CONSUMER MATRIX / RUNTIME TRACE
-- Collegare ciascuna versione di MODEL_SPEC allo snapshot del codice eseguito, validando staticamente ed empiricamente la coerenza tra feature computate e variabili consumate dalla policy.
+### Per il successivo Decision Lifecycle Contract:
+- Modellare nel contratto condiviso downstream il ciclo di deliberazione dell'agente (`DECISION_OPEN -> DEFINED -> PLAN_FEASIBLE -> COMMITTED_EXECUTING -> REVIEW_READY`) con le transizioni di invalidazione ed eccezione senza alterare la State Machine dell'ambiente.
 
 ---
 
-**Fine del candidato KAGGRICULTURE_STATE_MACHINE_C2.**
+**Fine di KAGGRICULTURE_STATE_MACHINE_C2 (Consolidation Pass completato).**
