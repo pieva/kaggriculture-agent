@@ -221,3 +221,20 @@ def test_dual_real_engine_prefix_is_legal_and_fail_closed():
         assert steps[0].status in ("ACTIVE", "DONE")
         assert agent.error_count == 0
 
+
+def test_q1_pasture_construction_eligibility():
+    """Verify that BUILD_PASTURE on Q1 pasture positions is eligible in AntigravityDualQPolicy."""
+    policy = AntigravityDualQPolicy()
+    unit_positions = [(4, 4)] * 13
+    unit_positions[10] = (6, 4)
+    # Mock observation with Q1 unlocked and worker 10 on a Q1 pasture position (6, 4)
+    obs = _observation(day=8, hour=2, hands=12, positions=unit_positions, unlocked_quadrants=["NW", "NE"])
+    snap = _snapshot(obs)
+    
+    # Position (6, 4) is in Q1 pasture positions
+    assert (6, 4) in policy.pasture_positions
+    assert (6, 4) in policy.q1_pasture_positions
+    
+    # Verify eligible action on empty tile
+    assert policy._eligible_unit_action(snap, 10, ["BUILD_PASTURE"])
+

@@ -3757,6 +3757,22 @@ class AntigravityDualQPolicy(AntigravityC2_50K_Policy):
 
         return [actions.get(worker_id, ["PASS"]) for worker_id in range(len(positions))]
 
+    def _eligible_unit_action(
+        self,
+        snapshot: CodexSnapshot,
+        worker_id: int,
+        action: list[Any],
+    ) -> bool:
+        opcode = str(action[0])
+        positions = self._positions(snapshot.farm)
+        if not (0 <= worker_id < len(positions)):
+            return False
+        position = positions[worker_id]
+        tile = self._tile(snapshot.farm, position)
+        if opcode == "BUILD_PASTURE":
+            return tile is None and position in self.pasture_positions
+        return super()._eligible_unit_action(snapshot, worker_id, action)
+
     def _asset_signature(self, snapshot: CodexSnapshot) -> tuple[Any, ...]:
         farm = snapshot.farm
         crop_signature = tuple(

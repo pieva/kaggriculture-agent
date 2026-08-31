@@ -11,7 +11,7 @@ from kaggle_environments import make
 from agricola.strategy.antigravity.agent_c2_75k import create_agent
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
-SUBMISSION_PATH = PROJECT_ROOT / "submission" / "submission_antigravity_75k.py"
+SUBMISSION_PATH = PROJECT_ROOT / "submission" / "submission_antigravity.py"
 
 
 def verify_equivalence(seeds=(26090101, 26090102, 1838889274), max_steps: int = 120) -> bool:

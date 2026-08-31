@@ -2,37 +2,36 @@
 
 | Experiment | Title | Result Summary | Status | Key Takeaways & Decisions |
 |---|---|---|:---:|---|
-| C2-AG-75K | Antigravity C2 Dual-Quadrant (Q0+Q1) 75K Candidate Build & Benchmark | Gross $75,075.00, Net $60,437.17 (Phase B) / $63,811.17 (Phase C), 0 Escapes | **ACTIVE_CANDIDATE** | 13-workforce dual-quadrant (Q0+Q1) architecture with cashflow-gated land unlock (Day 5-8). 100% max theoretical livestock yield (90 Milk + 60 Wool, 0 Escapes). Crop yield doubled to 230.67 units (157 Melon + 74 Strawberry). Early manure monetization (Day 0-5) eliminates wage deficit risk; closed-loop fertilization active Day 6+. Standalone parity 100% bit-exact. Workspace test suite 208/208 PASS. |
+| C2-AG-90K | Antigravity C2 Dual-Quadrant (Q0+Q1) Full Livestock Candidate | Gross $91,010.42, Net $63,922.33 (Phase B) / $66,630.67 (Phase C), Peak $87,740.00, 0 Escapes | **ACTIVE_CANDIDATE** | 13-workforce dual-quadrant (Q0+Q1) architecture with dynamic pasture building eligibility on Q1. 12 animals total (6 COW + 6 SHEEP) across 12 pastures. 136.50 Milk, 95.83 Wool, 240 crop units. 0 escapes across all episodes. Gross revenue reached $91,010.42. Parity 100% bit-exact on submission/submission_antigravity.py. 209/209 test pass. |
+| C2-AG-75K | Antigravity C2 Dual-Quadrant (Q0+Q1) 75K Candidate Build & Benchmark | Gross $75,075.00, Net $60,437.17 (Phase B) / $63,811.17 (Phase C), 0 Escapes | **SUPERSEDED** | 13-workforce dual-quadrant (Q0+Q1) architecture with cashflow-gated land unlock (Day 5-8). Superseded by Full Livestock release. |
 | C2-AG-50K | Antigravity C2 Compact-Q0 50K Candidate Build & Benchmark | Mean $56,386.50 (Phase B) / $57,756.33 (Phase C), 0 Escapes, 0 Misses | **SUPERSEDED** | 7-workforce single-quadrant (Q0) architecture with 3 COW + 3 SHEEP and 18 crop tiles. Achieved full livestock safety and recovered crop productivity, surpassing external benchmark. Foundation frozen. |
 | C2-CODEX-V7 | Codex C2 Compact Q0 Routine V7 Candidate Build & Benchmark | Mean $39,265.67, Technical PASS, Economic FAILURE | **BUILD_NOT_READY** | Technical PASS (6/6 episodes DONE, 0 error/fallback). Mean $39,265.67 (+$29.4k vs V6, +$1,268.00 vs AG Q0 3+3, -$17,506.33 vs LuCcc). Crop serviceability strongly improved (MELON 95.0, STRAWBERRY 40.17, $29.8k rev). Livestock serviceability is primary bottleneck (MILK 28.17, WOOL 14.67, 24 escapes, $10.7k rev). Routing inefficient (MOVE/prod 3.1923, util 67.43%, 50 misses). Next step: Read-only AG-vs-Codex V7 serviceability/routing forensic. DLC simplification deferred. Foundation frozen. |
 | C2-FND | Model Foundation C2 Layer 1–5 Freeze & Governance Alignment | Layer 1–5 Frozen (PASS), 11/11 DLC corrections verified, governance aligned | **FOUNDATION FROZEN** | Complete period-centric Model Foundation (Engine Contract, Ontology C2, State Machine C2, Feature Model C2, Decision Lifecycle Contract C2). 0 P0 / 0 P1 open. Checkpoint committed. Next gate: Independent MODEL_SPEC C2 Revision & BUILD. |
 
 ## Recent Experiments Log
 
-## C2-AG-75K — Antigravity C2 Dual-Quadrant (Q0+Q1) 75K Candidate Release
+## C2-AG-90K — Antigravity C2 Dual-Quadrant (Q0+Q1) Full Livestock Release
 
 **Date:** 2026-08-31
-**Phase:** C2 CANDIDATE BUILD & FULL BENCHMARK SUITE
+**Phase:** C2 CANDIDATE BUILD & BENCHMARK
 **Authority:** Antigravity Model Spec Revision & Controller Build
 **Status:** `TECHNICAL PASS` | `ECONOMIC PASS` | `ACTIVE_CANDIDATE`
-**Candidate ID:** `ANTIGRAVITY-C2-DUAL-Q0-Q1-75K-V1.0`
+**Candidate ID:** `ANTIGRAVITY-C2-DUAL-Q0-Q1-90K-LIVESTOCK-V1.0`
 **Architecture:** `Q0_Q1_16CROP_12PASTURE_6COW_6SHEEP_13WORKERS`
 **Key Documents:**
-- Final Validation Report: `results/model_spec_c2/antigravity/ANTIGRAVITY_75K_FINAL_REPORT_IT.md`
 - Submission Description: `results/model_spec_c2/antigravity/SUBMISSION_DESCRIPTION.md`
-- Configuration: `configs/model_spec_c2/ANTIGRAVITY_C2_75K_DUAL_Q_CONFIG.json`
-- Standalone Submission: `submission/submission_antigravity_75k.py` & `submission/submission.py`
-- Test Suite: `tests/test_antigravity_75k_candidate.py` (208/208 workspace test pass)
+- Standalone Submission: `submission/submission_antigravity.py` & `submission/submission.py`
+- Test Suite: `tests/test_antigravity_75k_candidate.py` (209/209 workspace test pass)
 
 ### Summary Statistics (12 Official Episodes)
-- **Gross Revenue Mean**: **$75,075.00** ($48,675.00 Crop + $26,400.00 Livestock)
-- **Phase B Final Net Money Mean**: **$60,437.17** (Range: $47,160.00 – $70,784.00)
-- **Phase C Final Net Money Mean**: **$63,811.17** (Range: $56,448.00 – $72,695.00)
+- **Gross Revenue Mean**: **$91,010.42** ($50,170.42 Crop + $40,840.00 Livestock)
+- **Phase B Final Net Money Mean**: **$63,922.33** (Range: $50,991.00 – $81,693.00)
+- **Phase C Final Net Money Mean**: **$66,630.67** (Range: $53,951.00 – $87,740.00)
 - **Animal Escapes**: **0** (0.00% across all seeds)
-- **Hard Deadline Misses**: **0** (0.00%)
-- **Livestock Yield**: **90.00 MILK** (100% max theoretical) / **60.00 WOOL** (100% max theoretical)
-- **Crop Yield**: **157.00 MELON** / **73.67 STRAWBERRY** (230.67 total crop units, 2x Q0 baseline)
+- **Livestock Yield**: **136.50 MILK** / **95.83 WOOL**
+- **Crop Yield**: **157.42 MELON** / **82.58 STRAWBERRY** (240 total crop units)
 - **Standalone Behavioral Parity**: **100% Bit-Exact Equivalence**
+
 
 | E15 | Pairwise Tournament Final Synthesis | Copilot 2–0, Codex 1–1, Antigravity 0–2; Epistemically Closed | **E15 CLOSED** | Copilot competitive winner. Replicated fingerprints: Antigravity sub-threshold failure mode (M1/M3), Copilot compact policy footprint (M2/M3). Two-regime empirical model supported. 7/7 frozen artifacts unchanged. Next gate: Model Capability Check. |
 | E15-M3 | Copilot vs Antigravity Consensus Verification | Copilot `$26,629` vs Antigravity `$9,371`; consensus closed | **M3 CLOSED** | `ACK_M3_CONSENSUS_ANTIGRAVITY` and `ACK_M3_CONSENSUS_COPILOT` received. Winner: Copilot. Replicated Antigravity M1 failure mode. |
