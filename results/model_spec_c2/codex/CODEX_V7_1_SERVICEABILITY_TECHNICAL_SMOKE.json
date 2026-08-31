@@ -1,0 +1,75 @@
+{
+  "KAGGLE_AUTHORIZED": "NO",
+  "TOURNAMENT_AUTHORIZED": "NO",
+  "agent_version": "CODEX-C2-COMPACT-Q0-ROUTINE-V7.1-SERVICEABILITY",
+  "economic_benchmark_executed": false,
+  "foundation_checkpoint": "f391ee2",
+  "isolated_submission": {
+    "path": "C:\\Users\\pietr\\Projects\\kaggriculture-agent\\submission\\submission_codex.py",
+    "technical_pass": true
+  },
+  "prefixes": [
+    {
+      "errors": 0,
+      "failures": [],
+      "fallbacks": 0,
+      "forbidden_actions": [],
+      "last_exception": null,
+      "roles": {
+        "0": "FLOAT_RESERVE",
+        "1": "CROP_ZONE_0",
+        "2": "CROP_ZONE_1",
+        "3": "CROP_ZONE_2",
+        "4": "LIVESTOCK_COW",
+        "5": "LIVESTOCK_SHEEP",
+        "6": "FERTILIZER_LOGISTICS"
+      },
+      "seat": 0,
+      "seed": 26090100,
+      "status": "ACTIVE",
+      "steps_requested": 120,
+      "technical_pass": true
+    },
+    {
+      "errors": 0,
+      "failures": [],
+      "fallbacks": 0,
+      "forbidden_actions": [],
+      "last_exception": null,
+      "roles": {
+        "0": "FLOAT_RESERVE",
+        "1": "CROP_ZONE_0",
+        "2": "CROP_ZONE_1",
+        "3": "CROP_ZONE_2",
+        "4": "LIVESTOCK_COW",
+        "5": "LIVESTOCK_SHEEP",
+        "6": "FERTILIZER_LOGISTICS"
+      },
+      "seat": 1,
+      "seed": 26090100,
+      "status": "ACTIVE",
+      "steps_requested": 120,
+      "technical_pass": true
+    }
+  ],
+  "protocol": "CODEX_COMPACT_Q0_ROUTINE_TECHNICAL_VERIFICATION",
+  "technical_pass": true,
+  "terminal_checks": [
+    {
+      "failures": [],
+      "lifecycle_state": "TERMINAL_CLOSED",
+      "seat": 0,
+      "seed": 26090101,
+      "status": "DONE",
+      "technical_pass": true
+    },
+    {
+      "failures": [],
+      "lifecycle_state": "TERMINAL_CLOSED",
+      "seat": 1,
+      "seed": 26090101,
+      "status": "DONE",
+      "technical_pass": true
+    }
+  ]
+}

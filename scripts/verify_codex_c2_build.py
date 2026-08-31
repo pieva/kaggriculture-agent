@@ -28,7 +28,7 @@ DEFAULT_OUTPUT = (
     / "results"
     / "model_spec_c2"
     / "codex"
-    / "CODEX_COMPACT_Q0_ROUTINE_TECHNICAL_SMOKE.json"
+    / "CODEX_V7_1_SERVICEABILITY_TECHNICAL_SMOKE.json"
 )
 SAFE_PASS = {"farmer": ["PASS"], "hands": [], "market": []}
 

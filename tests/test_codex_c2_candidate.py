@@ -208,6 +208,55 @@ def test_feed_becomes_hard_before_escape_boundary():
     assert care["hard_reason"] is None
 
 
+def test_unstaffed_bootstrap_herd_has_executable_fallback_feed_binding():
+    observation = _observation(day=4, hour=0, hands=0, shed={"WHEAT": 4})
+    bootstrap_positions = (
+        *CODEX_PASTURE_POSITIONS[:2],
+        *CODEX_PASTURE_POSITIONS[3:5],
+    )
+    for position, species in zip(
+        bootstrap_positions,
+        ("COW", "COW", "SHEEP", "SHEEP"),
+    ):
+        x, y = position
+        observation["farms"][0]["tiles"][y][x] = {
+            "kind": "PASTURE",
+            "animal": species,
+            "placed_day": 0,
+            "yield_units": 0,
+            "consecutive_unfed": 1,
+            "fed_today": False,
+            "cared_today": False,
+            "fertilizer_available": False,
+        }
+    agent = CodexC2Agent(load_candidate_config())
+    snapshot = _snapshot(observation)
+
+    assert agent._feed_service_species(snapshot, 0, "FLOAT_RESERVE") == (
+        "COW",
+        "SHEEP",
+    )
+    assert agent._unit_actions(snapshot)[0] == ["PICKUP", "WHEAT", 4]
+
+
+def test_non_owner_never_routes_to_remote_feed_without_wheat():
+    observation = _observation(day=4, hour=20, hands=6, shed={"WHEAT": 0})
+    x, y = CODEX_PASTURE_POSITIONS[0]
+    observation["farms"][0]["tiles"][y][x] = {
+        "kind": "PASTURE",
+        "animal": "COW",
+        "placed_day": 0,
+        "yield_units": 0,
+        "consecutive_unfed": 1,
+        "fed_today": False,
+        "cared_today": False,
+        "fertilizer_available": False,
+    }
+    agent = CodexC2Agent(load_candidate_config())
+
+    assert agent._unit_actions(_snapshot(observation))[1] == ["PASS"]
+
+
 def test_fertilizer_application_requires_same_day_water():
     observation = _observation(
         day=5,

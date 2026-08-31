@@ -23,7 +23,7 @@ def test_build_submission_codex_fixed_canonical_artifact():
     assert 'candidate_id": "CODEX_C2"' in bundled
     assert "class CodexC2Agent" in bundled
     assert "class CodexDecisionLifecycle" in bundled
-    assert "CODEX-C2-COMPACT-Q0-ROUTINE-V7" in bundled
+    assert "CODEX-C2-COMPACT-Q0-ROUTINE-V7.1-SERVICEABILITY" in bundled
     assert "antigravity" not in bundled.lower()
     assert "copilot" not in bundled.lower()
 

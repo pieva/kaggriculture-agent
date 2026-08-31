@@ -139,7 +139,7 @@ HARVEST_READY = "HARVEST_READY"
 RETIREMENT_DUE = "RETIREMENT_DUE"
 LOST_WEED = "LOST_WEED"
 
-MODEL_SPEC_VERSION = "CODEX-C2-COMPACT-Q0-ROUTINE-V7"
+MODEL_SPEC_VERSION = "CODEX-C2-COMPACT-Q0-ROUTINE-V7.1-SERVICEABILITY"
 FOUNDATION_CHECKPOINT = "f391ee2"
 MOVE_ACTIONS = {"NORTH", "SOUTH", "EAST", "WEST"}
 HANDLING_ACTIONS = {"PICKUP", "PLACE"}
@@ -422,6 +422,51 @@ class CodexC2Agent:
 
     def _role_for(self, worker_id: int) -> str:
         return ROLE_SEQUENCE[min(worker_id, len(ROLE_SEQUENCE) - 1)]
+
+    def _feed_service_species(
+        self,
+        snapshot: CodexSnapshot,
+        worker_id: int,
+        role: str,
+    ) -> tuple[str, ...]:
+        """Bind every live herd to a worker that can stage and deliver wheat.
+
+        W4/W5 remain the normal livestock owners.  Temporary hands expire at
+        EOD, though, and the cash floor can leave those indices unavailable on
+        a later day.  In that state the farmer owns cows and the first hand
+        owns sheep; if the farmer is alone it owns both clusters.  The binding
+        is active only for animal service and does not change persistent roles.
+        """
+
+        worker_count = len(self._positions(snapshot.farm))
+        if role == "LIVESTOCK_COW":
+            return ("COW",)
+        if role == "LIVESTOCK_SHEEP":
+            return ("SHEEP",)
+
+        species: list[str] = []
+        if worker_count <= 4 and worker_id == 0:
+            species.append("COW")
+        if worker_count <= 5:
+            sheep_owner = 1 if worker_count >= 2 else 0
+            if worker_id == sheep_owner:
+                species.append("SHEEP")
+        return tuple(species)
+
+    def _feed_tasks_for_worker(
+        self,
+        snapshot: CodexSnapshot,
+        worker_id: int,
+        role: str,
+    ) -> list[dict[str, Any]]:
+        tasks: list[dict[str, Any]] = []
+        for species in self._feed_service_species(snapshot, worker_id, role):
+            tasks.extend(
+                task
+                for task in self._animal_tasks(snapshot, species)
+                if task["kind"] == "FEED"
+            )
+        return tasks
 
     def _update_roles(self, worker_count: int) -> None:
         current = {worker_id: self._role_for(worker_id) for worker_id in range(worker_count)}
@@ -874,6 +919,36 @@ class CodexC2Agent:
                 )
             return tasks
 
+        # FEED is a delivery chain, not merely a remote target.  An assigned
+        # service owner either feeds with carried wheat or first commits to a
+        # shed pickup sized for its complete due cluster.  This check precedes
+        # product/fertilizer unloading so the due feed set is closed atomically.
+        feed_tasks = self._feed_tasks_for_worker(snapshot, worker_id, role)
+        wheat = int(inventory.get("WHEAT", 0))
+        if feed_tasks and wheat > 0:
+            return feed_tasks
+        if feed_tasks and int(shed.get("WHEAT", 0)) > 0:
+            quantity = min(len(feed_tasks), int(shed.get("WHEAT", 0)))
+            tasks.append(
+                self._task(
+                    (4, 4),
+                    ["PICKUP", "WHEAT", quantity],
+                    kind="FEED_STAGING",
+                    loss_rank=min(task["loss_rank"] for task in feed_tasks),
+                    value=max(int(task["value"]) for task in feed_tasks),
+                    slack=min(task["slack"] for task in feed_tasks),
+                    hard_reason=next(
+                        (
+                            task["hard_reason"]
+                            for task in feed_tasks
+                            if task["hard_reason"]
+                        ),
+                        None,
+                    ),
+                )
+            )
+            return tasks
+
         fertilizer = int(inventory.get("FERTILIZER", 0))
         if fertilizer > 0 and role in {"FERTILIZER_LOGISTICS", "FLOAT_RESERVE"}:
             eligible: list[tuple[int, int]] = []
@@ -916,16 +991,6 @@ class CodexC2Agent:
                 )
             return tasks
 
-        wheat = int(inventory.get("WHEAT", 0))
-        species = "COW" if role == "LIVESTOCK_COW" else "SHEEP" if role == "LIVESTOCK_SHEEP" else None
-        if wheat > 0 and species is not None:
-            feed_tasks = [
-                task
-                for task in self._animal_tasks(snapshot, species)
-                if task["kind"] == "FEED"
-            ]
-            if feed_tasks:
-                return feed_tasks
         if wheat > 0 and not any(
             task["kind"] == "FEED"
             for candidate in ("COW", "SHEEP")
@@ -947,19 +1012,6 @@ class CodexC2Agent:
                     self._task((4, 4), ["PLACE", item, min(int(inventory[item]), free)], kind="INVENTORY_UNBLOCK", loss_rank=2, value=0, slack=12)
                 )
             return tasks
-
-        if species is not None:
-            own_feed = [
-                task
-                for task in self._animal_tasks(snapshot, species)
-                if task["kind"] == "FEED"
-            ]
-            if own_feed and int(shed.get("WHEAT", 0)) > 0:
-                quantity = min(len(own_feed), int(shed.get("WHEAT", 0)))
-                tasks.append(
-                    self._task((4, 4), ["PICKUP", "WHEAT", quantity], kind="FEED_STAGING", loss_rank=min(task["loss_rank"] for task in own_feed), value=160, slack=min(task["slack"] for task in own_feed), hard_reason=next((task["hard_reason"] for task in own_feed if task["hard_reason"]), None))
-                )
-                return tasks
 
         if role in {"FERTILIZER_LOGISTICS", "FLOAT_RESERVE"}:
             for species in ("COW", "SHEEP"):
@@ -1124,9 +1176,9 @@ class CodexC2Agent:
         crop_tasks = self._crop_tasks(snapshot)
         cow_tasks = self._animal_tasks(snapshot, "COW")
         sheep_tasks = self._animal_tasks(snapshot, "SHEEP")
-        hard_tasks = [
+        hard_crop_tasks = [
             task
-            for task in [*crop_tasks, *cow_tasks, *sheep_tasks]
+            for task in crop_tasks
             if task.get("hard_reason")
         ]
         reserved: set[tuple[int, int]] = set()
@@ -1142,19 +1194,39 @@ class CodexC2Agent:
             elif role.startswith("CROP_ZONE_"):
                 zone_id = int(role.rsplit("_", 1)[1])
                 own = [task for task in crop_tasks if task.get("zone") == zone_id]
-                cross_hard = [task for task in hard_tasks if task.get("zone") != zone_id]
+                cross_hard = [
+                    task
+                    for task in hard_crop_tasks
+                    if task.get("zone") != zone_id
+                ]
                 candidates = own if own else cross_hard
             elif role == "LIVESTOCK_COW":
-                candidates = cow_tasks
+                candidates = [
+                    task
+                    for task in cow_tasks
+                    if task["kind"] != "FEED"
+                    and not (
+                        task["kind"] == "FERTILIZER_COLLECTION"
+                        and len(positions) >= 7
+                    )
+                ]
             elif role == "LIVESTOCK_SHEEP":
-                candidates = sheep_tasks
+                candidates = [
+                    task
+                    for task in sheep_tasks
+                    if task["kind"] != "FEED"
+                    and not (
+                        task["kind"] == "FERTILIZER_COLLECTION"
+                        and len(positions) >= 7
+                    )
+                ]
             elif role == "FERTILIZER_LOGISTICS":
                 fertilizer = [
                     task
                     for task in [*cow_tasks, *sheep_tasks]
                     if task["kind"] in {"FERTILIZER_COLLECTION", "BUILD_PASTURE"}
                 ]
-                candidates = hard_tasks + fertilizer
+                candidates = hard_crop_tasks + fertilizer
             else:  # FLOAT_RESERVE
                 growth = [
                     task
@@ -1166,7 +1238,7 @@ class CodexC2Agent:
                     for task in crop_tasks
                     if task["kind"] in {"HARVEST", "WATER"}
                 ]
-                candidates = hard_tasks + growth + high_value
+                candidates = hard_crop_tasks + growth + high_value
 
             action = self._choose_committed_task(
                 snapshot,
