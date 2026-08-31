@@ -45,14 +45,24 @@ SEED_COSTS: Dict[str, float] = {
 }
 
 SHED_TILES: Set[Tuple[int, int]] = {(4, 4), (5, 4), (4, 5), (5, 5)}
-# 24 compact crop positions in NW (x 0..4, y 0..1) and NE (x 5..9, y 0..1) plus central row 2 (x 3..6, y 2)
+# 46 farmable crop positions in Quadrant 0 (NW) and Quadrant 1 (NE), sorted by Manhattan distance to central shed
 CROP_POSITIONS: Tuple[Tuple[int, int], ...] = (
-    # Row 0: 10 tiles (NW + NE)
-    (0, 0), (1, 0), (2, 0), (3, 0), (4, 0), (5, 0), (6, 0), (7, 0), (8, 0), (9, 0),
-    # Row 1: 10 tiles (NW + NE)
-    (0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1),
-    # Row 2: 4 central tiles adjacent to shed
-    (3, 2), (4, 2), (5, 2), (6, 2),
+    # Distance 1
+    (3, 4), (4, 3), (5, 3), (6, 4),
+    # Distance 2
+    (2, 4), (3, 3), (4, 2), (5, 2), (6, 3), (7, 4),
+    # Distance 3
+    (1, 4), (2, 3), (3, 2), (4, 1), (5, 1), (6, 2), (7, 3), (8, 4),
+    # Distance 4
+    (0, 4), (1, 3), (2, 2), (3, 1), (4, 0), (5, 0), (6, 1), (7, 2), (8, 3), (9, 4),
+    # Distance 5
+    (0, 3), (1, 2), (2, 1), (3, 0), (6, 0), (7, 1), (8, 2), (9, 3),
+    # Distance 6
+    (0, 2), (1, 1), (2, 0), (7, 0), (8, 1), (9, 2),
+    # Distance 7
+    (0, 1), (1, 0), (8, 0), (9, 1),
+    # Distance 8
+    (0, 0), (9, 0),
 )
 PASTURE_POSITIONS: Tuple[Tuple[int, int], ...] = tuple(
     (x, y) for y in (3, 4) for x in range(10) if (x, y) not in {(4, 4), (5, 4)}

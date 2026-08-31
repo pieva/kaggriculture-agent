@@ -1,24 +1,28 @@
-"""Build script to bundle the frozen Codex C2 V4 candidate into standalone submission_codex.py."""
+"""Bundle the Codex compact-Q0 routine controller into one standalone file."""
 
 from __future__ import annotations
 
 import json
 from pathlib import Path
-from typing import List, Optional
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SRC_DIR = PROJECT_ROOT / "src" / "agricola"
 CONFIG_FILE = PROJECT_ROOT / "configs" / "model_spec_c2" / "CODEX_C2_CONFIG.json"
+LIFECYCLE_FILE = SRC_DIR / "strategy" / "codex_lifecycle.py"
+CODEX_FILE = SRC_DIR / "strategy" / "codex_compact_q0.py"
 
 SUBMISSION_TEMPLATE = '''"""
-Standalone Codex C2 V4 submission file for Kaggle Kaggriculture.
-Generated automatically from frozen Codex C2 V4 Candidate (C2 Performance Iteration).
+Standalone Codex C2 compact-Q0 routine file for Kaggle Kaggriculture.
+Generated from the Foundation-f391ee2-bound Codex controller and adapter.
 """
 
 from __future__ import annotations
 
+import hashlib
+from collections import Counter, defaultdict
 from collections.abc import Callable
 from copy import deepcopy
+from dataclasses import asdict, dataclass
 import json
 import math
 from pathlib import Path
@@ -35,6 +39,11 @@ CODEX_C2_CONFIG: dict[str, Any] = {config_json}
 {e16_base_code}
 
 # ==========================================
+# --- Codex C2 Decision Lifecycle Runtime ---
+# ==========================================
+{codex_lifecycle_code}
+
+# ==========================================
 # --- Codex C2 Strategy & Agent Class ---
 # ==========================================
 {codex_c2_code}
@@ -43,19 +52,30 @@ CODEX_C2_CONFIG: dict[str, Any] = {config_json}
 # --- Kaggle Entrypoint ---
 # ==========================================
 _agent_factory: Callable[[dict[str, Any], Any], dict[str, Any]] | None = None
+_episode_sequence = 0
 
 
 def agent(observation: dict[str, Any], configuration: Any = None) -> dict[str, Any]:
-    """Kaggle submission entry point for Codex C2 V4 Candidate."""
-    global _agent_factory
+    """Kaggle entry point for the Codex compact-Q0 routine candidate."""
+    global _agent_factory, _episode_sequence
     step = int(observation.get("step", 0))
     if step == 0 or _agent_factory is None:
-        _agent_factory = create_agent()
+        _episode_sequence += 1
+        player = int(observation.get("player", 0))
+        _agent_factory = create_agent(
+            run_context={{
+                "run_id": "codex-kaggle-runtime",
+                "episode_id": f"codex-episode-{{_episode_sequence:06d}}",
+                "seed": None,
+                "opponent_id": "KAGGLE_UNOBSERVED",
+                "player_position": player,
+            }}
+        )
     return _agent_factory(observation, configuration)
 '''
 
 
-def clean_imports(code: str, remove_prefixes: List[str]) -> str:
+def clean_imports(code: str, remove_prefixes: list[str]) -> str:
     lines = code.split("\n")
     cleaned = []
     for line in lines:
@@ -85,39 +105,27 @@ def extract_e16_base_definitions() -> str:
 
 
 def extract_codex_c2_definitions() -> str:
-    with open(SRC_DIR / "strategy" / "codex_c2.py", "r", encoding="utf-8") as f:
+    with open(CODEX_FILE, "r", encoding="utf-8") as f:
         codex_code = f.read()
 
-    crop_rules_idx = codex_code.find("CROP_RULES = {")
+    crop_rules_idx = codex_code.find("CROP_RULES:")
+    if crop_rules_idx == -1:
+        raise RuntimeError("compact-Q0 CROP_RULES marker is missing")
     codex_body = codex_code[crop_rules_idx:]
-
-    old_load = """def load_candidate_config(
-    path: Path | str = DEFAULT_CONFIG_PATH,
-) -> dict[str, Any]:
-    \"\"\"Load and validate the candidate-specific configuration.\"\"\"
-
-    config_path = Path(path)
-    with config_path.open("r", encoding="utf-8") as handle:
-        config = json.load(handle)"""
-
-    new_load = """def load_candidate_config(
-    path: Path | str | None = None,
-) -> dict[str, Any]:
-    \"\"\"Load and validate the candidate-specific configuration.\"\"\"
-
-    if path is not None and Path(path).exists():
-        with Path(path).open("r", encoding="utf-8") as handle:
-            config = json.load(handle)
-    else:
-        config = deepcopy(CODEX_C2_CONFIG)"""
-
-    if old_load in codex_body:
-        codex_body = codex_body.replace(old_load, new_load)
 
     return codex_body.strip()
 
 
-def build_submission_codex(output_path: Optional[str] = None) -> Path:
+def extract_codex_lifecycle_definitions() -> str:
+    lifecycle_code = LIFECYCLE_FILE.read_text(encoding="utf-8")
+    marker = 'FOUNDATION_CHECKPOINT = "f391ee2"'
+    lifecycle_idx = lifecycle_code.find(marker)
+    if lifecycle_idx == -1:
+        raise RuntimeError("Codex lifecycle foundation marker is missing")
+    return lifecycle_code[lifecycle_idx:].strip()
+
+
+def build_submission_codex(output_path: str | None = None) -> Path:
     out_file = Path(output_path) if output_path else PROJECT_ROOT / "submission" / "submission_codex.py"
     out_file.parent.mkdir(parents=True, exist_ok=True)
 
@@ -126,17 +134,19 @@ def build_submission_codex(output_path: Optional[str] = None) -> Path:
     config_json = json.dumps(config_obj, indent=2)
 
     e16_base_code = extract_e16_base_definitions()
+    codex_lifecycle_code = extract_codex_lifecycle_definitions()
     codex_c2_code = extract_codex_c2_definitions()
 
     bundled_code = SUBMISSION_TEMPLATE.format(
         config_json=config_json,
         e16_base_code=e16_base_code,
+        codex_lifecycle_code=codex_lifecycle_code,
         codex_c2_code=codex_c2_code,
     )
 
     bundled_code = "\n".join(line.rstrip() for line in bundled_code.splitlines()) + "\n"
     out_file.write_text(bundled_code, encoding="utf-8")
-    print(f"Successfully generated Codex C2 V4 standalone submission at: {out_file}")
+    print(f"Successfully generated Codex compact-Q0 standalone at: {out_file}")
     return out_file
 
 

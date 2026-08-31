@@ -46,7 +46,7 @@ def test_copilot_c2_tile_lifecycle_classification():
     policy = CopilotC2Policy()
     pos = (0, 0)
 
-    assert policy.classify_tile_lifecycle(pos, None, current_day=1, engine_step=24) == "EMPTY_ASSIGNED"
+    assert policy.classify_tile_lifecycle(pos, None, current_day=1, engine_step=24) == "EMPTY_AVAILABLE"
 
     weed_tile = {"kind": "WEED"}
     assert policy.classify_tile_lifecycle(pos, weed_tile, current_day=1, engine_step=24) == "LOST_WEED"
@@ -215,8 +215,10 @@ def test_copilot_c2_agent_uses_own_p1_farm_and_private_state():
     result = agent(obs)
 
     assert result["farmer"] == ["PASS"]
-    assert result["market"].count(["HIRE"]) == 8
-    assert ["BUY_SEED", "WHEAT", 3] in result["market"]
+    # Workforce co-scales with the active footprint (1 non-locked tile here);
+    # this is no longer a fixed constant (see E-C2-PERF-02).
+    assert result["market"].count(["HIRE"]) == 1
+    assert ["BUY_SEED", "MELON", 1] in result["market"]
 
 
 def test_copilot_c2_routes_to_an_empty_working_tile_after_planting():
@@ -228,7 +230,7 @@ def test_copilot_c2_routes_to_an_empty_working_tile_after_planting():
             tiles[y][x] = None
     tiles[4][4] = {
         "kind": "PLANT",
-        "crop": "WHEAT",
+        "crop": "MELON",
         "planted_day": 0,
         "yield_units": 0,
         "watered_today": True,
@@ -238,7 +240,7 @@ def test_copilot_c2_routes_to_an_empty_working_tile_after_planting():
         "day": 0,
         "player": 0,
         "farms": [{"money": 2990.0, "farmer": [4, 4], "hands": [], "tiles": tiles}],
-        "private": {"shed": {}, "seeds": {"WHEAT": 8}, "inventories": [{}]},
+        "private": {"shed": {}, "seeds": {"MELON": 8}, "inventories": [{}]},
     }
 
     result = agent(obs)
@@ -263,9 +265,9 @@ def test_copilot_c2_assigns_distinct_plant_targets_to_available_workers():
             "hands": [[4, 3], [3, 4]],
             "tiles": tiles,
         }],
-        "private": {"shed": {}, "seeds": {"WHEAT": 3}, "inventories": [{}, {}, {}]},
+        "private": {"shed": {}, "seeds": {"MELON": 3}, "inventories": [{}, {}, {}]},
     }
 
     actions = policy.decide_actions(obs)
 
-    assert actions == [["PLANT", "WHEAT"], ["PLANT", "WHEAT"], ["PLANT", "WHEAT"]]
+    assert actions == [["PLANT", "MELON"], ["PLANT", "MELON"], ["PLANT", "MELON"]]

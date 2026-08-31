@@ -1,5 +1,8 @@
 from __future__ import annotations
 
+import math
+
+
 from typing import Any, Dict, List, Optional, Tuple
 
 from agricola.core.state import CROPS
@@ -35,7 +38,7 @@ class CopilotC2Policy:
         if pos is None or tile == "LOCKED":
             return "OUT_OF_SCOPE"
         if tile is None or (isinstance(tile, dict) and tile.get("kind") == "EMPTY"):
-            return "EMPTY_ASSIGNED"
+            return "EMPTY_AVAILABLE"
         if isinstance(tile, dict) and tile.get("kind") == "WEED":
             return "LOST_WEED"
         if not isinstance(tile, dict) or tile.get("kind") != "PLANT":
@@ -68,12 +71,16 @@ class CopilotC2Policy:
         return tiles[y][x]
 
     def _working_positions(self, tiles: List[List[Any]]) -> List[Position]:
-        # The active working set is the owned NW quadrant, never locked land.
+        # The active working set is every owned (non-locked) tile across all
+        # unlocked quadrants, not just the initial NW 25-tile footprint. This
+        # was corrected under E-C2-PERF-01: performance verification showed the
+        # candidate was structurally capped at 25 tiles regardless of land
+        # purchases, because this filter previously restricted x<=4,y<=4.
         return [
             (x, y)
             for y, row in enumerate(tiles)
             for x, tile in enumerate(row)
-            if tile != "LOCKED" and x <= 4 and y <= 4
+            if tile != "LOCKED"
         ]
 
     @staticmethod
@@ -159,8 +166,37 @@ class CopilotC2Policy:
             del remaining[index]
         return assignments
 
+    def _quadrants_owned(self, farm: Dict[str, Any]) -> int:
+        quads = farm.get("unlocked_quadrants", ["NW"])
+        return len(quads) if isinstance(quads, list) else int(quads or 1)
+
+    # Land price ladder observed empirically on the frozen engine: 1000 for the
+    # 2nd quadrant (NE), 2000 for the 3rd (SW/SE depending on engine ordering).
+    # The engine currently exposes at most 3 unlockable additional quadrants
+    # beyond the starting NW (see Section 5/7 of the MODEL_SPEC revision).
+    _LAND_PRICE_LADDER = (1000.0, 2000.0, 4000.0)
+
+    def _next_land_cost(self, farm: Dict[str, Any]) -> Optional[float]:
+        owned = self._quadrants_owned(farm)
+        extra_owned = max(0, owned - 1)
+        if extra_owned >= len(self._LAND_PRICE_LADDER):
+            return None
+        return self._LAND_PRICE_LADDER[extra_owned]
+
+    def _target_workforce(self, active_tile_count: int) -> int:
+        # Workforce is derived from the active (non-locked) footprint rather
+        # than fixed to a historical constant (E-C2-PERF-02): oversized
+        # workforce against a static 25-tile footprint produced ~31% idle
+        # PASS actions in the 720-step performance benchmark.
+        demand = math.ceil(active_tile_count / max(1.0, self.config.target_tiles_per_worker))
+        return max(self.config.min_workforce, min(self.config.target_workforce, demand))
+
     def market_orders(
-        self, farm: Dict[str, Any], private: Dict[str, Any], tiles: List[List[Any]]
+        self,
+        farm: Dict[str, Any],
+        private: Dict[str, Any],
+        tiles: List[List[Any]],
+        current_day: int = 0,
     ) -> List[List[Any]]:
         orders: List[List[Any]] = []
         shed = private.get("shed", {}) if isinstance(private.get("shed", {}), dict) else {}
@@ -169,15 +205,33 @@ class CopilotC2Policy:
         if quantity > 0:
             orders.append(["SELL", crop, quantity])
 
+        active_or_empty = len(self._working_positions(tiles))
+        cash = float(farm.get("money", 0.0))
+
+        # Land expansion (E-C2-PERF-01): buy the next quadrant once the current
+        # working set is materially saturated and a cash reserve survives the
+        # purchase, so capital is not permanently stranded on a static 25-tile
+        # footprint for the whole episode. Gated by an endgame cutoff
+        # (E-C2-PERF-03): a purchase this late cannot be monetized before the
+        # terminal day (no plant->grow->harvest cycle can complete), so it
+        # would only strand capital.
+        if self.config.enable_land_expansion and current_day <= self.config.last_land_purchase_day:
+            land_cost = self._next_land_cost(farm)
+            if (
+                land_cost is not None
+                and cash >= land_cost + self.config.land_expansion_reserve
+            ):
+                orders.append(["BUY_LAND"])
+
         hands = farm.get("hands", []) if isinstance(farm.get("hands", []), list) else []
-        hires_needed = max(0, self.config.target_workforce - 1 - len(hands))
+        target_workforce = self._target_workforce(active_or_empty)
+        hires_needed = max(0, target_workforce - 1 - len(hands))
         orders.extend([["HIRE"] for _ in range(hires_needed)])
 
         seeds = private.get("seeds", {}) if isinstance(private.get("seeds", {}), dict) else {}
-        active_or_empty = len(self._working_positions(tiles))
         available = int(seeds.get(crop, 0) or 0)
         deficit = max(0, active_or_empty + self.config.seed_reserve - available)
-        affordable = int(float(farm.get("money", 0.0)) // int(CROPS[crop]["seed"]))
+        affordable = int(cash // int(CROPS[crop]["seed"]))
         if deficit and affordable:
             orders.append(["BUY_SEED", crop, min(deficit, affordable)])
         return orders[:10]
@@ -215,9 +269,10 @@ class CopilotC2Policy:
         farm = farms[player_index] if isinstance(farms, list) and 0 <= player_index < len(farms) else {}
         private = self._safe_private(obs, player_index)
         tiles = farm.get("tiles", []) if isinstance(farm, dict) else []
+        current_day = int(obs.get("day", 0))
         actions = self.decide_actions(obs, player_index)
         return {
             "farmer": actions[0],
             "hands": actions[1:],
-            "market": self.market_orders(farm, private, tiles) if isinstance(farm, dict) else [],
+            "market": self.market_orders(farm, private, tiles, current_day) if isinstance(farm, dict) else [],
         }

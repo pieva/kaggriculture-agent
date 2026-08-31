@@ -1,37 +1,40 @@
 {
   "candidate_id": "CODEX_C2",
-  "schema_version": "model_spec_c2.codex.v3",
-  "crop_working_set_target": 25,
-  "bootstrap_crop_target": 10,
-  "max_wheat_plants_per_day": 2,
-  "bootstrap_crop_pattern": [
-    "WHEAT",
-    "WHEAT",
-    "STRAWBERRY",
-    "WHEAT",
-    "MELON"
-  ],
-  "crop_pattern": [
-    "WHEAT",
-    "WHEAT",
-    "STRAWBERRY",
-    "MELON",
-    "MELON"
-  ],
-  "watering_dispatch_priority": 0.7,
-  "livestock_headcount_target": 4,
-  "pasture_allocation_target": 5,
-  "quadrants_owned": 2,
-  "workforce_headcount": 8,
-  "bootstrap_workforce_headcount": 5,
-  "livestock_species": "COW",
-  "operating_cash_floor": 300,
-  "endgame_shutdown_steps": 48,
-  "turns_per_day": 24,
+  "schema_version": "model_spec_c2.codex.compact_q0.v1",
+  "model_spec_version": "CODEX-C2-COMPACT-Q0-ROUTINE-V7",
+  "foundation_checkpoint": "f391ee2",
+  "quadrants_owned": 1,
+  "workforce_total": 7,
+  "crop_working_set_target": 18,
+  "crop_counts": {
+    "MELON": 9,
+    "STRAWBERRY": 8,
+    "WHEAT": 1
+  },
+  "pasture_allocation_target": 6,
+  "livestock_targets": {
+    "COW": 3,
+    "SHEEP": 3
+  },
+  "bootstrap_livestock": {
+    "COW": 2,
+    "SHEEP": 2
+  },
+  "livestock_activation_days": {
+    "COW": 7,
+    "SHEEP": 8
+  },
+  "melon_cohort_offsets": [0, 1, 2],
+  "strawberry_cohort_offsets": [0, 2],
+  "wheat_cohort_offset": 0,
+  "operating_cash_floor": 50,
+  "feed_reserve_rounds": 2,
+  "observed_capacity_days": 3,
+  "hard_schedule_days": 2,
   "minimum_post_plant_action_phases": 1,
-  "land_expansion_min_active": 8,
-  "land_expansion_min_cash": 1600,
-  "livestock_activation_min_crop_fraction": 0.8,
-  "livestock_activation_min_cash": 1500,
-  "crop_horizon_margin_steps": 24
+  "payback_cutoff_days": 2,
+  "crop_horizon_margin_days": 1,
+  "endgame_shutdown_days": 2,
+  "max_noop_before_invalidation": 3,
+  "turns_per_day": 24
 }

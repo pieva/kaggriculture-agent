@@ -1,0 +1,347 @@
+{
+  "KAGGLE_AUTHORIZED": "NO",
+  "TOURNAMENT_AUTHORIZED": "NO",
+  "agent_version": "CODEX-C2-DLC-PERIODIC-SERVICE-V6",
+  "aggregate": {
+    "economic_gate": "FAILURE_BELOW_50000",
+    "episode_count": 2,
+    "maximum_final_money": 11362.0,
+    "mean_final_money": 9851.0,
+    "minimum_final_money": 8340.0,
+    "seat_absolute_difference": 3022.0,
+    "technical_pass": true
+  },
+  "episodes": [
+    {
+      "agent_version": "CODEX-C2-DLC-PERIODIC-SERVICE-V6",
+      "configuration": {
+        "episodeSteps": 720,
+        "seed": 26083103,
+        "turnsPerDay": 24
+      },
+      "controller_telemetry": {
+        "action_requests_by_opcode": {
+          "BUY_SEED": 27,
+          "DIG": 6,
+          "HARVEST": 25,
+          "HIRE": 140,
+          "MOVE": 1953,
+          "PASS": 1787,
+          "PLACE": 25,
+          "PLANT": 25,
+          "SELL": 25,
+          "WATER": 118
+        },
+        "action_requests_by_species": {
+          "crop": {
+            "MELON": 23,
+            "STRAWBERRY": 42,
+            "WHEAT": 103
+          },
+          "market": {
+            "MELON": 5,
+            "STRAWBERRY": 10,
+            "WHEAT": 37
+          }
+        },
+        "agent_version": "CODEX-C2-DLC-PERIODIC-SERVICE-V6",
+        "capacity_bottlenecks": {},
+        "crop_harvest_units_by_species": {
+          "MELON": 12,
+          "STRAWBERRY": 6,
+          "WHEAT": 47
+        },
+        "current_plan_fingerprint": "307d7d2095504ae29291649edc5e5df01618d2c05568659a0645f5aae08b04db",
+        "episode_id": "codex-build-smoke-0001",
+        "execution_outcomes": {
+          "execution_success": 4094,
+          "execution_unknown": 36
+        },
+        "failed_or_noop_action_requests": 0,
+        "foundation_checkpoint": "f391ee2",
+        "known_attribution_limit": "Controller telemetry is descriptive; causal and exact revenue attribution requires replay-side execution accounting.",
+        "land_utilization_latest": {
+          "active_crop_tiles": 1,
+          "owned_tiles": 25,
+          "productive_utilization": 0.04,
+          "step": 718,
+          "structure_tiles": 0,
+          "unused_reason_code": "ENDGAME_NO_NEW_CYCLE"
+        },
+        "lifecycle": {
+          "active_commitment": null,
+          "agent_id": "CODEX_C2",
+          "counts": {
+            "cancellation_count": 0,
+            "commitment_count": 30,
+            "completion_count": 25,
+            "infeasible_count": 0,
+            "invalidation_count": 4,
+            "rejected_count": 0,
+            "repair_count": 0,
+            "supersession_count": 0
+          },
+          "engine_fingerprint": "4378b60f61a3af22ed875969e1be7e7f11af0b0e050b51aa80c0778c4113207d",
+          "episode_id": "codex-build-smoke-0001",
+          "event_count": 178,
+          "foundation_checkpoint": "f391ee2",
+          "foundation_version": "C2",
+          "model_spec_version": "CODEX-C2-DLC-PERIODIC-SERVICE-V6",
+          "outcome_count": 4130,
+          "request_count": 4131,
+          "review_count": 29,
+          "run_id": "codex-c2-v6-build-smoke-20260831-001",
+          "state": "TERMINAL_CLOSED",
+          "terminal_record": {
+            "closure_disposition": "TERMINAL_PREEMPTION",
+            "commitment_id": "codex-c2-v6-build-smoke-20260831-001/codex-build-smoke-0001/commitment-0030",
+            "decision_id": "codex-c2-v6-build-smoke-20260831-001/codex-build-smoke-0001/decision-0030",
+            "plan_id": "codex-c2-v6-build-smoke-20260831-001/codex-build-smoke-0001/plan-0030",
+            "previous_lifecycle_state": "COMMITTED_EXECUTING",
+            "terminal_closure_id": "codex-c2-v6-build-smoke-20260831-001/codex-build-smoke-0001/terminal-001",
+            "terminal_evidence_snapshot_id": "evidence-000718-b332ab0d2446",
+            "terminal_transition_id": 718
+          },
+          "verify_count": 718
+        },
+        "livestock_collected_units_by_species": {},
+        "market_requested_units": {
+          "MELON": 12,
+          "STRAWBERRY": 6,
+          "WHEAT": 47
+        },
+        "opponent_id": "INERT_PASS_POLICY",
+        "player_position": 0,
+        "run_id": "codex-c2-v6-build-smoke-20260831-001",
+        "seed": 26083103,
+        "workforce_utilization": {
+          "non_pass_request_share": 0.5674170902929073,
+          "pass_requests": 1787
+        }
+      },
+      "episode_id": "codex-build-smoke-0001",
+      "error_count": 0,
+      "failures": [],
+      "fallback_count": 0,
+      "final_money": 8340.0,
+      "foundation_checkpoint": "f391ee2",
+      "known_attribution_limit": "Requested units and observed harvest outcomes are descriptive; they are not causal revenue attribution.",
+      "opponent_id": "INERT_PASS_POLICY",
+      "player_position": 0,
+      "replay_decomposition": {
+        "land_utilization_final": {
+          "active_crop_tiles": 1,
+          "livestock_tiles": 0,
+          "owned_tiles": 25,
+          "productive_utilization": 0.04,
+          "structure_tiles": 0,
+          "transition_id": 719
+        },
+        "land_utilization_peak": {
+          "active_crop_tiles": 7,
+          "livestock_tiles": 0,
+          "productive_utilization": 0.28,
+          "structure_tiles": 0
+        },
+        "market_order_requests": {
+          "BUY_SEED": 27,
+          "HIRE": 140,
+          "SELL": 25
+        },
+        "market_requested_units": {
+          "BUY_SEED:MELON": 3,
+          "BUY_SEED:STRAWBERRY": 4,
+          "BUY_SEED:WHEAT": 22,
+          "HIRE:NONE": 140,
+          "SELL:MELON": 12,
+          "SELL:STRAWBERRY": 6,
+          "SELL:WHEAT": 47
+        },
+        "unit_action_requests": {
+          "DIG": 6,
+          "HARVEST": 25,
+          "MOVE": 1953,
+          "PASS": 1788,
+          "PLACE": 25,
+          "PLANT": 25,
+          "WATER": 118
+        }
+      },
+      "run_id": "codex-c2-v6-build-smoke-20260831-001",
+      "seed": 26083103,
+      "status": "DONE",
+      "technical_pass": true
+    },
+    {
+      "agent_version": "CODEX-C2-DLC-PERIODIC-SERVICE-V6",
+      "configuration": {
+        "episodeSteps": 720,
+        "seed": 26083103,
+        "turnsPerDay": 24
+      },
+      "controller_telemetry": {
+        "action_requests_by_opcode": {
+          "BUILD_PASTURE": 5,
+          "BUY_LAND": 1,
+          "BUY_SEED": 30,
+          "DIG": 10,
+          "HARVEST": 28,
+          "HIRE": 197,
+          "MOVE": 2213,
+          "PASS": 2775,
+          "PLACE": 28,
+          "PLANT": 27,
+          "SELL": 27,
+          "WATER": 161
+        },
+        "action_requests_by_species": {
+          "crop": {
+            "MELON": 63,
+            "STRAWBERRY": 55,
+            "WHEAT": 98
+          },
+          "market": {
+            "MELON": 12,
+            "STRAWBERRY": 13,
+            "WHEAT": 32
+          }
+        },
+        "agent_version": "CODEX-C2-DLC-PERIODIC-SERVICE-V6",
+        "capacity_bottlenecks": {},
+        "crop_harvest_units_by_species": {
+          "MELON": 30,
+          "STRAWBERRY": 9,
+          "WHEAT": 40
+        },
+        "current_plan_fingerprint": "832d9fab53657abc098975e3f8a6449ef2110fe0ada922ffe8b589702ad284ce",
+        "episode_id": "codex-build-smoke-0002",
+        "execution_outcomes": {
+          "execution_success": 5475,
+          "execution_unknown": 26
+        },
+        "failed_or_noop_action_requests": 0,
+        "foundation_checkpoint": "f391ee2",
+        "known_attribution_limit": "Controller telemetry is descriptive; causal and exact revenue attribution requires replay-side execution accounting.",
+        "land_utilization_latest": {
+          "active_crop_tiles": 1,
+          "owned_tiles": 50,
+          "productive_utilization": 0.12,
+          "step": 718,
+          "structure_tiles": 5,
+          "unused_reason_code": "ENDGAME_NO_NEW_CYCLE"
+        },
+        "lifecycle": {
+          "active_commitment": null,
+          "agent_id": "CODEX_C2",
+          "counts": {
+            "cancellation_count": 0,
+            "commitment_count": 30,
+            "completion_count": 27,
+            "infeasible_count": 0,
+            "invalidation_count": 2,
+            "rejected_count": 0,
+            "repair_count": 0,
+            "supersession_count": 0
+          },
+          "engine_fingerprint": "4378b60f61a3af22ed875969e1be7e7f11af0b0e050b51aa80c0778c4113207d",
+          "episode_id": "codex-build-smoke-0002",
+          "event_count": 178,
+          "foundation_checkpoint": "f391ee2",
+          "foundation_version": "C2",
+          "model_spec_version": "CODEX-C2-DLC-PERIODIC-SERVICE-V6",
+          "outcome_count": 5501,
+          "request_count": 5502,
+          "review_count": 29,
+          "run_id": "codex-c2-v6-build-smoke-20260831-001",
+          "state": "TERMINAL_CLOSED",
+          "terminal_record": {
+            "closure_disposition": "TERMINAL_PREEMPTION",
+            "commitment_id": "codex-c2-v6-build-smoke-20260831-001/codex-build-smoke-0002/commitment-0030",
+            "decision_id": "codex-c2-v6-build-smoke-20260831-001/codex-build-smoke-0002/decision-0030",
+            "plan_id": "codex-c2-v6-build-smoke-20260831-001/codex-build-smoke-0002/plan-0030",
+            "previous_lifecycle_state": "COMMITTED_EXECUTING",
+            "terminal_closure_id": "codex-c2-v6-build-smoke-20260831-001/codex-build-smoke-0002/terminal-001",
+            "terminal_evidence_snapshot_id": "evidence-000718-82029e36387d",
+            "terminal_transition_id": 718
+          },
+          "verify_count": 718
+        },
+        "livestock_collected_units_by_species": {},
+        "market_requested_units": {
+          "MELON": 30,
+          "STRAWBERRY": 9,
+          "WHEAT": 40
+        },
+        "opponent_id": "INERT_PASS_POLICY",
+        "player_position": 1,
+        "run_id": "codex-c2-v6-build-smoke-20260831-001",
+        "seed": 26083103,
+        "workforce_utilization": {
+          "non_pass_request_share": 0.4956379498364231,
+          "pass_requests": 2775
+        }
+      },
+      "episode_id": "codex-build-smoke-0002",
+      "error_count": 0,
+      "failures": [],
+      "fallback_count": 0,
+      "final_money": 11362.0,
+      "foundation_checkpoint": "f391ee2",
+      "known_attribution_limit": "Requested units and observed harvest outcomes are descriptive; they are not causal revenue attribution.",
+      "opponent_id": "INERT_PASS_POLICY",
+      "player_position": 1,
+      "replay_decomposition": {
+        "land_utilization_final": {
+          "active_crop_tiles": 1,
+          "livestock_tiles": 0,
+          "owned_tiles": 50,
+          "productive_utilization": 0.12,
+          "structure_tiles": 5,
+          "transition_id": 719
+        },
+        "land_utilization_peak": {
+          "active_crop_tiles": 10,
+          "livestock_tiles": 0,
+          "productive_utilization": 0.32,
+          "structure_tiles": 5
+        },
+        "market_order_requests": {
+          "BUY_LAND": 1,
+          "BUY_SEED": 30,
+          "HIRE": 197,
+          "SELL": 27
+        },
+        "market_requested_units": {
+          "BUY_LAND:NONE": 1,
+          "BUY_SEED:MELON": 7,
+          "BUY_SEED:STRAWBERRY": 4,
+          "BUY_SEED:WHEAT": 20,
+          "HIRE:NONE": 197,
+          "SELL:MELON": 30,
+          "SELL:STRAWBERRY": 9,
+          "SELL:WHEAT": 40
+        },
+        "unit_action_requests": {
+          "BUILD_PASTURE": 5,
+          "DIG": 10,
+          "HARVEST": 28,
+          "MOVE": 2213,
+          "PASS": 2776,
+          "PLACE": 28,
+          "PLANT": 27,
+          "WATER": 161
+        }
+      },
+      "run_id": "codex-c2-v6-build-smoke-20260831-001",
+      "seed": 26083103,
+      "status": "DONE",
+      "technical_pass": true
+    }
+  ],
+  "foundation_checkpoint": "f391ee2",
+  "not_a_tournament": true,
+  "opponent": "INERT_PASS_POLICY",
+  "protocol": "CODEX_C2_V6_BUILD_SMOKE_NON_COMPARATIVE",
+  "purpose": "technical build smoke and preregistered economic gate",
+  "run_id": "codex-c2-v6-build-smoke-20260831-001"
+}

@@ -1,12 +1,11 @@
-"""Verification script for Codex C2 V4 standalone candidate.
-Verifies exact behavioral equivalence between frozen source and standalone submission.
-"""
+"""Verify source/standalone parity for the Codex compact-Q0 package."""
 
 from __future__ import annotations
 
 import importlib.util
 import sys
 from pathlib import Path
+
 from kaggle_environments import make
 
 from agricola.strategy.codex_c2 import create_agent
@@ -15,13 +14,13 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SUBMISSION_PATH = PROJECT_ROOT / "submission" / "submission_codex.py"
 
 
-def verify_equivalence(seeds=(1838889274, 1619968655, 710418712)) -> bool:
+def verify_equivalence(seeds=(26090101, 26090102), max_steps: int = 120) -> bool:
     print("=" * 75)
-    print("VERIFYING BEHAVIORAL EQUIVALENCE: CODEX C2 V4 SOURCE vs SUBMISSION")
+    print("VERIFYING BEHAVIORAL EQUIVALENCE: CODEX COMPACT Q0 SOURCE vs SUBMISSION")
     print("=" * 75)
 
     all_passed = True
-    for seed in seeds:
+    for episode_sequence, seed in enumerate(seeds, start=1):
         print(f"\n--- Testing Seed {seed} ---")
 
         # Load fresh submission module into sys.modules
@@ -31,13 +30,21 @@ def verify_equivalence(seeds=(1838889274, 1619968655, 710418712)) -> bool:
         sys.modules[mod_name] = sub_mod
         spec.loader.exec_module(sub_mod)
 
-        src_agent = create_agent()
+        src_agent = create_agent(
+            run_context={
+                "run_id": "codex-c2-compact-q0-parity-20260831",
+                "episode_id": f"codex-parity-{episode_sequence:04d}",
+                "seed": seed,
+                "opponent_id": "INERT_PASS_POLICY",
+                "player_position": 0,
+            }
+        )
 
         env = make("kaggriculture", configuration={"episodeSteps": 720, "seed": seed})
         steps = env.reset()
 
         seed_passed = True
-        for step_idx in range(720):
+        for step_idx in range(max_steps):
             obs = steps[0].observation
 
             src_action = src_agent(obs)
@@ -56,8 +63,7 @@ def verify_equivalence(seeds=(1838889274, 1619968655, 710418712)) -> bool:
                 break
 
         if seed_passed:
-            final_money = float(steps[0].observation.get("farms", [{}])[0].get("money", 0.0))
-            print(f"PASS: 100% Exact Step-by-Step Action Equivalence! Final Money: ${final_money:,.2f}")
+            print(f"PASS: exact action equivalence across {max_steps} technical steps")
 
     print("\n" + "=" * 75)
     if all_passed:

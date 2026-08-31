@@ -58,7 +58,7 @@ def test_antigravity_c2_harvest_readiness_rejection_and_acceptance():
 def test_antigravity_c2_tile_lifecycle_classification():
     """Verify CRP-09 classification into canonical 6 states."""
     policy = AntigravityC2Policy()
-    pos = (0, 0)  # In crop plan
+    pos = (3, 4)  # In crop plan (Distance 1 from shed)
 
     # 1. EMPTY_ASSIGNED
     assert policy.classify_tile_lifecycle(pos, None, current_day=1, engine_step=24) == "EMPTY_ASSIGNED"
@@ -94,10 +94,10 @@ def test_antigravity_c2_recovery_and_preventive_dig_dispatch():
     """Verify recovery DIG on WEED and preventive DIG on retired crop."""
     policy = AntigravityC2Policy()
 
-    # Create dummy observation where (0,0) is WEED and (1,0) is RETIREMENT_DUE
+    # Create dummy observation where (3,4) is WEED and (4,3) is RETIREMENT_DUE
     tiles = [["LOCKED" for _ in range(10)] for _ in range(10)]
-    tiles[0][0] = {"kind": "WEED"}
-    tiles[0][1] = {
+    tiles[4][3] = {"kind": "WEED"}
+    tiles[3][4] = {
         "kind": "PLANT",
         "crop": "STRAWBERRY",
         "planted_day": 1,
@@ -114,8 +114,8 @@ def test_antigravity_c2_recovery_and_preventive_dig_dispatch():
         "farms": [
             {
                 "money": 1000.0,
-                "farmer": [0, 0],
-                "hands": [[1, 0]],
+                "farmer": [3, 4],
+                "hands": [[4, 3]],
                 "tiles": tiles,
                 "unlocked_quadrants": ["NW", "NE"],
                 "hires_today": 0,
@@ -130,9 +130,9 @@ def test_antigravity_c2_recovery_and_preventive_dig_dispatch():
 
     actions = policy.decide_actions(obs, player_index=0)
     assert len(actions) == 2
-    # Farmer at (0,0) on WEED should execute DIG (recovery)
+    # Farmer at (3,4) on WEED should execute DIG (recovery)
     assert actions[0] == ["DIG"]
-    # Hand at (1,0) on RETIREMENT_DUE should execute DIG (preventive)
+    # Hand at (4,3) on RETIREMENT_DUE should execute DIG (preventive)
     assert actions[1] == ["DIG"]
 
 
@@ -140,9 +140,9 @@ def test_antigravity_c2_no_premature_harvest_dispatch():
     """Verify that under no circumstances is HARVEST dispatched to an immature crop."""
     policy = AntigravityC2Policy()
 
-    # (0,0) is WHEAT on Day 0 with yield_units=5 (standard starting state)
+    # (3,4) is WHEAT on Day 0 with yield_units=5 (standard starting state)
     tiles = [["LOCKED" for _ in range(10)] for _ in range(10)]
-    tiles[0][0] = {
+    tiles[4][3] = {
         "kind": "PLANT",
         "crop": "WHEAT",
         "planted_day": 0,
@@ -160,10 +160,10 @@ def test_antigravity_c2_no_premature_harvest_dispatch():
         "farms": [
             {
                 "money": 1000.0,
-                "farmer": [0, 0],
+                "farmer": [3, 4],
                 "hands": [],
                 "tiles": tiles,
-                "unlocked_quadrants": ["NW"],
+                "unlocked_quadrants": ["NW", "NE"],
                 "hires_today": 0,
             }
         ],
@@ -297,3 +297,66 @@ def test_antigravity_c2_real_engine_smoke_48_steps():
     final_money_p1 = float(env.state[1].observation.farms[1].money)
     assert final_money_p0 != 3000.0, "P0 remained completely inactive"
     assert final_money_p1 != 3000.0, "P1 remained completely inactive"
+
+
+def test_antigravity_c2_expanded_footprint_and_crop_plan():
+    """Verify expanded 40-tile footprint and balanced crop allocation across Q0+Q1."""
+    config = AntigravityC2Config(crop_working_set_target=40)
+    policy = AntigravityC2Policy(config=config)
+
+    # 1. Verify working set size is 40
+    assert len(policy.crop_plan) == 40
+    # 2. Verify all positions are unique and within Q0 (NW) or Q1 (NE)
+    positions = list(policy.crop_plan.keys())
+    assert len(set(positions)) == 40
+    for x, y in positions:
+        assert 0 <= x < 10
+        assert 0 <= y < 5
+        assert (x, y) not in {(4, 4), (5, 4)}
+
+    # 3. Verify crop allocation quotas
+    crop_counts = {}
+    for crop in policy.crop_plan.values():
+        crop_counts[crop] = crop_counts.get(crop, 0) + 1
+
+    assert crop_counts.get("WHEAT", 0) == 8
+    assert crop_counts.get("STRAWBERRY", 0) == 18
+    assert crop_counts.get("MELON", 0) == 14
+
+
+def test_antigravity_c2_late_planting_biological_cutoff():
+    """Verify that late planting cutoffs prevent planting slow crops near endgame."""
+    policy = AntigravityC2Policy()
+
+    # On day 22, Melon (12-day cycle) and Strawberry (10-day cycle) must be replaced with Wheat
+    tiles = [["LOCKED" for _ in range(10)] for _ in range(10)]
+    # (3, 4) is a Melon tile in crop plan
+    pos_melon = (3, 4)
+    tiles[4][3] = None
+
+    obs = {
+        "step": 22 * 24 + 2,
+        "day": 22,
+        "hour": 2,
+        "turnsPerDay": 24,
+        "max_steps": 720,
+        "farms": [
+            {
+                "money": 10000.0,
+                "farmer": [3, 4],
+                "hands": [],
+                "tiles": tiles,
+                "unlocked_quadrants": ["NW", "NE"],
+                "hires_today": 0,
+            }
+        ],
+        "private": {
+            "shed": {},
+            "seeds": {"WHEAT": 5, "MELON": 5, "STRAWBERRY": 5},
+            "inventories": [{}],
+        },
+    }
+
+    actions = policy.decide_actions(obs, player_index=0)
+    # Even though (3,4) was planned for MELON, at Day 22 it MUST plant WHEAT
+    assert actions[0] == ["PLANT", "WHEAT"]

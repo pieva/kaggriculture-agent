@@ -2,6 +2,7 @@
 
 | Experiment | Title | Result Summary | Status | Key Takeaways & Decisions |
 |---|---|---|:---:|---|
+| C2-CODEX-V7 | Codex C2 Compact Q0 Routine V7 Candidate Build & Benchmark | Mean $39,265.67, Technical PASS, Economic FAILURE | **BUILD_NOT_READY** | Technical PASS (6/6 episodes DONE, 0 error/fallback). Mean $39,265.67 (+$29.4k vs V6, +$1,268.00 vs AG Q0 3+3, -$17,506.33 vs LuCcc). Crop serviceability strongly improved (MELON 95.0, STRAWBERRY 40.17, $29.8k rev). Livestock serviceability is primary bottleneck (MILK 28.17, WOOL 14.67, 24 escapes, $10.7k rev). Routing inefficient (MOVE/prod 3.1923, util 67.43%, 50 misses). Next step: Read-only AG-vs-Codex V7 serviceability/routing forensic. DLC simplification deferred. Foundation frozen. |
 | C2-FND | Model Foundation C2 Layer 1–5 Freeze & Governance Alignment | Layer 1–5 Frozen (PASS), 11/11 DLC corrections verified, governance aligned | **FOUNDATION FROZEN** | Complete period-centric Model Foundation (Engine Contract, Ontology C2, State Machine C2, Feature Model C2, Decision Lifecycle Contract C2). 0 P0 / 0 P1 open. Checkpoint committed. Next gate: Independent MODEL_SPEC C2 Revision & BUILD. |
 | E15 | Pairwise Tournament Final Synthesis | Copilot 2–0, Codex 1–1, Antigravity 0–2; Epistemically Closed | **E15 CLOSED** | Copilot competitive winner. Replicated fingerprints: Antigravity sub-threshold failure mode (M1/M3), Copilot compact policy footprint (M2/M3). Two-regime empirical model supported. 7/7 frozen artifacts unchanged. Next gate: Model Capability Check. |
 | E15-M3 | Copilot vs Antigravity Consensus Verification | Copilot `$26,629` vs Antigravity `$9,371`; consensus closed | **M3 CLOSED** | `ACK_M3_CONSENSUS_ANTIGRAVITY` and `ACK_M3_CONSENSUS_COPILOT` received. Winner: Copilot. Replicated Antigravity M1 failure mode. |
@@ -21,6 +22,64 @@
 | E12-X1.4 | Worker Locality & Readiness Expansion | 33.6% Mov, 64.1% Prod, 496.7% Yield | **PASS** | Strict worker regional locality, emergent readiness unlocks (Q1 D7, Q2 D22). |
 
 ## Recent Experiments Log
+
+## C2-CODEX-V7 — Codex C2 Compact Q0 Routine Candidate Build & Preregistered Benchmark
+
+**Date:** 2026-08-31
+**Phase:** C2 CANDIDATE BUILD & PREREGISTERED BENCHMARK
+**Authority:** Codex Independent Model Spec Revision & Controller Build
+**Status:** `TECHNICAL PASS` | `ECONOMIC FAILURE` | `BUILD_NOT_READY`
+**Candidate ID:** `CODEX-C2-COMPACT-Q0-ROUTINE-V7`
+**Architecture:** `Q0_18CROP_6PASTURE_3COW_3SHEEP_7WORKERS`
+**Key Documents:**
+- Build Report: `results/model_spec_c2/codex/CODEX_COMPACT_Q0_ROUTINE_BUILD_REPORT.md`
+- Results JSON: `results/model_spec_c2/codex/CODEX_COMPACT_Q0_ROUTINE_RESULTS.json`
+- Results CSV: `results/model_spec_c2/codex/CODEX_COMPACT_Q0_ROUTINE_RESULTS.csv`
+- Model Spec: `docs/model/model_specs/codex/MODEL_SPEC_CODEX_C2.md`
+- Standalone Submission: `submission/submission_codex.py`
+
+### Benchmark Execution & Summary Statistics (6 Preregistered Episodes)
+
+| Seed | Seat | Final Money | MILK | WOOL | MELON | STRAWBERRY | On-Time Crop % | Hard Misses | Escapes |
+|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
+| 26090101 | 0 | $40,677 | 28 | 15 | 95 | 40 | 79.37% | 9 | 4 |
+| 26090101 | 1 | $39,531 | 28 | 15 | 95 | 40 | 79.37% | 9 | 4 |
+| 26090102 | 0 | $38,355 | 28 | 15 | 95 | 40 | 79.37% | 9 | 4 |
+| 26090102 | 1 | $38,355 | 28 | 15 | 95 | 40 | 79.37% | 9 | 4 |
+| 26090103 | 0 | $41,156 | 30 | 14 | 95 | 42 | 79.16% | 8 | 4 |
+| 26090103 | 1 | $37,520 | 27 | 14 | 95 | 39 | 80.34% | 6 | 4 |
+
+- **Mean Final Money**: **`$39,265.67`** (Population Std Dev: `± $1,312.86`, Median: `$38,943.00`, Range: `$37,520 – $41,156`)
+- **Technical Integrity**: 6/6 episodes completed `DONE`, 0 errors, 0 fallbacks, 100% standalone behavioral parity.
+
+### Production Decomposition & Economic Analysis
+
+1. **Crop Serviceability (Strongly Improved)**:
+   - Crop Revenue: **`$29,786.67`** (73.64% of total productive revenue).
+   - High-Value Crop Production: **`95.00 MELON`** (exceeds preregistered target range of 48–60) and **`40.17 STRAWBERRY`**.
+   - Cohort Execution: High-value crop production vs plan ratio = 1.1264.
+2. **Livestock Serviceability (Primary Bottleneck)**:
+   - Livestock Revenue: **`$10,664.83`** (26.36% of productive revenue).
+   - Animal Output: **`28.17 MILK`** (vs 90–100 target) and **`14.67 WOOL`** (vs 85–95 target).
+   - Animal Escapes: **`24 escapes`** (4 escapes per episode, requirement: 0).
+   - Feed Consumption: 100.33 WHEAT consumed with insufficient conversion to animal outputs.
+3. **Worker Efficiency & Routing (Secondary Inefficiency)**:
+   - Productive Actions: 688.17 / episode; MOVE Actions: 2,196.83; PASS Actions: 871.50.
+   - `MOVE / Productive Action`: **`3.1923`** (elevated travel overhead).
+   - Productive Utilization: **`67.43%`** (below 80–96% target).
+   - On-Time Crop Service Ratio: **`79.49%`** (50 hard deadline misses / 8.33 per episode).
+   - Retargeting: 0.04769 retargets/worker-day, target dwell 3.118 steps, 0 duplicate assignments.
+
+### Comparative Deltas
+- vs **Codex V6** (`$9,851.00`): **`+$29,414.67`** (Massive improvement).
+- vs **Antigravity Q0 3+3** (`$37,997.67`): **`+$1,267.997`** (`+3.34%`).
+- vs **LuCcc Top-Player Benchmark** (`$56,772.00`): **`-$17,506.333`** (`-30.84%`, Failure Gate `< $50,000` triggered).
+
+### Key Decisions & Next Step
+- **Verdict**: `BUILD_NOT_READY`. No tuning on observed seeds, no tournament, no Kaggle submission.
+- **Architectural Policy**: Possible simplification of Decision Lifecycle Contract (DLC) / operational policy remains an architectural decision deferred until after experimental forensic evidence.
+- **Next Action**: Read-only AG-vs-Codex V7 serviceability and routing forensic investigation.
+- **Model Foundation**: Layers 1–5 preserved frozen.
 
 ## C2-FND — Model Foundation C2 (Layer 1–5) Revision, Reconciliation & Final Freeze
 

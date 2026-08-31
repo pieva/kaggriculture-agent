@@ -10,7 +10,7 @@ class AntigravityC2Config:
 
     # Land & Layout
     quadrants_owned: int = 2
-    crop_working_set_target: int = 24
+    crop_working_set_target: int = 40
     pasture_allocation_target: int = 0
     livestock_headcount_target: int = 0
     livestock_species: str = "COW"

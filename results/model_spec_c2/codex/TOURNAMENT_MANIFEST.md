@@ -1,0 +1,48 @@
+# Codex C2 V7 — Tournament Manifest
+
+```text
+MANIFEST_VERSION: codex.c2.tournament.v2
+MANIFEST_STATUS: CLOSED
+AGENT_ID: CODEX
+AGENT_VERSION: CODEX-C2-COMPACT-Q0-ROUTINE-V7
+FOUNDATION_CHECKPOINT: f391ee2
+PACKAGE_READINESS: BLOCKED_ECONOMIC_AND_LIVESTOCK_GATE
+BUILD_VERDICT: BUILD_NOT_READY
+TOURNAMENT_AUTHORIZED: NO
+```
+
+## Package identity
+
+```text
+ENTRYPOINT: submission/submission_codex.py::agent
+SHA256: 965E03566E2F8C2FAF04A9A275781D2953F03C66288031700BDB59E49A5A0427
+BYTES: 130649
+CONFIG_SCHEMA: model_spec_c2.codex.compact_q0.v1
+MODEL_SPEC_SHA256: 5F6A3E5199589408CF43D4BBE13C629B6B978B095046BAE4D912006F8248D1F7
+SOURCE_SHA256: 7C4D497EF42C1319AF6890621B490A1D870FF9400230E30318B8050367BAB0D6
+WRAPPER_SHA256: EB334581F4AA9D8CF2FE7E1F835874934512AF1C5A36772FDB0F5ECADF88263E
+CONFIG_SHA256: 5B3A8A01160243ACE00CBD4BA0F76EB57E73B09079A7F2316C0584A3FE24DF47
+```
+
+## Readiness
+
+- standalone compile/import: PASS;
+- exact source/standalone prefix parity: PASS;
+- engine P0/P1 and terminal handling: PASS;
+- targeted tests: 20 passed;
+- repository suite: 183 passed;
+- performance protocol: 3 seed × 2 seat, non-comparative inert policy;
+- mean FINAL_MONEY: 39.265,67 — `FAILURE`;
+- animal escapes: 24 — gate zero non soddisfatto;
+- comparative tournament: non eseguito.
+
+Il package resta chiuso. La presenza del manifest non costituisce
+autorizzazione e non è stata eseguita alcuna partita contro altri agenti.
+
+```text
+TOURNAMENT_AUTHORIZED: NO
+KAGGLE_AUTHORIZED: NO
+COMMIT_AUTHORIZED: NO
+PUSH_AUTHORIZED: NO
+NEXT_GATE: NEW_AUTHORIZED_BUILD
+```

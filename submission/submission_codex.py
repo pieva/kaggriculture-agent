@@ -1,12 +1,15 @@
 """
-Standalone Codex C2 V4 submission file for Kaggle Kaggriculture.
-Generated automatically from frozen Codex C2 V4 Candidate (C2 Performance Iteration).
+Standalone Codex C2 compact-Q0 routine file for Kaggle Kaggriculture.
+Generated from the Foundation-f391ee2-bound Codex controller and adapter.
 """
 
 from __future__ import annotations
 
+import hashlib
+from collections import Counter, defaultdict
 from collections.abc import Callable
 from copy import deepcopy
+from dataclasses import asdict, dataclass
 import json
 import math
 from pathlib import Path
@@ -17,40 +20,50 @@ from typing import Any
 # ==========================================
 CODEX_C2_CONFIG: dict[str, Any] = {
   "candidate_id": "CODEX_C2",
-  "schema_version": "model_spec_c2.codex.v3",
-  "crop_working_set_target": 25,
-  "bootstrap_crop_target": 10,
-  "max_wheat_plants_per_day": 2,
-  "bootstrap_crop_pattern": [
-    "WHEAT",
-    "WHEAT",
-    "STRAWBERRY",
-    "WHEAT",
-    "MELON"
+  "schema_version": "model_spec_c2.codex.compact_q0.v1",
+  "model_spec_version": "CODEX-C2-COMPACT-Q0-ROUTINE-V7",
+  "foundation_checkpoint": "f391ee2",
+  "quadrants_owned": 1,
+  "workforce_total": 7,
+  "crop_working_set_target": 18,
+  "crop_counts": {
+    "MELON": 9,
+    "STRAWBERRY": 8,
+    "WHEAT": 1
+  },
+  "pasture_allocation_target": 6,
+  "livestock_targets": {
+    "COW": 3,
+    "SHEEP": 3
+  },
+  "bootstrap_livestock": {
+    "COW": 2,
+    "SHEEP": 2
+  },
+  "livestock_activation_days": {
+    "COW": 7,
+    "SHEEP": 8
+  },
+  "melon_cohort_offsets": [
+    0,
+    1,
+    2
   ],
-  "crop_pattern": [
-    "WHEAT",
-    "WHEAT",
-    "STRAWBERRY",
-    "MELON",
-    "MELON"
+  "strawberry_cohort_offsets": [
+    0,
+    2
   ],
-  "watering_dispatch_priority": 0.7,
-  "livestock_headcount_target": 4,
-  "pasture_allocation_target": 5,
-  "quadrants_owned": 2,
-  "workforce_headcount": 8,
-  "bootstrap_workforce_headcount": 5,
-  "livestock_species": "COW",
-  "operating_cash_floor": 300,
-  "endgame_shutdown_steps": 48,
-  "turns_per_day": 24,
+  "wheat_cohort_offset": 0,
+  "operating_cash_floor": 50,
+  "feed_reserve_rounds": 2,
+  "observed_capacity_days": 3,
+  "hard_schedule_days": 2,
   "minimum_post_plant_action_phases": 1,
-  "land_expansion_min_active": 8,
-  "land_expansion_min_cash": 1600,
-  "livestock_activation_min_crop_fraction": 0.8,
-  "livestock_activation_min_cash": 1500,
-  "crop_horizon_margin_steps": 24
+  "payback_cutoff_days": 2,
+  "crop_horizon_margin_days": 1,
+  "endgame_shutdown_days": 2,
+  "max_noop_before_invalidation": 3,
+  "turns_per_day": 24
 }
 
 # ==========================================
@@ -565,63 +578,888 @@ class E16TrainingAgent:
         }
 
 # ==========================================
+# --- Codex C2 Decision Lifecycle Runtime ---
+# ==========================================
+FOUNDATION_CHECKPOINT = "f391ee2"
+FOUNDATION_VERSION = "C2"
+ENGINE_FINGERPRINT = (
+    "4378b60f61a3af22ed875969e1be7e7f11af0b0e050b51aa80c0778c4113207d"
+)
+
+DECISION_OPEN = "DECISION_OPEN"
+DEFINED = "DEFINED"
+PLAN_FEASIBLE = "PLAN_FEASIBLE"
+INFEASIBLE = "INFEASIBLE"
+REJECTED = "REJECTED"
+COMMITTED_EXECUTING = "COMMITTED_EXECUTING"
+REPAIR_WITHIN_COMMITMENT = "REPAIR_WITHIN_COMMITMENT"
+INVALIDATED = "INVALIDATED"
+CANCELLED = "CANCELLED"
+SUPERSEDED = "SUPERSEDED"
+COMPLETED = "COMPLETED"
+REVIEW_READY = "REVIEW_READY"
+TERMINAL_CLOSED = "TERMINAL_CLOSED"
+
+ONLINE_STATES = {
+    DECISION_OPEN,
+    DEFINED,
+    PLAN_FEASIBLE,
+    INFEASIBLE,
+    REJECTED,
+    COMMITTED_EXECUTING,
+    REPAIR_WITHIN_COMMITMENT,
+    INVALIDATED,
+    CANCELLED,
+    SUPERSEDED,
+    COMPLETED,
+    REVIEW_READY,
+}
+
+
+def _configuration_value(configuration: Any, name: str, default: Any) -> Any:
+    if isinstance(configuration, dict):
+        return configuration.get(name, default)
+    return getattr(configuration, name, default)
+
+
+def stable_payload_hash(payload: Any) -> str:
+    """Return a deterministic SHA-256 over a JSON-compatible payload."""
+
+    encoded = json.dumps(
+        payload,
+        sort_keys=True,
+        separators=(",", ":"),
+        default=str,
+    ).encode("utf-8")
+    return hashlib.sha256(encoded).hexdigest()
+
+
+@dataclass(frozen=True)
+class CodexClock:
+    step: int
+    day: int
+    hour: int
+    turns_per_day: int
+    episode_steps: int
+
+    @property
+    def is_eod(self) -> bool:
+        return self.hour == self.turns_per_day - 1
+
+    @property
+    def is_terminal_action(self) -> bool:
+        # Kaggle's runner exposes the terminal state without another agent call:
+        # with N environment states, the last callable observation is N - 2.
+        return self.step + 2 >= self.episode_steps
+
+    @property
+    def remaining_steps(self) -> int:
+        return max(0, self.episode_steps - 1 - self.step)
+
+
+@dataclass(frozen=True)
+class CodexSnapshot:
+    clock: CodexClock
+    player: int
+    farm: dict[str, Any]
+    private: dict[str, Any]
+    market: dict[str, Any]
+    evidence_snapshot_id: str
+    state_id: str
+    configuration_snapshot: dict[str, Any]
+    configuration_hash: str
+    snapshot_fingerprint: str
+
+
+class CodexObservationAdapter:
+    """Validate and normalize the real Kaggriculture callable observation."""
+
+    @staticmethod
+    def parse(
+        observation: dict[str, Any],
+        configuration: Any,
+        *,
+        fallback_turns_per_day: int,
+        fallback_episode_steps: int,
+    ) -> CodexSnapshot:
+        if not isinstance(observation, dict):
+            raise TypeError("observation must be a mapping")
+
+        try:
+            step = int(observation["step"])
+        except (KeyError, TypeError, ValueError) as exc:
+            raise ValueError("observation.step is required and must be integral") from exc
+
+        turns_per_day = int(
+            _configuration_value(
+                configuration, "turnsPerDay", fallback_turns_per_day
+            )
+        )
+        episode_steps = int(
+            _configuration_value(
+                configuration, "episodeSteps", fallback_episode_steps
+            )
+        )
+        if turns_per_day <= 0 or episode_steps <= 0:
+            raise ValueError("turnsPerDay and episodeSteps must be positive")
+
+        day = int(observation.get("day", step // turns_per_day))
+        hour = int(observation.get("hour", step % turns_per_day))
+        if step != day * turns_per_day + hour:
+            raise ValueError("clock violates step == day * turnsPerDay + hour")
+        if not 0 <= hour < turns_per_day:
+            raise ValueError("observation.hour is outside the configured day")
+
+        try:
+            player = int(observation.get("player", 0))
+        except (TypeError, ValueError) as exc:
+            raise ValueError("observation.player must be integral") from exc
+        farms = observation.get("farms")
+        if not isinstance(farms, (list, tuple)) or not 0 <= player < len(farms):
+            raise ValueError("observation.farms does not contain the bound player")
+        farm = farms[player]
+        private = observation.get("private", {}) or {}
+        market = observation.get("market", {}) or {}
+        if not isinstance(farm, dict) or not isinstance(private, dict):
+            raise TypeError("farm and private payloads must be mappings")
+        if not isinstance(market, dict):
+            market = {}
+
+        configuration_snapshot = {
+            "turnsPerDay": turns_per_day,
+            "episodeSteps": episode_steps,
+            "boardSize": int(
+                _configuration_value(configuration, "boardSize", 10)
+            ),
+            "shedCapacity": int(
+                _configuration_value(configuration, "shedCapacity", 100)
+            ),
+            "maxMarketOrdersPerTurn": int(
+                _configuration_value(configuration, "maxMarketOrdersPerTurn", 10)
+            ),
+        }
+        configuration_hash = stable_payload_hash(configuration_snapshot)
+        snapshot_payload = {
+            "step": step,
+            "day": day,
+            "hour": hour,
+            "player": player,
+            "farm": farm,
+            "private": private,
+            "market": market,
+            "configuration_hash": configuration_hash,
+        }
+        snapshot_fingerprint = stable_payload_hash(snapshot_payload)
+        state_id = f"state-{step:06d}"
+        return CodexSnapshot(
+            clock=CodexClock(
+                step=step,
+                day=day,
+                hour=hour,
+                turns_per_day=turns_per_day,
+                episode_steps=episode_steps,
+            ),
+            player=player,
+            farm=farm,
+            private=private,
+            market=market,
+            evidence_snapshot_id=f"evidence-{step:06d}-{snapshot_fingerprint[:12]}",
+            state_id=state_id,
+            configuration_snapshot=configuration_snapshot,
+            configuration_hash=configuration_hash,
+            snapshot_fingerprint=snapshot_fingerprint,
+        )
+
+
+class CodexDecisionLifecycle:
+    """Append-only, deterministic realization of the frozen C2 DLC."""
+
+    def __init__(
+        self,
+        *,
+        run_id: str,
+        episode_id: str,
+        agent_id: str,
+        model_spec_version: str,
+    ) -> None:
+        if not run_id or not episode_id:
+            raise ValueError("run_id and episode_id are mandatory and distinct from seed")
+        self.run_id = str(run_id)
+        self.episode_id = str(episode_id)
+        self.agent_id = agent_id
+        self.model_spec_version = model_spec_version
+        self.state = DECISION_OPEN
+        self.event_sequence = 0
+        self.decision_sequence = 0
+        self.plan_sequence = 0
+        self.commitment_sequence = 0
+        self.repair_sequence = 0
+        self.review_sequence = 0
+        self.request_sequence = 0
+        self.verify_sequence = 0
+        self.terminal_sequence = 0
+        self.active_commitment: dict[str, Any] | None = None
+        self.pending_supersession_intent_id: str | None = None
+        self.events: list[dict[str, Any]] = []
+        self.feasibility_records: list[dict[str, Any]] = []
+        self.repair_records: list[dict[str, Any]] = []
+        self.review_records: list[dict[str, Any]] = []
+        self.request_records: list[dict[str, Any]] = []
+        self.outcome_records: list[dict[str, Any]] = []
+        self.verify_records: list[dict[str, Any]] = []
+        self.terminal_record: dict[str, Any] | None = None
+        self.counts = {
+            "commitment_count": 0,
+            "completion_count": 0,
+            "invalidation_count": 0,
+            "repair_count": 0,
+            "cancellation_count": 0,
+            "supersession_count": 0,
+            "infeasible_count": 0,
+            "rejected_count": 0,
+        }
+
+    @property
+    def scope_key(self) -> str:
+        return f"{self.run_id}/{self.episode_id}"
+
+    def _next_id(self, kind: str) -> str:
+        self.event_sequence += 1
+        return f"{self.scope_key}/{kind}-{self.event_sequence:06d}"
+
+    def _transition(
+        self,
+        target: str,
+        *,
+        snapshot: CodexSnapshot,
+        reason_code: str,
+        payload: dict[str, Any] | None = None,
+    ) -> None:
+        source = self.state
+        lifecycle_event_id = self._next_id("lifecycle")
+        self.state = target
+        self.events.append(
+            {
+                "run_id": self.run_id,
+                "episode_id": self.episode_id,
+                "lifecycle_event_id": lifecycle_event_id,
+                "from_state": source,
+                "to_state": target,
+                "transition_id": snapshot.clock.step,
+                "decision_boundary_id": f"boundary-{snapshot.clock.step:06d}",
+                "evidence_snapshot_id": snapshot.evidence_snapshot_id,
+                "reason_code": reason_code,
+                "payload": deepcopy(payload or {}),
+                "foundation_checkpoint": FOUNDATION_CHECKPOINT,
+            }
+        )
+
+    def begin_commitment(
+        self,
+        snapshot: CodexSnapshot,
+        *,
+        intent_type: str,
+        plan_payload: dict[str, Any],
+        feasibility_records: list[dict[str, Any]],
+        reservations: list[dict[str, Any]],
+        invariants: list[str],
+        invalidators: list[str],
+        completion_condition: str,
+        completion_invalidation_precedence_policy: str,
+    ) -> bool:
+        if self.state != DECISION_OPEN:
+            raise RuntimeError("a new decision can only begin in DECISION_OPEN")
+
+        self.decision_sequence += 1
+        self.plan_sequence += 1
+        decision_id = f"{self.scope_key}/decision-{self.decision_sequence:04d}"
+        plan_id = f"{self.scope_key}/plan-{self.plan_sequence:04d}"
+        decision_payload = {
+            "decision_id": decision_id,
+            "decision_version": 1,
+            "owner_agent": self.agent_id,
+            "intent_type": intent_type,
+            "intent_payload": deepcopy(plan_payload.get("intent", {})),
+            "created_at_transition_id": snapshot.clock.step,
+            "evidence_snapshot_id": snapshot.evidence_snapshot_id,
+        }
+        if self.pending_supersession_intent_id is not None:
+            decision_payload["supersession_intent_id"] = (
+                self.pending_supersession_intent_id
+            )
+            decision_payload["successor_decision_id"] = decision_id
+            self.pending_supersession_intent_id = None
+        self._transition(
+            DEFINED,
+            snapshot=snapshot,
+            reason_code="DEFINE_INTENT",
+            payload=decision_payload,
+        )
+
+        normalized_checks: list[dict[str, Any]] = []
+        failed_checks: list[dict[str, Any]] = []
+        for index, record in enumerate(feasibility_records, start=1):
+            normalized = {
+                "feasibility_check_id": f"{plan_id}/check-{index:02d}",
+                "decision_id": decision_id,
+                "plan_id": plan_id,
+                "snapshot_id": snapshot.evidence_snapshot_id,
+                "feasibility_captured_at_transition_id": snapshot.clock.step,
+                "revalidated_before_commit": True,
+                **deepcopy(record),
+            }
+            normalized_checks.append(normalized)
+            if normalized.get("check_result") == "FAIL":
+                failed_checks.append(normalized)
+        self.feasibility_records.extend(normalized_checks)
+
+        if failed_checks:
+            self.counts["infeasible_count"] += 1
+            self._transition(
+                INFEASIBLE,
+                snapshot=snapshot,
+                reason_code=str(
+                    failed_checks[0].get(
+                        "reason_code", "FEASIBILITY_CAPACITY_EXCEEDED"
+                    )
+                ),
+                payload={
+                    "decision_id": decision_id,
+                    "plan_id": plan_id,
+                    "failed_check_ids": [
+                        check["feasibility_check_id"] for check in failed_checks
+                    ],
+                },
+            )
+            self._transition(
+                DECISION_OPEN,
+                snapshot=snapshot,
+                reason_code="INFEASIBLE_REOPEN",
+            )
+            return False
+
+        plan_fingerprint = stable_payload_hash(plan_payload)
+        self._transition(
+            PLAN_FEASIBLE,
+            snapshot=snapshot,
+            reason_code="FEASIBILITY_PASS",
+            payload={
+                "decision_id": decision_id,
+                "plan_id": plan_id,
+                "plan_version": 1,
+                "plan_fingerprint": plan_fingerprint,
+                "declared_reservations": deepcopy(reservations),
+                "declared_invariants": list(invariants),
+                "declared_invalidators": list(invalidators),
+                "feasibility_valid_until": (
+                    (snapshot.clock.day + 1) * snapshot.clock.turns_per_day - 1
+                ),
+                "revalidation_policy_version": self.model_spec_version,
+                "revalidated_before_commit": True,
+            },
+        )
+
+        self.commitment_sequence += 1
+        commitment_id = (
+            f"{self.scope_key}/commitment-{self.commitment_sequence:04d}"
+        )
+        self.active_commitment = {
+            "commitment_id": commitment_id,
+            "commitment_version": 1,
+            "decision_id": decision_id,
+            "decision_version": 1,
+            "plan_id": plan_id,
+            "plan_version": 1,
+            "plan_fingerprint": plan_fingerprint,
+            "plan_payload": deepcopy(plan_payload),
+            "commitment_start_transition": snapshot.clock.step,
+            "commitment_day": snapshot.clock.day,
+            "scope": deepcopy(plan_payload.get("scope", {})),
+            "declared_completion_condition": completion_condition,
+            "declared_invariants": list(invariants),
+            "declared_invalidators": list(invalidators),
+            "completion_invalidation_precedence_policy": (
+                completion_invalidation_precedence_policy
+            ),
+            "reservation_envelope": deepcopy(reservations),
+        }
+        self.counts["commitment_count"] += 1
+        self._transition(
+            COMMITTED_EXECUTING,
+            snapshot=snapshot,
+            reason_code="COMMIT",
+            payload=deepcopy(self.active_commitment),
+        )
+        return True
+
+    def reject_precommit(
+        self, snapshot: CodexSnapshot, *, reason_code: str
+    ) -> None:
+        if self.state not in {DEFINED, PLAN_FEASIBLE}:
+            raise RuntimeError("REJECTED is only valid before commitment")
+        self.counts["rejected_count"] += 1
+        self._transition(REJECTED, snapshot=snapshot, reason_code=reason_code)
+        self._transition(
+            DECISION_OPEN,
+            snapshot=snapshot,
+            reason_code="REJECTED_REOPEN",
+        )
+
+    def register_action_requests(
+        self,
+        snapshot: CodexSnapshot,
+        requests: list[dict[str, Any]],
+    ) -> list[dict[str, Any]]:
+        if self.state != COMMITTED_EXECUTING or self.active_commitment is None:
+            raise RuntimeError("committed actions require an active commitment")
+        materialized: list[dict[str, Any]] = []
+        for request in requests:
+            self.request_sequence += 1
+            record = {
+                "action_request_id": (
+                    f"{self.scope_key}/request-{self.request_sequence:07d}"
+                ),
+                "snapshot_eligibility_id": (
+                    f"{self.scope_key}/eligibility-{self.request_sequence:07d}"
+                ),
+                "commitment_id": self.active_commitment["commitment_id"],
+                "commitment_version": self.active_commitment[
+                    "commitment_version"
+                ],
+                "transition_id": snapshot.clock.step,
+                "source_state_id": snapshot.state_id,
+                **deepcopy(request),
+            }
+            materialized.append(record)
+        self.request_records.extend(materialized)
+        return materialized
+
+    def record_verification(
+        self,
+        snapshot: CodexSnapshot,
+        *,
+        request_records: list[dict[str, Any]],
+        outcomes: list[dict[str, Any]],
+        invariant_results: list[dict[str, Any]] | None = None,
+        invalidator_results: list[dict[str, Any]] | None = None,
+        completion_status: str = "NOT_MET",
+        precedence_result: str = "CONTINUE",
+    ) -> dict[str, Any]:
+        self.verify_sequence += 1
+        outcome_by_request = {
+            outcome["action_request_id"]: outcome for outcome in outcomes
+        }
+        self.outcome_records.extend(deepcopy(outcomes))
+        execution_outcome_ids: list[str] = []
+        for request in request_records:
+            outcome = outcome_by_request.get(request["action_request_id"])
+            if outcome is not None:
+                execution_outcome_ids.append(outcome["execution_outcome_id"])
+        active = self.active_commitment or {}
+        record = {
+            "verify_event_id": f"{self.scope_key}/verify-{self.verify_sequence:07d}",
+            "decision_id": active.get("decision_id"),
+            "commitment_id": active.get("commitment_id"),
+            "commitment_version": active.get("commitment_version"),
+            "transition_id": snapshot.clock.step,
+            "action_request_ids": [
+                request["action_request_id"] for request in request_records
+            ],
+            "snapshot_eligibility_ids": [
+                request["snapshot_eligibility_id"] for request in request_records
+            ],
+            "execution_outcome_ids": execution_outcome_ids,
+            "post_state_evidence_id": snapshot.evidence_snapshot_id,
+            "invariant_results": deepcopy(invariant_results or []),
+            "invalidator_results": deepcopy(invalidator_results or []),
+            "completion_status": completion_status,
+            "terminal_status": (
+                "TRIGGERED" if snapshot.clock.is_terminal_action else "CLEAR"
+            ),
+            "precedence_policy_reference": active.get(
+                "completion_invalidation_precedence_policy"
+            ),
+            "precedence_result": precedence_result,
+            "verification_result": (
+                "DEVIATION"
+                if any(
+                    outcome.get("result") in {"NO_OP", "REJECTED"}
+                    for outcome in outcomes
+                )
+                else "OBSERVED"
+            ),
+        }
+        self.verify_records.append(record)
+        return record
+
+    def repair(
+        self,
+        snapshot: CodexSnapshot,
+        *,
+        trigger_evidence_snapshot_id: str,
+        reason_code: str,
+        succeeded: bool = True,
+    ) -> None:
+        if self.state != COMMITTED_EXECUTING or self.active_commitment is None:
+            return
+        commitment_id = self.active_commitment["commitment_id"]
+        self.repair_sequence += 1
+        repair_id = f"{self.scope_key}/repair-{self.repair_sequence:05d}"
+        self._transition(
+            REPAIR_WITHIN_COMMITMENT,
+            snapshot=snapshot,
+            reason_code=reason_code,
+            payload={"repair_id": repair_id, "commitment_id": commitment_id},
+        )
+        record = {
+            "repair_id": repair_id,
+            "commitment_id": commitment_id,
+            "repair_attempt": sum(
+                1
+                for item in self.repair_records
+                if item["commitment_id"] == commitment_id
+            )
+            + 1,
+            "trigger_evidence_snapshot_id": trigger_evidence_snapshot_id,
+            "repair_policy_version": self.model_spec_version,
+            "plan_version_before": self.active_commitment["plan_version"],
+            "plan_version_after": self.active_commitment["plan_version"],
+            "repair_result": "SUCCEEDED" if succeeded else "FAILED",
+        }
+        self.repair_records.append(record)
+        self.counts["repair_count"] += 1
+        self._transition(
+            COMMITTED_EXECUTING,
+            snapshot=snapshot,
+            reason_code="REPAIR_SUCCESSFUL" if succeeded else "REPAIR_FAILED",
+            payload=record,
+        )
+
+    def close_active(
+        self,
+        snapshot: CodexSnapshot,
+        *,
+        completion: bool,
+        invalidator_results: list[dict[str, Any]] | None = None,
+    ) -> str:
+        if self.state != COMMITTED_EXECUTING or self.active_commitment is None:
+            return self.state
+        invalidators = [
+            item
+            for item in (invalidator_results or [])
+            if bool(item.get("triggered"))
+        ]
+        if invalidators:
+            # INVALIDATION_WINS is the pre-declared Codex conflict policy.
+            target = INVALIDATED
+            reason_code = str(
+                invalidators[0].get(
+                    "reason_code", "STATE_INVARIANT_VIOLATION"
+                )
+            )
+            self.counts["invalidation_count"] += 1
+        elif completion:
+            target = COMPLETED
+            reason_code = "PLAN_COMPLETED"
+            self.counts["completion_count"] += 1
+        else:
+            return COMMITTED_EXECUTING
+
+        self._transition(
+            target,
+            snapshot=snapshot,
+            reason_code=reason_code,
+            payload={
+                "commitment_id": self.active_commitment["commitment_id"],
+                "completion": completion,
+                "invalidator_results": deepcopy(invalidators),
+            },
+        )
+        self._review_and_reopen(snapshot, closure_type=target)
+        return target
+
+    def cancel(self, snapshot: CodexSnapshot, *, reason_code: str) -> None:
+        if self.state != COMMITTED_EXECUTING or self.active_commitment is None:
+            raise RuntimeError("CANCELLED requires an active commitment")
+        self.counts["cancellation_count"] += 1
+        self._transition(
+            CANCELLED,
+            snapshot=snapshot,
+            reason_code=reason_code,
+            payload={
+                "commitment_id": self.active_commitment["commitment_id"],
+                "decision_boundary_id": f"boundary-{snapshot.clock.step:06d}",
+                "cancellation_policy_version": self.model_spec_version,
+                "authority_reference": "MODEL_SPEC_CODEX_C2_V6",
+                "evidence_snapshot_id": snapshot.evidence_snapshot_id,
+            },
+        )
+        self._review_and_reopen(snapshot, closure_type=CANCELLED)
+
+    def supersede(
+        self, snapshot: CodexSnapshot, *, supersession_reason_code: str
+    ) -> str:
+        if self.state != COMMITTED_EXECUTING or self.active_commitment is None:
+            raise RuntimeError("SUPERSEDED requires an active commitment")
+        self.counts["supersession_count"] += 1
+        intent_id = self._next_id("supersession-intent")
+        self.pending_supersession_intent_id = intent_id
+        self._transition(
+            SUPERSEDED,
+            snapshot=snapshot,
+            reason_code=supersession_reason_code,
+            payload={
+                "superseded_commitment_id": self.active_commitment[
+                    "commitment_id"
+                ],
+                "supersession_intent_id": intent_id,
+                "decision_boundary_id": f"boundary-{snapshot.clock.step:06d}",
+                "supersession_policy_version": self.model_spec_version,
+                "authority_reference": "MODEL_SPEC_CODEX_C2_V6",
+                "supersession_evidence_snapshot_id": (
+                    snapshot.evidence_snapshot_id
+                ),
+                "successor_decision_id": None,
+            },
+        )
+        self._review_and_reopen(snapshot, closure_type=SUPERSEDED)
+        return intent_id
+
+    def _review_and_reopen(
+        self, snapshot: CodexSnapshot, *, closure_type: str
+    ) -> None:
+        active = deepcopy(self.active_commitment or {})
+        self._transition(
+            REVIEW_READY,
+            snapshot=snapshot,
+            reason_code=f"{closure_type}_REVIEW_READY",
+        )
+        self.review_sequence += 1
+        disposition = {
+            COMPLETED: "MAINTAIN",
+            INVALIDATED: "REDUCE",
+            CANCELLED: "INCONCLUSIVE",
+            SUPERSEDED: "INCONCLUSIVE",
+        }.get(closure_type, "INCONCLUSIVE")
+        review = {
+            "review_id": f"{self.scope_key}/review-{self.review_sequence:05d}",
+            "review_version": 1,
+            "decision_id": active.get("decision_id"),
+            "commitment_id": active.get("commitment_id"),
+            "review_status": "COMPLETE",
+            "closure_type": closure_type,
+            "start_evidence_snapshot": active.get("commitment_start_transition"),
+            "end_evidence_snapshot": snapshot.evidence_snapshot_id,
+            "execution_summary": {
+                "repair_count": sum(
+                    1
+                    for item in self.repair_records
+                    if item.get("commitment_id") == active.get("commitment_id")
+                )
+            },
+            "diagnostic_summary": "DESCRIPTIVE_DIAGNOSTICS",
+            "review_disposition": disposition,
+            "completed_at_transition_id": snapshot.clock.step,
+        }
+        self.review_records.append(review)
+        self.active_commitment = None
+        self._transition(
+            DECISION_OPEN,
+            snapshot=snapshot,
+            reason_code="REVIEW_COMPLETE",
+            payload={
+                "review_id": review["review_id"],
+                "review_status": "COMPLETE",
+            },
+        )
+
+    def close_terminal(
+        self,
+        snapshot: CodexSnapshot,
+        *,
+        closure_disposition: str = "TERMINAL_PREEMPTION",
+    ) -> None:
+        if self.state == TERMINAL_CLOSED:
+            return
+        if self.state not in ONLINE_STATES:
+            raise RuntimeError(f"cannot terminal-close lifecycle state {self.state}")
+        previous_state = self.state
+        active = deepcopy(self.active_commitment or {})
+        self.terminal_sequence += 1
+        self.terminal_record = {
+            "terminal_closure_id": (
+                f"{self.scope_key}/terminal-{self.terminal_sequence:03d}"
+            ),
+            "previous_lifecycle_state": previous_state,
+            "decision_id": active.get("decision_id"),
+            "plan_id": active.get("plan_id"),
+            "commitment_id": active.get("commitment_id"),
+            "terminal_transition_id": snapshot.clock.step,
+            "terminal_evidence_snapshot_id": snapshot.evidence_snapshot_id,
+            "closure_disposition": closure_disposition,
+        }
+        self._transition(
+            TERMINAL_CLOSED,
+            snapshot=snapshot,
+            reason_code=closure_disposition,
+            payload=self.terminal_record,
+        )
+        self.active_commitment = None
+
+    def summary(self) -> dict[str, Any]:
+        """Return JSON-serializable lifecycle telemetry for local verification."""
+
+        return {
+            "run_id": self.run_id,
+            "episode_id": self.episode_id,
+            "agent_id": self.agent_id,
+            "model_spec_version": self.model_spec_version,
+            "foundation_checkpoint": FOUNDATION_CHECKPOINT,
+            "foundation_version": FOUNDATION_VERSION,
+            "engine_fingerprint": ENGINE_FINGERPRINT,
+            "state": self.state,
+            "active_commitment": deepcopy(self.active_commitment),
+            "counts": deepcopy(self.counts),
+            "event_count": len(self.events),
+            "request_count": len(self.request_records),
+            "outcome_count": len(self.outcome_records),
+            "verify_count": len(self.verify_records),
+            "review_count": len(self.review_records),
+            "terminal_record": deepcopy(self.terminal_record),
+        }
+
+    def export_ledger(self) -> dict[str, Any]:
+        return {
+            **self.summary(),
+            "events": deepcopy(self.events),
+            "feasibility_records": deepcopy(self.feasibility_records),
+            "repair_records": deepcopy(self.repair_records),
+            "review_records": deepcopy(self.review_records),
+            "request_records": deepcopy(self.request_records),
+            "outcome_records": deepcopy(self.outcome_records),
+            "verify_records": deepcopy(self.verify_records),
+            "terminal_record": deepcopy(self.terminal_record),
+        }
+
+
+def snapshot_asdict(snapshot: CodexSnapshot) -> dict[str, Any]:
+    """Small public helper used by tests without exposing mutable internals."""
+
+    payload = asdict(snapshot)
+    payload["farm"] = deepcopy(snapshot.farm)
+    payload["private"] = deepcopy(snapshot.private)
+    payload["market"] = deepcopy(snapshot.market)
+    return payload
+
+# ==========================================
 # --- Codex C2 Strategy & Agent Class ---
 # ==========================================
-CROP_RULES = {
+CROP_RULES: dict[str, dict[str, Any]] = {
     "WHEAT": {
         "first_yield_day": 2,
         "economic_harvest_day": 4,
         "max_yield_day": 4,
-        "max_yield": 6,
         "pre_harvest_yield_target": 3,
         "ongoing": False,
+        "final_production_day": 4,
+        "value": 25,
     },
     "STRAWBERRY": {
         "first_yield_day": 10,
         "economic_harvest_day": 10,
         "max_yield_day": 10,
-        "max_yield": 4,
-        "pre_harvest_yield_target": 4,
+        "pre_harvest_yield_target": 2,
         "ongoing": True,
+        "final_production_day": 16,
+        "value": 120,
     },
     "MELON": {
         "first_yield_day": 10,
         "economic_harvest_day": 10,
         "max_yield_day": 12,
-        "max_yield": 6,
         "pre_harvest_yield_target": 6,
         "ongoing": False,
+        "final_production_day": 12,
+        "value": 250,
     },
 }
 
-CODEX_PASTURE_POSITIONS = ((3, 4), (6, 4), (3, 3), (6, 3), (2, 4))
+ANIMAL_RULES: dict[str, dict[str, Any]] = {
+    "COW": {"cost": 400, "first_output_day": 8, "period": 2, "product": "MILK"},
+    "SHEEP": {"cost": 500, "first_output_day": 6, "period": 3, "product": "WOOL"},
+}
 
-
-def _distance_from_shed(position: tuple[int, int]) -> tuple[int, int, int]:
-    x, y = position
-    return abs(x - 4) + abs(y - 4), y, x
-
-
-_RESERVED_PRODUCTIVE_POSITIONS = set(SHED_TILES) | set(CODEX_PASTURE_POSITIONS)
-_NW_CROP_POSITIONS = sorted(
-    (
-        (x, y)
-        for y in range(5)
-        for x in range(5)
-        if (x, y) not in _RESERVED_PRODUCTIVE_POSITIONS
-    ),
-    key=_distance_from_shed,
+# Q0 is the NW 5x5 block.  (4, 4) is the Q0 shed tile.  Six pastures plus
+# eighteen crop tiles consume the remaining twenty-four productive positions.
+CODEX_PASTURE_POSITIONS: tuple[tuple[int, int], ...] = (
+    (3, 4),
+    (4, 3),
+    (3, 3),
+    (2, 4),
+    (4, 2),
+    (3, 2),
 )
-_NE_CROP_POSITIONS = sorted(
-    (
-        (x, y)
-        for y in range(5)
-        for x in range(5, 10)
-        if (x, y) not in _RESERVED_PRODUCTIVE_POSITIONS
-    ),
-    key=_distance_from_shed,
+
+CODEX_CROP_ZONES: tuple[tuple[tuple[int, int], ...], ...] = (
+    ((0, 0), (1, 0), (2, 0), (2, 1), (1, 1), (0, 1)),
+    ((3, 0), (4, 0), (4, 1), (3, 1), (2, 2), (1, 2)),
+    ((0, 2), (0, 3), (1, 3), (2, 3), (1, 4), (0, 4)),
 )
-CODEX_CROP_POSITIONS = tuple(_NW_CROP_POSITIONS + _NE_CROP_POSITIONS)
+CODEX_CROP_POSITIONS: tuple[tuple[int, int], ...] = tuple(
+    position for zone in CODEX_CROP_ZONES for position in zone
+)
+
+_MELON_POSITIONS = {
+    *CODEX_CROP_ZONES[0][:3],
+    *CODEX_CROP_ZONES[1][:3],
+    *CODEX_CROP_ZONES[2][:3],
+}
+_WHEAT_POSITION = CODEX_CROP_ZONES[2][-1]
+CODEX_CROP_PLAN: dict[tuple[int, int], str] = {
+    position: (
+        "MELON"
+        if position in _MELON_POSITIONS
+        else "WHEAT"
+        if position == _WHEAT_POSITION
+        else "STRAWBERRY"
+    )
+    for position in CODEX_CROP_POSITIONS
+}
+
+_STRAWBERRY_A = {
+    *CODEX_CROP_ZONES[0][3:],
+    CODEX_CROP_ZONES[2][3],
+}
+CODEX_COHORT_OFFSET: dict[tuple[int, int], int] = {}
+for zone_id, zone in enumerate(CODEX_CROP_ZONES):
+    for position in zone[:3]:
+        CODEX_COHORT_OFFSET[position] = zone_id
+for position, crop in CODEX_CROP_PLAN.items():
+    if crop == "STRAWBERRY":
+        CODEX_COHORT_OFFSET[position] = 0 if position in _STRAWBERRY_A else 2
+    elif crop == "WHEAT":
+        CODEX_COHORT_OFFSET[position] = 0
+
+CODEX_ZONE_BY_POSITION: dict[tuple[int, int], int] = {
+    position: zone_id
+    for zone_id, zone in enumerate(CODEX_CROP_ZONES)
+    for position in zone
+}
+CODEX_ROUTE_INDEX: dict[tuple[int, int], int] = {
+    position: route_index
+    for zone in CODEX_CROP_ZONES
+    for route_index, position in enumerate(zone)
+}
+
+ROLE_SEQUENCE = (
+    "FLOAT_RESERVE",
+    "CROP_ZONE_0",
+    "CROP_ZONE_1",
+    "CROP_ZONE_2",
+    "LIVESTOCK_COW",
+    "LIVESTOCK_SHEEP",
+    "FERTILIZER_LOGISTICS",
+)
 
 OUT_OF_SCOPE = "OUT_OF_SCOPE"
 EMPTY_ASSIGNED = "EMPTY_ASSIGNED"
@@ -631,94 +1469,108 @@ HARVEST_READY = "HARVEST_READY"
 RETIREMENT_DUE = "RETIREMENT_DUE"
 LOST_WEED = "LOST_WEED"
 
+MODEL_SPEC_VERSION = "CODEX-C2-COMPACT-Q0-ROUTINE-V7"
+FOUNDATION_CHECKPOINT = "f391ee2"
+MOVE_ACTIONS = {"NORTH", "SOUTH", "EAST", "WEST"}
+HANDLING_ACTIONS = {"PICKUP", "PLACE"}
+PRODUCTIVE_ACTIONS = {
+    "PLANT",
+    "WATER",
+    "HARVEST",
+    "DIG",
+    "BUILD_PASTURE",
+    "FEED",
+    "CARE",
+    "COLLECT_FERTILIZER",
+    "FERTILIZE",
+}
 _SAFE_PASS = {"farmer": ["PASS"], "hands": [], "market": []}
 
 
 def load_candidate_config(
     path: Path | str | None = None,
 ) -> dict[str, Any]:
-    """Load and validate the candidate-specific configuration."""
+    """Load and validate the frozen compact-Q0 configuration."""
 
-    if path is not None and Path(path).exists():
-        with Path(path).open("r", encoding="utf-8") as handle:
-            config = json.load(handle)
+    if path is None and "CODEX_C2_CONFIG" in globals():
+        config = deepcopy(globals()["CODEX_C2_CONFIG"])
     else:
-        config = deepcopy(CODEX_C2_CONFIG)
+        config_path = Path(path) if path is not None else DEFAULT_CONFIG_PATH
+        with config_path.open("r", encoding="utf-8") as handle:
+            config = json.load(handle)
 
     required = {
         "candidate_id",
         "schema_version",
-        "crop_working_set_target",
-        "crop_pattern",
-        "bootstrap_crop_pattern",
-        "max_wheat_plants_per_day",
-        "watering_dispatch_priority",
-        "livestock_headcount_target",
-        "pasture_allocation_target",
+        "model_spec_version",
+        "foundation_checkpoint",
         "quadrants_owned",
-        "workforce_headcount",
-        "livestock_species",
+        "workforce_total",
+        "crop_working_set_target",
+        "crop_counts",
+        "pasture_allocation_target",
+        "livestock_targets",
+        "bootstrap_livestock",
+        "livestock_activation_days",
         "operating_cash_floor",
-        "endgame_shutdown_steps",
-        "turns_per_day",
+        "feed_reserve_rounds",
+        "observed_capacity_days",
+        "hard_schedule_days",
         "minimum_post_plant_action_phases",
-        "bootstrap_crop_target",
-        "bootstrap_workforce_headcount",
-        "land_expansion_min_active",
-        "land_expansion_min_cash",
-        "livestock_activation_min_crop_fraction",
-        "livestock_activation_min_cash",
-        "crop_horizon_margin_steps",
+        "payback_cutoff_days",
+        "crop_horizon_margin_days",
+        "endgame_shutdown_days",
+        "max_noop_before_invalidation",
+        "turns_per_day",
     }
     missing = required - set(config)
     if missing:
-        raise ValueError(f"missing Codex C2 config fields: {sorted(missing)}")
+        raise ValueError(f"missing Codex compact-Q0 config fields: {sorted(missing)}")
     if config["candidate_id"] != "CODEX_C2":
         raise ValueError("unexpected candidate_id")
-    if config["schema_version"] != "model_spec_c2.codex.v3":
-        raise ValueError("unexpected Codex C2 config schema")
-
-    target = int(config["crop_working_set_target"])
-    if not 1 <= target <= len(CODEX_CROP_POSITIONS):
-        raise ValueError("crop_working_set_target is outside the supported board")
-    bootstrap_target = int(config["bootstrap_crop_target"])
-    if not 1 <= bootstrap_target <= min(target, len(_NW_CROP_POSITIONS)):
-        raise ValueError("bootstrap_crop_target is outside the compact NW layout")
-    max_wheat_plants_per_day = int(config["max_wheat_plants_per_day"])
-    if not 1 <= max_wheat_plants_per_day <= target:
-        raise ValueError("max_wheat_plants_per_day must be in the working set")
-    for field in ("bootstrap_crop_pattern", "crop_pattern"):
-        pattern = list(config[field])
-        if not pattern or any(crop not in CROP_RULES for crop in pattern):
-            raise ValueError(f"{field} contains an unsupported crop")
-        if set(pattern) != set(CROP_MIX):
-            raise ValueError(f"{field} must preserve the E16 crop mix")
+    if config["schema_version"] != "model_spec_c2.codex.compact_q0.v1":
+        raise ValueError("unexpected compact-Q0 config schema")
+    if config["model_spec_version"] != MODEL_SPEC_VERSION:
+        raise ValueError("unexpected Codex MODEL_SPEC version")
+    if config["foundation_checkpoint"] != FOUNDATION_CHECKPOINT:
+        raise ValueError("Codex config is not bound to Foundation f391ee2")
+    if int(config["quadrants_owned"]) != 1:
+        raise ValueError("compact-Q0 candidate must own one quadrant")
+    if int(config["workforce_total"]) != 7:
+        raise ValueError("compact-Q0 candidate requires seven total workers")
+    if int(config["crop_working_set_target"]) != len(CODEX_CROP_POSITIONS):
+        raise ValueError("compact-Q0 candidate requires eighteen crop tiles")
+    crop_counts = {str(k): int(v) for k, v in config["crop_counts"].items()}
+    if crop_counts != {"MELON": 9, "STRAWBERRY": 8, "WHEAT": 1}:
+        raise ValueError("compact-Q0 crop mix is frozen at 9/8/1")
+    if int(config["pasture_allocation_target"]) != 6:
+        raise ValueError("compact-Q0 candidate requires six pastures")
+    if config["livestock_targets"] != {"COW": 3, "SHEEP": 3}:
+        raise ValueError("compact-Q0 livestock mix is frozen at 3+3")
+    if config["bootstrap_livestock"] != {"COW": 2, "SHEEP": 2}:
+        raise ValueError("compact-Q0 bootstrap is frozen at 2+2")
+    if int(config["feed_reserve_rounds"]) != 2:
+        raise ValueError("feed reserve must cover exactly two rounds")
+    if int(config["observed_capacity_days"]) < 3:
+        raise ValueError("observed capacity requires at least three days")
     if int(config["turns_per_day"]) <= 0:
         raise ValueError("turns_per_day must be positive")
-    if int(config["minimum_post_plant_action_phases"]) < 1:
-        raise ValueError("new PLANT must leave at least one later action phase")
-    if not 0 < float(config["livestock_activation_min_crop_fraction"]) <= 1:
-        raise ValueError("livestock activation fraction must be in (0, 1]")
-    if int(config["crop_horizon_margin_steps"]) < 0:
-        raise ValueError("crop_horizon_margin_steps must be non-negative")
     return deepcopy(config)
 
 
 def _stable_crop_plan(
-    target: int, pattern: list[str] | tuple[str, ...]
+    target: int = 18, pattern: Any = None
 ) -> dict[tuple[int, int], str]:
-    """Assign a stable crop role to each working-set position."""
+    """Compatibility helper returning the frozen crop plan."""
 
-    return {
-        position: pattern[index % len(pattern)]
-        for index, position in enumerate(CODEX_CROP_POSITIONS[:target])
-    }
+    del pattern
+    return dict(list(CODEX_CROP_PLAN.items())[:target])
 
 
 def classify_tile_lifecycle(
     tile: Any, *, in_working_set: bool, day: int
 ) -> str | None:
-    """Classify one native engine tile without using future information."""
+    """Classify a crop tile from current observable state only."""
 
     if not in_working_set or tile == "LOCKED":
         return OUT_OF_SCOPE
@@ -726,608 +1578,1461 @@ def classify_tile_lifecycle(
         return EMPTY_ASSIGNED
     if not isinstance(tile, dict):
         return None
-    kind = tile.get("kind")
-    if kind == "WEED":
+    if tile.get("kind") == "WEED":
         return LOST_WEED
-    if kind != "PLANT":
+    if tile.get("kind") != "PLANT":
         return OUT_OF_SCOPE
-
-    crop = tile.get("crop")
+    crop = str(tile.get("crop", ""))
     rules = CROP_RULES.get(crop)
     if rules is None:
         return None
     try:
+        age = day - int(tile["planted_day"])
         yield_units = int(tile["yield_units"])
-        planted_day = int(tile["planted_day"])
         max_lifespan_step = int(tile.get("max_lifespan_step", -1))
     except (KeyError, TypeError, ValueError):
         return None
-    if yield_units < 0 or planted_day > day:
+    if age < 0 or yield_units < 0:
         return None
-
-    engine_ready = (
-        yield_units > 0
-        and day - planted_day >= int(rules["first_yield_day"])
-    )
-    if engine_ready and day - planted_day < int(rules["economic_harvest_day"]):
+    if yield_units > 0 and age < int(rules["economic_harvest_day"]):
         return YIELD_ACCUMULATING
-    if engine_ready:
+    if yield_units > 0:
         return HARVEST_READY
-    retired = bool(rules["ongoing"]) and yield_units == 0 and max_lifespan_step >= 0
-    if retired:
+    if (
+        bool(rules["ongoing"])
+        and max_lifespan_step >= 0
+        and age >= int(rules["final_production_day"])
+    ):
         return RETIREMENT_DUE
     return GROWING
 
 
 def water_loss_at_eod_if_unserved(tile: Any) -> bool:
-    """Return the deterministic EOD loss boundary for an unwatered PLANT."""
-
     if not isinstance(tile, dict) or tile.get("kind") != "PLANT":
         return False
     if bool(tile.get("watered_today", False)):
         return False
     try:
-        return int(tile["consecutive_unwatered"]) + 1 >= 2
-    except (KeyError, TypeError, ValueError):
+        return int(tile.get("consecutive_unwatered", 0)) + 1 >= 2
+    except (TypeError, ValueError):
         return True
 
 
 def lifespan_decay_started(tile: Any, engine_step: int) -> bool:
-    """Return whether a PLANT has entered its engine-step decay window."""
-
     if not isinstance(tile, dict) or tile.get("kind") != "PLANT":
         return False
     try:
-        max_lifespan_step = int(tile.get("max_lifespan_step", -1))
+        value = int(tile.get("max_lifespan_step", -1))
     except (TypeError, ValueError):
         return False
-    return max_lifespan_step >= 0 and engine_step >= max_lifespan_step
+    return value >= 0 and engine_step >= value
 
 
 def plant_matches_cohort(tile: Any, crop: str, day: int) -> bool:
-    """Return whether an observed PLANT belongs to a crop/day cohort."""
-
-    if not isinstance(tile, dict):
-        return False
-    if tile.get("kind") != "PLANT" or tile.get("crop") != crop:
-        return False
-    try:
-        return int(tile["planted_day"]) == day
-    except (KeyError, TypeError, ValueError):
-        return False
+    return (
+        isinstance(tile, dict)
+        and tile.get("kind") == "PLANT"
+        and tile.get("crop") == crop
+        and int(tile.get("planted_day", -1)) == day
+    )
 
 
 def yield_completion_water_due(tile: Any, day: int) -> bool:
-    """Prioritize the final observable yield increment before harvesting."""
-
-    if not isinstance(tile, dict) or tile.get("kind") != "PLANT":
+    if (
+        not isinstance(tile, dict)
+        or tile.get("kind") != "PLANT"
+        or tile.get("watered_today", False)
+    ):
         return False
-    if bool(tile.get("watered_today", False)):
-        return False
-    rules = CROP_RULES.get(tile.get("crop"))
+    rules = CROP_RULES.get(str(tile.get("crop", "")))
     if rules is None or bool(rules["ongoing"]):
         return False
     try:
         age = day - int(tile["planted_day"])
-        yield_units = int(tile["yield_units"])
+        units = int(tile["yield_units"])
     except (KeyError, TypeError, ValueError):
         return False
     return (
-        age >= int(rules["economic_harvest_day"])
-        and age <= int(rules["max_yield_day"])
-        and yield_units < int(rules["pre_harvest_yield_target"])
+        int(rules["economic_harvest_day"]) <= age <= int(rules["max_yield_day"])
+        and units < int(rules["pre_harvest_yield_target"])
     )
 
 
-class CodexC2Agent(E16TrainingAgent):
-    """C2 policy with lifecycle-safe crops and gated economic expansion."""
+class CodexC2Agent:
+    """Seven-worker compact-Q0 hybrid with local routine execution."""
 
-    def __init__(self, candidate_config: dict[str, Any] | None = None):
-        config = candidate_config or load_candidate_config()
-        super().__init__(config)
+    def __init__(
+        self,
+        candidate_config: dict[str, Any] | None = None,
+        *,
+        run_context: dict[str, Any] | None = None,
+    ) -> None:
+        self.config = deepcopy(candidate_config or load_candidate_config())
         self.candidate_id = "CODEX_C2"
-        self.crop_pattern = tuple(config["crop_pattern"])
-        self.bootstrap_crop_pattern = tuple(config["bootstrap_crop_pattern"])
-        self.turns_per_day = int(config["turns_per_day"])
-        self.minimum_post_plant_action_phases = int(
-            config["minimum_post_plant_action_phases"]
-        )
-        self.bootstrap_crop_target = int(config["bootstrap_crop_target"])
-        self.max_wheat_plants_per_day = int(config["max_wheat_plants_per_day"])
-        self.bootstrap_workforce_headcount = int(
-            config["bootstrap_workforce_headcount"]
-        )
-        self.land_expansion_min_active = int(config["land_expansion_min_active"])
-        self.land_expansion_min_cash = float(config["land_expansion_min_cash"])
-        self.livestock_activation_min_crop_fraction = float(
-            config["livestock_activation_min_crop_fraction"]
-        )
-        self.livestock_activation_min_cash = float(
-            config["livestock_activation_min_cash"]
-        )
-        self.crop_horizon_margin_steps = int(config["crop_horizon_margin_steps"])
+        self.model_spec_version = MODEL_SPEC_VERSION
+        self.turns_per_day = int(self.config["turns_per_day"])
         self.episode_steps = 720
-        self._current_step = 0
-        self._bootstrap_phase = True
-        self._assignment_day: int | None = None
-        self._sticky_targets: dict[int, tuple[tuple[int, int], int]] = {}
+        self.shed_capacity = 100
+        self.max_market_orders = 10
+        context = deepcopy(run_context or {})
+        self.run_id = str(context.get("run_id", "codex-compact-q0-local"))
+        self.episode_id = str(context.get("episode_id", "codex-compact-q0-episode"))
+        self.seed = context.get("seed")
+        self.opponent_id = context.get("opponent_id", "UNASSIGNED")
+        self.player_position = context.get("player_position", "UNASSIGNED")
+
         self.error_count = 0
         self.fallback_count = 0
         self.last_exception: str | None = None
+        self._previous_snapshot: CodexSnapshot | None = None
+        self._pending_requests: list[dict[str, Any]] = []
+        self._last_snapshot_fingerprint: str | None = None
+        self._last_action: dict[str, Any] | None = None
+        self._last_day: int | None = None
+        self._last_global_signature: tuple[Any, ...] | None = None
+        self._global_plan: dict[str, Any] = {}
+        self._commitments: dict[int, dict[str, Any]] = {}
+        self._roles: dict[int, str] = {}
+        self._consecutive_noops = 0
+        self._terminal_closed = False
 
-    def _active_values(self, quadrants: int) -> tuple[int, int, int, float]:
-        self._bootstrap_phase = quadrants < 2 or self.t0_step is None
-        if self._bootstrap_phase:
-            return self.bootstrap_crop_target, 0, 0, 0.70
-        return (
-            int(self.config["crop_working_set_target"]),
-            int(self.config["pasture_allocation_target"]),
-            int(self.config["livestock_headcount_target"]),
-            float(self.config["watering_dispatch_priority"]),
-        )
+        self.action_requests_by_opcode: Counter[str] = Counter()
+        self.market_requested_units: Counter[str] = Counter()
+        self.execution_outcomes: Counter[str] = Counter()
+        self.production_units: Counter[str] = Counter()
+        self.revenue: Counter[str] = Counter()
+        self.daily_requested: dict[int, Counter[str]] = defaultdict(Counter)
+        self.daily_completed: dict[int, Counter[str]] = defaultdict(Counter)
+        self.daily_due: dict[int, set[str]] = defaultdict(set)
+        self.daily_due_completed: dict[int, set[str]] = defaultdict(set)
+        self.interrupts_by_reason: Counter[str] = Counter()
+        self.activation_records: list[dict[str, Any]] = []
+        self._activation_decisions: set[tuple[str, int, int]] = set()
+        self.role_changes = 0
+        self.cross_zone_assists = 0
+        self.retarget_count = 0
+        self.duplicate_assignments = 0
+        self.target_dwell_total = 0
+        self.target_dwell_count = 0
+        self.hard_deadline_misses = 0
+        self.animal_escapes = 0
+        self.global_replan_count = 0
+        self.local_replan_count = 0
+        self.capacity_rejections: Counter[str] = Counter()
+        self.land_utilization_trajectory: list[dict[str, Any]] = []
+        self.final_money = 0.0
 
-    def _plant_serviceable_before_eod(self, hour: int) -> bool:
-        later_phases = self.turns_per_day - 1 - hour
-        return later_phases >= self.minimum_post_plant_action_phases
+    @staticmethod
+    def _tile(farm: dict[str, Any], position: tuple[int, int]) -> Any:
+        x, y = position
+        tiles = farm.get("tiles", []) or []
+        if 0 <= y < len(tiles) and 0 <= x < len(tiles[y]):
+            return tiles[y][x]
+        return "LOCKED"
 
-    def _crop_serviceable_before_terminal(self, crop: str, engine_step: int) -> bool:
-        maturity_steps = (
-            int(CROP_RULES[crop]["economic_harvest_day"]) * self.turns_per_day
-        )
-        remaining_steps = self.episode_steps - engine_step
-        return remaining_steps > maturity_steps + self.crop_horizon_margin_steps
-
-    def _effective_crop_plan(
-        self, crop_target: int, engine_step: int
-    ) -> dict[tuple[int, int], str | None]:
-        pattern = (
-            self.bootstrap_crop_pattern if self._bootstrap_phase else self.crop_pattern
-        )
-        plan = _stable_crop_plan(crop_target, pattern)
-        wheat_serviceable = self._crop_serviceable_before_terminal(
-            "WHEAT", engine_step
-        )
-        for target, crop in tuple(plan.items()):
-            if not self._crop_serviceable_before_terminal(crop, engine_step):
-                if wheat_serviceable:
-                    plan[target] = "WHEAT"
-                else:
-                    plan[target] = None
-        return plan
-
-    def _task_action(
-        self,
-        worker_id: int,
-        position: tuple[int, int],
-        priority_groups: list[list[tuple[tuple[int, int], list[str]]]],
-        reserved: set[tuple[int, int]],
-    ) -> list[str] | None:
-        indexed: list[tuple[int, tuple[int, int], list[str]]] = []
-        for rank, group in enumerate(priority_groups):
-            indexed.extend(
-                (rank, target, action)
-                for target, action in group
-                if target not in reserved
-            )
-        if not indexed:
-            self._sticky_targets.pop(worker_id, None)
-            return None
-
-        chosen: tuple[int, tuple[int, int], list[str]] | None = None
-        sticky = self._sticky_targets.get(worker_id)
-        if sticky is not None:
-            sticky_target, _ = sticky
-            sticky_candidates = [item for item in indexed if item[1] == sticky_target]
-            if sticky_candidates:
-                sticky_item = min(sticky_candidates, key=lambda item: item[0])
-                if not any(item[0] < sticky_item[0] for item in indexed):
-                    chosen = sticky_item
-
-        if chosen is None:
-            chosen = min(
-                indexed,
-                key=lambda item: (
-                    item[0],
-                    abs(position[0] - item[1][0])
-                    + abs(position[1] - item[1][1]),
-                    item[1][1],
-                    item[1][0],
-                ),
-            )
-
-        rank, target, action = chosen
-        reserved.add(target)
-        if target == position:
-            self._sticky_targets.pop(worker_id, None)
-            return action
-        self._sticky_targets[worker_id] = (target, rank)
-        return _move_towards(position, target)
-
-    def _unit_actions(
-        self,
-        observation: dict[str, Any],
-        farm: dict[str, Any],
-        private: dict[str, Any],
-        crop_target: int,
-        pasture_target: int,
-        herd_target: int,
-        watering_priority: float,
-        shutdown: bool,
-    ) -> list[list[str]]:
-        del watering_priority  # HIGH is preserved; C2 orders needs by engine deadline.
-
-        positions = self._positions(farm)
-        inventories = list(private.get("inventories", []))
-        while len(inventories) < len(positions):
-            inventories.append({})
-        shed = private.get("shed", {}) or {}
-        day = int(observation.get("day", 0))
-        hour = int(observation.get("hour", 0))
-        engine_step = int(observation.get("step", 0))
-        if self._assignment_day != day:
-            self._assignment_day = day
-            self._sticky_targets.clear()
-
-        crop_plan = self._effective_crop_plan(crop_target, engine_step)
-        pasture_positions = CODEX_PASTURE_POSITIONS[:pasture_target]
-        reserved: set[tuple[int, int]] = set()
-        reserved_cow_pickups = 0
-        reserved_wheat_pickups = 0
-
-        allow_plant = self._plant_serviceable_before_eod(hour)
-
-        decay_harvest: list[tuple[tuple[int, int], list[str]]] = []
-        critical_water: list[tuple[tuple[int, int], list[str]]] = []
-        yield_window_water: list[tuple[tuple[int, int], list[str]]] = []
-        yield_completion_water: list[tuple[tuple[int, int], list[str]]] = []
-        regular_water: list[tuple[tuple[int, int], list[str]]] = []
-        crop_harvest: list[tuple[tuple[int, int], list[str]]] = []
-        retirement_clearance: list[tuple[tuple[int, int], list[str]]] = []
-        weed_recovery: list[tuple[tuple[int, int], list[str]]] = []
-        crop_plant: list[tuple[tuple[int, int], list[str]]] = []
-        pasture_build: list[tuple[tuple[int, int], list[str]]] = []
-        empty_pasture: list[tuple[tuple[int, int], list[str]]] = []
-        feed_targets: list[tuple[tuple[int, int], list[str]]] = []
-        care_targets: list[tuple[tuple[int, int], list[str]]] = []
-        fertilizer_targets: list[tuple[tuple[int, int], list[str]]] = []
-        animal_harvest: list[tuple[tuple[int, int], list[str]]] = []
-
-        available_seeds = {
-            crop: int(private.get("seeds", {}).get(crop, 0)) for crop in CROP_MIX
-        }
-        wheat_planted_today = sum(
-            1
-            for target in crop_plan
-            if plant_matches_cohort(self._tile(farm, target), "WHEAT", day)
-        )
-        wheat_plant_slots = max(
-            0, self.max_wheat_plants_per_day - wheat_planted_today
-        )
-        for target, crop in crop_plan.items():
-            tile = self._tile(farm, target)
-            state = classify_tile_lifecycle(tile, in_working_set=True, day=day)
-
-            if state == RETIREMENT_DUE:
-                if not shutdown:
-                    retirement_clearance.append((target, ["DIG"]))
-                continue
-            if state == LOST_WEED:
-                if not shutdown:
-                    weed_recovery.append((target, ["DIG"]))
-                continue
-            if state == EMPTY_ASSIGNED:
-                if (
-                    not shutdown
-                    and allow_plant
-                    and crop is not None
-                    and self._crop_serviceable_before_terminal(crop, engine_step)
-                    and available_seeds[crop] > 0
-                    and (crop != "WHEAT" or wheat_plant_slots > 0)
-                ):
-                    crop_plant.append((target, ["PLANT", crop]))
-                    available_seeds[crop] -= 1
-                    if crop == "WHEAT":
-                        wheat_plant_slots -= 1
-                continue
-
-            if isinstance(tile, dict) and tile.get("kind") == "PLANT":
-                if not bool(tile.get("watered_today", False)):
-                    if water_loss_at_eod_if_unserved(tile):
-                        target_list = critical_water
-                    elif state == YIELD_ACCUMULATING:
-                        target_list = yield_window_water
-                    elif yield_completion_water_due(tile, day):
-                        target_list = yield_completion_water
-                    else:
-                        target_list = regular_water
-                    target_list.append((target, ["WATER"]))
-                if state in {YIELD_ACCUMULATING, HARVEST_READY} and (
-                    lifespan_decay_started(tile, engine_step)
-                ):
-                    decay_harvest.append((target, ["HARVEST"]))
-                elif state == HARVEST_READY:
-                    target_list = (
-                        crop_harvest
-                    )
-                    target_list.append((target, ["HARVEST"]))
-
-        for target in pasture_positions:
-            tile = self._tile(farm, target)
-            if tile is None and not shutdown:
-                pasture_build.append((target, ["BUILD_PASTURE"]))
-            elif (
-                isinstance(tile, dict)
-                and tile.get("kind") == "PASTURE"
-                and not tile.get("animal")
-            ):
-                empty_pasture.append((target, ["PASS"]))
-            elif isinstance(tile, dict) and tile.get("animal") == "COW":
-                if not tile.get("fed_today", False):
-                    feed_targets.append((target, ["FEED"]))
-                if not tile.get("cared_today", False):
-                    care_targets.append((target, ["CARE"]))
-                if tile.get("fertilizer_available", False):
-                    fertilizer_targets.append((target, ["COLLECT_FERTILIZER"]))
-                if int(tile.get("yield_units", 0)) > 0:
-                    animal_harvest.append((target, ["HARVEST"]))
-
-        priority_groups = [
-            decay_harvest,
-            critical_water,
-            yield_window_water,
-            yield_completion_water,
-            crop_harvest,
-            regular_water,
-            retirement_clearance,
-            weed_recovery,
-            crop_plant,
-            fertilizer_targets,
-            animal_harvest,
-            care_targets,
-            pasture_build,
+    @staticmethod
+    def _positions(farm: dict[str, Any]) -> list[tuple[int, int]]:
+        farmer = farm.get("farmer", [4, 4])
+        hands = farm.get("hands", []) or []
+        return [tuple(int(v) for v in farmer)] + [
+            tuple(int(v) for v in position) for position in hands
         ]
 
-        actions: list[list[str]] = []
-        for worker_id, position in enumerate(positions):
-            inventory = (
-                inventories[worker_id]
-                if isinstance(inventories[worker_id], dict)
-                else {}
-            )
-            total_inventory = _inventory_total(inventory)
-            carried_cow = int(inventory.get("COW", 0)) > 0
-            carried_wheat = int(inventory.get("WHEAT", 0)) > 0
-            carried_non_feed = any(
-                item not in {"WHEAT", "COW"} and amount > 0
-                for item, amount in inventory.items()
-            )
+    @staticmethod
+    def _owned_quadrants(farm: dict[str, Any]) -> int:
+        raw = farm.get("unlocked_quadrants", ["NW"])
+        return len(raw) if isinstance(raw, list) else int(raw)
 
-            if carried_cow:
-                self._sticky_targets.pop(worker_id, None)
-                choices = [(target, ["PLACE", "COW"]) for target, _ in empty_pasture]
-                action = self._target_action(position, choices, reserved)
-                actions.append(
-                    action
-                    or (
-                        ["DROP"]
-                        if position in SHED_TILES
-                        else _move_towards(position, (4, 4))
+    @staticmethod
+    def _inventory(private: dict[str, Any], worker_id: int) -> dict[str, int]:
+        inventories = private.get("inventories", []) or []
+        if 0 <= worker_id < len(inventories) and isinstance(inventories[worker_id], dict):
+            return {str(k): int(v) for k, v in inventories[worker_id].items()}
+        return {}
+
+    def _role_for(self, worker_id: int) -> str:
+        return ROLE_SEQUENCE[min(worker_id, len(ROLE_SEQUENCE) - 1)]
+
+    def _update_roles(self, worker_count: int) -> None:
+        current = {worker_id: self._role_for(worker_id) for worker_id in range(worker_count)}
+        for worker_id, role in current.items():
+            if worker_id in self._roles and self._roles[worker_id] != role:
+                self.role_changes += 1
+        self._roles = current
+
+    def _asset_signature(self, snapshot: CodexSnapshot) -> tuple[Any, ...]:
+        farm = snapshot.farm
+        crop_signature = tuple(
+            (
+                position,
+                (
+                    self._tile(farm, position).get("crop")
+                    if isinstance(self._tile(farm, position), dict)
+                    else None
+                ),
+                (
+                    self._tile(farm, position).get("kind")
+                    if isinstance(self._tile(farm, position), dict)
+                    else self._tile(farm, position)
+                ),
+            )
+            for position in CODEX_CROP_POSITIONS
+        )
+        animal_signature = tuple(
+            (
+                position,
+                (
+                    self._tile(farm, position).get("animal")
+                    if isinstance(self._tile(farm, position), dict)
+                    else None
+                ),
+                (
+                    self._tile(farm, position).get("kind")
+                    if isinstance(self._tile(farm, position), dict)
+                    else self._tile(farm, position)
+                ),
+            )
+            for position in CODEX_PASTURE_POSITIONS
+        )
+        return (
+            len(farm.get("hands", []) or []),
+            self._owned_quadrants(farm),
+            crop_signature,
+            animal_signature,
+        )
+
+    def _crop_serviceable_before_terminal(self, crop: str, step: int) -> bool:
+        maturity = int(CROP_RULES[crop]["economic_harvest_day"]) * self.turns_per_day
+        margin = math.ceil(
+            float(self.config["crop_horizon_margin_days"]) * self.turns_per_day
+        )
+        return self.episode_steps - step > maturity + margin
+
+    def _plant_serviceable_before_eod(self, hour: int) -> bool:
+        return (
+            self.turns_per_day - 1 - hour
+            >= int(self.config["minimum_post_plant_action_phases"])
+        )
+
+    def _shutdown(self, snapshot: CodexSnapshot) -> bool:
+        return snapshot.clock.remaining_steps <= math.ceil(
+            float(self.config["endgame_shutdown_days"]) * self.turns_per_day
+        )
+
+    def _active_animal_positions(
+        self, farm: dict[str, Any], species: str | None = None
+    ) -> list[tuple[int, int]]:
+        positions: list[tuple[int, int]] = []
+        for position in CODEX_PASTURE_POSITIONS:
+            tile = self._tile(farm, position)
+            if not isinstance(tile, dict) or not tile.get("animal"):
+                continue
+            if species is None or tile.get("animal") == species:
+                positions.append(position)
+        return positions
+
+    def _animal_counts(self, snapshot: CodexSnapshot) -> Counter[str]:
+        counts: Counter[str] = Counter()
+        for position in CODEX_PASTURE_POSITIONS:
+            tile = self._tile(snapshot.farm, position)
+            if isinstance(tile, dict) and tile.get("animal") in ANIMAL_RULES:
+                counts[str(tile["animal"])] += 1
+        shed = snapshot.private.get("shed", {}) or {}
+        for species in ANIMAL_RULES:
+            counts[species] += int(shed.get(species, 0))
+            for worker_id in range(len(self._positions(snapshot.farm))):
+                counts[species] += int(
+                    self._inventory(snapshot.private, worker_id).get(species, 0)
+                )
+        return counts
+
+    def _record_day_due(self, snapshot: CodexSnapshot) -> None:
+        day = snapshot.clock.day
+        farm = snapshot.farm
+        for position in CODEX_CROP_POSITIONS:
+            tile = self._tile(farm, position)
+            if not isinstance(tile, dict) or tile.get("kind") != "PLANT":
+                continue
+            if not bool(tile.get("watered_today", False)):
+                self.daily_due[day].add(f"WATER:{position[0]}:{position[1]}")
+            state = classify_tile_lifecycle(tile, in_working_set=True, day=day)
+            if state in {HARVEST_READY, RETIREMENT_DUE}:
+                self.daily_due[day].add(f"HARVEST:{position[0]}:{position[1]}")
+
+    def _replan_global(self, snapshot: CodexSnapshot, reason: str) -> None:
+        signature = self._asset_signature(snapshot)
+        positions = self._positions(snapshot.farm)
+        self._update_roles(len(positions))
+        self._record_day_due(snapshot)
+        capacity = self._capacity_snapshot(snapshot, candidate_species=None)
+        self._global_plan = {
+            "opened_step": snapshot.clock.step,
+            "day": snapshot.clock.day,
+            "reason": reason,
+            "roles": deepcopy(self._roles),
+            "zones": {
+                str(zone_id): [list(position) for position in zone]
+                for zone_id, zone in enumerate(CODEX_CROP_ZONES)
+            },
+            "hard_horizon": "CURRENT_DAY_AND_NEXT_SERVICE_BOUNDARY",
+            "soft_horizon": "FIRST_MONETIZABLE_OUTPUT",
+            "capacity": capacity,
+        }
+        self._last_global_signature = signature
+        self._last_day = snapshot.clock.day
+        self.global_replan_count += 1
+
+    def _maybe_replan_global(self, snapshot: CodexSnapshot) -> None:
+        signature = self._asset_signature(snapshot)
+        if self._last_day is None or snapshot.clock.day != self._last_day:
+            self._replan_global(snapshot, "EOD_BOUNDARY")
+        elif signature != self._last_global_signature:
+            self._replan_global(snapshot, "WORKFORCE_OR_ASSET_CHANGE")
+
+    def _route_cost_estimate(self, snapshot: CodexSnapshot) -> int:
+        positions = self._positions(snapshot.farm)
+        cost = 0
+        for worker_id, position in enumerate(positions):
+            role = self._role_for(worker_id)
+            if role.startswith("CROP_ZONE_"):
+                zone_id = int(role.rsplit("_", 1)[1])
+                targets = [
+                    target
+                    for target in CODEX_CROP_ZONES[zone_id]
+                    if isinstance(self._tile(snapshot.farm, target), dict)
+                ]
+            elif role == "LIVESTOCK_COW":
+                targets = self._active_animal_positions(snapshot.farm, "COW")
+            elif role == "LIVESTOCK_SHEEP":
+                targets = self._active_animal_positions(snapshot.farm, "SHEEP")
+            else:
+                targets = []
+            if targets:
+                nearest = min(
+                    abs(position[0] - target[0]) + abs(position[1] - target[1])
+                    for target in targets
+                )
+                cost += nearest + max(0, len(targets) - 1)
+        return cost
+
+    def _capacity_snapshot(
+        self, snapshot: CodexSnapshot, candidate_species: str | None
+    ) -> dict[str, Any]:
+        farm = snapshot.farm
+        unit_count = len(self._positions(farm))
+        active_crops = sum(
+            1
+            for position in CODEX_CROP_POSITIONS
+            if isinstance(self._tile(farm, position), dict)
+            and self._tile(farm, position).get("kind") == "PLANT"
+        )
+        active_animals = len(self._active_animal_positions(farm))
+        ready_crop = sum(
+            1
+            for position in CODEX_CROP_POSITIONS
+            if classify_tile_lifecycle(
+                self._tile(farm, position),
+                in_working_set=True,
+                day=snapshot.clock.day,
+            )
+            == HARVEST_READY
+        )
+        ready_animals = sum(
+            1
+            for position in CODEX_PASTURE_POSITIONS
+            if isinstance(self._tile(farm, position), dict)
+            and int(self._tile(farm, position).get("yield_units", 0)) > 0
+        )
+        candidate_actions = 0
+        if candidate_species is not None:
+            candidate_actions = 4  # FEED + CARE + amortized collection/handling.
+        required_services = (
+            active_crops
+            + active_animals * 2
+            + ready_crop
+            + ready_animals
+            + candidate_actions
+        )
+        travel = self._route_cost_estimate(snapshot) + (2 if candidate_species else 0)
+        handling = max(1, active_animals // 2) + (2 if candidate_species else 0)
+        required = required_services + travel + handling
+        remaining_phases = max(0, self.turns_per_day - snapshot.clock.hour)
+        available_current = unit_count * remaining_phases
+        available_next = unit_count * self.turns_per_day
+        slack_current = available_current - min(required, required_services + travel)
+        slack_next = available_next - required
+
+        history_days = [
+            day
+            for day in sorted(self.daily_completed)
+            if day < snapshot.clock.day
+        ][-int(self.config["observed_capacity_days"]):]
+        observed_values = [
+            int(sum(self.daily_completed[day].values())) for day in history_days
+        ]
+        observed_capacity = min(observed_values) if len(observed_values) >= 3 else None
+        return {
+            "available_current": available_current,
+            "available_next": available_next,
+            "required_services": required_services,
+            "travel_actions": travel,
+            "handling_actions": handling,
+            "required_total": required,
+            "slack_current": slack_current,
+            "slack_next": slack_next,
+            "minimum_slack": min(slack_current, slack_next),
+            "history_days": history_days,
+            "observed_capacity": observed_capacity,
+            "forecast_within_observed": (
+                observed_capacity is not None and required <= observed_capacity
+            ),
+        }
+
+    def _capacity_admission(
+        self, snapshot: CodexSnapshot, species: str
+    ) -> tuple[bool, str, dict[str, Any]]:
+        capacity = self._capacity_snapshot(snapshot, candidate_species=species)
+        if len(capacity["history_days"]) < int(self.config["observed_capacity_days"]):
+            return False, "OBSERVED_CAPACITY_INSUFFICIENT_HISTORY", capacity
+        if capacity["minimum_slack"] < 0:
+            return False, "NEGATIVE_ACTION_SLACK", capacity
+        if not capacity["forecast_within_observed"]:
+            return False, "FORECAST_EXCEEDS_OBSERVED_CAPACITY", capacity
+
+        counts = self._animal_counts(snapshot)
+        projected_animals = sum(counts.values()) + 1
+        shed = snapshot.private.get("shed", {}) or {}
+        carried_wheat = sum(
+            self._inventory(snapshot.private, worker_id).get("WHEAT", 0)
+            for worker_id in range(len(self._positions(snapshot.farm)))
+        )
+        wheat_on_hand = int(shed.get("WHEAT", 0)) + carried_wheat
+        wheat_price = float((snapshot.market.get("prices", {}) or {}).get("WHEAT", 25))
+        animal_cost = float(ANIMAL_RULES[species]["cost"])
+        feed_need = projected_animals * int(self.config["feed_reserve_rounds"])
+        feed_deficit = max(0, feed_need - wheat_on_hand)
+        cash = float(snapshot.farm.get("money", 0.0))
+        committed_cost = animal_cost + feed_deficit * wheat_price
+        if cash - committed_cost < float(self.config["operating_cash_floor"]):
+            return False, "CASH_OR_FEED_BUFFER_INSUFFICIENT", capacity
+
+        shed_total = _inventory_total(shed)
+        if shed_total >= self.shed_capacity and not any(
+            int(shed.get(item, 0)) > 0
+            for item in ("MILK", "WOOL", "MELON", "STRAWBERRY", "FERTILIZER")
+        ):
+            return False, "NO_LEGAL_INVENTORY_PATH", capacity
+
+        output_day = snapshot.clock.day + int(ANIMAL_RULES[species]["first_output_day"])
+        final_day = (self.episode_steps - 1) // self.turns_per_day
+        if output_day >= final_day - int(self.config["payback_cutoff_days"]):
+            return False, "FIRST_OUTPUT_AFTER_PAYBACK_CUTOFF", capacity
+        return True, "ADMITTED", capacity
+
+    @staticmethod
+    def _task(
+        target: tuple[int, int],
+        action: list[Any],
+        *,
+        kind: str,
+        loss_rank: int,
+        value: int,
+        slack: int,
+        hard_reason: str | None = None,
+        zone: int | None = None,
+    ) -> dict[str, Any]:
+        return {
+            "target": target,
+            "action": action,
+            "kind": kind,
+            "loss_rank": loss_rank,
+            "value": value,
+            "slack": slack,
+            "hard_reason": hard_reason,
+            "zone": zone,
+        }
+
+    def _crop_tasks(self, snapshot: CodexSnapshot) -> list[dict[str, Any]]:
+        tasks: list[dict[str, Any]] = []
+        day = snapshot.clock.day
+        hour = snapshot.clock.hour
+        step = snapshot.clock.step
+        seeds = snapshot.private.get("seeds", {}) or {}
+        shutdown = self._shutdown(snapshot)
+        for position in CODEX_CROP_POSITIONS:
+            crop = CODEX_CROP_PLAN[position]
+            zone = CODEX_ZONE_BY_POSITION[position]
+            tile = self._tile(snapshot.farm, position)
+            state = classify_tile_lifecycle(tile, in_working_set=True, day=day)
+            if state == LOST_WEED:
+                tasks.append(
+                    self._task(position, ["DIG"], kind="WEED_RECOVERY", loss_rank=1, value=0, slack=24, zone=zone)
+                )
+                continue
+            if state == RETIREMENT_DUE:
+                tasks.append(
+                    self._task(position, ["DIG"], kind="RETIREMENT_CLEAR", loss_rank=1, value=0, slack=1, hard_reason="HARVEST_TERMINAL_RISK", zone=zone)
+                )
+                continue
+            if state == EMPTY_ASSIGNED:
+                cohort_open = day >= int(CODEX_COHORT_OFFSET[position])
+                if (
+                    not shutdown
+                    and cohort_open
+                    and self._plant_serviceable_before_eod(hour)
+                    and self._crop_serviceable_before_terminal(crop, step)
+                    and int(seeds.get(crop, 0)) > 0
+                ):
+                    tasks.append(
+                        self._task(position, ["PLANT", crop], kind="PLANT", loss_rank=3, value=int(CROP_RULES[crop]["value"]), slack=max(1, self.turns_per_day - hour), zone=zone)
+                    )
+                continue
+            if not isinstance(tile, dict) or tile.get("kind") != "PLANT":
+                continue
+
+            crop = str(tile.get("crop", crop))
+            rules = CROP_RULES.get(crop)
+            if rules is None:
+                continue
+            unwatered = not bool(tile.get("watered_today", False))
+            decay = lifespan_decay_started(tile, step)
+            if state in {YIELD_ACCUMULATING, HARVEST_READY} and decay:
+                tasks.append(
+                    self._task(position, ["HARVEST"], kind="HARVEST", loss_rank=0, value=int(rules["value"]), slack=0, hard_reason="HARVEST_TERMINAL_RISK", zone=zone)
+                )
+                continue
+            if unwatered and water_loss_at_eod_if_unserved(tile):
+                tasks.append(
+                    self._task(position, ["WATER"], kind="WATER", loss_rank=0, value=int(rules["value"]), slack=max(0, self.turns_per_day - hour - 1), hard_reason="CROP_WATER_LOSS", zone=zone)
+                )
+                continue
+            if unwatered and yield_completion_water_due(tile, day):
+                tasks.append(
+                    self._task(position, ["WATER"], kind="WATER", loss_rank=1, value=int(rules["value"]), slack=max(0, self.turns_per_day - hour - 1), zone=zone)
+                )
+                continue
+            if state == HARVEST_READY:
+                tasks.append(
+                    self._task(position, ["HARVEST"], kind="HARVEST", loss_rank=1, value=int(rules["value"]), slack=max(1, self.turns_per_day - hour), zone=zone)
+                )
+            elif unwatered:
+                tasks.append(
+                    self._task(position, ["WATER"], kind="WATER", loss_rank=2, value=int(rules["value"]), slack=max(1, self.turns_per_day - hour), zone=zone)
+                )
+        return tasks
+
+    def _animal_tasks(
+        self, snapshot: CodexSnapshot, species: str
+    ) -> list[dict[str, Any]]:
+        tasks: list[dict[str, Any]] = []
+        positions = (
+            CODEX_PASTURE_POSITIONS[:3]
+            if species == "COW"
+            else CODEX_PASTURE_POSITIONS[3:]
+        )
+        for position in positions:
+            tile = self._tile(snapshot.farm, position)
+            if tile is None:
+                tasks.append(
+                    self._task(position, ["BUILD_PASTURE"], kind="BUILD_PASTURE", loss_rank=3, value=0, slack=24)
+                )
+                continue
+            if not isinstance(tile, dict) or tile.get("kind") != "PASTURE":
+                continue
+            if tile.get("animal") != species:
+                continue
+            unfed = not bool(tile.get("fed_today", False))
+            consecutive = int(tile.get("consecutive_unfed", 0))
+            if unfed:
+                hard = consecutive >= 1 or snapshot.clock.hour >= 20
+                tasks.append(
+                    self._task(
+                        position,
+                        ["FEED"],
+                        kind="FEED",
+                        loss_rank=0 if hard else 1,
+                        value=200 if species == "SHEEP" else 160,
+                        slack=max(0, self.turns_per_day - snapshot.clock.hour - 1),
+                        hard_reason="ANIMAL_ESCAPE_PREVENTION" if hard else None,
                     )
                 )
-                continue
-
-            if carried_wheat and feed_targets:
-                self._sticky_targets.pop(worker_id, None)
-                action = self._target_action(position, feed_targets, reserved)
-                if action is not None:
-                    actions.append(action)
-                    continue
-
-            if (
-                carried_non_feed
-                or (carried_wheat and not feed_targets)
-                or total_inventory >= 5
-            ):
-                self._sticky_targets.pop(worker_id, None)
-                actions.append(
-                    ["DROP"]
-                    if position in SHED_TILES
-                    else _move_towards(position, (4, 4))
+            if int(tile.get("yield_units", 0)) > 0:
+                tasks.append(
+                    self._task(position, ["HARVEST"], kind="ANIMAL_COLLECTION", loss_rank=1, value=200 if species == "SHEEP" else 160, slack=int(ANIMAL_RULES[species]["period"]) * self.turns_per_day)
                 )
-                continue
-
-            if position in SHED_TILES and total_inventory == 0:
-                available_cows = max(
-                    0, int(shed.get("COW", 0)) - reserved_cow_pickups
+            if not bool(tile.get("cared_today", False)):
+                tasks.append(
+                    self._task(position, ["CARE"], kind="CARE", loss_rank=2, value=80, slack=max(1, self.turns_per_day - snapshot.clock.hour))
                 )
-                if len(empty_pasture) > reserved_cow_pickups and available_cows > 0:
-                    self._sticky_targets.pop(worker_id, None)
-                    reserved_cow_pickups += 1
-                    actions.append(["PICKUP", "COW", 1])
-                    continue
-                available_wheat = max(
-                    0, int(shed.get("WHEAT", 0)) - reserved_wheat_pickups
+            if bool(tile.get("fertilizer_available", False)):
+                tasks.append(
+                    self._task(position, ["COLLECT_FERTILIZER"], kind="FERTILIZER_COLLECTION", loss_rank=2, value=100, slack=max(1, self.turns_per_day - snapshot.clock.hour))
                 )
-                remaining_feed = max(0, len(feed_targets) - reserved_wheat_pickups)
-                if available_wheat > 0 and remaining_feed > 0:
-                    self._sticky_targets.pop(worker_id, None)
-                    quantity = min(5, available_wheat, remaining_feed)
-                    reserved_wheat_pickups += quantity
-                    actions.append(["PICKUP", "WHEAT", quantity])
-                    continue
+        return tasks
 
-            action = self._task_action(
-                worker_id, position, priority_groups, reserved
-            )
-            actions.append(action or ["PASS"])
+    def _free_pastures(
+        self, snapshot: CodexSnapshot, species: str
+    ) -> list[tuple[int, int]]:
+        positions = (
+            CODEX_PASTURE_POSITIONS[:3]
+            if species == "COW"
+            else CODEX_PASTURE_POSITIONS[3:]
+        )
+        return [
+            position
+            for position in positions
+            if isinstance(self._tile(snapshot.farm, position), dict)
+            and self._tile(snapshot.farm, position).get("kind") == "PASTURE"
+            and not self._tile(snapshot.farm, position).get("animal")
+        ]
 
-        return actions
-
-    def _market_orders(
+    def _inventory_task(
         self,
-        farm: dict[str, Any],
-        private: dict[str, Any],
-        market: dict[str, Any],
-        quadrants: int,
-        crop_target: int,
-        pasture_target: int,
-        herd_target: int,
-        shutdown: bool,
-    ) -> list[list[Any]]:
-        del shutdown
+        snapshot: CodexSnapshot,
+        worker_id: int,
+        role: str,
+    ) -> list[dict[str, Any]]:
+        inventory = self._inventory(snapshot.private, worker_id)
+        shed = snapshot.private.get("shed", {}) or {}
+        tasks: list[dict[str, Any]] = []
+        for species in ("COW", "SHEEP"):
+            if int(inventory.get(species, 0)) <= 0:
+                continue
+            for target in self._free_pastures(snapshot, species):
+                tasks.append(
+                    self._task(target, ["PLACE", species], kind="PLACE_ANIMAL", loss_rank=1, value=int(ANIMAL_RULES[species]["cost"]), slack=12)
+                )
+            return tasks
+
+        fertilizer = int(inventory.get("FERTILIZER", 0))
+        if fertilizer > 0 and role in {"FERTILIZER_LOGISTICS", "FLOAT_RESERVE"}:
+            eligible: list[tuple[int, int]] = []
+            for position in CODEX_CROP_POSITIONS:
+                tile = self._tile(snapshot.farm, position)
+                if (
+                    isinstance(tile, dict)
+                    and tile.get("kind") == "PLANT"
+                    and tile.get("crop") in {"MELON", "STRAWBERRY"}
+                    and bool(tile.get("watered_today", False))
+                    and int(tile.get("fertilized_until_day", -1)) < snapshot.clock.day
+                ):
+                    eligible.append(position)
+            eligible.sort(
+                key=lambda position: (
+                    CODEX_CROP_PLAN[position] != "MELON",
+                    CODEX_COHORT_OFFSET[position],
+                    CODEX_ROUTE_INDEX[position],
+                )
+            )
+            for position in eligible[:fertilizer]:
+                tasks.append(
+                    self._task(position, ["FERTILIZE"], kind="FERTILIZER_APPLICATION", loss_rank=2, value=int(CROP_RULES[CODEX_CROP_PLAN[position]]["value"]), slack=max(1, self.turns_per_day - snapshot.clock.hour), zone=CODEX_ZONE_BY_POSITION[position])
+                )
+            if tasks:
+                return tasks
+
+        carried_products = [
+            item
+            for item in ("MILK", "WOOL", "MELON", "STRAWBERRY", "FERTILIZER")
+            if int(inventory.get(item, 0)) > 0
+        ]
+        if carried_products:
+            item = carried_products[0]
+            amount = int(inventory[item])
+            free = max(0, self.shed_capacity - _inventory_total(shed))
+            if free > 0:
+                tasks.append(
+                    self._task((4, 4), ["PLACE", item, min(amount, free)], kind="INVENTORY_UNBLOCK", loss_rank=1 if snapshot.clock.hour >= 20 else 2, value=100, slack=max(1, self.turns_per_day - snapshot.clock.hour), hard_reason="BLOCKING_INVENTORY_LOSS" if snapshot.clock.hour >= 22 else None)
+                )
+            return tasks
+
+        wheat = int(inventory.get("WHEAT", 0))
+        species = "COW" if role == "LIVESTOCK_COW" else "SHEEP" if role == "LIVESTOCK_SHEEP" else None
+        if wheat > 0 and species is not None:
+            feed_tasks = [
+                task
+                for task in self._animal_tasks(snapshot, species)
+                if task["kind"] == "FEED"
+            ]
+            if feed_tasks:
+                return feed_tasks
+        if wheat > 0 and not any(
+            task["kind"] == "FEED"
+            for candidate in ("COW", "SHEEP")
+            for task in self._animal_tasks(snapshot, candidate)
+        ):
+            tasks.append(
+                self._task((4, 4), ["PLACE", "WHEAT", wheat], kind="FEED_STAGING", loss_rank=2, value=25, slack=max(1, self.turns_per_day - snapshot.clock.hour))
+            )
+            return tasks
+
+        if _inventory_total(inventory) > 0:
+            item = min(
+                (item for item, amount in inventory.items() if int(amount) > 0),
+                key=lambda item: (item in {"COW", "SHEEP", "WHEAT"}, item),
+            )
+            free = max(0, self.shed_capacity - _inventory_total(shed))
+            if free > 0:
+                tasks.append(
+                    self._task((4, 4), ["PLACE", item, min(int(inventory[item]), free)], kind="INVENTORY_UNBLOCK", loss_rank=2, value=0, slack=12)
+                )
+            return tasks
+
+        if species is not None:
+            own_feed = [
+                task
+                for task in self._animal_tasks(snapshot, species)
+                if task["kind"] == "FEED"
+            ]
+            if own_feed and int(shed.get("WHEAT", 0)) > 0:
+                quantity = min(len(own_feed), int(shed.get("WHEAT", 0)))
+                tasks.append(
+                    self._task((4, 4), ["PICKUP", "WHEAT", quantity], kind="FEED_STAGING", loss_rank=min(task["loss_rank"] for task in own_feed), value=160, slack=min(task["slack"] for task in own_feed), hard_reason=next((task["hard_reason"] for task in own_feed if task["hard_reason"]), None))
+                )
+                return tasks
+
+        if role in {"FERTILIZER_LOGISTICS", "FLOAT_RESERVE"}:
+            for species in ("COW", "SHEEP"):
+                if int(shed.get(species, 0)) > 0 and self._free_pastures(snapshot, species):
+                    tasks.append(
+                        self._task((4, 4), ["PICKUP", species, 1], kind="ANIMAL_STAGING", loss_rank=1, value=int(ANIMAL_RULES[species]["cost"]), slack=12)
+                    )
+                    return tasks
+        return tasks
+
+    @staticmethod
+    def _task_priority(
+        task: dict[str, Any], position: tuple[int, int]
+    ) -> tuple[int, int, int, int, int, int, int]:
+        target = tuple(task["target"])
+        distance = abs(position[0] - target[0]) + abs(position[1] - target[1])
+        route_index = CODEX_ROUTE_INDEX.get(target, 99)
+        return (
+            int(task["loss_rank"]),
+            -int(task["value"]),
+            int(task["slack"]),
+            distance,
+            route_index,
+            target[1],
+            target[0],
+        )
+
+    def _close_commitment(self, worker_id: int, step: int) -> None:
+        commitment = self._commitments.pop(worker_id, None)
+        if commitment is None:
+            return
+        self.target_dwell_total += max(1, step - int(commitment["assigned_step"]))
+        self.target_dwell_count += 1
+
+    def _choose_committed_task(
+        self,
+        snapshot: CodexSnapshot,
+        worker_id: int,
+        role: str,
+        position: tuple[int, int],
+        candidates: list[dict[str, Any]],
+        reserved: set[tuple[int, int]],
+    ) -> list[Any]:
+        usable = [
+            task
+            for task in candidates
+            if tuple(task["target"]) in SHED_TILES
+            or tuple(task["target"]) not in reserved
+        ]
+        existing = self._commitments.get(worker_id)
+        chosen: dict[str, Any] | None = None
+        if existing is not None:
+            matches = [
+                task
+                for task in usable
+                if tuple(task["target"]) == tuple(existing["target"])
+                and list(task["action"]) == list(existing["action"])
+            ]
+            if matches:
+                chosen = min(matches, key=lambda task: self._task_priority(task, position))
+                hard = [task for task in usable if task.get("hard_reason")]
+                if hard:
+                    best_hard = min(hard, key=lambda task: self._task_priority(task, position))
+                    if self._task_priority(best_hard, position) < self._task_priority(chosen, position):
+                        self.retarget_count += 1
+                        reason = str(best_hard["hard_reason"])
+                        self.interrupts_by_reason[reason] += 1
+                        self._close_commitment(worker_id, snapshot.clock.step)
+                        chosen = best_hard
+            else:
+                self._close_commitment(worker_id, snapshot.clock.step)
+                self.local_replan_count += 1
+
+        if chosen is None and usable:
+            chosen = min(usable, key=lambda task: self._task_priority(task, position))
+            self._commitments[worker_id] = {
+                "target": tuple(chosen["target"]),
+                "action": list(chosen["action"]),
+                "kind": chosen["kind"],
+                "role": role,
+                "zone": chosen.get("zone"),
+                "assigned_step": snapshot.clock.step,
+                "hard_reason": chosen.get("hard_reason"),
+            }
+            self.local_replan_count += 1
+        elif chosen is not None and worker_id not in self._commitments:
+            self._commitments[worker_id] = {
+                "target": tuple(chosen["target"]),
+                "action": list(chosen["action"]),
+                "kind": chosen["kind"],
+                "role": role,
+                "zone": chosen.get("zone"),
+                "assigned_step": snapshot.clock.step,
+                "hard_reason": chosen.get("hard_reason"),
+            }
+
+        if chosen is None:
+            self._close_commitment(worker_id, snapshot.clock.step)
+            return ["PASS"]
+
+        target = tuple(chosen["target"])
+        if target not in SHED_TILES:
+            if target in reserved:
+                self.duplicate_assignments += 1
+                self._close_commitment(worker_id, snapshot.clock.step)
+                return ["PASS"]
+            reserved.add(target)
+        if role.startswith("CROP_ZONE_") and chosen.get("zone") is not None:
+            home_zone = int(role.rsplit("_", 1)[1])
+            if int(chosen["zone"]) != home_zone:
+                self.cross_zone_assists += 1
+        if position == target:
+            return list(chosen["action"])
+        return _move_towards(position, target)
+
+    def _eligible_unit_action(
+        self,
+        snapshot: CodexSnapshot,
+        worker_id: int,
+        action: list[Any],
+    ) -> bool:
+        if not action:
+            return False
+        opcode = str(action[0])
+        positions = self._positions(snapshot.farm)
+        if not 0 <= worker_id < len(positions):
+            return False
+        position = positions[worker_id]
+        tile = self._tile(snapshot.farm, position)
+        inventory = self._inventory(snapshot.private, worker_id)
+        if opcode == "PASS" or opcode in MOVE_ACTIONS:
+            return True
+        if opcode == "PLANT" and len(action) >= 2:
+            return tile is None and int((snapshot.private.get("seeds", {}) or {}).get(action[1], 0)) > 0
+        if opcode == "WATER":
+            return isinstance(tile, dict) and tile.get("kind") == "PLANT" and not tile.get("watered_today", False)
+        if opcode == "HARVEST":
+            return isinstance(tile, dict) and int(tile.get("yield_units", 0)) > 0
+        if opcode == "DIG":
+            return isinstance(tile, dict) and tile.get("kind") in {"WEED", "PLANT"}
+        if opcode == "BUILD_PASTURE":
+            return tile is None and position in CODEX_PASTURE_POSITIONS
+        if opcode == "FEED":
+            return isinstance(tile, dict) and bool(tile.get("animal")) and not tile.get("fed_today", False) and int(inventory.get("WHEAT", 0)) > 0
+        if opcode == "CARE":
+            return isinstance(tile, dict) and bool(tile.get("animal")) and not tile.get("cared_today", False)
+        if opcode == "COLLECT_FERTILIZER":
+            return isinstance(tile, dict) and bool(tile.get("fertilizer_available", False))
+        if opcode == "PICKUP" and len(action) >= 3:
+            return position in SHED_TILES and int((snapshot.private.get("shed", {}) or {}).get(action[1], 0)) >= int(action[2])
+        if opcode == "PLACE" and len(action) >= 2:
+            item = str(action[1])
+            if item in ANIMAL_RULES:
+                return isinstance(tile, dict) and tile.get("kind") == "PASTURE" and not tile.get("animal") and int(inventory.get(item, 0)) > 0
+            return position in SHED_TILES and int(inventory.get(item, 0)) > 0
+        if opcode == "FERTILIZE":
+            return isinstance(tile, dict) and tile.get("kind") == "PLANT" and bool(tile.get("watered_today", False)) and int(inventory.get("FERTILIZER", 0)) > 0
+        return False
+
+    def _unit_actions(self, snapshot: CodexSnapshot) -> list[list[Any]]:
+        positions = self._positions(snapshot.farm)
+        crop_tasks = self._crop_tasks(snapshot)
+        cow_tasks = self._animal_tasks(snapshot, "COW")
+        sheep_tasks = self._animal_tasks(snapshot, "SHEEP")
+        hard_tasks = [
+            task
+            for task in [*crop_tasks, *cow_tasks, *sheep_tasks]
+            if task.get("hard_reason")
+        ]
+        reserved: set[tuple[int, int]] = set()
+        actions: dict[int, list[Any]] = {}
+
+        dispatch_order = [worker_id for worker_id in (1, 2, 3, 4, 5, 6, 0) if worker_id < len(positions)]
+        for worker_id in dispatch_order:
+            role = self._role_for(worker_id)
+            inventory_tasks = self._inventory_task(snapshot, worker_id, role)
+            candidates: list[dict[str, Any]]
+            if inventory_tasks:
+                candidates = inventory_tasks
+            elif role.startswith("CROP_ZONE_"):
+                zone_id = int(role.rsplit("_", 1)[1])
+                own = [task for task in crop_tasks if task.get("zone") == zone_id]
+                cross_hard = [task for task in hard_tasks if task.get("zone") != zone_id]
+                candidates = own if own else cross_hard
+            elif role == "LIVESTOCK_COW":
+                candidates = cow_tasks
+            elif role == "LIVESTOCK_SHEEP":
+                candidates = sheep_tasks
+            elif role == "FERTILIZER_LOGISTICS":
+                fertilizer = [
+                    task
+                    for task in [*cow_tasks, *sheep_tasks]
+                    if task["kind"] in {"FERTILIZER_COLLECTION", "BUILD_PASTURE"}
+                ]
+                candidates = hard_tasks + fertilizer
+            else:  # FLOAT_RESERVE
+                growth = [
+                    task
+                    for task in [*crop_tasks, *cow_tasks, *sheep_tasks]
+                    if task["kind"] in {"PLANT", "BUILD_PASTURE", "WEED_RECOVERY", "RETIREMENT_CLEAR"}
+                ]
+                high_value = [
+                    task
+                    for task in crop_tasks
+                    if task["kind"] in {"HARVEST", "WATER"}
+                ]
+                candidates = hard_tasks + growth + high_value
+
+            action = self._choose_committed_task(
+                snapshot,
+                worker_id,
+                role,
+                positions[worker_id],
+                candidates,
+                reserved,
+            )
+            if not self._eligible_unit_action(snapshot, worker_id, action):
+                if action[0] not in MOVE_ACTIONS:
+                    self._close_commitment(worker_id, snapshot.clock.step)
+                action = ["PASS"]
+            actions[worker_id] = action
+        return [actions.get(worker_id, ["PASS"]) for worker_id in range(len(positions))]
+
+    def _market_orders(self, snapshot: CodexSnapshot) -> list[list[Any]]:
         orders: list[list[Any]] = []
+        farm = snapshot.farm
+        private = snapshot.private
+        shed = private.get("shed", {}) or {}
+        prices = snapshot.market.get("prices", {}) or {}
         cash = float(farm.get("money", 0.0))
         floor = float(self.config["operating_cash_floor"])
 
-        def add(order: list[Any], estimated_cost: float = 0.0) -> bool:
+        def add(order: list[Any], cost: float = 0.0, *, protect_floor: bool = True) -> bool:
             nonlocal cash
-            if len(orders) >= 10 or cash - estimated_cost < floor:
+            if len(orders) >= self.max_market_orders:
+                return False
+            if protect_floor and cash - cost < floor:
                 return False
             orders.append(order)
-            cash -= estimated_cost
+            cash -= cost
             return True
 
-        crop_plan = self._effective_crop_plan(crop_target, self._current_step)
-        active_by_crop = {crop: 0 for crop in CROP_MIX}
-        for position in CODEX_CROP_POSITIONS[:crop_target]:
-            tile = self._tile(farm, position)
-            if (
-                isinstance(tile, dict)
-                and tile.get("kind") == "PLANT"
-                and tile.get("crop") in active_by_crop
-            ):
-                active_by_crop[tile["crop"]] += 1
-        active_total = sum(active_by_crop.values())
+        # Daily conversion is independent of worker routing and therefore never
+        # interrupts a biological target.
+        for item in ("MILK", "WOOL", "MELON", "STRAWBERRY", "FERTILIZER"):
+            quantity = int(shed.get(item, 0))
+            if quantity > 0 and add(["SELL", item, quantity], protect_floor=False):
+                cash += quantity * float(prices.get(item, 0.0))
 
-        desired_by_crop = {crop: 0 for crop in CROP_MIX}
-        for crop in crop_plan.values():
-            if crop is not None:
-                desired_by_crop[crop] += 1
-        seed_costs = {"WHEAT": 10, "STRAWBERRY": 100, "MELON": 80}
-        for crop in CROP_MIX:
-            deficit = max(
-                0,
-                desired_by_crop[crop]
-                - active_by_crop[crop]
-                - int(private.get("seeds", {}).get(crop, 0)),
-            )
-            affordable = max(0, int((cash - floor) // seed_costs[crop]))
-            quantity = min(deficit, affordable)
-            if quantity:
-                add(["BUY_SEED", crop, quantity], quantity * seed_costs[crop])
+        counts = self._animal_counts(snapshot)
+        active_or_staged_animals = sum(counts.values())
+        wheat_reserve = active_or_staged_animals * int(self.config["feed_reserve_rounds"])
+        wheat_to_sell = max(0, int(shed.get("WHEAT", 0)) - wheat_reserve)
+        if wheat_to_sell > 0 and add(["SELL", "WHEAT", wheat_to_sell], protect_floor=False):
+            cash += wheat_to_sell * float(prices.get("WHEAT", 0.0))
 
-        if (
-            quadrants < int(self.config["quadrants_owned"])
-            and active_total >= self.land_expansion_min_active
-            and cash >= self.land_expansion_min_cash
-        ):
-            add(["BUY_LAND"], 1000.0)
-
-        hands = len(farm.get("hands", []))
-        target_hands = (
-            self.bootstrap_workforce_headcount
-            if quadrants < 2
-            else int(self.config["workforce_headcount"])
-        )
+        target_hands = int(self.config["workforce_total"]) - 1
+        hands = len(farm.get("hands", []) or [])
         hires_today = int(farm.get("hires_today", 0))
-        for offset in range(max(0, target_hands - hands)):
-            if not add(["HIRE"], float(_fib(hires_today + offset))):
-                break
+        if not self._shutdown(snapshot) and snapshot.clock.hour in {0, 1}:
+            for offset in range(max(0, target_hands - hands)):
+                if not add(["HIRE"], float(_fib(hires_today + offset))):
+                    break
 
-        shed = private.get("shed", {}) or {}
-        inventories = private.get("inventories", []) or []
-        pasture_count = sum(
-            1
-            for position in CODEX_PASTURE_POSITIONS[:pasture_target]
-            if isinstance(self._tile(farm, position), dict)
-            and self._tile(farm, position).get("kind") == "PASTURE"
-        )
-        cows_on_tiles = sum(
-            1
-            for position in CODEX_PASTURE_POSITIONS[:pasture_target]
-            if isinstance(self._tile(farm, position), dict)
-            and self._tile(farm, position).get("animal") == "COW"
-        )
-        cows_in_transit = int(shed.get("COW", 0)) + sum(
-            int(inv.get("COW", 0)) for inv in inventories if isinstance(inv, dict)
-        )
-        livestock_activation_target = int(
-            crop_target * self.livestock_activation_min_crop_fraction
-        )
-        if (
-            quadrants >= 2
-            and active_total >= livestock_activation_target
-            and cash >= self.livestock_activation_min_cash
-        ):
-            cow_deficit = max(
-                0, min(herd_target, pasture_count) - cows_on_tiles - cows_in_transit
-            )
-            affordable = max(0, int((cash - floor) // 400))
-            quantity = min(cow_deficit, affordable, 10)
-            if quantity:
-                add(["BUY_ANIMAL", "COW", quantity], quantity * 400.0)
+        # Frozen opening: 2+2, ten feed units, then staged cohort seed purchases.
+        if snapshot.clock.step == 0:
+            add(["BUY_ANIMAL", "COW", 2], 800.0)
+            add(["BUY_ANIMAL", "SHEEP", 2], 1000.0)
+            add(["BUY_PRODUCT", "WHEAT", 10], 10 * float(prices.get("WHEAT", 25.0)))
+            add(["BUY_SEED", "MELON", 3], 240.0)
+            return orders[: self.max_market_orders]
 
-        feed_demand = cows_on_tiles * 3 + (2 if cows_on_tiles else 0)
-        wheat_carried = sum(
-            int(inv.get("WHEAT", 0)) for inv in inventories if isinstance(inv, dict)
-        )
-        wheat_deficit = max(
-            0, feed_demand - int(shed.get("WHEAT", 0)) - wheat_carried
-        )
-        wheat_price = float((market.get("prices", {}) or {}).get("WHEAT", 10.0))
-        if wheat_deficit and wheat_price > 0:
-            quantity = min(
-                wheat_deficit, max(0, int((cash - floor) // wheat_price)), 10
+        if not self._shutdown(snapshot):
+            # Repair an opening order rejected by the market during day 0/1.
+            for species in ("COW", "SHEEP"):
+                bootstrap = int(self.config["bootstrap_livestock"][species])
+                deficit = max(0, bootstrap - int(counts.get(species, 0)))
+                if snapshot.clock.day <= 1 and deficit > 0:
+                    quantity = min(deficit, max(0, int((cash - floor) // ANIMAL_RULES[species]["cost"])))
+                    if quantity > 0:
+                        add(["BUY_ANIMAL", species, quantity], quantity * float(ANIMAL_RULES[species]["cost"]))
+                        counts[species] += quantity
+
+            # The third animal of each species is the only post-bootstrap asset
+            # admission in this candidate.
+            for species in ("COW", "SHEEP"):
+                activation_day = int(self.config["livestock_activation_days"][species])
+                target = int(self.config["livestock_targets"][species])
+                if snapshot.clock.day < activation_day or int(counts.get(species, 0)) >= target:
+                    continue
+                decision_key = (species, target, snapshot.clock.day)
+                admitted, reason, capacity = self._capacity_admission(snapshot, species)
+                if decision_key not in self._activation_decisions:
+                    self._activation_decisions.add(decision_key)
+                    self.activation_records.append(
+                        {
+                            "animal": species,
+                            "animal_activation_day": snapshot.clock.day,
+                            "activation_admitted": admitted,
+                            "activation_rejected": not admitted,
+                            "rejection_reason": None if admitted else reason,
+                            "capacity": capacity,
+                        }
+                    )
+                if admitted:
+                    quantity = min(target - int(counts.get(species, 0)), 1)
+                    if add(["BUY_ANIMAL", species, quantity], quantity * float(ANIMAL_RULES[species]["cost"])):
+                        counts[species] += quantity
+                else:
+                    self.capacity_rejections[reason] += 1
+
+            carried_wheat = sum(
+                self._inventory(private, worker_id).get("WHEAT", 0)
+                for worker_id in range(len(self._positions(farm)))
             )
-            if quantity:
+            projected_animals = sum(counts.values())
+            feed_target = projected_animals * int(self.config["feed_reserve_rounds"])
+            wheat_deficit = max(0, feed_target - int(shed.get("WHEAT", 0)) - carried_wheat)
+            wheat_price = float(prices.get("WHEAT", 25.0))
+            affordable_wheat = max(0, int((cash - floor) // max(1.0, wheat_price)))
+            quantity = min(wheat_deficit, affordable_wheat, 16)
+            if quantity > 0:
                 add(["BUY_PRODUCT", "WHEAT", quantity], quantity * wheat_price)
 
-        reserve = feed_demand
-        for product in ("MILK", "STRAWBERRY", "MELON", "WHEAT", "FERTILIZER"):
-            quantity = int(shed.get(product, 0))
-            if product == "WHEAT":
-                quantity = max(0, quantity - reserve)
-            if quantity > 0 and len(orders) < 10:
-                orders.append(["SELL", product, quantity])
-        return orders[:10]
+            active_by_crop: Counter[str] = Counter()
+            for position, planned_crop in CODEX_CROP_PLAN.items():
+                tile = self._tile(farm, position)
+                if isinstance(tile, dict) and tile.get("kind") == "PLANT":
+                    active_by_crop[str(tile.get("crop", planned_crop))] += 1
+            seed_costs = {"MELON": 80.0, "STRAWBERRY": 100.0, "WHEAT": 10.0}
+            for crop in ("STRAWBERRY", "MELON", "WHEAT"):
+                eligible_slots = sum(
+                    1
+                    for position, planned_crop in CODEX_CROP_PLAN.items()
+                    if planned_crop == crop
+                    and snapshot.clock.day >= CODEX_COHORT_OFFSET[position]
+                    and self._tile(farm, position) is None
+                )
+                seed_stock = int((private.get("seeds", {}) or {}).get(crop, 0))
+                deficit = max(0, eligible_slots - seed_stock)
+                if deficit <= 0 or not self._crop_serviceable_before_terminal(crop, snapshot.clock.step):
+                    continue
+                affordable = max(0, int((cash - floor) // seed_costs[crop]))
+                quantity = min(deficit, affordable)
+                if quantity > 0:
+                    add(["BUY_SEED", crop, quantity], quantity * seed_costs[crop])
+        return orders[: self.max_market_orders]
+
+    def _materialize_requests(
+        self, snapshot: CodexSnapshot, result: dict[str, Any]
+    ) -> list[dict[str, Any]]:
+        records: list[dict[str, Any]] = []
+        positions = self._positions(snapshot.farm)
+        unit_actions = [result.get("farmer", ["PASS"]), *(result.get("hands", []) or [])]
+        for worker_id, action in enumerate(unit_actions):
+            if not action or worker_id >= len(positions):
+                continue
+            opcode = str(action[0])
+            normalized = "MOVE" if opcode in MOVE_ACTIONS else opcode
+            self.action_requests_by_opcode[normalized] += 1
+            self.daily_requested[snapshot.clock.day][normalized] += 1
+            if opcode == "PASS":
+                continue
+            position = positions[worker_id]
+            records.append(
+                {
+                    "request_id": f"{self.episode_id}/step-{snapshot.clock.step:06d}/unit-{worker_id}",
+                    "actor_kind": "UNIT",
+                    "actor_index": worker_id,
+                    "role": self._role_for(worker_id),
+                    "action": list(action),
+                    "before_step": snapshot.clock.step,
+                    "before_day": snapshot.clock.day,
+                    "actor_position": list(position),
+                    "before_tile": deepcopy(self._tile(snapshot.farm, position)),
+                    "before_inventory": deepcopy(self._inventory(snapshot.private, worker_id)),
+                }
+            )
+        for order_index, order in enumerate(result.get("market", []) or []):
+            if not order:
+                continue
+            opcode = str(order[0])
+            item = str(order[1]) if len(order) > 1 else "NONE"
+            quantity = int(order[2]) if len(order) > 2 else 1
+            self.market_requested_units[f"{opcode}:{item}"] += quantity
+            records.append(
+                {
+                    "request_id": f"{self.episode_id}/step-{snapshot.clock.step:06d}/market-{order_index}",
+                    "actor_kind": "MARKET",
+                    "actor_index": order_index,
+                    "action": list(order),
+                    "before_step": snapshot.clock.step,
+                    "before_day": snapshot.clock.day,
+                    "before_money": float(snapshot.farm.get("money", 0.0)),
+                    "before_shed": deepcopy(snapshot.private.get("shed", {}) or {}),
+                    "before_seeds": deepcopy(snapshot.private.get("seeds", {}) or {}),
+                    "before_hands": len(snapshot.farm.get("hands", []) or []),
+                    "price": float((snapshot.market.get("prices", {}) or {}).get(item, 0.0)),
+                }
+            )
+        return records
+
+    def _request_outcome(
+        self, request: dict[str, Any], snapshot: CodexSnapshot
+    ) -> str:
+        action = request["action"]
+        opcode = str(action[0])
+        crossed_eod = snapshot.clock.day > int(request["before_day"])
+        if request["actor_kind"] == "MARKET":
+            shed = snapshot.private.get("shed", {}) or {}
+            seeds = snapshot.private.get("seeds", {}) or {}
+            before_shed = request.get("before_shed", {}) or {}
+            before_seeds = request.get("before_seeds", {}) or {}
+            item = str(action[1]) if len(action) > 1 else "NONE"
+            if opcode == "SELL":
+                return "SUCCESS" if int(shed.get(item, 0)) < int(before_shed.get(item, 0)) else "UNKNOWN"
+            if opcode == "BUY_SEED":
+                return "SUCCESS" if int(seeds.get(item, 0)) > int(before_seeds.get(item, 0)) else "UNKNOWN"
+            if opcode in {"BUY_PRODUCT", "BUY_ANIMAL"}:
+                return "SUCCESS" if int(shed.get(item, 0)) > int(before_shed.get(item, 0)) else "UNKNOWN"
+            if opcode == "HIRE":
+                return "SUCCESS" if len(snapshot.farm.get("hands", []) or []) > int(request.get("before_hands", 0)) else "UNKNOWN"
+            if opcode == "BUY_LAND":
+                return "REJECTED"
+            return "UNKNOWN"
+
+        worker_id = int(request["actor_index"])
+        positions = self._positions(snapshot.farm)
+        before_position = tuple(int(value) for value in request["actor_position"])
+        current_position = positions[worker_id] if worker_id < len(positions) else None
+        current_tile = self._tile(snapshot.farm, before_position)
+        before_tile = request.get("before_tile")
+        before_inventory = request.get("before_inventory", {}) or {}
+        current_inventory = self._inventory(snapshot.private, worker_id)
+        if opcode in MOVE_ACTIONS:
+            return "SUCCESS" if current_position != before_position else "NO_OP"
+        if opcode == "PLANT":
+            return "SUCCESS" if isinstance(current_tile, dict) and current_tile.get("kind") == "PLANT" and current_tile.get("crop") == action[1] else ("UNKNOWN" if crossed_eod else "NO_OP")
+        if opcode == "WATER":
+            if isinstance(current_tile, dict) and bool(current_tile.get("watered_today", False)):
+                return "SUCCESS"
+            if crossed_eod and isinstance(current_tile, dict) and current_tile.get("kind") == "PLANT" and int(current_tile.get("consecutive_unwatered", 1)) == 0:
+                return "SUCCESS"
+            return "UNKNOWN" if crossed_eod else "NO_OP"
+        if opcode == "HARVEST" and isinstance(before_tile, dict):
+            before_yield = int(before_tile.get("yield_units", 0))
+            after_yield = int(current_tile.get("yield_units", 0)) if isinstance(current_tile, dict) else 0
+            item = str(before_tile.get("crop") or ANIMAL_RULES.get(str(before_tile.get("animal")), {}).get("product", ""))
+            inventory_gain = int(current_inventory.get(item, 0)) > int(before_inventory.get(item, 0)) if item else False
+            return "SUCCESS" if after_yield < before_yield or inventory_gain else ("UNKNOWN" if crossed_eod else "NO_OP")
+        if opcode == "DIG":
+            return "SUCCESS" if current_tile is None else ("UNKNOWN" if crossed_eod else "NO_OP")
+        if opcode == "BUILD_PASTURE":
+            return "SUCCESS" if isinstance(current_tile, dict) and current_tile.get("kind") == "PASTURE" else "NO_OP"
+        if opcode == "FEED":
+            if isinstance(current_tile, dict) and bool(current_tile.get("fed_today", False)):
+                return "SUCCESS"
+            if crossed_eod and isinstance(current_tile, dict) and current_tile.get("animal") and int(current_tile.get("consecutive_unfed", 1)) == 0:
+                return "SUCCESS"
+            return "UNKNOWN" if crossed_eod else "NO_OP"
+        if opcode == "CARE":
+            if isinstance(current_tile, dict) and bool(current_tile.get("cared_today", False)):
+                return "SUCCESS"
+            if crossed_eod and isinstance(current_tile, dict) and int(current_tile.get("pending_care_bonus", 0)) > int((before_tile or {}).get("pending_care_bonus", 0)):
+                return "SUCCESS"
+            return "UNKNOWN" if crossed_eod else "NO_OP"
+        if opcode == "COLLECT_FERTILIZER":
+            return "SUCCESS" if int(current_inventory.get("FERTILIZER", 0)) > int(before_inventory.get("FERTILIZER", 0)) else ("UNKNOWN" if crossed_eod else "NO_OP")
+        if opcode == "PICKUP":
+            item = str(action[1])
+            return "SUCCESS" if int(current_inventory.get(item, 0)) > int(before_inventory.get(item, 0)) else ("UNKNOWN" if crossed_eod else "NO_OP")
+        if opcode == "PLACE":
+            item = str(action[1])
+            if item in ANIMAL_RULES:
+                return "SUCCESS" if isinstance(current_tile, dict) and current_tile.get("animal") == item else "NO_OP"
+            return "SUCCESS" if int(current_inventory.get(item, 0)) < int(before_inventory.get(item, 0)) else ("UNKNOWN" if crossed_eod else "NO_OP")
+        if opcode == "FERTILIZE":
+            return "SUCCESS" if isinstance(current_tile, dict) and int(current_tile.get("fertilized_until_day", -1)) >= snapshot.clock.day else "NO_OP"
+        return "UNKNOWN"
+
+    def _record_success(self, request: dict[str, Any], snapshot: CodexSnapshot) -> None:
+        action = request["action"]
+        opcode = str(action[0])
+        day = int(request["before_day"])
+        normalized = "MOVE" if opcode in MOVE_ACTIONS else opcode
+        if request["actor_kind"] == "MARKET":
+            if opcode == "SELL" and len(action) >= 3:
+                item = str(action[1])
+                quantity = int(action[2])
+                amount = quantity * float(request.get("price", 0.0))
+                self.production_units[f"{item}_SOLD"] += quantity
+                if item in {"MELON", "STRAWBERRY", "WHEAT"}:
+                    self.revenue["crop_revenue"] += amount
+                elif item in {"MILK", "WOOL"}:
+                    self.revenue["livestock_revenue"] += amount
+                else:
+                    self.revenue["other_production_revenue"] += amount
+            return
+
+        # Capacity telemetry is worker-only: market orders consume neither a
+        # farmer/hand action slot nor route capacity.
+        self.daily_completed[day][normalized] += 1
+        worker_id = int(request["actor_index"])
+        before_tile = request.get("before_tile")
+        before_position = tuple(int(v) for v in request["actor_position"])
+        if opcode == "PLANT":
+            self.daily_due[day].add(f"WATER:{before_position[0]}:{before_position[1]}")
+        elif opcode == "WATER":
+            self.daily_due_completed[day].add(f"WATER:{before_position[0]}:{before_position[1]}")
+        elif opcode == "HARVEST" and isinstance(before_tile, dict):
+            units = int(before_tile.get("yield_units", 0))
+            if before_tile.get("kind") == "PLANT":
+                crop = str(before_tile.get("crop", "UNKNOWN"))
+                self.production_units[crop] += units
+                self.daily_due_completed[day].add(f"HARVEST:{before_position[0]}:{before_position[1]}")
+            elif before_tile.get("animal") in ANIMAL_RULES:
+                product = str(ANIMAL_RULES[str(before_tile["animal"])]["product"])
+                self.production_units[product] += units
+        elif opcode == "FEED":
+            self.production_units["WHEAT_CONSUMED"] += 1
+        elif opcode == "COLLECT_FERTILIZER":
+            self.production_units["FERTILIZER_COLLECTED"] += 1
+        elif opcode == "FERTILIZE":
+            self.production_units["FERTILIZER_APPLIED"] += 1
+
+        if opcode not in MOVE_ACTIONS:
+            self._close_commitment(worker_id, snapshot.clock.step)
+
+    def _evaluate_pending_requests(self, snapshot: CodexSnapshot) -> None:
+        if not self._pending_requests or self._previous_snapshot is None:
+            return
+        if snapshot.clock.step <= self._previous_snapshot.clock.step:
+            return
+        noops = 0
+        for request in self._pending_requests:
+            outcome = self._request_outcome(request, snapshot)
+            self.execution_outcomes[outcome] += 1
+            if outcome == "SUCCESS":
+                self._record_success(request, snapshot)
+            elif outcome in {"NO_OP", "REJECTED"}:
+                noops += 1
+                if request["actor_kind"] == "UNIT":
+                    self._close_commitment(int(request["actor_index"]), snapshot.clock.step)
+        if noops:
+            self._consecutive_noops += noops
+        else:
+            self._consecutive_noops = 0
+        if self._consecutive_noops >= int(self.config["max_noop_before_invalidation"]):
+            for worker_id in tuple(self._commitments):
+                self._close_commitment(worker_id, snapshot.clock.step)
+            self.interrupts_by_reason["REPEATED_ELIGIBLE_NOOP"] += 1
+            self._consecutive_noops = 0
+
+    def _check_day_boundary(self, snapshot: CodexSnapshot) -> None:
+        previous = self._previous_snapshot
+        if previous is None or snapshot.clock.day <= previous.clock.day:
+            return
+        for position in CODEX_CROP_POSITIONS:
+            before = self._tile(previous.farm, position)
+            after = self._tile(snapshot.farm, position)
+            if (
+                isinstance(before, dict)
+                and before.get("kind") == "PLANT"
+                and isinstance(after, dict)
+                and after.get("kind") == "WEED"
+            ):
+                self.hard_deadline_misses += 1
+        for position in CODEX_PASTURE_POSITIONS:
+            before = self._tile(previous.farm, position)
+            after = self._tile(snapshot.farm, position)
+            if (
+                isinstance(before, dict)
+                and before.get("animal")
+                and isinstance(after, dict)
+                and after.get("kind") == "PASTURE"
+                and not after.get("animal")
+            ):
+                self.animal_escapes += 1
+                self.hard_deadline_misses += 1
+
+    def _record_state_telemetry(self, snapshot: CodexSnapshot) -> None:
+        active_crops = sum(
+            1
+            for position in CODEX_CROP_POSITIONS
+            if isinstance(self._tile(snapshot.farm, position), dict)
+            and self._tile(snapshot.farm, position).get("kind") == "PLANT"
+        )
+        active_animals = len(self._active_animal_positions(snapshot.farm))
+        productive = active_crops + active_animals
+        self.land_utilization_trajectory.append(
+            {
+                "step": snapshot.clock.step,
+                "day": snapshot.clock.day,
+                "active_crop_tiles": active_crops,
+                "active_animals": active_animals,
+                "productive_tiles": productive,
+                "productive_utilization": productive / 24.0,
+            }
+        )
+        self.final_money = float(snapshot.farm.get("money", 0.0))
+
+    def telemetry_snapshot(self) -> dict[str, Any]:
+        requested_total = sum(self.action_requests_by_opcode.values())
+        completed_productive = sum(
+            count
+            for daily in self.daily_completed.values()
+            for opcode, count in daily.items()
+            if opcode in PRODUCTIVE_ACTIONS
+        )
+        completed_move = sum(
+            int(daily.get("MOVE", 0)) for daily in self.daily_completed.values()
+        )
+        pass_actions = int(self.action_requests_by_opcode.get("PASS", 0))
+        due_total = sum(len(values) for values in self.daily_due.values())
+        due_completed = sum(
+            len(due & self.daily_due_completed.get(day, set()))
+            for day, due in self.daily_due.items()
+        )
+        worker_days = max(
+            1.0,
+            (self._previous_snapshot.clock.step + 1) / self.turns_per_day
+            * int(self.config["workforce_total"]),
+        ) if self._previous_snapshot is not None else 1.0
+        utilization_values = [
+            float(row["productive_utilization"])
+            for row in self.land_utilization_trajectory
+        ]
+        latest = self.land_utilization_trajectory[-1] if self.land_utilization_trajectory else {}
+        return {
+            "run_id": self.run_id,
+            "episode_id": self.episode_id,
+            "seed": self.seed,
+            "opponent_id": self.opponent_id,
+            "player_position": self.player_position,
+            "agent_version": self.model_spec_version,
+            "foundation_checkpoint": FOUNDATION_CHECKPOINT,
+            "FINAL_MONEY": self.final_money,
+            "crop_revenue": float(self.revenue.get("crop_revenue", 0.0)),
+            "livestock_revenue": float(self.revenue.get("livestock_revenue", 0.0)),
+            "market_trading_contribution": 0.0,
+            "MILK_units": int(self.production_units.get("MILK", 0)),
+            "WOOL_units": int(self.production_units.get("WOOL", 0)),
+            "MELON_units": int(self.production_units.get("MELON", 0)),
+            "STRAWBERRY_units": int(self.production_units.get("STRAWBERRY", 0)),
+            "WHEAT_consumed": int(self.production_units.get("WHEAT_CONSUMED", 0)),
+            "WHEAT_sold": int(self.production_units.get("WHEAT_SOLD", 0)),
+            "fertilizer_collected": int(self.production_units.get("FERTILIZER_COLLECTED", 0)),
+            "fertilizer_applied": int(self.production_units.get("FERTILIZER_APPLIED", 0)),
+            "productive_actions": completed_productive,
+            "MOVE_actions": completed_move,
+            "PASS_actions": pass_actions,
+            "MOVE_PER_PRODUCTIVE_ACTION": completed_move / completed_productive if completed_productive else None,
+            "PRODUCTIVE_UTILIZATION": sum(utilization_values) / len(utilization_values) if utilization_values else 0.0,
+            "PRODUCTIVE_UTILIZATION_FINAL": float(latest.get("productive_utilization", 0.0)),
+            "ON_TIME_CROP_SERVICE_RATIO": due_completed / due_total if due_total else 1.0,
+            "HARD_DEADLINE_MISSES": self.hard_deadline_misses,
+            "ANIMAL_ESCAPE": self.animal_escapes,
+            "RETARGET_COUNT": self.retarget_count,
+            "TARGET_DWELL_TIME": self.target_dwell_total / self.target_dwell_count if self.target_dwell_count else 0.0,
+            "DUPLICATE_ASSIGNMENTS": self.duplicate_assignments,
+            "INTERRUPTS_BY_REASON": dict(sorted(self.interrupts_by_reason.items())),
+            "ROLE_CHANGES": self.role_changes,
+            "CROSS_ZONE_ASSISTS": self.cross_zone_assists,
+            "RETARGET_COUNT_PER_WORKER_DAY": self.retarget_count / worker_days,
+            "HIGH_VALUE_CROP_UNITS_VS_COHORT_PLAN": (int(self.production_units.get("MELON", 0)) + int(self.production_units.get("STRAWBERRY", 0))) / 120.0,
+            "activation_records": deepcopy(self.activation_records),
+            "capacity_rejections": dict(sorted(self.capacity_rejections.items())),
+            "action_requests_by_opcode": dict(sorted(self.action_requests_by_opcode.items())),
+            "market_requested_units": dict(sorted(self.market_requested_units.items())),
+            "execution_outcomes": dict(sorted(self.execution_outcomes.items())),
+            "global_replan_count": self.global_replan_count,
+            "local_replan_count": self.local_replan_count,
+            "current_roles": deepcopy(self._roles),
+            "current_global_plan": deepcopy(self._global_plan),
+            "lifecycle": {
+                "state": "TERMINAL_CLOSED" if self._terminal_closed else "RUNNING",
+                "decision_identity": self.episode_id,
+                "active_commitments": len(self._commitments),
+                "post_state_verifications": sum(self.execution_outcomes.values()),
+            },
+            "request_total": requested_total,
+            "known_attribution_limit": (
+                "Revenue is attributed from verified SELL requests at observed prices; "
+                "money also reflects acquisition and hire costs."
+            ),
+        }
 
     def __call__(
         self, observation: dict[str, Any], configuration: Any = None
     ) -> dict[str, Any]:
-        if isinstance(configuration, dict):
-            turns_per_day = configuration.get("turnsPerDay", self.turns_per_day)
-            episode_steps = configuration.get("episodeSteps", self.episode_steps)
-        else:
-            turns_per_day = getattr(
-                configuration, "turnsPerDay", self.turns_per_day
-            )
-            episode_steps = getattr(
-                configuration, "episodeSteps", self.episode_steps
-            )
-        try:
-            parsed_turns = int(turns_per_day)
-        except (TypeError, ValueError):
-            parsed_turns = self.turns_per_day
-        if parsed_turns > 0:
-            self.turns_per_day = parsed_turns
-        try:
-            parsed_episode_steps = int(episode_steps)
-        except (TypeError, ValueError):
-            parsed_episode_steps = self.episode_steps
-        if parsed_episode_steps > 0:
-            self.episode_steps = parsed_episode_steps
-        self._current_step = int(observation.get("step", 0))
-        return super().__call__(observation, configuration)
+        snapshot = CodexObservationAdapter.parse(
+            observation,
+            configuration,
+            fallback_turns_per_day=self.turns_per_day,
+            fallback_episode_steps=self.episode_steps,
+        )
+        if (
+            self._last_snapshot_fingerprint == snapshot.snapshot_fingerprint
+            and self._last_action is not None
+        ):
+            return deepcopy(self._last_action)
+        if self._terminal_closed:
+            return deepcopy(_SAFE_PASS)
+
+        self.turns_per_day = snapshot.clock.turns_per_day
+        self.episode_steps = snapshot.clock.episode_steps
+        self.shed_capacity = int(snapshot.configuration_snapshot["shedCapacity"])
+        self.max_market_orders = int(snapshot.configuration_snapshot["maxMarketOrdersPerTurn"])
+        if self._owned_quadrants(snapshot.farm) != 1:
+            raise RuntimeError("compact-Q0 candidate observed unexpected land expansion")
+
+        self._evaluate_pending_requests(snapshot)
+        self._check_day_boundary(snapshot)
+        self._maybe_replan_global(snapshot)
+        unit_actions = self._unit_actions(snapshot)
+        market_orders = self._market_orders(snapshot)
+        result = {
+            "farmer": unit_actions[0] if unit_actions else ["PASS"],
+            "hands": unit_actions[1:],
+            "market": market_orders,
+        }
+        self._pending_requests = self._materialize_requests(snapshot, result)
+        self._record_state_telemetry(snapshot)
+        self._previous_snapshot = snapshot
+
+        if snapshot.clock.is_terminal_action:
+            for worker_id in tuple(self._commitments):
+                self._close_commitment(worker_id, snapshot.clock.step)
+            self._terminal_closed = True
+        self._last_snapshot_fingerprint = snapshot.snapshot_fingerprint
+        self._last_action = deepcopy(result)
+        return result
 
 
 def create_agent(
     candidate_config: dict[str, Any] | None = None,
+    run_context: dict[str, Any] | None = None,
 ) -> Callable[[dict[str, Any], Any], dict[str, Any]]:
-    """Create one isolated, fail-closed Codex C2 episode agent."""
+    """Create one isolated, fail-closed compact-Q0 Codex episode agent."""
 
-    instance = CodexC2Agent(candidate_config)
+    instance = CodexC2Agent(candidate_config, run_context=run_context)
 
-    def tournament_agent(
+    def candidate_agent(
         observation: dict[str, Any], configuration: Any = None
     ) -> dict[str, Any]:
         try:
@@ -1338,20 +3043,31 @@ def create_agent(
             instance.last_exception = f"{type(exc).__name__}: {exc}"
             return deepcopy(_SAFE_PASS)
 
-    tournament_agent.codex_c2_instance = instance  # type: ignore[attr-defined]
-    tournament_agent.candidate_id = "CODEX_C2"  # type: ignore[attr-defined]
-    return tournament_agent
+    candidate_agent.codex_c2_instance = instance  # type: ignore[attr-defined]
+    candidate_agent.candidate_id = "CODEX_C2"  # type: ignore[attr-defined]
+    return candidate_agent
 
 # ==========================================
 # --- Kaggle Entrypoint ---
 # ==========================================
 _agent_factory: Callable[[dict[str, Any], Any], dict[str, Any]] | None = None
+_episode_sequence = 0
 
 
 def agent(observation: dict[str, Any], configuration: Any = None) -> dict[str, Any]:
-    """Kaggle submission entry point for Codex C2 V4 Candidate."""
-    global _agent_factory
+    """Kaggle entry point for the Codex compact-Q0 routine candidate."""
+    global _agent_factory, _episode_sequence
     step = int(observation.get("step", 0))
     if step == 0 or _agent_factory is None:
-        _agent_factory = create_agent()
+        _episode_sequence += 1
+        player = int(observation.get("player", 0))
+        _agent_factory = create_agent(
+            run_context={
+                "run_id": "codex-kaggle-runtime",
+                "episode_id": f"codex-episode-{_episode_sequence:06d}",
+                "seed": None,
+                "opponent_id": "KAGGLE_UNOBSERVED",
+                "player_position": player,
+            }
+        )
     return _agent_factory(observation, configuration)

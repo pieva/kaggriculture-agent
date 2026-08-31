@@ -1,423 +1,271 @@
-﻿# MODEL_SPEC CODEX C2 â€” Periodic capacity scheduler V5
+# MODEL_SPEC Codex C2 — Compact Q0 Routine V7
 
 ```text
-AGENT_ID: CODEX
-BUILD_ID: CODEX-C2-PERIODIC-CAPACITY-SCHEDULER-V5
-STATUS: DEFINE FROZEN / READY FOR PLAN-BUILD / NOT IMPLEMENTED
-HYPOTHESIS_ID: CODEX-C2-PERIODIC-CAPACITY-SCHEDULER-V5
-BASELINE_IMPLEMENTATION: CODEX-C2-STAGGERED-HARVEST-SERVICE-V4
-TOURNAMENT_READY: NO
-TOURNAMENT_EXECUTED: NO
+MODEL_SPEC_ID: CODEX-C2-COMPACT-Q0-ROUTINE-V7
+AGENT_ID: CODEX_C2
+FOUNDATION_CHECKPOINT: f391ee2
+SCOPE: AGENT_SPECIFIC_POLICY
+LAND: Q0_ONLY
+TOURNAMENT_AUTHORIZED: NO
+KAGGLE_AUTHORIZED: NO
 ```
 
-## 1. Tesi causale
+## 1. Objective
 
-La V4 ha confermato che una coorte WHEAT sincronizzata puÃ² superare la capacitÃ
-di servizio e che lo staggering elimina il deadline miss. Il cap fisso di due
-PLANT al giorno risolve quel caso, ma rappresenta soltanto la capacitÃ  osservata
-nel preflight V3.2. Non descrive la domanda futura di WATER, HARVEST, FEED, CARE,
-collection, routing e inventory, nÃ© scala con workforce, mix o superficie.
+The immediate objective is `FINAL_MONEY > 56772`. The controller pursues
+monetized output from a compact, serviceable farm. It does not optimize owned
+land, raw entity count, speculative trading, or formal plan complexity. The
+project target remains 80,000, but this candidate is a Q0 causal test.
 
-La V5 generalizza il meccanismo:
+## 2. Production Architecture
+
+The footprint is frozen:
 
 ```text
-plant / place candidate
-  -> derive complete biological service profile
-  -> reserve slots in every future service window
-  -> admit only if the profile is serviceable
-  -> execute a planned route before urgency
-  -> verify every completion from the next snapshot
-  -> use reactive overrides only for real deviations
+Q0:
+  18 crop tiles: 9 MELON, 8 STRAWBERRY, 1 WHEAT
+  6 PASTURE: 3 COW, 3 SHEEP
+  central shed access
+WORKFORCE:
+  7 total = farmer + 6 hands
+GOOSE:
+  0
 ```
 
-Tesi:
+All productive positions are inside the NW 5×5 quadrant. The controller never
+emits `BUY_LAND`. A nineteenth crop tile is outside the candidate definition.
+
+## 3. Worker Roles
+
+| Worker | Role | Primary responsibility |
+|---:|---|---|
+| 0 | `FLOAT_RESERVE` | hard interrupts, bootstrap help, temporary overload |
+| 1 | `CROP_ZONE_0` | six-tile local crop route |
+| 2 | `CROP_ZONE_1` | six-tile local crop route |
+| 3 | `CROP_ZONE_2` | six-tile local crop route |
+| 4 | `LIVESTOCK_COW` | three COW pasture positions |
+| 5 | `LIVESTOCK_SHEEP` | three SHEEP pasture positions |
+| 6 | `FERTILIZER_LOGISTICS` | shed, animal/feed staging, fertilizer, unblock |
+
+Roles persist across turns and days. They are re-evaluated after workforce or
+asset change and at EOD. An ordinary FEED, CARE, fertilizer, inventory, or
+market opportunity does not borrow a crop worker.
+
+The float worker has work but no wandering permission: every non-PASS action is
+bound to an explicit target. A crop worker may cross its zone only when its own
+zone has no due task and another zone exposes a hard interrupt.
+
+## 4. Zones and Recurrent Routes
+
+The eighteen crop positions are partitioned into three stable zones of six.
+Within each zone, task selection uses priority class, economic value at risk,
+deadline slack, Manhattan distance, and stable route index.
+
+The worker keeps its target while moving. Completion or observable invalidation
+opens the next local choice. A shared reservation set prevents two workers from
+claiming the same farm entity in one turn.
+
+Livestock positions are two three-tile clusters: the first cluster is COW and
+the second is SHEEP. Animal type is part of the position contract.
+
+## 5. Planning Horizons
 
 ```text
-PLANNED_BASELINE
-  = biological cycles
-  + entity service calendar
-  + capacity reservation
-  + phase-shifted cohorts
-  + planned routing and workforce
-  + controlled expansion sequence
-
-REACTIVE_OVERRIDE
-  = legality
-  + price / market inventory
-  + cash / feed shortage
-  + missed service / weed / worker loss
-  + sell opportunity
-  + terminal horizon
+STRATEGIC_HORIZON: episode end for payback and terminal cutoffs
+SOFT_FORECAST: current state to first monetizable output
+HARD_SCHEDULE: current day and next biological service boundary
+LOCAL_ROUTE: one committed target plus its path/interaction
 ```
 
-Un periodo non autorizza mai un'azione illegale. Una soglia di stato non deve
-piÃ¹ essere il solo meccanismo che scopre un task biologico prevedibile.
+No 17-day hard calendar exists. No fixed 20% route reserve or 15% exception
+reserve exists.
 
-## 2. Evidenza congelata
+Global replan is triggered only by EOD, workforce change, crop/pasture/animal
+asset change, structural invalidation, or an infeasible hard-deadline set.
+Local replan is triggered only by target completion, target invalidation,
+worker unavailability, or hard interrupt.
 
-Baseline V4, seed neutrale `26083001`, P0/P1:
+## 6. Atomic Target Commitment
 
-- cap WHEAT massimo 2 PLANT/day;
-- peak economic-ready 2;
-- deadline miss 0/15;
-- 15/15 HARVEST WHEAT a yield almeno 3;
-- ciclo MELON con HARVEST e SELL effettivi;
-- zero error/fallback.
+A commitment contains worker id, role, target position, intended interaction,
+assigned step, zone, and optional hard-interrupt reason.
 
-Replay esterni usati come evidenza comparativa, non come tuning:
+The target is stable while movement is in progress. A small distance, price, or
+priority improvement does not replace it. A hard task may interrupt a lower
+risk valid target; this increments `RETARGET_COUNT` and
+`INTERRUPTS_BY_REASON`.
 
-| Policy | Score | Scala | Periodi principali | Segnale di capacitÃ  |
-|---|---:|---|---|---|
-| LuCcc | 56.772 | 1Q, max 25 entitÃ  produttive | service 24; COW 48; SHEEP 72; WHEAT circa 96 | 100/100 HARVEST effettivi, MOVE 30,29% |
-| Gordeev | 88.648 | 3Q, max 62 entitÃ  | 24/48/72 conservati con crop piÃ¹ irregolari | 238/238 HARVEST effettivi |
-| Dipin | 95.496 | 3Q, max 72 entitÃ  | 24/48/72, WHEAT spesso age 3 | 284/285 HARVEST effettivi |
-| Petar | 95.475 | 4Q, 22 SHEEP | CARE 24, collection circa 72 | 197/389 HARVEST effettivi; 192 no-op |
+Every interaction request is checked against the next observation. A request is
+not counted as output merely because it was emitted.
 
-L'evidenza supporta il calendario biologico e l'espansione condizionale. Non
-supporta un mix unico, un target di Q, un harvest age universale o la copia di
-una policy esterna.
+## 7. Interrupt Rules
 
-## 3. Ontologia di capacitÃ
-
-| Livello | Definizione V5 |
-|---|---|
-| `OWNED_SURFACE` | tile non-LOCKED nei quadranti acquistati |
-| `ACTIVE_SURFACE` | entitÃ  PLANT o animal osservate |
-| `SERVICEABLE_SURFACE` | entitÃ  le cui finestre fino al primo output monetizzabile hanno slot prenotati |
-| `PRODUCTIVE_SURFACE` | entitÃ  con service completato e output raccolto entro deadline |
-| `MONETIZED_OUTPUT` | output depositato e venduto con effetto osservato |
-
-`ACTIVE_SURFACE` non puÃ² essere usata come sinonimo di capacitÃ . L'ammissione
-lavora sul passaggio incrementale `candidate -> SERVICEABLE_SURFACE`.
-
-## 4. Entity registry
-
-Ogni asset biologico ha una singola entry persistente:
+Hard interrupt reason codes:
 
 ```text
-ENTITY_PERIOD_MODEL
-  entity_id
-  tile
-  kind
-  phase
-  origin_step
-  nominal_period
-  next_due_step
-  service_window_open
-  service_window_target
-  service_window_close
-  hard_deadline
-  expected_output
-  required_worker_slots
-  route_cluster
-  inventory_requirement
-  completion_evidence
-  deviation_state
-  reactive_overrides
+ANIMAL_ESCAPE_PREVENTION
+CROP_WATER_LOSS
+HARVEST_TERMINAL_RISK
+BLOCKING_INVENTORY_LOSS
+WORKER_OR_TARGET_LEGALITY_INVALIDATION
+REPEATED_ELIGIBLE_NOOP
 ```
 
-L'entry deriva dallo snapshot e viene riconciliata a ogni decisione. Una
-prenotazione non sostituisce lo stato engine. Se posizione, kind o phase non
-sono riconciliabili, l'entitÃ  entra in `DEVIATION_REPLAN_REQUIRED` e non genera
-azioni speculative.
+CARE, fertilizer, market price, ordinary inventory clearing, and a newly ready
+low-risk crop are scheduled but non-interrupting.
 
-## 5. Modelli di periodo candidati
+Lexicographic task order:
 
-I valori esterni sono candidate windows. Prima del BUILD devono essere
-riconciliati con la Foundation e i metadata engine; l'evidenza insufficiente non
-crea una nuova costante.
+1. irreversible loss before next feasible service;
+2. economic value at risk;
+3. deadline proximity / remaining slack;
+4. route-local completion cost.
 
-### 5.1 Crop
+## 8. Capacity Admission
 
-| Crop | Piano nominale | Window / deadline | Output osservato | Nota V5 |
-|---|---|---|---|---|
-| WHEAT | WATER giornaliero; harvest mode preregistrato per coorte | legalitÃ  da first-yield; target V4 full-yield age 4; deadline da `max_lifespan_step` | age 2â€“4, yield 1â€“6; LuCcc yield 3 stabile ad age 4 | il numero di PLANT deriva dalle reservation, non da cap 2 |
-| MELON | WATER giornaliero; ciclo candidato 10â€“12 day | harvest nella window prenotata, replant dopo completion | yield 6 frequente | non aprire un ciclo oltre horizon |
-| STRAWBERRY | WATER giornaliero; collection candidata ogni 48 step | output ricorrente circa age 10/12/14/16; hard deadline da lifespan | yield 1â€“2 frequente | mantenere tile ongoing finchÃ© serviceable |
-| CARROT | Foundation-defined | nessuna nuova window numerica congelata | evidenza age 2â€“3 limitata | fallback ai metadata engine |
-| TOMATO | Foundation-defined | nessuna nuova window numerica congelata | evidenza insufficiente | fallback ai metadata engine |
-
-Il `harvest_mode` WHEAT distingue almeno:
+For each relevant window `w`:
 
 ```text
-FULL_YIELD
-  target = policy economic target V4
-  role = monetized crop
-
-FAST_TURN
-  target = earlier legal window, only after independent validation
-  role = feed / liquidity / horizon-constrained cohort
+AVAILABLE(w) = active worker action slots
+REQUIRED(w) = hard service + route MOVE + PICKUP/PLACE
+              + inventory handling + candidate actions
+SLACK(w) = AVAILABLE(w) - REQUIRED(w)
 ```
 
-La modalitÃ  Ã¨ scelta prima della PLANT usando ruolo previsto, horizon, capacitÃ
-e output per slot. Non oscilla per una singola variazione di prezzo.
+A post-bootstrap animal is admitted only when all hard deadlines remain
+feasible, minimum slack is non-negative, two FEED rounds are on hand or
+affordable, cash covers animal/feed/floor, inventory has a legal path, first
+output precedes payback cutoff, and forecast required actions do not exceed
+observed capacity.
 
-### 5.2 Animal
+Observed capacity becomes available after three complete days and is the
+minimum successful non-PASS action count among those days, including observed
+productive, MOVE, and handling actions. Before three days, no growth beyond the
+preregistered 2+2 bootstrap is admitted.
 
-| Animal | FEED | CARE | Production / collection candidate | Output tipico osservato | Deadline |
-|---|---:|---:|---:|---|---|
-| COW | 24 step | 24 step | circa 48 step | MILK 3, bonus fino a 6 | service entro il day; collect prima del successivo ciclo compatibile |
-| SHEEP | 24 step | 24 step | circa 72 step | WOOL 4, bonus variabile | service entro il day; collect prima del successivo ciclo compatibile |
+## 9. Crop Cohorts
 
-Placement richiede reservation per FEED, CARE, collection, fertilizer handling,
-feed inventory e route fino al primo output monetizzabile. Livestock Ã¨ un modulo
-opzionale, non un requisito V5.
+MELON uses nine fixed positions in three spatial cohorts of three, with initial
+offsets `0 / 1 / 2` days. It is the high-value batch crop.
 
-### 5.3 Fertilizer e inventory
+STRAWBERRY uses eight fixed positions in two cohorts of four, with offsets
+`0 / 2` days. Recurrent harvest windows at biological ages 10/12/14/16 are
+protected; harvest does not imply retirement.
 
-FERTILIZER usa uno sweep candidato giornaliero, accorpato alla route animal,
-soltanto quando la disponibilitÃ  Ã¨ osservata. DROP, market sell e liberazione
-dell'inventory hanno slot espliciti: un harvest biologico non Ã¨ serviceable se
-non puÃ² completare handling e monetization.
+WHEAT uses one fixed position for the feed buffer. Its preferred harvest target
+is age 4/full economic yield when serviceable. No MELON/STRAWBERRY position is
+converted into additional WHEAT.
 
-## 6. Rolling service calendar
+Replant occurs only after observed harvest/clearance effect and while the new
+crop can reach first monetizable output before the terminal margin.
 
-Per ogni finestra `w`:
+## 10. Livestock Activation
 
 ```text
-required_slots(w)
-  = crop_water_due(w)
-  + crop_harvest_due(w)
-  + animal_feed_due(w)
-  + animal_care_due(w)
-  + product_collect_due(w)
-  + fertilizer_due(w)
-  + inventory_handling_due(w)
-  + route_allowance(w)
-
-available_slots(w)
-  = contracted_worker_actions(w)
-  - mandatory_transit_reserve(w)
-  - exception_reserve(w)
-
-reservation_slack(w)
-  = available_slots(w) - required_slots(w)
+BOOTSTRAP day 0–1:
+  2 COW + 2 SHEEP
+STAGED day ~7:
+  +1 COW if capacity admission passes
+STAGED day ~8:
+  +1 SHEEP if capacity admission passes
 ```
 
-Regola di ammissione:
+The controller does not force 3+3 after rejection. Each decision records
+`animal_activation_day`, `activation_admitted`, `activation_rejected`,
+`rejection_reason`, and the capacity snapshot.
+
+FEED and CARE are local daily tasks. COW collection follows observed yield with
+an expected 48-step period after first output; SHEEP follows 72 steps.
+Collection is not gated on `fed_today` because base production is scheduled by
+the engine.
+
+## 11. Fertilizer Closed Loop
 
 ```text
-ADMIT(entity)
-  iff legal_to_create(entity)
-  and affordable(entity)
-  and horizon_complete(entity)
-  and for every required service window w:
-        reservation_slack_after_admission(w) >= 0
+PASTURE
+-> COLLECT_FERTILIZER
+-> FERTILIZER_LOGISTICS/FLOAT inventory
+-> eligible high-value crop
+-> FERTILIZE only when watered_today is observed
 ```
 
-La reservation copre almeno il primo ciclo monetizzabile. Per asset ongoing
-copre anche una rolling window successiva. Un task completato libera la sua
-prenotazione; un task mancato consuma `exception_reserve` e forza replan.
+Target order is MELON, early-cycle STRAWBERRY, then WHEAT only when feed is
+critical. Fertilizer is never applied on an unwatered tile under a promise that
+WATER may happen later.
 
-## 7. Staggering V5
+## 12. Market Policy
 
-La V4:
+Market priority is `LOW_PRIORITY`. Orders do not retarget workers.
+
+- Sell MILK, WOOL, MELON and STRAWBERRY in daily batches.
+- Sell fertilizer after the direct carried-fertilizer application path.
+- Keep `2 × active_or_staged_animals` WHEAT units.
+- Buy WHEAT product only to close the feed deficit.
+- Buy crop seed for fixed eligible positions only.
+- Do not buy for resale, trade short-term price oscillations, or buy land.
+
+The opening is serialized under the ten-order engine limit: six hires, 2 COW,
+2 SHEEP, feed and the first MELON cohort are spread across the first available
+turns without violating the cash floor.
+
+## 13. Verification and Minimal Lifecycle
+
+The runtime retains only decision identity, local PLAN, target commitment,
+post-state VERIFY, invalidation, hard-interrupt reason code, simple evidence
+counters, and terminal closure. It does not implement DEFINE, SHIP, or
+supersession as runtime phases and does not depend on a separate operational
+planning layer.
+
+Post-state verification covers movement, planting, watering, harvest, digging,
+pasture construction, feeding, care, fertilizer collection/application,
+pickup/place, hires, purchases, and sales. Repeated legal no-op outcomes
+invalidate local commitments. Manual `DROP` is forbidden.
+
+## 14. Instrumentation
+
+Required output:
 
 ```text
-MAX_WHEAT_PLANTS_PER_DAY = 2
+FINAL_MONEY
+crop_revenue
+livestock_revenue
+market_trading_contribution
+MILK_units / WOOL_units
+MELON_units / STRAWBERRY_units
+WHEAT_consumed / WHEAT_sold
+fertilizer_collected / fertilizer_applied
+productive_actions / MOVE_actions / PASS_actions
+MOVE_PER_PRODUCTIVE_ACTION
+PRODUCTIVE_UTILIZATION
+ON_TIME_CROP_SERVICE_RATIO
+HARD_DEADLINE_MISSES
+ANIMAL_ESCAPE
+RETARGET_COUNT / TARGET_DWELL_TIME
+DUPLICATE_ASSIGNMENTS / INTERRUPTS_BY_REASON
+ROLE_CHANGES / CROSS_ZONE_ASSISTS
 ```
 
-La V5:
+Leading indicators:
+
+1. `ON_TIME_CROP_SERVICE_RATIO`;
+2. `HARD_DEADLINE_MISSES`;
+3. `HIGH_VALUE_CROP_UNITS_VS_COHORT_PLAN`;
+4. `MOVE_PER_PRODUCTIVE_ACTION`;
+5. `RETARGET_COUNT_PER_WORKER_DAY`.
+
+## 15. Review Criteria
 
 ```text
-MAX_NEW_ENTITIES_IN_WINDOW
-  = count of candidate profiles that fit all future reservations
+BUILD_READY_FOR_REVIEW if:
+  technical verification PASS
+  AND mean FINAL_MONEY >= 56773
+  AND ANIMAL_ESCAPE total = 0
+  AND livestock output materially preserved
+  AND crop serviceability materially improved
+
+STRONG_SUCCESS: mean FINAL_MONEY >= 60000
+PROJECT_SUCCESS: mean FINAL_MONEY >= 80000
 ```
 
-Il cap `2` non Ã¨ una costante universale V5. PuÃ² restare soltanto come safety
-fallback iniziale se il calendario Ã¨ invalido. Lo staggering sceglie phase
-offset che minimizzano il futuro `SERVICE_PEAK`, con questi vincoli:
-
-1. nessuna concentrazione di HARVEST/COLLECT oltre `available_slots`;
-2. WATER/FEED/CARE hard service protetti prima dei task differibili;
-3. route cluster coerente con le finestre;
-4. completion dello snapshot precedente prima di replant/reuse;
-5. nessuna PLANT aggiunta soltanto per raggiungere un raw target.
-
-## 8. PLANNED_BASELINE
-
-Ordine di costruzione del piano:
-
-1. riconciliare entity registry e completion;
-2. materializzare eventi nominali nella rolling window;
-3. caricare hard deadlines e servizi giornalieri;
-4. allocare worker e route cluster;
-5. allocare handling e sell-through minimo;
-6. valutare nuove PLANT, animal placement, HIRE ed espansione;
-7. scegliere phase offset delle nuove entitÃ ;
-8. emettere azioni due-safe e verificabili;
-9. confrontare piano ed effetti allo snapshot successivo.
-
-La workforce non Ã¨ `5/8` come tesi causale. Il planner calcola worker-window
-necessari dal carico e ammette HIRE soltanto se:
-
-- aumenta `available_slots` in una finestra vincolante;
-- il nuovo worker puÃ² raggiungere il cluster utile;
-- wage e horizon conservano il cash floor;
-- la capacitÃ  aggiunta Ã¨ utilizzata da output monetizzabile.
-
-## 9. REACTIVE_OVERRIDE
-
-Precedenza:
-
-1. engine legality e own-player binding;
-2. imminente hard-deadline miss;
-3. feed/cash/inventory impossibility;
-4. missed WATER/FEED/CARE o weed su tile produttiva;
-5. worker contract loss / route obstruction;
-6. market price, inventory/demand e cash opportunity;
-7. terminal shutdown/liquidation;
-8. ritorno al baseline replanned.
-
-Un override:
-
-- modifica il minimo numero di eventi;
-- conserva le altre reservation;
-- registra causa, evento spostato e nuova deadline;
-- non ripete un'azione senza transition evidence;
-- non usa prezzo o urgenza per bypassare la legalitÃ .
-
-## 10. Market model
-
-Il mercato resta `REACT` dominante:
-
-```text
-SELL_DECISION
-  = observed_sellable_inventory
-  + price / inventory condition
-  + cash need
-  + max_holding_window
-  + terminal horizon
-```
-
-Il piano fornisce output previsto, earliest sell step, max holding window e slot
-di handling. Il market override sceglie quantitÃ  e timing. Una vendita Ã¨
-`MONETIZED_OUTPUT` soltanto dopo effetto osservato; un ordine emesso non Ã¨
-revenue.
-
-## 11. Espansione
-
-L'espansione Ã¨ una replica controllata del ciclo, non un `BUY_LAND` isolato:
-
-```text
-Q1 stable serviceable cycle
-  -> shadow schedule Q2 with phase offset
-  -> reserve workforce / route / cash / sell-through
-  -> activate Q2 progressively
-  -> reconcile predicted vs actual load
-  -> optional Q3/Q4 by the same gate
-```
-
-`EXPANSION_ADMIT(Qn)` richiede:
-
-- nessun hard-deadline miss persistente nel ciclo corrente;
-- output giÃ  passato da `ACTIVE` a `PRODUCTIVE` e `MONETIZED`;
-- reservation non negativa fino al primo ciclo monetizzabile del clone;
-- land, activation, seed/animal, wage e feed compatibili con cash floor;
-- payback horizon plausibile;
-- phase offset diverso dal Q precedente;
-- stop automatico se serviceability o period adherence peggiorano.
-
-Non esiste un quadrant target V5. Q1, Q2, Q3 e Q4 sono risultati condizionali.
-
-## 12. Classificazione delle soglie V4
-
-| Meccanismo | Decisione V5 |
-|---|---|
-| engine harvest legality | `KEEP_AS_THRESHOLD` |
-| cash floor 300 | `KEEP_AS_THRESHOLD` fino a nuova validazione |
-| WHEAT economic target | `HYBRID_PERIOD_PLUS_THRESHOLD` |
-| WATER loss boundary | `HYBRID_PERIOD_PLUS_THRESHOLD` |
-| product yield availability | `HYBRID_PERIOD_PLUS_THRESHOLD` |
-| market price/inventory | `HYBRID_PERIOD_PLUS_THRESHOLD` con REACT dominante |
-| `MAX_WHEAT_PLANTS_PER_DAY=2` | `CONVERT_TO_PERIOD` / capacity reservations |
-| FEED e CARE non-serviti oggi | `CONVERT_TO_PERIOD` con state guard |
-| replant su tile libera | `CONVERT_TO_PERIOD` con completion guard |
-| workforce 5/8 | `CONVERT_TO_PERIOD` / window workload |
-| pasture/COW cap 5/4 | `CONVERT_TO_PERIOD` / asset service profile |
-| crop target e mix | `HYBRID_PERIOD_PLUS_THRESHOLD` |
-| land e livestock gate | `HYBRID_PERIOD_PLUS_THRESHOLD` |
-| fixed quadrant target | `REMOVE` |
-| retry senza transizione | `REMOVE` |
-
-## 13. Arbitration V5
-
-```text
-1. legality / SAFE_PASS
-2. hard-deadline rescue
-3. planned service whose window closes now
-4. missed-service recovery
-5. planned service at target step
-6. route-compatible early service within window
-7. inventory handling required by a due harvest/collect
-8. market override with protected biological reservations
-9. planned PLANT / PLACE admitted by reservations
-10. planned HIRE / expansion admitted by capacity and cash
-11. PASS
-```
-
-Tra task dello stesso livello: earliest deadline, poi lowest slack, poi route
-cost, poi stable entity id. Questo evita oscillazioni threshold-centric.
-
-## 14. Consumer mapping
-
-| Feature | Consumer | Fallback |
-|---|---|---|
-| day/hour/step, origin step | phase clock e due events | nessuna nuova entitÃ  se clock invalido |
-| crop/animal metadata | period profile e legality | Foundation-only profile |
-| yield/lifespan/service flags | completion, deadline, override | task bloccato se ambiguo |
-| worker position/contract | available slots e route | capacitÃ  non prenotabile |
-| inventories/shed | handling, feed e sell-through | proteggere service, nessuna vendita presunta |
-| money e market | affordability e REACT | cash floor / nessun ordine speculativo |
-| tile transition | completion evidence | evento resta unresolved, no retry spam |
-| unlocked quadrants | owned surface / expansion | nessuna inferenza da BUY_LAND order |
-
-Own-player binding, factory isolata, due-safe action generation e SAFE_PASS
-restano invarianti della Foundation.
-
-## 15. Previsioni e falsificazione
-
-Direzioni preregistrate rispetto alla V4, a paritÃ  di bundle e protocollo:
-
-```text
-SERVICEABLE_TO_ACTIVE_RATIO: UP_OR_EQUAL
-HARD_DEADLINE_MISS_RATE: DOWN_OR_EQUAL
-NOOP_ACTION_RATE: DOWN
-MONETIZED_OUTPUT_PER_WORKER_ACTION: UP
-SERVICE_PEAK_OVER_CAPACITY: DOWN
-PERIOD_ADHERENCE_AFTER_Q2: PRESERVED
-FINAL_MONEY: UP_DIRECTIONAL, NO EXTERNAL-SCORE TARGET
-```
-
-Il modello Ã¨ falsificato se:
-
-- non migliora completion/monetized output rispetto a V4 su episodi
-  indipendenti;
-- aumenta deadline miss, cash failure o no-op;
-- non conserva period adherence dopo un clone Q2;
-- reservation forecast non predice il carico reale meglio dei raw count;
-- il dispatcher V4 eguaglia sistematicamente l'economia con complessitÃ  minore.
-
-La validazione deve separare calendario, mix, workforce, land e market. Nessuno
-score dei quattro replay Ã¨ un target di tuning.
-
-## 16. Contratto per la fase successiva
-
-Prima del BUILD:
-
-1. riconciliare tutti i periodi candidati con la Foundation engine;
-2. definire rolling horizon e unitÃ  di `route_allowance` senza score tuning;
-3. preregistrare baseline V4, metriche e falsification gates;
-4. implementare telemetry di due/completed/missed/reserved slots;
-5. costruire il planner dietro mode isolata;
-6. verificare P0/P1 e completion effects;
-7. solo dopo, eseguire il protocollo autorizzato.
-
-In questa fase non sono autorizzati codice, config, test, runner, tournament,
-Kaggle o submission.
-
-```text
-PERIODIC_MODEL_EVOLUTION_RECOMMENDED: YES
-IMPLEMENTATION_STATUS: NOT_STARTED
-TOURNAMENT_READY: NO
-```
+If the gate fails, the report selects one primary bottleneck from the authorized
+taxonomy and does not tune on preregistered seeds.
