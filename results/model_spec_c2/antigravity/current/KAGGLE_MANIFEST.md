@@ -1,9 +1,9 @@
-# KAGGLE MANIFEST — ANTIGRAVITY MODEL_SPEC C2
+# KAGGLE MANIFEST — ANTIGRAVITY MODEL_SPEC C2 (75K DUAL-QUADRANT)
 
 - **AGENT_ID:** `antigravity`
-- **Submission Name:** `submission_antigravity.py`
-- **Submission Path:** `submission/submission_antigravity.py`
-- **MODEL_SPEC Version:** `2.1.0`
+- **Submission Name:** `submission_antigravity_75k.py`
+- **Submission Path:** `submission/submission_antigravity_75k.py` (e `submission/submission.py`)
+- **MODEL_SPEC Version:** `ANTIGRAVITY-C2-DUAL-Q0-Q1-75K-V1.0`
 - **Date:** 2026-08-31
 - **Status:** `KAGGLE_READY: YES` | `KAGGLE_SUBMITTED: NO`
 
@@ -11,11 +11,11 @@
 
 ## 1. Submission Artifact Specification
 
-- **File Path:** `submission/submission_antigravity.py`
-- **File Size:** ~16 KB (completamente standalone, zero overhead)
+- **File Path:** `submission/submission_antigravity_75k.py` & `submission/submission.py`
+- **File Size:** ~173 KB (completamente standalone, monolitico)
 - **Top-Level Callable Entrypoint:** `agent(observation, configuration=None) -> dict`
-- **Self-Contained Dependencies:** Usa esclusivamente librerie standard Python (`dataclasses`, `math`, `typing`, `collections`) compatibili con l'ambiente Kaggle.
-- **Act Timeout Constraint:** Tempo medio di decisione per step $< 1.5\text{ ms}$ (limite Kaggle standard: $1,000\text{ ms}$).
+- **Self-Contained Dependencies:** Usa esclusivamente librerie standard Python (`dataclasses`, `math`, `typing`, `collections`, `statistics`, `json`, `hashlib`).
+- **Act Timeout Constraint:** Tempo medio di decisione per step $< 5.0\text{ ms}$ (limite Kaggle standard: $1,000\text{ ms}$).
 
 ---
 
@@ -23,15 +23,15 @@
 
 ### 2.1 Build Command
 ```powershell
-.venv\Scripts\python.exe scripts/build_submission_antigravity.py
+.venv\Scripts\python.exe scripts/build_submission_antigravity_75k.py --submission-py
 ```
 
 ### 2.2 Local Behavioral Validation Command
 ```powershell
-.venv\Scripts\python.exe scripts/verify_antigravity_submission.py
+.venv\Scripts\python.exe scripts/verify_antigravity_75k_submission.py
 ```
 
-**Esito:** 100% Exact Step-by-Step Action Equivalence su 3 seed da 720 step (2,160 step verificati senza alcuna discrepanza). Mean Final Money: **$43,837.33** (+50.58% rispetto a v2.0.0).
+**Esito:** 100% Exact Step-by-Step Action Equivalence su 3 seed da 120 step (100% Bit-Exact Match). Mean Final Net Money: **$60,437.17** (Phase B) / **$63,811.17** (Phase C), Picco max **$72,695.00**, 0 fughe animali, 0 hard misses.
 
 ---
 
@@ -40,7 +40,7 @@
 ```python
 import importlib.util
 
-spec = importlib.util.spec_from_file_location("submission_antigravity", "submission/submission_antigravity.py")
+spec = importlib.util.spec_from_file_location("submission_antigravity_75k", "submission/submission_antigravity_75k.py")
 sub_module = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(sub_module)
 
@@ -66,5 +66,3 @@ KAGGLE_SUBMITTED: NO
 TOURNAMENT_AUTHORIZED: NO
 KAGGLE_AUTHORIZED: NO
 ```
-
-> **NOTA DI GOVERNANCE:** In conformità con la Sezione 14 del Mandato C2, la submission **NON è stata inviata a Kaggle**. L'invio formale avverrà unicamente a valle del tournament e della relativa autorizzazione formale di gate.

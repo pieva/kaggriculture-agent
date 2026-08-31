@@ -1,0 +1,46 @@
+{
+  "candidate_id": "ANTIGRAVITY_C2_75K_DUAL_Q",
+  "schema_version": "model_spec_c2.antigravity.dual_q.v1",
+  "model_spec_version": "ANTIGRAVITY-C2-DUAL-Q0-Q1-75K-V1.0",
+  "foundation_checkpoint": "f391ee2",
+  "quadrants_owned": 2,
+  "workforce_total": 13,
+  "q0_workforce_total": 7,
+  "crop_working_set_target": 36,
+  "crop_counts": {
+    "MELON": 18,
+    "STRAWBERRY": 16,
+    "WHEAT": 2
+  },
+  "pasture_allocation_target": 12,
+  "livestock_targets": {
+    "COW": 6,
+    "SHEEP": 6
+  },
+  "bootstrap_livestock": {
+    "COW": 2,
+    "SHEEP": 2
+  },
+  "q1_livestock_targets": {
+    "COW": 3,
+    "SHEEP": 3
+  },
+  "livestock_activation_days": {
+    "COW": 7,
+    "SHEEP": 8
+  },
+  "q1_activation_min_day": 6,
+  "q1_activation_max_day": 8,
+  "q1_activation_cash": 2800,
+  "q1_operating_cash_floor": 250,
+  "operating_cash_floor": 50,
+  "feed_reserve_rounds": 2,
+  "observed_capacity_days": 3,
+  "hard_schedule_days": 2,
+  "minimum_post_plant_action_phases": 1,
+  "payback_cutoff_days": 2,
+  "crop_horizon_margin_days": 1,
+  "endgame_shutdown_days": 2,
+  "max_noop_before_invalidation": 3,
+  "turns_per_day": 24
+}

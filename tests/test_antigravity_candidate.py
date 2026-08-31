@@ -60,14 +60,15 @@ def test_canonical_submission_standalone():
     sub_dir = str(project_root / "submission")
     if sub_dir not in sys.path:
         sys.path.insert(0, sub_dir)
-    import submission_antigravity
+    import submission_antigravity_75k
     
     env = make("kaggriculture", configuration={"episodeSteps": 720, "seed": 0})
     steps = env.reset()
     obs = steps[0].observation
-    action = submission_antigravity.agent(obs)
+    action = submission_antigravity_75k.agent(obs)
     
     assert "farmer" in action
     assert "hands" in action
     assert "market" in action
+
 

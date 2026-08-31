@@ -5,9 +5,10 @@ MODULE: results/model_spec_c2/antigravity
 LAST_UPDATED: 2026-08-31
 FOUNDATION_CHECKPOINT: f391ee2
 FOUNDATION_LAYERS_1_5_FROZEN: YES
+ACTIVE_CANDIDATE: ANTIGRAVITY-C2-DUAL-Q0-Q1-75K-V1.0
 ```
 
-Questo documento costituisce l'**indice canonico e unificato** di tutti i risultati sperimentali, verifiche forensi e manifest di submission per l'agente **Antigravity C2**.
+Questo documento costituisce l'**indice canonico e unificato** di tutti i risultati sperimentali, verifiche forensi, benchmark e manifest di submission per l'agente **Antigravity C2**.
 
 ---
 
@@ -16,53 +17,43 @@ Questo documento costituisce l'**indice canonico e unificato** di tutti i risult
 ```text
 results/model_spec_c2/antigravity/
 ├── README.md                      # Indice canonico delle evidenze (questo file)
-├── CLEANUP_REPORT.md              # Report di consolidamento e pulizia filesystem
+├── SUBMISSION_DESCRIPTION.md      # Scheda tecnica dettagliata della release 75K
+├── ANTIGRAVITY_75K_FINAL_REPORT_IT.md # Report formale di validazione a 16 sezioni (75K)
+├── ANTIGRAVITY_75K_DUAL_Q_BUILD_PROMPT_IT.md # Prompt formale di ingegnerizzazione (75K)
+├── ANTIGRAVITY_75K_RESULTS.csv / .json # Dati grezzi benchmark Phase B (75K)
+├── ANTIGRAVITY_75K_PHASE_C_RESULTS.csv / .json # Dati grezzi benchmark Phase C (75K)
+├── ANTIGRAVITY_50K_FINAL_REPORT_IT.md # Report storico baseline Q0 compatto (50K)
+├── CLEANUP_REPORT.md              # Report storico di consolidamento e pulizia
 ├── current/                       # Stato corrente, build verification e manifest
-│   ├── BUILD_VERIFICATION.md      # Smoke test e build verification locale (v2.1.0)
-│   ├── KAGGLE_MANIFEST.md         # Manifest submission Kaggle
+│   ├── BUILD_VERIFICATION.md      # Certificazione build e benchmark (75K)
+│   ├── KAGGLE_MANIFEST.md         # Manifest submission Kaggle (75K)
 │   └── TOURNAMENT_MANIFEST.md     # Manifest tournament locale
 ├── evidence/                      # Evidenze causali, ablazioni e benchmark audit
-│   ├── LIVESTOCK_ABLATION.md      # Ablazione controllata same-tile (A: Pure Horti vs B: Livestock 2+2)
-│   ├── LIVESTOCK_ABLATION_RESULTS.csv
-│   ├── SAME_TILE_CROP_INTEGRITY.md # Verifica integrità crop same-tile (C vs A: +$1,148 gain)
-│   ├── SAME_TILE_CROP_INTEGRITY.csv
+│   ├── LIVESTOCK_ABLATION.md      # Ablazione controllata same-tile
 │   ├── LUCCC_PRODUCTION_AUDIT.md  # Audit forense replay LuCcc 103484828 ($56,772 score)
-│   ├── LUCCC_PRODUCTION_AUDIT.csv
-│   ├── Q0_3X3_FORENSIC_GAP_ANALYSIS.md # Analisi del gap 56.8k vs 38.0k (dimostrazione crop serviceability)
-│   ├── Q0_3X3_FORENSIC_GAP_ANALYSIS.csv
-│   ├── POST_TOURNAMENT_FAILURE_REVIEW.md # Analisi storica failure post-tournament Round 2
-│   └── EXTERNAL_DIAGNOSTIC_RUN.md # Diagnostica benchmark esterno
+│   ├── Q0_3X3_FORENSIC_GAP_ANALYSIS.md # Analisi del gap di serviceability
+│   └── POST_TOURNAMENT_FAILURE_REVIEW.md
 └── experiments/                   # Serie sperimentale iterativa
-    ├── Q0_2PLUS2/                 # Test comparativo Q0 vs Q0+Q1 2+2 ($24,646 vs $6,334)
-    │   ├── LUCCC_STYLE_Q0_Q1_2PLUS2_LOCAL_TEST.md
-    │   └── LUCCC_STYLE_Q0_Q1_2PLUS2_LOCAL_RESULTS.csv
-    ├── Q0_3X3/                    # Replica esatta architettura LuCcc Q0 3 COW + 3 SHEEP ($37,997.67)
-    │   ├── LUCCC_EXACT_Q0_3COW_3SHEEP_REPLICATION.md
-    │   └── LUCCC_EXACT_Q0_3COW_3SHEEP_RESULTS.csv
-    └── ROUTINE_PLANNING/          # Ottimizzazione causale worker routing & zoning ($39,695.33)
-        ├── Q0_3X3_ROUTINE_WORKER_PLANNING_TEST.md
-        └── Q0_3X3_ROUTINE_WORKER_PLANNING_RESULTS.csv
+    ├── Q0_2PLUS2/                 # Test comparativo Q0 vs Q0+Q1 2+2
+    ├── Q0_3X3/                    # Replica architettura LuCcc Q0 3+3
+    └── ROUTINE_PLANNING/          # Routine worker planner e zoning
 ```
 
 ---
 
 ## 2. Sintesi delle Evidenze e Numeri Canonici
 
-| Esperimento / Evidenza | Path Relativo | Final Money (Mean) | Status | Esito / Conclusione Chiave |
-|---|---|---:|---|---|
-| **Pure Horticulture Baseline (2Q)** | `current/BUILD_VERIFICATION.md` | **$43,837.33** | `CANONICAL` | Baseline orticola pura su 40 tile (10 braccianti, 0 animali, $1k spesi in terra). |
-| **Livestock Controlled Ablation** | `evidence/LIVESTOCK_ABLATION.md` | **$21,556.00** | `EVIDENCE` | Variant B (2+2 su Q0+Q1) perde -$22.2k rispetto a Pure Horti per dispersione manodopera su 40 tile. |
-| **Same-Tile Crop Integrity** | `evidence/SAME_TILE_CROP_INTEGRITY.md` | **$44,985.67** | `EVIDENCE` | Dimostrato che Variant C (38 tile pure) supera Variant A (40 tile) di +$1,148.34 grazie alla concentrazione dei 10 worker. |
-| **LuCcc Production Audit** | `evidence/LUCCC_PRODUCTION_AUDIT.md` | **$56,772.00** | `BENCHMARK` | Forensic del replay `103484828`: Q0-only ($0 terra), 7 worker, 3 COW + 3 SHEEP, 18 crop, $35.9k revenue livestock (63%). |
-| **Q0 2+2 vs Q0+Q1 Local Test** | `experiments/Q0_2PLUS2/` | **$24,646.67** | `SUPERSEDED` | H1 (Q0 2+2) = $24.6k vs H2 (Q0+Q1 2+2) = $6.3k. Prova che l'espansione territoriale tardiva con animali fallisce. |
-| **Q0 3+3 Exact Replication** | `experiments/Q0_3X3/` | **$37,997.67** | `SUPERSEDED` | Replica esatta 6 animali + 18 crop. Guadagno di +$13.3k rispetto a 2+2. Picco $42,455 su seed 1838889274. |
-| **Q0 3+3 Forensic Gap Analysis** | `evidence/Q0_3X3_FORENSIC_GAP_ANALYSIS.md`| — | `CANONICAL` | Riconciliato il gap di $18.8k: prezzi/timing AG superiori a LuCcc; il gap è 100% da congestione worker orticola (24.7 vs 120 crop units). |
-| **Routine Worker Planning** | `experiments/ROUTINE_PLANNING/` | **$39,695.33** | `CURRENT` | Routing a zone fisse e ruoli stabili sblocca la produzione: crop units da 24.7 a 85.33 (**63.62% gap recovery**), varianza ridotta del 63.1%. |
+| Candidato / Evidenza | Target / Modulo | Net Money (Phase B) | Net Money (Phase C) | Gross Revenue | Escapes | Status |
+|---|---|---:|---:|---:|:---:|---|
+| **Antigravity C2 Dual-Q 75K** | **Q0+Q1 (13 Hands)** | **$60,437.17** | **$63,811.17** | **$75,075.00** | **0** | `ACTIVE_RELEASE` |
+| **Antigravity C2 Compact 50K**| Q0 (7 Hands) | $56,386.50 | $57,756.33 | $37,537.50 | 0 | `SUPERSEDED_BASELINE` |
+| **LuCcc Production Benchmark**| Q0 (7 Hands) | — | $56,772.00 | — | 0 | `EXTERNAL_BENCHMARK` |
+| **Pure Horticulture (2Q)** | Q0+Q1 (10 Hands) | — | $43,837.33 | — | 0 | `HISTORICAL_ABLATION` |
 
 ---
 
-## 3. Riepilogo Causale dell'Evoluzione Antigravity C2
+## 3. Evoluzione Strategica Antigravity C2
 
-1. **Il Dilemma Territoriale Risolto:** L'acquisizione di Q1 per il livestock è subottimale se non supportata da densità immediata; LuCcc vince comprimendo 6 animali e 18 colture su Q0 a costo terra zero ($0.00).
-2. **Validità Strutturale del Modello 3+3:** L'architettura 3 COW + 3 SHEEP su Q0 è stata provata come strutturalmente valida (produce oltre $39k lordi da animali con 0 fughe).
-3. **Risoluzione del Collo di Bottiglia Operativo:** La causa della perdita orticola non era la configurazione ma il routing non deterministico. L'introduzione del **Routine Worker Planner** (ruoli stabili + zone orticole da 6 tile) ha triplicato la produzione di meloni e fragole (da 24.7 a 85.33 unità), portando la media a **$39,695.33** e ponendo le basi per l'espansione scalata su Q0+Q1.
+1. **Raggiungimento Target 75K**: Con l'espansione coordinata a 13 ruoli e gating di liquidità, la produzione ha raggiunto il 100% dell'output massimo teorico zootecnico (90 latte, 60 lana) e il doppio esatto della resa orticola (157 meloni, 74 fragole), superando il target economico con **\$75,075.00** di fatturato lordo.
+2. **Sicurezza Assoluta**: 0 fughe animali (`ANIMAL_ESCAPE = 0`) e 0 scadenze mancate (`HARD_DEADLINE_MISSES = 0`) su tutti i seed testati.
+3. **Parità Standalone**: Il file `submission/submission_antigravity_75k.py` e il canonico `submission/submission.py` garantiscono parità comportamentale bit-exact al 100% rispetto al codice sorgente multipackage.
