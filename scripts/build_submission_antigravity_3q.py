@@ -1,4 +1,4 @@
-"""Bundle the Antigravity C2 90K Tri-Quadrant (Q0+Q1+Q2) routine controller into one standalone file."""
+"""Bundle the Antigravity C2 3Q Central Mega-Cluster routine controller into one standalone file."""
 
 from __future__ import annotations
 
@@ -8,16 +8,16 @@ from pathlib import Path
 
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 SRC_DIR = PROJECT_ROOT / "src" / "agricola"
-CONFIG_FILE = PROJECT_ROOT / "configs" / "model_spec_c2" / "ANTIGRAVITY_C2_75K_DUAL_Q_CONFIG.json"
+CONFIG_FILE = PROJECT_ROOT / "configs" / "model_spec_c2" / "ANTIGRAVITY_C2_100K_3Q_CONFIG.json"
 CONFIG_PY_FILE = SRC_DIR / "strategy" / "antigravity" / "c2_75k_config.py"
 LIFECYCLE_FILE = SRC_DIR / "strategy" / "codex_lifecycle.py"
 COMPACT_Q0_FILE = SRC_DIR / "strategy" / "antigravity" / "antigravity_compact_q0.py"
 DUAL_Q_FILE = SRC_DIR / "strategy" / "antigravity" / "antigravity_dual_q0_q1.py"
-TRI_Q_FILE = SRC_DIR / "strategy" / "antigravity" / "antigravity_tri_q0_q1_q2.py"
+CENTRAL_3Q_FILE = SRC_DIR / "strategy" / "antigravity" / "antigravity_3q_central_cluster.py"
 
 SUBMISSION_TEMPLATE = '''"""
-Standalone Antigravity C2 90K Tri-Quadrant (Q0+Q1+Q2) routine file for Kaggle Kaggriculture.
-Generated from the Foundation-f391ee2-bound Antigravity 3Q controller and adapter.
+Standalone Antigravity C2 3Q Central Mega-Cluster routine file for Kaggle Kaggriculture.
+Generated from the Foundation-f391ee2-bound Antigravity 3Q Central Cluster controller and adapter.
 """
 
 from __future__ import annotations
@@ -35,26 +35,27 @@ from typing import Any, Dict
 
 
 # ==========================================
-# --- Embedded Antigravity C2 90K 3Q Config ---
+# --- Embedded Antigravity C2 3Q Central Config ---
 # ==========================================
-ANTIGRAVITY_C2_90K_TRI_Q_CONFIG: dict[str, Any] = {
-  "candidate_id": "ANTIGRAVITY_C2_90K_TRI_Q",
-  "schema_version": "model_spec_c2.antigravity.tri_q.v1",
-  "model_spec_version": "ANTIGRAVITY-C2-TRI-Q0-Q1-Q2-90K-V1.0",
+ANTIGRAVITY_C2_3Q_CONFIG: dict[str, Any] = {
+  "candidate_id": "ANTIGRAVITY_C2_3Q_CENTRAL_CLUSTER",
+  "schema_version": "model_spec_c2.antigravity.3q_central.v1",
+  "model_spec_version": "ANTIGRAVITY-C2-3Q-CENTRAL-CLUSTER-100K-V3.0",
   "foundation_checkpoint": "f391ee2",
   "quadrants_owned": 3,
-  "workforce_total": 14,
+  "workforce_total": 13,
   "q0_workforce_total": 7,
   "q1_workforce_total": 13,
-  "crop_working_set_target": 54,
-  "pasture_allocation_target": 12,
+  "crop_working_set_target": 40,
+  "pasture_allocation_target": 19,
   "livestock_targets": {
     "COW": 6,
-    "SHEEP": 6
+    "SHEEP": 13
   },
   "operating_cash_floor": 50.0,
   "feed_reserve_rounds": 2,
-  "q1_activation_min_day": 6
+  "q1_activation_min_day": 6,
+  "q2_activation_min_day": 11
 }
 
 # ==========================================
@@ -73,7 +74,7 @@ ANTIGRAVITY_C2_90K_TRI_Q_CONFIG: dict[str, Any] = {
 {config_class_code}
 
 # ==========================================
-# --- Antigravity Base Q0 Definitions ---
+# --- Antigravity Compact Q0 Base Policy ---
 # ==========================================
 {antigravity_compact_code}
 
@@ -83,15 +84,15 @@ ANTIGRAVITY_C2_90K_TRI_Q_CONFIG: dict[str, Any] = {
 {antigravity_dual_code}
 
 # ==========================================
-# --- Antigravity Tri Q0+Q1+Q2 Policy ---
+# --- Antigravity 3Q Central Cluster Policy ---
 # ==========================================
-{antigravity_tri_code}
+{antigravity_central_3q_code}
 
 # ==========================================
 # --- Agent Factory & Kaggle Entrypoint ---
 # ==========================================
-class AntigravityC2_90K_Agent:
-    """Antigravity C2 90K Tri-Quadrant Candidate Agent."""
+class AntigravityC2_Agent:
+    """Antigravity C2 3Q Central Cluster Candidate Agent."""
 
     def __init__(
         self,
@@ -99,9 +100,9 @@ class AntigravityC2_90K_Agent:
         *,
         run_context: dict[str, Any] | None = None,
     ) -> None:
-        self.config = config or AntigravityC2_75K_Config.from_dict(ANTIGRAVITY_C2_90K_TRI_Q_CONFIG)
-        self.policy = AntigravityTriQPolicy(config=self.config, run_context=run_context)
-        self.antigravity_90k_instance = self.policy
+        self.config = config or AntigravityC2_75K_Config.from_dict(ANTIGRAVITY_C2_3Q_CONFIG)
+        self.policy = Antigravity3QCentralClusterPolicy(config=self.config, run_context=run_context)
+        self.antigravity_instance = self.policy
         self.last_exception: str | None = None
         self.error_count: int = 0
         self.fallback_count: int = 0
@@ -112,6 +113,9 @@ class AntigravityC2_90K_Agent:
         configuration: dict[str, Any] | None = None,
     ) -> dict[str, Any]:
         return self.policy.act(observation, configuration=configuration)
+
+    def telemetry_snapshot(self) -> dict[str, Any]:
+        return self.policy.telemetry_snapshot()
 
     def __call__(
         self,
@@ -127,8 +131,8 @@ class AntigravityC2_90K_Agent:
             return {"farmer": ["PASS"], "hands": [], "market": []}
 
 
-def create_agent(run_context: dict[str, Any] | None = None) -> AntigravityC2_90K_Agent:
-    return AntigravityC2_90K_Agent(run_context=run_context)
+def create_agent(run_context: dict[str, Any] | None = None) -> AntigravityC2_Agent:
+    return AntigravityC2_Agent(run_context=run_context)
 
 
 _agent_factory: Callable[[dict[str, Any], Any], dict[str, Any]] | None = None
@@ -136,7 +140,7 @@ _episode_sequence = 0
 
 
 def agent(observation: dict[str, Any], configuration: Any = None) -> dict[str, Any]:
-    """Kaggle entry point for Antigravity 90K Tri-Quadrant routine candidate."""
+    """Kaggle entry point for Antigravity 3Q Central Cluster candidate."""
     global _agent_factory, _episode_sequence
     step = int(observation.get("step", 0))
     if step == 0 or _agent_factory is None:
@@ -217,14 +221,14 @@ def extract_antigravity_dual_definitions() -> str:
     return code[idx:].strip()
 
 
-def extract_antigravity_tri_definitions() -> str:
-    with open(TRI_Q_FILE, "r", encoding="utf-8") as f:
+def extract_antigravity_central_3q_definitions() -> str:
+    with open(CENTRAL_3Q_FILE, "r", encoding="utf-8") as f:
         code = f.read()
 
-    marker = 'TRI_MODEL_SPEC_VERSION ='
+    marker = 'CENTRAL_3Q_SPEC_VERSION = "ANTIGRAVITY-C2-3Q-CENTRAL-CLUSTER-100K-V3.0"'
     idx = code.find(marker)
     if idx == -1:
-        raise RuntimeError("Antigravity tri policy TRI_MODEL_SPEC_VERSION marker is missing")
+        raise RuntimeError("Antigravity central 3Q policy CENTRAL_3Q_SPEC_VERSION marker is missing")
     return code[idx:].strip()
 
 
@@ -246,7 +250,7 @@ def build_submission_antigravity_3q(output_path: str | None = None) -> Path:
     config_class_code = extract_config_class_definitions()
     antigravity_compact_code = extract_antigravity_compact_definitions()
     antigravity_dual_code = extract_antigravity_dual_definitions()
-    antigravity_tri_code = extract_antigravity_tri_definitions()
+    antigravity_central_3q_code = extract_antigravity_central_3q_definitions()
 
     bundled_code = (
         SUBMISSION_TEMPLATE
@@ -255,17 +259,17 @@ def build_submission_antigravity_3q(output_path: str | None = None) -> Path:
         .replace("{config_class_code}", config_class_code)
         .replace("{antigravity_compact_code}", antigravity_compact_code)
         .replace("{antigravity_dual_code}", antigravity_dual_code)
-        .replace("{antigravity_tri_code}", antigravity_tri_code)
+        .replace("{antigravity_central_3q_code}", antigravity_central_3q_code)
     )
 
     bundled_code = "\n".join(line.rstrip() for line in bundled_code.splitlines()) + "\n"
     out_file.write_text(bundled_code, encoding="utf-8")
-    print(f"Successfully generated Antigravity 3Q standalone at: {out_file}")
+    print(f"Successfully generated Antigravity 3Q Central standalone at: {out_file}")
     return out_file
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Build Antigravity 3Q Kaggle standalone submission.")
+    parser = argparse.ArgumentParser(description="Build Antigravity 3Q Central Kaggle standalone submission.")
     parser.add_argument("--output", "-o", type=str, default=None, help="Custom output path for the submission file.")
     parser.add_argument("--submission-py", action="store_true", help="Also generate submission/submission.py.")
     args = parser.parse_args()
