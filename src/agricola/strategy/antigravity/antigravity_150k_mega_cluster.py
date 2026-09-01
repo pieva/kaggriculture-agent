@@ -281,7 +281,10 @@ class Antigravity150KMegaPolicy(AntigravityTriQPolicy):
         shed = private.get("shed", {}) or {}
         prices = snapshot.market.get("prices", {}) or {}
         cash = float(farm.get("money", 0.0))
-        floor = float(self.config.operating_cash_floor)
+        # Dynamic wage floor to guarantee end-of-day salary payments
+        hands = len(farm.get("hands", []) or [])
+        daily_wages = sum(_fib(i) for i in range(hands))
+        floor = max(float(self.config.operating_cash_floor), float(daily_wages + 50.0))
         day = snapshot.clock.day
         hour = snapshot.clock.hour
         owned = self._owned_quadrants(farm)
@@ -315,11 +318,10 @@ class Antigravity150KMegaPolicy(AntigravityTriQPolicy):
             5 if owned == 1
             else (9 if owned == 2 and day < 10 else 12)
         )
-        hands = len(farm.get("hands", []) or [])
         hires_today = int(farm.get("hires_today", 0))
         if not self._shutdown(snapshot) and hour in {0, 1, 2}:
             for offset in range(max(0, target_hands - hands)):
-                hire_cost = float(_fib(hires_today + offset))
+                hire_cost = float(50 * (2 ** (hires_today + offset)))
                 if not add(["HIRE"], hire_cost):
                     break
 
@@ -330,7 +332,6 @@ class Antigravity150KMegaPolicy(AntigravityTriQPolicy):
             add(["BUY_PRODUCT", "WHEAT", 10], 10 * float(prices.get("WHEAT", 25.0)))
             add(["BUY_SEED", "MELON", 4], 320.0)
             add(["BUY_SEED", "STRAWBERRY", 4], 400.0)
-            return orders[: self.max_market_orders]
 
         # 5. Land expansions: Q1 on Day 6, Q2 on Day 11
         if not self._shutdown(snapshot):
@@ -375,6 +376,9 @@ class Antigravity150KMegaPolicy(AntigravityTriQPolicy):
 
             # 8. Seed Restocking
             seed_inv = Counter()
+            shed_seeds = private.get("seeds", {}) or {}
+            for k, v in shed_seeds.items():
+                seed_inv[k] += int(v)
             for h_inv in private.get("inventories", []):
                 for k, v in h_inv.items():
                     if k in {"MELON", "STRAWBERRY", "WHEAT"}:
