@@ -1,0 +1,24 @@
+{
+  "model_spec_name": "ANTIGRAVITY_C2_150K_MEGA_CLUSTER",
+  "spec_version": "2.0.0",
+  "description": "Antigravity 150K Central Mega-Cluster 20-Animal & Strawberry-Dominant Engine",
+  "architecture": {
+    "quadrants_owned": 3,
+    "q1_activation_min_day": 6,
+    "q2_activation_min_day": 11,
+    "total_workforce": 13,
+    "pasture_cluster": "CENTRAL_CHEBYSHEV_2",
+    "total_animals": 20,
+    "cows": 8,
+    "sheep": 12,
+    "total_crop_slots": 52,
+    "melons": 30,
+    "strawberries": 16,
+    "wheat": 6
+  },
+  "financial_targets": {
+    "holdout_mean_money": 135000.0,
+    "peak_money": 155000.0,
+    "target_animal_escapes": 0
+  }
+}
