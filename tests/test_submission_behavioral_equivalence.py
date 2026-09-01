@@ -5,11 +5,13 @@ from pathlib import Path
 from kaggle_environments import make
 from agricola.core.state import GameState
 from agricola.strategy.productive_mass_roi import ProductiveMassROIAgent, ProductiveMassConfig
+from scripts.build_submission import build_submission
 
 
-def test_submission_behavioral_equivalence_x112_required_seeds():
+def test_submission_behavioral_equivalence_x112_required_seeds(tmp_path):
     """Verify standalone submission matches X1.12 source on required seeds."""
-    sub_path = Path(__file__).parent.parent / "submission" / "submission.py"
+    sub_path = tmp_path / "submission.py"
+    build_submission(str(sub_path))
     assert sub_path.exists(), "submission/submission.py does not exist!"
 
     config_src = ProductiveMassConfig(

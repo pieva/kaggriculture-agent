@@ -8,28 +8,30 @@ from pathlib import Path
 
 from kaggle_environments import make
 
-from agricola.strategy.codex_c2 import create_agent
-from scripts.build_submission_codex import build_submission_codex
+from agricola.strategy.codex_3q_mixed_high_density import create_v9_agent
+from scripts.build_submission_codex_v9 import build_submission_codex_v9
 
 
-def test_build_submission_codex_fixed_canonical_artifact():
-    out_path = build_submission_codex()
+def test_build_submission_codex_v9_uses_explicit_temporary_artifact(tmp_path):
+    canonical = Path.cwd() / "submission" / "submission_codex.py"
+    canonical_before = canonical.read_bytes()
+    out_path = build_submission_codex_v9(tmp_path / "submission_codex.py")
 
-    assert out_path == Path.cwd() / "submission" / "submission_codex.py"
+    assert out_path == tmp_path / "submission_codex.py"
     assert out_path.exists()
-    assert not (Path.cwd() / "submission_codex.py").exists()
+    assert canonical.read_bytes() == canonical_before
 
     bundled = out_path.read_text(encoding="utf-8")
-    assert 'candidate_id": "CODEX_C2"' in bundled
-    assert "class CodexC2Agent" in bundled
-    assert "class CodexDecisionLifecycle" in bundled
-    assert "CODEX-C2-COMPACT-Q0-ROUTINE-V7.1-SERVICEABILITY" in bundled
+    assert "class CodexV9StandaloneAgent" in bundled
+    assert "DECISION_OPEN" not in bundled
+    assert "CODEX-C2-V9.0-3Q-MIXED-HIGH-DENSITY" in bundled
+    assert "C2466262E096B03CA330A1B0FDB2E5DEBE53C45F297E046113E007731051E7E4" in bundled
     assert "antigravity" not in bundled.lower()
     assert "copilot" not in bundled.lower()
 
 
-def test_submission_codex_behavioral_equivalence_required_seeds():
-    sub_path = build_submission_codex()
+def test_submission_codex_v9_behavioral_equivalence_required_seeds(tmp_path):
+    sub_path = build_submission_codex_v9(tmp_path / "submission_codex.py")
 
     for episode_sequence, seed in enumerate((26090101, 26090102), start=1):
         mod_name = f"submission_codex_test_iso_{seed}"
@@ -38,9 +40,9 @@ def test_submission_codex_behavioral_equivalence_required_seeds():
         sys.modules[mod_name] = sub_mod
         spec.loader.exec_module(sub_mod)
 
-        agent_src = create_agent(
+        agent_src = create_v9_agent(
             run_context={
-                "run_id": "codex-c2-compact-q0-standalone-parity",
+                "run_id": "codex-c2-v9-standalone-parity",
                 "episode_id": f"codex-parity-{episode_sequence:04d}",
                 "seed": seed,
                 "opponent_id": "INERT_PASS_POLICY",

@@ -1,11 +1,8 @@
-"""Standalone Codex V9.0 3Q mixed high-density candidate.
+"""Generated action routine distilled from public replay 104498819.
 
-Frozen for local tournament before any Kaggle promotion.
+Do not edit manually; regenerate with scripts/build_codex_v9_routine_data.py.
 """
 
-from copy import deepcopy
-
-MODEL_SPEC_VERSION = "CODEX-C2-V9.0-3Q-MIXED-HIGH-DENSITY"
 ROUTINE_SHA256 = "C2466262E096B03CA330A1B0FDB2E5DEBE53C45F297E046113E007731051E7E4"
 ROUTINE_ACTIONS = ({'farmer': ['PASS'], 'hands': [], 'market': []},
  {'farmer': ['NORTH'],
@@ -7848,38 +7845,3 @@ ROUTINE_ACTIONS = ({'farmer': ['PASS'], 'hands': [], 'market': []},
             ['PASS'],
             ['PASS']],
   'market': [['SELL', 'WHEAT', 1]]})
-SAFE_PASS = {"farmer": ["PASS"], "hands": [], "market": []}
-
-
-class CodexV9StandaloneAgent:
-    def __call__(self, observation, configuration=None):
-        del configuration
-        step = int(observation.get("step", 0))
-        action = (
-            deepcopy(ROUTINE_ACTIONS[step])
-            if 0 <= step < len(ROUTINE_ACTIONS)
-            else deepcopy(SAFE_PASS)
-        )
-        if step == 195:
-            for order in action.get("market", []) or []:
-                if order[:2] == ["BUY_PRODUCT", "WHEAT"]:
-                    order[2] = max(4, int(order[2]))
-                    break
-            action["market"] = [
-                order
-                for order in action.get("market", []) or []
-                if order[:2] != ["BUY_ANIMAL", "COW"]
-            ]
-        return action
-
-
-def create_agent(run_context=None):
-    del run_context
-    return CodexV9StandaloneAgent()
-
-
-_DEFAULT_AGENT = create_agent()
-
-
-def agent(observation, configuration=None):
-    return _DEFAULT_AGENT(observation, configuration)

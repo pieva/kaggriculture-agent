@@ -20,15 +20,14 @@ Il modello finale può essere una policy deterministica interamente scritta a ma
 
 Kaggriculture separa esplicitamente la rappresentazione del dominio dalla policy che controlla l'agente.
 
-La **Model Foundation** (condivisa e neutrale) è articolata su **5 layer normativi coordinati**, a valle dei quali si collocano i **MODEL_SPEC specifici di ciascun agente**:
+La **Model Foundation C2.1** (condivisa e neutrale) è articolata su **4 layer normativi coordinati**, a valle dei quali si collocano direttamente i **MODEL_SPEC specifici di ciascun agente**:
 
 | Layer | Artefatto | Percorso canonico | Funzione | Domanda |
 |---|---|---|---|---|
 | 1. Engine Contract | Frozen Engine Contract | `results/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md` | Ground truth formale e verificato delle regole e costanti della simulazione. | **Quali sono le regole e i vincoli primitivi del codice dell'ambiente?** |
-| 2. Ontologia | `ONTOLOGY_C2.md` | `docs/model/ontology/ONTOLOGY_C2.md` | Vocabolario canonico del dominio, entità, concetti e relazioni condivise. | **Che cosa esiste nel dominio e che cosa significa?** |
-| 3. State Machine | `KAGGRICULTURE_STATE_MACHINE_C2.md` | `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2.md` | Stati fisici, transizioni biologiche, guardie e ciclo causale dell'engine. | **Come evolve lo stato dell'ambiente?** |
-| 4. Feature Model | `KAGGRICULTURE_FEATURE_MODEL_C2.md` | `docs/model/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2.md` | Feature osservabili e derivabili online al decision time, con provenienza e no-leakage contract. | **Che cosa può conoscere l'agente quando decide?** |
-| 5. Decision Lifecycle | Decision Lifecycle Contract | `docs/model/decision_lifecycle/` | Modello comune del ciclo deliberativo dell'agente (fasi, invalidazioni, eccezioni). | **In quali stati cognitivi/operativi si trova la decisione dell'agente?** |
+| 2. Ontologia | `ONTOLOGY_C2_1.md` | `docs/model/ontology/ONTOLOGY_C2_1.md` | Vocabolario canonico del dominio, entità, concetti e relazioni condivise. | **Che cosa esiste nel dominio e che cosa significa?** |
+| 3. State Machine | `KAGGRICULTURE_STATE_MACHINE_C2_1.md` | `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md` | Stati fisici, transizioni biologiche, guardie e ciclo causale dell'engine. | **Come evolve lo stato dell'ambiente?** |
+| 4. Feature Model | `KAGGRICULTURE_FEATURE_MODEL_C2_1.md` | `docs/model/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2_1.md` | Feature osservabili e derivabili online al decision time, con provenance, telemetria e no-leakage contract. | **Che cosa può conoscere l'agente quando decide?** |
 | Downstream | `MODEL_SPEC_<AGENT>.md` | `docs/model/model_specs/` | Modello decisionale e strategico proprietario di ciascun agente (Antigravity, Codex, Copilot). | **Come usa l'agente le feature per formulare policy e azioni?** |
 
 *Nota sulla nomenclatura C2:* La sigla **C2** indica il **Cycle 2** (ciclo di revisione, audit e provenance della Foundation), non un componente architetturale o un modello di strategia.
@@ -38,7 +37,6 @@ docs/model/
 |-- ontology/
 |-- state_machine/
 |-- feature_model/
-|-- decision_lifecycle/
 |-- model_specs/
 `-- reviews/
 ```
@@ -56,9 +54,6 @@ STATE MACHINE
       |
       v
 FEATURE MODEL
-      |
-      v
-DECISION LIFECYCLE CONTRACT
       |
       +-----------------------------+-----------------------------+
       |                             |                             |
@@ -103,7 +98,7 @@ Quando l'evidenza giustifica una revisione strutturale viene eseguito un **Found
 
 Per ciascun artefatto `NO_CHANGE` è un risultato valido. Solo dopo review, reconciliation e freeze della Foundation possono essere avviati nuovi cicli di policy training che dipendono dalle modifiche introdotte.
 
-Lo **stato corrente** della Foundation non è duplicato nel README: è mantenuto in `docs/PROJECT_STATE.md`.
+Lo **stato corrente** della Foundation e gli hash dei tre documenti C2.1 sono mantenuti in `docs/model/FOUNDATION_C2_1_MANIFEST.md`; lo stato operativo complessivo è in `docs/PROJECT_STATE.md`.
 
 ## Parallelo con il Machine Learning
 

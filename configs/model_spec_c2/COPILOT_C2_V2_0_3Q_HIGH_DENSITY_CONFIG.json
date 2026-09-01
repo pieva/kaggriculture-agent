@@ -1,0 +1,19 @@
+{
+  "candidate_id": "COPILOT_C2_V2_0_3Q_HIGH_DENSITY",
+  "schema_version": "model_spec_c2.copilot.v2_3q_high_density.v1",
+  "model_spec_version": "COPILOT-C2-V2.0-3Q-HIGH-DENSITY",
+  "foundation_checkpoint": "f391ee2",
+  "quadrants_owned": 3,
+  "workforce_total": 13,
+  "routine_sha256": "C2466262E096B03CA330A1B0FDB2E5DEBE53C45F297E046113E007731051E7E4",
+  "routine_actions": 719,
+  "feed_correction_step": 195,
+  "minimum_d8_wheat_purchase": 4,
+  "removed_d8_cow_purchase": true,
+  "execution_mode": "DETERMINISTIC_HIGH_DENSITY",
+  "known_limitations": [
+    "TEMPORAL_ROUTINE",
+    "LIMITED_WEED_REACTIVITY",
+    "MIRROR_MARKET_CANNIBALIZATION"
+  ]
+}

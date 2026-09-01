@@ -12,9 +12,9 @@ from scripts.build_submission import build_submission
 
 # --- INTEGRATION SMOKE TESTS ---
 
-def test_build_and_run_submission_smoke():
+def test_build_and_run_submission_smoke(tmp_path):
     """Integration Smoke Test: Build standalone submission.py and run short 24-step match to verify compatibility."""
-    sub_path = Path("submission/submission.py")
+    sub_path = tmp_path / "submission.py"
     build_submission(str(sub_path))
     assert sub_path.exists()
 

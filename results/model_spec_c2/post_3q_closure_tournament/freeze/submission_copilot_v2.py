@@ -1,11 +1,12 @@
-"""Standalone Codex V9.0 3Q mixed high-density candidate.
+"""Standalone Copilot V2.0 3Q high-density candidate.
 
-Frozen for local tournament before any Kaggle promotion.
+Frozen for the post-3Q closure tournament.  The action table is intentionally
+identical to Codex V9 and therefore fails the strategic-independence gate.
 """
 
 from copy import deepcopy
 
-MODEL_SPEC_VERSION = "CODEX-C2-V9.0-3Q-MIXED-HIGH-DENSITY"
+MODEL_SPEC_VERSION = "COPILOT-C2-V2.0-3Q-HIGH-DENSITY"
 ROUTINE_SHA256 = "C2466262E096B03CA330A1B0FDB2E5DEBE53C45F297E046113E007731051E7E4"
 ROUTINE_ACTIONS = ({'farmer': ['PASS'], 'hands': [], 'market': []},
  {'farmer': ['NORTH'],
@@ -7851,7 +7852,7 @@ ROUTINE_ACTIONS = ({'farmer': ['PASS'], 'hands': [], 'market': []},
 SAFE_PASS = {"farmer": ["PASS"], "hands": [], "market": []}
 
 
-class CodexV9StandaloneAgent:
+class CopilotV2StandaloneAgent:
     def __call__(self, observation, configuration=None):
         del configuration
         step = int(observation.get("step", 0))
@@ -7875,7 +7876,7 @@ class CodexV9StandaloneAgent:
 
 def create_agent(run_context=None):
     del run_context
-    return CodexV9StandaloneAgent()
+    return CopilotV2StandaloneAgent()
 
 
 _DEFAULT_AGENT = create_agent()

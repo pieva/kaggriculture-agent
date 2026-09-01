@@ -1,0 +1,25 @@
+{
+  "candidate_id": "ANTIGRAVITY_C2_V4_0_3Q_HIGH_DENSITY",
+  "schema_version": "model_spec_c2.antigravity.v4_3q_high_density.v1",
+  "model_spec_version": "ANTIGRAVITY-C2-V4.0-3Q-HIGH-DENSITY-MEGA-CLUSTER",
+  "quadrants_owned": 3,
+  "workforce_total": 13,
+  "q0_workforce_total": 7,
+  "q1_workforce_total": 13,
+  "pasture_cluster": "CENTRAL_CHEBYSHEV_2",
+  "livestock_targets": {
+    "COW": 8,
+    "SHEEP": 11
+  },
+  "q1_activation_min_day": 6,
+  "q1_activation_max_day": 10,
+  "q2_activation_min_day": 11,
+  "q2_activation_max_day": 14,
+  "q2_land_cost": 2000,
+  "operating_cash_floor": 50,
+  "wage_floor_margin": 50,
+  "feed_reserve_rounds": 2,
+  "manure_monetization": true,
+  "zero_escape_feed_guard": true,
+  "turns_per_day": 24
+}

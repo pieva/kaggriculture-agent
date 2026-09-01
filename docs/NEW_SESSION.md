@@ -3,76 +3,75 @@
 ## Ripresa operativa
 
 ```text
-START_HERE:
-Model Foundation C2 Layer 1–5 frozen and committed.
-Codex V7 routine build complete: technical PASS, economic FAILURE (BUILD_NOT_READY, mean 39,265.67).
-Proceed with READ-ONLY AG-vs-Codex V7 serviceability/routing forensic analysis.
+START_HERE: docs/PROJECT_STATE.md
+FOUNDATION: C2.1 RECONCILED
+FOUNDATION_MANIFEST: docs/model/FOUNDATION_C2_1_MANIFEST.md
+REPOSITORY_CLEANUP: COMPLETE
 
-AUTHORIZED:
-- Read-only forensic analysis (AG vs Codex V7): YES
+CURRENT_CODEX_MODEL: CODEX-C2-V9.0-3Q-MIXED-HIGH-DENSITY
+CURRENT_CODEX_SUBMISSION: submission/submission_codex.py
+KAGGLE_SCORE_SNAPSHOT: 1159.9
+KAGGLE_POSITION_SNAPSHOT: 2542
+VISIBLE_LEADER_SCORE: 2943.6
 
-NOT AUTHORIZED:
-- New implementation / strategy code modification: NO
-- Comparative tournament: NO
-- Kaggle submission: NO
+NEXT_EXPERIMENT: E17
+E17_PHASE: DEFINE
+E17_OBJECTIVE: DEFINE_3Q_OPTIMIZATION_BENCHMARK_STRATEGY
 ```
 
----
+## Perché E17 parte dal benchmark
 
-## 1. Stato della Model Foundation C2 (Frozen)
+Codex V9 3Q ha quasi raddoppiato lo score Kaggle rispetto alla V7.3 dual-Q
+(`1159,9` contro `598,3`), ma raggiunge soltanto il `39,4%` del punteggio del
+leader visibile. Il salto dimostra che 3Q è una direzione promettente; non
+dimostra ancora quali componenti della strategia producano il vantaggio né
+come colmare il gap residuo.
 
-Tutti i 5 layer condivisi della Model Foundation C2 rimangono formalmente congelati:
+Il replay pubblico `docs/benchmark/104498819.json` mostra inoltre tre
+quadranti attivi in una strategia ad alto rendimento. È evidenza a favore
+dell'ipotesi 3Q, non prova che l'intera fascia alta della leaderboard usi la
+stessa architettura.
 
-1. **Engine Contract:** `results/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md`
-2. **Ontology C2:** `docs/model/ontology/ONTOLOGY_C2.md`
-3. **Environment State Machine C2:** `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2.md`
-4. **Feature Model C2:** `docs/model/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2.md`
-5. **Decision Lifecycle Contract C2:** `docs/model/decision_lifecycle/KAGGRICULTURE_DECISION_LIFECYCLE_CONTRACT_C2.md` (certificato da `results/model_spec_c2/foundation_revision/DECISION_LIFECYCLE_TARGETED_FINAL_FREEZE_REVIEW.md`)
+## Missione E17
 
----
+Definire, preregistrare e congelare il benchmark che guiderà le successive
+ottimizzazioni 3Q. E17 è una fase `DEFINE`: non deve selezionare una policy
+nuova usando dati già osservati e non deve iniziare con tuning opportunistico.
 
-## 2. Esito Build Codex V7 (`CODEX-C2-COMPACT-Q0-ROUTINE-V7`)
+Il deliverable deve specificare:
 
-- **Verdetto Tecnico**: `PASS` (6/6 episodi `DONE`, zero errori, zero fallback).
-- **Verdetto Economico / Status**: `BUILD_NOT_READY` (Mean `$39.265,67`, Median `$38.943,00`, Std `$1.312,86`).
-- **Crop Serviceability**: Fortemente migliorata (`MELON 95,00`, `STRAWBERRY 40,17`, Crop Revenue `$29.786,67` / 73,64%).
-- **Livestock Serviceability (Primary Bottleneck)**: `MILK 28,17`, `WOOL 14,67`, `24 escape` (4 per episodio), `100,33` WHEAT consumato.
-- **Routing & Efficienza**: Inefficiente (`MOVE/productive 3,1923`, Productive Utilization `67,43%`, On-Time Service `79,49%`, `50 hard misses`).
-- **Delta Riferimenti**: `+29.414,67` vs Codex V6 (`9.851`), `+1.267,997` vs AG Q0 3+3 (`37.997,67`), `-17.506,333` vs LuCcc (`56.772`).
+- baseline e hash immutabili;
+- seed di sviluppo e holdout, seat swap e matrice degli avversari;
+- metriche economiche, operative e competitive per Q0/Q1/Q2;
+- famiglie di leve causali da testare separatamente: timing di attivazione,
+  workforce, geometria, mix crop/livestock, feeding, market cadence,
+  trasporto e liquidazione terminale;
+- protocollo requested/executed, errori e fallback;
+- criteri di vittoria, floor, robustezza e arresto;
+- regola di promozione verso un test Kaggle successivo;
+- metodo per stimare la correlazione, ancora non dimostrata, fra benchmark
+  locale e score leaderboard.
 
----
+## Baseline disponibili
 
-## 3. Decisione Architetturale Differita
+- Codex V9: baseline 3Q canonica e submission Kaggle corrente;
+- Antigravity V4: baseline derivativa con liquidazione terminale;
+- Copilot V2: baseline derivativa diagnostica, senza submission canonica;
+- torneo di chiusura: ablation riproducibile, non torneo indipendente.
 
-La possibile semplificazione del Decision Lifecycle Contract (DLC) e della relativa operational policy resta una **decisione architetturale esplicitamente differita** a valle dell'evidenza empirico-sperimentale (forensic replay). Nessuna modifica ai layer di Foundation congelati è autorizzata.
+## Vincoli inderogabili
 
----
+- nessun agente può importare o copiare routine, action table, planner,
+  dispatcher o schedule di un altro;
+- Foundation e protocollo di benchmark possono essere condivisi;
+- ogni variazione deve avere ipotesi causale e falsificazione dichiarate;
+- nessuna submission Kaggle durante la sola fase `E17 DEFINE`;
+- distinguere sempre `final_money` locale dallo score leaderboard Kaggle.
 
-## 4. Prossimo Passo: Read-Only Forensic Analysis
+## Documenti da leggere
 
-Eseguire l'analisi forense comparativa tra Antigravity (Q0 3+3) e Codex V7 su serviceability e routing:
-- **Obiettivo**: Diagnosticare e quantificare le discrepanze di servizio (watering, milking, shearing, feed buffer, escape prevention) e l'efficienza dei percorsi di movimento (MOVE per productive action, dwell time, worker utilization);
-- **Modalità**: Rigorosamente **READ-ONLY** (ispezione replay, log di telemetria, decomposizioni economiche);
-- **Vincoli**: Nessuna modifica di codice, nessun torneo competitivo e nessuna submission Kaggle.
-
----
-
-## 5. Documenti chiave da consultare
-
-- `results/model_spec_c2/codex/CODEX_COMPACT_Q0_ROUTINE_BUILD_REPORT.md`
-- `results/model_spec_c2/codex/CODEX_COMPACT_Q0_ROUTINE_RESULTS.json`
-- `results/model_spec_c2/codex/KAGGRICULTURE_C2_CODEX_V7_AG_SERVICEABILITY_FORENSIC_PROMPT.md`
-- `docs/model/decision_lifecycle/KAGGRICULTURE_DECISION_LIFECYCLE_CONTRACT_C2.md`
-- `docs/PROJECT_STATE.md`
-
----
-
-```text
-STATUS:
-FOUNDATION_LAYERS_1_5_FROZEN: YES
-CODEX_V7_STATUS: TECHNICAL PASS / BUILD_NOT_READY (MEAN 39,265.67)
-GOVERNANCE_ALIGNED: YES
-
-NEXT_ACTION:
-READ_ONLY_AG_VS_CODEX_V7_SERVICEABILITY_ROUTING_FORENSIC
-```
+- `docs/PROJECT_STATE.md`;
+- `docs/model/FOUNDATION_C2_1_MANIFEST.md`;
+- `results/model_spec_c2/foundation_revision/C2_1_POST_3Q_FOUNDATION_RECONCILIATION.md`;
+- `results/model_spec_c2/post_3q_closure_tournament/POST_3Q_CLOSURE_TOURNAMENT_REPORT_IT.md`;
+- `docs/model/model_specs/codex/MODEL_SPEC_CODEX_C2_3Q_POST_FOUNDATION_REVIEW.md`.

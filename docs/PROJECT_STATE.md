@@ -4,72 +4,117 @@
 
 ```text
 PROJECT: Kaggriculture
-PHASE: C2 — TRIANGULAR 3-WAY 3Q TOURNAMENT & 100K CENTRAL MEGA-CLUSTER RELEASE
 STATUS_DATE: 2026-09-01
+PHASE: FOUNDATION C2.1 CLOSED / E17 BENCHMARK DEFINITION READY
 
-ENGINE_CONTRACT_FREEZE: YES
-ONTOLOGY_FREEZE: YES
-STATE_MACHINE_FREEZE: YES
-FEATURE_MODEL_FREEZE: YES
-DECISION_LIFECYCLE_FREEZE: YES
-FOUNDATION_LAYERS_1_5_FROZEN: YES
+ENGINE_CONTRACT: FROZEN
+ONTOLOGY_C2_1: RECONCILED
+STATE_MACHINE_C2_1: RECONCILED
+FEATURE_MODEL_C2_1: RECONCILED
+SHARED_DELIBERATION_LAYER: NONE
+OBSERVATION_CONTRACT: src/agricola/core/observation_contract.py
 
-ANTIGRAVITY_3Q_CENTRAL_BUILD: PASS (Deterministic 720-step execution)
-THREE_WAY_TOURNAMENT: PASS (42 matches: AG 21-7 (75.0%), CP 21-7 (75.0%), CODEX 0-28 (0.0%))
-H2H_SWEEP_VS_CODEX: PASS (14-0 Antigravity Sweep vs Codex, +$7,636/match)
-ANTIGRAVITY_3Q_PARITY: 100% BIT-EXACT
-ANTIGRAVITY_3Q_SAFETY: 0 ESCAPES / 0 TECHNICAL ERRORS (100% Safe)
-ANTIGRAVITY_3Q_VERDICT: BUILD_READY / ACTIVE_KAGGLE_SUBMISSION
+CODEX_CLEANUP: COMPLETE
+ANTIGRAVITY_CLEANUP: COMPLETE
+COPILOT_CLEANUP: COMPLETE
+TRANSITIONAL_C2_LINEAGES: REMOVED
 
-ACTIVE_SUBMISSION_FILES:
-- submission/submission_antigravity.py (single standalone Antigravity 3Q Central Cluster file)
-- submission/submission.py (canonical 3Q standalone copy)
-
-FORENSIC_ANALYSIS_AUTHORIZED: YES
-IMPLEMENTATION_AUTHORIZED: YES (Local Build & Candidate Isolation)
-TOURNAMENT_AUTHORIZED: YES
-KAGGLE_UPLOAD_OR_RUN_AUTHORIZED: YES
-COMMIT_AUTHORIZED: YES
-PUSH_AUTHORIZED: YES
+NEXT_EXPERIMENT: E17
+E17_PHASE: DEFINE
+E17_OBJECTIVE: DEFINE_3Q_OPTIMIZATION_BENCHMARK_STRATEGY
+E17_POLICY_MUTATION: NOT_STARTED
 ```
 
-## 1. Contesto Strategico e Risultati Antigravity C2
+## Evidenza Kaggle esterna corrente
 
-Il repository è stato riorganizzato e consolidato con tutti i prompt iniziali e i report di benchmark posizionati sotto [`results/model_spec_c2/antigravity/`](file:///c:/Users/pietr/Projects/kaggriculture-agent/results/model_spec_c2/antigravity):
+Snapshot fornito dall'utente il 2026-09-01:
 
-1. **Versione 50K (Compact Q0)**:
-   - *Prompt*: `ANTIGRAVITY_50K_CODEX_TRANSFER_BUILD_PROMPT_IT.md`
-   - *Risultati*: `ANTIGRAVITY_50K_FINAL_REPORT_IT.md`, `ANTIGRAVITY_50K_RESULTS.csv`, `ANTIGRAVITY_50K_RESULTS.json`
-2. **Versione 75K (Dual-Q Q0+Q1 Full Livestock)**:
-   - *Prompt*: `ANTIGRAVITY_75K_DUAL_Q_BUILD_PROMPT_IT.md`
-   - *Risultati*: `ANTIGRAVITY_75K_FINAL_REPORT_IT.md`, `ANTIGRAVITY_75K_RESULTS.csv`, `ANTIGRAVITY_75K_RESULTS.json` (Gross \$91,010, Netto \$66,630 / Picco \$87,740 / Replay \$83,272)
-3. **Versione 90K (Tri-Q 3Q - Q0+Q1+Q2 Cash-Crop)**:
-   - *Prompt*: `ANTIGRAVITY_90K_3Q_BUILD_PROMPT_IT.md`
-   - *Risultati*: `ANTIGRAVITY_90K_3Q_FINAL_REPORT_IT.md`, `ANTIGRAVITY_90K_3Q_RESULTS.csv`, `ANTIGRAVITY_90K_3Q_RESULTS.json`
-4. **Versione 100K (3Q Central Mega-Cluster & 19 Pastures - V3.0)**:
-   - *Prompt*: `ANTIGRAVITY_100K_3Q_CENTRAL_CLUSTER_PROMPT_IT.md`
-   - *Risultati*: `ANTIGRAVITY_VS_CODEX_3Q_TOURNAMENT_REPORT_IT.md` (Sweep 14-0 contro Codex 3Q)
-   - *Torneo Triangolare*: `results/model_spec_c2/THREE_WAY_3Q_TOURNAMENT_REPORT_IT.md` (42 Match totali: 1° AG 75%, 1° CP 75%, 3° CD 0%).
-   - *Submission*: compilata e certificata al 100% bit-exact in [`submission/submission_antigravity.py`](file:///c:/Users/pietr/Projects/kaggriculture-agent/submission/submission_antigravity.py).
+| Indicatore | Valore |
+|---|---:|
+| Codex V9 3Q | `1159,9` |
+| Codex V7.3 dual-Q | `598,3` |
+| Delta V9 vs V7.3 | `+561,6` (`+93,9%`) |
+| Posizione Codex V9 nello snapshot | `2542` |
+| Leader visibile | `2943,6` |
+| Gap dal leader visibile | `1783,7` |
+| Quota del punteggio leader | `39,4%` |
 
----
+Il passaggio alla versione 3Q costituisce quindi un miglioramento esterno
+materiale, ma non una convergenza verso il vertice. Lo score Kaggle non va
+confuso con `final_money` dei benchmark locali: E17 deve definire come usare
+le metriche locali per selezionare candidate con maggiore probabilità di
+miglioramento esterno.
 
-## 2. Matrice Comparativa Versioni Antigravity C2
+Il replay pubblico `docs/benchmark/104498819.json` mostra una strategia ad alto
+rendimento che termina con tre quadranti attivi (`NW`, `NE`, `SW`). Questo,
+insieme al salto V7.3 -> V9, rende 3Q una forte ipotesi architetturale di
+lavoro. La schermata leaderboard non espone però il codice dei concorrenti:
+l'affermazione che tutti o la maggior parte dei top usino 3Q resta non
+verificata e non deve essere trattata come fatto.
 
-| Versione / Modulo | Quadranti Attivi | Forza Lavoro | Gross Revenue | Net Money (Phase C) | Net Money (Replay 562040596) | Peak Record | Escapes |
-|---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
-| **Antigravity 50K Compact** | Q0 (25 tile) | 7 | \$37,537.50 | \$57,756.33 | — | \$62,100.00 | 0 |
-| **Antigravity 75K Dual-Q** | Q0+Q1 (50 tile) | 13 | \$91,010.42 | **\$66,630.67** | **\$83,272.00** | **\$87,740.00** | 0 |
-| **Antigravity 90K 3Q Naive**| Q0+Q1+Q2 (75t) | 14 | \$112,400.00+| \$62,728.67 | \$75,749.00 | \$80,450.00 | 0 |
-| **Antigravity 100K 3Q Central**| Q0+Q1+Q2 (75t) | 13 | \$115,000.00+| **\$71,000.00+** | **\$70,837.00** | **\$88,000.00+**| **0** |
+## Foundation corrente
 
-| **Antigravity 90K Tri-Q (3Q)** | **Q0+Q1+Q2 (75 tile)** | **14** | **\$112,400.00+** | \$62,728.67 | \$75,749.00 | \$80,450.00 | 0 |
-| **Top Competitor `keiz`** | Q0+Q1+Q2 (75 tile) | 13 | \$158,575.00 | — | \$158,575.00 | \$158,575.00 | 0 |
+Il riferimento canonico e i relativi hash sono in
+`docs/model/FOUNDATION_C2_1_MANIFEST.md`:
 
----
+1. `docs/model/ontology/ONTOLOGY_C2_1.md`;
+2. `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md`;
+3. `docs/model/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2_1.md`;
+4. `src/agricola/core/observation_contract.py`.
 
-## 3. Stato File di Submission
+La Foundation non prescrive un processo deliberativo condiviso. Routine,
+planner, working set e priorità sono agent-local.
 
-- **File Standalone Antigravity**: [`submission/submission_antigravity.py`](file:///c:/Users/pietr/Projects/kaggriculture-agent/submission/submission_antigravity.py)
-- **File Standalone Canonico**: [`submission/submission.py`](file:///c:/Users/pietr/Projects/kaggriculture-agent/submission/submission.py)
-- **Pulizia Cartella**: eliminata ogni altra variante pregressa.
+## Baseline 3Q congelate
+
+### Codex V9
+
+- MODEL_SPEC: `docs/model/model_specs/codex/MODEL_SPEC_CODEX_C2_3Q_POST_FOUNDATION_REVIEW.md`;
+- source: `src/agricola/strategy/codex_3q_mixed_high_density.py`;
+- routine: `src/agricola/strategy/codex_v9_routine_data.py`;
+- config: `configs/model_spec_c2/CODEX_C2_V9_0_3Q_MIXED_HIGH_DENSITY_CONFIG.json`;
+- submission: `submission/submission_codex.py`;
+- SHA-256 submission: `AC541588EF9746F00C9FE6CDA378DB4DF793347CDB5FEE8FF2FCA5EC1847C421`;
+- parità standalone: `719/719 PASS`.
+
+### Antigravity V4
+
+Baseline 3Q derivativa con liquidazione terminale. Submission canonica e
+freeze sono byte-identiche, SHA-256
+`5786AC521DDC0931539032ED1A4D642F75846911A078E8E8E82535C7F4757872`.
+
+### Copilot V2
+
+Baseline 3Q derivativa senza submission canonica. È mantenuta per diagnostica
+e confronto, non come strategia indipendente promossa.
+
+Il torneo di chiusura resta valido come replica e ablation, non come confronto
+fra tre strategie indipendenti, perché Antigravity V4 e Copilot V2 riusano la
+routine Codex. `STRATEGIC_INDEPENDENCE_GATE: FAIL`.
+
+## Obiettivo E17 — definizione del benchmark di ottimizzazione 3Q
+
+E17 non deve iniziare modificando la policy. Deve produrre e congelare una
+strategia di benchmark che renda misurabile l'ottimizzazione del modello 3Q.
+
+Output minimi richiesti:
+
+1. baseline Codex V9 immutabile e identificata tramite hash;
+2. matrice di benchmark con seed preregistrati, holdout separato, seat
+   bilanciati e avversari congelati;
+3. distinzione fra benchmark passivo economico, confronto competitivo e
+   validazione esterna Kaggle;
+4. metriche leading per Q0/Q1/Q2, workforce, azioni produttive, movimento,
+   capacità, colture, livestock, mercato, liquidazione ed errori;
+5. protocollo di ablation causale: una famiglia di leve per volta, senza
+   variazioni aggregate non attribuibili;
+6. criteri di promozione robusti su media, mediana, floor, varianza, seat e
+   holdout, definiti prima di osservare il risultato;
+7. ledger requested/executed e provenance completa di source, config,
+   routine, benchmark e submission;
+8. piano esplicito per verificare se i miglioramenti locali predicono la
+   direzione dello score Kaggle.
+
+Ogni agente potrà usare il benchmark comune, ma dovrà sviluppare una propria
+strategia senza importare o copiare routine, planner, dispatcher o action
+table di un altro agente.
