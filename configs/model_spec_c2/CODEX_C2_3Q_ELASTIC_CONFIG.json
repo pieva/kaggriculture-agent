@@ -1,0 +1,72 @@
+{
+  "candidate_id": "CODEX_C2_3Q_ELASTIC",
+  "schema_version": "model_spec_c2.codex.3q_elastic.v1",
+  "model_spec_version": "CODEX-C2-V8.0-3Q-ELASTIC-SATELLITE",
+  "foundation_checkpoint": "f391ee2",
+  "quadrants_owned": 3,
+  "workforce_total": 13,
+  "q0_workforce_total": 7,
+  "dual_workforce_total": 13,
+  "crop_working_set_target": 36,
+  "crop_counts": {
+    "MELON": 18,
+    "STRAWBERRY": 16,
+    "WHEAT": 2
+  },
+  "pasture_allocation_target": 24,
+  "livestock_targets": {
+    "COW": 12,
+    "SHEEP": 12
+  },
+  "bootstrap_livestock": {
+    "COW": 2,
+    "SHEEP": 2
+  },
+  "q1_livestock_targets": {
+    "COW": 3,
+    "SHEEP": 3
+  },
+  "livestock_activation_days": {
+    "COW": 7,
+    "SHEEP": 8
+  },
+  "q1_activation_min_day": 6,
+  "q1_activation_max_day": 10,
+  "q1_activation_cash": 2800,
+  "q1_operating_cash_floor": 250,
+  "q2_activation_min_day": 10,
+  "q2_activation_max_day": 12,
+  "q2_activation_cash_plus_inventory": 5500,
+  "q2_land_cost": 2000,
+  "q2_operating_cash_floor": 500,
+  "q2_min_remaining_days": 18,
+  "q2_projected_net_floor": 12000,
+  "q2_crop_working_set_target": 0,
+  "q2_crop_counts": {},
+  "q2_livestock_targets": {
+    "COW": 6,
+    "SHEEP": 6
+  },
+  "q2_incremental_hands": 0,
+  "q2_incremental_daily_hire_cost": 0,
+  "operating_cash_floor": 50,
+  "feed_reserve_rounds": 2,
+  "observed_capacity_days": 3,
+  "hard_schedule_days": 2,
+  "minimum_post_plant_action_phases": 1,
+  "payback_cutoff_days": 2,
+  "crop_horizon_margin_days": 1,
+  "endgame_shutdown_days": 2,
+  "max_noop_before_invalidation": 3,
+  "turns_per_day": 24,
+  "q1_cadence_relief": {
+    "worker_role": "FERTILIZER_LOGISTICS_Q1",
+    "eligible_tasks": [
+      "ANIMAL_COLLECTION",
+      "CARE"
+    ],
+    "feed_ownership_unchanged": true,
+    "q0_ownership_unchanged": true
+  },
+  "causal_cycle": "CAPACITY_REPLAY_FOUR_EXISTING_THREE_ANIMAL_SUBCLUSTERS"
+}

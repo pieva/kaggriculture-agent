@@ -1,15 +1,16 @@
-# PROMPT DI AVVIO E SPECIFICA STRATEGICA ANTIGRAVITY 3Q (150K+)
+# SPECIFICA E PROMPT DI AVVIO: ANTIGRAVITY 150K MEGA-CLUSTER ENGINE
 
-> **Modello**: Antigravity C2 Tri-Quadrant (3Q) Industrial Livestock & High-Yield Crop Engine  
-> **Benchmark di Riferimento**: Replay Kaggle Ufficiale Episodio `104498819` (Seed `562040596`, Top Leaderboard `keiz` $158,575.00)  
-> **Target Primari**: Capitale Netto Finale Medio $\ge \$140,000.00$, Picco $\ge \$155,000.00$, Animal Escapes = 0, Errori = 0.
+> **Modello**: Antigravity C2 150K+ Central Mega-Cluster 20-Animal & Strawberry-Dominant Engine  
+> **Versione**: `ANTIGRAVITY-C2-150K-MEGA-CLUSTER-V2.0`  
+> **Benchmark di Riferimento**: Replay Ufficiale Kaggle Episodio `104498819` (Seed `562040596`, Top Competitor `keiz` $158,575.00)  
+> **Target Primari**: Capitale Netto Finale Medio $\ge \$140,000.00$, Picco $\ge \$155,000.00$, Animal Escapes = 0.
 
 ---
 
-## 1. Prompt di Avvio e Istruzioni Fondamentali
+## 1. Prompt di Ingegnerizzazione Strategica
 
 ```text
-Sei il motore decisionale strategico di Antigravity per la competizione Kaggriculture su Kaggle Environments.
+Sei il motore decisionale strategico di Antigravity per la competizione Kaggriculture.
 Il tuo obiettivo è massimizzare il Capitale Netto Finale su 30 giorni (720 turni) gestendo una tenuta ad alta intensità produttiva estesa su 3 Quadranti (Q0 NW, Q1 NE, Q2 SW: 75 tile).
 
 Devi implementare tassativamente le seguenti regole operative:
@@ -37,21 +38,3 @@ Devi implementare tassativamente le seguenti regole operative:
    - Vendere ad ogni turno tutto il concime (Fertilizer) prodotto dai 20 animali (oltre 350 unità = +$14,000.00 di cassa netta pura).
    - Vendere immediatamente Latte ($160+), Lana ($240+), Meloni ($250+) e Fragole ($120+).
 ```
-
----
-
-## 2. Dettaglio Layout Spaziale e Ruoli Operativi
-
-### Coordinate dei 20 Pascoli Centrali
-- **Q0 (NW)**: `(4, 3), (4, 2), (3, 3), (3, 4), (2, 4), (3, 2)` (4 Mucche, 2 Pecore)
-- **Q1 (NE)**: `(5, 3), (5, 2), (6, 4), (6, 3), (6, 2), (7, 4), (5, 1)` (4 Mucche, 3 Pecore)
-- **Q2 (SW)**: `(3, 5), (4, 6), (3, 6), (4, 7), (3, 7), (2, 5), (2, 6)` (7 Pecore)
-
-### Matrice della Forza Lavoro (13 Ruoli)
-- **W0 (Farmer)**: Coordinamento centrale a `(4,4)`/`(5,4)`/`(4,5)`, vendite di mercato, semine rapide di emergenza.
-- **W1, W2, W3**: Colture Q0 (Zone 0, 1, 2).
-- **W4, W5, W6**: Zootecnia Q0 (Mungitura 4 Mucche, Tosatura 2 Pecore, Gestione Concime).
-- **W7, W8, W9**: Colture Q1 (Zone 3, 4, 5).
-- **W10, W11**: Zootecnia Q1 (Mungitura 4 Mucche, Tosatura 3 Pecore).
-- **W12**: Zootecnia Q2 (Tosatura e cura 7 Pecore Q2).
-- **W13**: Colture Q2 (Fragole, Meloni, Grano Q2).
