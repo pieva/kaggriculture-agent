@@ -1,6 +1,6 @@
 """
-Standalone Antigravity C2 75K Dual-Quadrant (Q0+Q1) routine file for Kaggle Kaggriculture.
-Generated from the Foundation-f391ee2-bound Antigravity controller and adapter.
+Standalone Antigravity C2 90K Tri-Quadrant (Q0+Q1+Q2) routine file for Kaggle Kaggriculture.
+Generated from the Foundation-f391ee2-bound Antigravity 3Q controller and adapter.
 """
 
 from __future__ import annotations
@@ -18,53 +18,26 @@ from typing import Any, Dict
 
 
 # ==========================================
-# --- Embedded Antigravity C2 75K Config ---
+# --- Embedded Antigravity C2 90K 3Q Config ---
 # ==========================================
-ANTIGRAVITY_C2_75K_DUAL_Q_CONFIG: dict[str, Any] = {
-  "candidate_id": "ANTIGRAVITY_C2_75K_DUAL_Q",
-  "schema_version": "model_spec_c2.antigravity.dual_q.v1",
-  "model_spec_version": "ANTIGRAVITY-C2-DUAL-Q0-Q1-75K-V1.0",
+ANTIGRAVITY_C2_90K_TRI_Q_CONFIG: dict[str, Any] = {
+  "candidate_id": "ANTIGRAVITY_C2_90K_TRI_Q",
+  "schema_version": "model_spec_c2.antigravity.tri_q.v1",
+  "model_spec_version": "ANTIGRAVITY-C2-TRI-Q0-Q1-Q2-90K-V1.0",
   "foundation_checkpoint": "f391ee2",
-  "quadrants_owned": 2,
-  "workforce_total": 13,
+  "quadrants_owned": 3,
+  "workforce_total": 14,
   "q0_workforce_total": 7,
-  "crop_working_set_target": 36,
-  "crop_counts": {
-    "MELON": 18,
-    "STRAWBERRY": 16,
-    "WHEAT": 2
-  },
+  "q1_workforce_total": 13,
+  "crop_working_set_target": 54,
   "pasture_allocation_target": 12,
   "livestock_targets": {
     "COW": 6,
     "SHEEP": 6
   },
-  "bootstrap_livestock": {
-    "COW": 2,
-    "SHEEP": 2
-  },
-  "q1_livestock_targets": {
-    "COW": 3,
-    "SHEEP": 3
-  },
-  "livestock_activation_days": {
-    "COW": 7,
-    "SHEEP": 8
-  },
-  "q1_activation_min_day": 6,
-  "q1_activation_max_day": 8,
-  "q1_activation_cash": 2800,
-  "q1_operating_cash_floor": 250,
-  "operating_cash_floor": 50,
+  "operating_cash_floor": 50.0,
   "feed_reserve_rounds": 2,
-  "observed_capacity_days": 3,
-  "hard_schedule_days": 2,
-  "minimum_post_plant_action_phases": 1,
-  "payback_cutoff_days": 2,
-  "crop_horizon_margin_days": 1,
-  "endgame_shutdown_days": 2,
-  "max_noop_before_invalidation": 3,
-  "turns_per_day": 24
+  "q1_activation_min_day": 6
 }
 
 # ==========================================
@@ -1353,7 +1326,7 @@ def snapshot_asdict(snapshot: CodexSnapshot) -> dict[str, Any]:
     return payload
 
 # ==========================================
-# --- Antigravity C2 75K Config Class ---
+# --- Antigravity C2 Config Class ---
 # ==========================================
 @dataclass
 class AntigravityC2_75K_Config:
@@ -1392,6 +1365,13 @@ class AntigravityC2_75K_Config:
     q1_activation_cash: float = 2800.0
     q1_operating_cash_floor: float = 250.0
 
+    # Q2 Activation Gates
+    q1_workforce_total: int = 13
+    q2_activation_min_day: int = 12
+    q2_activation_max_day: int = 14
+    q2_activation_cash: float = 3500.0
+    q2_operating_cash_floor: float = 300.0
+
     # Economics & Buffers
     operating_cash_floor: float = 50.0
     feed_reserve_rounds: int = 2
@@ -1426,6 +1406,11 @@ class AntigravityC2_75K_Config:
             q1_activation_max_day=int(data.get("q1_activation_max_day", 10)),
             q1_activation_cash=float(data.get("q1_activation_cash", 2800.0)),
             q1_operating_cash_floor=float(data.get("q1_operating_cash_floor", 250.0)),
+            q1_workforce_total=int(data.get("q1_workforce_total", 13)),
+            q2_activation_min_day=int(data.get("q2_activation_min_day", 12)),
+            q2_activation_max_day=int(data.get("q2_activation_max_day", 14)),
+            q2_activation_cash=float(data.get("q2_activation_cash", 3500.0)),
+            q2_operating_cash_floor=float(data.get("q2_operating_cash_floor", 300.0)),
             operating_cash_floor=float(data.get("operating_cash_floor", 50.0)),
             feed_reserve_rounds=int(data.get("feed_reserve_rounds", 2)),
             observed_capacity_days=int(data.get("observed_capacity_days", 3)),
@@ -4051,10 +4036,31 @@ class AntigravityDualQPolicy(AntigravityC2_50K_Policy):
         return orders[: self.max_market_orders]
 
 # ==========================================
-# --- Agent Factory & Kaggle Entrypoint ---
+# --- Antigravity Tri Q0+Q1+Q2 Policy ---
 # ==========================================
-class AntigravityC2_75K_Agent:
-    """Antigravity C2 75K Tournament Candidate Agent."""
+TRI_MODEL_SPEC_VERSION = "ANTIGRAVITY-C2-TRI-Q0-Q1-Q2-90K-NET-V1.0"
+
+
+def _mirror_q2(position: tuple[int, int]) -> tuple[int, int]:
+    """Mirror Q0 (NW: x in 0..4, y in 0..4) vertically to Q2 (SW: x in 0..4, y in 5..9)."""
+    x, y = position
+    return x, 9 - y
+
+
+# Q2 Crop positions mirrored from Q0
+Q2_ALL_CROP_POSITIONS: tuple[tuple[int, int], ...] = tuple(
+    _mirror_q2(p) for p in ANTIGRAVITY_CROP_POSITIONS
+)
+
+# 14-Role Sequence for Lean Tri-Q (W0 Farmer, W1..W6 Q0, W7..W12 Q1, W13 Q2 Crop Specialist)
+TRI_ROLE_SEQUENCE: tuple[str, ...] = (
+    *DUAL_ROLE_SEQUENCE,
+    "CROP_ZONE_6",  # W13 (Hand 12): Dedicated Q2 Cash-Crop Specialist
+)
+
+
+class AntigravityTriQPolicy(AntigravityDualQPolicy):
+    """Antigravity 3-Quadrant (Q0+Q1+Q2) Lean Cash-Crop Strategy Policy."""
 
     def __init__(
         self,
@@ -4062,9 +4068,269 @@ class AntigravityC2_75K_Agent:
         *,
         run_context: dict[str, Any] | None = None,
     ) -> None:
-        self.config = config or AntigravityC2_75K_Config.load()
-        self.policy = AntigravityDualQPolicy(config=self.config, run_context=run_context)
-        self.antigravity_75k_instance = self.policy
+        if config is None:
+            config_path = (
+                Path(__file__).resolve().parents[4]
+                / "configs"
+                / "model_spec_c2"
+                / "ANTIGRAVITY_C2_90K_TRI_Q_CONFIG.json"
+            )
+            cfg = (
+                AntigravityC2_75K_Config.load(config_path)
+                if config_path.exists()
+                else AntigravityC2_75K_Config.load()
+            )
+        else:
+            cfg = config
+        super().__init__(config=cfg, run_context=run_context)
+        self.candidate_id = "ANTIGRAVITY_C2_90K_TRI_Q"
+        self.model_spec_version = TRI_MODEL_SPEC_VERSION
+        self.expected_max_quadrants = 3
+        self.config.workforce_total = 14
+        self.config.q1_workforce_total = 13
+        self.config.q0_workforce_total = 7
+
+        # Q2 Crop setup: All Q2 crop positions belong to Zone 6
+        self.q2_crop_positions = Q2_ALL_CROP_POSITIONS
+        q2_zone = (self.q2_crop_positions,)
+        self.crop_zones = (*ANTIGRAVITY_CROP_ZONES, *Q1_CROP_ZONES, self.q2_crop_positions)
+        self.crop_positions = (*self.q0_crop_positions, *self.q1_crop_positions, *self.q2_crop_positions)
+
+        q2_plan = {
+            _mirror_q2(position): crop for position, crop in ANTIGRAVITY_CROP_PLAN.items()
+        }
+        self.crop_plan = {**self.crop_plan, **q2_plan}
+
+        self.zone_by_position = {
+            position: zone_id
+            for zone_id, zone in enumerate(self.crop_zones)
+            for position in zone
+        }
+        self.route_index = {
+            position: route_index
+            for zone in self.crop_zones
+            for route_index, position in enumerate(zone)
+        }
+
+        self._q2_relative_cohort = {
+            _mirror_q2(position): int(offset)
+            for position, offset in ANTIGRAVITY_COHORT_OFFSET.items()
+        }
+        # Inactive until Q2 is owned
+        self.cohort_offset.update(
+            {position: 10_000 for position in self.q2_crop_positions}
+        )
+
+        self.q2_activation_day: int | None = None
+        self._q2_activation_decisions: set[int] = set()
+        self._q2_cohorts_activated: bool = False
+
+    @staticmethod
+    def _role_module(role: str) -> str | None:
+        if role.endswith("_Q0"):
+            return "Q0"
+        if role.endswith("_Q1"):
+            return "Q1"
+        if role.endswith("_Q2"):
+            return "Q2"
+        if role.startswith("CROP_ZONE_"):
+            suffix = role.rsplit("_", 1)[1]
+            if suffix.isdigit():
+                idx = int(suffix)
+                if idx < 3:
+                    return "Q0"
+                if idx < 6:
+                    return "Q1"
+                return "Q2"
+            return suffix
+        return None
+
+    def _role_for(self, worker_id: int) -> str:
+        if worker_id >= len(TRI_ROLE_SEQUENCE):
+            return "CROP_ZONE_6"
+        return TRI_ROLE_SEQUENCE[worker_id]
+
+    def _target_workforce(self, snapshot: CodexSnapshot) -> int:
+        owned = self._owned_quadrants(snapshot.farm)
+        if owned < 2:
+            return int(self.config.q0_workforce_total)
+        if owned == 2:
+            return int(getattr(self.config, "q1_workforce_total", 13))
+        return int(self.config.workforce_total)  # 14 workers
+
+    def _maybe_replan_global(self, snapshot: CodexSnapshot) -> None:
+        if (
+            self._owned_quadrants(snapshot.farm) >= 3
+            and not self._q2_cohorts_activated
+        ):
+            self._q2_cohorts_activated = True
+            act_day = snapshot.clock.day
+            self.q2_activation_day = act_day
+            for position, relative in self._q2_relative_cohort.items():
+                self.cohort_offset[position] = act_day + relative
+        super()._maybe_replan_global(snapshot)
+
+    def decide_market_orders(self, snapshot: CodexSnapshot) -> list[list[Any]]:
+        farm = snapshot.farm
+        cash = float(farm.get("money", 0.0))
+        shed = snapshot.private.get("shed", {}) or {}
+        prices = snapshot.market.get("prices", {}) or {}
+        owned = self._owned_quadrants(farm)
+        day = snapshot.clock.day
+
+        # Check Q2 BUY_LAND admission
+        q2_buy_land = False
+        if (
+            not self._shutdown(snapshot)
+            and owned == 2
+            and int(getattr(self.config, "q2_activation_min_day", 12)) <= day <= int(getattr(self.config, "q2_activation_max_day", 14))
+        ):
+            prospective_sales = sum(
+                int(shed.get(item, 0)) * float(prices.get(item, 0.0))
+                for item in ("MILK", "WOOL", "MELON", "STRAWBERRY")
+            )
+            available = cash + prospective_sales
+            q2_act_cash = float(getattr(self.config, "q2_activation_cash", 3500.0))
+            q2_floor = float(getattr(self.config, "q2_operating_cash_floor", 300.0))
+            if available >= q2_act_cash and cash >= 2000.0 + q2_floor:
+                if day not in self._q2_activation_decisions:
+                    self._q2_activation_decisions.add(day)
+                    self.q2_activation_day = day
+                q2_buy_land = True
+
+        orders = super().decide_market_orders(snapshot)
+        if q2_buy_land:
+            orders.insert(0, ["BUY_LAND"])
+        return orders[: self.max_market_orders]
+
+    def decide_unit_actions(self, snapshot: CodexSnapshot) -> dict[int, list[Any]]:
+        """3-Quadrant unit action dispatch including Worker 13 for Q2."""
+        self._maybe_replan_global(snapshot)
+        positions = self._positions(snapshot.farm)
+        crop_tasks = self._crop_tasks(snapshot)
+        hard_crop_tasks = [task for task in crop_tasks if task.get("hard_reason")]
+        reserved: set[tuple[int, int]] = set()
+        actions: dict[int, list[Any]] = {}
+
+        # Prioritize livestock specialists (Q0 then Q1), crop zones (Q0, Q1, Q2), fertilizer, then farmer
+        dispatch_order = [
+            worker_id
+            for worker_id in (4, 5, 10, 11, 1, 2, 3, 7, 8, 9, 13, 6, 12, 0)
+            if worker_id < len(positions)
+        ]
+        for worker_id in dispatch_order:
+            role = self._role_for(worker_id)
+            inventory_tasks = self._inventory_task(snapshot, worker_id, role)
+            candidates: list[dict[str, Any]]
+            if inventory_tasks:
+                candidates = inventory_tasks
+            elif role.startswith("CROP_ZONE_"):
+                zone_id = int(role.rsplit("_", 1)[1])
+                module_id = zone_id // 3
+                own = [task for task in crop_tasks if task.get("zone") == zone_id]
+                cross_hard = [
+                    task
+                    for task in hard_crop_tasks
+                    if task.get("zone") is not None
+                    and int(task["zone"]) // 3 == module_id
+                    and int(task["zone"]) != zone_id
+                ]
+                candidates = own if own else cross_hard
+            elif role.startswith("LIVESTOCK_COW"):
+                module = self._role_module(role) or "Q0"
+                local = self._module_animal_tasks(snapshot, module, "COW")
+                fertilizer_staffed = len(positions) >= (7 if module == "Q0" else 13)
+                candidates = [
+                    task
+                    for task in local
+                    if task["kind"] != "FEED"
+                    and not (
+                        task["kind"] == "FERTILIZER_COLLECTION"
+                        and fertilizer_staffed
+                    )
+                ]
+            elif role.startswith("LIVESTOCK_SHEEP"):
+                module = self._role_module(role) or "Q0"
+                local = self._module_animal_tasks(snapshot, module, "SHEEP")
+                fertilizer_staffed = len(positions) >= (7 if module == "Q0" else 13)
+                candidates = [
+                    task
+                    for task in local
+                    if task["kind"] != "FEED"
+                    and not (
+                        task["kind"] == "FERTILIZER_COLLECTION"
+                        and fertilizer_staffed
+                    )
+                ]
+            elif self._is_fertilizer_role(role):
+                module = self._role_module(role) or "Q0"
+                local_hard = [
+                    task
+                    for task in hard_crop_tasks
+                    if task.get("zone") is not None
+                    and ("Q0" if int(task["zone"]) < 3 else "Q1") == module
+                ]
+                local_animals = [
+                    *self._module_animal_tasks(snapshot, module, "COW"),
+                    *self._module_animal_tasks(snapshot, module, "SHEEP"),
+                ]
+                fertilizer = [
+                    task
+                    for task in local_animals
+                    if task["kind"] in {"FERTILIZER_COLLECTION", "BUILD_PASTURE"}
+                ]
+                candidates = local_hard + fertilizer
+            else:  # Farmer W0 (Relief & Logistics)
+                growth = [
+                    task
+                    for task in crop_tasks
+                    if task["kind"]
+                    in {"PLANT", "WEED_RECOVERY", "RETIREMENT_CLEAR"}
+                ]
+                pasture_growth = [
+                    task
+                    for species in ("COW", "SHEEP")
+                    for task in self._animal_tasks(snapshot, species)
+                    if task["kind"] == "BUILD_PASTURE"
+                ]
+                high_value = [
+                    task
+                    for task in crop_tasks
+                    if task["kind"] in {"HARVEST", "WATER"}
+                ]
+                candidates = hard_crop_tasks + pasture_growth + growth + high_value
+
+            action = self._choose_committed_task(
+                snapshot,
+                worker_id,
+                role,
+                positions[worker_id],
+                candidates,
+                reserved,
+            )
+            if not self._eligible_unit_action(snapshot, worker_id, action):
+                if action[0] not in MOVE_ACTIONS:
+                    self._close_commitment(worker_id, snapshot.clock.step)
+                action = ["PASS"]
+            actions[worker_id] = action
+
+        return [actions.get(worker_id, ["PASS"]) for worker_id in range(len(positions))]
+
+# ==========================================
+# --- Agent Factory & Kaggle Entrypoint ---
+# ==========================================
+class AntigravityC2_90K_Agent:
+    """Antigravity C2 90K Tri-Quadrant Candidate Agent."""
+
+    def __init__(
+        self,
+        config: Any = None,
+        *,
+        run_context: dict[str, Any] | None = None,
+    ) -> None:
+        self.config = config or AntigravityC2_75K_Config.from_dict(ANTIGRAVITY_C2_90K_TRI_Q_CONFIG)
+        self.policy = AntigravityTriQPolicy(config=self.config, run_context=run_context)
+        self.antigravity_90k_instance = self.policy
         self.last_exception: str | None = None
         self.error_count: int = 0
         self.fallback_count: int = 0
@@ -4090,8 +4356,8 @@ class AntigravityC2_75K_Agent:
             return {"farmer": ["PASS"], "hands": [], "market": []}
 
 
-def create_agent(run_context: dict[str, Any] | None = None) -> AntigravityC2_75K_Agent:
-    return AntigravityC2_75K_Agent(run_context=run_context)
+def create_agent(run_context: dict[str, Any] | None = None) -> AntigravityC2_90K_Agent:
+    return AntigravityC2_90K_Agent(run_context=run_context)
 
 
 _agent_factory: Callable[[dict[str, Any], Any], dict[str, Any]] | None = None
@@ -4099,7 +4365,7 @@ _episode_sequence = 0
 
 
 def agent(observation: dict[str, Any], configuration: Any = None) -> dict[str, Any]:
-    """Kaggle entry point for Antigravity 75K routine candidate."""
+    """Kaggle entry point for Antigravity 90K Tri-Quadrant routine candidate."""
     global _agent_factory, _episode_sequence
     step = int(observation.get("step", 0))
     if step == 0 or _agent_factory is None:
