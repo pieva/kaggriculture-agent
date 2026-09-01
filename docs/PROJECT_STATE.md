@@ -21,9 +21,8 @@ ANTIGRAVITY_FULL_LIVESTOCK_SAFETY: 0 ESCAPES / 0 HARD MISSES (100% Safe)
 ANTIGRAVITY_FULL_LIVESTOCK_VERDICT: BUILD_READY / ACTIVE_SUBMISSION_CANDIDATE
 
 ACTIVE_SUBMISSION_FILES:
-- submission/submission_antigravity.py
+- submission/submission_antigravity.py (single standalone antigravity file)
 - submission/submission.py (canonical)
-- submission/submission_antigravity_75k.py
 
 FORENSIC_ANALYSIS_AUTHORIZED: YES
 IMPLEMENTATION_AUTHORIZED: YES (Local Build & Candidate Isolation)

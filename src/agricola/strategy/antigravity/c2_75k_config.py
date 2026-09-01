@@ -50,6 +50,13 @@ class AntigravityC2_75K_Config:
     q1_activation_cash: float = 2800.0
     q1_operating_cash_floor: float = 250.0
 
+    # Q2 Activation Gates
+    q1_workforce_total: int = 13
+    q2_activation_min_day: int = 12
+    q2_activation_max_day: int = 14
+    q2_activation_cash: float = 3500.0
+    q2_operating_cash_floor: float = 300.0
+
     # Economics & Buffers
     operating_cash_floor: float = 50.0
     feed_reserve_rounds: int = 2
@@ -84,6 +91,11 @@ class AntigravityC2_75K_Config:
             q1_activation_max_day=int(data.get("q1_activation_max_day", 10)),
             q1_activation_cash=float(data.get("q1_activation_cash", 2800.0)),
             q1_operating_cash_floor=float(data.get("q1_operating_cash_floor", 250.0)),
+            q1_workforce_total=int(data.get("q1_workforce_total", 13)),
+            q2_activation_min_day=int(data.get("q2_activation_min_day", 12)),
+            q2_activation_max_day=int(data.get("q2_activation_max_day", 14)),
+            q2_activation_cash=float(data.get("q2_activation_cash", 3500.0)),
+            q2_operating_cash_floor=float(data.get("q2_operating_cash_floor", 300.0)),
             operating_cash_floor=float(data.get("operating_cash_floor", 50.0)),
             feed_reserve_rounds=int(data.get("feed_reserve_rounds", 2)),
             observed_capacity_days=int(data.get("observed_capacity_days", 3)),

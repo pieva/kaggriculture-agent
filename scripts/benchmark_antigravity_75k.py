@@ -38,8 +38,10 @@ def _quadrant_counts(farm: dict[str, Any]) -> dict[str, int]:
     counts = {
         "q0_active_crops": 0,
         "q1_active_crops": 0,
+        "q2_active_crops": 0,
         "q0_animals": 0,
         "q1_animals": 0,
+        "q2_animals": 0,
         "q0_cows": 0,
         "q0_sheep": 0,
         "q1_cows": 0,
@@ -52,7 +54,7 @@ def _quadrant_counts(farm: dict[str, Any]) -> dict[str, int]:
                 counts["owned_tiles"] += 1
             if not isinstance(tile, dict):
                 continue
-            module = "q0" if x < 5 and y < 5 else "q1" if x >= 5 and y < 5 else None
+            module = "q0" if x < 5 and y < 5 else "q1" if x >= 5 and y < 5 else "q2" if x < 5 and y >= 5 else None
             if module is None:
                 continue
             if tile.get("kind") == "PLANT":
