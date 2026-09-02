@@ -9,8 +9,8 @@ import pprint
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
-SOURCE = ROOT / "docs" / "benchmark" / "104498819.json"
-TARGET = ROOT / "src" / "agricola" / "strategy" / "codex_v9_routine_data.py"
+SOURCE = ROOT / "data" / "replays" / "reference" / "104498819.json"
+TARGET = ROOT / "src" / "agricola" / "strategy" / "codex" / "codex_v9_routine_data.py"
 SAFE_PASS = {"farmer": ["PASS"], "hands": [], "market": []}
 
 

@@ -20,12 +20,12 @@ from agricola.strategy.antigravity.antigravity_3q_high_density_v4 import (
 )
 
 ROOT = Path(__file__).resolve().parents[1]
-RESULT_DIR = ROOT / "results" / "model_spec_c2" / "antigravity"
+RESULT_DIR = ROOT / "docs" / "governance" / "history" / "model_spec_c2" / "antigravity"
 RESULT_JSON = RESULT_DIR / "ANTIGRAVITY_V4_0_RESULTS.json"
 RESULT_CSV = RESULT_DIR / "ANTIGRAVITY_V4_0_RESULTS.csv"
 HOLDOUT_JSON = RESULT_DIR / "ANTIGRAVITY_V4_0_HOLDOUT_RESULTS.json"
 HOLDOUT_CSV = RESULT_DIR / "ANTIGRAVITY_V4_0_HOLDOUT_RESULTS.csv"
-REPLAY_PATH = ROOT / "docs" / "benchmark" / "104498819.json"
+REPLAY_PATH = ROOT / "data" / "replays" / "reference" / "104498819.json"
 SEEDS = (26090101, 26090102, 26090103)
 PHASE_C_SEEDS = (1838889274, 1619968655, 710418712)
 SAFE_PASS = {"farmer": ["PASS"], "hands": [], "market": []}

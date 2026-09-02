@@ -1,0 +1,533 @@
+{
+  "agent_owner": "COPILOT",
+  "baseline_role": "NATIVE_BASELINE_CONSTRUCTION",
+  "config_sha256": "7691CF2010AC4BF5E6B36DB566C61B75043FF92EB5C98A6D94CC9DD6D1D9BFBE",
+  "development_seeds": [
+    26090101,
+    26090102,
+    26090103
+  ],
+  "episode_count": 6,
+  "experiment_id": "E17.0",
+  "final_confirmation_consumed": false,
+  "final_money": {
+    "max": 10492.0,
+    "mean": 8941.5,
+    "median": 8613.5,
+    "min": 8263.0,
+    "population_stddev": 758.205502046334
+  },
+  "gate_status": "PASS",
+  "gates": {
+    "derived_eod_escape_count_zero": true,
+    "deterministic_reproducibility": true,
+    "development_matrix_complete": true,
+    "final_confirmation_not_consumed": true,
+    "holdout_not_consumed": true,
+    "ledger_record_coverage_100_percent": true,
+    "no_copy_other_agent_action_table": true,
+    "no_external_planner_dispatcher_or_schedule": true,
+    "no_import_other_agent_routine": true,
+    "no_post_hoc_seed_removal": true,
+    "routine_fingerprint_distinct": true,
+    "source_config_freeze": true,
+    "technical_errors_zero": true,
+    "three_quadrant_operation_all_runs": true
+  },
+  "holdout_consumed": false,
+  "independence_audit": {
+    "codex_routine_fingerprint": "C2466262E096B03CA330A1B0FDB2E5DEBE53C45F297E046113E007731051E7E4",
+    "imports": [
+      "__future__",
+      "json",
+      "dataclasses",
+      "pathlib",
+      "typing",
+      "agricola.core.observation_contract"
+    ],
+    "native_routine_fingerprint": "315073D272A4EF38DA2E98AD1B559A2A3DC4A4C2C117CEC609DC377E324BCDAB",
+    "no_copy_other_agent_action_table": true,
+    "no_external_planner_dispatcher_or_schedule": true,
+    "no_import_other_agent_routine": true,
+    "prohibited_imports": [],
+    "prohibited_tokens": [],
+    "routine_fingerprint_distinct": true
+  },
+  "ledger": {
+    "derived_eod_escape_count": 0,
+    "emitted_commands": 26163,
+    "market_classified_outcome_coverage": 0.10178117048346055,
+    "market_records": 1179,
+    "record_coverage": 1.0,
+    "records": 26163,
+    "schema_version": "E17_LEDGER_V1",
+    "technical_errors": 0
+  },
+  "native_routine_fingerprint": "315073D272A4EF38DA2E98AD1B559A2A3DC4A4C2C117CEC609DC377E324BCDAB",
+  "opponent_id": "INERT_PASS_POLICY",
+  "policy_id": "COPILOT-E17.0-NATIVE-3Q-CROP-BASELINE-V1",
+  "runs": [
+    {
+      "command_counts": {
+        "BUY_LAND": 2,
+        "BUY_SEED": 20,
+        "DIG": 64,
+        "EAST": 642,
+        "HARVEST": 472,
+        "HIRE": 150,
+        "NORTH": 687,
+        "PASS": 1,
+        "PLANT": 348,
+        "SELL": 25,
+        "SOUTH": 213,
+        "WATER": 1019,
+        "WEST": 718
+      },
+      "config_sha256": "7691CF2010AC4BF5E6B36DB566C61B75043FF92EB5C98A6D94CC9DD6D1D9BFBE",
+      "derived_events_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+      "episode_id": "E17-0-COPILOT-S26090101-P0",
+      "final_money": 9223.0,
+      "ledger": {
+        "action_batches": 719,
+        "action_sequence_sha256": "4A0ED69225D5B49955C195086953A9A0051EEC1B710E7CC1AC3EBC5C5E897AF5",
+        "classified_outcome_coverage": 0.9339601008942903,
+        "derived_eod_escape_count": 0,
+        "derived_escape_events": 0,
+        "emitted_commands": 4361,
+        "ledger_record_coverage": 1.0,
+        "ledger_records": 4361,
+        "market_classified_outcome_coverage": 0.09644670050761421,
+        "market_outcome_counts": {
+          "EXECUTED": 19,
+          "NOT_EXECUTED": 0,
+          "UNKNOWN": 178
+        },
+        "market_records": 197,
+        "outcome_counts": {
+          "EXECUTED": 3839,
+          "NOT_EXECUTED": 234,
+          "UNKNOWN": 288
+        },
+        "schema_version": "E17_LEDGER_V1",
+        "technical_errors": 0
+      },
+      "ledger_sha256": "CE6ABA7638FB78095EABF971BDC5D5DD8CD41AD26088F1CA7917196F90925628",
+      "native_routine_fingerprint": "315073D272A4EF38DA2E98AD1B559A2A3DC4A4C2C117CEC609DC377E324BCDAB",
+      "operated_quadrants": [
+        "Q0",
+        "Q1",
+        "Q2"
+      ],
+      "opponent_final_money": 3000.0,
+      "opponent_id": "INERT_PASS_POLICY",
+      "opponent_status": "DONE",
+      "policy_id": "COPILOT-E17.0-NATIVE-3Q-CROP-BASELINE-V1",
+      "policy_technical_errors": 0,
+      "recorded_environment_states": 720,
+      "reproducibility": {
+        "action_sequence_match": true,
+        "final_money_match": true,
+        "ledger_match": true,
+        "pass": true,
+        "terminal_match": true
+      },
+      "reproducibility_sha256": "64ADC8AE750500D33E097DC976341B56772C61E22B794CF2E9A41DFF3AC5C6EB",
+      "schema_version": "E17_0_COPILOT_RUN_SUMMARY_V1",
+      "seat": 0,
+      "seed": 26090101,
+      "source_sha256": "1D0FD4268097EBC2C36B2C578AB34A8EE757A61BC3C72970604FE7007F2E4FCA",
+      "status": "DONE",
+      "unlocked_quadrants": [
+        "NW",
+        "NE",
+        "SW"
+      ]
+    },
+    {
+      "command_counts": {
+        "BUY_LAND": 2,
+        "BUY_SEED": 21,
+        "DIG": 85,
+        "EAST": 663,
+        "HARVEST": 460,
+        "HIRE": 150,
+        "NORTH": 673,
+        "PASS": 1,
+        "PLANT": 359,
+        "SELL": 24,
+        "SOUTH": 214,
+        "WATER": 977,
+        "WEST": 732
+      },
+      "config_sha256": "7691CF2010AC4BF5E6B36DB566C61B75043FF92EB5C98A6D94CC9DD6D1D9BFBE",
+      "derived_events_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+      "episode_id": "E17-0-COPILOT-S26090101-P1",
+      "final_money": 10492.0,
+      "ledger": {
+        "action_batches": 719,
+        "action_sequence_sha256": "F8DB0284785556045A5D191C502B874ED5D5F224BB2C3622F8FA2051C2257524",
+        "classified_outcome_coverage": 0.9296033019949553,
+        "derived_eod_escape_count": 0,
+        "derived_escape_events": 0,
+        "emitted_commands": 4361,
+        "ledger_record_coverage": 1.0,
+        "ledger_records": 4361,
+        "market_classified_outcome_coverage": 0.1065989847715736,
+        "market_outcome_counts": {
+          "EXECUTED": 21,
+          "NOT_EXECUTED": 0,
+          "UNKNOWN": 176
+        },
+        "market_records": 197,
+        "outcome_counts": {
+          "EXECUTED": 3820,
+          "NOT_EXECUTED": 234,
+          "UNKNOWN": 307
+        },
+        "schema_version": "E17_LEDGER_V1",
+        "technical_errors": 0
+      },
+      "ledger_sha256": "D1326EE08F8B43A7553A4534A08FCEE9A3D594BE37D3651794118D54012FA6D1",
+      "native_routine_fingerprint": "315073D272A4EF38DA2E98AD1B559A2A3DC4A4C2C117CEC609DC377E324BCDAB",
+      "operated_quadrants": [
+        "Q0",
+        "Q1",
+        "Q2"
+      ],
+      "opponent_final_money": 3000.0,
+      "opponent_id": "INERT_PASS_POLICY",
+      "opponent_status": "DONE",
+      "policy_id": "COPILOT-E17.0-NATIVE-3Q-CROP-BASELINE-V1",
+      "policy_technical_errors": 0,
+      "recorded_environment_states": 720,
+      "reproducibility": {
+        "action_sequence_match": true,
+        "final_money_match": true,
+        "ledger_match": true,
+        "pass": true,
+        "terminal_match": true
+      },
+      "reproducibility_sha256": "FBF2F567501A33B429BEB7EB984D80D05E89BD11F87DA45DE93A643E836CAE9B",
+      "schema_version": "E17_0_COPILOT_RUN_SUMMARY_V1",
+      "seat": 1,
+      "seed": 26090101,
+      "source_sha256": "1D0FD4268097EBC2C36B2C578AB34A8EE757A61BC3C72970604FE7007F2E4FCA",
+      "status": "DONE",
+      "unlocked_quadrants": [
+        "NW",
+        "NE",
+        "SW"
+      ]
+    },
+    {
+      "command_counts": {
+        "BUY_LAND": 2,
+        "BUY_SEED": 19,
+        "DIG": 52,
+        "EAST": 724,
+        "HARVEST": 465,
+        "HIRE": 150,
+        "NORTH": 675,
+        "PASS": 1,
+        "PLANT": 331,
+        "SELL": 24,
+        "SOUTH": 225,
+        "WATER": 973,
+        "WEST": 718
+      },
+      "config_sha256": "7691CF2010AC4BF5E6B36DB566C61B75043FF92EB5C98A6D94CC9DD6D1D9BFBE",
+      "derived_events_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+      "episode_id": "E17-0-COPILOT-S26090102-P0",
+      "final_money": 8760.0,
+      "ledger": {
+        "action_batches": 719,
+        "action_sequence_sha256": "00D21A573E8A735B257B175523BD75DA66E4BDAD1EBED47EE1C2669F7B41C2DB",
+        "classified_outcome_coverage": 0.930488644184446,
+        "derived_eod_escape_count": 0,
+        "derived_escape_events": 0,
+        "emitted_commands": 4359,
+        "ledger_record_coverage": 1.0,
+        "ledger_records": 4359,
+        "market_classified_outcome_coverage": 0.09230769230769231,
+        "market_outcome_counts": {
+          "EXECUTED": 18,
+          "NOT_EXECUTED": 0,
+          "UNKNOWN": 177
+        },
+        "market_records": 195,
+        "outcome_counts": {
+          "EXECUTED": 3822,
+          "NOT_EXECUTED": 234,
+          "UNKNOWN": 303
+        },
+        "schema_version": "E17_LEDGER_V1",
+        "technical_errors": 0
+      },
+      "ledger_sha256": "DB8015E2CB0A42437774249D029AE87D3A05B4C23CA229A66D4AF84D695EB77E",
+      "native_routine_fingerprint": "315073D272A4EF38DA2E98AD1B559A2A3DC4A4C2C117CEC609DC377E324BCDAB",
+      "operated_quadrants": [
+        "Q0",
+        "Q1",
+        "Q2"
+      ],
+      "opponent_final_money": 3000.0,
+      "opponent_id": "INERT_PASS_POLICY",
+      "opponent_status": "DONE",
+      "policy_id": "COPILOT-E17.0-NATIVE-3Q-CROP-BASELINE-V1",
+      "policy_technical_errors": 0,
+      "recorded_environment_states": 720,
+      "reproducibility": {
+        "action_sequence_match": true,
+        "final_money_match": true,
+        "ledger_match": true,
+        "pass": true,
+        "terminal_match": true
+      },
+      "reproducibility_sha256": "D302944249F5861165059A0C1B4AD0F020323B75F34432C661566B45A0265010",
+      "schema_version": "E17_0_COPILOT_RUN_SUMMARY_V1",
+      "seat": 0,
+      "seed": 26090102,
+      "source_sha256": "1D0FD4268097EBC2C36B2C578AB34A8EE757A61BC3C72970604FE7007F2E4FCA",
+      "status": "DONE",
+      "unlocked_quadrants": [
+        "NW",
+        "NE",
+        "SW"
+      ]
+    },
+    {
+      "command_counts": {
+        "BUY_LAND": 2,
+        "BUY_SEED": 21,
+        "DIG": 77,
+        "EAST": 655,
+        "HARVEST": 479,
+        "HIRE": 150,
+        "NORTH": 693,
+        "PASS": 1,
+        "PLANT": 368,
+        "SELL": 24,
+        "SOUTH": 196,
+        "WATER": 983,
+        "WEST": 712
+      },
+      "config_sha256": "7691CF2010AC4BF5E6B36DB566C61B75043FF92EB5C98A6D94CC9DD6D1D9BFBE",
+      "derived_events_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+      "episode_id": "E17-0-COPILOT-S26090102-P1",
+      "final_money": 8263.0,
+      "ledger": {
+        "action_batches": 719,
+        "action_sequence_sha256": "21367BAB8224250F7F948B5227385ED0090695E541645D23DC53653F7EBFBCAE",
+        "classified_outcome_coverage": 0.9323549644576932,
+        "derived_eod_escape_count": 0,
+        "derived_escape_events": 0,
+        "emitted_commands": 4361,
+        "ledger_record_coverage": 1.0,
+        "ledger_records": 4361,
+        "market_classified_outcome_coverage": 0.1065989847715736,
+        "market_outcome_counts": {
+          "EXECUTED": 21,
+          "NOT_EXECUTED": 0,
+          "UNKNOWN": 176
+        },
+        "market_records": 197,
+        "outcome_counts": {
+          "EXECUTED": 3829,
+          "NOT_EXECUTED": 237,
+          "UNKNOWN": 295
+        },
+        "schema_version": "E17_LEDGER_V1",
+        "technical_errors": 0
+      },
+      "ledger_sha256": "53DCA5BF8EE79F7EFCA7AFEC8C53C1574BFA26045120AB7A8047916EC53FAE8F",
+      "native_routine_fingerprint": "315073D272A4EF38DA2E98AD1B559A2A3DC4A4C2C117CEC609DC377E324BCDAB",
+      "operated_quadrants": [
+        "Q0",
+        "Q1",
+        "Q2"
+      ],
+      "opponent_final_money": 3000.0,
+      "opponent_id": "INERT_PASS_POLICY",
+      "opponent_status": "DONE",
+      "policy_id": "COPILOT-E17.0-NATIVE-3Q-CROP-BASELINE-V1",
+      "policy_technical_errors": 0,
+      "recorded_environment_states": 720,
+      "reproducibility": {
+        "action_sequence_match": true,
+        "final_money_match": true,
+        "ledger_match": true,
+        "pass": true,
+        "terminal_match": true
+      },
+      "reproducibility_sha256": "3645F5179BFC2BD04B5597CF8091C366CDA4358C4B2B47D800F6D52778A8EEFC",
+      "schema_version": "E17_0_COPILOT_RUN_SUMMARY_V1",
+      "seat": 1,
+      "seed": 26090102,
+      "source_sha256": "1D0FD4268097EBC2C36B2C578AB34A8EE757A61BC3C72970604FE7007F2E4FCA",
+      "status": "DONE",
+      "unlocked_quadrants": [
+        "NW",
+        "NE",
+        "SW"
+      ]
+    },
+    {
+      "command_counts": {
+        "BUY_LAND": 2,
+        "BUY_SEED": 20,
+        "DIG": 77,
+        "EAST": 691,
+        "HARVEST": 457,
+        "HIRE": 150,
+        "NORTH": 692,
+        "PASS": 1,
+        "PLANT": 347,
+        "SELL": 24,
+        "SOUTH": 200,
+        "WATER": 966,
+        "WEST": 733
+      },
+      "config_sha256": "7691CF2010AC4BF5E6B36DB566C61B75043FF92EB5C98A6D94CC9DD6D1D9BFBE",
+      "derived_events_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+      "episode_id": "E17-0-COPILOT-S26090103-P0",
+      "final_money": 8467.0,
+      "ledger": {
+        "action_batches": 719,
+        "action_sequence_sha256": "58DE8C18E00B0B8490DBCFF2061BE01259E40FCE7DFE7DF31CC50C1B189F35E9",
+        "classified_outcome_coverage": 0.930045871559633,
+        "derived_eod_escape_count": 0,
+        "derived_escape_events": 0,
+        "emitted_commands": 4360,
+        "ledger_record_coverage": 1.0,
+        "ledger_records": 4360,
+        "market_classified_outcome_coverage": 0.10204081632653061,
+        "market_outcome_counts": {
+          "EXECUTED": 20,
+          "NOT_EXECUTED": 0,
+          "UNKNOWN": 176
+        },
+        "market_records": 196,
+        "outcome_counts": {
+          "EXECUTED": 3821,
+          "NOT_EXECUTED": 234,
+          "UNKNOWN": 305
+        },
+        "schema_version": "E17_LEDGER_V1",
+        "technical_errors": 0
+      },
+      "ledger_sha256": "28C4A8BC8A7431243FB6E9DE5C54A9C70726C5764C62378D7410ED4EB9CA6A11",
+      "native_routine_fingerprint": "315073D272A4EF38DA2E98AD1B559A2A3DC4A4C2C117CEC609DC377E324BCDAB",
+      "operated_quadrants": [
+        "Q0",
+        "Q1",
+        "Q2"
+      ],
+      "opponent_final_money": 3000.0,
+      "opponent_id": "INERT_PASS_POLICY",
+      "opponent_status": "DONE",
+      "policy_id": "COPILOT-E17.0-NATIVE-3Q-CROP-BASELINE-V1",
+      "policy_technical_errors": 0,
+      "recorded_environment_states": 720,
+      "reproducibility": {
+        "action_sequence_match": true,
+        "final_money_match": true,
+        "ledger_match": true,
+        "pass": true,
+        "terminal_match": true
+      },
+      "reproducibility_sha256": "510BC591C2E126C3BCC798D8760F5AADE595CBF0E852BCF0497B00B76FA4D840",
+      "schema_version": "E17_0_COPILOT_RUN_SUMMARY_V1",
+      "seat": 0,
+      "seed": 26090103,
+      "source_sha256": "1D0FD4268097EBC2C36B2C578AB34A8EE757A61BC3C72970604FE7007F2E4FCA",
+      "status": "DONE",
+      "unlocked_quadrants": [
+        "NW",
+        "NE",
+        "SW"
+      ]
+    },
+    {
+      "command_counts": {
+        "BUY_LAND": 2,
+        "BUY_SEED": 21,
+        "DIG": 78,
+        "EAST": 654,
+        "HARVEST": 479,
+        "HIRE": 150,
+        "NORTH": 693,
+        "PASS": 1,
+        "PLANT": 368,
+        "SELL": 24,
+        "SOUTH": 196,
+        "WATER": 983,
+        "WEST": 712
+      },
+      "config_sha256": "7691CF2010AC4BF5E6B36DB566C61B75043FF92EB5C98A6D94CC9DD6D1D9BFBE",
+      "derived_events_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+      "episode_id": "E17-0-COPILOT-S26090103-P1",
+      "final_money": 8444.0,
+      "ledger": {
+        "action_batches": 719,
+        "action_sequence_sha256": "DCF8E5C9464FA837333B4FAD26926223B0ADD2C9D6476695C90C03CAA3040AF4",
+        "classified_outcome_coverage": 0.9325842696629213,
+        "derived_eod_escape_count": 0,
+        "derived_escape_events": 0,
+        "emitted_commands": 4361,
+        "ledger_record_coverage": 1.0,
+        "ledger_records": 4361,
+        "market_classified_outcome_coverage": 0.1065989847715736,
+        "market_outcome_counts": {
+          "EXECUTED": 21,
+          "NOT_EXECUTED": 0,
+          "UNKNOWN": 176
+        },
+        "market_records": 197,
+        "outcome_counts": {
+          "EXECUTED": 3830,
+          "NOT_EXECUTED": 237,
+          "UNKNOWN": 294
+        },
+        "schema_version": "E17_LEDGER_V1",
+        "technical_errors": 0
+      },
+      "ledger_sha256": "080F917103F829CFBE1CFCFC513064E60A77259E9D994CB7471291523DD4482B",
+      "native_routine_fingerprint": "315073D272A4EF38DA2E98AD1B559A2A3DC4A4C2C117CEC609DC377E324BCDAB",
+      "operated_quadrants": [
+        "Q0",
+        "Q1",
+        "Q2"
+      ],
+      "opponent_final_money": 3000.0,
+      "opponent_id": "INERT_PASS_POLICY",
+      "opponent_status": "DONE",
+      "policy_id": "COPILOT-E17.0-NATIVE-3Q-CROP-BASELINE-V1",
+      "policy_technical_errors": 0,
+      "recorded_environment_states": 720,
+      "reproducibility": {
+        "action_sequence_match": true,
+        "final_money_match": true,
+        "ledger_match": true,
+        "pass": true,
+        "terminal_match": true
+      },
+      "reproducibility_sha256": "526EC853A756C089ED7665FC5956750E696BDEF22E071A119D97D6F4CB9A8483",
+      "schema_version": "E17_0_COPILOT_RUN_SUMMARY_V1",
+      "seat": 1,
+      "seed": 26090103,
+      "source_sha256": "1D0FD4268097EBC2C36B2C578AB34A8EE757A61BC3C72970604FE7007F2E4FCA",
+      "status": "DONE",
+      "unlocked_quadrants": [
+        "NW",
+        "NE",
+        "SW"
+      ]
+    }
+  ],
+  "schema_version": "E17_0_COPILOT_METRICS_V1",
+  "seats": [
+    0,
+    1
+  ],
+  "source_sha256": "1D0FD4268097EBC2C36B2C578AB34A8EE757A61BC3C72970604FE7007F2E4FCA"
+}

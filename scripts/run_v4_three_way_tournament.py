@@ -26,13 +26,15 @@ from agricola.strategy.copilot.three_quadrant import (
 
 CODEX_FROZEN = (
     ROOT
-    / "results"
+    / "docs"
+    / "governance"
+    / "history"
     / "model_spec_c2"
     / "codex"
     / "freeze"
     / "submission_codex_v9_tournament.py"
 )
-RESULT_DIR = ROOT / "results" / "model_spec_c2" / "antigravity"
+RESULT_DIR = ROOT / "docs" / "governance" / "history" / "model_spec_c2" / "antigravity"
 RESULT_JSON = RESULT_DIR / "ANTIGRAVITY_V4_0_THREE_WAY_TOURNAMENT_RESULTS.json"
 RESULT_CSV = RESULT_DIR / "ANTIGRAVITY_V4_0_THREE_WAY_TOURNAMENT_RESULTS.csv"
 

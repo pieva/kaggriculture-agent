@@ -56,7 +56,7 @@ def clean_imports(code: str, remove_internal_imports: list) -> str:
     return "\n".join(cleaned)
 
 
-def build_submission(output_path: str = "submission/submission.py") -> None:
+def build_submission(output_path: str = "experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py") -> None:
     """Bundle all modules into output_path."""
     project_root = Path(__file__).parent.parent
     src_dir = project_root / "src" / "agricola"

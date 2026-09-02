@@ -1,0 +1,19 @@
+{
+  "agent_id": "codex",
+  "ledger_source_path": "src/agricola/core/e17_ledger.py",
+  "ledger_source_sha256": "A22C97584D4AE81A341485744C8AF0FFBBF14A9C9A8491BD3210FC768AD672C9",
+  "measurement_parity": "PASS",
+  "metrics_path": "experiments/e17/artifacts/derived/codex/E17_0_METRICS.json",
+  "policy_mutation": false,
+  "policy_version": "CODEX-C2-V9.0-3Q-MIXED-HIGH-DENSITY",
+  "runner_path": "experiments/e17/tools/codex/run_e17_0_codex_parity.py",
+  "runner_sha256": "1D629D48C94459C5F360E0C28CB6E6F82D6B5D7DE248A7BBCD1F09BD8F34E1F9",
+  "source": {
+    "config_sha256": "44DD0EC2F33C9EEEE74AE5676580DC833325AB969D8A9D262EC870FEAAAC6C99",
+    "entry_point": "agricola.strategy.codex.codex_3q_mixed_high_density.create_v9_agent",
+    "id": "CODEX-C2-V9.0-3Q-MIXED-HIGH-DENSITY",
+    "routine_sha256": "C2466262E096B03CA330A1B0FDB2E5DEBE53C45F297E046113E007731051E7E4",
+    "source_sha256": "4D99C919B59DAE9B307C403FCF3198763B08FB9D15324AB8C937C4FC2B32090E"
+  },
+  "submission_sha256": "AC541588EF9746F00C9FE6CDA378DB4DF793347CDB5FEE8FF2FCA5EC1847C421"
+}

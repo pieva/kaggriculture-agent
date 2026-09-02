@@ -1,0 +1,180 @@
+ M README.md
+ M docs/EXPERIMENT_LOG.md
+ M docs/NEW_SESSION.md
+ M docs/PROJECT_STATE.md
+ M pyproject.toml
+ M scripts/build_submission.py
+ M src/agricola/agent.py
+ M src/agricola/core/actions.py
+ M src/agricola/core/state.py
+ M experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py
+?? docs/model_specs/history/MODEL_SPEC_PRE_C2.md
+?? docs/benchmark/
+?? experiments/archive/e09/prompts/E09-01B_define_revision_antigravity.md
+?? docs/prompts/E09-01_define_antigravity.md
+?? docs/prompts/E09-03_build_antigravity.md
+?? docs/prompts/E09-05B_review_correction_antigravity.md
+?? docs/prompts/E09-05_review_antigravity.md
+?? docs/prompts/E09-06_kaggle_external_validation_antigravity.md
+?? experiments/archive/e10/prompts/E10-01_kaggle_overnight_antigravity.md
+?? "docs/prompts/E11-01 \342\200\224 DEFINE \342\200\224 3\303\227 Productive Mass Expansion.md"
+?? "docs/prompts/E11-01A \342\200\224 Correzione DEFINE + PLAN \342\200\224 3\303\227 Productive Mass Expansion.md"
+?? "docs/prompts/E11-01B \342\200\224 BUILD \342\200\224 ProductiveMassROIAgent.md"
+?? "docs/prompts/E11-02 \342\200\224 BUILD + VERIFY \342\200\224 Expansion Capital Protection.md"
+?? "docs/prompts/E11-03 \342\200\224 BUILD + VERIFY \342\200\224 Expansion Gate Unlock.md"
+?? "docs/prompts/E11-04 \342\200\224 BUILD + VERIFY \342\200\224 Seed\342\200\223Expansion Synchronization.md"
+?? "docs/prompts/E11-05 \342\200\224 BUILD + VERIFY \342\200\224 Staged Expansion Capital Release.md"
+?? "docs/prompts/E11-06 \342\200\224 BUILD + VERIFY \342\200\224 Workforce\342\200\223Land Co-Scaling.md"
+?? "docs/prompts/E11-B1 \342\200\224 Competitor Expansion Timing Audit.md"
+?? "docs/prompts/E11-R0 \342\200\224 Baseline Reproducibility Audit.md"
+?? "docs/prompts/E11-R1 \342\200\224 E11-03 Historical Behavioral Reconstruction.md"
+?? "docs/prompts/E11-R2 \342\200\224 Historical Benchmark Provenance Audit.md"
+?? "docs/prompts/E11-R3 \342\200\224 Verified Baseline Re-establishment.md"
+?? docs/prompts/E11_X1_1A_hire_constraint_e06_reconciliation.md
+?? docs/prompts/E11_X1_1_pre3q_workforce_productivity_scaling.md
+?? docs/prompts/E11_X1_2_e06_productive_core_restoration.md
+?? docs/prompts/E11_X1_3_B2R_RESTART_bounded_geometry.md
+?? docs/prompts/E11_X1_3_B2R_post_surplus_spatially_equivalent_3x_epu.md
+?? docs/prompts/E11_X1_3_B2_cross_boundary_multi_epu_activation.md
+?? docs/prompts/E11_X1_3_B3_fast_fixed_layout_submission.md
+?? docs/prompts/E11_X1_3_B_kaggle_validation_readme_reconciliation.md
+?? docs/prompts/E11_X1_3_e06_productive_unit_replication_scaling.md
+?? docs/prompts/E11_X1_4_epu_densification_2x3x5.md
+?? docs/prompts/E11_X1_5_centered_2x4x4_productive_core.md
+?? docs/prompts/E11_X1_6_progressive_center_out_epu_scaling.md
+?? docs/prompts/E11_X1_7_corner_pruned_center_out_26t.md
+?? docs/prompts/E11_X1_verified_3q_capital_accumulation.md
+?? "docs/prompts/E12-X1.10 \342\200\224 Audit economico della Continuous Productive Surface.md"
+?? "docs/prompts/E12-X1.10 \342\200\224 Continuous Productive Surface.md"
+?? docs/prompts/E12-X1.11_BUILD_Handoff_Codex.md
+?? docs/prompts/E12-X1.11_DEFINE_80K_Q0Q1_Antigravity.md
+?? docs/prompts/E12-X1.11_DEFINE_Review_80K_Antigravity.md
+?? docs/prompts/E12-X1.11_TRUEBELIEF_Benchmark.md
+?? docs/prompts/E12-X1.11_pre-DEFINE_Milk_Pipeline_Verification_Antigravity.md
+?? docs/prompts/E12-X1.11_pre-DEFINE_Q0-Q1_Economic_Density_Audit_Antigravity.md
+?? docs/prompts/E12-X1.12_AGGIORNAMENTO_STATO_POST_UPLOAD_Codex.md
+?? docs/prompts/E12-X1.12_CORREZIONE_MODELLO_LIVESTOCK_Q2_Codex.md
+?? docs/prompts/E12-X1.13_BUILD_VERIFICA_DYNAMIC_ALLOCATION_Codex.md
+?? docs/prompts/E12-X1.14_FAST_BUILD_WORKFORCE_CAPACITY_Codex.md
+?? "docs/prompts/E12-X1.8 \342\200\224 Audit Day-1 Productive Mass e Workforce.md"
+?? "docs/prompts/E12-X1.8 \342\200\224 Implementazione livestock-first verificabile.md"
+?? "docs/prompts/E12-X1.9 \342\200\224 Audit competitivo vs truebelief.md"
+?? "docs/prompts/E12-X1.9 \342\200\224 Growth-First Concurrent Architecture.md"
+?? docs/prompts/E12_BENCHMARK_BATCH_MODEL_SPEC_UPDATE_Codex.md
+?? docs/prompts/E12_CONSOLIDATE_STATE_AND_COMMIT.md
+?? docs/prompts/E12_D1_top_player_temporal_economic_benchmark.md
+?? docs/prompts/E12_D2_weed_mechanics_productive_surface_retention.md
+?? docs/prompts/E12_D3_marginal_capacity_roi_audit.md
+?? docs/prompts/E12_EXPERIMENT_LOG_APPEND.md
+?? experiments/archive/e12/prompts/E12_TRUEBELIEF_101294736_FULL_REPLAY_ANALYSIS.md
+?? docs/prompts/E12_X1_1_feed_first_cow_pipeline.md
+?? docs/prompts/E12_X1_2_hybrid_crop_recovery.md
+?? docs/prompts/E12_X1_3_hybrid_full_crop_scaling.md
+?? docs/prompts/E12_X1_4_worker_locality_readiness_gated_expansion.md
+?? docs/prompts/E12_X1_5_working_set_retention_4_tiles_per_worker.md
+?? docs/prompts/E12_X1_6_functional_workforce_hybrid_economic_scaling.md
+?? docs/prompts/E12_X1_7_kaggle_external_validation.md
+?? docs/prompts/E12_X1_7_workforce_capacity_scaling.md
+?? experiments/archive/e12/prompts/E12_define_centered_hybrid_farm_scaling.md
+?? docs/prompts/E12_plan_revision_build_gate.md
+?? docs/governance/prompts/KAGGRICULTURE_RICOSTRUZIONE_VENV_E_DOCUMENTAZIONE_Codex.md
+?? docs/governance/prompts/Kaggriculture_Q0_Q1_coordinates.xlsx
+?? docs/prompts/X1.12_PREPARAZIONE_KAGGLE_E_MODEL_SPEC_Codex.md
+?? data/screenshots/Copilot.png
+?? docs/versions/E09_build_livestock_ablation.md
+?? experiments/archive/e09/reports/E09_define_livestock_ablation.md
+?? experiments/archive/e09/reports/E09_kaggle_external_validation.md
+?? experiments/archive/e09/reports/E09_review_livestock_ablation.md
+?? experiments/archive/e09/reports/E09_verify_competitive_evidence.md
+?? experiments/archive/e09/reports/E09_verify_local_performance.md
+?? docs/versions/E10_build_q1_capital_protection.md
+?? experiments/archive/e10/reports/E10_define_q1_capital_protection.md
+?? experiments/archive/e10/reports/E10_kaggle_overnight_validation.md
+?? docs/versions/E10_plan_q1_capital_protection.md
+?? experiments/archive/e11/reports/E11_02_expansion_capital_protection.md
+?? experiments/archive/e11/reports/E11_03_expansion_gate_unlock.md
+?? experiments/archive/e11/reports/E11_04_seed_expansion_synchronization.md
+?? experiments/archive/e11/reports/E11_05_staged_expansion_capital_release.md
+?? experiments/archive/e11/reports/E11_06_workforce_land_co_scaling.md
+?? experiments/archive/e11/reports/E11_B1_competitor_expansion_timing_audit.md
+?? experiments/archive/e11/reports/E11_R0_baseline_reproducibility_audit.md
+?? experiments/archive/e11/reports/E11_R1_e11_03_historical_behavioral_reconstruction.md
+?? experiments/archive/e11/reports/E11_R2_historical_benchmark_provenance_audit.md
+?? experiments/archive/e11/reports/E11_R3_verified_baseline_reestablishment.md
+?? experiments/archive/e11/reports/E11_X1_1A_hire_constraint_e06_reconciliation.md
+?? experiments/archive/e11/reports/E11_X1_1_pre3q_workforce_productivity_scaling.md
+?? experiments/archive/e11/reports/E11_X1_2_e06_productive_core_restoration.md
+?? experiments/archive/e11/reports/E11_X1_3_B2R_post_surplus_spatially_equivalent_3x_epu.md
+?? docs/versions/E11_X1_3_B2_cross_boundary_multi_epu_activation.md
+?? docs/versions/E11_X1_3_B3_fixed_3x3_epu_submission.md
+?? experiments/archive/e11/reports/E11_X1_3_B_kaggle_external_validation.md
+?? experiments/archive/e11/reports/E11_X1_3_e06_productive_unit_replication_scaling.md
+?? experiments/archive/e11/reports/E11_X1_4_epu_densification_before_replication.md
+?? experiments/archive/e11/reports/E11_X1_5_centered_2x4x4_productive_core.md
+?? experiments/archive/e11/reports/E11_X1_6_progressive_center_out_epu_scaling.md
+?? experiments/archive/e11/reports/E11_X1_7_corner_pruned_center_out_26t.md
+?? experiments/archive/e11/reports/E11_X1_verified_3q_capital_accumulation.md
+?? docs/versions/E11_build_productive_mass_expansion.md
+?? experiments/archive/e11/reports/E11_define_productive_mass_expansion.md
+?? experiments/archive/e11/reports/E11_plan_productive_mass_expansion.md
+?? experiments/archive/e12/reports/E12-X1.11_DEFINE_80K_Q0Q1.md
+?? experiments/archive/e12/reports/E12_D1_top_player_temporal_economic_benchmark.md
+?? experiments/archive/e12/reports/E12_D2_weed_mechanics_productive_surface_retention.md
+?? experiments/archive/e12/reports/E12_D3_marginal_capacity_roi_audit.md
+?? experiments/archive/e12/reports/E12_X1_0_centered_hybrid_farm_scaling.md
+?? experiments/archive/e12/reports/E12_X1_1_feed_first_cow_pipeline.md
+?? experiments/archive/e12/reports/E12_X1_2_hybrid_crop_recovery.md
+?? experiments/archive/e12/reports/E12_X1_3_hybrid_full_crop_scaling.md
+?? experiments/archive/e12/reports/E12_X1_4_worker_locality_readiness_expansion.md
+?? experiments/archive/e12/reports/E12_X1_5_working_set_retention_4_tiles_per_worker.md
+?? experiments/archive/e12/reports/E12_X1_6_functional_workforce_hybrid_economic_scaling.md
+?? experiments/archive/e12/reports/E12_X1_7_corrective_architecture_audit.md
+?? experiments/archive/e12/reports/E12_X1_7_kaggle_external_validation.md
+?? experiments/archive/e12/reports/E12_X1_7_submission_provenance_opening_audit.md
+?? experiments/archive/e12/reports/E12_X1_7_workforce_capacity_scaling.md
+?? results/benchmark/
+?? experiments/archive/e09/artifacts/livestock_ablation.json
+?? experiments/archive/e10/artifacts/q1_capital_protection.json
+?? results/e11/
+?? experiments/archive/e11/artifacts/productive_mass.json
+?? results/e12/
+?? results/environment/
+?? scripts/benchmark_batch_registry.py
+?? experiments/archive/e09/tools/benchmark_e09_performance.py
+?? experiments/archive/e01/tools/benchmark_e10_performance.py
+?? experiments/archive/e01/tools/benchmark_e11_performance.py
+?? experiments/archive/e01/tools/benchmark_e11_vb1.py
+?? experiments/archive/e01/tools/benchmark_e11_x1.py
+?? experiments/archive/e01/tools/benchmark_e11_x1_1.py
+?? experiments/archive/e01/tools/benchmark_e11_x1_2.py
+?? experiments/archive/e01/tools/benchmark_e11_x1_3.py
+?? experiments/archive/e01/tools/benchmark_e11_x1_3_b2.py
+?? experiments/archive/e01/tools/benchmark_e11_x1_3_b2r.py
+?? experiments/archive/e01/tools/benchmark_e11_x1_3_b3.py
+?? experiments/archive/e01/tools/benchmark_e11_x1_4.py
+?? experiments/archive/e01/tools/benchmark_e11_x1_5.py
+?? experiments/archive/e01/tools/benchmark_e11_x1_6.py
+?? experiments/archive/e01/tools/benchmark_e11_x1_7.py
+?? experiments/archive/e01/tools/benchmark_e12_x1.py
+?? experiments/archive/e01/tools/benchmark_e12_x1_11.py
+?? experiments/archive/e01/tools/benchmark_e12_x1_11_truebelief.py
+?? experiments/archive/e01/tools/benchmark_e12_x1_13.py
+?? experiments/archive/e01/tools/benchmark_e12_x1_14.py
+?? scripts/setup_env.ps1
+?? experiments/archive/e01/tools/verify_e11_run_provenance.py
+?? scripts/verify_x112_submission_candidate.py
+?? src/agricola/strategy/livestock_ablation_roi.py
+?? src/agricola/strategy/productive_mass_roi.py
+?? src/agricola/strategy/q1_capital_protected_roi.py
+?? experiments/archive/e09/tests/test_e09_livestock_ablation.py
+?? experiments/archive/e10/tests/test_e10_q1_capital_protection.py
+?? experiments/archive/e11/tests/test_e11_productive_mass.py
+?? experiments/archive/e12/tests/test_e12_centered_hybrid.py
+?? experiments/archive/e12/tests/test_e12_livestock_first_architecture.py
+?? experiments/archive/e12/tests/test_e12_x1_4_locality_expansion.py
+?? experiments/archive/e12/tests/test_e12_x1_5_working_set_retention.py
+?? experiments/archive/e12/tests/test_e12_x1_6_functional_workforce.py
+?? experiments/archive/e12/tests/test_e12_x1_7_workforce_capacity_scaling.py
+?? experiments/archive/e12/tests/test_e12_x1_8_livestock_first.py
+?? experiments/archive/e12/tests/test_e12_x1_9_growth_first.py
+?? tests/test_submission_behavioral_equivalence.py

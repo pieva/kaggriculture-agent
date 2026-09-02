@@ -16,6 +16,8 @@ Il modello finale può essere una policy deterministica interamente scritta a ma
 
 > **Addestrare un modello non significa necessariamente addestrare una rete neurale.**
 
+> Status di governance del repository (2026-09-02): riordino completo con gate A7 `PASS`; strategia E17 riconciliata e congelata; E17.0 completato con gate tecnico `PASS`. Il controllo esterno Codex è attivo su Kaggle e ha raggiunto una rilevazione intermedia di `996` da un ingresso a `600`; il rating non è ancora stabilizzato. Copilot conserva la propria baseline nativa solo come evidenza locale, Antigravity è in pausa per esaurimento crediti e la prossima evoluzione resta sospesa fino a una misura esterna stabile.
+
 ## Model Foundation
 
 Kaggriculture separa esplicitamente la rappresentazione del dominio dalla policy che controlla l'agente.
@@ -24,21 +26,22 @@ La **Model Foundation C2.1** (condivisa e neutrale) è articolata su **4 layer n
 
 | Layer | Artefatto | Percorso canonico | Funzione | Domanda |
 |---|---|---|---|---|
-| 1. Engine Contract | Frozen Engine Contract | `results/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md` | Ground truth formale e verificato delle regole e costanti della simulazione. | **Quali sono le regole e i vincoli primitivi del codice dell'ambiente?** |
-| 2. Ontologia | `ONTOLOGY_C2_1.md` | `docs/model/ontology/ONTOLOGY_C2_1.md` | Vocabolario canonico del dominio, entità, concetti e relazioni condivise. | **Che cosa esiste nel dominio e che cosa significa?** |
-| 3. State Machine | `KAGGRICULTURE_STATE_MACHINE_C2_1.md` | `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md` | Stati fisici, transizioni biologiche, guardie e ciclo causale dell'engine. | **Come evolve lo stato dell'ambiente?** |
-| 4. Feature Model | `KAGGRICULTURE_FEATURE_MODEL_C2_1.md` | `docs/model/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2_1.md` | Feature osservabili e derivabili online al decision time, con provenance, telemetria e no-leakage contract. | **Che cosa può conoscere l'agente quando decide?** |
-| Downstream | `MODEL_SPEC_<AGENT>.md` | `docs/model/model_specs/` | Modello decisionale e strategico proprietario di ciascun agente (Antigravity, Codex, Copilot). | **Come usa l'agente le feature per formulare policy e azioni?** |
+| 1. Engine Contract | Frozen Engine Contract | `docs/governance/history/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md` | Ground truth formale e verificato delle regole e costanti della simulazione. | **Quali sono le regole e i vincoli primitivi del codice dell'ambiente?** |
+| 2. Ontologia | `ONTOLOGY_C2_1.md` | `docs/foundation/ontology/ONTOLOGY_C2_1.md` | Vocabolario canonico del dominio, entità, concetti e relazioni condivise. | **Che cosa esiste nel dominio e che cosa significa?** |
+| 3. State Machine | `KAGGRICULTURE_STATE_MACHINE_C2_1.md` | `docs/foundation/state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md` | Stati fisici, transizioni biologiche, guardie e ciclo causale dell'engine. | **Come evolve lo stato dell'ambiente?** |
+| 4. Feature Model | `KAGGRICULTURE_FEATURE_MODEL_C2_1.md` | `docs/foundation/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2_1.md` | Feature osservabili e derivabili online al decision time, con provenance, telemetria e no-leakage contract. | **Che cosa può conoscere l'agente quando decide?** |
+| Downstream | `MODEL_SPEC_<AGENT>.md` | `docs/model_specs/` | Modello decisionale e strategico proprietario di ciascun agente (Antigravity, Codex, Copilot). | **Come usa l'agente le feature per formulare policy e azioni?** |
 
 *Nota sulla nomenclatura C2:* La sigla **C2** indica il **Cycle 2** (ciclo di revisione, audit e provenance della Foundation), non un componente architetturale o un modello di strategia.
 
 ```text
-docs/model/
-|-- ontology/
-|-- state_machine/
-|-- feature_model/
+docs/
+|-- foundation/
+|   |-- ontology/
+|   |-- state_machine/
+|   `-- feature_model/
 |-- model_specs/
-`-- reviews/
+`-- governance/
 ```
 
 `reviews/` è la sede di governance, evidence review e reconciliation della Foundation e non costituisce un layer del modello decisionale.
@@ -98,7 +101,7 @@ Quando l'evidenza giustifica una revisione strutturale viene eseguito un **Found
 
 Per ciascun artefatto `NO_CHANGE` è un risultato valido. Solo dopo review, reconciliation e freeze della Foundation possono essere avviati nuovi cicli di policy training che dipendono dalle modifiche introdotte.
 
-Lo **stato corrente** della Foundation e gli hash dei tre documenti C2.1 sono mantenuti in `docs/model/FOUNDATION_C2_1_MANIFEST.md`; lo stato operativo complessivo è in `docs/PROJECT_STATE.md`.
+Lo **stato corrente** della Foundation e gli hash dei tre documenti C2.1 sono mantenuti in `docs/foundation/FOUNDATION_C2_1_MANIFEST.md`; lo stato operativo complessivo è in `docs/PROJECT_STATE.md`.
 
 ## Parallelo con il Machine Learning
 
@@ -188,7 +191,7 @@ La telemetria consente di distinguere:
 
 ## Evoluzione sperimentale
 
-Questa sezione descrive **l'evoluzione del metodo**, non la cronologia di score e classifiche. I risultati contingenti dei singoli round sono conservati in `docs/EXPERIMENT_LOG.md` e `results/`.
+Questa sezione descrive **l'evoluzione del metodo**, non la cronologia di score e classifiche. I risultati contingenti dei singoli round sono indicizzati in `docs/EXPERIMENT_LOG.md` e conservati nelle vertical slice sotto `experiments/`.
 
 ### Esplorazione e sensitivity analysis
 
@@ -407,7 +410,8 @@ Le fonti canoniche sono:
 - [Project State](docs/PROJECT_STATE.md) — stato corrente e gate operativo;
 - [Experiment Log](docs/EXPERIMENT_LOG.md) — cronologia degli esperimenti e risultati;
 - [New Session Restart Point](docs/NEW_SESSION.md) — punto operativo di ripresa;
-- `results/` — evidenza, freeze, tournament, report e artifact delle singole iterazioni.
+- `experiments/` — design, prompt, evidenza, freeze e report delle singole iterazioni;
+- `data/replays/` — replay esterni con manifest e ruolo epistemico.
 
 ## Ambiente Python
 
@@ -464,8 +468,11 @@ EXPERIMENT_LOG
 NEW_SESSION
 -> punto operativo di ripresa
 
-results/
--> evidenza e artifact riproducibili
+experiments/
+-> ciclo completo e artifact riproducibili di ciascun round
+
+data/
+-> input esterni e replay immutabili
 ```
 
 Questa separazione consente al README di descrivere l'approccio sperimentale senza trasformarsi nella fotografia di una specifica iterazione.

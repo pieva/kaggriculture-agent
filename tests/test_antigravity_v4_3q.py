@@ -32,12 +32,23 @@ def test_antigravity_v4_real_engine_prefix_is_fail_closed():
     assert instance.fallback_count == 0
 
 
-def test_antigravity_v4_canonical_submission_matches_freeze():
+def test_antigravity_v4_archived_submission_matches_freeze():
     root = Path(__file__).resolve().parents[1]
-    canonical = root / "submission" / "submission_antigravity.py"
+    canonical = (
+        root
+        / "experiments"
+        / "archive"
+        / "e16"
+        / "artifacts"
+        / "freeze"
+        / "legacy_submissions"
+        / "submission_antigravity.py"
+    )
     frozen = (
         root
-        / "results"
+        / "docs"
+        / "governance"
+        / "history"
         / "model_spec_c2"
         / "antigravity"
         / "freeze"

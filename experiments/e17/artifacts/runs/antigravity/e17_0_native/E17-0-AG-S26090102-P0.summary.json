@@ -1,0 +1,68 @@
+{
+  "action_count_baseline": 719,
+  "action_count_instrumented": 719,
+  "action_sequence_sha256_baseline": "BE816AA708B04535F858F554D8529871F743BE389E4317B2A6AAA7F127F6196A",
+  "action_sequence_sha256_instrumented": "BE816AA708B04535F858F554D8529871F743BE389E4317B2A6AAA7F127F6196A",
+  "errors_baseline": 0,
+  "errors_instrumented": 0,
+  "fallback_baseline": 0,
+  "fallback_instrumented": 0,
+  "ledger_metrics": {
+    "action_batches": 719,
+    "action_sequence_sha256": "BE816AA708B04535F858F554D8529871F743BE389E4317B2A6AAA7F127F6196A",
+    "classified_outcome_coverage": 1.0,
+    "derived_eod_escape_count": 0,
+    "derived_escape_events": 0,
+    "emitted_commands": 721,
+    "ledger_record_coverage": 1.0,
+    "ledger_records": 721,
+    "market_classified_outcome_coverage": 1.0,
+    "market_outcome_counts": {
+      "EXECUTED": 2,
+      "NOT_EXECUTED": 0,
+      "UNKNOWN": 0
+    },
+    "market_records": 2,
+    "outcome_counts": {
+      "EXECUTED": 721,
+      "NOT_EXECUTED": 0,
+      "UNKNOWN": 0
+    },
+    "schema_version": "E17_LEDGER_V1",
+    "technical_errors": 0
+  },
+  "plain_vs_instrumented_actions": true,
+  "plain_vs_instrumented_terminal": true,
+  "reward_baseline": 0.0,
+  "reward_instrumented": 0.0,
+  "routine_hash": "7193885A584AC82E177BFB2E38E37F0B7884F465140C9FFE7FD6E9E7C9443C67",
+  "run_id": "E17-0-AG-S26090102-P0",
+  "seat": 0,
+  "seed": 26090102,
+  "telemetry": {
+    "ANIMAL_ESCAPE": 0,
+    "FINAL_MONEY": 0.0,
+    "MOVE_PER_PRODUCTIVE_ACTION": 1.5,
+    "MOVE_actions": 3,
+    "PASS_actions": 714,
+    "Q1_activation_day": 0,
+    "Q2_activation_day": 0,
+    "action_requests_by_opcode": {
+      "DIG": 2,
+      "EAST": 1,
+      "NORTH": 1,
+      "PASS": 714,
+      "SOUTH": 1
+    },
+    "agent_version": "ANTIGRAVITY-E17.0-NATIVE-3Q-CROP-FIRST-V1",
+    "max_active_animals": 0,
+    "max_active_crops": 0,
+    "max_hands": 0,
+    "max_quadrants": 3,
+    "productive_actions": 2,
+    "routine_sha256": "7193885A584AC82E177BFB2E38E37F0B7884F465140C9FFE7FD6E9E7C9443C67",
+    "sale_requests": {}
+  },
+  "terminal_state_sha256_baseline": "9BD082479350404C1B94DEFF7C23DFE511353F7877EE5B4EAA659FB0E55BDF9B",
+  "terminal_state_sha256_instrumented": "9BD082479350404C1B94DEFF7C23DFE511353F7877EE5B4EAA659FB0E55BDF9B"
+}

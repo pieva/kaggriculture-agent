@@ -2,14 +2,14 @@ from __future__ import annotations
 
 from kaggle_environments import make
 
-from agricola.strategy.codex_3q_mixed_high_density import (
+from agricola.strategy.codex.codex_3q_mixed_high_density import (
     Q2_CROP_POSITIONS,
     Q2_SHEEP_PASTURES,
     V9_MODEL_SPEC_VERSION,
     create_v9_agent,
     load_v9_config,
 )
-from agricola.strategy.codex_v9_routine_data import ROUTINE_ACTIONS, ROUTINE_SHA256
+from agricola.strategy.codex.codex_v9_routine_data import ROUTINE_ACTIONS, ROUTINE_SHA256
 
 
 def _pass_agent(observation, configuration=None):

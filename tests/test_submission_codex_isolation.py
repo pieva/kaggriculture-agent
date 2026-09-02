@@ -8,7 +8,7 @@ from pathlib import Path
 
 from kaggle_environments import make
 
-from agricola.strategy.codex_3q_mixed_high_density import create_v9_agent
+from agricola.strategy.codex.codex_3q_mixed_high_density import create_v9_agent
 from scripts.build_submission_codex_v9 import build_submission_codex_v9
 
 

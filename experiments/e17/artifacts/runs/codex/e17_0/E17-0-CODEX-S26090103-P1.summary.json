@@ -1,0 +1,43 @@
+{
+  "action_count_baseline": 719,
+  "action_count_instrumented": 719,
+  "action_parity": true,
+  "action_sequence_sha256_baseline": "B6E0C7A679645ACD0DBD17BFDE5CA822EA88F783FAFCAB8F18A960AF3F262822",
+  "action_sequence_sha256_instrumented": "B6E0C7A679645ACD0DBD17BFDE5CA822EA88F783FAFCAB8F18A960AF3F262822",
+  "errors_baseline": 0,
+  "errors_instrumented": 0,
+  "fallback_baseline": 0,
+  "fallback_instrumented": 0,
+  "ledger_metrics": {
+    "action_batches": 719,
+    "action_sequence_sha256": "B6E0C7A679645ACD0DBD17BFDE5CA822EA88F783FAFCAB8F18A960AF3F262822",
+    "classified_outcome_coverage": 0.8805417293668248,
+    "derived_eod_escape_count": 0,
+    "derived_escape_events": 0,
+    "emitted_commands": 8639,
+    "ledger_record_coverage": 1.0,
+    "ledger_records": 8639,
+    "market_classified_outcome_coverage": 0.18911685994647637,
+    "market_outcome_counts": {
+      "EXECUTED": 211,
+      "NOT_EXECUTED": 1,
+      "UNKNOWN": 909
+    },
+    "market_records": 1121,
+    "outcome_counts": {
+      "EXECUTED": 7200,
+      "NOT_EXECUTED": 407,
+      "UNKNOWN": 1032
+    },
+    "schema_version": "E17_LEDGER_V1",
+    "technical_errors": 0
+  },
+  "outcome_parity": true,
+  "reward_baseline": 112544.0,
+  "reward_instrumented": 112544.0,
+  "run_id": "E17-0-CODEX-S26090103-P1",
+  "seat": 1,
+  "seed": 26090103,
+  "terminal_state_sha256_baseline": "637D4D395E7C42A9F8FE7AC07BB65BA7146CC24129114F0291749E1E7E164CC9",
+  "terminal_state_sha256_instrumented": "637D4D395E7C42A9F8FE7AC07BB65BA7146CC24129114F0291749E1E7E164CC9"
+}

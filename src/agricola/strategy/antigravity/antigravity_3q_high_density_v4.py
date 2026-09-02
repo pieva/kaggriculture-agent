@@ -16,7 +16,7 @@ from collections import Counter
 from pathlib import Path
 from typing import Any
 
-from agricola.strategy.codex_v9_routine_data import ROUTINE_ACTIONS, ROUTINE_SHA256
+from agricola.strategy.codex.codex_v9_routine_data import ROUTINE_ACTIONS, ROUTINE_SHA256
 
 V4_SPEC_VERSION = "ANTIGRAVITY-C2-V4.0-3Q-HIGH-DENSITY-MEGA-CLUSTER"
 _SAFE_PASS = {"farmer": ["PASS"], "hands": [], "market": []}

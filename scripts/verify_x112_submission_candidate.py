@@ -15,8 +15,8 @@ from agricola.strategy.productive_mass_roi import (
 
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
-SUBMISSION_PATH = PROJECT_ROOT / "submission" / "submission.py"
-RESULT_PATH = PROJECT_ROOT / "results" / "e12" / "x112" / "submission_candidate_verification.json"
+SUBMISSION_PATH = PROJECT_ROOT / "experiments" / "archive" / "e15" / "artifacts" / "freeze" / "legacy_submissions" / "submission.py"
+RESULT_PATH = PROJECT_ROOT / "experiments" / "archive" / "e12" / "artifacts" / "x112" / "submission_candidate_verification.json"
 SEEDS = (0, 421521921)
 EXPECTED_FINALS = {0: 42491.0, 421521921: 48313.0}
 

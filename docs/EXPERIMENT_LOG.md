@@ -2,13 +2,35 @@
 
 | Experiment | Title | Result Summary | Status | Key Takeaways & Decisions |
 |---|---|---|:---:|---|
-| C2-AG-90K | Antigravity C2 Dual-Quadrant (Q0+Q1) Full Livestock Candidate | Gross $91,010.42, Net $63,922.33 (Phase B) / $66,630.67 (Phase C), Peak $87,740.00, 0 Escapes | **ACTIVE_CANDIDATE** | 13-workforce dual-quadrant (Q0+Q1) architecture with dynamic pasture building eligibility on Q1. 12 animals total (6 COW + 6 SHEEP) across 12 pastures. 136.50 Milk, 95.83 Wool, 240 crop units. 0 escapes across all episodes. Gross revenue reached $91,010.42. Parity 100% bit-exact on submission/submission_antigravity.py. 209/209 test pass. |
+| E17-EXT1 | Codex E17.0 3Q External Control | Submission E17 behaviorally identical to V9; parity `719/719`, E17.0 `4314/4314`, ledger 100%; rating intermedio `996` da `600` | **EXTERNAL_VALIDATION_LIVE** | Submission Kaggle `559588638`. Rating ancora in assestamento: nessuna conclusione finale o causale. Copilot resta locale, Antigravity è in pausa e il prossimo sviluppo attende la stabilizzazione. |
+| C2-AG-90K | Antigravity C2 Dual-Quadrant (Q0+Q1) Full Livestock Candidate | Gross $91,010.42, Net $63,922.33 (Phase B) / $66,630.67 (Phase C), Peak $87,740.00, 0 Escapes | **ACTIVE_CANDIDATE** | 13-workforce dual-quadrant (Q0+Q1) architecture with dynamic pasture building eligibility on Q1. 12 animals total (6 COW + 6 SHEEP) across 12 pastures. 136.50 Milk, 95.83 Wool, 240 crop units. 0 escapes across all episodes. Gross revenue reached $91,010.42. Parity 100% bit-exact on experiments/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py. 209/209 test pass. |
 | C2-AG-75K | Antigravity C2 Dual-Quadrant (Q0+Q1) 75K Candidate Build & Benchmark | Gross $75,075.00, Net $60,437.17 (Phase B) / $63,811.17 (Phase C), 0 Escapes | **SUPERSEDED** | 13-workforce dual-quadrant (Q0+Q1) architecture with cashflow-gated land unlock (Day 5-8). Superseded by Full Livestock release. |
 | C2-AG-50K | Antigravity C2 Compact-Q0 50K Candidate Build & Benchmark | Mean $56,386.50 (Phase B) / $57,756.33 (Phase C), 0 Escapes, 0 Misses | **SUPERSEDED** | 7-workforce single-quadrant (Q0) architecture with 3 COW + 3 SHEEP and 18 crop tiles. Achieved full livestock safety and recovered crop productivity, surpassing external benchmark. Foundation frozen. |
 | C2-CODEX-V7 | Codex C2 Compact Q0 Routine V7 Candidate Build & Benchmark | Mean $39,265.67, Technical PASS, Economic FAILURE | **BUILD_NOT_READY** | Technical PASS (6/6 episodes DONE, 0 error/fallback). Mean $39,265.67 (+$29.4k vs V6, +$1,268.00 vs AG Q0 3+3, -$17,506.33 vs LuCcc). Crop serviceability strongly improved (MELON 95.0, STRAWBERRY 40.17, $29.8k rev). Livestock serviceability is primary bottleneck (MILK 28.17, WOOL 14.67, 24 escapes, $10.7k rev). Routing inefficient (MOVE/prod 3.1923, util 67.43%, 50 misses). Next step: Read-only AG-vs-Codex V7 serviceability/routing forensic. DLC simplification deferred. Foundation frozen. |
 | C2-FND | Model Foundation C2 Layer 1–5 Freeze & Governance Alignment | Layer 1–5 Frozen (PASS), 11/11 DLC corrections verified, governance aligned | **FOUNDATION FROZEN** | Complete period-centric Model Foundation (Engine Contract, Ontology C2, State Machine C2, Feature Model C2, Decision Lifecycle Contract C2). 0 P0 / 0 P1 open. Checkpoint committed. Next gate: Independent MODEL_SPEC C2 Revision & BUILD. |
 
 ## Recent Experiments Log
+
+## E17-EXT1 — Codex 3Q external-control release
+
+**Date:** 2026-09-02
+
+**Release:** `CODEX-E17.0-EXTERNAL-CONTROL-V1`
+
+**Status:** `EXTERNAL_VALIDATION_LIVE / SCORE_STABILIZING`
+
+La submission canonica mantiene esattamente le 719 azioni della Codex V9 e
+aggiorna soltanto i metadati di release. SHA-256:
+`0428A6244C28E064BEDCEDC21C793D50A7C3231B8B7ADADF154BF40667833FC6`.
+Il confronto esterno sostituisce il torneo locale incompleto; l'aspettativa
+preregistrata è uno score nell'intorno del riferimento V9 `1159,9`, senza
+uplift sistematico attribuibile a E17.0. La submission Kaggle `559588638` è
+attiva e ha raggiunto una rilevazione intermedia di `996` da `600` (`+396`).
+Lo snapshot include ancora un episodio in corso: il dato non è uno score
+stabile e la prossima evoluzione resta sospesa. Copilot conserva la propria
+baseline nativa senza submission; Antigravity è in pausa per crediti.
+
+---
 
 ## C2-AG-90K — Antigravity C2 Dual-Quadrant (Q0+Q1) Full Livestock Release
 
@@ -20,7 +42,7 @@
 **Architecture:** `Q0_Q1_16CROP_12PASTURE_6COW_6SHEEP_13WORKERS`
 **Key Documents:**
 - Submission Description: `results/model_spec_c2/antigravity/SUBMISSION_DESCRIPTION.md`
-- Standalone Submission: `submission/submission_antigravity.py` & `submission/submission.py`
+- Standalone Submission: `experiments/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py` & `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py`
 - Test Suite: `tests/test_antigravity_75k_candidate.py` (209/209 workspace test pass)
 
 ### Summary Statistics (12 Official Episodes)
@@ -42,7 +64,7 @@
 | E13 | Multi-Agent Forensic Replay Analysis | Episode 101971376 ($133k vs $7.1k) | **FORENSIC CONSENSUS** | Independent blind replay analysis revealed ~14.5x watering delta (1,145 vs 79), $76.5k cash crop gap, and Day 1/Day 12 operational divergence vs physical capacity parity (292 vs 291 HIREs, 75 tiles). |
 | E12-X1.7 | Corrective Architecture Audit | Stage A Architectural Verdict: PASS | **CORRECTIVE ARCHITECTURE VERIFIED** | Implemented strict State Machine Gating (`LIVESTOCK_BOOTSTRAP` $\rightarrow$ `LIVESTOCK_CORE_ESTABLISHED` $\rightarrow$ `CROP_EXPANSION`). Pre-built 2x2 pastures Turn 4-24, Cow #1 placed Turn 8, outer crop expansion gated Turn 12. 87/87 tests PASS. |
 | E12-X1.7 | Submission Provenance & Opening Audit | Mismatch Identified & Fixed | **REBUILD VERIFIED** | Root cause: `scripts/build_submission.py` had legacy E11 config hardcoded. Fixed builder, verified 100% Turn 1–24 equivalence (84/84 tests PASS). Hash: `22EB239B108AC045AC86548B6A9444EDEF1939072756C082C2EC8D95EF13881F`. Re-upload required. |
-| E12-X1.7 | Kaggle External Validation | $22,386.80 Mean Money (83/83 Unit Tests PASS) | **EXTERNAL VALIDATION READY** | Provenance verified (`submission/submission.py`, SHA-256: `F12068386FC0...`). Recommendation: `PROCEED E12-X1.8 — EARLIER WORKFORCE / CAPACITY ACTIVATION`. |
+| E12-X1.7 | Kaggle External Validation | $22,386.80 Mean Money (83/83 Unit Tests PASS) | **EXTERNAL VALIDATION READY** | Provenance verified (`experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py`, SHA-256: `F12068386FC0...`). Recommendation: `PROCEED E12-X1.8 — EARLIER WORKFORCE / CAPACITY ACTIVATION`. |
 | E12-D3 | Marginal Capacity ROI Audit | Late Activation @ Day 18–22, 0% Melon Completion | **DIAGNOSTIC COMPLETE** | Identified root cause `LATE_CAPACITY_ACTIVATION` & `MELON_HORIZON_MISMATCH` for +$378 (+1.7%) gain in X1.7. Recommendation: `X1.8 EARLIER WORKFORCE / CAPACITY ACTIVATION`. |
 | E12-X1.7 | Workforce Capacity Scaling (5 Crop Workers @ 4T) | $22,386.80 Mean Final Money | **PASS (Positive Capacity Scaling)** | Scaled from 4 to 5 crop workers (20 crop tiles capacity @ 4T/worker). Productive actions increased to 1,620/game. Recommendation: `PROCEED E12-X1.8 — 6 CROP WORKERS @ 4 TILES/WORKER`. |
 | E12-X1.6 | Functional Workforce & Hybrid Economic Scaling | $22,008.80 Mean Final Money (+$15.8k / +258%) | **PASS (Major Breakthrough)** | Functional role specialization (Worker 0 Livestock vs Hands Crop), 2x2 core monetization, Melon ($94.67/act) allocation. Recommendation: `PROCEED E12-X1.7 CAPACITY OPTIMIZATION`. |
@@ -117,12 +139,12 @@
 **Authority:** Multi-Agent Consensus (Antigravity, Codex, Copilot)
 **Status:** `FOUNDATION FROZEN` | `GOVERNANCE ALIGNED` | `CHECKPOINT COMMITTED`
 **Key Documents:**
-- Engine Contract: `results/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md`
-- Ontology C2: `docs/model/ontology/ONTOLOGY_C2.md`
-- State Machine C2: `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2.md`
-- Feature Model C2: `docs/model/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2.md`
+- Engine Contract: `docs/governance/history/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md`
+- Ontology C2: `docs/foundation/ontology/ONTOLOGY_C2.md`
+- State Machine C2: `docs/foundation/state_machine/KAGGRICULTURE_STATE_MACHINE_C2.md`
+- Feature Model C2: `docs/foundation/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2.md`
 - Decision Lifecycle Contract C2: `docs/model/decision_lifecycle/KAGGRICULTURE_DECISION_LIFECYCLE_CONTRACT_C2.md`
-- Final Freeze Reviews: `results/model_spec_c2/foundation_revision/FOUNDATION_FINAL_FREEZE_REVIEW.md`, `results/model_spec_c2/foundation_revision/DECISION_LIFECYCLE_TARGETED_FINAL_FREEZE_REVIEW.md`
+- Final Freeze Reviews: `docs/governance/history/model_spec_c2/foundation_revision/FOUNDATION_FINAL_FREEZE_REVIEW.md`, `docs/governance/history/model_spec_c2/foundation_revision/DECISION_LIFECYCLE_TARGETED_FINAL_FREEZE_REVIEW.md`
 
 ### Synthetic Milestones:
 1. **Engine Contract & Period Ledger Audit:** Verified engine facts (`kaggle-environments 1.32.7`), canonical fingerprint (`4378b60f...`), species inventory (Goose/Cow/Sheep), biological periods and inventory overflow semantics.
@@ -137,7 +159,7 @@
 **Phase:** TOURNAMENT SYNTHESIS & EPISTEMIC CLOSURE
 **Authority:** Multi-Agent Consensus (Antigravity, Codex, Copilot)
 **Status:** `EPISTEMICALLY CLOSED` | `FROZEN ARTIFACTS UNCHANGED`
-**Final Synthesis Document:** `results/e15/E15_FINAL_TOURNAMENT_SYNTHESIS.md`
+**Final Synthesis Document:** `experiments/archive/e15/artifacts/E15_FINAL_TOURNAMENT_SYNTHESIS.md`
 
 ### Final Tournament Standings & Match Results
 
@@ -247,17 +269,17 @@ Congelare in modo verificabile e immutabile gli artefatti pre-match (ontologia, 
 
 ### Key Milestones & Governance Protocol
 1. **7/7 Frozen Artifacts Verified by SHA256**:
-   - `Canonical Ontology` (`results/e15/freeze/ONTOLOGY_E15_FROZEN.md`): `5bab9c13cbf6d88b818ad6aca401fdb9bacc811d656dab4e39fe7d8c634e0bfa`
-   - `Antigravity MODEL_SPEC` (`results/e15/freeze/MODEL_SPEC_ANTIGRAVITY_E15_FROZEN.md`): `f4eb68d232586394ae83399ddc4405cf211ead57e3afa183c655611eb6943a46`
-   - `Codex MODEL_SPEC` (`results/e15/freeze/MODEL_SPEC_CODEX_E15_FROZEN.md`): `9e38dfe16b5e22b47df890abc105519920f5987de683e9da22638c0a5a57aed7`
-   - `Copilot MODEL_SPEC` (`results/e15/freeze/MODEL_SPEC_COPILOT_E15_FROZEN.md`): `d08dde958f929dab1a28f6a92343618d4b31a5b3cc12cf10c6673c92900d0686`
-   - `Antigravity Submission` (`results/e15/freeze/submission_antigravity_E15_FROZEN.py`): `629c017271891e0b7d7a4b0e655df40b0aac66ee8af1bc00d5718fb8bdfd404d`
-   - `Codex Submission` (`results/e15/freeze/submission_codex_E15_FROZEN.py`): `fe269bf365dd7167644e5867ca857f1f77d4009f9ce66c0e2afa3e78d6a4c9f3`
-   - `Copilot Submission` (`results/e15/freeze/submission_copilot_E15_FROZEN.py`): `604bd6201df08b3c4dbfb00c2e49bf8963c7a32b6bba6e14c04d046e308b8abb`
+   - `Canonical Ontology` (`experiments/archive/e15/artifacts/freeze/ONTOLOGY_E15_FROZEN.md`): `5bab9c13cbf6d88b818ad6aca401fdb9bacc811d656dab4e39fe7d8c634e0bfa`
+   - `Antigravity MODEL_SPEC` (`experiments/archive/e15/artifacts/freeze/MODEL_SPEC_ANTIGRAVITY_E15_FROZEN.md`): `f4eb68d232586394ae83399ddc4405cf211ead57e3afa183c655611eb6943a46`
+   - `Codex MODEL_SPEC` (`experiments/archive/e15/artifacts/freeze/MODEL_SPEC_CODEX_E15_FROZEN.md`): `9e38dfe16b5e22b47df890abc105519920f5987de683e9da22638c0a5a57aed7`
+   - `Copilot MODEL_SPEC` (`experiments/archive/e15/artifacts/freeze/MODEL_SPEC_COPILOT_E15_FROZEN.md`): `d08dde958f929dab1a28f6a92343618d4b31a5b3cc12cf10c6673c92900d0686`
+   - `Antigravity Submission` (`experiments/archive/e15/artifacts/freeze/submission_antigravity_E15_FROZEN.py`): `629c017271891e0b7d7a4b0e655df40b0aac66ee8af1bc00d5718fb8bdfd404d`
+   - `Codex Submission` (`experiments/archive/e15/artifacts/freeze/submission_codex_E15_FROZEN.py`): `fe269bf365dd7167644e5867ca857f1f77d4009f9ce66c0e2afa3e78d6a4c9f3`
+   - `Copilot Submission` (`experiments/archive/e15/artifacts/freeze/submission_copilot_E15_FROZEN.py`): `604bd6201df08b3c4dbfb00c2e49bf8963c7a32b6bba6e14c04d046e308b8abb`
 2. **P0/P1 Symmetry Audit**:
-   - Audit source-level di `kaggriculture.py` completato in `results/e15/P0_P1_ENVIRONMENT_AUDIT.md` con esito `NO_MATERIAL_POSITION_BIAS_FOUND`.
+   - Audit source-level di `kaggriculture.py` completato in `experiments/archive/e15/artifacts/P0_P1_ENVIRONMENT_AUDIT.md` con esito `NO_MATERIAL_POSITION_BIAS_FOUND`.
 3. **Runner Freeze Enforcement & Fail-Closed**:
-   - `scripts/run_e15_tournament.py` aggiornato per eseguire direttamente e unicamente i file da `results/e15/freeze/`.
+   - `experiments/archive/e01/tools/run_e15_tournament.py` aggiornato per eseguire direttamente e unicamente i file da `results/e15/freeze/`.
    - Verifica SHA256 pre-esecuzione contro `FREEZE_MANIFEST.md`; abort immediato (`sys.exit(1)`) se un hash differisce.
 4. **Pre-Declared Tournament Schedule & Seeds**:
    - **M1**: Antigravity (P0) vs Codex (P1) | Seed: `1113294977`
@@ -283,7 +305,7 @@ Isolare formalmente i perimetri di codice e i modelli concettuali dei tre agenti
 ### Key Milestones
 1. **Repository & Codebase Isolation**:
    - Decoupled packages created: `src/agricola/strategy/antigravity/`, `src/agricola/strategy/copilot/`, and isolated Codex candidate.
-   - Independent standalone submissions: `submission/submission_antigravity.py`, `submission/submission_codex.py`, `submission/submission_copilot.py`.
+   - Independent standalone submissions (historical E15 freeze): `experiments/archive/e15/artifacts/freeze/submission_antigravity_E15_FROZEN.py`, `experiments/archive/e15/artifacts/freeze/submission_codex_E15_FROZEN.py`, `experiments/archive/e15/artifacts/freeze/submission_copilot_E15_FROZEN.py`.
 2. **Canonical Ontology (64 concept_ids)**:
    - Consolidata in `docs/model_specs/ONTOLOGY.md` attraverso 8 sezioni economiche (A–H).
    - Tassonomia rigorosa: `USED / PARTIAL / NOT_USED` e `FULL / PARTIAL / ABSENT / BROADER / NARROWER / CONFLICT`.
@@ -442,7 +464,7 @@ Verificare se Antigravity è in grado di analizzare autonomamente Kaggriculture,
 
 ### Prompt
 
-See `docs/prompts/E01-01_define_plan.md`, `docs/prompts/E01-02_review_feedback.md`, `docs/prompts/E01-03_verify.md`, `docs/prompts/E01-04_verify_review.md`.
+See `experiments/archive/e01/prompts/E01-01_define_plan.md`, `docs/prompts/E01-02_review_feedback.md`, `docs/prompts/E01-03_verify.md`, `docs/prompts/E01-04_verify_review.md`.
 
 ### Observations & Actions
 
@@ -450,7 +472,7 @@ See `docs/prompts/E01-01_define_plan.md`, `docs/prompts/E01-02_review_feedback.m
 2. **Implementation Plan & Repository Hygiene**: Prodotto ed approvato l'Implementation Plan; creato `README.md` e `.gitignore` per escludere cache e `.venv`.
 3. **Infrastruttura Modulare & Bundling**:
    - Creato il pacchetto `src/agricola/` (`GameState`, `ActionBuilder`, `CarrotLoopAgent`, `agent.py`).
-   - Implementato lo script `scripts/build_submission.py` che genera il file standalone `submission/submission.py`.
+   - Implementato lo script `scripts/build_submission.py` che genera il file standalone `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py`.
 4. **Rinominazione Metrica Disqualification Rate**:
    - Rinominata la metrica da "Invalid Action Rate" a **Disqualification Rate (%)** per riflettere con esattezza l'osservabile misurato dall'engine (percentuale di episodi conclusi con stato `INVALID` o `ERROR`).
 5. **Misurazione Precisa Latenza Agente**:
@@ -458,23 +480,23 @@ See `docs/prompts/E01-01_define_plan.md`, `docs/prompts/E01-02_review_feedback.m
 6. **Livello di Verifica & Test**:
    - Chiaramente distinti gli unit test (`GameState`, `ActionBuilder`, `agent` output), gli smoke/integration test (`test_short_simulation_smoke`, `test_build_and_run_submission_smoke`) e il benchmark completo E01 (30 episodi $\times$ 720 turni = 21.600 turni).
 7. **Validazione Kaggle Platform**:
-   - `submission/submission.py` è stato caricato sulla piattaforma Kaggle ed eseguito con successo (Status **`Complete`**, Score iniziale **`600.0`**).
+   - `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py` è stato caricato sulla piattaforma Kaggle ed eseguito con successo (Status **`Complete`**, Score iniziale **`600.0`**).
 8. **Esecuzione Osservabile VERIFY**:
    - Eseguito un episodio completo di 720 turni tramite Antigravity ed ispezionato il registro degli stati `env.steps`.
-   - Confermato e documentato in `docs/versions/E01_verify_antigravity.md` il ciclo operativo: `BUY_SEED → PLANT → WATER → PASS → HARVEST → PLANT → SELL`.
+   - Confermato e documentato in `experiments/archive/e01/reports/E01_verify_antigravity.md` il ciclo operativo: `BUY_SEED → PLANT → WATER → PASS → HARVEST → PLANT → SELL`.
    - Verificato univocamente per l'episodio VERIFY: `status: DONE`, 720/720 turni completati, `money finale: 3564.0`, `reward finale: 3564.0` (`reward == farm["money"]`).
 
 ### Human intervention
 
-- Approvazione dell'Implementation Plan (`docs/prompts/E01-01_define_plan.md`).
+- Approvazione dell'Implementation Plan (`experiments/archive/e01/prompts/E01-01_define_plan.md`).
 - Review indipendente tramite `docs/prompts/E01-02_review_feedback.md` (consolidamento metrica, latenza, README, `.gitignore`).
 - Review del VERIFY tramite `docs/prompts/E01-04_verify_review.md` (chiarimento ed unificazione univoca di reward e money a 3564.0).
 
 ### Outcome & Verification Evidence
 
 - **Suite di Test (`pytest tests/`)**: 5/5 test superati con successo (3 unit test, 2 smoke integration test).
-- **Bundling Submission (`scripts/build_submission.py`)**: `submission/submission.py` generato e verificato su Kaggle (Score `600.0`).
-- **Benchmark Metric Summary E01 (`results/e01_baseline.json`)**:
+- **Bundling Submission (`scripts/build_submission.py`)**: `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py` generato e verificato su Kaggle (Score `600.0`).
+- **Benchmark Metric Summary E01 (`experiments/archive/e01/artifacts/baseline.json`)**:
   - Total Episodes: 30 (21.600 turni totali)
   - Completion Rate: 100.00%
   - Disqualification Rate: 0.00%
@@ -518,17 +540,17 @@ Sostituire la monocultura statica di carote della baseline E01 (`CarrotLoopAgent
 
 ### PLAN & Evidenze
 
-- Implementation Plan: [`docs/plans/E02_Dynamic_Crop_Selection_&_ROI_Scaling.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/plans/E02_Dynamic_Crop_Selection_&_ROI_Scaling.md)
-- Benchmark JSON E02: [`results/e02_roi_crop.json`](file:///c:/Users/pietr/Projects/kaggriculture-agent/results/e02_roi_crop.json)
-- Evidenza BUILD: [`docs/versions/E02_build_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E02_build_antigravity.md)
-- Evidenza VERIFY REVIEW: [`docs/versions/E02_verify_review_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E02_verify_review_antigravity.md)
-- Evidenza Analisi Simulazione: [`docs/versions/E02_simulation_analysis.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E02_simulation_analysis.md)
-- Evidenza SHIP REVIEW: [`docs/versions/E02_ship_review_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E02_ship_review_antigravity.md)
+- Implementation Plan: `docs/plans/E02_Dynamic_Crop_Selection_&_ROI_Scaling.md` *(riferimento storico non presente nell'istantanea)*
+- Benchmark JSON E02: [`experiments/archive/e02/artifacts/roi_crop.json`](../experiments/archive/e02/artifacts/roi_crop.json)
+- Evidenza BUILD: `docs/versions/E02_build_antigravity.md` *(riferimento storico non presente nell'istantanea)*
+- Evidenza VERIFY REVIEW: [`experiments/archive/e02/reports/E02_verify_review_antigravity.md`](../experiments/archive/e02/reports/E02_verify_review_antigravity.md)
+- Evidenza Analisi Simulazione: [`experiments/archive/e02/reports/E02_simulation_analysis.md`](../experiments/archive/e02/reports/E02_simulation_analysis.md)
+- Evidenza SHIP REVIEW: [`experiments/archive/e02/reports/E02_ship_review_antigravity.md`](../experiments/archive/e02/reports/E02_ship_review_antigravity.md)
 
 ### Benchmark & Outcome (Valutazione Locale)
 
 - **Suite di Test (`pytest tests/`)**: **7/7 test superati**.
-- **Benchmark Metric Summary E02 (`results/e02_roi_crop.json`)**:
+- **Benchmark Metric Summary E02 (`experiments/archive/e02/artifacts/roi_crop.json`)**:
   - Total Episodes: 30
   - Completion Rate: 100.00%
   - Disqualification Rate: 0.00%
@@ -577,18 +599,18 @@ Valutare l'impatto dell'espansione del footprint di coltivazione da 1 tile a un 
 
 ### PLAN & Evidenze
 
-- Implementation Plan: [`docs/plans/E03_Multi_Tile_Scaling.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/plans/E03_Multi_Tile_Scaling.md)
-- Benchmark JSON E03: [`results/e03_multi_tile.json`](file:///c:/Users/pietr/Projects/kaggriculture-agent/results/e03_multi_tile.json)
-- Evidenza BUILD: [`docs/versions/E03_build_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E03_build_antigravity.md)
-- Evidenza VERIFY: [`docs/versions/E03_verify_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E03_verify_antigravity.md)
-- Evidenza REVIEW: [`docs/versions/E03_review_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E03_review_antigravity.md)
-- Evidenza SHIP: [`docs/versions/E03_ship_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E03_ship_antigravity.md)
-- Screenshot Kaggle: [`docs/screenshots/E03-001_kaggle_submission_successful.png`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/screenshots/E03-001_kaggle_submission_successful.png)
+- Implementation Plan: `docs/plans/E03_Multi_Tile_Scaling.md` *(riferimento storico non presente nell'istantanea)*
+- Benchmark JSON E03: [`experiments/archive/e03/artifacts/multi_tile.json`](../experiments/archive/e03/artifacts/multi_tile.json)
+- Evidenza BUILD: `docs/versions/E03_build_antigravity.md` *(riferimento storico non presente nell'istantanea)*
+- Evidenza VERIFY: [`experiments/archive/e03/reports/E03_verify_antigravity.md`](../experiments/archive/e03/reports/E03_verify_antigravity.md)
+- Evidenza REVIEW: [`experiments/archive/e03/reports/E03_review_antigravity.md`](../experiments/archive/e03/reports/E03_review_antigravity.md)
+- Evidenza SHIP: [`experiments/archive/e03/reports/E03_ship_antigravity.md`](../experiments/archive/e03/reports/E03_ship_antigravity.md)
+- Screenshot Kaggle: [`data/screenshots/E03-001_kaggle_submission_successful.png`](../data/screenshots/E03-001_kaggle_submission_successful.png)
 
 ### Benchmark & Outcome (Valutazione Locale)
 
 - **Suite di Test (`pytest tests/`)**: **14/14 test superati** (100% success rate in 2.78s).
-- **Benchmark Metric Summary E03 (`results/e03_multi_tile.json`)**:
+- **Benchmark Metric Summary E03 (`experiments/archive/e03/artifacts/multi_tile.json`)**:
   - Total Episodes: 30 (21.600 turni totali)
   - Completion Rate: 100.00%
   - Disqualification Rate: 0.00%
@@ -659,8 +681,8 @@ Valutare l'espansione del footprint produttivo dal cluster 2×2 (4 tile) di E03 
 
 ### PLAN & Evidenze
 
-- Implementation Plan: [`docs/plans/E04_Initial_NW_Scaling.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/plans/E04_Initial_NW_Scaling.md)
-- Evidenza VERIFY: [`docs/versions/E04_verify_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E04_verify_antigravity.md)
+- Implementation Plan: `docs/plans/E04_Initial_NW_Scaling.md` *(riferimento storico non presente nell'istantanea)*
+- Evidenza VERIFY: [`experiments/archive/e04/reports/E04_verify_antigravity.md`](../experiments/archive/e04/reports/E04_verify_antigravity.md)
 
 ### Benchmark & Outcome (Valutazione Locale 30 Episodi)
 
@@ -726,12 +748,12 @@ Valutare l'introduzione di forza lavoro subordinata giornaliera tramite l'azione
    - Estesi `GameState` (`hands_positions`, `hires_today`) e `ActionBuilder` (`hire()`, `add_hand_action()`).
    - Creato `src/agricola/strategy/hire_nw_cluster_roi.py` (`HIRENWClusterROIAgent`).
    - Creato `tests/test_hire_nw_cluster.py` (6/6 test superati, 25/25 suite completa).
-   - Generato e validato `submission/submission.py`.
-4. **Isolamento Risultati (E05-03B)**: Corretto il default in `scripts/run_eval.py` in `results/latest_eval.json` per evitare la sovrascrittura accidentale di `results/e01_baseline.json`.
+   - Generato e validato `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py`.
+4. **Isolamento Risultati (E05-03B)**: Corretto il default in `scripts/run_eval.py` in `results/latest_eval.json` per evitare la sovrascrittura accidentale di `experiments/archive/e01/artifacts/baseline.json`.
 
 ### Benchmark & Outcome (Valutazione Locale 30 Episodi)
 
-- **Benchmark Metric Summary E05 (`results/e05_hire_multiworker.json`)**:
+- **Benchmark Metric Summary E05 (`experiments/archive/e05/artifacts/hire_multiworker.json`)**:
   - Total Episodes: 30 (21.600 turni totali)
   - Completion Rate: 100.00%
   - Disqualification Rate: 0.00%
@@ -793,11 +815,11 @@ Valutare l'inversione della priorità operativa dei worker da `HARVEST > PLANT >
    - Creato `src/agricola/strategy/water_first_hire_nw_cluster_roi.py` (`WaterFirstHIRENWClusterROIAgent` come sottoclasse di `HIRENWClusterROIAgent`).
    - Creato `tests/test_water_first_hire_nw_cluster.py` (5/5 unit test).
    - Eseguita la suite completa `pytest tests/`: **30/30 test superati** (100% success rate in 1.93s).
-   - Eseguito il benchmark locale su 30 episodi: output isolato in `results/e06_water_first.json`.
+   - Eseguito il benchmark locale su 30 episodi: output isolato in `experiments/archive/e06/artifacts/water_first.json`.
 
 ### Benchmark & Outcome (Valutazione Locale 30 Episodi)
 
-- **Benchmark Metric Summary E06 (`results/e06_water_first.json`)**:
+- **Benchmark Metric Summary E06 (`experiments/archive/e06/artifacts/water_first.json`)**:
   - Total Episodes: 30 (21.600 turni totali)
   - Completion Rate: **100.00%**
   - Disqualification Rate: **0.00%**
@@ -829,9 +851,9 @@ Valutare l'inversione della priorità operativa dei worker da `HARVEST > PLANT >
 DEFINE: PASSED
 PLAN: PASSED
 BUILD: PASSED
-VERIFY: PASSED WITH METRIC CAVEAT (`docs/versions/E06_verify_antigravity.md`)
-REVIEW: PASSED (`docs/versions/E06_review_antigravity.md`, Verdict: `SUPPORTED`)
-SHIP: PASSED (Tag: `v0.6-e06-water-first`, [`docs/versions/E06_ship_antigravity.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E06_ship_antigravity.md))
+VERIFY: PASSED WITH METRIC CAVEAT (`experiments/archive/e06/reports/E06_verify_antigravity.md`)
+REVIEW: PASSED (`experiments/archive/e06/reports/E06_review_antigravity.md`, Verdict: `SUPPORTED`)
+SHIP: PASSED (Tag: `v0.6-e06-water-first`, [`experiments/archive/e06/reports/E06_ship_antigravity.md`](../experiments/archive/e06/reports/E06_ship_antigravity.md))
 
 ---
 
@@ -854,7 +876,7 @@ Proteggere il capitale di $1,000.0 necessario all'acquisto del quadrante Q1 (`BU
 - **Min Final Money E10-01:** **`$10,915.00`** (vs $124.00 in E09-01 — **0 episodi < $10k, collassi azzerati**)
 - **Win Rate vs Standard Opponents:** **`100.0%`**
 - **Test Suite:** **50/50 tests passed (100%)**
-- **Kaggle Status:** Submission package built at `submission/submission.py` (44.5 KB). Overnight validation running.
+- **Kaggle Status:** Submission package built at `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py` (44.5 KB). Overnight validation running.
 
 ---
 
@@ -886,10 +908,10 @@ Fase **BUILD & LOCAL SAFETY VERIFY di E11-01**: implementare la classe `Producti
    - Di conseguenza, la cassa liquida non ha mai raggiunto $1,300 per eseguire `BUY_LAND` Q2 e Q3.
    - L'agente è rimasto bloccato su 2 quadranti (50 tile, 4 worker, 0 animali), funzionando di fatto come una variante di E10.
 4. **Documenti Prodotti:**
-   - [`docs/versions/E11_define_productive_mass_expansion.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_define_productive_mass_expansion.md)
-   - [`docs/versions/E11_plan_productive_mass_expansion.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_plan_productive_mass_expansion.md)
-   - [`docs/versions/E11_build_productive_mass_expansion.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_build_productive_mass_expansion.md)
-   - Data Artifact: [`results/e11_productive_mass.json`](file:///c:/Users/pietr/Projects/kaggriculture-agent/results/e11_productive_mass.json)
+   - [`experiments/archive/e11/reports/E11_define_productive_mass_expansion.md`](../experiments/archive/e11/reports/E11_define_productive_mass_expansion.md)
+   - [`experiments/archive/e11/reports/E11_plan_productive_mass_expansion.md`](../experiments/archive/e11/reports/E11_plan_productive_mass_expansion.md)
+   - `docs/versions/E11_build_productive_mass_expansion.md` *(riferimento storico non presente nell'istantanea)*
+   - Data Artifact: [`experiments/archive/e11/artifacts/productive_mass.json`](../experiments/archive/e11/artifacts/productive_mass.json)
 
 ---
 
@@ -908,13 +930,13 @@ Diagnosticare ed isolare la causa dell'apparente collasso di riproducibilità os
 
 1. **Cause Radici Diagnosticate:**
    - **Dataclass Default Contamination:** I valori di default della configurazione `ProductiveMassConfig` erano stati modificati in E11-06 (`workforce_scaling_mode = "LAND_CO_SCALING"`), contaminando tutte le istanze storiche senza override esplicito.
-   - **Benchmark Factory Parameter Leak:** Il factory benchmark `scripts/benchmark_e11_performance.py` ometteva parametri versione-specifici, ereditando i controlli di riserva per l'assunzione di E11-06 per tutti gli agenti.
+   - **Benchmark Factory Parameter Leak:** Il factory benchmark `experiments/archive/e01/tools/benchmark_e11_performance.py` ometteva parametri versione-specifici, ereditando i controlli di riserva per l'assunzione di E11-06 per tutti gli agenti.
 2. **Azioni Correttive:**
    - Ripristinati i parametri di default storici ("LEGACY") su `ProductiveMassConfig`.
-   - Congelati gli explicit factory builder per ciascuna variante E11 (E11-01..06) in `scripts/benchmark_e11_performance.py`.
+   - Congelati gli explicit factory builder per ciascuna variante E11 (E11-01..06) in `experiments/archive/e01/tools/benchmark_e11_performance.py`.
 3. **Esecuzione Benchmark Appaiato (30 Episodi):**
    - Confermato il ripristino della riproducibilità per E11-01 ($22,962.33), E11-02 ($13,152.00), E11-03 ($892.63), E11-04 ($380.67), E11-05 ($385.33) ed E11-06 ($895.23).
-4. **Verdict Finale Audit:** **`E11-R0 PARTIALLY COMPLETED — configuration isolation restored, historical behavioral reproducibility NOT restored`**. L'indipendenza configurazionale della catena sperimentale E11 è stata completamente ripristinata, ma E11-03 ha fallito l'acceptance criterion architetturale. Documento prodotto: [`docs/versions/E11_R0_baseline_reproducibility_audit.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_R0_baseline_reproducibility_audit.md).
+4. **Verdict Finale Audit:** **`E11-R0 PARTIALLY COMPLETED — configuration isolation restored, historical behavioral reproducibility NOT restored`**. L'indipendenza configurazionale della catena sperimentale E11 è stata completamente ripristinata, ma E11-03 ha fallito l'acceptance criterion architetturale. Documento prodotto: [`experiments/archive/e11/reports/E11_R0_baseline_reproducibility_audit.md`](../experiments/archive/e11/reports/E11_R0_baseline_reproducibility_audit.md).
 
 ---
 
@@ -943,7 +965,7 @@ Verificare il codice dell'environment per capire l'esatta regola di validazione 
    - **Land Purchase Drain:** E11-VB1 spende $1,000 al Giorno 1 per comprare Q1, prosciugando la cassa. E06 spende $0 in terreno.
    - **Spazio & Movimento:** E06 gestisce 9 tile compatte vicine al capanno (distanza 1–3). E11-VB1 disperde 2 lavoratori su 50 tile, sprecando il ~60% dei passi in spostamento.
    - **Velocità di Turnover:** E06 ruota ROI dinamiche ad alta frequenza (Carrot/Wheat), mentre E11-VB1 blocca capitale in colture a lungo ciclo (Melon/Tomato).
-6. **Documento Prodotto:** [`docs/versions/E11_X1_1A_hire_constraint_e06_reconciliation.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_1A_hire_constraint_e06_reconciliation.md).
+6. **Documento Prodotto:** [`experiments/archive/e11/reports/E11_X1_1A_hire_constraint_e06_reconciliation.md`](../experiments/archive/e11/reports/E11_X1_1A_hire_constraint_e06_reconciliation.md).
 
 ---
 
@@ -968,7 +990,7 @@ Ripristinare la capacità produttiva ed economica interna già dimostrata da E06
    L'agente assume ed ingaggia correttamente 3 lavoratori (1 Farmer + 2 Hands) per sostenere il carico di irrigazione e piantumazione sul core compatto.
 4. **Verifica Provenance SHA-256:**
    Risultati 100% verificati dall'autenticatore `verify_e11_run_provenance.py` (`PASS`).
-5. **Documento Prodotto:** [`docs/versions/E11_X1_2_e06_productive_core_restoration.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_2_e06_productive_core_restoration.md).
+5. **Documento Prodotto:** [`experiments/archive/e11/reports/E11_X1_2_e06_productive_core_restoration.md`](../experiments/archive/e11/reports/E11_X1_2_e06_productive_core_restoration.md).
 
 ---
 
@@ -998,7 +1020,7 @@ Trattare **E06** (`WaterFirstHIRENWClusterROIAgent`) come Unità Produttiva Elem
 3. **Diagnosi Causa Radice Bottleneck B:**
    EPU2 viene attivata solo al Giorno 15 (dopo il raccolto MELON di EPU1). In 15 giorni rimanenti prima della fine dell'episodio (Giorno 30), EPU2 produce **+$2,839.00** lordi, lasciando un guadagno netto di **+$1,839.00** dopo il costo del terreno ($1,000) e dei semi.
 4. **Verifica Provenance SHA-256:** `PASS (100% MATCH)`.
-5. **Documento Prodotto:** [`docs/versions/E11_X1_3_e06_productive_unit_replication_scaling.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_3_e06_productive_unit_replication_scaling.md).
+5. **Documento Prodotto:** [`experiments/archive/e11/reports/E11_X1_3_e06_productive_unit_replication_scaling.md`](../experiments/archive/e11/reports/E11_X1_3_e06_productive_unit_replication_scaling.md).
 
 ---
 
@@ -1011,13 +1033,13 @@ Trattare **E06** (`WaterFirstHIRENWClusterROIAgent`) come Unità Produttiva Elem
 
 ### Objective
 
-Congelare la configurazione verificata **E11-X1.3-B (2× EPU 18-tile Scaling)** nel file di submission standalone `submission/submission.py` e riallineare la documentazione `README.md` dello stato del progetto.
+Congelare la configurazione verificata **E11-X1.3-B (2× EPU 18-tile Scaling)** nel file di submission standalone `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py` e riallineare la documentazione `README.md` dello stato del progetto.
 
 ### Key Outcomes & Findings
 
 1. **Submission Bundle Standalone Verificato:**
    - Strategia: `ProductiveMassROIAgent` in modalità `E06_REPLICATED`, `epu_level = 2`, `enable_land_expansion = True`.
-   - Generato via `scripts/build_submission.py` in `submission/submission.py`.
+   - Generato via `scripts/build_submission.py` in `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py`.
    - Audit codice: 0 import interni/file esterni rimasti unbundling.
    - Smoke test locale 720 turni: **$29,993.00** su seed 0 (18 tile attive, 3 lavoratori).
    - Test suite: **63/63 test superati (`pytest tests/`)**.
@@ -1026,7 +1048,7 @@ Congelare la configurazione verificata **E11-X1.3-B (2× EPU 18-tile Scaling)** 
    - Esplicitati gli obiettivi competitivi ($50k minimo, $75k target competitivo, ~$70–75k+ benchmark top competitor).
    - Documentata la correzione metodologica della provenance (E11-R0 ... E11-R3) e la baseline verificata post-audit E11-VB1 ($429).
    - Integrata la tabella sintetica delle iterazioni ed il modello di architettura EPU.
-3. **Documento Prodotto:** [`docs/versions/E11_X1_3_B_kaggle_external_validation.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_3_B_kaggle_external_validation.md).
+3. **Documento Prodotto:** [`experiments/archive/e11/reports/E11_X1_3_B_kaggle_external_validation.md`](../experiments/archive/e11/reports/E11_X1_3_B_kaggle_external_validation.md).
 
 ---
 
@@ -1052,7 +1074,7 @@ Verificare l'ipotesi se un singolo land purchase (Q1, $1,000) possa ospitare sia
    - I semi per 27 tile ($2,160) superano la liquidità rimanente ($2,000), causando un **starvation di capitale operativo**.
    - Dimostrata la necessità fondamentale dell'acquisto derivato al Giorno 14 post-surplus ($14k+) implementato in `X1.3-B`.
 4. **Verifica Provenance SHA-256:** `PASS (100% MATCH)`.
-5. **Documento Prodotto:** [`docs/versions/E11_X1_3_B2_cross_boundary_multi_epu_activation.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_3_B2_cross_boundary_multi_epu_activation.md).
+5. **Documento Prodotto:** `docs/versions/E11_X1_3_B2_cross_boundary_multi_epu_activation.md` *(riferimento storico non presente nell'istantanea)*.
 
 ---
 
@@ -1083,7 +1105,7 @@ Verificare la sequenza EPU1 $\rightarrow$ working capital surplus $\rightarrow$ 
    - Architectural: **`VALIDATED`** (Spatial equivalence & 1-land 27-tile capacity).
    - Economic: **`SUB-OPTIMAL`** (L'acquisto land al Day 1 pre-surplus prosciuga $1,000 prima del primo raccolto EPU1; la policy post-surplus Day 14 di X1.3-B resta superiore).
    - Candidate: **`MAINTAIN X1.3-B`** ($28,727.40). No Kaggle submission per B2R.
-5. **Documento Prodotto:** [`docs/versions/E11_X1_3_B2R_post_surplus_spatially_equivalent_3x_epu.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_3_B2R_post_surplus_spatially_equivalent_3x_epu.md).
+5. **Documento Prodotto:** [`experiments/archive/e11/reports/E11_X1_3_B2R_post_surplus_spatially_equivalent_3x_epu.md`](../experiments/archive/e11/reports/E11_X1_3_B2R_post_surplus_spatially_equivalent_3x_epu.md).
 
 ---
 
@@ -1113,11 +1135,11 @@ Implementare il layout fisso in striscia $3 \times 3$ contiguo per EPU1, EPU2 ed
    - **Median Money**: **$30,072.00**
    - **Peak Money**: **$31,460.00** (Seed 200)
    - Provenance SHA-256: `PASS (100% Match)`.
-4. **Verifica Bundle Standalone (`submission/submission.py`):**
+4. **Verifica Bundle Standalone (`experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py`):**
    - Generato via `scripts/build_submission.py`.
    - Test suite automatica: **65/65 passed (`pytest tests/`)**.
    - Smoke test locale 720 turni: **$23,416.00** su seed 0.
-5. **Documento Prodotto:** [`docs/versions/E11_X1_3_B3_fixed_3x3_epu_submission.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_3_B3_fixed_3x3_epu_submission.md).
+5. **Documento Prodotto:** `docs/versions/E11_X1_3_B3_fixed_3x3_epu_submission.md` *(riferimento storico non presente nell'istantanea)*.
 
 ---
 
@@ -1147,9 +1169,9 @@ Confrontare l'ipotesi B (**X1.4**: 2 EPU densificate a $3 \times 5 = 30$ tile) r
    - **Paired Wins**: B3 vince **3 su 5 episodi (60%)** ed esprime una ceiling superiore ($31,460.00).
 3. **Verdetto e Raccomandazione Notturna:**
    - B3 vince nel testa a testa a 3 episodi su 5 e raggiunge il picco massimo di $31.5k.
-   - B3 è già verificato semanticamente e pronto nel pacchetto standalone `submission/submission.py`.
+   - B3 è già verificato semanticamente e pronto nel pacchetto standalone `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py`.
    - **Raccomandazione**: Inviare **B3 (`E11-X1.3-B3 Fixed 3x3 3xEPU`)** a Kaggle.
-4. **Documento Prodotto:** [`docs/versions/E11_X1_4_epu_densification_before_replication.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_4_epu_densification_before_replication.md).
+4. **Documento Prodotto:** [`experiments/archive/e11/reports/E11_X1_4_epu_densification_before_replication.md`](../experiments/archive/e11/reports/E11_X1_4_epu_densification_before_replication.md).
 
 ---
 
@@ -1180,7 +1202,7 @@ Valutare l'ipotesi C (**X1.5**: 2 EPU centrali adiacenti da $4 \times 4 = 32$ ti
 3. **Verdetto e Raccomandazione Notturna:**
    - **Verdetto**: **`X1.5 NOT BETTER`**. Il carico economico per avviare 16 tile su EPU1 drena il capitale di lavoro e ritarda l'operatività di EPU2 in Q1.
    - **Raccomandazione**: Inviare **B3 (`E11-X1.3-B3 Fixed 3x3 3xEPU`)** a Kaggle (Median $30,072.00, Peak $31,460.00).
-4. **Documento Prodotto:** [`docs/versions/E11_X1_5_centered_2x4x4_productive_core.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_5_centered_2x4x4_productive_core.md).
+4. **Documento Prodotto:** [`experiments/archive/e11/reports/E11_X1_5_centered_2x4x4_productive_core.md`](../experiments/archive/e11/reports/E11_X1_5_centered_2x4x4_productive_core.md).
 
 ---
 
@@ -1206,12 +1228,12 @@ Testare l'ipotesi **H11-X1.6**: densificazione progressiva center-out (EPU1 3×3
      - **3 su 5 (60%) vs X1.4**
      - **4 su 5 (80%) vs X1.5**
 2. **Bundle & Semantic Equivalence:**
-   - Bundle generato in `submission/submission.py`.
+   - Bundle generato in `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py`.
    - Test di equivalenza semantica deterministica: **100% MATCH** su seed 0 ($29,297.00).
 3. **Verdetto e Raccomandazione Notturna:**
    - **Verdetto**: **`X1.6 CLEAR WINNER`**.
    - **Raccomandazione Notturna**: Caricare **`E11-X1.6 — Progressive Center-Out 3×3 → 4×4 EPU Scaling`** su Kaggle per la validazione esterna!
-4. **Documento Prodotto:** [`docs/versions/E11_X1_6_progressive_center_out_epu_scaling.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_6_progressive_center_out_epu_scaling.md).
+4. **Documento Prodotto:** [`experiments/archive/e11/reports/E11_X1_6_progressive_center_out_epu_scaling.md`](../experiments/archive/e11/reports/E11_X1_6_progressive_center_out_epu_scaling.md).
 
 ---
 
@@ -1238,12 +1260,12 @@ Testare l'ipotesi **H11-X1.7**: rendere 26 tile il target deliberato ed esplicit
      - **3 su 5 (60%) vs X1.4**
      - **4 su 5 (80%) vs X1.5**
 2. **Bundle & Semantic Equivalence:**
-   - Bundle generato in `submission/submission.py`.
+   - Bundle generato in `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py`.
    - Test di equivalenza semantica deterministica: **100% MATCH** su seed 0 ($30,220.00).
 3. **Verdetto e Raccomandazione Notturna:**
    - **Verdetto**: **`X1.7 CLEAR WINNER`**.
    - **Raccomandazione Notturna**: Caricare **`E11-X1.7 Corner-Pruned Center-Out 26t`** su Kaggle!
-4. **Documento Prodotto:** [`docs/versions/E11_X1_7_corner_pruned_center_out_26t.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E11_X1_7_corner_pruned_center_out_26t.md).
+4. **Documento Prodotto:** [`experiments/archive/e11/reports/E11_X1_7_corner_pruned_center_out_26t.md`](../experiments/archive/e11/reports/E11_X1_7_corner_pruned_center_out_26t.md).
 
 ---
 
@@ -1267,8 +1289,8 @@ Testare l'ipotesi **H12**: strategia ibrida `cow-first` con core 2×2 riservato 
    - **Milk Harvested**: **0 unità** (Collo di bottiglia: il grano è stato seminato ma non raccolto nel shed in tempo utile per il FEED quotidiano, portando alla mancata produzione di latte)
 2. **Verdetto e Candidato Corrente:**
    - **Verdetto**: **`Outcome C: Feed Bottleneck`**.
-   - **Candidato Corrente Kaggle**: **`E11-X1.7 Corner-Pruned Center-Out 26t`** rimane il **CAMPIONE ASSOLUTO** ($28,083.80 Mean Money, $30,081.00 Median Money) pronto in `submission/submission.py`.
-3. **Documento Prodotto:** [`docs/versions/E12_X1_0_centered_hybrid_farm_scaling.md`](file:///c:/Users/pietr/Projects/kaggriculture-agent/docs/versions/E12_X1_0_centered_hybrid_farm_scaling.md).
+   - **Candidato Corrente Kaggle**: **`E11-X1.7 Corner-Pruned Center-Out 26t`** rimane il **CAMPIONE ASSOLUTO** ($28,083.80 Mean Money, $30,081.00 Median Money) pronto in `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py`.
+3. **Documento Prodotto:** [`experiments/archive/e12/reports/E12_X1_0_centered_hybrid_farm_scaling.md`](../experiments/archive/e12/reports/E12_X1_0_centered_hybrid_farm_scaling.md).
 
 ---
 
@@ -1284,7 +1306,7 @@ Testare l'ipotesi **H12**: strategia ibrida `cow-first` con core 2×2 riservato 
 - replay truebelief episodio `101294736`
 - seed `421521921`
 - score truebelief `$86,297`
-- raw replay preservato in `results/e12/x111/101294736.json`
+- raw replay preservato in `experiments/archive/e12/artifacts/x111/101294736.json`
 - checksum SHA-256: `6281fdd32497c9db28e3d924ad8a55b12f841a5b1309164328679aa4f5ee8695`
 
 ### Obiettivo
@@ -1393,10 +1415,10 @@ Implementare una nuova modalita separata `E12_DYNAMIC_ALLOCATION_X113` per verif
 
 ### Artifacts
 
-- `results/e12/x113/IMPLEMENTATION_DELTA.md`
-- `results/e12/x113/COUNTERFACTUAL_LOG.md`
-- `results/e12/x113/counterfactual_results.json`
-- `results/e12/x113/counterfactual_results.csv`
+- `experiments/archive/e12/artifacts/x113/IMPLEMENTATION_DELTA.md`
+- `experiments/archive/e12/artifacts/x113/COUNTERFACTUAL_LOG.md`
+- `experiments/archive/e12/artifacts/x113/counterfactual_results.json`
+- `experiments/archive/e12/artifacts/x113/counterfactual_results.csv`
 
 ### Conclusion
 
@@ -1409,7 +1431,7 @@ Implementare una nuova modalita separata `E12_DYNAMIC_ALLOCATION_X113` per verif
 **Date:** 2026-08-28
 **Phase:** FORENSIC / MULTI-AGENT BENCHMARK
 **Tool / Agents:** Antigravity, Codex, Copilot (independent blind analyses, post-hoc consolidation)
-**Primary Source:** `docs/benchmark/101971376.json` (Seed: `1630102796`, Steps: `720`)
+**Primary Source:** `data/replays/reference/101971376.json` (Seed: `1630102796`, Steps: `720`)
 
 ### 1. Episode Identification & Macro Outcome
 
@@ -1646,7 +1668,7 @@ Rieseguire i 28 episodi Stage A con la build corretta R1 (`E16_TREATMENT_BUILD_R
 
 ### Standalone Submission SHIP Artifacts
 - `submission/submission_codex.py`: Certified Standalone Codex C2 V4 (100% exact action equivalence on seeds 1838889274, 1619968655, 710418712).
-- `submission/submission_antigravity.py`: Certified Standalone Antigravity C2 (100% exact action equivalence on seeds 1838889274, 1619968655, 710418712).
+- `experiments/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py`: Certified Standalone Antigravity C2 (100% exact action equivalence on seeds 1838889274, 1619968655, 710418712).
 
 ### Core Lesson Learned
 > `ACTIVE_SURFACE` o peak tile count non sono sufficienti a spiegare la performance. La capacità produttiva deve essere convertita lungo la catena:

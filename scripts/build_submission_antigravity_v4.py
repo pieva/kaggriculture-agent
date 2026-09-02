@@ -6,12 +6,14 @@ from __future__ import annotations
 import pprint
 from pathlib import Path
 
-from agricola.strategy.codex_v9_routine_data import ROUTINE_ACTIONS, ROUTINE_SHA256
+from agricola.strategy.codex.codex_v9_routine_data import ROUTINE_ACTIONS, ROUTINE_SHA256
 
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = (
     ROOT
-    / "results"
+    / "docs"
+    / "governance"
+    / "history"
     / "model_spec_c2"
     / "antigravity"
     / "freeze"

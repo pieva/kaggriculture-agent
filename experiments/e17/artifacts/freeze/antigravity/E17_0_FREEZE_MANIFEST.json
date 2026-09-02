@@ -1,0 +1,20 @@
+{
+  "agent_id": "antigravity",
+  "config_path": "experiments/e17/configs/antigravity/ANTIGRAVITY_E17_0_NATIVE_3Q_BASELINE_CONFIG.json",
+  "config_sha256": "4449E2F2B59820D7139C94B3B696B5245F12D7EC3106065730D3AE0C4B92A768",
+  "entrypoint_path": "src/agricola/strategy/antigravity/agent_e17_native_3q.py",
+  "entrypoint_sha256": "F53B243078AB8D58838EDD71F92B25A4B1429ECE800AFA298F654FDA78148541",
+  "final_confirmation_consumed": false,
+  "holdout_consumed": false,
+  "ledger_source_path": "src/agricola/core/e17_ledger.py",
+  "ledger_source_sha256": "A22C97584D4AE81A341485744C8AF0FFBBF14A9C9A8491BD3210FC768AD672C9",
+  "metrics_path": "experiments/e17/artifacts/derived/antigravity/E17_0_METRICS.json",
+  "native_baseline_construction": true,
+  "policy_optimization": false,
+  "policy_version": "ANTIGRAVITY-E17.0-NATIVE-3Q-CROP-FIRST-V1",
+  "routine_hash": "7193885A584AC82E177BFB2E38E37F0B7884F465140C9FFE7FD6E9E7C9443C67",
+  "runner_path": "experiments/e17/tools/antigravity/run_e17_0_native_baseline.py",
+  "runner_sha256": "AD21479F0790D3E66456DFAA004AC26B5279F6681E62F7961FFD9E349A1EED4C",
+  "source_path": "src/agricola/strategy/antigravity/antigravity_e17_native_3q.py",
+  "source_sha256": "92C5A0AD20E4CDF5AA7C652C03C8DED2F6EDF3BF5ADBCDF05B2DAE59D7340204"
+}

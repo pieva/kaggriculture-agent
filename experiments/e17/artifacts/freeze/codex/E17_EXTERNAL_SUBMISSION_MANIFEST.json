@@ -1,0 +1,72 @@
+{
+  "schema_version": "E17_EXTERNAL_SUBMISSION_MANIFEST_V1",
+  "release_id": "CODEX-E17.0-EXTERNAL-CONTROL-V1",
+  "date": "2026-09-02",
+  "purpose": "KAGGLE_EXTERNAL_CONTROL_AFTER_E17_0",
+  "status": "EXTERNAL_VALIDATION_LIVE_SCORE_STABILIZING",
+  "submission": {
+    "path": "submission/submission_codex.py",
+    "sha256": "0428A6244C28E064BEDCEDC21C793D50A7C3231B8B7ADADF154BF40667833FC6",
+    "entry_point": "agent",
+    "standalone_import": "PASS",
+    "smoke_status": "DONE"
+  },
+  "strategy": {
+    "policy_version": "CODEX-E17.0-EXTERNAL-CONTROL-V1",
+    "parent_policy_version": "CODEX-C2-V9.0-3Q-MIXED-HIGH-DENSITY",
+    "e17_release_role": "EXTERNAL_CONTROL",
+    "behavioral_delta_from_v9": "NONE",
+    "routine_sha256": "C2466262E096B03CA330A1B0FDB2E5DEBE53C45F297E046113E007731051E7E4",
+    "source_sha256": "4D99C919B59DAE9B307C403FCF3198763B08FB9D15324AB8C937C4FC2B32090E",
+    "config_sha256": "44DD0EC2F33C9EEEE74AE5676580DC833325AB969D8A9D262EC870FEAAAC6C99"
+  },
+  "verification": {
+    "byte_identical_to_frozen_v9": false,
+    "metadata_only_wrapper_delta": true,
+    "behaviorally_identical_to_frozen_v9": true,
+    "frozen_v9_path": "docs/governance/history/model_spec_c2/codex/freeze/submission_codex_v9_tournament.py",
+    "action_parity": "719/719",
+    "e17_0_action_parity": "4314/4314",
+    "e17_0_outcome_parity": "6/6",
+    "ledger_record_coverage": 1.0,
+    "technical_errors": 0,
+    "fallback_delta": 0,
+    "derived_eod_escape_count": 0,
+    "repository_test_suite": "62/62 PASS",
+    "development_seeds": [26090101, 26090102, 26090103],
+    "seats": [0, 1],
+    "holdout_consumed": false,
+    "final_confirmation_consumed": false
+  },
+  "verification_tool": {
+    "path": "experiments/e17/tools/codex/verify_e17_external_submission.py",
+    "sha256": "DE537504BB93D9F1A765382A4C33DF2872C296A1023793940DB33FA143AD7CF3"
+  },
+  "local_comparison": {
+    "three_agent_tournament_run": false,
+    "reason": "ANTIGRAVITY_UNAVAILABLE_DUE_TO_CREDIT_EXHAUSTION",
+    "replacement": "KAGGLE_EXTERNAL_COMPARISON"
+  },
+  "external_reference": {
+    "prior_kaggle_score": 1159.9,
+    "prior_snapshot_position": 2542,
+    "expected_direction": "NO_SYSTEMATIC_CHANGE_FROM_V9",
+    "expected_point_reference": 1159.9,
+    "expectation_role": "PREREGISTERED_HYPOTHESIS_NOT_GUARANTEE",
+    "interpretation": "Any delta must initially be attributed to opponent mix, rating dynamics or platform variance because the action policy is unchanged."
+  },
+  "external_observation": {
+    "evidence_role": "OBSERVED_USER_SCREENSHOTS",
+    "observed_at": "2026-09-02",
+    "kaggle_submission_id": 559588638,
+    "entry_rating": 600,
+    "latest_observed_rating": 996,
+    "observed_delta_from_entry": 396,
+    "stable_final_score": false,
+    "interpretation": "Interim rating while episodes are still running; do not treat as a final score or as a causal policy effect."
+  },
+  "kaggle_description": "E17 Codex 3Q - V9 congelata, parita 4314/4314, ledger 100%, 0 errori; controllo esterno.",
+  "policy_mutation": false,
+  "e17_1_started": false,
+  "uploaded": true
+}

@@ -1,7 +1,8 @@
 """Build benchmark registry and daily timelines from Kaggriculture replay JSON.
 
 This is an analysis-only tool: it reads replay files and writes benchmark
-artifacts under results/benchmark without touching strategy or submission code.
+artifacts under experiments/archive/e12/artifacts/benchmark without touching
+strategy or submission code.
 """
 
 from __future__ import annotations
@@ -15,8 +16,8 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BENCHMARK_DIR = ROOT / "docs" / "benchmark"
-OUT_DIR = ROOT / "results" / "benchmark"
+BENCHMARK_DIR = ROOT / "data" / "replays" / "reference"
+OUT_DIR = ROOT / "experiments" / "archive" / "e12" / "artifacts" / "benchmark"
 
 PRODUCTIVE_ACTIONS = {
     "PLANT",

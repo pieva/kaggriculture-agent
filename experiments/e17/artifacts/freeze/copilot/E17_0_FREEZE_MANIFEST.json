@@ -1,0 +1,142 @@
+{
+  "agent_owner": "COPILOT",
+  "config": {
+    "frozen_path": "experiments/e17/artifacts/freeze/copilot/COPILOT_E17_0_NATIVE_3Q_V1.json",
+    "frozen_sha256": "7691CF2010AC4BF5E6B36DB566C61B75043FF92EB5C98A6D94CC9DD6D1D9BFBE",
+    "path": "experiments/e17/configs/copilot/COPILOT_E17_0_NATIVE_3Q_V1.json",
+    "sha256": "7691CF2010AC4BF5E6B36DB566C61B75043FF92EB5C98A6D94CC9DD6D1D9BFBE"
+  },
+  "development_matrix": {
+    "failed_run_replacement": "FORBIDDEN",
+    "opponent": "INERT_PASS_POLICY",
+    "seats": [
+      0,
+      1
+    ],
+    "seeds": [
+      26090101,
+      26090102,
+      26090103
+    ]
+  },
+  "experiment_id": "E17.0",
+  "final_confirmation_consumed": false,
+  "gate_status": "PASS",
+  "gates": {
+    "derived_eod_escape_count_zero": true,
+    "deterministic_reproducibility": true,
+    "development_matrix_complete": true,
+    "final_confirmation_not_consumed": true,
+    "holdout_not_consumed": true,
+    "ledger_record_coverage_100_percent": true,
+    "no_copy_other_agent_action_table": true,
+    "no_external_planner_dispatcher_or_schedule": true,
+    "no_import_other_agent_routine": true,
+    "no_post_hoc_seed_removal": true,
+    "routine_fingerprint_distinct": true,
+    "source_config_freeze": true,
+    "technical_errors_zero": true,
+    "three_quadrant_operation_all_runs": true
+  },
+  "holdout_consumed": false,
+  "independence_audit": {
+    "codex_routine_fingerprint": "C2466262E096B03CA330A1B0FDB2E5DEBE53C45F297E046113E007731051E7E4",
+    "imports": [
+      "__future__",
+      "json",
+      "dataclasses",
+      "pathlib",
+      "typing",
+      "agricola.core.observation_contract"
+    ],
+    "native_routine_fingerprint": "315073D272A4EF38DA2E98AD1B559A2A3DC4A4C2C117CEC609DC377E324BCDAB",
+    "no_copy_other_agent_action_table": true,
+    "no_external_planner_dispatcher_or_schedule": true,
+    "no_import_other_agent_routine": true,
+    "prohibited_imports": [],
+    "prohibited_tokens": [],
+    "routine_fingerprint_distinct": true
+  },
+  "ledger_schema": {
+    "path": "src/agricola/core/e17_ledger.py",
+    "sha256": "A22C97584D4AE81A341485744C8AF0FFBBF14A9C9A8491BD3210FC768AD672C9",
+    "version": "E17_LEDGER_V1"
+  },
+  "metrics": {
+    "path": "experiments/e17/artifacts/derived/copilot/E17_0_METRICS.json",
+    "sha256": "38E76B74D3D4239FF5D2297FC6300926B5BCA310641ADA7B1834FB21F833648E"
+  },
+  "native_routine_fingerprint": "315073D272A4EF38DA2E98AD1B559A2A3DC4A4C2C117CEC609DC377E324BCDAB",
+  "opponent": {
+    "id": "INERT_PASS_POLICY",
+    "path": "src/agricola/core/benchmark_opponents.py",
+    "sha256": "C0CC94FC4F1297107272BA325075E645653131C1B7E585F34CD3B1E5A3388EF5"
+  },
+  "policy_id": "COPILOT-E17.0-NATIVE-3Q-CROP-BASELINE-V1",
+  "run_artifacts": [
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090101-P0.derived_events.json",
+      "derived_events_sha256": "432793F3A3913AC25AEB975C877EB37646BB5197F7855C63D8F37EBAEA1C7260",
+      "ledger_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090101-P0.ledger.jsonl",
+      "ledger_sha256": "0031BF08B4FDB856A7FAB45E77C301199722B1D8573576F528ECB8F0CDE177E9",
+      "summary_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090101-P0.summary.json",
+      "summary_sha256": "472403A81E9B22D28963CCCBE165676360017347263BD688763289DFC46F15F0"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090101-P1.derived_events.json",
+      "derived_events_sha256": "63DCF0C9CFB9CDDB1985A594257A3009D3E53C6184C962D4F143D8F44FFA7766",
+      "ledger_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090101-P1.ledger.jsonl",
+      "ledger_sha256": "180C2CE52FEB7661AC75F672CBC283F2C924B8C8EB53821C5BDFEC0AA670A075",
+      "summary_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090101-P1.summary.json",
+      "summary_sha256": "BFBDBBBD757A01BA79399A6A388A8E5DF24FD896CBFC6BD2D4A8F8F66FC00068"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090102-P0.derived_events.json",
+      "derived_events_sha256": "9C7034BA405C7067D7BBB531EED5FC7233534654DD0E63FBD12AEE64EE2488E7",
+      "ledger_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090102-P0.ledger.jsonl",
+      "ledger_sha256": "4B13BEB8AFC0B3B3269F8F9D858E4A84F37F292130332E59A3CDA9D9002A4604",
+      "summary_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090102-P0.summary.json",
+      "summary_sha256": "E915E0BC3F82D2339F85E41817FFE86DD55D381E5B2A85D048761C12F34ECD87"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090102-P1.derived_events.json",
+      "derived_events_sha256": "A08DFFAD4CAB3EAE8CCA0507D22BF538DE6F840A669F3BDCB6C738FD14A93C01",
+      "ledger_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090102-P1.ledger.jsonl",
+      "ledger_sha256": "9D91812F03C70B578576FD6E47213AA256CE229DFB67805F45B623ED9CE7985E",
+      "summary_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090102-P1.summary.json",
+      "summary_sha256": "5A5F60701D751203D399B62F50124B0356F8C7ED06B28D2054706A4C7769148C"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090103-P0.derived_events.json",
+      "derived_events_sha256": "EEDECAE15DD5F543BBE5BF2D0C8DE30C9F8B2B60C963F11EFAD0C4C728FC7EC5",
+      "ledger_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090103-P0.ledger.jsonl",
+      "ledger_sha256": "D803A7DF3B323AE0E480A4F8F2E1C074E6B67B3A25ABEC1A355C6180830B275B",
+      "summary_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090103-P0.summary.json",
+      "summary_sha256": "CF4432ECA6478A9FAD8728A54CDF8A4F430D833F77F6F01AB113F62AAA923968"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090103-P1.derived_events.json",
+      "derived_events_sha256": "6387C29596CA80DDF448499C3EC59950EE915046A1E1CFE1EA7E96BC5EABB824",
+      "ledger_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090103-P1.ledger.jsonl",
+      "ledger_sha256": "292F6B34BCA93461E9FACCA03753C5A289B974B7AD3CD45018DED7B016912044",
+      "summary_path": "experiments/e17/artifacts/runs/copilot/e17_0/E17-0-COPILOT-S26090103-P1.summary.json",
+      "summary_sha256": "AD296385F263730BC14831257DC95A800AF2EA0882106E29FC01DF8A387662CD"
+    }
+  ],
+  "schema_version": "E17_0_COPILOT_FREEZE_MANIFEST_V1",
+  "source": {
+    "frozen_path": "experiments/e17/artifacts/freeze/copilot/COPILOT_E17_0_NATIVE_3Q_V1.py",
+    "frozen_sha256": "1D0FD4268097EBC2C36B2C578AB34A8EE757A61BC3C72970604FE7007F2E4FCA",
+    "path": "src/agricola/strategy/copilot/e17_native_3q.py",
+    "sha256": "1D0FD4268097EBC2C36B2C578AB34A8EE757A61BC3C72970604FE7007F2E4FCA"
+  },
+  "status": "FROZEN_PASS",
+  "test": {
+    "path": "experiments/e17/tests/test_copilot_e17_0_native.py",
+    "sha256": "3677EA2D405AFCC617CBA6AE89EDAE79F449574815E368836BD576FC1E2AE855"
+  },
+  "tool": {
+    "path": "experiments/e17/tools/copilot/run_e17_0_copilot_native.py",
+    "sha256": "2AAE82219F7057AF4CE5BC8337D12A2D30205476F6BECA976C4D8C16B2FF4143"
+  }
+}

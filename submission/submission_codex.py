@@ -1,11 +1,13 @@
-"""Standalone Codex V9.0 3Q mixed high-density candidate.
+"""Codex E17.0 3Q external-control submission for Kaggle.
 
-Frozen for local tournament before any Kaggle promotion.
+The executable policy is behaviorally identical to the frozen V9 baseline;
+only release metadata changed after the E17 measurement-parity gate.
 """
 
 from copy import deepcopy
 
-MODEL_SPEC_VERSION = "CODEX-C2-V9.0-3Q-MIXED-HIGH-DENSITY"
+MODEL_SPEC_VERSION = "CODEX-E17.0-EXTERNAL-CONTROL-V1"
+PARENT_MODEL_SPEC_VERSION = "CODEX-C2-V9.0-3Q-MIXED-HIGH-DENSITY"
 ROUTINE_SHA256 = "C2466262E096B03CA330A1B0FDB2E5DEBE53C45F297E046113E007731051E7E4"
 ROUTINE_ACTIONS = ({'farmer': ['PASS'], 'hands': [], 'market': []},
  {'farmer': ['NORTH'],

@@ -8,12 +8,14 @@ import subprocess
 import sys
 from pathlib import Path
 
-from agricola.strategy.codex_3q_mixed_high_density import create_v9_agent
+from agricola.strategy.codex.codex_3q_mixed_high_density import create_v9_agent
 
 ROOT = Path(__file__).resolve().parents[1]
 TARGET = (
     ROOT
-    / "results"
+    / "docs"
+    / "governance"
+    / "history"
     / "model_spec_c2"
     / "codex"
     / "freeze"

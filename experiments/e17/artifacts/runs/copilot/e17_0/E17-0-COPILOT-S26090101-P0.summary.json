@@ -1,0 +1,76 @@
+{
+  "command_counts": {
+    "BUY_LAND": 2,
+    "BUY_SEED": 20,
+    "DIG": 64,
+    "EAST": 642,
+    "HARVEST": 472,
+    "HIRE": 150,
+    "NORTH": 687,
+    "PASS": 1,
+    "PLANT": 348,
+    "SELL": 25,
+    "SOUTH": 213,
+    "WATER": 1019,
+    "WEST": 718
+  },
+  "config_sha256": "7691CF2010AC4BF5E6B36DB566C61B75043FF92EB5C98A6D94CC9DD6D1D9BFBE",
+  "derived_events_sha256": "4F53CDA18C2BAA0C0354BB5F9A3ECBE5ED12AB4D8E11BA873C2F11161202B945",
+  "episode_id": "E17-0-COPILOT-S26090101-P0",
+  "final_money": 9223.0,
+  "ledger": {
+    "action_batches": 719,
+    "action_sequence_sha256": "4A0ED69225D5B49955C195086953A9A0051EEC1B710E7CC1AC3EBC5C5E897AF5",
+    "classified_outcome_coverage": 0.9339601008942903,
+    "derived_eod_escape_count": 0,
+    "derived_escape_events": 0,
+    "emitted_commands": 4361,
+    "ledger_record_coverage": 1.0,
+    "ledger_records": 4361,
+    "market_classified_outcome_coverage": 0.09644670050761421,
+    "market_outcome_counts": {
+      "EXECUTED": 19,
+      "NOT_EXECUTED": 0,
+      "UNKNOWN": 178
+    },
+    "market_records": 197,
+    "outcome_counts": {
+      "EXECUTED": 3839,
+      "NOT_EXECUTED": 234,
+      "UNKNOWN": 288
+    },
+    "schema_version": "E17_LEDGER_V1",
+    "technical_errors": 0
+  },
+  "ledger_sha256": "CE6ABA7638FB78095EABF971BDC5D5DD8CD41AD26088F1CA7917196F90925628",
+  "native_routine_fingerprint": "315073D272A4EF38DA2E98AD1B559A2A3DC4A4C2C117CEC609DC377E324BCDAB",
+  "operated_quadrants": [
+    "Q0",
+    "Q1",
+    "Q2"
+  ],
+  "opponent_final_money": 3000.0,
+  "opponent_id": "INERT_PASS_POLICY",
+  "opponent_status": "DONE",
+  "policy_id": "COPILOT-E17.0-NATIVE-3Q-CROP-BASELINE-V1",
+  "policy_technical_errors": 0,
+  "recorded_environment_states": 720,
+  "reproducibility": {
+    "action_sequence_match": true,
+    "final_money_match": true,
+    "ledger_match": true,
+    "pass": true,
+    "terminal_match": true
+  },
+  "reproducibility_sha256": "64ADC8AE750500D33E097DC976341B56772C61E22B794CF2E9A41DFF3AC5C6EB",
+  "schema_version": "E17_0_COPILOT_RUN_SUMMARY_V1",
+  "seat": 0,
+  "seed": 26090101,
+  "source_sha256": "1D0FD4268097EBC2C36B2C578AB34A8EE757A61BC3C72970604FE7007F2E4FCA",
+  "status": "DONE",
+  "unlocked_quadrants": [
+    "NW",
+    "NE",
+    "SW"
+  ]
+}

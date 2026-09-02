@@ -12,13 +12,15 @@ from copy import deepcopy
 from pathlib import Path
 from typing import Any
 
-from agricola.strategy.codex_v9_routine_data import ROUTINE_ACTIONS, ROUTINE_SHA256
+from agricola.strategy.codex.codex_v9_routine_data import ROUTINE_ACTIONS, ROUTINE_SHA256
 
 COPILOT_3Q_SPEC_VERSION = "COPILOT-C2-V2.0-3Q-HIGH-DENSITY"
 _CONFIG_PATH = (
     Path(__file__).resolve().parents[4]
+    / "docs"
+    / "model_specs"
+    / "copilot"
     / "configs"
-    / "model_spec_c2"
     / "COPILOT_C2_V2_0_3Q_HIGH_DENSITY_CONFIG.json"
 )
 _SAFE_PASS = {"farmer": ["PASS"], "hands": [], "market": []}

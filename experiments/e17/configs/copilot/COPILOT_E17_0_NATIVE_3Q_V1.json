@@ -1,0 +1,48 @@
+{
+  "schema_version": "E17_AGENT_CONFIG_V1",
+  "experiment_id": "E17.0",
+  "agent_owner": "COPILOT",
+  "policy_id": "COPILOT-E17.0-NATIVE-3Q-CROP-BASELINE-V1",
+  "baseline_role": "NATIVE_BASELINE_CONSTRUCTION",
+  "foundation_version": "C2.1",
+  "controller_type": "STATE_REACTIVE_TABLE_FREE",
+  "primary_crop": "WHEAT",
+  "target_quadrants": 3,
+  "target_hands_per_day": 5,
+  "land_cash_reserve": 250,
+  "seed_reorder_level": 8,
+  "seed_batch_quantity": 18,
+  "harvest_age_days": 4,
+  "terminal_harvest_day": 28,
+  "fallback_turns_per_day": 24,
+  "fallback_episode_steps": 720,
+  "max_market_orders_per_turn": 10,
+  "e17_0_development_seeds": [
+    26090101,
+    26090102,
+    26090103
+  ],
+  "seats": [
+    0,
+    1
+  ],
+  "opponent": {
+    "id": "INERT_PASS_POLICY",
+    "entry_point": "agricola.core.benchmark_opponents.inert_pass_policy",
+    "source_sha256": "C0CC94FC4F1297107272BA325075E645653131C1B7E585F34CD3B1E5A3388EF5"
+  },
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "failed_run_replacement": "FORBIDDEN",
+  "policy_optimization": false,
+  "independence_contract": {
+    "no_import_other_agent_routine": true,
+    "no_copy_other_agent_action_table": true,
+    "no_external_planner_dispatcher_or_schedule": true,
+    "shared_runtime_dependencies": [
+      "agricola.core.observation_contract",
+      "agricola.core.e17_ledger",
+      "agricola.core.benchmark_opponents"
+    ]
+  }
+}

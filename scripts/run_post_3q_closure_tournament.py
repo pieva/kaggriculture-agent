@@ -18,7 +18,9 @@ from kaggle_environments import make
 ROOT = Path(__file__).resolve().parents[1]
 FREEZE_DIR = (
     ROOT
-    / "results"
+    / "docs"
+    / "governance"
+    / "history"
     / "model_spec_c2"
     / "post_3q_closure_tournament"
     / "freeze"
@@ -33,7 +35,7 @@ EXPECTED_SHA256 = {
     "CODEX": "AC541588EF9746F00C9FE6CDA378DB4DF793347CDB5FEE8FF2FCA5EC1847C421",
     "COPILOT": "DABD7FEFBBBC36396AEE04BD883CE0770D4B96D1312BB3CE009E051AC3C20A94",
 }
-RESULT_DIR = ROOT / "results" / "model_spec_c2" / "post_3q_closure_tournament"
+RESULT_DIR = ROOT / "docs" / "governance" / "history" / "model_spec_c2" / "post_3q_closure_tournament"
 RESULT_JSON = RESULT_DIR / "POST_3Q_CLOSURE_TOURNAMENT_RESULTS.json"
 RESULT_CSV = RESULT_DIR / "POST_3Q_CLOSURE_TOURNAMENT_RESULTS.csv"
 

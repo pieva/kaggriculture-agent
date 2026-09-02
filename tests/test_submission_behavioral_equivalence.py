@@ -12,7 +12,7 @@ def test_submission_behavioral_equivalence_x112_required_seeds(tmp_path):
     """Verify standalone submission matches X1.12 source on required seeds."""
     sub_path = tmp_path / "submission.py"
     build_submission(str(sub_path))
-    assert sub_path.exists(), "submission/submission.py does not exist!"
+    assert sub_path.exists(), "experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py does not exist!"
 
     config_src = ProductiveMassConfig(
         productive_core_mode="E12_TRUEBELIEF_ENGINE_X112",
