@@ -1,6 +1,6 @@
-# Proposta di architettura del repository
+# Architettura del repository
 
-- **Stato:** proposta, nessuna migrazione ancora eseguita
+- **Stato:** adottata; migrazione E17 completa con gate A0-A7 `PASS`
 - **Data:** 2026-09-02
 - **Obiettivo:** rendere immediatamente distinguibili artefatti canonici,
   esperimenti attivi, output generati e materiale storico
@@ -62,6 +62,7 @@ kaggriculture-agent/
 │   ├── foundation/               # contract, ontology, state machine, features
 │   ├── model_specs/
 │   │   ├── antigravity/
+│   │   ├── claude/
 │   │   ├── codex/
 │   │   └── copilot/
 │   ├── governance/               # review/reconciliation cross-experiment
@@ -76,6 +77,7 @@ kaggriculture-agent/
 │   │   ├── prompts/              # prompt comuni o per agente
 │   │   │   ├── common/
 │   │   │   ├── antigravity/
+│   │   │   ├── claude/
 │   │   │   ├── codex/
 │   │   │   └── copilot/
 │   │   ├── configs/              # config specifiche del round
@@ -84,6 +86,7 @@ kaggriculture-agent/
 │   │   ├── reports/              # report umani finali/intermedi promossi
 │   │   │   ├── common/
 │   │   │   ├── antigravity/
+│   │   │   ├── claude/
 │   │   │   ├── codex/
 │   │   │   └── copilot/
 │   │   ├── artifacts/            # output macchina
@@ -106,13 +109,15 @@ kaggriculture-agent/
 │   ├── core/
 │   └── strategy/
 │       ├── antigravity/
+│       ├── claude/
 │       ├── codex/
 │       └── copilot/
 │
 ├── scripts/                      # soltanto tooling riutilizzabile cross-round
 ├── tests/                        # test runtime e integrazione trasversali
 └── submission/
-    └── submission_codex.py       # sola submission canonica richiesta
+    ├── submission_codex.py       # submission canonica corrente
+    └── submission_codex_*.py     # probe esplicitamente autorizzate
 ```
 
 ## 4. Regole di classificazione
@@ -183,6 +188,7 @@ Ogni round deve rendere evidente la proprietà:
 ```text
 common/       schema, benchmark, Foundation, seed, gate condivisi
 antigravity/  design, prompt, report e freeze proprietari
+claude/       design, prompt, report e freeze proprietari
 codex/        design, prompt, report e freeze proprietari
 copilot/      design, prompt, report e freeze proprietari
 ```
@@ -236,6 +242,8 @@ La storia minuta resta in Git, non nel nome del file.
 - run interrotti senza informazione;
 - duplicati byte-identici non richiesti dalla provenance;
 - log temporanei e dump esplorativi non promossi;
+- ledger grezzi molto pesanti quando metriche compatte, manifest e runner ne
+  preservano provenance e rigenerabilità;
 - directory di run vuote.
 
 ### Conservare fuori dal percorso attivo

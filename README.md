@@ -16,7 +16,7 @@ Il modello finale può essere una policy deterministica interamente scritta a ma
 
 > **Addestrare un modello non significa necessariamente addestrare una rete neurale.**
 
-> Status di governance del repository (2026-09-02): riordino completo con gate A7 `PASS`; strategia E17 riconciliata e congelata; E17.0 completato con gate tecnico `PASS`. Il controllo esterno Codex è attivo su Kaggle e ha raggiunto una rilevazione intermedia di `996` da un ingresso a `600`; il rating non è ancora stabilizzato. Copilot conserva la propria baseline nativa solo come evidenza locale, Antigravity è in pausa per esaurimento crediti e la prossima evoluzione resta sospesa fino a una misura esterna stabile.
+> Status di governance del repository (2026-09-02): riordino completo con gate A7 `PASS`; E17.0 completato e Codex E17.1 reattivo congelato. Lo snapshot Kaggle mostra `1353,6` per il reattivo contro `1089,7` per il controllo V9 (`+24,2%`). Claude V2 è indipendente e tecnicamente valida, ma ha fallito i gate economico, fughe e 3Q passivo. L'audit di attivazione Claude è `PASS_WITH_LOCAL_CLEANUP`; per la futura V3 è autorizzato il confronto Codex esclusivamente black-box sui seed development. L'esibizione a tre è completa (42/42); l'holdout ufficiale resta bloccato e non consumato. Antigravity e Copilot sono congelati.
 
 ## Model Foundation
 
@@ -102,6 +102,12 @@ Quando l'evidenza giustifica una revisione strutturale viene eseguito un **Found
 Per ciascun artefatto `NO_CHANGE` è un risultato valido. Solo dopo review, reconciliation e freeze della Foundation possono essere avviati nuovi cicli di policy training che dipendono dalle modifiche introdotte.
 
 Lo **stato corrente** della Foundation e gli hash dei tre documenti C2.1 sono mantenuti in `docs/foundation/FOUNDATION_C2_1_MANIFEST.md`; lo stato operativo complessivo è in `docs/PROJECT_STATE.md`.
+
+Per un esempio concreto del passaggio Foundation → MODEL_SPEC → policy →
+submission → telemetria, vedere
+`docs/model_specs/codex/CODEX_V9_E17_RUNTIME_AND_FOUNDATION_MAPPING_IT.md`. La
+guida distingue esplicitamente ciò che la Foundation definisce da ciò che la
+V9 consuma realmente nel decision path.
 
 ## Parallelo con il Machine Learning
 

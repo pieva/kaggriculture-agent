@@ -1,0 +1,18 @@
+{
+  "candidate_id": "CODEX_E17_1_3Q_REACTIVE_GUARDED_V1",
+  "schema_version": "e17.codex.reactive_guarded.v1",
+  "model_spec_version": "CODEX-E17.1-3Q-REACTIVE-GUARDED-V1",
+  "base_policy": "CODEX-C2-V9.0-3Q-MIXED-HIGH-DENSITY",
+  "causal_family": "WHEAT_FEED_SERVICEABILITY",
+  "turns_per_day": 24,
+  "episode_steps": 720,
+  "feed_reserve_rounds": 1,
+  "critical_unfed_threshold": 1,
+  "max_extra_wheat_per_step": 6,
+  "operating_cash_floor": 100,
+  "market_fill_tracking": true,
+  "allow_market_buy_append": true,
+  "allow_wheat_sale_reduction": true,
+  "allow_critical_feed_override": true,
+  "allow_animal_purchase_deferral": true
+}

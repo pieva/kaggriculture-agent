@@ -43,6 +43,7 @@ htmlcov/
 # IDE and OS files
 .idea/
 .vscode/
+.claude/
 *.swp
 *.swo
 .DS_Store
@@ -50,3 +51,8 @@ Thumbs.db
 
 # Temporary scratch directory
 scratch/
+
+# E17.1 large reproducible run ledgers (kept locally for forensic analysis)
+experiments/e17/artifacts/runs/claude/e17_1/
+experiments/e17/artifacts/runs/claude/e17_1_v2/
+experiments/e17/artifacts/runs/codex/e17_1_development/

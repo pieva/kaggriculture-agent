@@ -14,39 +14,61 @@ COMMON_EXECUTION_PROMPT: experiments/e17/prompts/common/E17_COMMON_REPOSITORY_RE
 CURRENT_CODEX_MODEL: CODEX-C2-V9.0-3Q-MIXED-HIGH-DENSITY
 CURRENT_CODEX_SUBMISSION: submission/submission_codex.py
 CURRENT_CODEX_SUBMISSION_SHA256: 0428A6244C28E064BEDCEDC21C793D50A7C3231B8B7ADADF154BF40667833FC6
+CURRENT_CODEX_REACTIVE_SUBMISSION: submission/submission_codex_e17_reactive.py
+CURRENT_CODEX_REACTIVE_SUBMISSION_SHA256: 0874EB10F287DC7E6A268CDB64517BAE98E246EB1A124EF9C643A3B7DCE0082C
 KAGGLE_SCORE_PRIOR_SNAPSHOT: 1159.9
 KAGGLE_POSITION_PRIOR_SNAPSHOT: 2542
 KAGGLE_E17_INTERIM_RATING: 996
 KAGGLE_E17_ENTRY_RATING: 600
 KAGGLE_E17_INTERIM_DELTA: +396
 KAGGLE_E17_SCORE_STATUS: STABILIZING_NOT_FINAL
+KAGGLE_E17_CONTROL_RATING_SNAPSHOT: 1089.7
+KAGGLE_E17_REACTIVE_RATING_SNAPSHOT: 1353.6
+KAGGLE_E17_REACTIVE_DELTA: +263.9 (+24.2%)
 VISIBLE_TOP3_2026_09_02: Crop_Dusta=2917.8, tetsuya=2890.3, 3정훈=2878.5
 
 NEXT_EXPERIMENT: E17
-E17_PHASE: E17.0 COMPLETE / STOP BEFORE E17.1
+E17_PHASE: E17.1 DEVELOPMENT EXHIBITION COMPLETE / OFFICIAL HOLDOUT BLOCKED
 E17_OBJECTIVE: COMPARE_CAUSAL_LINES_WITHOUT_PRESELECTING_ONE_ARCHETYPE
-E17_POLICY_MUTATION: NOT_STARTED
+E17_POLICY_MUTATION: CODEX_REACTIVE_FROZEN / CLAUDE_V2_FAILED_GATES
 E17_CROSS_AGENT_REVIEW: CLOSED
 E17_STRATEGY_FREEZE: experiments/e17/design/E17_STRATEGY_FROZEN_V1.md
 E17_0_TECHNICAL_GATE: PASS
 E17_0_COMPETITIVE_READINESS: NOT_ESTABLISHED
-E17_1_AUTHORIZED: NO
-E17_EXTERNAL_SUBMISSION: LIVE_SCORE_STABILIZING
+E17_1_AUTHORIZED: YES_BY_POST_FREEZE_OWNER_DECISION
+E17_REACTIVE_DESIGN: experiments/e17/design/E17_REACTIVE_THREE_WAY_TOURNAMENT_V1.md
+E17_REACTIVE_AUTHORIZATION: experiments/e17/reviews/common/E17_REACTIVE_DEVELOPMENT_AUTHORIZATION.md
+E17_REACTIVE_TOURNAMENT: HOLDOUT_BLOCKED_CLAUDE_V2_FAILED_GATES
+E17_REACTIVE_PARTICIPANTS: CODEX_V9_FROZEN, CODEX_REACTIVE, CLAUDE_REACTIVE
+E17_DEVELOPMENT_EXHIBITION: COMPLETE_42_OF_42_NON_QUALIFYING
+E17_EXTERNAL_SUBMISSION: REACTIVE_LIVE_SCORE_STABILIZING
 E17_EXTERNAL_RELEASE: CODEX-E17.0-EXTERNAL-CONTROL-V1
 E17_KAGGLE_SUBMISSION_ID: 559588638
-ACTIVE_DEVELOPMENT_AGENT: CODEX_ONLY
-ANTIGRAVITY_STATUS: PAUSED_CREDIT_EXHAUSTION
-COPILOT_E17_NATIVE: PRESERVED_LOCAL_ONLY_NO_KAGGLE_SUBMISSION
-LOCAL_TOURNAMENTS: SKIPPED_WHILE_ANTIGRAVITY_UNAVAILABLE
+ACTIVE_DEVELOPMENT_AGENTS: CODEX, CLAUDE
+CODEX_REACTIVE_STATUS: FROZEN_FOR_REACTIVE_TOURNAMENT
+CODEX_REACTIVE_DEVELOPMENT_MEAN: 139420.2857
+CODEX_REACTIVE_DELTA_VS_V9: 0
+CLAUDE_REACTIVE_STATUS: V1_REJECTED / V2_FROZEN_WITH_FAILED_GATES
+CLAUDE_ACTIVATION_AUDIT: PASS_WITH_LOCAL_CLEANUP
+CLAUDE_ROOT_BOOTSTRAP: REMOVED
+CLAUDE_V3_BLACK_BOX_CODEX_BENCHMARK: AUTHORIZED_DEVELOPMENT_ONLY
+CLAUDE_V3_IMPLEMENTATION: NOT_STARTED
+E17_RAW_V1_V2_RUNS: LOCAL_ONLY_GITIGNORED
+ANTIGRAVITY_STATUS: FROZEN_EXCLUDED_FROM_REACTIVE_TOURNAMENT
+COPILOT_STATUS: FROZEN_EXCLUDED_FROM_REACTIVE_TOURNAMENT
+NEW_KAGGLE_SUBMISSION: REACTIVE_PROBE_UPLOADED_BY_OWNER
+NEXT_ACTION: BENCHMARK_KAGGLE_REACTIVE_RESULTS
 ```
 
 ## Stato raggiunto
 
 La Foundation C2.1 e il riordino del repository sono chiusi con gate A7
 `PASS`. La strategia E17 è stata riconciliata e congelata dopo tre review
-indipendenti. E17.0 è completo per Codex, Antigravity e Copilot; il lavoro è
-fermato prima di E17.1 come richiesto. Codex V9 resta la baseline e la
-submission Kaggle correnti. Il benchmark discovery E17 è stato
+indipendenti. E17.0 è completo per Codex, Antigravity e Copilot. Una decisione
+successiva del proprietario autorizza ora E17.1, con Codex V9 congelata come
+controllo, Codex reattivo come evoluzione derivativa e Claude reattivo come
+policy indipendente. Antigravity e Copilot restano congelati. Codex V9 resta la
+baseline e la submission Kaggle correnti. Il benchmark discovery E17 è stato
 completato su nove replay unici dei tre player che occupavano il Top 3 nello
 snapshot di raccolta (`tetsuya`, `OceanMix`, `Crop Dusta`), con 18 player-seat
 e 720 step per episodio.
@@ -58,6 +80,14 @@ La review cross-agent è formalmente chiusa:
 - audit fughe Crop Dusta: 31/31 eventi compatibili con fuga secondo criterio
   EOD stretto, classificati `DERIVED`;
 - nessuna policy è stata modificata durante benchmark e review.
+
+L'audit successivo dell'attivazione Claude è
+`PASS_WITH_LOCAL_CLEANUP`: tutte le scritture sono rimaste nei namespace
+assegnati, non risultano letture dei sorgenti strategici altrui, import
+proibiti, uso dei seed riservati o mutazioni Git. Il bootstrap locale
+`CLAUDE.md` è stato rimosso; i prompt puntano ora ai documenti canonici. I
+ledger grezzi V1/V2 e Codex development restano disponibili localmente per
+l'analisi forense, ma sono esclusi da Git per non appesantire il repository.
 
 ## Evidenza E17 consolidata
 
@@ -125,23 +155,40 @@ zero fughe EOD derivate.
 Il PASS è tecnico, non competitivo. Antigravity attiva tre quadranti ma
 consuma tutto il capitale iniziale (`max_hands=0`, reward 0 in 6/6); Copilot è
 produttiva ma ottiene mean 8.941,5 contro opponent inert. Codex V9 ottiene mean
-132.019,3 sulla stessa matrice development. Queste differenze non autorizzano
-una promozione o un torneo: definiscono la readiness da riconciliare.
+132.019,3 sulla stessa matrice development. Al termine di E17.0 queste
+differenze non autorizzavano una promozione; il nuovo torneo è autorizzato da
+un decision record successivo e non modifica retroattivamente quel verdetto.
 
 ## Prossima azione operativa
 
-1. attendere che il rating della submission E17 si stabilizzi, senza usare la
-   rilevazione intermedia `996` come risultato finale;
-2. registrare rating stabile, numero di episodi ed eventuale dispersione degli
-   outcome rispetto al precedente riferimento V9 `1159,9`;
-3. scegliere una sola famiglia causale E17 sulla base del confronto esterno e
-   del ledger già raccolto;
-4. autorizzare E17.1 o una diversa ablation soltanto dopo questa decisione.
+1. mantenere congelati Codex V9 e Codex E17.1 reattivo;
+2. analizzare i replay Kaggle del reattivo per collegare il delta esterno
+   `1353,6 - 1089,7` ai trigger Wheat/feed effettivamente osservati;
+3. non consumare l'holdout: Claude V2 resta esclusa per media 14.445,29, tre
+   fughe passive e 3Q in 13/14 run;
+4. sviluppare, in una sessione successiva, una Claude V3 indipendente che
+   riduca movimento/retry, aumenti densità produttiva e workforce e superi
+   tutti i gate development; Claude può usare le candidate Codex congelate
+   come soli avversari black-box, senza leggere o importare i loro sorgenti;
+5. ripetere audit e freeze Claude prima di autorizzare il torneo holdout;
+6. conservare l'esibizione development 42/42 come diagnosi, non come selezione
+   ufficiale.
 
-Non implementare ancora guardie di mercato, nuovi layout, timing D10 o mix
-produttivi. Copilot ha prodotto la propria versione nativa ma non verrà
-sottomessa; Antigravity è in pausa. Finché il confronto esterno non è stabile,
-non si eseguono tornei locali incompleti né si promuovono nuove policy.
+Antigravity e Copilot non vengono modificati e non partecipano al torneo.
+La submission reattiva è stata autorizzata e caricata dal proprietario come
+probe esterna separata; ulteriori submission richiedono una nuova decisione.
+
+## Esibizione reattiva development a tre
+
+La matrice seat-balanced sui sette seed development è completa: 42/42 match,
+zero errori. Codex V9 e Codex reattivo sono primi ex aequo con `15-12-1`,
+media 112.149,21, zero fughe e delta diretto medio zero. Claude V2 chiude
+`0-0-28`, media 11.777,64, due fughe e MOVE/produttive 2,9719. In ogni match
+competitivo Claude ha comunque raggiunto 3Q. Nessun override Codex è scattato,
+quindi il vantaggio Kaggle non è riprodotto dalla matrice locale corrente.
+
+Report:
+`experiments/e17/reports/common/E17_REACTIVE_THREE_WAY_DEVELOPMENT_EXHIBITION_REPORT_IT.md`.
 
 ## Confronto esterno E17
 
@@ -194,4 +241,11 @@ STRATEGIC_INDEPENDENCE_GATE == PASS  # per il prossimo torneo a tre
 - `experiments/e17/reviews/common/E17_CROSS_AGENT_FEEDBACK_RECONCILIATION_IT.md`;
 - `experiments/e17/reports/codex/E17_TOP3_REPLAY_ANALYSIS.md`;
 - `docs/foundation/FOUNDATION_C2_1_MANIFEST.md`;
-- `docs/model_specs/codex/MODEL_SPEC_CODEX_C2_3Q_POST_FOUNDATION_REVIEW.md`.
+- `docs/model_specs/codex/MODEL_SPEC_CODEX_C2_3Q_POST_FOUNDATION_REVIEW.md`;
+- `docs/model_specs/codex/CODEX_V9_E17_RUNTIME_AND_FOUNDATION_MAPPING_IT.md`;
+- `experiments/e17/reviews/common/E17_REACTIVE_DEVELOPMENT_AUTHORIZATION.md`;
+- `experiments/e17/design/E17_REACTIVE_THREE_WAY_TOURNAMENT_V1.md`;
+- `experiments/e17/prompts/claude/E17_CLAUDE_REACTIVE_3Q_INDEPENDENT_BUILD_PROMPT.md`;
+- `experiments/e17/reviews/common/E17_CLAUDE_ACTIVATION_COMPLIANCE_AND_CLEANUP_AUDIT.md`;
+- `experiments/e17/reviews/common/E17_CLAUDE_V3_BLACK_BOX_CODEX_BENCHMARK_AUTHORIZATION.md`;
+- `experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V3_IMPROVEMENT_PLAN.md`.

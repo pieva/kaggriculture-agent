@@ -40,6 +40,16 @@ ROUTINE_SHA256: C2466262E096B03CA330A1B0FDB2E5DEBE53C45F297E046113E007731051E7E4
 
 La routine deriva dalla distillazione sperimentale del replay Kaggle pubblico `104498819`, poi corretta e validata fuori campione. Questa provenienza va dichiarata; non equivale a riuso della routine privata di un altro agente del repository.
 
+La guida as-built al codice e al collegamento con i layer C2.1 è
+`CODEX_V9_E17_RUNTIME_AND_FOUNDATION_MAPPING_IT.md`. In particolare, distingue
+il contratto normativo condiviso dalle dipendenze realmente presenti nel
+decision path.
+
+La config è un envelope dichiarativo e di provenance. Il loader corrente
+valida `candidate_id`, `model_spec_version`, `quadrants_owned` e
+`workforce_total`; gli altri target non parametrizzano dinamicamente le 719
+azioni congelate.
+
 ## 3. Architettura operativa
 
 ### 3.1 Forma del controller
@@ -47,7 +57,10 @@ La routine deriva dalla distillazione sperimentale del replay Kaggle pubblico `1
 - modalità primaria: `OPEN_LOOP_ROUTINE`;
 - indice: `observation.step`;
 - azione emessa: copia profonda della voce `ROUTINE_ACTIONS[step]`;
-- guardia: `PASS` sicuro per step fuori range o observation non utilizzabile;
+- guardia nel controller sorgente: `PASS` per step fuori range e fallback
+  `PASS` della factory in caso di eccezione;
+- guardia nella submission standalone: `PASS` per step fuori range; il contratto
+  Kaggle dell'osservazione è assunto valido;
 - patch causale: acquisto di una unità WHEAT aggiuntiva allo step 195 e rimozione dell'acquisto simultaneo della COW che sostituiva l'animale fuggito;
 - assenza di apprendimento online e di replanning generale.
 
@@ -85,11 +98,28 @@ La routine non usa come input online outcome futuri o telemetria post-hoc. I con
 ## 5. Contratto osservativo e deliberazione agent-local
 
 ```text
-SHARED_OBSERVATION_CONTRACT: src/agricola/core/observation_contract.py
+SHARED_OBSERVATION_CONTRACT_NORMATIVE: src/agricola/core/observation_contract.py
+OBSERVATION_CONTRACT_IMPORTED_BY_V9_SOURCE: NO
+OBSERVATION_CONTRACT_EMBEDDED_IN_SUBMISSION: NO
+V9_DECISION_INPUT: observation.step
+OTHER_OBSERVATION_FIELDS: PASSIVE_TELEMETRY_IN_SOURCE_ONLY
+FOUNDATION_CONFORMANCE_MODE: SEMANTIC_VALIDATION_AND_OFFLINE_AUDIT
 SHARED_DELIBERATION_RUNTIME: NONE
 ```
 
-La V9 usa soltanto clock, snapshot, hashing e normalizzazione del contratto osservativo neutrale. La vecchia macchina condivisa di deliberazione è stata rimossa dopo la migrazione dei consumer e i test di parità. Planner, priorità e routine rimangono responsabilità esclusiva del MODEL_SPEC e del codice Codex.
+Il contratto osservativo neutrale rende disponibili clock, snapshot, hashing e
+normalizzazione per le policy reattive e per i test comuni. La V9 congelata non
+lo importa: seleziona il batch usando direttamente `observation.step`; il
+controller sorgente legge altri campi soltanto per telemetria passiva. La
+submission standalone contiene solo la routine, il selettore temporale e la
+patch causale.
+
+Questa è una distinzione di conformità importante: la V9 è coerente con la
+Foundation per significato, validazione e audit, ma non è una deliberazione
+online costruita sulle feature C2.1. L'adozione del contratto nel decision path
+appartiene a una futura variante reattiva e dovrà essere verificata come delta
+intenzionale. Planner, priorità e routine restano responsabilità esclusiva del
+MODEL_SPEC e del codice Codex.
 
 ## 6. Risultati congelati
 
