@@ -16,7 +16,9 @@ Il modello finale può essere una policy deterministica interamente scritta a ma
 
 > **Addestrare un modello non significa necessariamente addestrare una rete neurale.**
 
-> Status di governance del repository (2026-09-02): riordino completo con gate A7 `PASS`; E17.0 completato e Codex E17.1 reattivo V1 congelato. Lo snapshot Kaggle mostra `1353,6` per il reattivo contro `1089,7` per il controllo V9 (`+24,2%`). La nuova V2 `MARKET_REGIME_ADAPTATION` completa 48 run development con +1,55% sul controllo inerte, divergenze tracciate e zero fughe, ma resta diagnostica: il prossimo passo è rendere state-driven servicing e routing. Claude V3 è completa ma congelata con gate falliti; Antigravity e Copilot restano congelati. Holdout e final confirmation non sono stati consumati.
+> Lo stato operativo, i gate e gli score correnti sono mantenuti nel
+> [Project State](docs/PROJECT_STATE.md), così il README resta una descrizione
+> stabile dell'architettura del progetto.
 
 ## Model Foundation
 
@@ -30,7 +32,7 @@ La **Model Foundation C2.1** (condivisa e neutrale) è articolata su **4 layer n
 | 2. Ontologia | `ONTOLOGY_C2_1.md` | `docs/foundation/ontology/ONTOLOGY_C2_1.md` | Vocabolario canonico del dominio, entità, concetti e relazioni condivise. | **Che cosa esiste nel dominio e che cosa significa?** |
 | 3. State Machine | `KAGGRICULTURE_STATE_MACHINE_C2_1.md` | `docs/foundation/state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md` | Stati fisici, transizioni biologiche, guardie e ciclo causale dell'engine. | **Come evolve lo stato dell'ambiente?** |
 | 4. Feature Model | `KAGGRICULTURE_FEATURE_MODEL_C2_1.md` | `docs/foundation/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2_1.md` | Feature osservabili e derivabili online al decision time, con provenance, telemetria e no-leakage contract. | **Che cosa può conoscere l'agente quando decide?** |
-| Downstream | `MODEL_SPEC_<AGENT>.md` | `docs/model_specs/` | Modello decisionale e strategico proprietario di ciascun agente (Antigravity, Codex, Copilot). | **Come usa l'agente le feature per formulare policy e azioni?** |
+| Downstream | `MODEL_SPEC_<AGENT>.md` | `docs/model_specs/` | Modello decisionale e strategico proprietario di ciascun agente (Antigravity, Codex, Claude, Copilot). | **Come usa l'agente le feature per formulare policy e azioni?** |
 
 *Nota sulla nomenclatura C2:* La sigla **C2** indica il **Cycle 2** (ciclo di revisione, audit e provenance della Foundation), non un componente architetturale o un modello di strategia.
 
@@ -58,18 +60,19 @@ STATE MACHINE
       v
 FEATURE MODEL
       |
-      +-----------------------------+-----------------------------+
-      |                             |                             |
-      v                             v                             v
-MODEL_SPEC_ANTIGRAVITY      MODEL_SPEC_CODEX              MODEL_SPEC_COPILOT
-      |                             |                             |
-      v                             v                             v
-   POLICY                        POLICY                        POLICY
-      |                             |                             |
-      +-----------------------------+-----------------------------+
-                                    |
-                                    v
-                           EXECUTION / TELEMETRY
+      +-------------------+-------------------+-------------------+
+      |                   |                   |                   |
+      v                   v                   v                   v
+MODEL_SPEC_            MODEL_SPEC_         MODEL_SPEC_         MODEL_SPEC_
+ANTIGRAVITY            CODEX               CLAUDE              COPILOT
+      |                   |                   |                   |
+      v                   v                   v                   v
+   POLICY              POLICY              POLICY              POLICY
+      |                   |                   |                   |
+      +-------------------+-------------------+-------------------+
+                                      |
+                                      v
+                             EXECUTION / TELEMETRY
                                     |
                                     v
                             FORENSIC ANALYSIS
@@ -401,7 +404,20 @@ Una soglia osservata costituisce una **inizializzazione del search space**, non 
 
 ## Ruolo dei modeler
 
-Antigravity, Codex e Copilot sono **modeler indipendenti**. Ricevono la stessa Foundation e la stessa evidenza comune, ma revisionano separatamente i propri `MODEL_SPEC`.
+Antigravity, Codex, Claude e Copilot sono **modeler indipendenti**. Ricevono la stessa Foundation e la stessa evidenza comune, ma revisionano separatamente i propri `MODEL_SPEC`.
+
+### Ambienti e modelli
+
+| Modeler | IDE / ambiente | Modello mostrato nella UI | Effort |
+|---|---|---|---|
+| Antigravity | Antigravity | Gemini 3.8 Flash | High |
+| Codex | Codex | 5.6 Sol | Molto alto |
+| Claude | Claude | Sonnet 5 | Alto |
+| Copilot | GitHub Copilot | MAI-Code-1.1-Flash | High |
+
+Le etichette sono uno snapshot di provenance ricavato dalle schermate fornite
+dal proprietario il 2026-09-03; non costituiscono dipendenze runtime del
+repository.
 
 Devono distinguere evidenza da inferenza, identificare feature, valutare relazioni con il target, proporre range solo quando supportati, dichiarare confidence e confounder, progettare esperimenti discriminanti e definire condizioni di falsificazione.
 

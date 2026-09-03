@@ -11,9 +11,9 @@ REPOSITORY_REORGANIZATION: COMPLETE / A0-A7 PASS
 REPOSITORY_REORGANIZATION_STATUS: COMPLETE
 COMMON_EXECUTION_PROMPT: experiments/e17/prompts/common/E17_COMMON_REPOSITORY_REORGANIZATION_AND_LAUNCH_PROMPT.md
 
-CURRENT_CODEX_MODEL: CODEX-C2-V9.0-3Q-MIXED-HIGH-DENSITY
-CURRENT_CODEX_SUBMISSION: submission/submission_codex.py
-CURRENT_CODEX_SUBMISSION_SHA256: 0428A6244C28E064BEDCEDC21C793D50A7C3231B8B7ADADF154BF40667833FC6
+CURRENT_CODEX_MODEL: CODEX-E17.3-TOPOLOGY-FILL-662-V2
+CURRENT_CODEX_SUBMISSION: submission/submission_codex_e17_topology_662.py
+CURRENT_CODEX_SUBMISSION_SHA256: 3DF5C15D078552AF0A3849653057303698C9D750B4C7BB087B8A29092FADBAE8
 CURRENT_CODEX_REACTIVE_SUBMISSION: submission/submission_codex_e17_reactive.py
 CURRENT_CODEX_REACTIVE_SUBMISSION_SHA256: 0874EB10F287DC7E6A268CDB64517BAE98E246EB1A124EF9C643A3B7DCE0082C
 KAGGLE_SCORE_PRIOR_SNAPSHOT: 1159.9
@@ -27,8 +27,9 @@ KAGGLE_E17_REACTIVE_RATING_SNAPSHOT: 1353.6
 KAGGLE_E17_REACTIVE_DELTA: +263.9 (+24.2%)
 VISIBLE_TOP3_2026_09_02: Crop_Dusta=2917.8, tetsuya=2890.3, 3정훈=2878.5
 
-NEXT_EXPERIMENT: E17
-E17_PHASE: E17.3 6-6-2 TOURNAMENT COMPLETE / HOLDOUT NOT USED
+NEXT_EXPERIMENT: E18
+E17_PHASE: CLOSED / DEVELOPMENT COMPLETE / HOLDOUT NOT USED
+E17_CLOSEOUT: COMPLETE_2026_09_03
 E17_OBJECTIVE: COMPARE_CAUSAL_LINES_WITHOUT_PRESELECTING_ONE_ARCHETYPE
 E17_POLICY_MUTATION: CODEX_SERVICE_ROUTING_V3_CONTROL / CODEX_POST_FEED_CAPACITY_BATCHING_V4D_INTERNAL
 E17_CROSS_AGENT_REVIEW: CLOSED
@@ -114,13 +115,21 @@ E17_662_MODEL: CODEX-E17.3-TOPOLOGY-FILL-662-V2
 E17_662_SUBMISSION: submission/submission_codex_e17_topology_662.py
 E17_662_SUBMISSION_SHA256: 3DF5C15D078552AF0A3849653057303698C9D750B4C7BB087B8A29092FADBAE8
 E17_662_TOPOLOGY: Q0_6 / Q1_6 / Q2_2 / FILLED_14_OF_14
-E17_662_KAGGLE_UPLOAD: OWNER_ACTION_REPORTED / SUBMISSION_ID_NOT_RECORDED
+E17_662_KAGGLE_SUBMISSION_ID: 559767808
+E17_662_KAGGLE_SCORE_SNAPSHOT: 1009.8_STABILIZING_NOT_FINAL
 E17_THREE_AGENT_TOURNAMENT: COMPLETE_42_OF_42_DEVELOPMENT_NON_QUALIFYING
 E17_THREE_AGENT_STANDINGS: CODEX_28_0_0 / CLAUDE_14_14_0 / COPILOT_0_28_0
 E17_THREE_AGENT_MEAN_MONEY: CODEX_123620.29 / CLAUDE_15511.21 / COPILOT_10537.18
 E17_THREE_AGENT_REPORT: experiments/e17/reports/common/E17_THREE_AGENT_DEVELOPMENT_TOURNAMENT_V2_REPORT_IT.md
-ACTIVE_DEVELOPMENT_AGENTS: CODEX, CLAUDE, COPILOT
-CODEX_REACTIVE_STATUS: FROZEN_FOR_REACTIVE_TOURNAMENT
+E17_DELTA_TOURNAMENT: COMPLETE_84_OF_84_DEVELOPMENT_NON_QUALIFYING
+E17_DELTA_TOURNAMENT_REPORT: experiments/e17/reports/common/E17_TWO_CANDIDATE_DELTA_TOURNAMENT_V3_REPORT_IT.md
+E17_CLAUDE_V5_DELTA: SHARED_+8.53% / DIRECT_-9.57% / NOT_PROMOTED
+E17_CLAUDE_V6_REGRESSION: 1W_13L / MEAN_1538.50 / 3Q_1_OF_14 / REJECTED
+E17_CLAUDE_V6_BLACKBOX: 0W_16L / MEAN_622.88 / OPPONENT_MEAN_144654.75
+E17_COPILOT_662_V3_DELTA: 0.00% / IDENTICAL_28_OF_28 / NOT_PROMOTED
+E17_COPILOT_662_V4: LATE_TECHNICAL_PROTOTYPE / NOT_BENCHMARKED / NOT_ADMITTED
+ACTIVE_DEVELOPMENT_AGENTS: NONE_E17_CLOSED
+CODEX_REACTIVE_STATUS: 662_V2_RETAINED_AS_E18_BASELINE
 CODEX_REACTIVE_DEVELOPMENT_MEAN: 139420.2857
 CODEX_REACTIVE_DELTA_VS_V9: 0
 CLAUDE_REACTIVE_STATUS: V1_REJECTED / V2_FROZEN_WITH_FAILED_GATES
@@ -134,23 +143,40 @@ REPLAY_JSON_CATALOG: data/replays/json/json.md
 E17_RAW_CODEX_DEV_AND_CLAUDE_V1: REMOVED_REPRODUCIBLE
 CLAUDE_V2_RAW: LOCAL_ONLY_GITIGNORED_RETAINED
 ANTIGRAVITY_STATUS: OWNER_UNAVAILABLE_UNTIL_2026_09_04 / EXCLUDED_FROM_E17_3_TOURNAMENT
-COPILOT_STATUS: E17_0_NATIVE_INCLUDED_IN_DEVELOPMENT_TOURNAMENT / NO_POLICY_MUTATION
-NEW_KAGGLE_SUBMISSION: E17_662_OWNER_ACTION_REPORTED / ID_AND_SCORE_PENDING
-NEXT_ACTION: RECORD_E17_662_KAGGLE_ID_AND_SCORE / RUN_ONE_FACTOR_DEVELOPMENT_ABLATIONS
+COPILOT_STATUS: 662_V3_BEHAVIORALLY_INERT / NOT_PROMOTED
+NEW_KAGGLE_SUBMISSION: E17_662_ID_559767808 / SCORE_SNAPSHOT_1009.8_STABILIZING
+
+E18_PHASE: OPEN_ENTRY_BASELINE_FROZEN
+E18_BASELINE: CODEX-E17.3-TOPOLOGY-FILL-662-V2
+E18_PLANNED_CANDIDATE: CODEX-E18.1-REACTIVE-662-V1
+E18_TARGET_MONEY: 100000
+E18_BASELINE_VS_CLAUDE: 132217.68
+E18_BASELINE_SYMMETRIC_662: 79323.86
+E18_GAP_TO_TARGET: 20676.14 / +26.1%_REQUIRED
+E18_REACTIVITY_GATE: FAIL_0_OF_28_ACTION_COUNT_PROFILES_DIVERGENT
+E18_SAFETY_GATE: PASS_14_OF_14 / Q2_2 / ESCAPES_0
+E18_MANIFEST: experiments/e18/manifest/E18_COMMON_MANIFEST_V1.json
+E18_PLAN: experiments/e18/design/E18_REACTIVE_662_TOP3_BENCHMARK_PLAN_V1.md
+E18_REPORT: experiments/e18/reports/common/E18_662_TOP3_BASELINE_BENCHMARK_IT.md
+E18_HOLDOUT: NOT_CONSUMED / NOT_AUTHORIZED
+NEXT_ACTION: E18_ACTIVATION_FIXTURES_BEFORE_POLICY_OPTIMIZATION
 ```
 
 ## Stato raggiunto
 
-E17.3 introduce la candidata Codex 6-6-2: 14 pascoli target costruiti e
-riempiti, cinque celle recuperate a crop, zero breach Q2, zero fughe ed esatto
-cap strutturale `6-6-2`. La submission standalone è pronta; il proprietario ha
-segnalato l'azione Kaggle, ma ID e score non sono ancora registrati.
+E17 è chiuso. La candidata Codex 6-6-2 mantiene 14 pascoli target riempiti,
+cinque celle recuperate a crop, zero breach Q2 e zero fughe. La submission
+Kaggle `559767808` ha uno snapshot `1009,8`, ancora in stabilizzazione.
 
-Il torneo development Codex/Claude/Copilot è completo: 42 match, sette seed
-development e due seat, senza holdout/final. Classifica: Codex `28-0-0`, Claude
-`14-14-0`, Copilot `0-28-0`. Antigravity è escluso fino al 2026-09-04. La
-prossima sessione deve registrare l'esito Kaggle 6-6-2 e trasformare i punti di
-miglioramento del report in ablation a una sola variabile.
+Il torneo delta finale è completo: 84 match development, senza holdout/final.
+Claude V5 non è promossa (`+8,53%` shared ma `-9,57%` diretto); V6 è respinta
+(`1-13`, 3Q `1/14`). La 6-6-2 V3 attribuita al lavoro Copilot è identica alla
+V2 in `28/28` profili ed è anch'essa non promossa.
+
+E18 è aperto con la V2 come baseline. Il benchmark Top 3 è osservazionale:
+gli archetipi storici `tetsuya`, `OceanMix` e `Crop Dusta` provengono da replay
+E17 già consumati. Il primo gate è dimostrare attivazione causale; solo dopo si
+misura il gap self-play di `20.676,14` (`+26,1%`) verso 100k.
 
 La Foundation C2.1 e il riordino del repository sono chiusi con gate A7
 `PASS`. La strategia E17 è stata riconciliata e congelata dopo tre review
@@ -304,25 +330,15 @@ un decision record successivo e non modifica retroattivamente quel verdetto.
 
 ## Prossima azione operativa
 
-1. mantenere congelati V9 e Codex reattivo V1 come controlli e submission
-   correnti;
-2. conservare market-reactive V2 e service-routing core V2 come prove
-   development, senza submission;
-3. anticipare il solo handoff del core da D29 a D28, rendendo efficiente e
-   verificabile la catena raccolta→shed→liquidazione;
-4. misurare separatamente `MOVE/service`, output raccolto e output realmente
-   monetizzato prima di anticipare ulteriormente l'handoff;
-5. mantenere acquisition/placement e quota allevamento Q2 fuori dalla prossima
-   mutazione: resteranno outcome finché il routing non ripianificherà in modo
-   economicamente equivalente le dipendenze strutturali;
-6. non consumare holdout o final confirmation e mantenere Claude V3 congelata
-   con gate falliti; Antigravity e Copilot restano congelati;
-7. usare metriche separate per seed, seat e regime, senza selezionare una
-   candidata dalla sola media complessiva.
-
-Antigravity e Copilot non vengono modificati e non partecipano al torneo.
-La submission reattiva è stata autorizzata e caricata dal proprietario come
-probe esterna separata; ulteriori submission richiedono una nuova decisione.
+1. costruire fixture controllate per `growth`, `service_pressure`,
+   `market_contention` e `liquidation`;
+2. registrare transizioni, feature causali, guard activation, ordini visti,
+   ordini throttled e unità soppresse;
+3. richiedere divergenza spiegabile dalla V2 prima di qualsiasi torneo
+   economico E18;
+4. preservare `6-6-2`, `14/14`, Q2 ≤2, zero fughe e residuo terminale zero;
+5. usare soltanto i nuovi seed development preregistrati nel manifest E18;
+   holdout e final-confirmation restano non autorizzati.
 
 ## Esibizione reattiva development a tre
 
@@ -349,7 +365,10 @@ osservata ma non ancora un rating stabile né uno score conclusivo. Il report è
 in
 `experiments/e17/reports/codex/E17_EXTERNAL_SUBMISSION_READINESS_REPORT_IT.md`.
 
-## Gate E17 finali proposti
+## Gate E17 storici
+
+Questi gate appartenevano alla proposta E17 e non sono i gate operativi E18;
+E18 usa il manifest e il piano activation-first elencati sotto.
 
 ```text
 HOLDOUT_MEAN >= 145000
@@ -377,6 +396,11 @@ STRATEGIC_INDEPENDENCE_GATE == PASS  # per il prossimo torneo a tre
 ## Documenti da leggere
 
 - `docs/PROJECT_STATE.md`;
+- `experiments/e18/README.md`;
+- `experiments/e18/manifest/E18_COMMON_MANIFEST_V1.json`;
+- `experiments/e18/design/E18_REACTIVE_662_TOP3_BENCHMARK_PLAN_V1.md`;
+- `experiments/e18/reports/common/E18_662_TOP3_BASELINE_BENCHMARK_IT.md`;
+- `experiments/e17/reports/common/E17_TWO_CANDIDATE_DELTA_TOURNAMENT_V3_REPORT_IT.md`;
 - `experiments/e17/prompts/common/E17_COMMON_REPOSITORY_REORGANIZATION_AND_LAUNCH_PROMPT.md`;
 - `docs/repository/REPOSITORY_ARCHITECTURE.md`;
 - `docs/repository/migration/POST_E17_EXTERNAL_RELEASE_CLEANUP.md`;

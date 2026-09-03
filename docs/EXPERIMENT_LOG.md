@@ -2030,3 +2030,65 @@ Antigravity è escluso fino al 2026-09-04.
 
 Report:
 `experiments/e17/reports/common/E17_THREE_AGENT_DEVELOPMENT_TOURNAMENT_V2_REPORT_IT.md`.
+
+---
+
+## E17 closeout — torneo delta Claude/Copilot
+
+**Data:** 2026-09-03
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY_NON_QUALIFYING`
+
+Il round-robin finale confronta Claude V5, Claude V3, la 6-6-2 V3 derivata
+dal lavoro Copilot e la 6-6-2 V2 di controllo: sei coppie, sette seed
+development, due orientamenti di seat, `84/84` match.
+
+- Claude V5 migliora del `+8,53%` contro gli avversari condivisi, ma perde il
+  `9,57%` nel diretto con V3, collassa fino a `78` e raggiunge solo il
+  `14,32%` del target 100k: non promossa.
+- La 6-6-2 V3 ha delta `0,00%`; `28/28` profili completi e conteggi azione
+  coincidono con V2: non promossa, V2 mantenuta.
+- La V4 early-herd arrivata dopo la matrice è conservata soltanto come
+  prototipo tecnico locale: non benchmarkata, non ammessa e non submission.
+- La successiva Claude V6 corregge un caso puntuale ma fallisce il regression
+  check completo contro V3: `1-13`, media `1.538,50`, minimo `32`, 3Q `1/14`
+  e tredici run sotto 5k. Il parallelo black-box contro due controlli Codex
+  conferma `0-16`, media `622,88` e nessun 3Q: respinta.
+
+Nessun holdout o final-confirmation è stato consumato. La submission 6-6-2
+V2 `559767808` registra uno snapshot Kaggle `1009,8`, non ancora finale.
+
+Report:
+
+- `experiments/e17/reports/common/E17_TWO_CANDIDATE_DELTA_TOURNAMENT_V3_REPORT_IT.md`;
+- `experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V6_REJECTION_REPORT_IT.md`.
+
+Decisione: E17 chiuso; nessuna delle nuove varianti sostituisce la 6-6-2 V2.
+
+---
+
+## E18 opening — benchmark Top 3 per 6-6-2 reattiva
+
+**Data:** 2026-09-03
+
+**Stato:** `OPEN_ENTRY_BASELINE_FROZEN`
+
+E18 mantiene invarianti `6-6-2`, `14/14`, Q2 ≤2, zero fughe e residuo
+terminale zero. Gli archetipi `tetsuya`, `OceanMix` e `Crop Dusta` derivano da
+replay discovery E17 già consumati: sono un benchmark osservazionale storico,
+non agenti live e non holdout E18.
+
+La baseline vale `132.217,68` contro Claude ma `79.323,86` in contesa
+simmetrica 6-6-2; per 100k mancano `20.676,14` (`+26,1%`). Il gate di ingresso
+reattività fallisce perché V3 e V2 hanno `0/28` profili azione divergenti e
+manca telemetria causale.
+
+Decisione: aprire `CODEX-E18.1-REACTIVE-662-V1` soltanto dopo activation
+fixture che dimostrino transizioni di regime e divergenza spiegabile. I nuovi
+seed development sono congelati nel manifest; holdout/final non autorizzati.
+
+Materiali:
+
+- `experiments/e18/manifest/E18_COMMON_MANIFEST_V1.json`;
+- `experiments/e18/design/E18_REACTIVE_662_TOP3_BENCHMARK_PLAN_V1.md`;
+- `experiments/e18/reports/common/E18_662_TOP3_BASELINE_BENCHMARK_IT.md`.

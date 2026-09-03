@@ -1,0 +1,156 @@
+{
+  "baseline_662": {
+    "animal_escapes": 0,
+    "matches": 42,
+    "max_q2_pastures_mean": 2.0,
+    "model": "CODEX-E17.3-TOPOLOGY-FILL-662-V2",
+    "money_mean_all_regimes": 114586.40476190476,
+    "money_mean_symmetric_662": 79323.85714285714,
+    "money_mean_vs_claude": 132217.67857142858,
+    "move_actions_mean": 3592.4285714285716,
+    "move_per_productive_mean": 1.37231569768233,
+    "peak_animals_mean": 15.0,
+    "peak_crops_mean": 59.92857142857143,
+    "peak_hands_mean": 12.0,
+    "peak_weeds_mean": 14.142857142857142,
+    "q1_activation_day_mean": 6.0,
+    "q2_activation_day_mean": 11.0,
+    "target_pastures_built_mean": 14.0,
+    "target_pastures_filled_mean": 14.0,
+    "three_quadrant_runs": 42,
+    "topology": {
+      "Q0": 6,
+      "Q1": 6,
+      "Q2": 2
+    },
+    "topology_cap_breaches": 0
+  },
+  "date": "2026-09-03",
+  "e18_entry_gates": {
+    "causal_activation_telemetry": {
+      "observed": [],
+      "required": [
+        "regime_transitions",
+        "guard_activations",
+        "orders_throttled",
+        "units_suppressed"
+      ],
+      "status": "MISSING"
+    },
+    "money_vs_claude_at_least_100k": {
+      "observed": 132217.67857142858,
+      "status": "PASS",
+      "threshold": 100000.0
+    },
+    "pasture_fill_14_of_14": {
+      "observed": 14.0,
+      "status": "PASS",
+      "threshold": 14
+    },
+    "reactive_action_stream_divergence": {
+      "observed": 0,
+      "status": "FAIL",
+      "threshold": 1
+    },
+    "symmetric_662_money_at_least_100k": {
+      "gap": 20676.142857142855,
+      "observed": 79323.85714285714,
+      "status": "FAIL",
+      "threshold": 100000.0
+    },
+    "top3_peak_crop_floor": {
+      "observed": 59.92857142857143,
+      "status": "PASS",
+      "threshold": 58.0
+    },
+    "top3_q1_timing_window": {
+      "observed": 6.0,
+      "status": "PASS",
+      "target_days": [
+        5,
+        7
+      ]
+    },
+    "top3_q2_timing_window": {
+      "observed": 11.0,
+      "status": "PASS",
+      "target_days": [
+        8,
+        11
+      ]
+    },
+    "zero_escapes": {
+      "observed": 0,
+      "status": "PASS",
+      "threshold": 0
+    }
+  },
+  "epistemic_role": "E18_TRAINING_BASELINE_FROM_E17_CONSUMED_EVIDENCE",
+  "final_confirmation_consumed": false,
+  "holdout_consumed": false,
+  "planned_candidate": "CODEX-E18.1-REACTIVE-662-V1",
+  "planned_causal_family": "OBSERVABLE_MARKET_AND_SERVICE_REGIME_SELECTION_WITH_662_INVARIANTS",
+  "schema_version": "E18_662_TOP3_BASELINE_BENCHMARK_V1",
+  "selected_top3_are_historical_replay_archetypes_not_live_callable_agents": true,
+  "sources": {
+    "top3": "experiments/e17/artifacts/discovery/codex/E17_TOP3_REPLAY_METRICS.json",
+    "tournament": "experiments/e17/artifacts/derived/common/E17_TWO_CANDIDATE_DELTA_TOURNAMENT_V3.json"
+  },
+  "top3_profiles": {
+    "Crop Dusta": {
+      "episodes": 5,
+      "escapes_total": 31,
+      "losses": 3,
+      "mean_final_hands": 12,
+      "mean_move_share_active_pct": 56.07,
+      "mean_moves": 4070,
+      "mean_owned_tile_activation_pct": 87.26,
+      "mean_peak_animals": 16.8,
+      "mean_peak_crops": 60.6,
+      "mean_score": 91361.2,
+      "median_q1_step": 122,
+      "median_q2_step": 203,
+      "weed_tile_days_total": 144,
+      "wins": 2
+    },
+    "OceanMix": {
+      "episodes": 4,
+      "escapes_total": 0,
+      "losses": 2,
+      "mean_final_hands": 10.5,
+      "mean_move_share_active_pct": 48.99,
+      "mean_moves": 3075.75,
+      "mean_owned_tile_activation_pct": 92.19,
+      "mean_peak_animals": 14.25,
+      "mean_peak_crops": 61,
+      "mean_score": 82535.25,
+      "median_q1_step": 151.0,
+      "median_q2_step": 266.0,
+      "weed_tile_days_total": 5,
+      "wins": 2
+    },
+    "tetsuya": {
+      "episodes": 4,
+      "escapes_total": 0,
+      "losses": 1,
+      "mean_final_hands": 11,
+      "mean_move_share_active_pct": 52.48,
+      "mean_moves": 3377.25,
+      "mean_owned_tile_activation_pct": 87.44,
+      "mean_peak_animals": 15,
+      "mean_peak_crops": 58,
+      "mean_score": 96568,
+      "median_q1_step": 169.0,
+      "median_q2_step": 241.0,
+      "weed_tile_days_total": 47,
+      "wins": 3
+    }
+  },
+  "v3_vs_v2_behavioral_equivalence": {
+    "comparable_runs": 28,
+    "differentiated_action_count_profiles": 0,
+    "differentiated_metric_profiles": 0,
+    "exact_action_count_profiles": 28,
+    "exact_complete_metric_profiles": 28
+  }
+}

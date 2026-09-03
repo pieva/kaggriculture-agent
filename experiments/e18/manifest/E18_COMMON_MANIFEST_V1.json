@@ -1,0 +1,110 @@
+{
+  "schema_version": "E18_COMMON_MANIFEST_V1",
+  "experiment_id": "E18",
+  "status": "OPEN_ENTRY_BASELINE_FROZEN",
+  "date": "2026-09-03",
+  "predecessor": {
+    "experiment": "E17",
+    "status": "CLOSED_DEVELOPMENT_COMPLETE_HOLDOUT_UNUSED",
+    "baseline_model": "CODEX-E17.3-TOPOLOGY-FILL-662-V2",
+    "baseline_source": "submission/submission_codex_e17_topology_662.py",
+    "baseline_source_role": "IMMUTABLE_STANDALONE_FREEZE",
+    "baseline_source_sha256": "3DF5C15D078552AF0A3849653057303698C9D750B4C7BB087B8A29092FADBAE8",
+    "repository_module_at_closeout": "src/agricola/strategy/codex/codex_e17_topology_cap_662.py",
+    "repository_module_at_closeout_sha256": "3B7A49FB29187D2E03F58F74E48A0D9A114C2C0E7112EB19908C303826D6315C",
+    "baseline_config": "experiments/e17/configs/codex/CODEX_E17_3_TOPOLOGY_CAP_662_V1.json",
+    "baseline_config_sha256": "0288AB878C7C9224A56B71E84158BDDDFDBE0CECC6D8EAE0F30093F985CEF50C",
+    "baseline_submission": "submission/submission_codex_e17_topology_662.py",
+    "baseline_submission_sha256": "3DF5C15D078552AF0A3849653057303698C9D750B4C7BB087B8A29092FADBAE8"
+  },
+  "objective": "OBSERVABLE_MARKET_AND_SERVICE_REGIME_SELECTION_WITH_662_INVARIANTS",
+  "planned_candidate": "CODEX-E18.1-REACTIVE-662-V1",
+  "policy_mutation_authorized": "DEVELOPMENT_ONLY_AFTER_ACTIVATION_FIXTURES",
+  "invariants": {
+    "pastures_by_quadrant": {
+      "Q0": 6,
+      "Q1": 6,
+      "Q2": 2
+    },
+    "pasture_fill": "14_OF_14",
+    "q2_pasture_cap": 2,
+    "animal_escapes": 0,
+    "topology_cap_breaches": 0,
+    "terminal_sellable_residual": 0
+  },
+  "benchmark": {
+    "plan": "experiments/e18/design/E18_REACTIVE_662_TOP3_BENCHMARK_PLAN_V1.md",
+    "plan_sha256": "8F018CE2439372F8C525E09912C9CB88BE1B602D01D24743C9EEF920E59E89AC",
+    "artifact": "experiments/e18/artifacts/baseline/E18_662_TOP3_BASELINE_BENCHMARK_V1.json",
+    "artifact_sha256": "15AE1C36C8A90D0B85A5D5F58D07CDE08FB136AB66BD615DCE91442C317FD0C3",
+    "top3_source": "experiments/e17/artifacts/discovery/codex/E17_TOP3_REPLAY_METRICS.json",
+    "top3_source_sha256": "6163E2FB8912D30D896DD5ECAD7587D0EF06B32AD93FFA78A10B20ADC7984B5A",
+    "tournament_source": "experiments/e17/artifacts/derived/common/E17_TWO_CANDIDATE_DELTA_TOURNAMENT_V3.json",
+    "tournament_source_sha256": "C875CEE35CDD384252327438147BF1D9339F0BC6B4B00F3A5C1C6C17424726EA",
+    "epistemic_role": "TRAINING_BASELINE_FROM_CONSUMED_E17_EVIDENCE",
+    "selected_top3": [
+      "tetsuya",
+      "OceanMix",
+      "Crop Dusta"
+    ],
+    "selected_top3_are_live_callable_agents": false
+  },
+  "seed_policy": {
+    "development": [
+      180903001,
+      180903002,
+      180903003,
+      180903004,
+      180903005,
+      180903006,
+      180903007
+    ],
+    "e17_training_seeds_must_not_be_presented_as_e18_validation": [
+      26090101,
+      26090102,
+      26090103,
+      1838889274,
+      1619968655,
+      710418712,
+      562040596
+    ],
+    "holdout": {
+      "seeds": [
+        207899150,
+        1866713870,
+        1953344146,
+        412628772,
+        157353689,
+        352254289
+      ],
+      "consumed": false,
+      "authorized": false
+    },
+    "final_confirmation": {
+      "seeds": [
+        1182799305,
+        1144076852,
+        1172855418,
+        1075728698
+      ],
+      "consumed": false,
+      "authorized": false
+    },
+    "seats": [
+      0,
+      1
+    ],
+    "failed_run_replacement": "FORBIDDEN"
+  },
+  "entry_gates": {
+    "baseline_money_vs_claude": 132217.67857142858,
+    "baseline_money_symmetric_662": 79323.85714285714,
+    "target_money": 100000,
+    "reactive_action_stream_divergence": "FAIL_0_OF_28",
+    "causal_activation_telemetry": "MISSING",
+    "topology_and_safety": "PASS"
+  },
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "next_action": "IMPLEMENT_ACTIVATION_FIXTURES_BEFORE_POLICY_OPTIMIZATION"
+}
