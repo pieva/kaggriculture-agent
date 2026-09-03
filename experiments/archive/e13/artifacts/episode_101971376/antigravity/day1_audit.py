@@ -5,7 +5,7 @@ Inspect Day 1 Turn 0 to 23 step-by-step between Player 0 and Player 1.
 import json
 from pathlib import Path
 
-REPLAY_PATH = Path("data/replays/reference/101971376.json")
+REPLAY_PATH = Path("data/replays/json/101971376.json")
 
 with open(REPLAY_PATH, "r", encoding="utf-8") as f:
     data = json.load(f)

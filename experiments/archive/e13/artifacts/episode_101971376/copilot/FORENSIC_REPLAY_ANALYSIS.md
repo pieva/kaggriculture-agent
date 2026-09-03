@@ -1,7 +1,7 @@
 # E13 Forensic Replay Analysis - Episode 101971376
 
 ## Scope and integrity
-Independent reconstruction from `data/replays/reference/101971376.json`; no other E13 analysis was read. Raw replay was not modified. Metrics are snapshot/action-derived; HIRE and BUY_LAND prices are not explicit in the action payload.
+Independent reconstruction from `data/replays/json/101971376.json`; no other E13 analysis was read. Raw replay was not modified. Metrics are snapshot/action-derived; HIRE and BUY_LAND prices are not explicit in the action payload.
 
 ## Verified identity
 - Episode: `101971376`; seed: `1630102796`; steps: `720`; module: `1.32.7`

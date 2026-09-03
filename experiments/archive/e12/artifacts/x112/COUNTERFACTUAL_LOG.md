@@ -1,7 +1,7 @@
 # X1.12 Truebelief Economic Engine Reconstruction - Counterfactual Log
 
 Primary evidence:
-- Raw replay: `experiments/archive/e12/artifacts/x111/101294736.json`
+- Raw replay canonico: `data/replays/json/101294736.json`
 - Raw SHA-256: `6281fdd32497c9db28e3d924ad8a55b12f841a5b1309164328679aa4f5ee8695`
 - Parsed benchmark: `experiments/archive/e12/artifacts/x111/truebelief_benchmark.json`
 - Timeline: `experiments/archive/e12/artifacts/x111/x111_truebelief_comparison_timeline.csv`

@@ -46,7 +46,7 @@ L'analisi deve restare strategicamente indipendente.
 
 Leggi integralmente:
 
-1. `data/replays/MANIFEST.md`;
+1. `data/replays/json/json.md`;
 2. `docs/foundation/FOUNDATION_C2_1_MANIFEST.md`;
 3. `docs/foundation/ontology/ONTOLOGY_C2_1.md`;
 4. `docs/foundation/state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md`;
@@ -59,15 +59,15 @@ Leggi integralmente:
 
 Analizza tutti e soltanto questi replay E17:
 
-- `data/replays/e17-discovery/104527555.json`;
-- `data/replays/e17-discovery/104541810.json`;
-- `data/replays/e17-discovery/104543983.json`;
-- `data/replays/e17-discovery/104547425.json`;
-- `data/replays/e17-discovery/104564762.json`;
-- `data/replays/e17-discovery/104577270.json`;
-- `data/replays/e17-discovery/104578185.json`;
-- `data/replays/e17-discovery/104586335.json`;
-- `data/replays/e17-discovery/104586487.json`.
+- `data/replays/json/104527555.json`;
+- `data/replays/json/104541810.json`;
+- `data/replays/json/104543983.json`;
+- `data/replays/json/104547425.json`;
+- `data/replays/json/104564762.json`;
+- `data/replays/json/104577270.json`;
+- `data/replays/json/104578185.json`;
+- `data/replays/json/104586335.json`;
+- `data/replays/json/104586487.json`.
 
 Non includere automaticamente altri `*.json` trovati nella directory.
 
@@ -77,7 +77,7 @@ Prima dell'analisi:
 
 1. verifica che i nove JSON siano validi e distinti per `EpisodeId`;
 2. verifica `module_version`, numero di step e stato terminale;
-3. riconcilia agenti e reward con `data/replays/MANIFEST.md`;
+3. riconcilia agenti e reward con `data/replays/json/json.md`;
 4. registra eventuali discrepanze e fermati se una discrepanza rende il
    corpus ambiguo;
 5. identifica con precisione il lato/player index di ogni agente in ogni

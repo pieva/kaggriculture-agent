@@ -106,7 +106,7 @@ def main() -> None:
     OUT.mkdir(parents=True, exist_ok=True)
     episodes, target_rows = [], []
     for eid in REPLAY_IDS:
-        path = ROOT / "data" / "replays" / "e17-discovery" / f"{eid}.json"
+        path = ROOT / "data" / "replays" / "json" / f"{eid}.json"
         raw = path.read_bytes(); data = json.loads(raw)
         agents = data["info"]["Agents"]
         agent_names = [
@@ -135,7 +135,7 @@ def main() -> None:
               "not_calculable": ["executed_action_outcomes per request", "animal occupancy or species per pasture/coop tile", "causal contribution of market contention", "online policy features from future replay states", "Q1/Q2 labels: replays expose compass quadrant names only"]}
     (OUT / "E17_TOP3_REPLAY_METRICS.json").write_text(json.dumps(output, indent=2, ensure_ascii=False), encoding="utf-8")
 
-    lines = ["# E17 Top-3 replay analysis — Copilot", "", "## Corpus verification", "", "All and only the nine preregistered replays were parsed. Each is valid JSON, has a distinct `info.EpisodeId`, schema/version `1`/`0.1.0`, module `1.32.7`, 720 steps, and terminal `DONE/DONE`. Agent/player mapping and terminal rewards reconcile with `data/replays/MANIFEST.md`.", "", "## Quantitative benchmark", "", "| Agent | Episodes | Mean score | Median score | Mean final cash | Mean peak hands |", "|---|---:|---:|---:|---:|---:|"]
+    lines = ["# E17 Top-3 replay analysis — Copilot", "", "## Corpus verification", "", "All and only the nine preregistered replays were parsed. Each is valid JSON, has a distinct `info.EpisodeId`, schema/version `1`/`0.1.0`, module `1.32.7`, 720 steps, and terminal `DONE/DONE`. Agent/player mapping and terminal rewards reconcile with `data/replays/json/json.md`.", "", "## Quantitative benchmark", "", "| Agent | Episodes | Mean score | Median score | Mean final cash | Mean peak hands |", "|---|---:|---:|---:|---:|---:|"]
     for a in ("tetsuya", "OceanMix", "Crop Dusta"):
         x=aggregate[a]; lines.append(f"| {a} | {x['episodes']} | {x['mean_score']:,.2f} | {x['median_score']:,.2f} | ${x['mean_final_money']:,.2f} | {x['mean_peak_hands']:.2f} |")
     lines += ["", "## Episode cards and temporal quadrant table", "", "`Q1/Q2` are reported as the observed unlock order after NW: NE is Q1 and SW is Q2 whenever those are the first and second expansions. SE was not required by the observed 3Q runs. `unplanted` is final empty plus WEED tiles; animal-dedicated tiles are PASTURE plus COOP, not inferred animal occupancy.", ""]

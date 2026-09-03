@@ -1,0 +1,49 @@
+{
+  "schema_version": "E17_2_V4D_KAGGLE_RELEASE_MANIFEST_V1",
+  "release_id": "CODEX-E17.2-V4D-D28-KAGGLE-CANDIDATE-V1",
+  "model_spec_version": "CODEX-E17.2-POST-FEED-CAPACITY-BATCHED-ROUTING-V4D-D28",
+  "status": "READY_FOR_OWNER_UPLOAD",
+  "date": "2026-09-02",
+  "submission": {
+    "path": "submission/submission_codex_e17_v4d.py",
+    "sha256": "2792244CA71115E6CAAFDFC942B6D9AAAF09B95FC717A5B182D07A31D9717CD7",
+    "bytes": 433331,
+    "entry_point": "agent"
+  },
+  "frozen_copy": {
+    "path": "experiments/e17/artifacts/freeze/codex/e17_2_v4d/submission_codex_e17_v4d.py",
+    "sha256": "2792244CA71115E6CAAFDFC942B6D9AAAF09B95FC717A5B182D07A31D9717CD7",
+    "byte_identical_to_submission": true
+  },
+  "builder": "scripts/build_submission_codex_e17_v4d.py",
+  "verifier": "experiments/e17/tools/codex/verify_e17_v4d_submission.py",
+  "verification": {
+    "isolated_import": "PASS",
+    "action_parity": "4314/4314",
+    "seeds": [26090101, 26090102, 26090103],
+    "seats": [0, 1],
+    "terminal_reward_parity": "6/6",
+    "technical_errors": 0,
+    "fallbacks": 0
+  },
+  "development_evidence": {
+    "inert_mean": 135096.83,
+    "inert_control_mean": 134351.33,
+    "inert_delta_pct": 0.555,
+    "market_stress_runs": 48,
+    "market_stress_mean": 124090.17,
+    "market_stress_control_mean": 123199.54,
+    "market_stress_delta_pct": 0.723,
+    "market_stress_matched_nonnegative": "24/24",
+    "animal_escapes": 0,
+    "terminal_sellable_residual_units": 0
+  },
+  "excluded_candidate": {
+    "id": "CODEX-E17.2-POST-FEED-CAPACITY-BATCHED-ROUTING-V5-D27",
+    "reason": "FAILED_PREREGISTERED_REWARD_GATES"
+  },
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "kaggle_uploaded": false,
+  "kaggle_submission_id": null
+}

@@ -6,7 +6,7 @@ import json
 from pathlib import Path
 from collections import defaultdict, Counter
 
-BENCHMARK_DIR = Path(__file__).resolve().parents[1] / "docs" / "benchmark"
+BENCHMARK_DIR = Path(__file__).resolve().parents[1] / "data" / "replays" / "json"
 REPLAYS = {
     "LuCcc": (BENCHMARK_DIR / "103484828.json", 1),
     "Gordeev": (BENCHMARK_DIR / "103473619.json", 0),

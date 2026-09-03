@@ -5,7 +5,7 @@ Deep trajectory and divergence inspection for Episode 101971376.
 import json
 from pathlib import Path
 
-REPLAY_PATH = Path("data/replays/reference/101971376.json")
+REPLAY_PATH = Path("data/replays/json/101971376.json")
 
 with open(REPLAY_PATH, "r", encoding="utf-8") as f:
     data = json.load(f)

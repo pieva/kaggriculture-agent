@@ -2,7 +2,7 @@
 
 ## Corpus verification
 
-All and only the nine preregistered replays were parsed. Each is valid JSON, has a distinct `info.EpisodeId`, schema/version `1`/`0.1.0`, module `1.32.7`, 720 steps, and terminal `DONE/DONE`. Agent/player mapping and terminal rewards reconcile with `data/replays/MANIFEST.md`.
+All and only the nine preregistered replays were parsed. Each is valid JSON, has a distinct `info.EpisodeId`, schema/version `1`/`0.1.0`, module `1.32.7`, 720 steps, and terminal `DONE/DONE`. Agent/player mapping and terminal rewards reconcile with `data/replays/json/json.md`.
 
 ## Quantitative benchmark
 

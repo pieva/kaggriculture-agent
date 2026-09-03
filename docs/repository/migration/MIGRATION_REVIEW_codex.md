@@ -34,8 +34,8 @@ Decisioni strutturali principali:
 
 1. E17 viene ricomposto verticalmente sotto `experiments/e17/`;
 2. E01–E16 vengono conservati sotto `experiments/archive/eNN/`;
-3. i replay esterni passano a `data/replays/reference/` oppure
-   `data/replays/e17-discovery/`;
+3. i replay esterni passano alla cartella unica `data/replays/json/`, con
+   ruolo epistemico registrato nel catalogo;
 4. Foundation, MODEL_SPEC e governance vengono separati sotto `docs/`;
 5. la submission canonica Codex resta immutata; le altre submission vengono
    archiviate, non cancellate;

@@ -1,0 +1,2445 @@
+{
+  "activation_day": 28,
+  "aggregates": {
+    "batched_v4a": {
+      "action_counts": {
+        "DROP": 66,
+        "EAST": 539,
+        "FEED": 114,
+        "HARVEST": 407,
+        "NORTH": 491,
+        "PASS": 415,
+        "PICKUP": 24,
+        "SOUTH": 417,
+        "WATER": 146,
+        "WEST": 579
+      },
+      "batched_harvest_services": 120,
+      "cluster_initial_assignments": 144,
+      "cluster_sticky_assignments": 524,
+      "cluster_switch_rate": 0.22941176470588234,
+      "cluster_switches": 156,
+      "coordinated_market_batches": 49,
+      "coordinated_sell_orders": 123,
+      "coordinated_sell_units_requested": 405,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 353,
+      "deferred_drop_opportunities": 1188,
+      "fallbacks": 0,
+      "invalid_action_shapes": 0,
+      "market_execution_outcomes": {
+        "EXECUTED": 47,
+        "UNKNOWN": 2
+      },
+      "market_ledger_classification_coverage": 1.0,
+      "market_ledger_record_count": 49,
+      "max_carried_sellable_units": 13,
+      "mean_reward": 130953.0,
+      "move_per_service": 2.6763540290620873,
+      "non_sell_preservation_failures": 0,
+      "routing_commands": 2026,
+      "runs": 6,
+      "service_commands": 757,
+      "strict_eod_crop_losses": 77,
+      "strict_eod_escapes": 0,
+      "technical_errors": 0,
+      "terminal_sellable_residual_units": 0,
+      "unit_execution_outcomes": {
+        "EXECUTED": 2703,
+        "UNKNOWN": 495
+      },
+      "unit_ledger_classification_coverage": 1.0,
+      "unit_ledger_record_count": 3198
+    },
+    "clustered_v4b": {
+      "action_counts": {
+        "DROP": 66,
+        "EAST": 541,
+        "FEED": 114,
+        "HARVEST": 407,
+        "NORTH": 491,
+        "PASS": 411,
+        "PICKUP": 24,
+        "SOUTH": 417,
+        "WATER": 146,
+        "WEST": 581
+      },
+      "batched_harvest_services": 120,
+      "cluster_initial_assignments": 144,
+      "cluster_sticky_assignments": 526,
+      "cluster_switch_rate": 0.2287390029325513,
+      "cluster_switches": 156,
+      "coordinated_market_batches": 47,
+      "coordinated_sell_orders": 121,
+      "coordinated_sell_units_requested": 405,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 353,
+      "deferred_drop_opportunities": 1188,
+      "fallbacks": 0,
+      "invalid_action_shapes": 0,
+      "market_execution_outcomes": {
+        "EXECUTED": 45,
+        "UNKNOWN": 2
+      },
+      "market_ledger_classification_coverage": 1.0,
+      "market_ledger_record_count": 47,
+      "max_carried_sellable_units": 13,
+      "mean_reward": 130954.33333333333,
+      "move_per_service": 2.6816380449141346,
+      "non_sell_preservation_failures": 0,
+      "routing_commands": 2030,
+      "runs": 6,
+      "service_commands": 757,
+      "strict_eod_crop_losses": 77,
+      "strict_eod_escapes": 0,
+      "technical_errors": 0,
+      "terminal_sellable_residual_units": 0,
+      "unit_execution_outcomes": {
+        "EXECUTED": 2707,
+        "UNKNOWN": 491
+      },
+      "unit_ledger_classification_coverage": 1.0,
+      "unit_ledger_record_count": 3198
+    },
+    "service_routing_v3": {
+      "action_counts": {
+        "DROP": 205,
+        "EAST": 568,
+        "FEED": 114,
+        "HARVEST": 331,
+        "NORTH": 515,
+        "PASS": 190,
+        "PICKUP": 24,
+        "SOUTH": 521,
+        "WATER": 78,
+        "WEST": 652
+      },
+      "batched_harvest_services": 0,
+      "cluster_initial_assignments": 0,
+      "cluster_sticky_assignments": 0,
+      "cluster_switch_rate": 0.0,
+      "cluster_switches": 0,
+      "coordinated_market_batches": 78,
+      "coordinated_sell_orders": 94,
+      "coordinated_sell_units_requested": 238,
+      "d28_explicit_drop_count": 66,
+      "deadline_drop_assignments": 0,
+      "deferred_drop_opportunities": 0,
+      "fallbacks": 0,
+      "invalid_action_shapes": 0,
+      "market_execution_outcomes": {
+        "EXECUTED": 72,
+        "UNKNOWN": 6
+      },
+      "market_ledger_classification_coverage": 1.0,
+      "market_ledger_record_count": 78,
+      "max_carried_sellable_units": 0,
+      "mean_reward": 134351.33333333334,
+      "move_per_service": 3.0,
+      "non_sell_preservation_failures": 0,
+      "routing_commands": 2256,
+      "runs": 6,
+      "service_commands": 752,
+      "strict_eod_crop_losses": 77,
+      "strict_eod_escapes": 0,
+      "technical_errors": 0,
+      "terminal_sellable_residual_units": 0,
+      "unit_execution_outcomes": {
+        "EXECUTED": 2917,
+        "UNKNOWN": 281
+      },
+      "unit_ledger_classification_coverage": 1.0,
+      "unit_ledger_record_count": 3198
+    }
+  },
+  "candidate_a": "CODEX-E17.2-BATCHED-ROUTING-V4A-D28",
+  "candidate_b": "CODEX-E17.2-CLUSTERED-ROUTING-V4B-D28",
+  "control": "CODEX-E17.2-REACTIVE-SERVICE-ROUTING-CORE-V3-D28",
+  "epistemic_role": "DEVELOPMENT_ONLY",
+  "final_confirmation_consumed": false,
+  "gates": {
+    "v4a": {
+      "animal_escapes_zero": true,
+      "batched_harvest_present": true,
+      "d28_explicit_drop_zero": true,
+      "fallbacks_zero": true,
+      "invalid_action_shapes_zero": true,
+      "market_ledger_coverage_one": true,
+      "mean_reward_not_below_v3": false,
+      "move_per_service_below_v3": true,
+      "non_sell_orders_preserved": true,
+      "technical_errors_zero": true,
+      "terminal_sellable_residual_zero": true,
+      "unit_ledger_coverage_one": true
+    },
+    "v4b": {
+      "animal_escapes_zero": true,
+      "cluster_sticky_assignments_present": true,
+      "cluster_switch_rate_not_above_v4a": true,
+      "fallbacks_zero": true,
+      "invalid_action_shapes_zero": true,
+      "market_ledger_coverage_one": true,
+      "mean_reward_delta_at_least_minus_half_pct": true,
+      "move_per_service_not_above_v4a": false,
+      "non_sell_orders_preserved": true,
+      "technical_errors_zero": true,
+      "terminal_sellable_residual_zero": true,
+      "unit_ledger_coverage_one": true
+    }
+  },
+  "holdout_consumed": false,
+  "liquidation_day": 29,
+  "opponent": "INERT_PASS_POLICY",
+  "policies": [
+    "batched_v4a",
+    "clustered_v4b",
+    "service_routing_v3"
+  ],
+  "results": [
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 11,
+        "EAST": 89,
+        "FEED": 19,
+        "HARVEST": 68,
+        "NORTH": 83,
+        "PASS": 69,
+        "PICKUP": 4,
+        "SOUTH": 70,
+        "WATER": 24,
+        "WEST": 96
+      },
+      "action_stream_sha256": "0d8ce0fc99ed1c69ace9aaf2e8f3ec48eb1bbecf20a3a1ca1b84a190e2d0d3c4",
+      "batched_harvest_services": 20,
+      "cluster_initial_assignments": 24,
+      "cluster_sticky_assignments": 88,
+      "cluster_switch_rate": 0.22123893805309736,
+      "cluster_switches": 25,
+      "coordinated_market_batches": 8,
+      "coordinated_sell_orders": 21,
+      "coordinated_sell_units_requested": 68,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 59,
+      "deferred_drop_opportunities": 198,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 451,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 82
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 8
+      },
+      "market_ledger_classified_count": 8,
+      "market_ledger_record_count": 8,
+      "max_carried_sellable_units": 13,
+      "max_hands": 12,
+      "move_per_service": 2.6825396825396823,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "batched_v4a",
+      "reward": 178951.0,
+      "routing_commands": 338,
+      "seat": 0,
+      "seed": 26090101,
+      "service_commands": 126,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 59,
+        "FEED": 53,
+        "HARVEST": 208,
+        "PICKUP_WHEAT": 4,
+        "WATER": 50
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 11,
+        "EAST": 90,
+        "FEED": 19,
+        "HARVEST": 68,
+        "NORTH": 83,
+        "PASS": 67,
+        "PICKUP": 4,
+        "SOUTH": 70,
+        "WATER": 24,
+        "WEST": 97
+      },
+      "action_stream_sha256": "1b1ac078901e929b0b4d73169c590c932a37519a0e3f5659507904506490b22e",
+      "batched_harvest_services": 20,
+      "cluster_initial_assignments": 24,
+      "cluster_sticky_assignments": 89,
+      "cluster_switch_rate": 0.21929824561403508,
+      "cluster_switches": 25,
+      "coordinated_market_batches": 7,
+      "coordinated_sell_orders": 20,
+      "coordinated_sell_units_requested": 68,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 59,
+      "deferred_drop_opportunities": 198,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 453,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 80
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 7
+      },
+      "market_ledger_classified_count": 7,
+      "market_ledger_record_count": 7,
+      "max_carried_sellable_units": 13,
+      "max_hands": 12,
+      "move_per_service": 2.6984126984126986,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "clustered_v4b",
+      "reward": 178955.0,
+      "routing_commands": 340,
+      "seat": 0,
+      "seed": 26090101,
+      "service_commands": 126,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 59,
+        "FEED": 53,
+        "HARVEST": 210,
+        "PICKUP_WHEAT": 4,
+        "WATER": 50
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 34,
+        "EAST": 93,
+        "FEED": 19,
+        "HARVEST": 55,
+        "NORTH": 86,
+        "PASS": 34,
+        "PICKUP": 4,
+        "SOUTH": 87,
+        "WATER": 13,
+        "WEST": 108
+      },
+      "action_stream_sha256": "22a061550d307b0464cd46a03d51c6455561f480de49b253dd36f6d7fd4db56b",
+      "batched_harvest_services": 0,
+      "cluster_initial_assignments": 0,
+      "cluster_sticky_assignments": 0,
+      "cluster_switch_rate": 0.0,
+      "cluster_switches": 0,
+      "coordinated_market_batches": 12,
+      "coordinated_sell_orders": 14,
+      "coordinated_sell_units_requested": 36,
+      "d28_explicit_drop_count": 11,
+      "deadline_drop_assignments": 0,
+      "deferred_drop_opportunities": 0,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 484,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 49
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7,
+            "WHEAT": 4
+          },
+          "crops": 11
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1,
+            "WHEAT": 5
+          },
+          "crops": 6
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 3
+          },
+          "crops": 9
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 11,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 12,
+      "market_ledger_record_count": 12,
+      "max_carried_sellable_units": 0,
+      "max_hands": 12,
+      "move_per_service": 2.992,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "service_routing_v3",
+      "reward": 183784.0,
+      "routing_commands": 374,
+      "seat": 0,
+      "seed": 26090101,
+      "service_commands": 125,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 151,
+        "FEED": 51,
+        "HARVEST": 201,
+        "PICKUP_WHEAT": 4,
+        "WATER": 2
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 11,
+        "EAST": 89,
+        "FEED": 19,
+        "HARVEST": 68,
+        "NORTH": 83,
+        "PASS": 69,
+        "PICKUP": 4,
+        "SOUTH": 70,
+        "WATER": 24,
+        "WEST": 96
+      },
+      "action_stream_sha256": "0d8ce0fc99ed1c69ace9aaf2e8f3ec48eb1bbecf20a3a1ca1b84a190e2d0d3c4",
+      "batched_harvest_services": 20,
+      "cluster_initial_assignments": 24,
+      "cluster_sticky_assignments": 88,
+      "cluster_switch_rate": 0.22123893805309736,
+      "cluster_switches": 25,
+      "coordinated_market_batches": 8,
+      "coordinated_sell_orders": 21,
+      "coordinated_sell_units_requested": 68,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 59,
+      "deferred_drop_opportunities": 198,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 451,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 82
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 8
+      },
+      "market_ledger_classified_count": 8,
+      "market_ledger_record_count": 8,
+      "max_carried_sellable_units": 13,
+      "max_hands": 12,
+      "move_per_service": 2.6825396825396823,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "batched_v4a",
+      "reward": 178951.0,
+      "routing_commands": 338,
+      "seat": 1,
+      "seed": 26090101,
+      "service_commands": 126,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 59,
+        "FEED": 53,
+        "HARVEST": 208,
+        "PICKUP_WHEAT": 4,
+        "WATER": 50
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 11,
+        "EAST": 90,
+        "FEED": 19,
+        "HARVEST": 68,
+        "NORTH": 83,
+        "PASS": 67,
+        "PICKUP": 4,
+        "SOUTH": 70,
+        "WATER": 24,
+        "WEST": 97
+      },
+      "action_stream_sha256": "1b1ac078901e929b0b4d73169c590c932a37519a0e3f5659507904506490b22e",
+      "batched_harvest_services": 20,
+      "cluster_initial_assignments": 24,
+      "cluster_sticky_assignments": 89,
+      "cluster_switch_rate": 0.21929824561403508,
+      "cluster_switches": 25,
+      "coordinated_market_batches": 7,
+      "coordinated_sell_orders": 20,
+      "coordinated_sell_units_requested": 68,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 59,
+      "deferred_drop_opportunities": 198,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 453,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 80
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 7
+      },
+      "market_ledger_classified_count": 7,
+      "market_ledger_record_count": 7,
+      "max_carried_sellable_units": 13,
+      "max_hands": 12,
+      "move_per_service": 2.6984126984126986,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "clustered_v4b",
+      "reward": 178955.0,
+      "routing_commands": 340,
+      "seat": 1,
+      "seed": 26090101,
+      "service_commands": 126,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 59,
+        "FEED": 53,
+        "HARVEST": 210,
+        "PICKUP_WHEAT": 4,
+        "WATER": 50
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 34,
+        "EAST": 93,
+        "FEED": 19,
+        "HARVEST": 55,
+        "NORTH": 86,
+        "PASS": 34,
+        "PICKUP": 4,
+        "SOUTH": 87,
+        "WATER": 13,
+        "WEST": 108
+      },
+      "action_stream_sha256": "22a061550d307b0464cd46a03d51c6455561f480de49b253dd36f6d7fd4db56b",
+      "batched_harvest_services": 0,
+      "cluster_initial_assignments": 0,
+      "cluster_sticky_assignments": 0,
+      "cluster_switch_rate": 0.0,
+      "cluster_switches": 0,
+      "coordinated_market_batches": 12,
+      "coordinated_sell_orders": 14,
+      "coordinated_sell_units_requested": 36,
+      "d28_explicit_drop_count": 11,
+      "deadline_drop_assignments": 0,
+      "deferred_drop_opportunities": 0,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 484,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 49
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7,
+            "WHEAT": 4
+          },
+          "crops": 11
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1,
+            "WHEAT": 5
+          },
+          "crops": 6
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 3
+          },
+          "crops": 9
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 11,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 12,
+      "market_ledger_record_count": 12,
+      "max_carried_sellable_units": 0,
+      "max_hands": 12,
+      "move_per_service": 2.992,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "service_routing_v3",
+      "reward": 183784.0,
+      "routing_commands": 374,
+      "seat": 1,
+      "seed": 26090101,
+      "service_commands": 125,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 151,
+        "FEED": 51,
+        "HARVEST": 201,
+        "PICKUP_WHEAT": 4,
+        "WATER": 2
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 11,
+        "EAST": 89,
+        "FEED": 19,
+        "HARVEST": 68,
+        "NORTH": 84,
+        "PASS": 66,
+        "PICKUP": 4,
+        "SOUTH": 71,
+        "WATER": 24,
+        "WEST": 97
+      },
+      "action_stream_sha256": "d357e29c358b99df127c4c789f299d67ceff65e7e0e763ec5d85bfa4a149c3dd",
+      "batched_harvest_services": 20,
+      "cluster_initial_assignments": 24,
+      "cluster_sticky_assignments": 87,
+      "cluster_switch_rate": 0.23684210526315788,
+      "cluster_switches": 27,
+      "coordinated_market_batches": 9,
+      "coordinated_sell_orders": 22,
+      "coordinated_sell_units_requested": 67,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 60,
+      "deferred_drop_opportunities": 198,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 453,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 80
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 8,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 9,
+      "market_ledger_record_count": 9,
+      "max_carried_sellable_units": 13,
+      "max_hands": 12,
+      "move_per_service": 2.7063492063492065,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "batched_v4a",
+      "reward": 120645.0,
+      "routing_commands": 341,
+      "seat": 0,
+      "seed": 26090102,
+      "service_commands": 126,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 60,
+        "FEED": 53,
+        "HARVEST": 210,
+        "PICKUP_WHEAT": 4,
+        "WATER": 50
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 11,
+        "EAST": 89,
+        "FEED": 19,
+        "HARVEST": 68,
+        "NORTH": 84,
+        "PASS": 66,
+        "PICKUP": 4,
+        "SOUTH": 71,
+        "WATER": 24,
+        "WEST": 97
+      },
+      "action_stream_sha256": "d357e29c358b99df127c4c789f299d67ceff65e7e0e763ec5d85bfa4a149c3dd",
+      "batched_harvest_services": 20,
+      "cluster_initial_assignments": 24,
+      "cluster_sticky_assignments": 87,
+      "cluster_switch_rate": 0.23684210526315788,
+      "cluster_switches": 27,
+      "coordinated_market_batches": 9,
+      "coordinated_sell_orders": 22,
+      "coordinated_sell_units_requested": 67,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 60,
+      "deferred_drop_opportunities": 198,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 453,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 80
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 8,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 9,
+      "market_ledger_record_count": 9,
+      "max_carried_sellable_units": 13,
+      "max_hands": 12,
+      "move_per_service": 2.7063492063492065,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "clustered_v4b",
+      "reward": 120645.0,
+      "routing_commands": 341,
+      "seat": 0,
+      "seed": 26090102,
+      "service_commands": 126,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 60,
+        "FEED": 53,
+        "HARVEST": 210,
+        "PICKUP_WHEAT": 4,
+        "WATER": 50
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 34,
+        "EAST": 93,
+        "FEED": 19,
+        "HARVEST": 55,
+        "NORTH": 87,
+        "PASS": 32,
+        "PICKUP": 4,
+        "SOUTH": 88,
+        "WATER": 13,
+        "WEST": 108
+      },
+      "action_stream_sha256": "ea2650548112ddcb82a1d30e9a109b0c9fdab0de0bffb4d133e06bbc91fa74ba",
+      "batched_harvest_services": 0,
+      "cluster_initial_assignments": 0,
+      "cluster_sticky_assignments": 0,
+      "cluster_switch_rate": 0.0,
+      "cluster_switches": 0,
+      "coordinated_market_batches": 11,
+      "coordinated_sell_orders": 14,
+      "coordinated_sell_units_requested": 35,
+      "d28_explicit_drop_count": 11,
+      "deadline_drop_assignments": 0,
+      "deferred_drop_opportunities": 0,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 486,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 47
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7,
+            "WHEAT": 4
+          },
+          "crops": 11
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1,
+            "WHEAT": 5
+          },
+          "crops": 6
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 3
+          },
+          "crops": 9
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 10,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 11,
+      "market_ledger_record_count": 11,
+      "max_carried_sellable_units": 0,
+      "max_hands": 12,
+      "move_per_service": 3.008,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "service_routing_v3",
+      "reward": 122757.0,
+      "routing_commands": 376,
+      "seat": 0,
+      "seed": 26090102,
+      "service_commands": 125,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 151,
+        "FEED": 51,
+        "HARVEST": 203,
+        "PICKUP_WHEAT": 4,
+        "WATER": 2
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 11,
+        "EAST": 89,
+        "FEED": 19,
+        "HARVEST": 68,
+        "NORTH": 84,
+        "PASS": 66,
+        "PICKUP": 4,
+        "SOUTH": 71,
+        "WATER": 24,
+        "WEST": 97
+      },
+      "action_stream_sha256": "d357e29c358b99df127c4c789f299d67ceff65e7e0e763ec5d85bfa4a149c3dd",
+      "batched_harvest_services": 20,
+      "cluster_initial_assignments": 24,
+      "cluster_sticky_assignments": 87,
+      "cluster_switch_rate": 0.23684210526315788,
+      "cluster_switches": 27,
+      "coordinated_market_batches": 9,
+      "coordinated_sell_orders": 22,
+      "coordinated_sell_units_requested": 67,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 60,
+      "deferred_drop_opportunities": 198,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 453,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 80
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 8,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 9,
+      "market_ledger_record_count": 9,
+      "max_carried_sellable_units": 13,
+      "max_hands": 12,
+      "move_per_service": 2.7063492063492065,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "batched_v4a",
+      "reward": 120645.0,
+      "routing_commands": 341,
+      "seat": 1,
+      "seed": 26090102,
+      "service_commands": 126,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 60,
+        "FEED": 53,
+        "HARVEST": 210,
+        "PICKUP_WHEAT": 4,
+        "WATER": 50
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 11,
+        "EAST": 89,
+        "FEED": 19,
+        "HARVEST": 68,
+        "NORTH": 84,
+        "PASS": 66,
+        "PICKUP": 4,
+        "SOUTH": 71,
+        "WATER": 24,
+        "WEST": 97
+      },
+      "action_stream_sha256": "d357e29c358b99df127c4c789f299d67ceff65e7e0e763ec5d85bfa4a149c3dd",
+      "batched_harvest_services": 20,
+      "cluster_initial_assignments": 24,
+      "cluster_sticky_assignments": 87,
+      "cluster_switch_rate": 0.23684210526315788,
+      "cluster_switches": 27,
+      "coordinated_market_batches": 9,
+      "coordinated_sell_orders": 22,
+      "coordinated_sell_units_requested": 67,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 60,
+      "deferred_drop_opportunities": 198,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 453,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 80
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 8,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 9,
+      "market_ledger_record_count": 9,
+      "max_carried_sellable_units": 13,
+      "max_hands": 12,
+      "move_per_service": 2.7063492063492065,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "clustered_v4b",
+      "reward": 120645.0,
+      "routing_commands": 341,
+      "seat": 1,
+      "seed": 26090102,
+      "service_commands": 126,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 60,
+        "FEED": 53,
+        "HARVEST": 210,
+        "PICKUP_WHEAT": 4,
+        "WATER": 50
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 34,
+        "EAST": 93,
+        "FEED": 19,
+        "HARVEST": 55,
+        "NORTH": 87,
+        "PASS": 32,
+        "PICKUP": 4,
+        "SOUTH": 88,
+        "WATER": 13,
+        "WEST": 108
+      },
+      "action_stream_sha256": "ea2650548112ddcb82a1d30e9a109b0c9fdab0de0bffb4d133e06bbc91fa74ba",
+      "batched_harvest_services": 0,
+      "cluster_initial_assignments": 0,
+      "cluster_sticky_assignments": 0,
+      "cluster_switch_rate": 0.0,
+      "cluster_switches": 0,
+      "coordinated_market_batches": 11,
+      "coordinated_sell_orders": 14,
+      "coordinated_sell_units_requested": 35,
+      "d28_explicit_drop_count": 11,
+      "deadline_drop_assignments": 0,
+      "deferred_drop_opportunities": 0,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 486,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 47
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7,
+            "WHEAT": 4
+          },
+          "crops": 11
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1,
+            "WHEAT": 5
+          },
+          "crops": 6
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 3
+          },
+          "crops": 9
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 10,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 11,
+      "market_ledger_record_count": 11,
+      "max_carried_sellable_units": 0,
+      "max_hands": 12,
+      "move_per_service": 3.008,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "service_routing_v3",
+      "reward": 122757.0,
+      "routing_commands": 376,
+      "seat": 1,
+      "seed": 26090102,
+      "service_commands": 125,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 151,
+        "FEED": 51,
+        "HARVEST": 203,
+        "PICKUP_WHEAT": 4,
+        "WATER": 2
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 11,
+        "EAST": 92,
+        "FEED": 19,
+        "HARVEST": 67,
+        "NORTH": 77,
+        "PASS": 73,
+        "PICKUP": 4,
+        "SOUTH": 68,
+        "WATER": 26,
+        "WEST": 96
+      },
+      "action_stream_sha256": "1ac7901d9a5cb0b5a1da8b49f015bb505dfbc1bc79901a52631700c416cfcc49",
+      "batched_harvest_services": 20,
+      "cluster_initial_assignments": 24,
+      "cluster_sticky_assignments": 90,
+      "cluster_switch_rate": 0.22413793103448276,
+      "cluster_switches": 26,
+      "coordinated_market_batches": 7,
+      "coordinated_sell_orders": 17,
+      "coordinated_sell_units_requested": 69,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 57,
+      "deferred_drop_opportunities": 198,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 447,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 86
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 7
+      },
+      "market_ledger_classified_count": 7,
+      "market_ledger_record_count": 7,
+      "max_carried_sellable_units": 13,
+      "max_hands": 12,
+      "move_per_service": 2.622047244094488,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "batched_v4a",
+      "reward": 76115.0,
+      "routing_commands": 333,
+      "seat": 0,
+      "seed": 26090103,
+      "service_commands": 127,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "COLLECT_FERTILIZER": 2,
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 57,
+        "FEED": 53,
+        "HARVEST": 201,
+        "PICKUP_WHEAT": 4,
+        "WATER": 53
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 11,
+        "EAST": 92,
+        "FEED": 19,
+        "HARVEST": 67,
+        "NORTH": 77,
+        "PASS": 73,
+        "PICKUP": 4,
+        "SOUTH": 68,
+        "WATER": 26,
+        "WEST": 96
+      },
+      "action_stream_sha256": "1ac7901d9a5cb0b5a1da8b49f015bb505dfbc1bc79901a52631700c416cfcc49",
+      "batched_harvest_services": 20,
+      "cluster_initial_assignments": 24,
+      "cluster_sticky_assignments": 90,
+      "cluster_switch_rate": 0.22413793103448276,
+      "cluster_switches": 26,
+      "coordinated_market_batches": 7,
+      "coordinated_sell_orders": 17,
+      "coordinated_sell_units_requested": 69,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 57,
+      "deferred_drop_opportunities": 198,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 447,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 86
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 7
+      },
+      "market_ledger_classified_count": 7,
+      "market_ledger_record_count": 7,
+      "max_carried_sellable_units": 13,
+      "max_hands": 12,
+      "move_per_service": 2.622047244094488,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "clustered_v4b",
+      "reward": 76115.0,
+      "routing_commands": 333,
+      "seat": 0,
+      "seed": 26090103,
+      "service_commands": 127,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "COLLECT_FERTILIZER": 2,
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 57,
+        "FEED": 53,
+        "HARVEST": 201,
+        "PICKUP_WHEAT": 4,
+        "WATER": 53
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 35,
+        "EAST": 96,
+        "FEED": 19,
+        "HARVEST": 56,
+        "NORTH": 85,
+        "PASS": 30,
+        "PICKUP": 4,
+        "SOUTH": 87,
+        "WATER": 13,
+        "WEST": 108
+      },
+      "action_stream_sha256": "1e936284ac4d3ba389b5eaa908644b975018040a13af38b30b282c488cc3065e",
+      "batched_harvest_services": 0,
+      "cluster_initial_assignments": 0,
+      "cluster_sticky_assignments": 0,
+      "cluster_switch_rate": 0.0,
+      "cluster_switches": 0,
+      "coordinated_market_batches": 17,
+      "coordinated_sell_orders": 21,
+      "coordinated_sell_units_requested": 54,
+      "d28_explicit_drop_count": 11,
+      "deadline_drop_assignments": 0,
+      "deferred_drop_opportunities": 0,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 488,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 45
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 4
+          },
+          "crops": 10
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1,
+            "WHEAT": 2
+          },
+          "crops": 3
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 2
+          },
+          "crops": 8
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 16,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 17,
+      "market_ledger_record_count": 17,
+      "max_carried_sellable_units": 0,
+      "max_hands": 12,
+      "move_per_service": 2.9606299212598426,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "service_routing_v3",
+      "reward": 78436.0,
+      "routing_commands": 376,
+      "seat": 0,
+      "seed": 26090103,
+      "service_commands": 127,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 154,
+        "FEED": 51,
+        "HARVEST": 201,
+        "PICKUP_WHEAT": 4,
+        "WATER": 3
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 11,
+        "EAST": 91,
+        "FEED": 19,
+        "HARVEST": 68,
+        "NORTH": 80,
+        "PASS": 72,
+        "PICKUP": 4,
+        "SOUTH": 67,
+        "WATER": 24,
+        "WEST": 97
+      },
+      "action_stream_sha256": "95a75e47e56ea27a674671ae5a7d5f0d62ddaafc6462917102e9675ecc43a921",
+      "batched_harvest_services": 20,
+      "cluster_initial_assignments": 24,
+      "cluster_sticky_assignments": 84,
+      "cluster_switch_rate": 0.23636363636363636,
+      "cluster_switches": 26,
+      "coordinated_market_batches": 8,
+      "coordinated_sell_orders": 20,
+      "coordinated_sell_units_requested": 66,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 58,
+      "deferred_drop_opportunities": 198,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 448,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 85
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 8
+      },
+      "market_ledger_classified_count": 8,
+      "market_ledger_record_count": 8,
+      "max_carried_sellable_units": 13,
+      "max_hands": 12,
+      "move_per_service": 2.6587301587301586,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "batched_v4a",
+      "reward": 110411.0,
+      "routing_commands": 335,
+      "seat": 1,
+      "seed": 26090103,
+      "service_commands": 126,
+      "status": "DONE",
+      "strict_eod_crop_losses": 12,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 58,
+        "FEED": 53,
+        "HARVEST": 206,
+        "PICKUP_WHEAT": 4,
+        "WATER": 50
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 11,
+        "EAST": 91,
+        "FEED": 19,
+        "HARVEST": 68,
+        "NORTH": 80,
+        "PASS": 72,
+        "PICKUP": 4,
+        "SOUTH": 67,
+        "WATER": 24,
+        "WEST": 97
+      },
+      "action_stream_sha256": "95a75e47e56ea27a674671ae5a7d5f0d62ddaafc6462917102e9675ecc43a921",
+      "batched_harvest_services": 20,
+      "cluster_initial_assignments": 24,
+      "cluster_sticky_assignments": 84,
+      "cluster_switch_rate": 0.23636363636363636,
+      "cluster_switches": 26,
+      "coordinated_market_batches": 8,
+      "coordinated_sell_orders": 20,
+      "coordinated_sell_units_requested": 66,
+      "d28_explicit_drop_count": 0,
+      "deadline_drop_assignments": 58,
+      "deferred_drop_opportunities": 198,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 448,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 85
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 8
+      },
+      "market_ledger_classified_count": 8,
+      "market_ledger_record_count": 8,
+      "max_carried_sellable_units": 13,
+      "max_hands": 12,
+      "move_per_service": 2.6587301587301586,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "clustered_v4b",
+      "reward": 110411.0,
+      "routing_commands": 335,
+      "seat": 1,
+      "seed": 26090103,
+      "service_commands": 126,
+      "status": "DONE",
+      "strict_eod_crop_losses": 12,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 58,
+        "FEED": 53,
+        "HARVEST": 206,
+        "PICKUP_WHEAT": 4,
+        "WATER": 50
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 34,
+        "EAST": 100,
+        "FEED": 19,
+        "HARVEST": 55,
+        "NORTH": 84,
+        "PASS": 28,
+        "PICKUP": 4,
+        "SOUTH": 84,
+        "WATER": 13,
+        "WEST": 112
+      },
+      "action_stream_sha256": "bddbec49c62afde08aba18c7a48a0b8da2c181dd570c39169c92fc290edfbaea",
+      "batched_harvest_services": 0,
+      "cluster_initial_assignments": 0,
+      "cluster_sticky_assignments": 0,
+      "cluster_switch_rate": 0.0,
+      "cluster_switches": 0,
+      "coordinated_market_batches": 15,
+      "coordinated_sell_orders": 17,
+      "coordinated_sell_units_requested": 42,
+      "d28_explicit_drop_count": 11,
+      "deadline_drop_assignments": 0,
+      "deferred_drop_opportunities": 0,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 489,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 44
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7,
+            "WHEAT": 4
+          },
+          "crops": 11
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1,
+            "WHEAT": 2
+          },
+          "crops": 3
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 2
+          },
+          "crops": 8
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "market_execution_outcomes": {
+        "EXECUTED": 14,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 15,
+      "market_ledger_record_count": 15,
+      "max_carried_sellable_units": 0,
+      "max_hands": 12,
+      "move_per_service": 3.04,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "service_routing_v3",
+      "reward": 114590.0,
+      "routing_commands": 380,
+      "seat": 1,
+      "seed": 26090103,
+      "service_commands": 125,
+      "status": "DONE",
+      "strict_eod_crop_losses": 12,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 154,
+        "FEED": 51,
+        "HARVEST": 204,
+        "PICKUP_WHEAT": 4,
+        "WATER": 2
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    }
+  ],
+  "runs": 18,
+  "schema_version": "E17_2_BATCHED_CLUSTER_ROUTING_V4_DEVELOPMENT_V1",
+  "seats": [
+    0,
+    1
+  ],
+  "seeds": [
+    26090101,
+    26090102,
+    26090103
+  ],
+  "v4a_all_gates_pass": false,
+  "v4a_delta_pct_vs_v3": -2.5294377428334736,
+  "v4a_mean_matched_delta_vs_v3": -3398.3333333333335,
+  "v4a_min_matched_delta_vs_v3": -4833.0,
+  "v4b_all_gates_pass": false,
+  "v4b_delta_pct_vs_v4a": 0.0010181770049744188,
+  "v4b_mean_matched_delta_vs_v4a": 1.3333333333333333,
+  "v4b_min_matched_delta_vs_v4a": 0.0
+}

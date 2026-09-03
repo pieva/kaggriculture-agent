@@ -79,10 +79,10 @@ function Get-ProposedDestination([string]$path) {
     if ($p -eq 'docs/model_specs/history/MODEL_SPEC_PRE_C2.md') { return 'docs/model_specs/history/MODEL_SPEC_PRE_C2.md' }
 
     if ($p -match '^docs/benchmark/(104527555|104541810|104543983|104547425|104564762|104577270|104578185|104586335|104586487)\.json$') {
-        return "data/replays/e17-discovery/$($Matches[1]).json"
+        return "data/replays/json/$($Matches[1]).json"
     }
-    if ($p -match '^docs/benchmark/(.+\.json)$') { return "data/replays/reference/$($Matches[1])" }
-    if ($p -eq 'data/replays/MANIFEST.md') { return 'data/replays/MANIFEST.md' }
+    if ($p -match '^docs/benchmark/(.+\.json)$') { return "data/replays/json/$($Matches[1])" }
+    if ($p -eq 'data/replays/json/json.md') { return 'data/replays/json/json.md' }
     if ($p -eq 'docs/benchmark/json.txt') { return 'data/replays/legacy_catalog.txt' }
     if ($p -match '^docs/screenshots/(.+)$') { return "data/screenshots/$($Matches[1])" }
 

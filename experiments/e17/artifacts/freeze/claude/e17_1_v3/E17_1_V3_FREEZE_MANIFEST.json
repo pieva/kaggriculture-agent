@@ -1,0 +1,219 @@
+{
+  "agent_owner": "CLAUDE",
+  "claude_policy_fingerprint": "B96BA8D0CF7C539DAF545F1DB3A21FE42E8ADEDE33740E57AB3E5603031EBBAE",
+  "config": {
+    "frozen_path": "experiments/e17/artifacts/freeze/claude/e17_1_v3/CLAUDE_E17_1_3Q_REACTIVE_V3.json",
+    "frozen_sha256": "A353F832C23DCAF04726D29EB19BF794FDA3447A485A22F52DF40505AD995B1C",
+    "path": "experiments/e17/configs/claude/CLAUDE_E17_1_3Q_REACTIVE_V3.json",
+    "sha256": "A353F832C23DCAF04726D29EB19BF794FDA3447A485A22F52DF40505AD995B1C"
+  },
+  "development_matrix": {
+    "failed_run_replacement": "FORBIDDEN",
+    "opponent": "INERT_PASS_POLICY",
+    "seats": [
+      0,
+      1
+    ],
+    "seeds": [
+      26090101,
+      26090102,
+      26090103,
+      1838889274,
+      1619968655,
+      710418712,
+      562040596
+    ]
+  },
+  "experiment_id": "E17.1",
+  "final_confirmation_consumed": false,
+  "gate_status": "FAIL",
+  "gates": {
+    "derived_eod_escapes_zero": false,
+    "deterministic_reproducibility": true,
+    "development_matrix_complete": true,
+    "final_confirmation_not_consumed": true,
+    "holdout_not_consumed": true,
+    "invalid_batches_zero": true,
+    "ledger_action_parity_pass": true,
+    "ledger_record_coverage_100_percent": true,
+    "max_quadrants_equal_3_all_runs": false,
+    "no_post_hoc_seed_removal": true,
+    "passive_development_mean_ge_target": false,
+    "source_config_freeze": true,
+    "state_reactivity_pass": true,
+    "strategic_independence_pass": true,
+    "technical_errors_zero": true
+  },
+  "holdout_consumed": false,
+  "independence_audit": {
+    "claude_policy_fingerprint": "B96BA8D0CF7C539DAF545F1DB3A21FE42E8ADEDE33740E57AB3E5603031EBBAE",
+    "codex_v9_routine_fingerprint": "C2466262E096B03CA330A1B0FDB2E5DEBE53C45F297E046113E007731051E7E4",
+    "fingerprint_distinct_from_codex_routine": true,
+    "imports": [
+      "__future__",
+      "hashlib",
+      "json",
+      "collections",
+      "copy",
+      "dataclasses",
+      "pathlib",
+      "typing",
+      "agricola.core.observation_contract"
+    ],
+    "no_copy_other_agent_action_table": true,
+    "no_external_planner_dispatcher_or_schedule": true,
+    "no_import_other_agent_routine": true,
+    "prohibited_imports": [],
+    "prohibited_tokens": []
+  },
+  "ledger_schema": {
+    "path": "src/agricola/core/e17_ledger.py",
+    "sha256": "A22C97584D4AE81A341485744C8AF0FFBBF14A9C9A8491BD3210FC768AD672C9",
+    "version": "E17_LEDGER_V1"
+  },
+  "metrics": {
+    "path": "experiments/e17/artifacts/derived/claude/E17_1_V3_METRICS.json",
+    "sha256": "DAFA385A0B1ACA624FA9BA48DF02D398D6C927D280985AA7C07297A323C33CA9"
+  },
+  "model_spec": {
+    "path": "docs/model_specs/claude/MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE_V3.md",
+    "sha256": "72B4388D427711CA1B2D45C5F65F35660261D2538DE714BD0C6479E8E753C0ED"
+  },
+  "opponent": {
+    "id": "INERT_PASS_POLICY",
+    "path": "src/agricola/core/benchmark_opponents.py",
+    "sha256": "C0CC94FC4F1297107272BA325075E645653131C1B7E585F34CD3B1E5A3388EF5"
+  },
+  "policy_id": "CLAUDE-E17.1-3Q-REACTIVE-INDEPENDENT-V3",
+  "predecessor_policy_id": "CLAUDE-E17.1-3Q-REACTIVE-INDEPENDENT-V2",
+  "run_artifacts": [
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090101-P0.derived_events.json",
+      "derived_events_sha256": "99C78107EB0990F9FF7D67092D90B5C68B3706F0D021ED5A6CE73A3A747A249F",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090101-P0.ledger.jsonl",
+      "ledger_sha256": "20C18E86546199C493D7B3D2578B717DBC4525E7E091458569ADD0BC76A6C710",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090101-P0.summary.json",
+      "summary_sha256": "DD7FAC4E5A429A967924D1D1F4062C1183E6F2AC79DBF5CA7867DBA219355EB1"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090101-P1.derived_events.json",
+      "derived_events_sha256": "39EDF6DCCE01F3EF716C8A92C9C71D24F75B76621058B606D4F7F994ED3D2054",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090101-P1.ledger.jsonl",
+      "ledger_sha256": "F5077FFB0E6BC45EA4637A45A1BEC2FC494BA105534CB0747ACAB988C398082C",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090101-P1.summary.json",
+      "summary_sha256": "F30A3FB7651E4EDBBBC067D76A2AA0AABCF2EB56326EB08DFDD1760694C9654C"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090102-P0.derived_events.json",
+      "derived_events_sha256": "CDDB9416759A972635C76201312226713E3317246D310034FF4B12180E837DDF",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090102-P0.ledger.jsonl",
+      "ledger_sha256": "7E22B23B802F3733AB3ADFBA2D08F70FD5A8E646980CAADD2112CFDD16505508",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090102-P0.summary.json",
+      "summary_sha256": "1B6FE48C5272D88F6FAEE73B9D7D9F52DCE0495016E47A860B98EF4FFB3DF2A1"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090102-P1.derived_events.json",
+      "derived_events_sha256": "B6DC22069A2B715D7D55B1D64CE9FBE2DD12E5000D3FF2EAD729872E88B3EF8B",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090102-P1.ledger.jsonl",
+      "ledger_sha256": "172E427F0F494C8E5A67784E0AAC531B1DCD8C15BCFDFFA3A40A51ED5231C681",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090102-P1.summary.json",
+      "summary_sha256": "29C0AC93D3A17256FF8B4D37EAAE03B4FDE2406D2ED7636687D62FF2BC68E2E1"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090103-P0.derived_events.json",
+      "derived_events_sha256": "2178DDE74A5E1234DCC7874611C21A869FAA3075D6A9C3DB721CF94F5B954C40",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090103-P0.ledger.jsonl",
+      "ledger_sha256": "11F9526158F00CDD7E25A07248CEB0F6512B5828B24DE3E0614C3005F20C1A17",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090103-P0.summary.json",
+      "summary_sha256": "0C3D5B00012DCB21B18F5AA14822E8878CF9127BADA89D9067F07993BF1C8BB8"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090103-P1.derived_events.json",
+      "derived_events_sha256": "AD58943693171B303FB6CCCA5D07846C2F2A7EE6FA7D684CA375381DB655557C",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090103-P1.ledger.jsonl",
+      "ledger_sha256": "1BC61252563E7170760A356F30149E3E451900CF7C835D3E577233A7F5BF98D3",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S26090103-P1.summary.json",
+      "summary_sha256": "59DCD97EB9691006AF5704C6FC5BECBD9668B280A186D9F323B1B3C815E4B003"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S1838889274-P0.derived_events.json",
+      "derived_events_sha256": "14D9E77176B82CEC4C5CFA03CBD7118FAC77A9C5D1282599000B59857F5F4962",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S1838889274-P0.ledger.jsonl",
+      "ledger_sha256": "3543245558C37D31863E33196261B37C1ADCE34C9BC058BD16955C7767F68F2A",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S1838889274-P0.summary.json",
+      "summary_sha256": "84EDEECF7D159D2C418C6827DDE8AB4DD1D79A9E5827ECC28BD7C58992D1F532"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S1838889274-P1.derived_events.json",
+      "derived_events_sha256": "03DD1C5225CEDD212285338AF72B411112A4EB95235375BD32100646B6A90566",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S1838889274-P1.ledger.jsonl",
+      "ledger_sha256": "70A908997AF656DC7395C304CEF5362F6090420A0E1D8756BC70E4A1D84D5B23",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S1838889274-P1.summary.json",
+      "summary_sha256": "6D3BB41647AE8CF64135AB4BD6BC189DFEBA9A241973BAA55133241DE8E6DCF7"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S1619968655-P0.derived_events.json",
+      "derived_events_sha256": "9D57AF913A7E482A7A7E902D5EE1DF84C68A1F2383415E74CADBC2B8F959DDD3",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S1619968655-P0.ledger.jsonl",
+      "ledger_sha256": "DBE1D31A0D6F612D055280068E3019307FA7836083BFC5CC73B2AC9EAE496C2A",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S1619968655-P0.summary.json",
+      "summary_sha256": "BA26E485F6684FD844A7FBEA8A6317060291657837ECB0443A832C0C192AC9E9"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S1619968655-P1.derived_events.json",
+      "derived_events_sha256": "C6F9BFE0C8C1879629EFA66F8267886F04C8092CFB383947B2EBCDFBA5F09A70",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S1619968655-P1.ledger.jsonl",
+      "ledger_sha256": "54906C9397CC61695CAB70A94D971FB5B2D338644886151DF8445C21A7584A90",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S1619968655-P1.summary.json",
+      "summary_sha256": "1547BD878D8166409C7DAC97F9A560143300D74A48C5D24F3C956C21739915FF"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S710418712-P0.derived_events.json",
+      "derived_events_sha256": "0F7A4C0D4E16FAE01AD65E1CE6FF6C155CF540322A7256D80967CFF7D84587B2",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S710418712-P0.ledger.jsonl",
+      "ledger_sha256": "C2FA0004B98061222DFF69E2E3E0E314850FED5EE17590F19CAFD4EDF4A1F510",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S710418712-P0.summary.json",
+      "summary_sha256": "D4550B395B334095D81A7FF560F12F98058F5FBAC080EF55EB518D4049FB8623"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S710418712-P1.derived_events.json",
+      "derived_events_sha256": "362CEB434EA118733BB20422F46318D84A06B2756E1682BE8AD6912768903B0E",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S710418712-P1.ledger.jsonl",
+      "ledger_sha256": "2EC0C930A61D8686A358CB27A4B52BF19ACACF2990894EB204901D15FDD4A881",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S710418712-P1.summary.json",
+      "summary_sha256": "D11B3713C6A19D207DBB894421B00B3AF15CA6FFD34B771DA4A04644ACE60E74"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S562040596-P0.derived_events.json",
+      "derived_events_sha256": "6860892F5164C5B9C13E04670BC312D48566C768D54CE61E0F52E60FDCC2EC27",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S562040596-P0.ledger.jsonl",
+      "ledger_sha256": "682D31E635489D5D5AD24779D427803394539BB712CA7C515C157CD9B4D9E959",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S562040596-P0.summary.json",
+      "summary_sha256": "CB3FD2758C2F21C8C13445E9DA692D534B8679FA5972E8612042D7B6036D5A76"
+    },
+    {
+      "derived_events_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S562040596-P1.derived_events.json",
+      "derived_events_sha256": "D2B10DA7875519660E036EEB3048794A84008A1A8958737540E0A02118DBBC97",
+      "ledger_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S562040596-P1.ledger.jsonl",
+      "ledger_sha256": "C7D40EA6CEC299DA054259C09E047E8A6D13DF9745A162A2A06C8DDD0B9F7E6C",
+      "summary_path": "experiments/e17/artifacts/runs/claude/e17_1_v3/E17-1-CLAUDE-V3-S562040596-P1.summary.json",
+      "summary_sha256": "1E96B5907E073FF2B826CE1B4D83C8265EB1A7BED471C0E3D8B349FD6FB62293"
+    }
+  ],
+  "schema_version": "E17_1_CLAUDE_V3_FREEZE_MANIFEST_V1",
+  "source": {
+    "frozen_path": "experiments/e17/artifacts/freeze/claude/e17_1_v3/CLAUDE_E17_1_3Q_REACTIVE_V3.py",
+    "frozen_sha256": "568AAF6246DDB9C4BFD110C645D3F51270CE7563407F03A00C6616F4C6957C5B",
+    "path": "src/agricola/strategy/claude/e17_reactive_3q_v3.py",
+    "sha256": "568AAF6246DDB9C4BFD110C645D3F51270CE7563407F03A00C6616F4C6957C5B"
+  },
+  "status": "FROZEN_WITH_FAILED_GATES",
+  "test": {
+    "path": "experiments/e17/tests/test_claude_e17_1_reactive_v3.py",
+    "sha256": "93E895E7A99A6E3544A046EE5977F89F0BE0D2D8D1EFDA8F0DF71B900AEA9EAE"
+  },
+  "tool": {
+    "path": "experiments/e17/tools/claude/run_claude_e17_1_v3_validation.py",
+    "sha256": "F7BFEBE375915B5D1FE45CF6E08BD663676C85826A9F326A9FD6028E67A93E78"
+  }
+}

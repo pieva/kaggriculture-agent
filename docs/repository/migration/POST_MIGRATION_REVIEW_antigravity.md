@@ -12,7 +12,7 @@ Reviewer: Antigravity
 - `docs/repository/migration/REPOSITORY_MIGRATION_MANIFEST.csv`
 - `docs/repository/migration/MIGRATION_EXECUTION_RESULTS.csv`
 - `docs/repository/migration/POST_MIGRATION_RECONCILIATION.md`
-- `data/replays/MANIFEST.md`
+- `data/replays/json/json.md`
 
 ## Executive summary
 
@@ -129,7 +129,7 @@ Controlli eseguiti:
 - nessun riferimento rotto rilevato nel campione di documenti attivi:
   `README.md`, `docs/NEW_SESSION.md`, `docs/PROJECT_STATE.md`,
   `docs/repository/README.md`, `experiments/README.md`,
-  `experiments/e17/README.md`, `data/replays/MANIFEST.md`
+  `experiments/e17/README.md`, `data/replays/json/json.md`
 
 Nota:
 
@@ -192,7 +192,7 @@ Esito: `PASS`
 
 Evidenza:
 
-- `data/replays/MANIFEST.md` esiste
+- `data/replays/json/json.md` esiste
 - include i 9 replay `e17-discovery/*` con hash coerenti
 - include il corpus `reference/*` attivo
 - documenta correttamente i replay rimossi dal working tree come recuperabili via Git history

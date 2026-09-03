@@ -2,7 +2,7 @@
 
 This is intentionally BENCHMARK/ANALYSIS only. It does not change strategy code
 or submit to Kaggle. The truebelief side is derived from the raw Kaggle replay
-JSON in docs/101294736.json when available.
+JSON in data/replays/json/101294736.json when available.
 """
 
 from __future__ import annotations
@@ -27,7 +27,7 @@ from agricola.strategy.productive_mass_roi import ProductiveMassConfig, Producti
 
 ROOT = Path(__file__).parent.parent
 OUT_DIR = ROOT / "results" / "e12" / "x111"
-TRUEBELIEF_REPLAY = ROOT / "docs" / "101294736.json"
+TRUEBELIEF_REPLAY = ROOT / "data" / "replays" / "json" / "101294736.json"
 TRUEBELIEF_EPISODE_ID = 101294736
 SEED = 421521921
 SNAPSHOT_DAYS = [1, 2, 5, 8, 10, 15, 20, 25, 30]

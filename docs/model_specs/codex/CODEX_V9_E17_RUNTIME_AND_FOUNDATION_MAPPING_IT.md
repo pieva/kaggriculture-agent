@@ -237,7 +237,7 @@ intenzionalmente il modello, il contratto o il processo di build.
 
 | Ordine | File | Generato da | Input | Consumatore/output |
 |---:|---|---|---|---|
-| 1 | `src/agricola/strategy/codex/codex_v9_routine_data.py` | `scripts/build_codex_v9_routine_data.py` | `data/replays/reference/104498819.json` | Tabella di 719 batch e `ROUTINE_SHA256`. |
+| 1 | `src/agricola/strategy/codex/codex_v9_routine_data.py` | `scripts/build_codex_v9_routine_data.py` | `data/replays/json/104498819.json` | Tabella di 719 batch e `ROUTINE_SHA256`. |
 | 2 | `docs/governance/history/model_spec_c2/codex/freeze/submission_codex_v9_tournament.py` | `scripts/build_submission_codex_v9.py` | Routine generata | Standalone congelato per test e torneo locale. |
 | 3 | `submission/submission_codex.py` | Passaggio esplicito di release | Standalone verificato più metadata della release E17 | Unico file caricato su Kaggle. |
 | 4 | `experiments/e17/artifacts/runs/codex/e17_0/*.json*` | `run_e17_0_codex_parity.py` | Policy, seed, opponent e ledger | Evidenza per singola run. |

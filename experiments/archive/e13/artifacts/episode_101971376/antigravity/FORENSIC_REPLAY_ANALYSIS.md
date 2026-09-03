@@ -3,7 +3,7 @@
 
 - **Date of Analysis**: 2026-08-28
 - **Analyst**: Antigravity (Independent Forensic Review)
-- **Primary Source**: `data/replays/reference/101971376.json`
+- **Primary Source**: `data/replays/json/101971376.json`
 - **Integrity Statement**: Blind analysis executed independently without prior consultation of external E13 reports or inter-agent analyses.
 
 ---

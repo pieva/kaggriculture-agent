@@ -3,7 +3,7 @@
 
 Agent owner: Antigravity (AGENT_ID = antigravity)
 Environment: Kaggriculture (kaggle-environments 1.32.7, kaggriculture 0.1.0)
-Target replays: 9 episodes from data/replays/e17-discovery/
+Target replays: 9 episodes from data/replays/json/
 Outputs:
 - experiments/e17/artifacts/discovery/antigravity/E17_TOP3_REPLAY_METRICS.json
 - experiments/e17/reports/antigravity/E17_TOP3_REPLAY_ANALYSIS.md
@@ -21,15 +21,15 @@ from pathlib import Path
 from typing import Any, Dict, List, Optional, Tuple
 
 BENCHMARK_REPLAYS = [
-    "data/replays/e17-discovery/104527555.json",
-    "data/replays/e17-discovery/104541810.json",
-    "data/replays/e17-discovery/104543983.json",
-    "data/replays/e17-discovery/104547425.json",
-    "data/replays/e17-discovery/104564762.json",
-    "data/replays/e17-discovery/104577270.json",
-    "data/replays/e17-discovery/104578185.json",
-    "data/replays/e17-discovery/104586335.json",
-    "data/replays/e17-discovery/104586487.json",
+    "data/replays/json/104527555.json",
+    "data/replays/json/104541810.json",
+    "data/replays/json/104543983.json",
+    "data/replays/json/104547425.json",
+    "data/replays/json/104564762.json",
+    "data/replays/json/104577270.json",
+    "data/replays/json/104578185.json",
+    "data/replays/json/104586335.json",
+    "data/replays/json/104586487.json",
 ]
 
 MOVE_OPS = {"NORTH", "SOUTH", "EAST", "WEST"}

@@ -1,0 +1,47 @@
+{
+  "candidate_id": "CODEX_E17_2_REACTIVE_SERVICE_ROUTING_CORE_V2",
+  "schema_version": "e17.codex.reactive_service_routing_core.v2",
+  "model_spec_version": "CODEX-E17.2-REACTIVE-SERVICE-ROUTING-CORE-V2",
+  "base_policy": "CODEX-E17.1-TRUE-REACTIVE-V2",
+  "causal_family": "REACTIVE_SERVICE_AND_ROUTING_CORE",
+  "turns_per_day": 24,
+  "episode_steps": 720,
+  "critical_unfed_threshold": 1,
+  "critical_unwatered_threshold": 1,
+  "activation_day": 29,
+  "wheat_pickup_batch": 6,
+  "wheat_carrier_target": 4,
+  "plant_cutoff_day": 25,
+  "crop_cutoffs": {
+    "MELON": 17,
+    "STRAWBERRY": 20,
+    "TOMATO": 22,
+    "CARROT": 25,
+    "WHEAT": 25
+  },
+  "pasture_targets": [
+    [3, 2], [4, 2], [3, 3], [4, 3], [2, 4], [3, 4], [4, 4],
+    [5, 2], [6, 2], [5, 3], [6, 3], [5, 4], [6, 4], [7, 4],
+    [3, 5], [4, 5], [3, 6], [4, 6], [4, 7]
+  ],
+  "coop_targets": [[4, 1]],
+  "wheat_crop_targets": [
+    [0, 0], [1, 0], [2, 0], [3, 0],
+    [5, 0], [6, 0], [7, 0],
+    [0, 5], [1, 5], [2, 5]
+  ],
+  "task_priority": {
+    "CRITICAL_WATER": 1,
+    "CRITICAL_FEED": 0,
+    "DROP_INVENTORY": 0,
+    "PLACE_ANIMAL": 1,
+    "PICKUP_WHEAT": 0,
+    "PICKUP_ANIMAL": 2,
+    "BUILD_STRUCTURE": 2,
+    "DIG_TARGET": 4,
+    "HARVEST": 2,
+    "WATER": 3,
+    "PLANT": 4,
+    "CARE": 5
+  }
+}

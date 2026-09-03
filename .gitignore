@@ -54,5 +54,20 @@ scratch/
 
 # E17.1 large reproducible run ledgers (kept locally for forensic analysis)
 experiments/e17/artifacts/runs/claude/e17_1/
-experiments/e17/artifacts/runs/claude/e17_1_v2/
+experiments/e17/artifacts/runs/claude/e17_1_v*/
 experiments/e17/artifacts/runs/codex/e17_1_development/
+
+# Transient owner-provided Kaggle captures (evidence is summarized in reports)
+data/screenshots/Screenshot_*_Chrome.png
+
+# Re-downloadable E17 external-diagnostic replay cache
+data/replays/json/104857899.json
+data/replays/json/104860472.json
+data/replays/json/104863004.json
+data/replays/json/104863880.json
+data/replays/json/104864729.json
+data/replays/json/104865577.json
+data/replays/json/104866465.json
+data/replays/json/104867319.json
+data/replays/json/104868160.json
+data/replays/json/104869022.json

@@ -2,15 +2,15 @@ import json
 from pathlib import Path
 
 BENCHMARK_REPLAYS = [
-    "data/replays/e17-discovery/104527555.json",
-    "data/replays/e17-discovery/104541810.json",
-    "data/replays/e17-discovery/104543983.json",
-    "data/replays/e17-discovery/104547425.json",
-    "data/replays/e17-discovery/104564762.json",
-    "data/replays/e17-discovery/104577270.json",
-    "data/replays/e17-discovery/104578185.json",
-    "data/replays/e17-discovery/104586335.json",
-    "data/replays/e17-discovery/104586487.json",
+    "data/replays/json/104527555.json",
+    "data/replays/json/104541810.json",
+    "data/replays/json/104543983.json",
+    "data/replays/json/104547425.json",
+    "data/replays/json/104564762.json",
+    "data/replays/json/104577270.json",
+    "data/replays/json/104578185.json",
+    "data/replays/json/104586335.json",
+    "data/replays/json/104586487.json",
 ]
 
 def get_quad_name(x: int, y: int) -> str:

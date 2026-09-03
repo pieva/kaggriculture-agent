@@ -4,7 +4,7 @@ from collections import Counter, defaultdict
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[4]
-RAW = ROOT / "docs" / "benchmark" / "101971376.json"
+RAW = ROOT / "data" / "replays" / "json" / "101971376.json"
 OUT = Path(__file__).resolve().parent
 
 
@@ -156,7 +156,7 @@ def main():
     fg = first_gap
     report = [
         "# E13 Forensic Replay Analysis - Episode 101971376", "",
-        "## Scope and integrity", "Independent reconstruction from `data/replays/reference/101971376.json`; no other E13 analysis was read. Raw replay was not modified. Metrics are snapshot/action-derived; HIRE and BUY_LAND prices are not explicit in the action payload.", "",
+        "## Scope and integrity", "Independent reconstruction from `data/replays/json/101971376.json`; no other E13 analysis was read. Raw replay was not modified. Metrics are snapshot/action-derived; HIRE and BUY_LAND prices are not explicit in the action payload.", "",
         "## Verified identity", "- Episode: `%s`; seed: `%s`; steps: `%d`; module: `%s`" % (data["info"]["EpisodeId"], data["info"]["seed"], len(steps), data["module_version"]),
         "- Player 0: Pietro Valocchi, final reward/money `$%s`" % fmt(final[0]["money"]),
         "- Player 1: Harith Al-Ani, final reward/money `$%s`" % fmt(final[1]["money"]),

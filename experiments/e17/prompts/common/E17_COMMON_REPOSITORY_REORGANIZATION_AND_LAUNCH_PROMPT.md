@@ -137,7 +137,7 @@ experiments/
   archive/e01/ ... archive/e16/
 
 data/
-  replays/{reference,e17-discovery}/
+  replays/json/
   screenshots/
 
 src/agricola/{core,strategy/antigravity,strategy/codex,strategy/copilot}/
@@ -202,7 +202,7 @@ Creare o aggiornare:
 ```text
 experiments/README.md
 experiments/e17/README.md
-data/replays/MANIFEST.md
+data/replays/json/json.md
 docs/repository/README.md
 docs/NEW_SESSION.md
 docs/PROJECT_STATE.md

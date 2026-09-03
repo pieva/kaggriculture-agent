@@ -1306,7 +1306,7 @@ Testare l'ipotesi **H12**: strategia ibrida `cow-first` con core 2×2 riservato 
 - replay truebelief episodio `101294736`
 - seed `421521921`
 - score truebelief `$86,297`
-- raw replay preservato in `experiments/archive/e12/artifacts/x111/101294736.json`
+- raw replay preservato nel percorso canonico `data/replays/json/101294736.json`
 - checksum SHA-256: `6281fdd32497c9db28e3d924ad8a55b12f841a5b1309164328679aa4f5ee8695`
 
 ### Obiettivo
@@ -1431,7 +1431,7 @@ Implementare una nuova modalita separata `E12_DYNAMIC_ALLOCATION_X113` per verif
 **Date:** 2026-08-28
 **Phase:** FORENSIC / MULTI-AGENT BENCHMARK
 **Tool / Agents:** Antigravity, Codex, Copilot (independent blind analyses, post-hoc consolidation)
-**Primary Source:** `data/replays/reference/101971376.json` (Seed: `1630102796`, Steps: `720`)
+**Primary Source:** `data/replays/json/101971376.json` (Seed: `1630102796`, Steps: `720`)
 
 ### 1. Episode Identification & Macro Outcome
 
@@ -1679,3 +1679,354 @@ Rieseguire i 28 episodi Stage A con la build corretta R1 (`E16_TREATMENT_BUILD_R
 - C2 entra in `EXTERNAL VALIDATION / REVIEW PENDING KAGGLE EVIDENCE`.
 - Kaggle Validation: `PENDING`.
 - Foundation Consolidation: consolidamento dei meccanismi C2 nella Model Foundation programmato per la fase successiva.
+
+---
+
+## E17.1 — Benchmark esterno della probe Codex reattiva
+
+**Data:** 2026-09-02
+
+**Ruolo evidenza:** `EXTERNAL_DIAGNOSTIC_OBSERVATIONAL`
+
+**Submission Kaggle:** `559631298`
+**Corpus:** 10 replay unici, 10 seed, 5 seat P0 / 5 seat P1, 5W-5L
+
+### Esito
+
+- denaro medio Codex: `78.808,7`; avversari: `76.147,6`; margine medio:
+  `+2.661,1`;
+- 3Q in `10/10`, Q1 mediano step `151`, Q2 mediano step `266`;
+- zero fughe EOD strette, 10 hands finali, 19 animali e 14 crop finali;
+- Q2 = `63,29%` degli animal-tile-days Q0 tra lo sblocco Q2 e D28;
+- confronto omogeneo: tetsuya `75,38%`, Crop Dusta `38,17%`, OceanMix `0%`;
+- `1/10` action-stream SHA-256 unici e `4/10` traiettorie strutturali uniche:
+  nessuna divergenza dei comandi richiesta dalle guardie è osservata nel
+  corpus esterno;
+- le sconfitte hanno denaro medio superiore alle vittorie (`85.154,2` contro
+  `72.463,2`): avversario e mercato condiviso confondono score e W/L.
+
+### Decisione
+
+Nessuna ottimizzazione diretta del cap zootecnico Q2: quella quota deve essere
+un outcome della decisione state-dependent. Il trattamento successivo è
+`MARKET_REGIME_ADAPTATION`, verificato within-seed contro regimi di contesa
+controllati. Il corpus esterno formula l'ipotesi e non viene riutilizzato come
+holdout. Piano:
+`experiments/e17/design/E17_CODEX_TRUE_REACTIVITY_ACTIVATION_PLAN_V1.md`.
+
+Report:
+`experiments/e17/reports/codex/E17_REACTIVE_EXTERNAL_REPLAY_BENCHMARK_IT.md`.
+
+---
+
+## E17.1 — Codex true reactivity V2: market-regime adaptation
+
+**Data:** 2026-09-02
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY`
+
+**Candidata:** `CODEX-E17.1-TRUE-REACTIVE-V2`
+
+**Controllo:** `CODEX-E17.1-3Q-REACTIVE-GUARDED-V1`
+
+### Disegno
+
+48 episodi: 3 seed development × 2 seat × 4 regimi × 2 policy. Nessun seed
+holdout o final-confirmation. La sola famiglia modificata è il timing delle
+vendite di output fungibili; Wheat, acquisti animali, routing e topologia
+restano sotto il provider congelato.
+
+### Risultato
+
+- controllo `INERT`: +1,55% rispetto a V1;
+- `WHEAT_SCARCITY`: +1,26%;
+- `OUTPUT_PRESSURE`: −1,72%;
+- `LIQUIDITY_STRESS`: −2,48%;
+- media complessiva: −0,26%;
+- 4.069 batch modificati, 100% con trigger/ragione/hash;
+- 3–4 action-stream distinti per ciascuna coppia seed/seat;
+- zero errori, zero forme d'azione invalide e zero fughe EOD strette;
+- composizione animale finale Q0/Q1/Q2 invariata a 8/6/5.
+
+### Decisione
+
+I gate preregistrati di reattività e sicurezza passano, ma la V2 non è una
+submission: dimostra reattività commerciale, non reattività completa. La
+quota Q2 resta correttamente un outcome. Prossima famiglia:
+`REACTIVE_SERVICE_AND_ROUTING`; acquisition e placement diventeranno
+state-driven soltanto dopo che il core potrà ripianificare le dipendenze
+strutturali.
+
+Report:
+`experiments/e17/reports/codex/E17_CODEX_TRUE_REACTIVITY_DEVELOPMENT_REPORT_IT.md`.
+
+---
+
+## E17.2 — Codex reactive service and routing core V2
+
+**Data:** 2026-09-02
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY`
+
+**Candidata:** `CODEX-E17.2-REACTIVE-SERVICE-ROUTING-CORE-V2`
+
+**Controllo:** `CODEX-E17.1-TRUE-REACTIVE-V2`
+
+### Disegno
+
+Il primo overlay ha dimostrato che sostituire singoli comandi della routine
+open-loop rompe la sincronizzazione posizionale implicita, inclusi i suoi
+`PASS`. È stato quindi costruito un dispatcher state-driven con handoff
+progressivo. La versione congelata subentra al giorno 29, genera task
+terminali di HARVEST e DROP e lascia identico il market del controllo.
+
+Benchmark finale: 3 seed development × 2 seat × 2 policy, avversario inerte;
+12 episodi totali. Nessun holdout o final-confirmation usato.
+
+### Risultato
+
+- candidata `131.947,17`, controllo `134.060,17`;
+- delta medio `−2.113` (`−1,576%`), minimo matched `−2.517`;
+- 750 comandi di routing e 252 servizi (`180 HARVEST`, `72 DROP`);
+- ledger `1434/1434` classificato: 990 `EXECUTED`, 444 `UNKNOWN`, zero
+  `NOT_EXECUTED`;
+- zero errori, fallback, forme invalide, mutazioni market e fughe animali;
+- animali finali medi invariati a 19; crop finali 12,83 vs 13,83.
+
+### Decisione
+
+Tutti i gate development passano entro il limite di regressione del 5%, ma la
+candidata resta `PROGRESSIVE_HANDOFF_ONLY / NOT_KAGGLE_READY`. Il prossimo
+incremento anticipa l'handoff a D28 e rende esplicita la catena
+raccolta→shed→liquidazione, misurando separatamente output raccolto e
+monetizzato. Acquisition, placement e quota zootecnica Q2 restano fuori dalla
+mutazione causale.
+
+Report:
+`experiments/e17/reports/codex/E17_CODEX_REACTIVE_SERVICE_AND_ROUTING_DEVELOPMENT_REPORT_IT.md`.
+
+---
+
+## E17.2 — Codex service-routing V3 D28
+
+**Data:** 2026-09-02
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY`
+
+**Candidata:** `CODEX-E17.2-REACTIVE-SERVICE-ROUTING-CORE-V3-D28`
+
+**Controllo:** `CODEX-E17.1-TRUE-REACTIVE-V2`
+
+### Disegno
+
+La candidata anticipa a D28 l'handoff completo delle unità, aggiunge il
+servizio biologico dell'ultimo ciclo e coordina HARVEST→DROP→SELL. Bootstrap,
+unlock, topologia, acquisizioni e quota zootecnica Q2 restano invariati. Il
+liquidatore preserva tutti gli ordini non-SELL del provider e considera i DROP
+eseguibili nello stesso batch.
+
+Benchmark finale: 3 seed development × 2 seat × candidata/controllo, con
+avversario inerte; 12 episodi totali. Nessun holdout o final confirmation.
+
+### Risultato
+
+- candidata `134.351,33`, controllo `134.060,17`;
+- delta medio `+291,17` (`+0,217%`), minimo matched `−122`;
+- miglioramento rispetto alla V2 D29: circa `+1,82%`;
+- 2.256 MOVE, 752 servizi e `MOVE/service = 3,000`;
+- 78 batch market coordinati e 238 unità incrementali richieste;
+- ledger unità `3198/3198`, ledger market `78/78`, zero `NOT_EXECUTED`;
+- zero errori, fallback, forme invalide, fughe e violazioni non-SELL;
+- residuo vendibile terminale zero, contro 54 unità del controllo.
+
+### Decisione
+
+Tutti i gate development passano. La V3 sostituisce la V2 come candidata
+interna, ma non viene promossa a submission e non consuma gli insiemi
+riservati. Il prossimo trattamento mantiene D28 e riduce il costo logistico
+con routing per cluster e rientri basati su inventario/slack; D27 resta fuori
+perimetro fino alla conservazione di score, sicurezza e liquidazione completa.
+
+Report:
+`experiments/e17/reports/codex/E17_CODEX_REACTIVE_SERVICE_ROUTING_V3_D28_DEVELOPMENT_REPORT_IT.md`.
+
+---
+
+## E17.2 — Codex batching/capacity routing V4A–V4D
+
+**Data:** 2026-09-02
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY`
+
+**Controllo:** `CODEX-E17.2-REACTIVE-SERVICE-ROUTING-CORE-V3-D28`
+
+**Candidata promossa internamente:**
+`CODEX-E17.2-POST-FEED-CAPACITY-BATCHED-ROUTING-V4D-D28`
+
+### Disegno ed esiti negativi
+
+La V4A rinvia i DROP D28 all'EOD e privilegia un ulteriore HARVEST terminale
+quando il rientro resta fattibile. Riduce `MOVE/service` a 2,676 ma perde
+`2,529%` per overflow dello shed. V4B aggiunge affinità di quadrante: reward
+`+0,001%` rispetto a V4A e `MOVE/service` 2,682, quindi nessun vantaggio.
+V4C rileva la pressione a 85/100 ma non effettua flush perché tutti i carrier
+di output trasportano anche Wheat e restano protetti.
+
+### V4D
+
+V4D mantiene la guardia Wheat fino al feed completo, poi consente il flush dei
+carrier, con target shed 50/100. Matrice: 3 seed development × 2 seat × V4D/V3,
+12 episodi totali, avversario inerte.
+
+- V4D `135.096,83`, V3 `134.351,33`;
+- delta `+745,50` (`+0,555%`), positivo 6/6, minimo `+497`;
+- `MOVE/service` 2,872 vs 3,000; 122 MOVE in meno;
+- 395 HARVEST vs 331 e 138 DROP vs 205;
+- 12 trigger di capacità e 36 batch di flush attivi;
+- ledger unità `3198/3198`, market `71/71`;
+- zero errori, fallback, forme invalide, fughe, residui terminali e violazioni
+  degli ordini non-SELL.
+
+### Decisione
+
+V4A, V4B e V4C sono respinte. V4D supera tutti i gate e sostituisce V3 come
+candidata interna. Nessun holdout, final confirmation o Kaggle. Prossimo gate:
+stress V4D nei regimi market development controllati prima di testare D27.
+
+Report:
+`experiments/e17/reports/codex/E17_CODEX_BATCHED_CLUSTER_ROUTING_V4_DEVELOPMENT_REPORT_IT.md`.
+
+---
+
+## E17.2 — Stress V4D sui regimi market controllati
+
+**Data:** 2026-09-02
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY`
+
+**Candidata:**
+`CODEX-E17.2-POST-FEED-CAPACITY-BATCHED-ROUTING-V4D-D28`
+
+**Controllo:** `CODEX-E17.2-REACTIVE-SERVICE-ROUTING-CORE-V3-D28`
+
+### Disegno
+
+Stress preregistrato sui tre seed development E17.0, entrambi i seat e quattro
+regimi controllati (`INERT`, `WHEAT_SCARCITY`, `OUTPUT_PRESSURE`,
+`LIQUIDITY_STRESS`): 48 episodi, 24 confronti matched. Policy e definizione
+dei regimi congelate tramite SHA-256; nessun holdout/final.
+
+### Risultato
+
+- V4D `124.090,17`, V3 `123.199,54`;
+- delta `+890,63` (`+0,723%`);
+- `24/24` confronti matched e `4/4` regimi non negativi;
+- peggior regime `INERT`, comunque `+0,555%`; minimo matched `+497`;
+- `MOVE/service` 2,922 vs 2,967; 216 MOVE in meno;
+- trigger capacità in 48 casi, 144 batch attivi, 1.004 rilasci post-feed;
+- ledger unità `12.792/12.792`, market `274/274`;
+- zero errori, fallback, forme invalide, fughe, residui vendibili e violazioni
+  non-SELL.
+
+### Decisione
+
+Tutti gli otto gate preregistrati passano. V4D è ammessa come baseline
+congelata per un'ablation isolata del giorno di handoff D27. Holdout,
+final-confirmation e Kaggle restano bloccati. La pressione output resta il
+regime da sorvegliare perché V4D vi migliora il reward ma non il rapporto
+MOVE/service.
+
+Report:
+`experiments/e17/reports/codex/E17_CODEX_V4D_CONTROLLED_MARKET_STRESS_REPORT_IT.md`.
+
+---
+
+## E17.2 — Ablation isolata dell'handoff D27
+
+**Data:** 2026-09-02
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY`
+
+**Candidata:**
+`CODEX-E17.2-POST-FEED-CAPACITY-BATCHED-ROUTING-V5-D27`
+
+**Controllo:**
+`CODEX-E17.2-POST-FEED-CAPACITY-BATCHED-ROUTING-V4D-D28`
+
+### Disegno
+
+La candidata cambia soltanto l'attivazione del dispatcher da D28 a D27. Il
+loader verifica l'identità di tutti gli altri parametri funzionali con la
+config V4D. Matrice: tre seed development × due seat × due policy, avversario
+inerte; 12 episodi e nessun holdout/final.
+
+### Risultato
+
+- D27 `133.290,33`, D28 `135.096,83`;
+- delta `−1.806,50` (`−1,337%`), negativo `6/6`;
+- `MOVE/service` 2,605 vs 2,872, ma 927 MOVE e 432 servizi in più;
+- ledger unità 4.962 vs 3.198; action stream divergenti 6/6;
+- zero errori, fallback, forme invalide, fughe, residui e violazioni non-SELL;
+- livestock `8/6/5` e 12 hands invariati;
+- una crop Q0 finale in meno in `6/6` confronti.
+
+### Decisione
+
+I gate economici falliscono. D27 non accede allo stress multi-regime e V4D
+D28 resta la candidata interna. Un'eventuale remediation dovrà preservare le
+azioni strutturali del provider nella giornata 27 e applicare override soltanto
+in presenza di fatti osservati.
+
+Report:
+`experiments/e17/reports/codex/E17_CODEX_D27_HANDOFF_ABLATION_REPORT_IT.md`.
+
+---
+
+## E17.2 — Release Kaggle V4D D28
+
+**Data:** 2026-09-02
+
+**Release:** `CODEX-E17.2-V4D-D28-KAGGLE-CANDIDATE-V1`
+
+La candidata interna V4D D28 è stata assemblata come bundle standalone senza
+sovrascrivere le submission precedenti. Il file
+`submission/submission_codex_e17_v4d.py` ha SHA-256
+`2792244CA71115E6CAAFDFC942B6D9AAAF09B95FC717A5B182D07A31D9717CD7`
+ed è byte-identico alla copia di freeze.
+
+Verifica: import isolato PASS, parità `4.314/4.314` azioni e `6/6` reward
+terminali, zero errori/fallback. Sono stati usati soltanto tre seed development
+su entrambi i seat; holdout e final confirmation restano intatti. D27 non è
+inclusa perché respinta dai gate preregistrati.
+
+Stato: `READY_FOR_OWNER_UPLOAD`; ID Kaggle non ancora registrato.
+
+Report:
+`experiments/e17/reports/codex/E17_CODEX_V4D_KAGGLE_SUBMISSION_READINESS_REPORT_IT.md`.
+
+---
+
+## E17.3 — Codex 6-6-2 e torneo development a tre
+
+**Data:** 2026-09-03
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY_NON_QUALIFYING`
+
+La V4D è stata vincolata a una topologia `6-6-2`. Le cinque celle pascolo
+rimosse diventano crop; un censimento state-driven controlla 14 pascoli target
+costruiti e occupati, con una missione D12 per colmare i vuoti Q1/Q2. La
+submission standalone supera 10 test controller, un test di isolamento, lint
+e parità `719/719`; SHA-256
+`3DF5C15D078552AF0A3849653057303698C9D750B4C7BB087B8A29092FADBAE8`.
+
+Il torneo successivo usa Codex 6-6-2, Claude V3 e Copilot E17.0 nativo. Sono
+stati eseguiti 42 match: tre coppie, sette seed development, entrambi i seat.
+Codex vince 28/28, Claude 14/28 e Copilot 0/28. Denaro medio: `123.620,29`,
+`15.511,21`, `10.537,18`. Tutte le policy hanno zero errori tecnici; Codex
+mantiene 14/14 pascoli e zero fughe, Claude registra 57 fughe EOD derivate e
+Copilot espone un buon rapporto MOVE/produttive (`1,221`) ma insufficiente
+workforce e manutenzione weed. Nessun holdout/final è stato consumato.
+Antigravity è escluso fino al 2026-09-04.
+
+Report:
+`experiments/e17/reports/common/E17_THREE_AGENT_DEVELOPMENT_TOURNAMENT_V2_REPORT_IT.md`.

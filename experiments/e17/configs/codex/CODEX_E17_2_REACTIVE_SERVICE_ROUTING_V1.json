@@ -1,0 +1,26 @@
+{
+  "candidate_id": "CODEX_E17_2_REACTIVE_SERVICE_ROUTING_V1",
+  "schema_version": "e17.codex.reactive_service_routing.v1",
+  "model_spec_version": "CODEX-E17.2-REACTIVE-SERVICE-ROUTING-V1",
+  "base_policy": "CODEX-E17.1-TRUE-REACTIVE-V2",
+  "causal_family": "REACTIVE_SERVICE_AND_ROUTING",
+  "turns_per_day": 24,
+  "episode_steps": 720,
+  "critical_unfed_threshold": 1,
+  "critical_unwatered_threshold": 1,
+  "deadline_buffer_steps": 2,
+  "feed_pickup_batch": 6,
+  "enable_deadline_routing": true,
+  "enable_idle_repair": true,
+  "enable_invalid_repair": false,
+  "enable_normal_service": true,
+  "task_priority": [
+    "CRITICAL_WATER",
+    "CRITICAL_FEED",
+    "HARVEST",
+    "WATER",
+    "FEED",
+    "COLLECT_FERTILIZER",
+    "CARE"
+  ]
+}

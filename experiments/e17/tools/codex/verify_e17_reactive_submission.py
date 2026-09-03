@@ -19,7 +19,7 @@ from agricola.strategy.codex.codex_e17_reactive_guarded import (
 
 ROOT = Path(__file__).resolve().parents[4]
 TARGET = ROOT / "submission" / "submission_codex_e17_reactive.py"
-REPLAY = ROOT / "data" / "replays" / "reference" / "104498819.json"
+REPLAY = ROOT / "data" / "replays" / "json" / "104498819.json"
 EXPECTED_RELEASE = "CODEX-E17.1-3Q-REACTIVE-GUARDED-V1"
 
 

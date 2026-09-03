@@ -14,7 +14,7 @@ from pathlib import Path
 from typing import Dict, Any, List, Tuple
 from collections import defaultdict
 
-REPLAY_PATH = Path("data/replays/reference/101971376.json")
+REPLAY_PATH = Path("data/replays/json/101971376.json")
 OUT_DIR = Path("results/e13/episode_101971376/antigravity")
 OUT_DIR.mkdir(parents=True, exist_ok=True)
 

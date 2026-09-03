@@ -107,7 +107,8 @@ Nel campione i riferimenti elencati esistono e non emergono path rotti.
 
 Il CSV segnala duplicati byte-identici coerenti con il mandato A0, senza rimozione automatica. Campioni rilevanti:
 
-- `data/replays/reference/101294736.json` identico a `experiments/archive/e12/artifacts/x111/101294736.json`
+- `data/replays/json/101294736.json` era identico alla copia E12 ora rimossa;
+  resta l'unico replay canonico con lo stesso SHA-256
 - `docs/governance/history/model_spec_c2/antigravity/freeze/submission_antigravity_v4_tournament.py`
   `docs/governance/history/model_spec_c2/post_3q_closure_tournament/freeze/submission_antigravity_v4.py`
   `experiments/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py`

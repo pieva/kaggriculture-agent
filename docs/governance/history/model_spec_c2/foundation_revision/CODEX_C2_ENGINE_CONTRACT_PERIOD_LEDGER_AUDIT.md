@@ -499,7 +499,7 @@ Le costanti 24/48/72 sono soltanto le istanze default di `1T/2T/3T`. Il ciclo WH
 
 ## 17. Replay reconciliation
 
-Fonti empiriche, non normative: `data/replays/reference/103484828.json`, `103473619.json`, `103462357.json`, `103464592.json`. Gli eventi sono stati attribuiti tramite delta coerenti di tile/inventory tra snapshot consecutivi; le richieste senza effetto non sono state trattate come completion.
+Fonti empiriche, non normative: `data/replays/json/103484828.json`, `103473619.json`, `103462357.json`, `103464592.json`. Gli eventi sono stati attribuiti tramite delta coerenti di tile/inventory tra snapshot consecutivi; le richieste senza effetto non sono state trattate come completion.
 
 | Replay / player | Pattern osservato | Reconciliation class | Spiegazione engine-grounded |
 |---|---|---|---|

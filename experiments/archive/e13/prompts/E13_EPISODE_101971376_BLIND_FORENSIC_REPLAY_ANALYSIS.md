@@ -26,7 +26,7 @@ L'obiettivo è rispondere, con evidenza quantitativa, alla domanda:
 
 Analizzare il raw replay dell'episodio:
 
-`data/replays/reference/101971376.json`
+`data/replays/json/101971376.json`
 
 Se il file non è presente:
 

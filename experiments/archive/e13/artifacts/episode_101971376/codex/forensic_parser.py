@@ -16,7 +16,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[4]
-RAW = ROOT / "docs" / "benchmark" / "101971376.json"
+RAW = ROOT / "data" / "replays" / "json" / "101971376.json"
 OUT = Path(__file__).resolve().parent
 
 CROPS = {"WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON"}

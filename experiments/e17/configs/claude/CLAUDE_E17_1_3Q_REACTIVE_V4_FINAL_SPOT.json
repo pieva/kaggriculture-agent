@@ -1,0 +1,75 @@
+{
+  "schema_version": "CLAUDE_E17_1_3Q_REACTIVE_CONFIG_V3",
+  "policy_id": "CLAUDE-E17.1-3Q-REACTIVE-INDEPENDENT-V3",
+  "model_spec": "docs/model_specs/claude/MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE_V3.md",
+  "predecessor_policy_id": "CLAUDE-E17.1-3Q-REACTIVE-INDEPENDENT-V2",
+  "target_quadrants": 3,
+  "fallback": {
+    "turns_per_day": 24,
+    "episode_steps": 720,
+    "market_order_batch_limit": 10
+  },
+  "cash_reserve": {
+    "land_purchase_reserve": 300.0,
+    "hire_reserve": 150.0,
+    "market_order_min_cash": 30.0
+  },
+  "workforce": {
+    "min_workers_per_quadrant": 3,
+    "max_hands": 15,
+    "hire_batch_limit_per_turn": 2,
+    "tasks_per_worker_per_day": 6,
+    "hire_target_headcount": 12,
+    "hire_ramp_safety_factor": 3.0
+  },
+  "dispatch": {
+    "assignment_stall_timeout": 3,
+    "prefer_same_quadrant": true
+  },
+  "expansion": {
+    "min_days_for_expansion_payback": 4,
+    "expansion_service_pressure_ceiling": 0.34,
+    "core_min_harvest_requests": 4,
+    "core_min_fill_ratio": 0.4
+  },
+  "crop": {
+    "species_rotation": [
+      "WHEAT",
+      "CARROT",
+      "MELON",
+      "TOMATO"
+    ],
+    "target_fill_ratio": 0.55,
+    "min_days_margin_for_planting": 1,
+    "seed_purchase_batch_size": 5,
+    "fertilize_when_carried": true
+  },
+  "livestock": {
+    "species_rotation": [
+      "SHEEP",
+      "COW",
+      "GOOSE"
+    ],
+    "structures_target_per_quadrant": 4,
+    "max_quadrants_for_livestock": 2,
+    "feed_security_buffer_per_animal": 3,
+    "wheat_buy_price_ceiling": 80.0,
+    "wheat_buy_batch_cap": 10,
+    "max_at_risk_animals_for_new_purchase": 0,
+    "animal_purchase_reserve": 300.0,
+    "herd_per_worker_ratio": 0.5,
+    "max_animal_placements_per_call": 3
+  },
+  "endgame": {
+    "shutdown_days_remaining": 5,
+    "liquidation_days_remaining": 3
+  },
+  "provenance": {
+    "holdout_consumed": false,
+    "final_confirmation_consumed": false,
+    "independence_statement": "no imports from agricola.strategy.codex, agricola.strategy.antigravity or agricola.strategy.copilot; no indexed action table; shared modules limited to agricola.core.observation_contract and public ENGINE_VERIFIED/DERIVED_ENGINE_FACT formulas documented in the C2.1 Foundation",
+    "remediation_of": "CLAUDE-E17.1-3Q-REACTIVE-INDEPENDENT-V2",
+    "remediation_evidence": "experiments/e17/reports/common/E17_REACTIVE_THREE_WAY_DEVELOPMENT_EXHIBITION_REPORT_IT.md",
+    "authorization": "experiments/e17/reviews/common/E17_CLAUDE_V3_BLACK_BOX_CODEX_BENCHMARK_AUTHORIZATION.md"
+  }
+}

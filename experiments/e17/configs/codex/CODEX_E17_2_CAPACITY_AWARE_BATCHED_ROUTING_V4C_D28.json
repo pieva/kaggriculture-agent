@@ -1,0 +1,18 @@
+{
+  "candidate_id": "CODEX_E17_2_CAPACITY_AWARE_BATCHED_ROUTING_V4C_D28",
+  "schema_version": "e17.codex.capacity_aware_batched_routing.v4c.d28",
+  "model_spec_version": "CODEX-E17.2-CAPACITY-AWARE-BATCHED-ROUTING-V4C-D28",
+  "base_policy": "CODEX-E17.2-BATCHED-ROUTING-V4A-D28",
+  "causal_family": "SHED_CAPACITY_AWARE_BATCHED_ROUTING",
+  "activation_day": 28,
+  "liquidation_day": 29,
+  "turns_per_day": 24,
+  "episode_steps": 720,
+  "defer_d28_drop_to_eod": true,
+  "terminal_harvest_before_drop": true,
+  "cluster_affinity_enabled": false,
+  "cluster_switch_penalty": 0,
+  "capacity_aware_flush_enabled": true,
+  "capacity_flush_trigger_ratio": 0.85,
+  "capacity_flush_target_ratio": 0.50
+}

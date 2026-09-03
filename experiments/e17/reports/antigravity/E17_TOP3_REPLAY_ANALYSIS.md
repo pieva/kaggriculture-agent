@@ -7,7 +7,7 @@
 - **Stato:** COMPLETE / INDEPENDENT PASS CLOSED
 - **Foundation di riferimento:** Model Foundation C2.1 ([FOUNDATION_C2_1_MANIFEST.md](../../../../docs/foundation/FOUNDATION_C2_1_MANIFEST.md), [ONTOLOGY_C2_1.md](../../../../docs/foundation/ontology/ONTOLOGY_C2_1.md), [KAGGRICULTURE_STATE_MACHINE_C2_1.md](../../../../docs/foundation/state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md), [KAGGRICULTURE_FEATURE_MODEL_C2_1.md](../../../../docs/foundation/feature_model/KAGGRICULTURE_FEATURE_MODEL_C2_1.md))
 - **MODEL_SPEC di riferimento:** [MODEL_SPEC_ANTIGRAVITY_C2_3Q_POST_FOUNDATION_REVIEW.md](../../../../docs/model_specs/antigravity/MODEL_SPEC_ANTIGRAVITY_C2_3Q_POST_FOUNDATION_REVIEW.md)
-- **Catalogo benchmark:** `data/replays/MANIFEST.md`
+- **Catalogo benchmark:** `data/replays/json/json.md`
 - **Dataset metriche strutturato:** [E17_TOP3_REPLAY_METRICS.json](../../artifacts/discovery/antigravity/E17_TOP3_REPLAY_METRICS.json)
 - **Script di estrazione:** [analyze_top3_replays.py](../../tools/antigravity/analyze_top3_replays.py), [print_summary.py](../../tools/antigravity/print_summary.py)
 

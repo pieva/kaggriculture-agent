@@ -17,7 +17,7 @@ from typing import Any, Iterable
 
 
 ROOT = Path(__file__).resolve().parents[4]
-BENCHMARK_DIR = ROOT / "data" / "replays" / "e17-discovery"
+BENCHMARK_DIR = ROOT / "data" / "replays" / "json"
 OUT_DIR = ROOT / "experiments" / "e17" / "artifacts" / "discovery" / "codex"
 REPORT_DIR = ROOT / "experiments" / "e17" / "reports" / "codex"
 

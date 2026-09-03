@@ -1,0 +1,53 @@
+{
+  "candidate_id": "CODEX_E17_2_REACTIVE_SERVICE_ROUTING_CORE_V3_D28",
+  "schema_version": "e17.codex.reactive_service_routing_core.v3.d28",
+  "model_spec_version": "CODEX-E17.2-REACTIVE-SERVICE-ROUTING-CORE-V3-D28",
+  "base_policy": "CODEX-E17.1-TRUE-REACTIVE-V2",
+  "causal_family": "REACTIVE_SERVICE_ROUTING_AND_TERMINAL_LIQUIDATION",
+  "turns_per_day": 24,
+  "episode_steps": 720,
+  "activation_day": 28,
+  "liquidation_day": 29,
+  "critical_unfed_threshold": 1,
+  "critical_unwatered_threshold": 1,
+  "wheat_pickup_batch": 6,
+  "wheat_carrier_target": 4,
+  "plant_cutoff_day": 27,
+  "sellable_products": [
+    "WHEAT",
+    "CARROT",
+    "TOMATO",
+    "STRAWBERRY",
+    "MELON",
+    "EGG",
+    "MILK",
+    "WOOL",
+    "FERTILIZER"
+  ],
+  "crop_cutoffs": {
+    "MELON": 17,
+    "STRAWBERRY": 20,
+    "TOMATO": 22,
+    "CARROT": 25,
+    "WHEAT": 25
+  },
+  "pasture_targets": [],
+  "coop_targets": [],
+  "wheat_crop_targets": [],
+  "task_priority": {
+    "CRITICAL_FEED": 0,
+    "PICKUP_WHEAT": 0,
+    "DROP_INVENTORY": 0,
+    "FEED": 1,
+    "CRITICAL_WATER": 1,
+    "HARVEST": 2,
+    "WATER": 3,
+    "COLLECT_FERTILIZER": 4,
+    "PLACE_ANIMAL": 9,
+    "PICKUP_ANIMAL": 9,
+    "BUILD_STRUCTURE": 9,
+    "DIG_TARGET": 9,
+    "PLANT": 9,
+    "CARE": 9
+  }
+}

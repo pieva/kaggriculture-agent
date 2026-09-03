@@ -110,7 +110,7 @@ Evidenza esterna iniziale post-upload e benchmark batch: nelle prime partite Kag
 
 ## 8. Evidenze di riferimento
 
-- Raw replay: `experiments/archive/e12/artifacts/x111/101294736.json`
+- Raw replay canonico: `data/replays/json/101294736.json`
 - SHA-256: `6281fdd32497c9db28e3d924ad8a55b12f841a5b1309164328679aa4f5ee8695`
 - Parser / benchmark replay: artifact in `results/e12/x111`
 - Summary: `experiments/archive/e12/artifacts/x111/TRUEBELIEF_BENCHMARK.md`
@@ -200,7 +200,8 @@ Primary replay evidence:
 | `101705751` | `1056561958` | `Dr. Mikholae Hutchinson` | `$38,815` | `$90,137` | `79be341c03a5f471baaa28cf6419ff89d85c06fc88de50901c5c1e3da92ac6b3` |
 | `101717011` | `1273000467` | `Alexander Sokolov` | `$24,314` | `$50,420` | `f298356ebe1bf9e7aad4acff32a6114db4f015f90f613e8e913565913494f3b9` |
 
-Derived analysis artifacts are in `results/benchmark`: `BENCHMARK_REGISTRY.md`, `benchmark_registry.json`, per-episode daily timelines, consolidated daily timeline and `q2_evidence.json`. Raw replay JSON remains unchanged in `docs/benchmark`.
+Derived analysis artifacts are archived under E12. The raw replay JSON used by
+the active tooling is preserved in the canonical `data/replays/json/` folder.
 
 ### Cross-Competitor Invariants
 

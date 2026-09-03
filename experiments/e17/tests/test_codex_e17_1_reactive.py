@@ -15,7 +15,7 @@ from agricola.strategy.codex.codex_e17_reactive_guarded import (
 )
 
 REPO_ROOT = Path(__file__).resolve().parents[3]
-REPLAY = REPO_ROOT / "data/replays/reference/104498819.json"
+REPLAY = REPO_ROOT / "data/replays/json/104498819.json"
 
 
 def _observation(step: int = 195) -> tuple[dict, dict]:

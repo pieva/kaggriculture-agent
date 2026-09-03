@@ -7,7 +7,7 @@ from pathlib import Path
 from typing import Any, Dict, List, Tuple
 from collections import defaultdict, Counter
 
-BENCHMARK_DIR = Path(__file__).resolve().parents[1] / "docs" / "benchmark"
+BENCHMARK_DIR = Path(__file__).resolve().parents[1] / "data" / "replays" / "json"
 REPLAYS = {
     "LuCcc_103484828": BENCHMARK_DIR / "103484828.json",
     "Gordeev_103473619": BENCHMARK_DIR / "103473619.json",

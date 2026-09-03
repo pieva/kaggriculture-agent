@@ -101,8 +101,7 @@ kaggriculture-agent/
 │
 ├── data/                         # input esterni, mai documentazione
 │   ├── replays/
-│   │   ├── reference/
-│   │   └── e17-discovery/
+│   │   └── json/                 # replay grezzi unici + json.md
 │   └── screenshots/
 │
 ├── src/agricola/                 # runtime e policy mantenute
@@ -282,8 +281,9 @@ Aggiornare tutti i riferimenti e aggiungere `experiments/e17/README.md`.
 
 ### Fase 2 — Dati esterni
 
-Migrare `docs/benchmark/*.json` in `data/replays/`, separando reference e
-discovery E17. Spostare il catalogo in `data/replays/MANIFEST.md`.
+Migrare `docs/benchmark/*.json` nella cartella unica `data/replays/json/`.
+Il ruolo `TRAINING_HISTORY`, `DISCOVERY` o `EXTERNAL_DIAGNOSTIC` è registrato
+in `json.md`, non codificato in sottocartelle.
 
 ### Fase 3 — Archivio storico
 

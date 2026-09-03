@@ -1,0 +1,6456 @@
+{
+  "action_counts": {
+    "DROP": 205,
+    "EAST": 568,
+    "FEED": 114,
+    "HARVEST": 331,
+    "NORTH": 515,
+    "PASS": 190,
+    "PICKUP": 24,
+    "SOUTH": 521,
+    "WATER": 78,
+    "WEST": 652
+  },
+  "activation_day": 28,
+  "candidate": "CODEX-E17.2-REACTIVE-SERVICE-ROUTING-CORE-V3-D28",
+  "candidate_mean_reward": 134351.33333333334,
+  "causal_family": "REACTIVE_SERVICE_ROUTING_AND_TERMINAL_LIQUIDATION",
+  "control": "CODEX-E17.1-TRUE-REACTIVE-V2",
+  "control_mean_reward": 134060.16666666666,
+  "coordinated_market_batches": 78,
+  "coordinated_sell_orders": 94,
+  "coordinated_sell_units_requested": 238,
+  "epistemic_role": "DEVELOPMENT_ONLY",
+  "fallbacks": 0,
+  "final_confirmation_consumed": false,
+  "gates": {
+    "activation_day_28": true,
+    "animal_escapes_zero": true,
+    "coordinated_sell_present": true,
+    "fallbacks_zero": true,
+    "inert_regression_at_least_minus_five_pct": true,
+    "invalid_action_shapes_zero": true,
+    "market_ledger_classification_coverage_one": true,
+    "natural_drop_present": true,
+    "natural_feed_present": true,
+    "natural_water_present": true,
+    "non_sell_provider_orders_preserved": true,
+    "same_initial_state_determinism": "COVERED_BY_UNIT_TEST",
+    "technical_errors_zero": true,
+    "unit_ledger_classification_coverage_one": true
+  },
+  "holdout_consumed": false,
+  "inert_regression_pct_vs_control": 0.21719103735762246,
+  "invalid_action_shapes": 0,
+  "liquidation_day": 29,
+  "market_execution_outcomes": {
+    "EXECUTED": 72,
+    "UNKNOWN": 6
+  },
+  "market_ledger_classification_coverage": 1.0,
+  "market_ledger_record_count": 78,
+  "mean_matched_delta": 291.1666666666667,
+  "min_matched_delta": -122.0,
+  "move_per_service": 3.0,
+  "non_sell_preservation_failures": 0,
+  "opponent": "INERT_PASS_POLICY",
+  "results": [
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 34,
+        "EAST": 93,
+        "FEED": 19,
+        "HARVEST": 55,
+        "NORTH": 86,
+        "PASS": 34,
+        "PICKUP": 4,
+        "SOUTH": 87,
+        "WATER": 13,
+        "WEST": 108
+      },
+      "action_stream_sha256": "22a061550d307b0464cd46a03d51c6455561f480de49b253dd36f6d7fd4db56b",
+      "coordinated_market_batches": 12,
+      "coordinated_sell_orders": 14,
+      "coordinated_sell_units_requested": 36,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 484,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 49
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7,
+            "WHEAT": 4
+          },
+          "crops": 11
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1,
+            "WHEAT": 5
+          },
+          "crops": 6
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 3
+          },
+          "crops": 9
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "ledger_samples": [
+        {
+          "day": 28,
+          "hour": 0,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "610dc18abe56e317d2989c278d972def1adc3b0baa263fefd0b432aa74dd2526",
+          "post_state_id": "state-000673",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "7e0e923e80ef88e267456dfc95d94993fbdf8f93731a4536a98f22cb29a4ab77",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000672",
+          "step": 672,
+          "target": [
+            4,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 0,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {
+            "WHEAT": 6
+          },
+          "observed_position": [
+            4,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "db6f2fc427725e4be306655144ecd64372f1661315ef6e839f39da4b5caa7427",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "610dc18abe56e317d2989c278d972def1adc3b0baa263fefd0b432aa74dd2526",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 0,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            5,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "db6f2fc427725e4be306655144ecd64372f1661315ef6e839f39da4b5caa7427",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "610dc18abe56e317d2989c278d972def1adc3b0baa263fefd0b432aa74dd2526",
+          "source": [
+            5,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            5,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "ba1a4f3129c94c37a0941c01434be41b11967247fc3eaffaad515de7b0d83f48",
+          "worker_id": 1,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "db6f2fc427725e4be306655144ecd64372f1661315ef6e839f39da4b5caa7427",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "610dc18abe56e317d2989c278d972def1adc3b0baa263fefd0b432aa74dd2526",
+          "source": [
+            4,
+            5
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            5
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "89ba3d99b84d645a5291e5d15200acb8d8e3a0e557d0bea2fef3ca2969236cc8",
+          "worker_id": 2,
+          "yield_before": 0
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "db6f2fc427725e4be306655144ecd64372f1661315ef6e839f39da4b5caa7427",
+          "post_state_id": "state-000674",
+          "requested": [
+            "WEST"
+          ],
+          "snapshot_fingerprint": "610dc18abe56e317d2989c278d972def1adc3b0baa263fefd0b432aa74dd2526",
+          "source": [
+            5,
+            5
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            5
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "7fd82193b3f8ad66e6af0936d488566f95c126d42c16da4d7c522c01de6705ba",
+          "worker_id": 3,
+          "yield_before": 0
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            3
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "db6f2fc427725e4be306655144ecd64372f1661315ef6e839f39da4b5caa7427",
+          "post_state_id": "state-000674",
+          "requested": [
+            "NORTH"
+          ],
+          "snapshot_fingerprint": "610dc18abe56e317d2989c278d972def1adc3b0baa263fefd0b432aa74dd2526",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            3
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 4,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            6,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "db6f2fc427725e4be306655144ecd64372f1661315ef6e839f39da4b5caa7427",
+          "post_state_id": "state-000674",
+          "requested": [
+            "EAST"
+          ],
+          "snapshot_fingerprint": "610dc18abe56e317d2989c278d972def1adc3b0baa263fefd0b432aa74dd2526",
+          "source": [
+            5,
+            4
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            6,
+            4
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "ba1a4f3129c94c37a0941c01434be41b11967247fc3eaffaad515de7b0d83f48",
+          "worker_id": 5,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            3,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "db6f2fc427725e4be306655144ecd64372f1661315ef6e839f39da4b5caa7427",
+          "post_state_id": "state-000674",
+          "requested": [
+            "WEST"
+          ],
+          "snapshot_fingerprint": "610dc18abe56e317d2989c278d972def1adc3b0baa263fefd0b432aa74dd2526",
+          "source": [
+            4,
+            5
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            3,
+            5
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "89ba3d99b84d645a5291e5d15200acb8d8e3a0e557d0bea2fef3ca2969236cc8",
+          "worker_id": 6,
+          "yield_before": 0
+        }
+      ],
+      "market_execution_outcomes": {
+        "EXECUTED": 11,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 12,
+      "market_ledger_record_count": 12,
+      "market_ledger_samples": [
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WHEAT",
+              90
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "emitted_market_sha256": "798cf63892761295d6d30dd70545624180cc474c87275f490cd4e1ff04b777e0",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 2,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "STRAWBERRY": 4,
+            "TOMATO": 0,
+            "WHEAT": 90,
+            "WOOL": 0
+          },
+          "hour": 0,
+          "incremental_sell_quantities": {
+            "WHEAT": 7
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "MILK": 3,
+            "STRAWBERRY": 4,
+            "WHEAT": 90
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "e2ecd7ed627049aa81ff05b4106e55ccb6ced2ec3d24b238487f200bbcfdca63",
+          "post_state_id": "state-000697",
+          "predicted_drop": {},
+          "provider_market": [
+            [
+              "SELL",
+              "WHEAT",
+              83
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "provider_market_sha256": "6e2bf44f2e87a9df7bf6140a8cd71aa7d409749731d821574b14f3fd68a8698e",
+          "requested_sell_quantities": {
+            "FERTILIZER": 4,
+            "MILK": 3,
+            "STRAWBERRY": 8,
+            "WHEAT": 90
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 2,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "SHEEP": 1,
+            "STRAWBERRY": 4,
+            "TOMATO": 0,
+            "WHEAT": 90,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "243df29349b1fe3d937294e427f0f22135ce962faf57065eba4d08eb6177a59a",
+          "state_id": "state-000696",
+          "step": 696
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ]
+          ],
+          "emitted_market_sha256": "3a359c38d917d751128ab41e0070c9863639d61a084f8f0f4e5d4b16e12c54b2",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 4
+          },
+          "hour": 4,
+          "incremental_sell_quantities": {
+            "MILK": 3
+          },
+          "observed_sold_units": {
+            "MILK": 3,
+            "WOOL": 4
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "2ac2e36aaccaa5e0bbc1626ec9ccb518193a75b8adbe982e042b04e6a9242c4a",
+          "post_state_id": "state-000701",
+          "predicted_drop": {
+            "MILK": 3,
+            "WOOL": 4
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ]
+          ],
+          "provider_market_sha256": "a5ee96eedc2384d7e433710a54b0fc87e947a37fd5069b13dde9b4ec87572aaa",
+          "requested_sell_quantities": {
+            "MILK": 3,
+            "WOOL": 8
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "49a7f91b223e59c26b199b110b1c62ff8e03aaafbbcf91be3636d1b4bb920e4e",
+          "state_id": "state-000700",
+          "step": 700
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ]
+          ],
+          "emitted_market_sha256": "4bde4da45f67561cb67c97bbaff3a5c6034e509cdcb3368a18a7479bb7fb3d5b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 4
+          },
+          "hour": 5,
+          "incremental_sell_quantities": {
+            "WOOL": 4
+          },
+          "observed_sold_units": {
+            "WOOL": 4
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "3b11cdab7a4205d3bfff208e35f3ac12b7df8673f41abb2071f3e07f13bece1f",
+          "post_state_id": "state-000702",
+          "predicted_drop": {
+            "WOOL": 4
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WOOL": 4
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "2ac2e36aaccaa5e0bbc1626ec9ccb518193a75b8adbe982e042b04e6a9242c4a",
+          "state_id": "state-000701",
+          "step": 701
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              6
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ],
+          "emitted_market_sha256": "da9023f76662f46ccb004457bb151c485fe033b43ba973ebf5cdaabbf0f26555",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 6
+          },
+          "hour": 8,
+          "incremental_sell_quantities": {
+            "WOOL": 3
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "WOOL": 6
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "a74ea4020074d2d2645727a91b006c9141b8c6645fe4377fc730546611a9cc14",
+          "post_state_id": "state-000705",
+          "predicted_drop": {
+            "WOOL": 6
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "WOOL",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ],
+          "provider_market_sha256": "56ad3b32a205fb9b9b4f6a43f007b1a57b5900d2ab2a08d60ac1aaa61880fe63",
+          "requested_sell_quantities": {
+            "FERTILIZER": 1,
+            "WOOL": 6
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "88f7a8601e9d20e0c5209c0c4391d0beef8b98064340abc44681eabb92bd49cc",
+          "state_id": "state-000704",
+          "step": 704
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              6
+            ]
+          ],
+          "emitted_market_sha256": "ddb08131618b51a28bf433b05af0c63279b02ba4997f8ff7b087c0780774868b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 6
+          },
+          "hour": 9,
+          "incremental_sell_quantities": {
+            "WOOL": 6
+          },
+          "observed_sold_units": {
+            "WOOL": 6
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "fedd4e400b8ca260f748446a6093642f49d4a69f5c19a88a18d142c1e8b655dc",
+          "post_state_id": "state-000706",
+          "predicted_drop": {
+            "WOOL": 6
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WOOL": 6
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "a74ea4020074d2d2645727a91b006c9141b8c6645fe4377fc730546611a9cc14",
+          "state_id": "state-000705",
+          "step": 705
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              2
+            ]
+          ],
+          "emitted_market_sha256": "3df53d542654f651e29126989dc8609029f4e72a630fcdc799c424818dd71170",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 2,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 13,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "observed_sold_units": {
+            "STRAWBERRY": 2
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "de181856d1ad7bc19af4d55ccfd1bf53efd96dd1d81029d230b762c5b0969450",
+          "post_state_id": "state-000710",
+          "predicted_drop": {
+            "STRAWBERRY": 2
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "61aa54bc76cc2b3fa7db4790f4d30ae9f917b9d4709f4551960af21ac2be743e",
+          "state_id": "state-000709",
+          "step": 709
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ],
+          "emitted_market_sha256": "dd5014118fb21ce8658a347cd8fb14f43ca3bf6c37d081c37b7ce53db17ce21b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 1,
+            "WOOL": 0
+          },
+          "hour": 14,
+          "incremental_sell_quantities": {
+            "WHEAT": 1
+          },
+          "observed_sold_units": {
+            "WHEAT": 1
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "3848ee7dc25655a527c1a8b885de1dd5fbb4dd017c182fd3ce5cce272938d07e",
+          "post_state_id": "state-000711",
+          "predicted_drop": {
+            "WHEAT": 1
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WHEAT": 1
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "de181856d1ad7bc19af4d55ccfd1bf53efd96dd1d81029d230b762c5b0969450",
+          "state_id": "state-000710",
+          "step": 710
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              2
+            ]
+          ],
+          "emitted_market_sha256": "fe0cfa4f34a38587574133b1bf1fc64d053c76c201bb8726ebc44d82dee5a838",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 2,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 15,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "STRAWBERRY": 2
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "f4448e9a111e620b8991c0958aaf29233b635e03c051a853fe050d46abb24ee5",
+          "post_state_id": "state-000712",
+          "predicted_drop": {
+            "STRAWBERRY": 2
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ]
+          ],
+          "provider_market_sha256": "f26f473fab59e5dbb7f62ba97b2dba187bab6c0184c3aaea3abb0d3d43982af4",
+          "requested_sell_quantities": {
+            "FERTILIZER": 2,
+            "STRAWBERRY": 2
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "3848ee7dc25655a527c1a8b885de1dd5fbb4dd017c182fd3ce5cce272938d07e",
+          "state_id": "state-000711",
+          "step": 711
+        }
+      ],
+      "max_hands": 12,
+      "move_per_service": 2.992,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "service_routing_v3_d28",
+      "reward": 183784.0,
+      "routing_commands": 374,
+      "seat": 0,
+      "seed": 26090101,
+      "service_commands": 125,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 151,
+        "FEED": 51,
+        "HARVEST": 201,
+        "PICKUP_WHEAT": 4,
+        "WATER": 2
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {},
+      "action_stream_sha256": "baecc300fb6b37ca27c6af9b97ffa1560fc29b003b095bdc71afd9ae5b62ef49",
+      "coordinated_market_batches": 0,
+      "coordinated_sell_orders": 0,
+      "coordinated_sell_units_requested": 0,
+      "errors": 0,
+      "execution_outcomes": {},
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 5,
+            "WHEAT": 1
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 0,
+      "ledger_record_count": 0,
+      "ledger_samples": [],
+      "market_execution_outcomes": {},
+      "market_ledger_classified_count": 0,
+      "market_ledger_record_count": 0,
+      "market_ledger_samples": [],
+      "max_hands": 12,
+      "move_per_service": null,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "true_reactive_v2_control",
+      "reward": 183102.0,
+      "routing_commands": 0,
+      "seat": 0,
+      "seed": 26090101,
+      "service_commands": 0,
+      "status": "DONE",
+      "strict_eod_crop_losses": 14,
+      "strict_eod_escapes": 0,
+      "task_counts": {},
+      "terminal_residual": {
+        "sellable_units": 8,
+        "shed": {},
+        "workers": {
+          "FERTILIZER": 4,
+          "WHEAT": 4
+        }
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 34,
+        "EAST": 93,
+        "FEED": 19,
+        "HARVEST": 55,
+        "NORTH": 86,
+        "PASS": 34,
+        "PICKUP": 4,
+        "SOUTH": 87,
+        "WATER": 13,
+        "WEST": 108
+      },
+      "action_stream_sha256": "22a061550d307b0464cd46a03d51c6455561f480de49b253dd36f6d7fd4db56b",
+      "coordinated_market_batches": 12,
+      "coordinated_sell_orders": 14,
+      "coordinated_sell_units_requested": 36,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 484,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 49
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7,
+            "WHEAT": 4
+          },
+          "crops": 11
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1,
+            "WHEAT": 5
+          },
+          "crops": 6
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 3
+          },
+          "crops": 9
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "ledger_samples": [
+        {
+          "day": 28,
+          "hour": 0,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "c9b079ec946b6290070ecec58ec792e9bd5adf5be2adff1a8583767dc95a2745",
+          "post_state_id": "state-000673",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "6d5fbf6e70b578e953115565962e629a95f1ceef354a40b9890417fe42691b03",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000672",
+          "step": 672,
+          "target": [
+            4,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 0,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {
+            "WHEAT": 6
+          },
+          "observed_position": [
+            4,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "ecac51be323bd387b2ba91c3d931f038e759acbf6fbccdbade26847a765c6727",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "c9b079ec946b6290070ecec58ec792e9bd5adf5be2adff1a8583767dc95a2745",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 0,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            5,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "ecac51be323bd387b2ba91c3d931f038e759acbf6fbccdbade26847a765c6727",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "c9b079ec946b6290070ecec58ec792e9bd5adf5be2adff1a8583767dc95a2745",
+          "source": [
+            5,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            5,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "ba1a4f3129c94c37a0941c01434be41b11967247fc3eaffaad515de7b0d83f48",
+          "worker_id": 1,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "ecac51be323bd387b2ba91c3d931f038e759acbf6fbccdbade26847a765c6727",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "c9b079ec946b6290070ecec58ec792e9bd5adf5be2adff1a8583767dc95a2745",
+          "source": [
+            4,
+            5
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            5
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "89ba3d99b84d645a5291e5d15200acb8d8e3a0e557d0bea2fef3ca2969236cc8",
+          "worker_id": 2,
+          "yield_before": 0
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "ecac51be323bd387b2ba91c3d931f038e759acbf6fbccdbade26847a765c6727",
+          "post_state_id": "state-000674",
+          "requested": [
+            "WEST"
+          ],
+          "snapshot_fingerprint": "c9b079ec946b6290070ecec58ec792e9bd5adf5be2adff1a8583767dc95a2745",
+          "source": [
+            5,
+            5
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            5
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "7fd82193b3f8ad66e6af0936d488566f95c126d42c16da4d7c522c01de6705ba",
+          "worker_id": 3,
+          "yield_before": 0
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            3
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "ecac51be323bd387b2ba91c3d931f038e759acbf6fbccdbade26847a765c6727",
+          "post_state_id": "state-000674",
+          "requested": [
+            "NORTH"
+          ],
+          "snapshot_fingerprint": "c9b079ec946b6290070ecec58ec792e9bd5adf5be2adff1a8583767dc95a2745",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            3
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 4,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            6,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "ecac51be323bd387b2ba91c3d931f038e759acbf6fbccdbade26847a765c6727",
+          "post_state_id": "state-000674",
+          "requested": [
+            "EAST"
+          ],
+          "snapshot_fingerprint": "c9b079ec946b6290070ecec58ec792e9bd5adf5be2adff1a8583767dc95a2745",
+          "source": [
+            5,
+            4
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            6,
+            4
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "ba1a4f3129c94c37a0941c01434be41b11967247fc3eaffaad515de7b0d83f48",
+          "worker_id": 5,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            3,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "ecac51be323bd387b2ba91c3d931f038e759acbf6fbccdbade26847a765c6727",
+          "post_state_id": "state-000674",
+          "requested": [
+            "WEST"
+          ],
+          "snapshot_fingerprint": "c9b079ec946b6290070ecec58ec792e9bd5adf5be2adff1a8583767dc95a2745",
+          "source": [
+            4,
+            5
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            3,
+            5
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "89ba3d99b84d645a5291e5d15200acb8d8e3a0e557d0bea2fef3ca2969236cc8",
+          "worker_id": 6,
+          "yield_before": 0
+        }
+      ],
+      "market_execution_outcomes": {
+        "EXECUTED": 11,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 12,
+      "market_ledger_record_count": 12,
+      "market_ledger_samples": [
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WHEAT",
+              90
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "emitted_market_sha256": "798cf63892761295d6d30dd70545624180cc474c87275f490cd4e1ff04b777e0",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 2,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "STRAWBERRY": 4,
+            "TOMATO": 0,
+            "WHEAT": 90,
+            "WOOL": 0
+          },
+          "hour": 0,
+          "incremental_sell_quantities": {
+            "WHEAT": 7
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "MILK": 3,
+            "STRAWBERRY": 4,
+            "WHEAT": 90
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "05b54eda186fab755a74f090b9f8ab3994a6eb6afeee080696b4b247a76113f9",
+          "post_state_id": "state-000697",
+          "predicted_drop": {},
+          "provider_market": [
+            [
+              "SELL",
+              "WHEAT",
+              83
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "provider_market_sha256": "6e2bf44f2e87a9df7bf6140a8cd71aa7d409749731d821574b14f3fd68a8698e",
+          "requested_sell_quantities": {
+            "FERTILIZER": 4,
+            "MILK": 3,
+            "STRAWBERRY": 8,
+            "WHEAT": 90
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 2,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "SHEEP": 1,
+            "STRAWBERRY": 4,
+            "TOMATO": 0,
+            "WHEAT": 90,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "65a6ca68f04856c550074d229747d15824e5eff0656dff5546266add0b456263",
+          "state_id": "state-000696",
+          "step": 696
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ]
+          ],
+          "emitted_market_sha256": "3a359c38d917d751128ab41e0070c9863639d61a084f8f0f4e5d4b16e12c54b2",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 4
+          },
+          "hour": 4,
+          "incremental_sell_quantities": {
+            "MILK": 3
+          },
+          "observed_sold_units": {
+            "MILK": 3,
+            "WOOL": 4
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "dad5d11a56f80dd15d5908af741525aaa759eea4bed746ad7ebc7f722a6a9513",
+          "post_state_id": "state-000701",
+          "predicted_drop": {
+            "MILK": 3,
+            "WOOL": 4
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ]
+          ],
+          "provider_market_sha256": "a5ee96eedc2384d7e433710a54b0fc87e947a37fd5069b13dde9b4ec87572aaa",
+          "requested_sell_quantities": {
+            "MILK": 3,
+            "WOOL": 8
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "b33da6af43bcfeb940f5d19d63a847fb46e01a51d836fdf81e43d4e5b8d991f9",
+          "state_id": "state-000700",
+          "step": 700
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ]
+          ],
+          "emitted_market_sha256": "4bde4da45f67561cb67c97bbaff3a5c6034e509cdcb3368a18a7479bb7fb3d5b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 4
+          },
+          "hour": 5,
+          "incremental_sell_quantities": {
+            "WOOL": 4
+          },
+          "observed_sold_units": {
+            "WOOL": 4
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "c337dcf27f10c0a9a5339ff176d2e16d13128c5f16180c99fdde04f762fc4943",
+          "post_state_id": "state-000702",
+          "predicted_drop": {
+            "WOOL": 4
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WOOL": 4
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "dad5d11a56f80dd15d5908af741525aaa759eea4bed746ad7ebc7f722a6a9513",
+          "state_id": "state-000701",
+          "step": 701
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              6
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ],
+          "emitted_market_sha256": "da9023f76662f46ccb004457bb151c485fe033b43ba973ebf5cdaabbf0f26555",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 6
+          },
+          "hour": 8,
+          "incremental_sell_quantities": {
+            "WOOL": 3
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "WOOL": 6
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "3f91d75945e299e8576e23c1c82afe219752c231dbbe2a10dd73364eb19aad17",
+          "post_state_id": "state-000705",
+          "predicted_drop": {
+            "WOOL": 6
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "WOOL",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ],
+          "provider_market_sha256": "56ad3b32a205fb9b9b4f6a43f007b1a57b5900d2ab2a08d60ac1aaa61880fe63",
+          "requested_sell_quantities": {
+            "FERTILIZER": 1,
+            "WOOL": 6
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "9952837ffd3013c067d9cd48dc4c9fac9b572203481182005e7351bb52f57ddf",
+          "state_id": "state-000704",
+          "step": 704
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              6
+            ]
+          ],
+          "emitted_market_sha256": "ddb08131618b51a28bf433b05af0c63279b02ba4997f8ff7b087c0780774868b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 6
+          },
+          "hour": 9,
+          "incremental_sell_quantities": {
+            "WOOL": 6
+          },
+          "observed_sold_units": {
+            "WOOL": 6
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "516b5e865feead6d1d2ed3ab82bee205557820d02c57bca1156d477548aec037",
+          "post_state_id": "state-000706",
+          "predicted_drop": {
+            "WOOL": 6
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WOOL": 6
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "3f91d75945e299e8576e23c1c82afe219752c231dbbe2a10dd73364eb19aad17",
+          "state_id": "state-000705",
+          "step": 705
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              2
+            ]
+          ],
+          "emitted_market_sha256": "3df53d542654f651e29126989dc8609029f4e72a630fcdc799c424818dd71170",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 2,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 13,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "observed_sold_units": {
+            "STRAWBERRY": 2
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "488e5f2bd0b2abd279567ed3a9265d578cfd9c38eb19ed82c7b27b7ac5efd973",
+          "post_state_id": "state-000710",
+          "predicted_drop": {
+            "STRAWBERRY": 2
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "758aa6f39ded38a18a93d77222240d2d4371b4fdb422a335248e9bfebc0727c7",
+          "state_id": "state-000709",
+          "step": 709
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ],
+          "emitted_market_sha256": "dd5014118fb21ce8658a347cd8fb14f43ca3bf6c37d081c37b7ce53db17ce21b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 1,
+            "WOOL": 0
+          },
+          "hour": 14,
+          "incremental_sell_quantities": {
+            "WHEAT": 1
+          },
+          "observed_sold_units": {
+            "WHEAT": 1
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "4e30c237cebc1ed4129ce9c5d26ca43c566de15afb98753a095944f3bc8e364b",
+          "post_state_id": "state-000711",
+          "predicted_drop": {
+            "WHEAT": 1
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WHEAT": 1
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "488e5f2bd0b2abd279567ed3a9265d578cfd9c38eb19ed82c7b27b7ac5efd973",
+          "state_id": "state-000710",
+          "step": 710
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              2
+            ]
+          ],
+          "emitted_market_sha256": "fe0cfa4f34a38587574133b1bf1fc64d053c76c201bb8726ebc44d82dee5a838",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 2,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 15,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "STRAWBERRY": 2
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "c7862f8239d2be0fbfcd65f7ceca2fc396e3cf6d106b9c984ded7deeabbbca9e",
+          "post_state_id": "state-000712",
+          "predicted_drop": {
+            "STRAWBERRY": 2
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ]
+          ],
+          "provider_market_sha256": "f26f473fab59e5dbb7f62ba97b2dba187bab6c0184c3aaea3abb0d3d43982af4",
+          "requested_sell_quantities": {
+            "FERTILIZER": 2,
+            "STRAWBERRY": 2
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "4e30c237cebc1ed4129ce9c5d26ca43c566de15afb98753a095944f3bc8e364b",
+          "state_id": "state-000711",
+          "step": 711
+        }
+      ],
+      "max_hands": 12,
+      "move_per_service": 2.992,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "service_routing_v3_d28",
+      "reward": 183784.0,
+      "routing_commands": 374,
+      "seat": 1,
+      "seed": 26090101,
+      "service_commands": 125,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 151,
+        "FEED": 51,
+        "HARVEST": 201,
+        "PICKUP_WHEAT": 4,
+        "WATER": 2
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {},
+      "action_stream_sha256": "baecc300fb6b37ca27c6af9b97ffa1560fc29b003b095bdc71afd9ae5b62ef49",
+      "coordinated_market_batches": 0,
+      "coordinated_sell_orders": 0,
+      "coordinated_sell_units_requested": 0,
+      "errors": 0,
+      "execution_outcomes": {},
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 5,
+            "WHEAT": 1
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 0,
+      "ledger_record_count": 0,
+      "ledger_samples": [],
+      "market_execution_outcomes": {},
+      "market_ledger_classified_count": 0,
+      "market_ledger_record_count": 0,
+      "market_ledger_samples": [],
+      "max_hands": 12,
+      "move_per_service": null,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "true_reactive_v2_control",
+      "reward": 183102.0,
+      "routing_commands": 0,
+      "seat": 1,
+      "seed": 26090101,
+      "service_commands": 0,
+      "status": "DONE",
+      "strict_eod_crop_losses": 14,
+      "strict_eod_escapes": 0,
+      "task_counts": {},
+      "terminal_residual": {
+        "sellable_units": 8,
+        "shed": {},
+        "workers": {
+          "FERTILIZER": 4,
+          "WHEAT": 4
+        }
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 34,
+        "EAST": 93,
+        "FEED": 19,
+        "HARVEST": 55,
+        "NORTH": 87,
+        "PASS": 32,
+        "PICKUP": 4,
+        "SOUTH": 88,
+        "WATER": 13,
+        "WEST": 108
+      },
+      "action_stream_sha256": "ea2650548112ddcb82a1d30e9a109b0c9fdab0de0bffb4d133e06bbc91fa74ba",
+      "coordinated_market_batches": 11,
+      "coordinated_sell_orders": 14,
+      "coordinated_sell_units_requested": 35,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 486,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 47
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7,
+            "WHEAT": 4
+          },
+          "crops": 11
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1,
+            "WHEAT": 5
+          },
+          "crops": 6
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 3
+          },
+          "crops": 9
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "ledger_samples": [
+        {
+          "day": 28,
+          "hour": 0,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "26ffd4978ced83712e6aceeb346e10fd23dfb859d7d154b5a388507a2b5508ef",
+          "post_state_id": "state-000673",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "790f230c347a40e12b36c4dfc97eb0b5a0f487fe4c24e1306b141fdc5d2152e9",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000672",
+          "step": 672,
+          "target": [
+            4,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 0,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {
+            "WHEAT": 6
+          },
+          "observed_position": [
+            4,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "e1d0b9572a0d24619dc463753b17b69f245c7dfd2bf7ab693f5b704cc5a4cb7a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "26ffd4978ced83712e6aceeb346e10fd23dfb859d7d154b5a388507a2b5508ef",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 0,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            5,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "e1d0b9572a0d24619dc463753b17b69f245c7dfd2bf7ab693f5b704cc5a4cb7a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "26ffd4978ced83712e6aceeb346e10fd23dfb859d7d154b5a388507a2b5508ef",
+          "source": [
+            5,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            5,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "ba1a4f3129c94c37a0941c01434be41b11967247fc3eaffaad515de7b0d83f48",
+          "worker_id": 1,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "e1d0b9572a0d24619dc463753b17b69f245c7dfd2bf7ab693f5b704cc5a4cb7a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "26ffd4978ced83712e6aceeb346e10fd23dfb859d7d154b5a388507a2b5508ef",
+          "source": [
+            4,
+            5
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            5
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "89ba3d99b84d645a5291e5d15200acb8d8e3a0e557d0bea2fef3ca2969236cc8",
+          "worker_id": 2,
+          "yield_before": 0
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "e1d0b9572a0d24619dc463753b17b69f245c7dfd2bf7ab693f5b704cc5a4cb7a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "WEST"
+          ],
+          "snapshot_fingerprint": "26ffd4978ced83712e6aceeb346e10fd23dfb859d7d154b5a388507a2b5508ef",
+          "source": [
+            5,
+            5
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            5
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "7fd82193b3f8ad66e6af0936d488566f95c126d42c16da4d7c522c01de6705ba",
+          "worker_id": 3,
+          "yield_before": 0
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            3
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "e1d0b9572a0d24619dc463753b17b69f245c7dfd2bf7ab693f5b704cc5a4cb7a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "NORTH"
+          ],
+          "snapshot_fingerprint": "26ffd4978ced83712e6aceeb346e10fd23dfb859d7d154b5a388507a2b5508ef",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            3
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 4,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            6,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "e1d0b9572a0d24619dc463753b17b69f245c7dfd2bf7ab693f5b704cc5a4cb7a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "EAST"
+          ],
+          "snapshot_fingerprint": "26ffd4978ced83712e6aceeb346e10fd23dfb859d7d154b5a388507a2b5508ef",
+          "source": [
+            5,
+            4
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            6,
+            4
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "ba1a4f3129c94c37a0941c01434be41b11967247fc3eaffaad515de7b0d83f48",
+          "worker_id": 5,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            3,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "e1d0b9572a0d24619dc463753b17b69f245c7dfd2bf7ab693f5b704cc5a4cb7a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "WEST"
+          ],
+          "snapshot_fingerprint": "26ffd4978ced83712e6aceeb346e10fd23dfb859d7d154b5a388507a2b5508ef",
+          "source": [
+            4,
+            5
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            3,
+            5
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "89ba3d99b84d645a5291e5d15200acb8d8e3a0e557d0bea2fef3ca2969236cc8",
+          "worker_id": 6,
+          "yield_before": 0
+        }
+      ],
+      "market_execution_outcomes": {
+        "EXECUTED": 10,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 11,
+      "market_ledger_record_count": 11,
+      "market_ledger_samples": [
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WHEAT",
+              87
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "emitted_market_sha256": "cb41426144139c0d03669a9b77a7b07b992cde0db29faa0d5eca5fa419c58d2e",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 2,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 6,
+            "STRAWBERRY": 4,
+            "TOMATO": 0,
+            "WHEAT": 87,
+            "WOOL": 0
+          },
+          "hour": 0,
+          "incremental_sell_quantities": {
+            "MILK": 3,
+            "WHEAT": 4
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "MILK": 6,
+            "STRAWBERRY": 4,
+            "WHEAT": 87
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "f08765482b93ca58612828b55b3629f0a8d3c67eb4808ff5e902c1a60d2cb4b8",
+          "post_state_id": "state-000697",
+          "predicted_drop": {},
+          "provider_market": [
+            [
+              "SELL",
+              "WHEAT",
+              83
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "provider_market_sha256": "6e2bf44f2e87a9df7bf6140a8cd71aa7d409749731d821574b14f3fd68a8698e",
+          "requested_sell_quantities": {
+            "FERTILIZER": 4,
+            "MILK": 6,
+            "STRAWBERRY": 8,
+            "WHEAT": 87
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 2,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 6,
+            "SHEEP": 1,
+            "STRAWBERRY": 4,
+            "TOMATO": 0,
+            "WHEAT": 87,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "65f3a0fdc56218a8f4c5c4731aae54e88f00d4eb046563a28736e5e5ef0a897b",
+          "state_id": "state-000696",
+          "step": 696
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ]
+          ],
+          "emitted_market_sha256": "3a359c38d917d751128ab41e0070c9863639d61a084f8f0f4e5d4b16e12c54b2",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 4
+          },
+          "hour": 4,
+          "incremental_sell_quantities": {
+            "MILK": 3
+          },
+          "observed_sold_units": {
+            "MILK": 3,
+            "WOOL": 4
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "fea5ebf1418913b6a4a45f51f5c7846d29b4ddfbc45b874c2ae2bad152a152a3",
+          "post_state_id": "state-000701",
+          "predicted_drop": {
+            "MILK": 3,
+            "WOOL": 4
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ]
+          ],
+          "provider_market_sha256": "a5ee96eedc2384d7e433710a54b0fc87e947a37fd5069b13dde9b4ec87572aaa",
+          "requested_sell_quantities": {
+            "MILK": 3,
+            "WOOL": 8
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "8a5cbee6eb6ae0d4995799279c88849844c470a96037179c88592aad9c48876e",
+          "state_id": "state-000700",
+          "step": 700
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ]
+          ],
+          "emitted_market_sha256": "4bde4da45f67561cb67c97bbaff3a5c6034e509cdcb3368a18a7479bb7fb3d5b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 4
+          },
+          "hour": 5,
+          "incremental_sell_quantities": {
+            "WOOL": 4
+          },
+          "observed_sold_units": {
+            "WOOL": 4
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "14e656ef4a9db896305aaf44a3a8b4a9833efd80c040c40aee940e202ebd1008",
+          "post_state_id": "state-000702",
+          "predicted_drop": {
+            "WOOL": 4
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WOOL": 4
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "fea5ebf1418913b6a4a45f51f5c7846d29b4ddfbc45b874c2ae2bad152a152a3",
+          "state_id": "state-000701",
+          "step": 701
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ]
+          ],
+          "emitted_market_sha256": "5c603ba83e92f9e4dc344be269f8a79872ce8db7e8933352987a470902b36811",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 8,
+          "incremental_sell_quantities": {
+            "MILK": 3
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "MILK": 3,
+            "WOOL": 0
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "07ab9098faa4f332530ff26ed4239f229e34d67bab621cd0198948f34c17ee91",
+          "post_state_id": "state-000705",
+          "predicted_drop": {
+            "MILK": 3
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "WOOL",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ],
+          "provider_market_sha256": "56ad3b32a205fb9b9b4f6a43f007b1a57b5900d2ab2a08d60ac1aaa61880fe63",
+          "requested_sell_quantities": {
+            "FERTILIZER": 1,
+            "MILK": 3,
+            "WOOL": 3
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "554ee792fbbd7f7e48bb4e51a4e20cce706d3886061e89f86d20445db2662c56",
+          "state_id": "state-000704",
+          "step": 704
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              6
+            ]
+          ],
+          "emitted_market_sha256": "ddb08131618b51a28bf433b05af0c63279b02ba4997f8ff7b087c0780774868b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 6
+          },
+          "hour": 9,
+          "incremental_sell_quantities": {
+            "WOOL": 6
+          },
+          "observed_sold_units": {
+            "WOOL": 6
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "83ad9562eba1f0d2d03ca526f9dd7f4221e4a2e80b0fed9fda5e6b618cf7bebf",
+          "post_state_id": "state-000706",
+          "predicted_drop": {
+            "WOOL": 6
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WOOL": 6
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "07ab9098faa4f332530ff26ed4239f229e34d67bab621cd0198948f34c17ee91",
+          "state_id": "state-000705",
+          "step": 705
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              2
+            ]
+          ],
+          "emitted_market_sha256": "3df53d542654f651e29126989dc8609029f4e72a630fcdc799c424818dd71170",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 2,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 13,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "observed_sold_units": {
+            "STRAWBERRY": 2
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "943663a7917ca9ecf763a43487959806af689616fdb00327623f8c0bc5ebafd5",
+          "post_state_id": "state-000710",
+          "predicted_drop": {
+            "STRAWBERRY": 2
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "ecc5d1e4a7e7872a27c9e7aeea07fcd7a8175bd34b2acace8d72dbc85602c469",
+          "state_id": "state-000709",
+          "step": 709
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              2
+            ]
+          ],
+          "emitted_market_sha256": "fe0cfa4f34a38587574133b1bf1fc64d053c76c201bb8726ebc44d82dee5a838",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 2,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 15,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "STRAWBERRY": 2
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "b4500db221c3304444f3937b22d9fa44d0cb32902f958819c178d485948eff05",
+          "post_state_id": "state-000712",
+          "predicted_drop": {
+            "STRAWBERRY": 2
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ]
+          ],
+          "provider_market_sha256": "f26f473fab59e5dbb7f62ba97b2dba187bab6c0184c3aaea3abb0d3d43982af4",
+          "requested_sell_quantities": {
+            "FERTILIZER": 2,
+            "STRAWBERRY": 2
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "f33b900406fc97233a656b5b0511f62def76f610928a3d2f91871fe58c205819",
+          "state_id": "state-000711",
+          "step": 711
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ],
+          "emitted_market_sha256": "dd5014118fb21ce8658a347cd8fb14f43ca3bf6c37d081c37b7ce53db17ce21b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 1,
+            "WOOL": 0
+          },
+          "hour": 16,
+          "incremental_sell_quantities": {
+            "WHEAT": 1
+          },
+          "observed_sold_units": {
+            "WHEAT": 1
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "7f9ff47c5c927853eb3588e5fc8a85b378a047b5ae530f48003b85f8f2c10ac7",
+          "post_state_id": "state-000713",
+          "predicted_drop": {
+            "WHEAT": 1
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WHEAT": 1
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "b4500db221c3304444f3937b22d9fa44d0cb32902f958819c178d485948eff05",
+          "state_id": "state-000712",
+          "step": 712
+        }
+      ],
+      "max_hands": 12,
+      "move_per_service": 3.008,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "service_routing_v3_d28",
+      "reward": 122757.0,
+      "routing_commands": 376,
+      "seat": 0,
+      "seed": 26090102,
+      "service_commands": 125,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 151,
+        "FEED": 51,
+        "HARVEST": 203,
+        "PICKUP_WHEAT": 4,
+        "WATER": 2
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {},
+      "action_stream_sha256": "fa7238173783fe6060f4cb646ec28c71c21ede99e800c5970a63365009230792",
+      "coordinated_market_batches": 0,
+      "coordinated_sell_orders": 0,
+      "coordinated_sell_units_requested": 0,
+      "errors": 0,
+      "execution_outcomes": {},
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 5,
+            "WHEAT": 1
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 0,
+      "ledger_record_count": 0,
+      "ledger_samples": [],
+      "market_execution_outcomes": {},
+      "market_ledger_classified_count": 0,
+      "market_ledger_record_count": 0,
+      "market_ledger_samples": [],
+      "max_hands": 12,
+      "move_per_service": null,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "true_reactive_v2_control",
+      "reward": 122879.0,
+      "routing_commands": 0,
+      "seat": 0,
+      "seed": 26090102,
+      "service_commands": 0,
+      "status": "DONE",
+      "strict_eod_crop_losses": 14,
+      "strict_eod_escapes": 0,
+      "task_counts": {},
+      "terminal_residual": {
+        "sellable_units": 8,
+        "shed": {},
+        "workers": {
+          "FERTILIZER": 4,
+          "WHEAT": 4
+        }
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 34,
+        "EAST": 93,
+        "FEED": 19,
+        "HARVEST": 55,
+        "NORTH": 87,
+        "PASS": 32,
+        "PICKUP": 4,
+        "SOUTH": 88,
+        "WATER": 13,
+        "WEST": 108
+      },
+      "action_stream_sha256": "ea2650548112ddcb82a1d30e9a109b0c9fdab0de0bffb4d133e06bbc91fa74ba",
+      "coordinated_market_batches": 11,
+      "coordinated_sell_orders": 14,
+      "coordinated_sell_units_requested": 35,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 486,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 47
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7,
+            "WHEAT": 4
+          },
+          "crops": 11
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1,
+            "WHEAT": 5
+          },
+          "crops": 6
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 3
+          },
+          "crops": 9
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "ledger_samples": [
+        {
+          "day": 28,
+          "hour": 0,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "40c40eb751e95f05f328929625c8c8a9b088f32c0dae8e77e445697571dcbf93",
+          "post_state_id": "state-000673",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "21b98d576705e56874d72339cb93fe8b9cabd2145c8819e77401c9450718128c",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000672",
+          "step": 672,
+          "target": [
+            4,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 0,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {
+            "WHEAT": 6
+          },
+          "observed_position": [
+            4,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "58bba7e9bb8a8f83649352603413498bed9f471fb8240b23923f97c0c52da599",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "40c40eb751e95f05f328929625c8c8a9b088f32c0dae8e77e445697571dcbf93",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 0,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            5,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "58bba7e9bb8a8f83649352603413498bed9f471fb8240b23923f97c0c52da599",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "40c40eb751e95f05f328929625c8c8a9b088f32c0dae8e77e445697571dcbf93",
+          "source": [
+            5,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            5,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "ba1a4f3129c94c37a0941c01434be41b11967247fc3eaffaad515de7b0d83f48",
+          "worker_id": 1,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "58bba7e9bb8a8f83649352603413498bed9f471fb8240b23923f97c0c52da599",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "40c40eb751e95f05f328929625c8c8a9b088f32c0dae8e77e445697571dcbf93",
+          "source": [
+            4,
+            5
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            5
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "89ba3d99b84d645a5291e5d15200acb8d8e3a0e557d0bea2fef3ca2969236cc8",
+          "worker_id": 2,
+          "yield_before": 0
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "58bba7e9bb8a8f83649352603413498bed9f471fb8240b23923f97c0c52da599",
+          "post_state_id": "state-000674",
+          "requested": [
+            "WEST"
+          ],
+          "snapshot_fingerprint": "40c40eb751e95f05f328929625c8c8a9b088f32c0dae8e77e445697571dcbf93",
+          "source": [
+            5,
+            5
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            5
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "7fd82193b3f8ad66e6af0936d488566f95c126d42c16da4d7c522c01de6705ba",
+          "worker_id": 3,
+          "yield_before": 0
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            3
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "58bba7e9bb8a8f83649352603413498bed9f471fb8240b23923f97c0c52da599",
+          "post_state_id": "state-000674",
+          "requested": [
+            "NORTH"
+          ],
+          "snapshot_fingerprint": "40c40eb751e95f05f328929625c8c8a9b088f32c0dae8e77e445697571dcbf93",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            3
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 4,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            6,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "58bba7e9bb8a8f83649352603413498bed9f471fb8240b23923f97c0c52da599",
+          "post_state_id": "state-000674",
+          "requested": [
+            "EAST"
+          ],
+          "snapshot_fingerprint": "40c40eb751e95f05f328929625c8c8a9b088f32c0dae8e77e445697571dcbf93",
+          "source": [
+            5,
+            4
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            6,
+            4
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "ba1a4f3129c94c37a0941c01434be41b11967247fc3eaffaad515de7b0d83f48",
+          "worker_id": 5,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            3,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "58bba7e9bb8a8f83649352603413498bed9f471fb8240b23923f97c0c52da599",
+          "post_state_id": "state-000674",
+          "requested": [
+            "WEST"
+          ],
+          "snapshot_fingerprint": "40c40eb751e95f05f328929625c8c8a9b088f32c0dae8e77e445697571dcbf93",
+          "source": [
+            4,
+            5
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            3,
+            5
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "89ba3d99b84d645a5291e5d15200acb8d8e3a0e557d0bea2fef3ca2969236cc8",
+          "worker_id": 6,
+          "yield_before": 0
+        }
+      ],
+      "market_execution_outcomes": {
+        "EXECUTED": 10,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 11,
+      "market_ledger_record_count": 11,
+      "market_ledger_samples": [
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WHEAT",
+              87
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "emitted_market_sha256": "cb41426144139c0d03669a9b77a7b07b992cde0db29faa0d5eca5fa419c58d2e",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 2,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 6,
+            "STRAWBERRY": 4,
+            "TOMATO": 0,
+            "WHEAT": 87,
+            "WOOL": 0
+          },
+          "hour": 0,
+          "incremental_sell_quantities": {
+            "MILK": 3,
+            "WHEAT": 4
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "MILK": 6,
+            "STRAWBERRY": 4,
+            "WHEAT": 87
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "6064e060ef022742187c8b36a7fd2deba37ef229682e974ef17dec95319d6cbe",
+          "post_state_id": "state-000697",
+          "predicted_drop": {},
+          "provider_market": [
+            [
+              "SELL",
+              "WHEAT",
+              83
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "provider_market_sha256": "6e2bf44f2e87a9df7bf6140a8cd71aa7d409749731d821574b14f3fd68a8698e",
+          "requested_sell_quantities": {
+            "FERTILIZER": 4,
+            "MILK": 6,
+            "STRAWBERRY": 8,
+            "WHEAT": 87
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 2,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 6,
+            "SHEEP": 1,
+            "STRAWBERRY": 4,
+            "TOMATO": 0,
+            "WHEAT": 87,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "29594b0a7d0232bad82c0367d1f93752fc3e2e79aaa41b93bee07d44fe877f93",
+          "state_id": "state-000696",
+          "step": 696
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ]
+          ],
+          "emitted_market_sha256": "3a359c38d917d751128ab41e0070c9863639d61a084f8f0f4e5d4b16e12c54b2",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 4
+          },
+          "hour": 4,
+          "incremental_sell_quantities": {
+            "MILK": 3
+          },
+          "observed_sold_units": {
+            "MILK": 3,
+            "WOOL": 4
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "fadfa6d9095ed232bf1c83a90f6ce02807e2f9f69accc9dbe33b1427b8d7821d",
+          "post_state_id": "state-000701",
+          "predicted_drop": {
+            "MILK": 3,
+            "WOOL": 4
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "WOOL",
+              8
+            ]
+          ],
+          "provider_market_sha256": "a5ee96eedc2384d7e433710a54b0fc87e947a37fd5069b13dde9b4ec87572aaa",
+          "requested_sell_quantities": {
+            "MILK": 3,
+            "WOOL": 8
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "431133c69e4c0ad13dc6c1df5b3e706b81b5c63f374d3ee7b987fa6033effa8e",
+          "state_id": "state-000700",
+          "step": 700
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ]
+          ],
+          "emitted_market_sha256": "4bde4da45f67561cb67c97bbaff3a5c6034e509cdcb3368a18a7479bb7fb3d5b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 4
+          },
+          "hour": 5,
+          "incremental_sell_quantities": {
+            "WOOL": 4
+          },
+          "observed_sold_units": {
+            "WOOL": 4
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "947dc05dc26ff53cb46e2bfa3584294b9aa7a01c20281ca647e3544ab9717bed",
+          "post_state_id": "state-000702",
+          "predicted_drop": {
+            "WOOL": 4
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WOOL": 4
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "fadfa6d9095ed232bf1c83a90f6ce02807e2f9f69accc9dbe33b1427b8d7821d",
+          "state_id": "state-000701",
+          "step": 701
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ]
+          ],
+          "emitted_market_sha256": "5c603ba83e92f9e4dc344be269f8a79872ce8db7e8933352987a470902b36811",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 8,
+          "incremental_sell_quantities": {
+            "MILK": 3
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "MILK": 3,
+            "WOOL": 0
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "aa2614c9505581d004ba14000e71b754fcd4780e1b46ba0d8b63cd099f633202",
+          "post_state_id": "state-000705",
+          "predicted_drop": {
+            "MILK": 3
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "WOOL",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ],
+          "provider_market_sha256": "56ad3b32a205fb9b9b4f6a43f007b1a57b5900d2ab2a08d60ac1aaa61880fe63",
+          "requested_sell_quantities": {
+            "FERTILIZER": 1,
+            "MILK": 3,
+            "WOOL": 3
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "a02e1fe7d14b035d816d468336793320c159339d98fe557204bc1b202a64e2ba",
+          "state_id": "state-000704",
+          "step": 704
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              6
+            ]
+          ],
+          "emitted_market_sha256": "ddb08131618b51a28bf433b05af0c63279b02ba4997f8ff7b087c0780774868b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 6
+          },
+          "hour": 9,
+          "incremental_sell_quantities": {
+            "WOOL": 6
+          },
+          "observed_sold_units": {
+            "WOOL": 6
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "dba5fb887a31eb05cd5c329a700ba91dffbd55cd5fe6954d7e5031f9f4554b4c",
+          "post_state_id": "state-000706",
+          "predicted_drop": {
+            "WOOL": 6
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WOOL": 6
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "aa2614c9505581d004ba14000e71b754fcd4780e1b46ba0d8b63cd099f633202",
+          "state_id": "state-000705",
+          "step": 705
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              2
+            ]
+          ],
+          "emitted_market_sha256": "3df53d542654f651e29126989dc8609029f4e72a630fcdc799c424818dd71170",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 2,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 13,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "observed_sold_units": {
+            "STRAWBERRY": 2
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "8eaec37029980b925f38dcf09fb81c7e2da2e495d1ad883125b5e2e21db836de",
+          "post_state_id": "state-000710",
+          "predicted_drop": {
+            "STRAWBERRY": 2
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "77311af6e6731b8c861c82a23a8953e6dd22d0090b16696454993dd682f489d2",
+          "state_id": "state-000709",
+          "step": 709
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              2
+            ]
+          ],
+          "emitted_market_sha256": "fe0cfa4f34a38587574133b1bf1fc64d053c76c201bb8726ebc44d82dee5a838",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 2,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 15,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "STRAWBERRY": 2
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "5c02f4bcaf90ad2e0dfc4d2da3919551a03ef8dea46bf40daf0d2626fff04393",
+          "post_state_id": "state-000712",
+          "predicted_drop": {
+            "STRAWBERRY": 2
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ]
+          ],
+          "provider_market_sha256": "f26f473fab59e5dbb7f62ba97b2dba187bab6c0184c3aaea3abb0d3d43982af4",
+          "requested_sell_quantities": {
+            "FERTILIZER": 2,
+            "STRAWBERRY": 2
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "0bc8914dde671cac21e5a8df538c80be42587fe196c883665a839245097eef2b",
+          "state_id": "state-000711",
+          "step": 711
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ],
+          "emitted_market_sha256": "dd5014118fb21ce8658a347cd8fb14f43ca3bf6c37d081c37b7ce53db17ce21b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 1,
+            "WOOL": 0
+          },
+          "hour": 16,
+          "incremental_sell_quantities": {
+            "WHEAT": 1
+          },
+          "observed_sold_units": {
+            "WHEAT": 1
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "594f31ffd924439fffa7f3ebf84574fdf8fe7077ff1224ec4d47b2152722a460",
+          "post_state_id": "state-000713",
+          "predicted_drop": {
+            "WHEAT": 1
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WHEAT": 1
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "5c02f4bcaf90ad2e0dfc4d2da3919551a03ef8dea46bf40daf0d2626fff04393",
+          "state_id": "state-000712",
+          "step": 712
+        }
+      ],
+      "max_hands": 12,
+      "move_per_service": 3.008,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "service_routing_v3_d28",
+      "reward": 122757.0,
+      "routing_commands": 376,
+      "seat": 1,
+      "seed": 26090102,
+      "service_commands": 125,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 151,
+        "FEED": 51,
+        "HARVEST": 203,
+        "PICKUP_WHEAT": 4,
+        "WATER": 2
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {},
+      "action_stream_sha256": "fa7238173783fe6060f4cb646ec28c71c21ede99e800c5970a63365009230792",
+      "coordinated_market_batches": 0,
+      "coordinated_sell_orders": 0,
+      "coordinated_sell_units_requested": 0,
+      "errors": 0,
+      "execution_outcomes": {},
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 5,
+            "WHEAT": 1
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 0,
+      "ledger_record_count": 0,
+      "ledger_samples": [],
+      "market_execution_outcomes": {},
+      "market_ledger_classified_count": 0,
+      "market_ledger_record_count": 0,
+      "market_ledger_samples": [],
+      "max_hands": 12,
+      "move_per_service": null,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "true_reactive_v2_control",
+      "reward": 122879.0,
+      "routing_commands": 0,
+      "seat": 1,
+      "seed": 26090102,
+      "service_commands": 0,
+      "status": "DONE",
+      "strict_eod_crop_losses": 14,
+      "strict_eod_escapes": 0,
+      "task_counts": {},
+      "terminal_residual": {
+        "sellable_units": 8,
+        "shed": {},
+        "workers": {
+          "FERTILIZER": 4,
+          "WHEAT": 4
+        }
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 35,
+        "EAST": 96,
+        "FEED": 19,
+        "HARVEST": 56,
+        "NORTH": 85,
+        "PASS": 30,
+        "PICKUP": 4,
+        "SOUTH": 87,
+        "WATER": 13,
+        "WEST": 108
+      },
+      "action_stream_sha256": "1e936284ac4d3ba389b5eaa908644b975018040a13af38b30b282c488cc3065e",
+      "coordinated_market_batches": 17,
+      "coordinated_sell_orders": 21,
+      "coordinated_sell_units_requested": 54,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 488,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 45
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 4
+          },
+          "crops": 10
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1,
+            "WHEAT": 2
+          },
+          "crops": 3
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 2
+          },
+          "crops": 8
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "ledger_samples": [
+        {
+          "day": 28,
+          "hour": 0,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "be77c8a305b1023ad91b04948b2fe2590839ba46173d41135798dd852eaae419",
+          "post_state_id": "state-000673",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "592423aebd45c29c81c61496e1d764220526815c0f010e014b02c6cf32397e4c",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000672",
+          "step": 672,
+          "target": [
+            4,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 0,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {
+            "WHEAT": 6
+          },
+          "observed_position": [
+            4,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "fa2f6f2440124a6f2ef69369817baa7aadd1ab1cfc9a60fc269a7ea41f9a84d1",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "be77c8a305b1023ad91b04948b2fe2590839ba46173d41135798dd852eaae419",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 0,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            5,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "fa2f6f2440124a6f2ef69369817baa7aadd1ab1cfc9a60fc269a7ea41f9a84d1",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "be77c8a305b1023ad91b04948b2fe2590839ba46173d41135798dd852eaae419",
+          "source": [
+            5,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            5,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "ba1a4f3129c94c37a0941c01434be41b11967247fc3eaffaad515de7b0d83f48",
+          "worker_id": 1,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "fa2f6f2440124a6f2ef69369817baa7aadd1ab1cfc9a60fc269a7ea41f9a84d1",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "be77c8a305b1023ad91b04948b2fe2590839ba46173d41135798dd852eaae419",
+          "source": [
+            4,
+            5
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            5
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "89ba3d99b84d645a5291e5d15200acb8d8e3a0e557d0bea2fef3ca2969236cc8",
+          "worker_id": 2,
+          "yield_before": 0
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "fa2f6f2440124a6f2ef69369817baa7aadd1ab1cfc9a60fc269a7ea41f9a84d1",
+          "post_state_id": "state-000674",
+          "requested": [
+            "WEST"
+          ],
+          "snapshot_fingerprint": "be77c8a305b1023ad91b04948b2fe2590839ba46173d41135798dd852eaae419",
+          "source": [
+            5,
+            5
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            5
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "7fd82193b3f8ad66e6af0936d488566f95c126d42c16da4d7c522c01de6705ba",
+          "worker_id": 3,
+          "yield_before": 0
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            3
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "fa2f6f2440124a6f2ef69369817baa7aadd1ab1cfc9a60fc269a7ea41f9a84d1",
+          "post_state_id": "state-000674",
+          "requested": [
+            "NORTH"
+          ],
+          "snapshot_fingerprint": "be77c8a305b1023ad91b04948b2fe2590839ba46173d41135798dd852eaae419",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            3
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 4,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            6,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "fa2f6f2440124a6f2ef69369817baa7aadd1ab1cfc9a60fc269a7ea41f9a84d1",
+          "post_state_id": "state-000674",
+          "requested": [
+            "EAST"
+          ],
+          "snapshot_fingerprint": "be77c8a305b1023ad91b04948b2fe2590839ba46173d41135798dd852eaae419",
+          "source": [
+            5,
+            4
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            6,
+            4
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "ba1a4f3129c94c37a0941c01434be41b11967247fc3eaffaad515de7b0d83f48",
+          "worker_id": 5,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            3,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "fa2f6f2440124a6f2ef69369817baa7aadd1ab1cfc9a60fc269a7ea41f9a84d1",
+          "post_state_id": "state-000674",
+          "requested": [
+            "WEST"
+          ],
+          "snapshot_fingerprint": "be77c8a305b1023ad91b04948b2fe2590839ba46173d41135798dd852eaae419",
+          "source": [
+            4,
+            5
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            3,
+            5
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "89ba3d99b84d645a5291e5d15200acb8d8e3a0e557d0bea2fef3ca2969236cc8",
+          "worker_id": 6,
+          "yield_before": 0
+        }
+      ],
+      "market_execution_outcomes": {
+        "EXECUTED": 16,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 17,
+      "market_ledger_record_count": 17,
+      "market_ledger_samples": [
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WHEAT",
+              83
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              12
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "emitted_market_sha256": "b190c8bf5ea0d887f11165c6876599e439cc1d0768e3d6c1687a9d3ae2d97c5c",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 2,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 12,
+            "STRAWBERRY": 4,
+            "TOMATO": 0,
+            "WHEAT": 81,
+            "WOOL": 0
+          },
+          "hour": 0,
+          "incremental_sell_quantities": {
+            "MILK": 9
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "MILK": 12,
+            "STRAWBERRY": 4,
+            "WHEAT": 81
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "96488f6c660b748988e1f2eb9a917e8d75b7441c2b617497c7a50e352b39f4c2",
+          "post_state_id": "state-000697",
+          "predicted_drop": {},
+          "provider_market": [
+            [
+              "SELL",
+              "WHEAT",
+              83
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "provider_market_sha256": "6e2bf44f2e87a9df7bf6140a8cd71aa7d409749731d821574b14f3fd68a8698e",
+          "requested_sell_quantities": {
+            "FERTILIZER": 4,
+            "MILK": 12,
+            "STRAWBERRY": 8,
+            "WHEAT": 83
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 2,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 12,
+            "SHEEP": 1,
+            "STRAWBERRY": 4,
+            "TOMATO": 0,
+            "WHEAT": 81,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "bf5ab69c3277bb881861abcbad1e2247c8ccdbd652de2936e1a0e1b2705804cf",
+          "state_id": "state-000696",
+          "step": 696
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ]
+          ],
+          "emitted_market_sha256": "4bde4da45f67561cb67c97bbaff3a5c6034e509cdcb3368a18a7479bb7fb3d5b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 4
+          },
+          "hour": 2,
+          "incremental_sell_quantities": {
+            "WOOL": 4
+          },
+          "observed_sold_units": {
+            "WOOL": 4
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "67995facbb5ab6e7f837d5e1c7397edfa437efb2ea654caeb46d9dde4e7a0de0",
+          "post_state_id": "state-000699",
+          "predicted_drop": {
+            "WOOL": 4
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WOOL": 4
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "51ed1bfbadbb78c8b02b957d3f92af2ac5fa21c98d0cbd124ca1892f89f0450f",
+          "state_id": "state-000698",
+          "step": 698
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "MILK",
+              3
+            ]
+          ],
+          "emitted_market_sha256": "ad6f9e2d7d7557b75de4284df00a68d75a90778fd6f7cd559ca21fd88ce2aab0",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 5,
+          "incremental_sell_quantities": {
+            "MILK": 3
+          },
+          "observed_sold_units": {
+            "MILK": 3
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "52acd9b87eb710242c30160cd858b1c60bd906c0692c2599b91a1b7a667cccb1",
+          "post_state_id": "state-000702",
+          "predicted_drop": {
+            "MILK": 3
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "MILK": 3
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "71966b75a0cb92122fcd7aa007a874c53e7b6f6678018359a624480d76a2bcbb",
+          "state_id": "state-000701",
+          "step": 701
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "MILK",
+              6
+            ]
+          ],
+          "emitted_market_sha256": "8fdb16b5e5ce397bfa98891d617e6bd9073df3a6822e8e816151e6d5c00e1f01",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 6,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 7,
+          "incremental_sell_quantities": {
+            "MILK": 6
+          },
+          "observed_sold_units": {
+            "MILK": 6
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "26a5485e2ea270e188b4e551fdcfdd64c3c744da2485e49410e6ddb4ea653a83",
+          "post_state_id": "state-000704",
+          "predicted_drop": {
+            "MILK": 6
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "MILK": 6
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "e1722d26101d7296907c5cda73cc68f5ab508c4fdf46e750879b5fc4b07db05b",
+          "state_id": "state-000703",
+          "step": 703
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ],
+          "emitted_market_sha256": "2952b92944d27031ecbd21bf735a97f990b1beeccd89ac761aec344578f40cba",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 1,
+            "WOOL": 0
+          },
+          "hour": 8,
+          "incremental_sell_quantities": {
+            "WHEAT": 1
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "WHEAT": 1,
+            "WOOL": 0
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "14aace70333167ff312aa08424b59e30881525cd145df1b4c9bbc7b7b31fa08d",
+          "post_state_id": "state-000705",
+          "predicted_drop": {
+            "WHEAT": 1
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "WOOL",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ],
+          "provider_market_sha256": "56ad3b32a205fb9b9b4f6a43f007b1a57b5900d2ab2a08d60ac1aaa61880fe63",
+          "requested_sell_quantities": {
+            "FERTILIZER": 1,
+            "WHEAT": 1,
+            "WOOL": 3
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "26a5485e2ea270e188b4e551fdcfdd64c3c744da2485e49410e6ddb4ea653a83",
+          "state_id": "state-000704",
+          "step": 704
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              2
+            ]
+          ],
+          "emitted_market_sha256": "3df53d542654f651e29126989dc8609029f4e72a630fcdc799c424818dd71170",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 2,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 9,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "observed_sold_units": {
+            "STRAWBERRY": 2
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "25fa00bdd2927035a2b03ac050bd26dd7401f9e5199124d65e8fff6aa8d39a0e",
+          "post_state_id": "state-000706",
+          "predicted_drop": {
+            "STRAWBERRY": 2
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "14aace70333167ff312aa08424b59e30881525cd145df1b4c9bbc7b7b31fa08d",
+          "state_id": "state-000705",
+          "step": 705
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              2
+            ]
+          ],
+          "emitted_market_sha256": "4a53a84b04721cdaa24cd71dfc8699c62a53531d5216f2d1eeeaadfd501f305f",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 2,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 10,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "STRAWBERRY": 2,
+            "WOOL": 0
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "47b9867dca37ee15f92acbe0e3dc6d13b49aa8f657430372dc9fb93ad6ec9da0",
+          "post_state_id": "state-000707",
+          "predicted_drop": {
+            "STRAWBERRY": 2
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "WOOL",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ],
+          "provider_market_sha256": "56ad3b32a205fb9b9b4f6a43f007b1a57b5900d2ab2a08d60ac1aaa61880fe63",
+          "requested_sell_quantities": {
+            "FERTILIZER": 1,
+            "STRAWBERRY": 2,
+            "WOOL": 3
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "25fa00bdd2927035a2b03ac050bd26dd7401f9e5199124d65e8fff6aa8d39a0e",
+          "state_id": "state-000706",
+          "step": 706
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ]
+          ],
+          "emitted_market_sha256": "653cd415103e04863b0a19949d22ea11ab1b709b2a47048fe49efadf6ab1ed66",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 1,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 12,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 1
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "STRAWBERRY": 1
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "03ca1f0fd6a3fe703f4680a7be6d06bf49e50e5606aa8914f1eab1f5ce4c3175",
+          "post_state_id": "state-000709",
+          "predicted_drop": {
+            "STRAWBERRY": 1
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ],
+          "provider_market_sha256": "624e10eac597e61385d5c2dc2ad8cda530424eacc19845d4f8b1448cac0e969c",
+          "requested_sell_quantities": {
+            "FERTILIZER": 1,
+            "STRAWBERRY": 1
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "e7b0178f54040145d8686bfa689739b87fd344f6c82ccb25409be0d51da9e383",
+          "state_id": "state-000708",
+          "step": 708
+        }
+      ],
+      "max_hands": 12,
+      "move_per_service": 2.9606299212598426,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "service_routing_v3_d28",
+      "reward": 78436.0,
+      "routing_commands": 376,
+      "seat": 0,
+      "seed": 26090103,
+      "service_commands": 127,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 154,
+        "FEED": 51,
+        "HARVEST": 201,
+        "PICKUP_WHEAT": 4,
+        "WATER": 3
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {},
+      "action_stream_sha256": "93710c3bb62c1ecd92f1b3937e5cb1e6d97c6cc13cbde88cc6c03a1c6893b342",
+      "coordinated_market_batches": 0,
+      "coordinated_sell_orders": 0,
+      "coordinated_sell_units_requested": 0,
+      "errors": 0,
+      "execution_outcomes": {},
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 6
+          },
+          "crops": 6
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 5,
+            "WHEAT": 1
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 0,
+      "ledger_record_count": 0,
+      "ledger_samples": [],
+      "market_execution_outcomes": {},
+      "market_ledger_classified_count": 0,
+      "market_ledger_record_count": 0,
+      "market_ledger_samples": [],
+      "max_hands": 12,
+      "move_per_service": null,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "true_reactive_v2_control",
+      "reward": 78333.0,
+      "routing_commands": 0,
+      "seat": 0,
+      "seed": 26090103,
+      "service_commands": 0,
+      "status": "DONE",
+      "strict_eod_crop_losses": 14,
+      "strict_eod_escapes": 0,
+      "task_counts": {},
+      "terminal_residual": {
+        "sellable_units": 11,
+        "shed": {
+          "WOOL": 3
+        },
+        "workers": {
+          "FERTILIZER": 4,
+          "WHEAT": 4
+        }
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {
+        "DROP": 34,
+        "EAST": 100,
+        "FEED": 19,
+        "HARVEST": 55,
+        "NORTH": 84,
+        "PASS": 28,
+        "PICKUP": 4,
+        "SOUTH": 84,
+        "WATER": 13,
+        "WEST": 112
+      },
+      "action_stream_sha256": "bddbec49c62afde08aba18c7a48a0b8da2c181dd570c39169c92fc290edfbaea",
+      "coordinated_market_batches": 15,
+      "coordinated_sell_orders": 17,
+      "coordinated_sell_units_requested": 42,
+      "errors": 0,
+      "execution_outcomes": {
+        "EXECUTED": 489,
+        "NOT_EXECUTED": 0,
+        "UNKNOWN": 44
+      },
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7,
+            "WHEAT": 4
+          },
+          "crops": 11
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1,
+            "WHEAT": 2
+          },
+          "crops": 3
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 6,
+            "WHEAT": 2
+          },
+          "crops": 8
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 533,
+      "ledger_record_count": 533,
+      "ledger_samples": [
+        {
+          "day": 28,
+          "hour": 0,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "deb9db4048dabb32097e0aaf66d85911ff415a6aae678e19351f4af6581322af",
+          "post_state_id": "state-000673",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "76aeea78961b26458be87f51b4486e98a610b48401dc71962ca0d28e01df840a",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000672",
+          "step": 672,
+          "target": [
+            4,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 0,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {
+            "WHEAT": 6
+          },
+          "observed_position": [
+            4,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "61702686f99cd9045317a50ca31fea90cf0202f0e2bfea4f96921bb5f795615a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "deb9db4048dabb32097e0aaf66d85911ff415a6aae678e19351f4af6581322af",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 0,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            5,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "61702686f99cd9045317a50ca31fea90cf0202f0e2bfea4f96921bb5f795615a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "deb9db4048dabb32097e0aaf66d85911ff415a6aae678e19351f4af6581322af",
+          "source": [
+            5,
+            4
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            5,
+            4
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "ba1a4f3129c94c37a0941c01434be41b11967247fc3eaffaad515de7b0d83f48",
+          "worker_id": 1,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "61702686f99cd9045317a50ca31fea90cf0202f0e2bfea4f96921bb5f795615a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "PICKUP",
+            "WHEAT",
+            6
+          ],
+          "snapshot_fingerprint": "deb9db4048dabb32097e0aaf66d85911ff415a6aae678e19351f4af6581322af",
+          "source": [
+            4,
+            5
+          ],
+          "source_position_unchanged": true,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            5
+          ],
+          "task_kind": "PICKUP_WHEAT",
+          "tile_before_sha256": "89ba3d99b84d645a5291e5d15200acb8d8e3a0e557d0bea2fef3ca2969236cc8",
+          "worker_id": 2,
+          "yield_before": 0
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "61702686f99cd9045317a50ca31fea90cf0202f0e2bfea4f96921bb5f795615a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "WEST"
+          ],
+          "snapshot_fingerprint": "deb9db4048dabb32097e0aaf66d85911ff415a6aae678e19351f4af6581322af",
+          "source": [
+            5,
+            5
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            5
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "7fd82193b3f8ad66e6af0936d488566f95c126d42c16da4d7c522c01de6705ba",
+          "worker_id": 3,
+          "yield_before": 0
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            4,
+            3
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "61702686f99cd9045317a50ca31fea90cf0202f0e2bfea4f96921bb5f795615a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "NORTH"
+          ],
+          "snapshot_fingerprint": "deb9db4048dabb32097e0aaf66d85911ff415a6aae678e19351f4af6581322af",
+          "source": [
+            4,
+            4
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            4,
+            3
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "cd867cb647e46e638180d2e45ea109556f497717434e4e9f2f2149bc53acdf4d",
+          "worker_id": 4,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            6,
+            4
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "61702686f99cd9045317a50ca31fea90cf0202f0e2bfea4f96921bb5f795615a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "EAST"
+          ],
+          "snapshot_fingerprint": "deb9db4048dabb32097e0aaf66d85911ff415a6aae678e19351f4af6581322af",
+          "source": [
+            5,
+            4
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            6,
+            4
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "ba1a4f3129c94c37a0941c01434be41b11967247fc3eaffaad515de7b0d83f48",
+          "worker_id": 5,
+          "yield_before": 3
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "inventory_before": {},
+          "observed_position": [
+            3,
+            5
+          ],
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "61702686f99cd9045317a50ca31fea90cf0202f0e2bfea4f96921bb5f795615a",
+          "post_state_id": "state-000674",
+          "requested": [
+            "WEST"
+          ],
+          "snapshot_fingerprint": "deb9db4048dabb32097e0aaf66d85911ff415a6aae678e19351f4af6581322af",
+          "source": [
+            4,
+            5
+          ],
+          "source_position_unchanged": false,
+          "state_id": "state-000673",
+          "step": 673,
+          "target": [
+            3,
+            5
+          ],
+          "task_kind": "CRITICAL_WATER",
+          "tile_before_sha256": "89ba3d99b84d645a5291e5d15200acb8d8e3a0e557d0bea2fef3ca2969236cc8",
+          "worker_id": 6,
+          "yield_before": 0
+        }
+      ],
+      "market_execution_outcomes": {
+        "EXECUTED": 14,
+        "UNKNOWN": 1
+      },
+      "market_ledger_classified_count": 15,
+      "market_ledger_record_count": 15,
+      "market_ledger_samples": [
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WHEAT",
+              87
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "emitted_market_sha256": "a2f7c8c11b2bb8891591aa14a9cc97d76d6de0065c86affb490c3b88010c4b21",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 2,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "STRAWBERRY": 4,
+            "TOMATO": 0,
+            "WHEAT": 87,
+            "WOOL": 0
+          },
+          "hour": 0,
+          "incremental_sell_quantities": {
+            "WHEAT": 4
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "MILK": 3,
+            "STRAWBERRY": 4,
+            "WHEAT": 87
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "aef3def049d8280d10576bd6226ee082ff2f1619936b817ea5fbf3428be891e9",
+          "post_state_id": "state-000697",
+          "predicted_drop": {},
+          "provider_market": [
+            [
+              "SELL",
+              "WHEAT",
+              83
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              8
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              4
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ],
+          "provider_market_sha256": "6e2bf44f2e87a9df7bf6140a8cd71aa7d409749731d821574b14f3fd68a8698e",
+          "requested_sell_quantities": {
+            "FERTILIZER": 4,
+            "MILK": 3,
+            "STRAWBERRY": 8,
+            "WHEAT": 87
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 2,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "SHEEP": 1,
+            "STRAWBERRY": 4,
+            "TOMATO": 0,
+            "WHEAT": 87,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "69ced5afc01ba3eeb56fda09207fe9d54bc247960298248f88ad7f55426e23ed",
+          "state_id": "state-000696",
+          "step": 696
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "WOOL",
+              4
+            ]
+          ],
+          "emitted_market_sha256": "4bde4da45f67561cb67c97bbaff3a5c6034e509cdcb3368a18a7479bb7fb3d5b",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 4
+          },
+          "hour": 3,
+          "incremental_sell_quantities": {
+            "WOOL": 4
+          },
+          "observed_sold_units": {
+            "WOOL": 4
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "cca126aeaa3f3eb08aa07cbe4961c98bdc664316bbb43d9d05ed08e7891d9303",
+          "post_state_id": "state-000700",
+          "predicted_drop": {
+            "WOOL": 4
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "WOOL": 4
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "bc3e57021e587ec34067250cf64f8270b3d5172393fa6ed8ac71b9f2a548ba6a",
+          "state_id": "state-000699",
+          "step": 699
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "MILK",
+              3
+            ]
+          ],
+          "emitted_market_sha256": "ad6f9e2d7d7557b75de4284df00a68d75a90778fd6f7cd559ca21fd88ce2aab0",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 3,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 4,
+          "incremental_sell_quantities": {
+            "MILK": 3
+          },
+          "observed_sold_units": {
+            "MILK": 3
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "69058661d29d1231fc033630c790d244c5950fe480d253d029694d44def75176",
+          "post_state_id": "state-000701",
+          "predicted_drop": {
+            "MILK": 3
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "MILK": 3
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "cca126aeaa3f3eb08aa07cbe4961c98bdc664316bbb43d9d05ed08e7891d9303",
+          "state_id": "state-000700",
+          "step": 700
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "MILK",
+              6
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ]
+          ],
+          "emitted_market_sha256": "54bd26003b7e160f5c8e833f59a3b04b888ebeb2eef2090dc342c6cb26d1d3be",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 6,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 6,
+          "incremental_sell_quantities": {
+            "MILK": 3
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "MILK": 6
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "430f97482b4abe26aab4cbf0d3a3c6c7c8292ce6b315f2c436aa4322d1f18628",
+          "post_state_id": "state-000703",
+          "predicted_drop": {
+            "MILK": 6
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "MILK",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ]
+          ],
+          "provider_market_sha256": "c6e5ed3151198a3073d4395caf43f6a012e98d55975dfe3944cb3ddfb39a7255",
+          "requested_sell_quantities": {
+            "FERTILIZER": 2,
+            "MILK": 6
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "1f4e26cbe53e65e840516b1ac01e09519e9120770c1a346c988fe06759d8ac0a",
+          "state_id": "state-000702",
+          "step": 702
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "MILK",
+              3
+            ],
+            [
+              "SELL",
+              "WOOL",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              2
+            ]
+          ],
+          "emitted_market_sha256": "a420a762b59aff22d7118989c9a299f92dbc01eac67240b15088f801164b9bdd",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 2,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 10,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "MILK": 0,
+            "STRAWBERRY": 2,
+            "WOOL": 0
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "84d7763a22a6514039070eee0c3898042747774b31fde2905f47e3db75381c71",
+          "post_state_id": "state-000707",
+          "predicted_drop": {
+            "STRAWBERRY": 2
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "MILK",
+              3
+            ],
+            [
+              "SELL",
+              "WOOL",
+              3
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ],
+          "provider_market_sha256": "28150c1c6d78708a618bb0a88d6ffca102d1a6efdc1ea7f2577f24d6d5928765",
+          "requested_sell_quantities": {
+            "FERTILIZER": 1,
+            "MILK": 3,
+            "STRAWBERRY": 2,
+            "WOOL": 3
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "303f1f6f4791d92c1c39b984d61897c54f9d6408fbc376cb6c8081d792a10f44",
+          "state_id": "state-000706",
+          "step": 706
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              2
+            ]
+          ],
+          "emitted_market_sha256": "e5f624734c6c2b11f3c40f147fe1fbac327a450f010e42c4c55eb484af438e8d",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 2,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 11,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 2
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "STRAWBERRY": 2
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "7feaf14a3886923238bce56a93a7e79802571e548b7d3012b47ae582ce75a67b",
+          "post_state_id": "state-000708",
+          "predicted_drop": {
+            "STRAWBERRY": 2
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ],
+          "provider_market_sha256": "624e10eac597e61385d5c2dc2ad8cda530424eacc19845d4f8b1448cac0e969c",
+          "requested_sell_quantities": {
+            "FERTILIZER": 1,
+            "STRAWBERRY": 2
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "84d7763a22a6514039070eee0c3898042747774b31fde2905f47e3db75381c71",
+          "state_id": "state-000707",
+          "step": 707
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              1
+            ]
+          ],
+          "emitted_market_sha256": "5e3c2e870bdc06fc699cf2d43c17c9c4c5b3d41aba8e011fae3ef401517c1026",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 1,
+            "WOOL": 0
+          },
+          "hour": 12,
+          "incremental_sell_quantities": {
+            "WHEAT": 1
+          },
+          "observed_sold_units": {
+            "FERTILIZER": 0,
+            "WHEAT": 1
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "d231c11f2aa22fd749ba1d8d2cc64d9b9331438e3cb8c34a1d13959e16259d7d",
+          "post_state_id": "state-000709",
+          "predicted_drop": {
+            "WHEAT": 1
+          },
+          "provider_market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ],
+          "provider_market_sha256": "624e10eac597e61385d5c2dc2ad8cda530424eacc19845d4f8b1448cac0e969c",
+          "requested_sell_quantities": {
+            "FERTILIZER": 1,
+            "WHEAT": 1
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "7feaf14a3886923238bce56a93a7e79802571e548b7d3012b47ae582ce75a67b",
+          "state_id": "state-000708",
+          "step": 708
+        },
+        {
+          "day": 29,
+          "emitted_market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              1
+            ]
+          ],
+          "emitted_market_sha256": "7cd2342d29b94dba39489da1d36984780c8a0338546f128fed78dfb905e85f61",
+          "expected_available_after_drop": {
+            "CARROT": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "STRAWBERRY": 1,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "hour": 13,
+          "incremental_sell_quantities": {
+            "STRAWBERRY": 1
+          },
+          "observed_sold_units": {
+            "STRAWBERRY": 1
+          },
+          "outcome": "EXECUTED",
+          "post_snapshot_fingerprint": "3fc4f47a0bee462826f24b1244923efddd83d960568d822e2191091fc3e88342",
+          "post_state_id": "state-000710",
+          "predicted_drop": {
+            "STRAWBERRY": 1
+          },
+          "provider_market": [],
+          "provider_market_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+          "requested_sell_quantities": {
+            "STRAWBERRY": 1
+          },
+          "shed_before": {
+            "CARROT": 0,
+            "COW": 0,
+            "EGG": 0,
+            "FERTILIZER": 0,
+            "GOOSE": 0,
+            "MELON": 0,
+            "MILK": 0,
+            "SHEEP": 1,
+            "STRAWBERRY": 0,
+            "TOMATO": 0,
+            "WHEAT": 0,
+            "WOOL": 0
+          },
+          "snapshot_fingerprint": "d231c11f2aa22fd749ba1d8d2cc64d9b9331438e3cb8c34a1d13959e16259d7d",
+          "state_id": "state-000709",
+          "step": 709
+        }
+      ],
+      "max_hands": 12,
+      "move_per_service": 3.04,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "service_routing_v3_d28",
+      "reward": 114590.0,
+      "routing_commands": 380,
+      "seat": 1,
+      "seed": 26090103,
+      "service_commands": 125,
+      "status": "DONE",
+      "strict_eod_crop_losses": 12,
+      "strict_eod_escapes": 0,
+      "task_counts": {
+        "CRITICAL_FEED": 12,
+        "CRITICAL_WATER": 78,
+        "DROP_INVENTORY": 154,
+        "FEED": 51,
+        "HARVEST": 204,
+        "PICKUP_WHEAT": 4,
+        "WATER": 2
+      },
+      "terminal_residual": {
+        "sellable_units": 0,
+        "shed": {},
+        "workers": {}
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    },
+    {
+      "action_batches": 719,
+      "action_counts": {},
+      "action_stream_sha256": "7f57fdb0ae13282989d3c5410d9a6ddcfbfb38034e223484184dbc4be7c578d7",
+      "coordinated_market_batches": 0,
+      "coordinated_sell_orders": 0,
+      "coordinated_sell_units_requested": 0,
+      "errors": 0,
+      "execution_outcomes": {},
+      "fallbacks": 0,
+      "final_quadrants": {
+        "Q0": {
+          "animal_species": {
+            "COW": 4,
+            "GOOSE": 1,
+            "SHEEP": 3
+          },
+          "animals": 8,
+          "crop_species": {
+            "STRAWBERRY": 7
+          },
+          "crops": 7
+        },
+        "Q1": {
+          "animal_species": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "animals": 6,
+          "crop_species": {
+            "STRAWBERRY": 1
+          },
+          "crops": 1
+        },
+        "Q2": {
+          "animal_species": {
+            "SHEEP": 5
+          },
+          "animals": 5,
+          "crop_species": {
+            "STRAWBERRY": 5,
+            "WHEAT": 1
+          },
+          "crops": 6
+        }
+      },
+      "invalid_action_shapes": 0,
+      "ledger_classified_count": 0,
+      "ledger_record_count": 0,
+      "ledger_samples": [],
+      "market_execution_outcomes": {},
+      "market_ledger_classified_count": 0,
+      "market_ledger_record_count": 0,
+      "market_ledger_samples": [],
+      "max_hands": 12,
+      "move_per_service": null,
+      "non_sell_preservation_failures": 0,
+      "opponent_reward": 3000.0,
+      "policy": "true_reactive_v2_control",
+      "reward": 114066.0,
+      "routing_commands": 0,
+      "seat": 1,
+      "seed": 26090103,
+      "service_commands": 0,
+      "status": "DONE",
+      "strict_eod_crop_losses": 13,
+      "strict_eod_escapes": 0,
+      "task_counts": {},
+      "terminal_residual": {
+        "sellable_units": 11,
+        "shed": {
+          "WOOL": 3
+        },
+        "workers": {
+          "FERTILIZER": 4,
+          "WHEAT": 4
+        }
+      },
+      "unlock_timing": {
+        "Q0": {
+          "day": 0,
+          "hour": 0,
+          "step": 0
+        },
+        "Q1": {
+          "day": 6,
+          "hour": 7,
+          "step": 151
+        },
+        "Q2": {
+          "day": 11,
+          "hour": 2,
+          "step": 266
+        }
+      }
+    }
+  ],
+  "routing_commands": 2256,
+  "runs": 12,
+  "schema_version": "E17_2_SERVICE_ROUTING_V3_D28_DEVELOPMENT_V1",
+  "seats": [
+    0,
+    1
+  ],
+  "seeds": [
+    26090101,
+    26090102,
+    26090103
+  ],
+  "service_commands": 752,
+  "strict_eod_crop_losses": 77,
+  "strict_eod_escapes": 0,
+  "technical_errors": 0,
+  "terminal_sellable_residual_units": 0,
+  "unit_execution_outcomes": {
+    "EXECUTED": 2917,
+    "UNKNOWN": 281
+  },
+  "unit_ledger_classification_coverage": 1.0,
+  "unit_ledger_record_count": 3198
+}

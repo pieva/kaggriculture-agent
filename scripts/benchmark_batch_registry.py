@@ -16,7 +16,7 @@ from typing import Any
 
 
 ROOT = Path(__file__).resolve().parents[1]
-BENCHMARK_DIR = ROOT / "data" / "replays" / "reference"
+BENCHMARK_DIR = ROOT / "data" / "replays" / "json"
 OUT_DIR = ROOT / "experiments" / "archive" / "e12" / "artifacts" / "benchmark"
 
 PRODUCTIVE_ACTIONS = {
@@ -444,7 +444,7 @@ def markdown_registry(registries: list[dict[str, Any]]) -> str:
     lines = [
         "# Benchmark Registry",
         "",
-        "Analysis-only registry built from raw Kaggriculture replay JSON files in `docs/benchmark`.",
+        "Analysis-only registry built from raw Kaggriculture replay JSON files in `data/replays/json`.",
         "",
         "| Episode | Seed | Competitor | Our reward | Competitor reward | Gap | Ratio | Q2 competitor | Final quadrants | Livestock | Peak hands | Peak crop | Peak productive | Weed tile-days | Main sells | SHA-256 |",
         "|---|---:|---|---:|---:|---:|---:|---|---|---|---:|---:|---:|---:|---|---|",

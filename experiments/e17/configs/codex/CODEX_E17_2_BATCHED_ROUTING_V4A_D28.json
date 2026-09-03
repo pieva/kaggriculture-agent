@@ -1,0 +1,15 @@
+{
+  "candidate_id": "CODEX_E17_2_BATCHED_ROUTING_V4A_D28",
+  "schema_version": "e17.codex.batched_routing.v4a.d28",
+  "model_spec_version": "CODEX-E17.2-BATCHED-ROUTING-V4A-D28",
+  "base_policy": "CODEX-E17.2-REACTIVE-SERVICE-ROUTING-CORE-V3-D28",
+  "causal_family": "INVENTORY_DEADLINE_BATCHED_ROUTING",
+  "activation_day": 28,
+  "liquidation_day": 29,
+  "turns_per_day": 24,
+  "episode_steps": 720,
+  "defer_d28_drop_to_eod": true,
+  "terminal_harvest_before_drop": true,
+  "cluster_affinity_enabled": false,
+  "cluster_switch_penalty": 0
+}

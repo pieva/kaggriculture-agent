@@ -1,0 +1,19 @@
+{
+  "candidate_id": "CODEX_E17_2_POST_FEED_CAPACITY_BATCHED_ROUTING_V5_D27",
+  "schema_version": "e17.codex.post_feed_capacity_batched_routing.v5.d27",
+  "model_spec_version": "CODEX-E17.2-POST-FEED-CAPACITY-BATCHED-ROUTING-V5-D27",
+  "base_policy": "CODEX-E17.2-POST-FEED-CAPACITY-BATCHED-ROUTING-V4D-D28",
+  "causal_family": "ISOLATED_ROUTING_HANDOFF_DAY_D28_TO_D27",
+  "activation_day": 27,
+  "liquidation_day": 29,
+  "turns_per_day": 24,
+  "episode_steps": 720,
+  "defer_d28_drop_to_eod": true,
+  "terminal_harvest_before_drop": true,
+  "cluster_affinity_enabled": false,
+  "cluster_switch_penalty": 0,
+  "capacity_aware_flush_enabled": true,
+  "capacity_flush_trigger_ratio": 0.85,
+  "capacity_flush_target_ratio": 0.50,
+  "release_wheat_carriers_after_feed_complete": true
+}

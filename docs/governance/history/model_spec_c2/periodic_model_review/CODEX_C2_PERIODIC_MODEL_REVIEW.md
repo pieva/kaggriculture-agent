@@ -42,10 +42,10 @@ PERIODIC_MODEL_EVOLUTION_RECOMMENDED: YES
 
 Fonti primarie lette indipendentemente:
 
-- `data/replays/reference/103484828.json` â€” LuCcc;
-- `data/replays/reference/103473619.json` â€” Gordeev;
-- `data/replays/reference/103462357.json` â€” Dipin;
-- `data/replays/reference/103464592.json` â€” Petar;
+- `data/replays/json/103484828.json` â€” LuCcc;
+- `data/replays/json/103473619.json` â€” Gordeev;
+- `data/replays/json/103462357.json` â€” Dipin;
+- `data/replays/json/103464592.json` â€” Petar;
 - `docs/model/model_specs/codex/MODEL_SPEC_CODEX_C2.md` â€” baseline Codex V4.
 
 Le azioni sono state allineate alla transizione osservata tra snapshot

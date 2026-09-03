@@ -16,7 +16,7 @@ Il modello finale può essere una policy deterministica interamente scritta a ma
 
 > **Addestrare un modello non significa necessariamente addestrare una rete neurale.**
 
-> Status di governance del repository (2026-09-02): riordino completo con gate A7 `PASS`; E17.0 completato e Codex E17.1 reattivo congelato. Lo snapshot Kaggle mostra `1353,6` per il reattivo contro `1089,7` per il controllo V9 (`+24,2%`). Claude V2 è indipendente e tecnicamente valida, ma ha fallito i gate economico, fughe e 3Q passivo. L'audit di attivazione Claude è `PASS_WITH_LOCAL_CLEANUP`; per la futura V3 è autorizzato il confronto Codex esclusivamente black-box sui seed development. L'esibizione a tre è completa (42/42); l'holdout ufficiale resta bloccato e non consumato. Antigravity e Copilot sono congelati.
+> Status di governance del repository (2026-09-02): riordino completo con gate A7 `PASS`; E17.0 completato e Codex E17.1 reattivo V1 congelato. Lo snapshot Kaggle mostra `1353,6` per il reattivo contro `1089,7` per il controllo V9 (`+24,2%`). La nuova V2 `MARKET_REGIME_ADAPTATION` completa 48 run development con +1,55% sul controllo inerte, divergenze tracciate e zero fughe, ma resta diagnostica: il prossimo passo è rendere state-driven servicing e routing. Claude V3 è completa ma congelata con gate falliti; Antigravity e Copilot restano congelati. Holdout e final confirmation non sono stati consumati.
 
 ## Model Foundation
 
@@ -417,7 +417,8 @@ Le fonti canoniche sono:
 - [Experiment Log](docs/EXPERIMENT_LOG.md) — cronologia degli esperimenti e risultati;
 - [New Session Restart Point](docs/NEW_SESSION.md) — punto operativo di ripresa;
 - `experiments/` — design, prompt, evidenza, freeze e report delle singole iterazioni;
-- `data/replays/` — replay esterni con manifest e ruolo epistemico.
+- `data/replays/json/` — cartella unica dei replay grezzi esterni; `json.md`
+  ne registra origine, hash, ruolo epistemico e uso.
 
 ## Ambiente Python
 

@@ -1,0 +1,48 @@
+{
+  "candidate_id": "CODEX_E17_1_TRUE_REACTIVE_V2",
+  "schema_version": "e17.codex.true_reactive.v2",
+  "model_spec_version": "CODEX-E17.1-TRUE-REACTIVE-V2",
+  "base_policy": "CODEX-E17.1-3Q-REACTIVE-GUARDED-V1",
+  "causal_family": "MARKET_REGIME_ADAPTATION",
+  "turns_per_day": 24,
+  "episode_steps": 720,
+  "reference_prices": {
+    "WHEAT": 25,
+    "CARROT": 35,
+    "TOMATO": 60,
+    "STRAWBERRY": 120,
+    "MELON": 250,
+    "EGG": 50,
+    "MILK": 160,
+    "WOOL": 200,
+    "FERTILIZER": 100
+  },
+  "sellable_products": [
+    "CARROT",
+    "TOMATO",
+    "STRAWBERRY",
+    "MELON",
+    "EGG",
+    "MILK",
+    "WOOL",
+    "FERTILIZER"
+  ],
+  "animal_costs": {
+    "GOOSE": 300,
+    "COW": 400,
+    "SHEEP": 500
+  },
+  "low_output_price_ratio": 0.9,
+  "high_output_price_ratio": 1.1,
+  "wheat_scarcity_price_ratio": 1.25,
+  "price_recovery_ratio": 1.0,
+  "shed_pressure_ratio": 0.8,
+  "emergency_cash_floor": 500,
+  "feed_reserve_per_animal": 1,
+  "max_deferral_steps": 6,
+  "max_opportunistic_sale_units": 12,
+  "allow_low_price_sale_deferral": true,
+  "allow_high_price_opportunistic_sale": true,
+  "allow_wheat_reserve_protection": false,
+  "allow_scarcity_animal_deferral": false
+}
