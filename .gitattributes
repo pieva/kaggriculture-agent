@@ -1,0 +1,6 @@
+# Freeze hashes must be stable across Windows and Unix checkouts.
+*.py text eol=lf
+*.json text eol=lf
+
+# Binary evidence must never undergo line-ending conversion.
+*.png binary

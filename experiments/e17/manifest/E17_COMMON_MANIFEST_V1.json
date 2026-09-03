@@ -1,0 +1,141 @@
+{
+  "schema_version": "E17_COMMON_MANIFEST_V1",
+  "experiment_id": "E17",
+  "status": "FROZEN_FOR_E17_0",
+  "date": "2026-09-02",
+  "repository_gate": {
+    "status": "PASS",
+    "reconciliation": "docs/repository/migration/POST_MIGRATION_RECONCILIATION.md",
+    "manifest_coverage": "1058/1058",
+    "post_migration_reviews": "3/3",
+    "unresolved_blockers": 0
+  },
+  "strategy": {
+    "path": "experiments/e17/design/E17_STRATEGY_FROZEN_V1.md",
+    "sha256": "8A8A8C2EF8B369A7D078E60970392647C0EC3E9A6282BA6DE95F80DBB5618B80",
+    "review_reconciliation": "experiments/e17/reviews/common/E17_STRATEGY_RECONCILIATION.md",
+    "reviews": {
+      "antigravity": {
+        "decision": "ACCEPT_WITH_CHANGES",
+        "path": "experiments/e17/reviews/antigravity/E17_STRATEGY_REVIEW.md",
+        "sha256": "807C86E18BD607CBA8F70A5B7D4B776039D32F2E3B7AD39E7A4CB511F15A5E06"
+      },
+      "codex": {
+        "decision": "ACCEPT_WITH_CHANGES",
+        "path": "experiments/e17/reviews/codex/E17_STRATEGY_REVIEW.md",
+        "sha256": "B401F0F3F34369CD0B215F5B97A0271F3538F32C39BB652609F9950154D9F4AC"
+      },
+      "copilot": {
+        "decision": "ACCEPT_WITH_CHANGES",
+        "path": "experiments/e17/reviews/copilot/E17_STRATEGY_REVIEW.md",
+        "sha256": "2C4D62E3F9A41987514A2A702743BF1864F90D9B72FCF8084A2D552A589B25BC"
+      }
+    }
+  },
+  "foundation": {
+    "ontology_sha256": "10C910388EE4DED8D99B5A5530035D26B336EDE2E4D8EB02026C3599C4566778",
+    "state_machine_sha256": "5E4056555315AB23B80038DB96889EA1F659E1B6FC74B9047BF004A6F572676E",
+    "feature_model_sha256": "4FCBBDEC664BD25217A3F2EB8B76142E95E4335AD98947A33D60C326A4F0A3CA",
+    "observation_contract_sha256": "3E7509888B09103C79B86FD058984651337CBFC32AB60CD934E6351A4F2A81A9"
+  },
+  "ledger": {
+    "schema": "E17_LEDGER_V1",
+    "record_denominator": "EMITTED_COMMANDS_INCLUDING_PASS",
+    "record_coverage_required": 1.0,
+    "outcomes": [
+      "EXECUTED",
+      "NOT_EXECUTED",
+      "UNKNOWN"
+    ],
+    "unknown_must_not_be_imputed": true,
+    "market_classification_coverage_must_be_reported": true,
+    "decision_path_access": false,
+    "escape_event_type": "DERIVED_EOD_ESCAPE"
+  },
+  "seed_policy": {
+    "development": [
+      26090101,
+      26090102,
+      26090103,
+      1838889274,
+      1619968655,
+      710418712,
+      562040596
+    ],
+    "e17_0_seeds": [
+      26090101,
+      26090102,
+      26090103
+    ],
+    "holdout": {
+      "seeds": [
+        207899150,
+        1866713870,
+        1953344146,
+        412628772,
+        157353689,
+        352254289
+      ],
+      "consumed": false
+    },
+    "final_confirmation": {
+      "seeds": [
+        1182799305,
+        1144076852,
+        1172855418,
+        1075728698
+      ],
+      "consumed": false
+    },
+    "seats": [
+      0,
+      1
+    ],
+    "failed_run_replacement": "FORBIDDEN"
+  },
+  "opponents": {
+    "inert_pass": {
+      "id": "INERT_PASS_POLICY",
+      "entry_point": "agricola.core.benchmark_opponents.inert_pass_policy",
+      "source_path": "src/agricola/core/benchmark_opponents.py",
+      "source_sha256": "C0CC94FC4F1297107272BA325075E645653131C1B7E585F34CD3B1E5A3388EF5"
+    },
+    "codex_v9_freeze": {
+      "id": "CODEX-C2-V9.0-3Q-MIXED-HIGH-DENSITY",
+      "entry_point": "agricola.strategy.codex.codex_3q_mixed_high_density.create_v9_agent",
+      "source_sha256": "4D99C919B59DAE9B307C403FCF3198763B08FB9D15324AB8C937C4FC2B32090E",
+      "config_sha256": "44DD0EC2F33C9EEEE74AE5676580DC833325AB969D8A9D262EC870FEAAAC6C99",
+      "routine_sha256": "C2466262E096B03CA330A1B0FDB2E5DEBE53C45F297E046113E007731051E7E4"
+    }
+  },
+  "e17_0": {
+    "authorized": true,
+    "holdout_authorized": false,
+    "final_confirmation_authorized": false,
+    "codex_deliverable": "MEASUREMENT_PARITY",
+    "antigravity_deliverable": "NATIVE_BASELINE_CONSTRUCTION_AND_LEDGER",
+    "copilot_deliverable": "NATIVE_BASELINE_CONSTRUCTION_AND_LEDGER",
+    "policy_optimization_authorized": false
+  },
+  "common_gates": {
+    "technical_errors": 0,
+    "animal_escapes": 0,
+    "ledger_record_coverage": 1.0,
+    "source_config_freeze": true,
+    "no_post_hoc_seed_removal": true,
+    "strategic_independence_required_before_level_d": true
+  },
+  "codex_targets": {
+    "holdout_mean_min": 145000,
+    "holdout_floor_min": 100000,
+    "competitive_mirror_mean_final_money_min": 90000,
+    "move_per_productive_max": 1.2,
+    "market_classification_coverage_target": 1.0
+  },
+  "stop_boundary": {
+    "e17_1_authorized": false,
+    "kaggle_submission_authorized": false,
+    "commit_authorized": false,
+    "push_authorized": false
+  }
+}
