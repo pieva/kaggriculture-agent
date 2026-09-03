@@ -1,5 +1,16 @@
 # Experiment Log
 
+## 2026-09-03 — E18.4 state-driven 7-7-2 V1 respinta
+
+Costruito uno scheduler osservazionale completo con bootstrap E18.2 fino a
+D10, handoff D11, target 7-7-2, mission ledger, batching harvest e vendita da
+shed osservato. Gate: sette seed E18 × due seat contro E18.2. La candidata fa
+55.940 money medio contro 83.095,7 (-32,68%), quindi non raggiunge né 100k né
+il margine -10%. Passano invece topologia 14/14, fill 16/16 14/14, zero fughe,
+zero errori/fallback e crop tile-days tardivi al 95,23% del controllo. Diagnosi:
+move +29,35%, productive action -20,95%, harvested units 80,83% del controllo.
+V1 congelata come ablation respinta; nessuna submission e nessun holdout usato.
+
 | Experiment | Title | Result Summary | Status | Key Takeaways & Decisions |
 |---|---|---|:---:|---|
 | E17-EXT1 | Codex E17.0 3Q External Control | Submission E17 behaviorally identical to V9; parity `719/719`, E17.0 `4314/4314`, ledger 100%; rating intermedio `996` da `600` | **EXTERNAL_VALIDATION_LIVE** | Submission Kaggle `559588638`. Rating ancora in assestamento: nessuna conclusione finale o causale. Copilot resta locale, Antigravity è in pausa e il prossimo sviluppo attende la stabilizzazione. |
@@ -2092,3 +2103,179 @@ Materiali:
 - `experiments/e18/manifest/E18_COMMON_MANIFEST_V1.json`;
 - `experiments/e18/design/E18_REACTIVE_662_TOP3_BENCHMARK_PLAN_V1.md`;
 - `experiments/e18/reports/common/E18_662_TOP3_BASELINE_BENCHMARK_IT.md`.
+
+---
+
+## E18.1 — topologia opponent-reactive e submission diagnostica
+
+**Data:** 2026-09-03
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY_NON_QUALIFYING / EXTERNAL_DIAGNOSTIC`
+
+La candidata `CODEX-E18.1-OPPONENT-REACTIVE-662-770-V1` osserva soltanto la
+farm pubblica avversaria e, al giorno 6, seleziona una volta per episodio la
+topologia `6-6-2` oppure `7-7-0`. Nel torneo locale da 56 match supera il gate
+architetturale `10/10`, produce divergenza condizionata di azioni e topologia
+in `14/14` gruppi e conserva 14 pascoli costruiti e riempiti, zero perdite
+verificate, zero errori e zero fallback.
+
+La media complessiva è `111.654,45`, ma il confronto diretto con il controllo
+6-6-2 resta negativo: `80.456,43` contro `83.928,71`, delta `-4,14%`. La
+candidata è quindi una sonda dinamica per lo sviluppo di Claude e Copilot,
+non una sostituzione della baseline.
+
+La submission
+`submission/submission_codex_e18_opponent_reactive_662_770.py`, SHA-256
+`06727C1673EC289A323CE403596FAB8B272539535D27C9CEE74B8C917B78791B`, è
+stata accettata da Kaggle il 2026-09-03 ed è `PENDING`; score e ID non sono
+ancora disponibili. Holdout e final confirmation restano non consumati.
+
+---
+
+## E18.2 — torneo reattivo a quattro e prompt di remediation
+
+**Data:** 2026-09-03
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY_NON_QUALIFYING`
+
+Round robin completo fra Codex E18.1, Claude E18.1, Copilot E18.1 e
+Antigravity E17 obsoleto: sei coppie, sette seed development e due seat,
+`84/84` match. Nessun holdout/final consumato.
+
+- Codex: 42-0, media `125.983,74`, zero perdite; fallisce il gate reattivo
+  perché attiva soltanto `6-6-2` e diverge architetturalmente in 7/14 gruppi.
+- Claude: 26-16, media `6.467,48`, divergenza azioni/architettura 14/14, ma
+  31 perdite zootecniche verificate.
+- Copilot: 16-26, media fissa `2.840`, due regimi nominali ma nessuna azione
+  produttiva e divergenza azioni 7/14.
+- Antigravity: tutti i 42 round previsti, 14 per avversario e 21 per seat;
+  0-42, denaro zero e quasi soltanto `PASS`. Esito:
+  `E18_ENGINE_COMPATIBILITY_FAIL`, non semplice sconfitta economica.
+
+Nessuna candidata è promossa. Sono generati tre prompt indipendenti: Claude
+V2 su sicurezza/monetizzazione, Copilot V2 su catena produttiva end-to-end e
+Antigravity reboot con compatibility gate prima del selector. Codex attende
+la stabilizzazione Kaggle e l'analisi di tutti i replay esterni prima di una
+nuova versione.
+
+Report:
+`experiments/e18/reports/common/E18_FOUR_AGENT_REACTIVE_TOURNAMENT_V2_REPORT_IT.md`.
+
+---
+
+## E18.3 — benchmark Codex latest contro E17 V4D
+
+**Data:** 2026-09-03
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY_NON_QUALIFYING`
+
+Sono stati eseguiti 56 nuovi match sui sette seed development E18 e su
+entrambi i seat: 14 diretti E18.1/V4D e 42 V4D contro Claude E18.1, Copilot
+E18.1 e Antigravity E17. I 42 profili E18.1 contro il medesimo pool sono
+riusati dall'artifact congelato del torneo V2. Nessun holdout o final e stato
+consumato.
+
+E18.1 perde tutti i 14 diretti: `71.831,00` contro `89.760,57`, delta
+`-17.929,57` (`-19,97%`). Sul pool comune vale `125.983,74` contro
+`143.486,45` di V4D (`-12,20%`); il segno resta negativo contro tutti e tre
+gli avversari.
+
+La regressione e causale: E18.1 chiude con quattro animali in meno, perde il
+`6,11%` di azioni produttive e aggiunge il `24,77%` di `PASS`. I movimenti
+restano quasi invariati, gli harvest calano e i weed tile-days crescono del
+`320%`. La superficie crop e leggermente maggiore, ma non viene convertita in
+raccolto e denaro. Il selector sceglie `6-6-2` in tutti i match osservati.
+
+Decisione: V4D torna controllo economico obbligatorio; E18.1 resta una sonda
+architetturale. Una futura V2 deve restare entro il `-5%` da V4D sia nel
+diretto sia sul pool comune, oltre a dimostrare attivazione di almeno due
+regimi.
+
+Report:
+`experiments/e18/reports/codex/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_REPORT_IT.md`.
+
+---
+
+## E18.4 — snapshot Kaggle e intake peer V2
+
+**Data:** 2026-09-03
+
+Il browser integrato torna leggibile nella stessa sessione. Snapshot pubblico:
+E18.1 `825,4`, 6-6-2 E17.3 `941,4`, V4D `1.131,7`, reactive E17.1 `1.077,5`
+e V9 `1.082,9`. E18.1 perde `306,3` punti (`-27,07%`) rispetto a V4D,
+corroborando il benchmark locale.
+
+Claude E18.2 presenta 42 match real-engine: media `12.383,76`, 48 perdite
+zootecniche e divergenza architetturale `11/14`; non è promossa. Copilot
+E18.2 supera 36 test condivisi di intake, ma il runner dichiarato da 42 match
+è esplicitamente sintetico e genera denaro/KPI da formule: l'artifact non è
+ammesso come evidenza economica o dinamica.
+
+Per decisione del proprietario Antigravity è escluso dai prossimi test fino a
+una nuova release. Il roster attivo comprende V4D come controllo, E18.1 come
+ablation e Claude/Copilot E18.2 come peer; nessun holdout/final è consumato.
+
+---
+
+## E18.5 — intake peer V2 e Codex Capacity-Governed V4D
+
+**Data:** 2026-09-03
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY_NON_QUALIFYING`
+
+Il nuovo round robin peer V2 usa il motore reale: 84 match, sei coppie,
+sette seed development e due seat, con Antigravity escluso. V4D chiude
+`42-0` a `125.490,40`; E18.1 `28-14` a `104.516,71`; Claude E18.2 `14-28`
+a `9.756,29` con 44 perdite; Copilot E18.2 `0-42` a `260`. Solo V4D supera
+i gate.
+
+Codex E18.2 parte quindi da V4D. Il reclaim `7-7-4` e il routing distante di
+un worker `PASS` vengono entrambi respinti negli smoke per forti regressioni.
+La variante ammessa conserva la topologia `7-7-5` e permette un servizio
+recovery soltanto quando un worker già in `PASS` si trova sul tile da
+servire. D28-D29 sono passthrough V4D.
+
+Il gate da 56 match chiude `56-0`, media `121.149,84`. Nel diretto V4D il
+record è `14-0`, `93.401,71` contro `90.012,00` (`+3,77%`); i `PASS` scendono
+da `724` a `688`, i weed tile-days passano da `14` a `15` e restano entro il
+cap, con zero perdite, errori e fallback. Gate `9/9 PASS`.
+
+Il bundle standalone SHA-256
+`C5FB1FC4966B81F238CDD0DE4CA5E15B16EA6B8AE077A08ECC881F8729FD01F7`
+supera isolamento e parità completa in entrambi i seat. Nessun holdout/final
+consumato; nessun upload Kaggle automatico.
+
+Report:
+`experiments/e18/reports/codex/E18_2_CAPACITY_GOVERNED_V4D_DEV_REPORT_IT.md`.
+
+---
+
+## E18.6 — ablation interna Codex delle topologie
+
+**Data:** 2026-09-03
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY_CAUSAL_ABLATION`
+
+Sono stati eseguiti 70 match real-engine: cinque topologie Codex fisse contro
+E18.2, sette seed development e entrambi i seat. Claude, Copilot e
+Antigravity sono esclusi; holdout, final e replay Kaggle non sono consumati.
+
+Tutte le topologie raggiungono esattamente il target in 14/14 match. Il
+passthrough `7-7-5` resta a `-0,82%` dal controllo; `7-7-2`, `6-6-2`,
+`7-7-0` e `6-7-0` perdono rispettivamente `14,31%`, `42,98%`, `34,69%` e
+`40,31%`. I bracci ridotti mostrano meno crop-days D21-D30, più weed-days,
+più crop abbandonate e meno unità raccolte. La geometria corretta non produce
+quindi da sola un'architettura reattiva o redditizia.
+
+Il confronto storico chiarisce entrambi i fallimenti: E17 6-6-2 validava
+cap/riempimento ma non il target economico; E18.1 aveva più superficie crop
+ma meno azioni produttive, più `PASS` e `+320%` weed tile-days. Le sconfitte
+esterne E18.2 contro avversari osservati `6-6-2` e `6-7-0` indicano che tali
+geometrie possono funzionare, non che siano sufficienti.
+
+Decisione: nessun candidato, nessuna submission. La prossima linea deve usare
+uno scheduler state-driven con missioni persistenti e feedback di esecuzione,
+iniziando da una transizione conservativa `7-7-5 → 7-7-2`.
+
+Report:
+`experiments/e18/reports/codex/E18_3_CODEX_INTERNAL_TOPOLOGY_ABLATION_REPORT_IT.md`.

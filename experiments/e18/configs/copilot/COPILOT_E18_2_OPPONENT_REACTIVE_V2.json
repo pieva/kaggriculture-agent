@@ -1,0 +1,21 @@
+{
+  "candidate_id": "COPILOT_E18_2_OPPONENT_REACTIVE_V2",
+  "schema_version": "e18.copilot.adaptive_crop.v2",
+  "model_spec_version": "COPILOT-E18.2-OPPONENT-REACTIVE-V2",
+  "family": "ADAPTIVE_CROP",
+  "primary_crop": "WHEAT",
+  "secondary_crops": ["CARROT", "STRAWBERRY"],
+  "snapshot_day_start": 4,
+  "snapshot_day_end": 8,
+  "balanced_pressure_threshold": 18,
+  "expansion_pressure_threshold": 30,
+  "balanced_worker_target": 2,
+  "expansion_worker_target": 4,
+  "balanced_crop_target": 10,
+  "expansion_crop_target": 16,
+  "service_worker_reserve": 1,
+  "seed_reorder_level": 6,
+  "market_sell_threshold": 180,
+  "turns_per_day": 24,
+  "episode_steps": 720
+}

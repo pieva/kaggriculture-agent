@@ -1,0 +1,116 @@
+{
+  "schema_version": "CLAUDE_E18_2_OPPONENT_REACTIVE_CONFIG_V2",
+  "policy_id": "CLAUDE-E18.2-OPPONENT-REACTIVE-V2",
+  "model_spec": "docs/model_specs/claude/MODEL_SPEC_CLAUDE_E18_2_OPPONENT_REACTIVE_V2.md",
+  "predecessor_policy_id": "CLAUDE-E18.1-OPPONENT-REACTIVE-V1",
+  "target_quadrants": 3,
+  "fallback": {
+    "turns_per_day": 24,
+    "episode_steps": 720,
+    "market_order_batch_limit": 10
+  },
+  "cash_reserve": {
+    "land_purchase_reserve": 300.0,
+    "hire_reserve": 150.0,
+    "market_order_min_cash": 30.0
+  },
+  "dispatch": {
+    "hire_batch_limit_per_turn": 2,
+    "tasks_per_worker_per_day": 6,
+    "assignment_stall_timeout": 3,
+    "prefer_same_quadrant": true
+  },
+  "expansion": {
+    "min_days_for_expansion_payback": 4,
+    "expansion_service_pressure_ceiling": 0.34,
+    "core_min_harvest_requests": 4,
+    "core_min_fill_ratio": 0.4
+  },
+  "crop": {
+    "target_fill_ratio": 0.55,
+    "min_days_margin_for_planting": 1,
+    "seed_purchase_batch_size": 5,
+    "fertilize_when_carried": true,
+    "max_serviceable_crop_tiles_per_worker": 3.0
+  },
+  "lifecycle": {
+    "harvest_yield_ratio": 0.6,
+    "rotation_lookahead_steps": 48,
+    "rotation_min_days_remaining_for_wheat_cycle": 4,
+    "rotation_episode_late_days_remaining": 10
+  },
+  "livestock": {
+    "species_rotation": [
+      "SHEEP",
+      "COW",
+      "GOOSE"
+    ],
+    "feed_security_buffer_per_animal": 3,
+    "wheat_buy_price_ceiling": 80.0,
+    "wheat_buy_batch_cap": 10,
+    "max_at_risk_animals_for_new_purchase": 0,
+    "animal_purchase_reserve": 300.0,
+    "herd_per_worker_ratio": 0.4,
+    "max_animal_placements_per_call": 2
+  },
+  "endgame": {
+    "shutdown_days_remaining": 5,
+    "liquidation_days_remaining": 3
+  },
+  "opponent_snapshot": {
+    "window_start_day": 4,
+    "window_end_day": 8,
+    "pressure_threshold": 26.0
+  },
+  "regimes": {
+    "LOW_PRESSURE_BALANCED": {
+      "name": "LOW_PRESSURE_BALANCED",
+      "max_hands": 12,
+      "min_workers_per_quadrant": 3,
+      "crop_species_rotation": [
+        "WHEAT",
+        "STRAWBERRY",
+        "CARROT",
+        "MELON"
+      ],
+      "crop_species_weights": {
+        "WHEAT": 0.4,
+        "STRAWBERRY": 0.2,
+        "CARROT": 0.2,
+        "MELON": 0.2
+      },
+      "livestock_structures_target_per_quadrant": 3,
+      "max_quadrants_for_livestock": 2
+    },
+    "HIGH_PRESSURE_WHEAT_TEMPO": {
+      "name": "HIGH_PRESSURE_WHEAT_TEMPO",
+      "max_hands": 15,
+      "min_workers_per_quadrant": 4,
+      "crop_species_rotation": [
+        "WHEAT",
+        "CARROT",
+        "STRAWBERRY",
+        "MELON"
+      ],
+      "crop_species_weights": {
+        "WHEAT": 0.7,
+        "CARROT": 0.15,
+        "STRAWBERRY": 0.1,
+        "MELON": 0.05
+      },
+      "livestock_structures_target_per_quadrant": 2,
+      "max_quadrants_for_livestock": 2
+    }
+  },
+  "provenance": {
+    "holdout_consumed": false,
+    "final_confirmation_consumed": false,
+    "independence_statement": "no imports from agricola.strategy.codex or agricola.strategy.antigravity or agricola.strategy.copilot; no indexed action table; shared modules limited to agricola.core.observation_contract and public ENGINE_VERIFIED formulas already used by this agent's own E17 lineage",
+    "origin": "experiments/e18/prompts/claude/E18_CLAUDE_OPPONENT_REACTIVE_V2_REMEDIATION_PROMPT_IT.md",
+    "evidence": [
+      "experiments/e18/reports/common/E18_FOUR_AGENT_REACTIVE_TOURNAMENT_V2_REPORT_IT.md",
+      "experiments/e18/reports/claude/E18_CLAUDE_OPPONENT_REACTIVE_V1_DEVELOPMENT_REPORT_IT.md",
+      "docs/model_specs/claude/MODEL_SPEC_CLAUDE_E18_1_OPPONENT_REACTIVE_V1.md"
+    ]
+  }
+}

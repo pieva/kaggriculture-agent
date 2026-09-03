@@ -1,0 +1,62 @@
+{
+  "candidate_id": "CODEX_E18_1_OPPONENT_REACTIVE_662_770_V1",
+  "schema_version": "e18.codex.opponent_reactive_topology.v1",
+  "model_spec_version": "CODEX-E18.1-OPPONENT-REACTIVE-662-770-V1",
+  "base_candidate_id": "CODEX_E17_3_TOPOLOGY_FILL_662_V2",
+  "causal_family": "PUBLIC_OPPONENT_REGIME_AND_DYNAMIC_TOPOLOGY_CONTROL",
+  "decision_day": 6,
+  "expansion_pressure_threshold": 8.0,
+  "pressure_weights": {
+    "extra_quadrants": 3.0,
+    "crops": 0.15,
+    "hands": 0.5,
+    "animals": 0.25,
+    "pastures": 0.1,
+    "weeds": -0.2
+  },
+  "mode_below_threshold": "6-6-2",
+  "mode_at_or_above_threshold": "7-7-0",
+  "dynamic_build_worker_limit": 2,
+  "livestock_resource_cap": 14,
+  "delayed_placement_target": [2, 4],
+  "high_pressure_placement_release_day": 28,
+  "fill_purchase_cutoff_day": 29,
+  "topologies": {
+    "6-6-2": {
+      "quadrant_pasture_caps": {
+        "Q0": 6,
+        "Q1": 6,
+        "Q2": 2
+      },
+      "pasture_targets": [
+        [4, 2], [3, 3], [4, 3], [2, 4], [3, 4], [4, 4],
+        [5, 2], [5, 3], [6, 3], [5, 4], [6, 4], [7, 4],
+        [3, 5], [4, 5]
+      ],
+      "reclaimed_crop_targets": [
+        [3, 2], [6, 2], [3, 6], [4, 6], [4, 7]
+      ]
+    },
+    "7-7-0": {
+      "quadrant_pasture_caps": {
+        "Q0": 7,
+        "Q1": 7,
+        "Q2": 0
+      },
+      "pasture_targets": [
+        [3, 2], [4, 2], [3, 3], [4, 3], [2, 4], [3, 4], [4, 4],
+        [5, 2], [6, 2], [5, 3], [6, 3], [5, 4], [6, 4], [7, 4]
+      ],
+      "reclaimed_crop_targets": [
+        [3, 5], [4, 5], [3, 6], [4, 6], [4, 7]
+      ]
+    }
+  },
+  "dynamic_cells": [
+    [3, 2], [6, 2], [3, 5], [4, 5]
+  ],
+  "public_features_only": true,
+  "cross_episode_memory": false,
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false
+}

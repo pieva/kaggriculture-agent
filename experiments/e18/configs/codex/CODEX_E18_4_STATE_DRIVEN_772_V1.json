@@ -1,0 +1,80 @@
+{
+  "candidate_id": "CODEX_E18_4_STATE_DRIVEN_772_V1",
+  "schema_version": "e18.codex.state_driven_772.v1",
+  "model_spec_version": "CODEX-E18.4-STATE-DRIVEN-772-V1",
+  "base_policy": "CODEX-E18.2-CAPACITY-GOVERNED-V4D-V1",
+  "causal_family": "STATE_DRIVEN_UNIT_SCHEDULER_WITH_OBSERVED_MARKET_LEDGER",
+  "public_features_only": true,
+  "cross_episode_memory": false,
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "turns_per_day": 24,
+  "episode_steps": 720,
+  "activation_day": 11,
+  "liquidation_day": 29,
+  "critical_unfed_threshold": 1,
+  "critical_unwatered_threshold": 1,
+  "wheat_pickup_batch": 6,
+  "wheat_carrier_target": 4,
+  "wheat_safety_buffer": 4,
+  "plant_cutoff_day": 25,
+  "crop_cutoffs": {
+    "MELON": 17,
+    "STRAWBERRY": 20,
+    "TOMATO": 22,
+    "CARROT": 25,
+    "WHEAT": 25
+  },
+  "pasture_targets": [
+    [3, 2], [4, 2], [3, 3], [4, 3], [2, 4], [3, 4], [4, 4],
+    [5, 2], [6, 2], [5, 3], [6, 3], [5, 4], [6, 4], [7, 4],
+    [3, 5], [4, 5]
+  ],
+  "coop_targets": [[4, 1]],
+  "wheat_crop_targets": [
+    [0, 0], [1, 0], [2, 0], [3, 0],
+    [5, 0], [6, 0], [7, 0],
+    [0, 5], [1, 5], [2, 5]
+  ],
+  "pasture_livestock_cap": 16,
+  "reclaimed_seed_crop": "STRAWBERRY",
+  "reclaimed_seed_units": 3,
+  "reclaimed_seed_cash_floor": 3000.0,
+  "seed_reorder_batch": 12,
+  "seed_inventory_floor": 4,
+  "reference_prices": {
+    "WHEAT": 25,
+    "CARROT": 35,
+    "TOMATO": 60,
+    "STRAWBERRY": 120,
+    "MELON": 250,
+    "EGG": 50,
+    "MILK": 160,
+    "WOOL": 200,
+    "FERTILIZER": 100
+  },
+  "low_output_price_ratio": 0.0,
+  "max_sale_deferral_steps": 6,
+  "sale_release_shed_ratio": 0.8,
+  "emergency_cash_floor": 500.0,
+  "sellable_products": [
+    "WHEAT", "CARROT", "TOMATO", "STRAWBERRY", "MELON",
+    "EGG", "MILK", "WOOL", "FERTILIZER"
+  ],
+  "task_priority": {
+    "CRITICAL_FEED": 0,
+    "PICKUP_WHEAT": 0,
+    "CRITICAL_WATER": 1,
+    "PLACE_ANIMAL": 1,
+    "FEED": 2,
+    "HARVEST": 2,
+    "DROP_INVENTORY": 2,
+    "PICKUP_ANIMAL": 3,
+    "BUILD_STRUCTURE": 3,
+    "DIG_TARGET": 3,
+    "PLANT": 3,
+    "CARE": 3,
+    "COLLECT_FERTILIZER": 3,
+    "WATER": 4
+  }
+}

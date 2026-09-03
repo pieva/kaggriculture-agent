@@ -1,0 +1,67 @@
+{
+  "candidate_id": "CODEX_E18_3_LABOR_CONSERVING_TOPOLOGY_ABLATION_V1",
+  "schema_version": "e18.codex.labor_conserving_topology_ablation.v1",
+  "model_spec_version": "CODEX-E18.3-LABOR-CONSERVING-TOPOLOGY-ABLATION-V1",
+  "base_policy": "CODEX-E17.2-POST-FEED-CAPACITY-BATCHED-ROUTING-V4D-D28",
+  "causal_family": "FIXED_TOPOLOGY_WITH_PERSISTENT_LABOR_HANDOFF",
+  "reclaimed_crop_activation_day": 6,
+  "rotation_start_day": 20,
+  "rotation_end_day": 24,
+  "early_crop": "STRAWBERRY",
+  "early_crop_cutoff_day": 19,
+  "rotation_crop": "WHEAT",
+  "rotation_crop_cutoff_day": 25,
+  "seed_unit_costs": {"STRAWBERRY": 100.0, "WHEAT": 15.0},
+  "seed_operating_cash_floor": 3000.0,
+  "provider_idle_worker_limit": 0,
+  "fill_purchase_cutoff_day": 26,
+  "fill_operating_cash_floor": 500.0,
+  "livestock_in_transit_buffer": 1,
+  "pasture_fill_species_priority": ["SHEEP", "COW"],
+  "pasture_fill_quadrant_priority": ["Q1", "Q2", "Q0"],
+  "animal_costs": {"SHEEP": 500.0, "COW": 400.0},
+  "dense_pasture_targets": [
+    [3, 2], [4, 2], [3, 3], [4, 3], [2, 4], [3, 4], [4, 4],
+    [5, 2], [6, 2], [5, 3], [6, 3], [5, 4], [6, 4], [7, 4],
+    [3, 5], [4, 5], [3, 6], [4, 6], [4, 7]
+  ],
+  "topologies": {
+    "7-7-5": {
+      "pasture_targets": [
+        [3, 2], [4, 2], [3, 3], [4, 3], [2, 4], [3, 4], [4, 4],
+        [5, 2], [6, 2], [5, 3], [6, 3], [5, 4], [6, 4], [7, 4],
+        [3, 5], [4, 5], [3, 6], [4, 6], [4, 7]
+      ]
+    },
+    "7-7-2": {
+      "pasture_targets": [
+        [3, 2], [4, 2], [3, 3], [4, 3], [2, 4], [3, 4], [4, 4],
+        [5, 2], [6, 2], [5, 3], [6, 3], [5, 4], [6, 4], [7, 4],
+        [3, 5], [4, 5]
+      ]
+    },
+    "6-6-2": {
+      "pasture_targets": [
+        [4, 2], [3, 3], [4, 3], [2, 4], [3, 4], [4, 4],
+        [5, 2], [5, 3], [6, 3], [5, 4], [6, 4], [7, 4],
+        [3, 5], [4, 5]
+      ]
+    },
+    "7-7-0": {
+      "pasture_targets": [
+        [3, 2], [4, 2], [3, 3], [4, 3], [2, 4], [3, 4], [4, 4],
+        [5, 2], [6, 2], [5, 3], [6, 3], [5, 4], [6, 4], [7, 4]
+      ]
+    },
+    "6-7-0": {
+      "pasture_targets": [
+        [4, 2], [3, 3], [4, 3], [2, 4], [3, 4], [4, 4],
+        [5, 2], [6, 2], [5, 3], [6, 3], [5, 4], [6, 4], [7, 4]
+      ]
+    }
+  },
+  "public_features_only": true,
+  "cross_episode_memory": false,
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false
+}

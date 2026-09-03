@@ -1,11 +1,9 @@
 # JSON dei replay Kaggriculture
 
-Questa è l'unica cartella del repository destinata ai replay JSON grezzi con
-valore storico o di discovery. I replay diagnostici grandi e riscaricabili
-possono restare come cache locale esclusa da Git: il catalogo ne conserva
-Episode ID, origine e SHA-256. Config, metriche derivate, freeze e ledger
-generati dai runner restano nei rispettivi namespace e non devono essere
-copiati qui.
+Questa è la cartella canonica del catalogo replay. I JSON grezzi sono cache
+temporanee riscaricabili e sono esclusi da Git; il catalogo ne conserva Episode
+ID, origine e SHA-256. Config, metriche derivate, freeze e ledger generati dai
+runner restano nei rispettivi namespace e non devono essere copiati qui.
 
 Regole:
 
@@ -23,6 +21,81 @@ Endpoint Kaggle:
 `https://www.kaggle.com/competitions/episodes/<EPISODE_ID>/replay.json`
 
 Ultimo aggiornamento: 2026-09-03.
+
+## E18 — ciclo colturale e servizio della 6-6-2
+
+Il replay `105080066.json` apre E18 come evidenza di training esterna. Il
+primo corpus live aggiunge due replay Codex e otto episodi dei tre leader
+correnti. Gli undici file grezzi sono stati rimossi dopo il freeze; restano
+riscaricabili ed esclusi da Git, mentre metriche, timeline, hash e report
+derivati sono versionati.
+
+| Episode | SHA-256 | Ruolo | Seat Codex | Avversario | Score Codex | Score avversario | Esito | Seed |
+|---:|---|---|---:|---|---:|---:|---|---:|
+| `105080066` | `7AAEE0B4F43FFA5187C37FE8AEFF3FB9892D482CA20506C69B0C905552513F2C` | `E18_TRAINING_EVIDENCE` | P0 | Yusuf Murtaza | 59.861 | 77.364 | LOSS | 335.991.485 |
+| `105084394` | `92715897D1D4EA495893C4ACEA757DE2B92AD5C422ABFF2CA32D5A3595911F5D` | `E18_TRAINING_EVIDENCE` | P1 | misaka12435 | 79.772 | 97.479 | LOSS | 1.111.570.727 |
+| `105075696` | `516A4F8C218CCB7307BD5AF8860D1068A1A5571E609D8FF6175CB1BD4556B514` | `E18_TRAINING_EVIDENCE` | P0 | DhanaLakshmiMalla | 124.497 | 144.588 | LOSS | 880.107.967 |
+
+Integrità verificata sugli undici replay: `schema_version=1`, gioco `0.1.0`, modulo
+`1.32.7`, 720 step e stato terminale `DONE/DONE`. Origine per ogni file:
+`https://www.kaggle.com/competitions/episodes/<EPISODE_ID>/replay.json`.
+
+Uso autorizzato: analisi del ciclo `PLANT → WATER → HARVEST/DIG`, confronto
+del backlog di servizio, rotazione late-game e liquidazione. Non è holdout e
+non può essere presentato come validazione E18. L'analisi è in
+`experiments/e18/reports/common/E18_EPISODE_105080066_CROP_LIFECYCLE_FORENSICS_IT.md`.
+
+### Riferimenti esterni E18.2 da riacquisire
+
+La submission Codex E18.2 `55991397` ha due sconfitte segnalate dal
+proprietario negli episodi `105194141` e `105196165`. Le topologie avversarie
+osservate sono complessivamente `6-6-2` e `6-7-0`; l'associazione puntuale fra
+Episode ID e geometria non è congelata senza rilettura del replay.
+
+I JSON non sono presenti nel working tree e non sono stati usati dal torneo
+causale E18.3. SHA-256, seat, seed, score e identità dell'avversario restano
+`PENDING_REACQUISITION`; prima di un'analisi frame-by-frame vanno riscaricati
+dall'endpoint canonico e verificati. Il loro ruolo è
+`EXTERNAL_DIAGNOSTIC_NOT_HOLDOUT`.
+
+### Lotti Top 3 live acquisiti
+
+Snapshot pubblico del 2026-09-03: `Crop Dusta` 2958,7; `3정훈` 2948,1;
+`sbol ball` 2929,8.
+
+| Team | Episode | SHA-256 | Seat | Avversario | Score | Score avversario | Esito | Seed |
+|---|---:|---|---:|---|---:|---:|---|---:|
+| Crop Dusta | `105089826` | `AEECD456138E4D68AA4B6B8A45D87EEB5C3E65854ADE950775B55A198674AF39` | P1 | 古德拜吃 | 77.084 | 83.358 | LOSS | 723.315.666 |
+| 3정훈 | `105088610` | `F91D6DB6D6060DA2B930EA519C453C2BE33DA4ABA3C1731DC66C9D1B1F622AC3` | P1 | lilishyxf | 67.557 | 66.741 | WIN | 1.226.496.326 |
+| sbol ball | `105090557` | `4070E283C0BA385BA5B70B68DCCD5127751A1ABDE157C3E26FE1FDC4EA1793B2` | P1 | senkin13 | 58.769 | 58.349 | WIN | 61.231.092 |
+| Crop Dusta | `105100853` | `16005ED98E9E8ACA878F69C0335311E26CEE385635F00730ABDC895E065327A7` | P0 | gogogo | 88.934 | 71.752 | WIN | 1.381.221.242 |
+| 3정훈 | `105101421` | `CC67346508AE25E28EA383921858019FD6F1C99E1D8AD21C8DB507F9656FD1E9` | P1 | Giulio Ravasio | 140.196 | 137.280 | WIN | 1.478.222.190 |
+| sbol ball | `105102327` | `38BE4D52332E78E655C3D2F846E14D7BB7D2F9D7EF79B4966C446A00AD7E53AE` | P1 | Knight of Favonius | 98.962 | 94.575 | WIN | 1.849.936.055 |
+| 3정훈 | `105107425` | `DEAA14B2DDC296960C523ECE827FFC8059CC539736500D3A3761C8F74151CB81` | P0 | Giulio Ravasio | 107.148 | 112.519 | LOSS | 2.015.767.011 |
+| sbol ball | `105107748` | `5B12DFC3D46647D2D290B31E3B6C052FB877AF0624D60B966378B7F89C484ABA` | P0 | sky machine | 94.236 | 96.092 | LOSS | 76.877.491 |
+
+Gli otto replay Top 3 sono acquisiti e analizzati. Ogni leader copre entrambi
+i seat; 3정훈 e sbol ball hanno tre episodi ciascuno, Crop Dusta due. I file
+grezzi sono stati rimossi dopo aver conservato qui gli SHA-256 e aver
+verificato gli artefatti derivati. Il benchmark è in
+`experiments/e18/reports/common/E18_LIVE_TOP3_AND_CODEX_REPLAY_BENCHMARK_IT.md`.
+
+### Pulizia replay completata
+
+Il 2026-09-03 il proprietario ha autorizzato la rimozione di tutti i replay
+grezzi, perché recuperabili dall'endpoint Kaggle. Sono stati rimossi 29 JSON,
+pari a 765,18 MiB nel working tree; il conteggio locale corrente è zero.
+
+| Gruppo | File rimossi | MiB | Stato |
+|---|---:|---:|---|
+| E18 cache riscaricabile (`105*`) | 11 | 336,74 | rimossa; derivati E18 conservati |
+| Training history (`101*`, `103*`, `104498819`) | 9 | 155,90 | rimossa dal HEAD; catalogo conservato |
+| E17 Top-3 discovery (`104527555`–`104586487`) | 9 | 272,54 | rimossa dal HEAD; metriche e report conservati |
+
+Una rimozione dal working tree non elimina automaticamente i blob dalla
+cronologia `.git`. La storia non è stata riscritta: per recuperare anche quello
+spazio servirebbe un'operazione distruttiva distinta, non autorizzata. Un nuovo
+download va verificato contro lo SHA-256 catalogato prima del riuso.
 
 ## Codex E17.1 reattivo su Kaggle
 
@@ -156,7 +229,7 @@ Gli score della tabella sono i punteggi finali degli episodi, non i rating
 della leaderboard. Poiché i due agenti condividono mercato e dinamica di
 partita, ogni confronto deve distinguere osservazione, inferenza e causa.
 
-## Baseline storiche ancora presenti
+## Baseline storiche catalogate — file grezzi rimossi
 
 | Periodo | Profilo annotato | Episode ID | Nota storica |
 |---|---|---:|---|
@@ -186,5 +259,6 @@ Il replay Kaggriculture `104533574.json` è stato escluso per mantenere il
 corpus E17 a nove episodi con copertura più equilibrata dei tre agenti
 target.
 
-La seconda copia E12 di `101294736.json` è stata rimossa dopo verifica di
-identità SHA-256. L'unica copia canonica è quella presente in questa cartella.
+La seconda copia E12 di `101294736.json` era stata rimossa dopo verifica di
+identità SHA-256. Oggi l'entry canonica è questa riga di catalogo; nessuna copia
+grezza è conservata nel working tree.

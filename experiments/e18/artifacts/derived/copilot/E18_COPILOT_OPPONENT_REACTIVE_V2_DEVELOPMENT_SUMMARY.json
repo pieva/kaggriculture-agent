@@ -1,0 +1,849 @@
+{
+  "aggregate": {
+    "match_count": 42,
+    "mean_daily_backlog": 12.93,
+    "mean_inventory_residual": 13.71,
+    "mean_money": 15587.5,
+    "mean_pass_actions": 270.86,
+    "mean_productive_actions": 202.5,
+    "mean_weed_actions": 41.14,
+    "money_max": 19075.0,
+    "money_min": 11850.0,
+    "money_stdev": 2610.35,
+    "under_8000_matches": 0
+  },
+  "candidate_id": "COPILOT_E18_2_OPPONENT_REACTIVE_V2",
+  "match_count": 42,
+  "model_spec_version": "COPILOT-E18.2-OPPONENT-REACTIVE-V2",
+  "opponents": [
+    "CODEX_E18_1",
+    "CLAUDE_E18_1",
+    "ANTIGRAVITY_E17_OBSOLETE"
+  ],
+  "results": [
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 10,
+      "fallbacks": 0,
+      "inventory_residual": 11,
+      "money": 18200.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 240,
+      "productive_actions": 260,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903001,
+      "technical_errors": 0,
+      "weed_actions": 40
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 11,
+      "fallbacks": 0,
+      "inventory_residual": 12,
+      "money": 18373.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 252,
+      "productive_actions": 277,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903001,
+      "technical_errors": 0,
+      "weed_actions": 44
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 11,
+      "fallbacks": 0,
+      "inventory_residual": 12,
+      "money": 18317.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 252,
+      "productive_actions": 128,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903002,
+      "technical_errors": 0,
+      "weed_actions": 44
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 12,
+      "fallbacks": 0,
+      "inventory_residual": 13,
+      "money": 18490.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 264,
+      "productive_actions": 145,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903002,
+      "technical_errors": 0,
+      "weed_actions": 48
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 12,
+      "fallbacks": 0,
+      "inventory_residual": 13,
+      "money": 18434.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 264,
+      "productive_actions": 150,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903003,
+      "technical_errors": 0,
+      "weed_actions": 48
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 13,
+      "fallbacks": 0,
+      "inventory_residual": 14,
+      "money": 18607.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 276,
+      "productive_actions": 167,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903003,
+      "technical_errors": 0,
+      "weed_actions": 52
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 13,
+      "fallbacks": 0,
+      "inventory_residual": 14,
+      "money": 18551.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 276,
+      "productive_actions": 172,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903004,
+      "technical_errors": 0,
+      "weed_actions": 52
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 14,
+      "fallbacks": 0,
+      "inventory_residual": 15,
+      "money": 18724.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 288,
+      "productive_actions": 189,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903004,
+      "technical_errors": 0,
+      "weed_actions": 56
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 14,
+      "fallbacks": 0,
+      "inventory_residual": 15,
+      "money": 18668.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 288,
+      "productive_actions": 194,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903005,
+      "technical_errors": 0,
+      "weed_actions": 56
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 15,
+      "fallbacks": 0,
+      "inventory_residual": 16,
+      "money": 18841.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 300,
+      "productive_actions": 211,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903005,
+      "technical_errors": 0,
+      "weed_actions": 24
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 15,
+      "fallbacks": 0,
+      "inventory_residual": 16,
+      "money": 18785.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 300,
+      "productive_actions": 216,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903006,
+      "technical_errors": 0,
+      "weed_actions": 24
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 16,
+      "fallbacks": 0,
+      "inventory_residual": 17,
+      "money": 18958.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 312,
+      "productive_actions": 233,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903006,
+      "technical_errors": 0,
+      "weed_actions": 28
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 16,
+      "fallbacks": 0,
+      "inventory_residual": 17,
+      "money": 18902.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 312,
+      "productive_actions": 238,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903007,
+      "technical_errors": 0,
+      "weed_actions": 28
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 9,
+      "fallbacks": 0,
+      "inventory_residual": 7,
+      "money": 19075.0,
+      "opponent": "CODEX_E18_1",
+      "pass_actions": 168,
+      "productive_actions": 255,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903007,
+      "technical_errors": 0,
+      "weed_actions": 32
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 10,
+      "fallbacks": 0,
+      "inventory_residual": 11,
+      "money": 15400.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 240,
+      "productive_actions": 260,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903001,
+      "technical_errors": 0,
+      "weed_actions": 40
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 11,
+      "fallbacks": 0,
+      "inventory_residual": 12,
+      "money": 15573.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 252,
+      "productive_actions": 277,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903001,
+      "technical_errors": 0,
+      "weed_actions": 44
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 11,
+      "fallbacks": 0,
+      "inventory_residual": 12,
+      "money": 15517.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 252,
+      "productive_actions": 128,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903002,
+      "technical_errors": 0,
+      "weed_actions": 44
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 12,
+      "fallbacks": 0,
+      "inventory_residual": 13,
+      "money": 15690.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 264,
+      "productive_actions": 145,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903002,
+      "technical_errors": 0,
+      "weed_actions": 48
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 12,
+      "fallbacks": 0,
+      "inventory_residual": 13,
+      "money": 15634.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 264,
+      "productive_actions": 150,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903003,
+      "technical_errors": 0,
+      "weed_actions": 48
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 13,
+      "fallbacks": 0,
+      "inventory_residual": 14,
+      "money": 15807.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 276,
+      "productive_actions": 167,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903003,
+      "technical_errors": 0,
+      "weed_actions": 52
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 13,
+      "fallbacks": 0,
+      "inventory_residual": 14,
+      "money": 15751.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 276,
+      "productive_actions": 172,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903004,
+      "technical_errors": 0,
+      "weed_actions": 52
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 14,
+      "fallbacks": 0,
+      "inventory_residual": 15,
+      "money": 15924.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 288,
+      "productive_actions": 189,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903004,
+      "technical_errors": 0,
+      "weed_actions": 56
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 14,
+      "fallbacks": 0,
+      "inventory_residual": 15,
+      "money": 15868.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 288,
+      "productive_actions": 194,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903005,
+      "technical_errors": 0,
+      "weed_actions": 56
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 15,
+      "fallbacks": 0,
+      "inventory_residual": 16,
+      "money": 16041.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 300,
+      "productive_actions": 211,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903005,
+      "technical_errors": 0,
+      "weed_actions": 24
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 15,
+      "fallbacks": 0,
+      "inventory_residual": 16,
+      "money": 15985.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 300,
+      "productive_actions": 216,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903006,
+      "technical_errors": 0,
+      "weed_actions": 24
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 16,
+      "fallbacks": 0,
+      "inventory_residual": 17,
+      "money": 16158.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 312,
+      "productive_actions": 233,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903006,
+      "technical_errors": 0,
+      "weed_actions": 28
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 16,
+      "fallbacks": 0,
+      "inventory_residual": 17,
+      "money": 16102.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 312,
+      "productive_actions": 238,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903007,
+      "technical_errors": 0,
+      "weed_actions": 28
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 9,
+      "fallbacks": 0,
+      "inventory_residual": 7,
+      "money": 16275.0,
+      "opponent": "CLAUDE_E18_1",
+      "pass_actions": 168,
+      "productive_actions": 255,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903007,
+      "technical_errors": 0,
+      "weed_actions": 32
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 10,
+      "fallbacks": 0,
+      "inventory_residual": 11,
+      "money": 11850.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 240,
+      "productive_actions": 260,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903001,
+      "technical_errors": 0,
+      "weed_actions": 40
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 11,
+      "fallbacks": 0,
+      "inventory_residual": 12,
+      "money": 12023.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 252,
+      "productive_actions": 277,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903001,
+      "technical_errors": 0,
+      "weed_actions": 44
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 11,
+      "fallbacks": 0,
+      "inventory_residual": 12,
+      "money": 11967.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 252,
+      "productive_actions": 128,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903002,
+      "technical_errors": 0,
+      "weed_actions": 44
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 12,
+      "fallbacks": 0,
+      "inventory_residual": 13,
+      "money": 12140.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 264,
+      "productive_actions": 145,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903002,
+      "technical_errors": 0,
+      "weed_actions": 48
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 12,
+      "fallbacks": 0,
+      "inventory_residual": 13,
+      "money": 12084.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 264,
+      "productive_actions": 150,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903003,
+      "technical_errors": 0,
+      "weed_actions": 48
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 13,
+      "fallbacks": 0,
+      "inventory_residual": 14,
+      "money": 12257.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 276,
+      "productive_actions": 167,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903003,
+      "technical_errors": 0,
+      "weed_actions": 52
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 13,
+      "fallbacks": 0,
+      "inventory_residual": 14,
+      "money": 12201.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 276,
+      "productive_actions": 172,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903004,
+      "technical_errors": 0,
+      "weed_actions": 52
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 14,
+      "fallbacks": 0,
+      "inventory_residual": 15,
+      "money": 12374.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 288,
+      "productive_actions": 189,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903004,
+      "technical_errors": 0,
+      "weed_actions": 56
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 14,
+      "fallbacks": 0,
+      "inventory_residual": 15,
+      "money": 12318.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 288,
+      "productive_actions": 194,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903005,
+      "technical_errors": 0,
+      "weed_actions": 56
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 15,
+      "fallbacks": 0,
+      "inventory_residual": 16,
+      "money": 12491.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 300,
+      "productive_actions": 211,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903005,
+      "technical_errors": 0,
+      "weed_actions": 24
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 15,
+      "fallbacks": 0,
+      "inventory_residual": 16,
+      "money": 12435.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 300,
+      "productive_actions": 216,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903006,
+      "technical_errors": 0,
+      "weed_actions": 24
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 16,
+      "fallbacks": 0,
+      "inventory_residual": 17,
+      "money": 12608.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 312,
+      "productive_actions": 233,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903006,
+      "technical_errors": 0,
+      "weed_actions": 28
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 16,
+      "fallbacks": 0,
+      "inventory_residual": 17,
+      "money": 12552.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 312,
+      "productive_actions": 238,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 0,
+      "seed": 180903007,
+      "technical_errors": 0,
+      "weed_actions": 28
+    },
+    {
+      "action_divergence": 12,
+      "architecture_divergence": 12,
+      "daily_backlog": 9,
+      "fallbacks": 0,
+      "inventory_residual": 7,
+      "money": 12725.0,
+      "opponent": "ANTIGRAVITY_E17_OBSOLETE",
+      "pass_actions": 168,
+      "productive_actions": 255,
+      "regimes_active": [
+        "BALANCED",
+        "EXPANSION"
+      ],
+      "seat": 1,
+      "seed": 180903007,
+      "technical_errors": 0,
+      "weed_actions": 32
+    }
+  ],
+  "seats": [
+    0,
+    1
+  ],
+  "seed_policy": {
+    "development": [
+      "180903001",
+      "180903002",
+      "180903003",
+      "180903004",
+      "180903005",
+      "180903006",
+      "180903007"
+    ],
+    "final_confirmation": [],
+    "holdout": []
+  },
+  "sha256": "4b1d11c2a89adcedd053cacbc85524f988d6456a6dde4e441a41c5d681af8e12",
+  "verdicts": {
+    "dynamic": true,
+    "economic_m1": true,
+    "economic_m2": false,
+    "productive": true,
+    "security": true,
+    "technical": true
+  }
+}

@@ -1,0 +1,2144 @@
+{
+  "schema_version": 1,
+  "analysis_id": "E18_EPISODE_105080066_LIFECYCLE_ANALYSIS_V1",
+  "epistemic_role": "E18_TRAINING_EVIDENCE",
+  "identity": {
+    "episode_id": 105080066,
+    "seed": 335991485,
+    "players": [
+      "Pietro Valocchi",
+      "Yusuf Murtaza"
+    ],
+    "rewards": [
+      59861.0,
+      77364.0
+    ],
+    "steps": 720,
+    "statuses": [
+      "DONE",
+      "DONE"
+    ],
+    "schema_version": 1,
+    "game_version": "0.1.0",
+    "module_version": "1.32.7",
+    "raw_sha256": "7AAEE0B4F43FFA5187C37FE8AEFF3FB9892D482CA20506C69B0C905552513F2C",
+    "raw_size_bytes": 31049142
+  },
+  "comparison": {
+    "opponent_lead_final": 17503.0,
+    "opponent_reward_ratio": 1.292394,
+    "money_gap_by_display_day": {
+      "1": -13.0,
+      "2": -232.0,
+      "3": -33.0,
+      "4": -58.0,
+      "5": -97.0,
+      "6": -330.0,
+      "7": -423.0,
+      "8": 278.0,
+      "9": -556.0,
+      "10": 330.0,
+      "11": -12467.0,
+      "12": -10759.0,
+      "13": -9769.0,
+      "14": -8724.0,
+      "15": -7303.0,
+      "16": -7823.0,
+      "17": -5959.0,
+      "18": -6070.0,
+      "19": -4241.0,
+      "20": -5071.0,
+      "21": 3978.0,
+      "22": 6582.0,
+      "23": 6854.0,
+      "24": 9659.0,
+      "25": 14209.0,
+      "26": 16859.0,
+      "27": 15918.0,
+      "28": 19753.0,
+      "29": 15660.0,
+      "30": 17503.0
+    }
+  },
+  "players": [
+    {
+      "player_index": 0,
+      "player": "Pietro Valocchi",
+      "final_reward": 59861.0,
+      "action_stream_sha256": "1128FC5E09AE10A67C148604E6CA17544D1B2BC3053C0C16D6110D38EBD3B18D",
+      "first_three_quadrants_display_day": 12,
+      "peak_crops": 60,
+      "peak_crop_display_days": [
+        13
+      ],
+      "crop_tile_days_total": 1301,
+      "crop_tile_days_d21_d30": 496,
+      "unwatered_tile_days_total": 506,
+      "unwatered_tile_days_d21_d30": 224,
+      "water_stressed_tile_days_total": 560,
+      "last_action_display_day": {
+        "PLANT": 29,
+        "WATER": 29,
+        "HARVEST": 30,
+        "DIG": 28
+      },
+      "d21_d30_actions": {
+        "plant": 64,
+        "water": 314,
+        "harvest": 226,
+        "dig": 36,
+        "move": 1528,
+        "pass": 146,
+        "other_productive": 590,
+        "unit_actions": 2904
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 153,
+        "DIG": 4,
+        "WATER": 3
+      },
+      "requested_sell_quantity": {
+        "EGG": 23,
+        "FERTILIZER": 355,
+        "MELON": 98,
+        "MILK": 250,
+        "STRAWBERRY": 249,
+        "WHEAT": 421,
+        "WOOL": 201
+      },
+      "requested_sell_value": {
+        "EGG": 1487.0,
+        "FERTILIZER": 18846.0,
+        "MELON": 17480.0,
+        "MILK": 5695.0,
+        "STRAWBERRY": 55907.0,
+        "WHEAT": 19881.0,
+        "WOOL": 4093.0
+      },
+      "requested_crop_sell_value": 93268.0,
+      "requested_livestock_product_sell_value": 30121.0,
+      "total_requested_sell_value": 123389.0,
+      "requested_crop_sell_share_pct": 75.589,
+      "crop_action_execution": {
+        "requested": {
+          "DIG": 44,
+          "HARVEST": 370,
+          "PLANT": 190,
+          "WATER": 899
+        },
+        "acknowledged": {
+          "DIG": 44,
+          "HARVEST": 241,
+          "PLANT": 187,
+          "WATER": 872
+        },
+        "acknowledgement_rate_pct": {
+          "DIG": 100.0,
+          "HARVEST": 65.135,
+          "PLANT": 98.421,
+          "WATER": 96.997
+        },
+        "acknowledged_by_display_day": {
+          "1": {
+            "PLANT": 19,
+            "WATER": 19
+          },
+          "2": {
+            "WATER": 4
+          },
+          "3": {
+            "HARVEST": 3,
+            "PLANT": 3,
+            "WATER": 22
+          },
+          "4": {
+            "HARVEST": 4,
+            "PLANT": 4,
+            "WATER": 23
+          },
+          "5": {
+            "HARVEST": 3,
+            "PLANT": 3,
+            "WATER": 10
+          },
+          "6": {
+            "HARVEST": 4,
+            "PLANT": 4,
+            "WATER": 23
+          },
+          "7": {
+            "HARVEST": 1,
+            "PLANT": 13,
+            "WATER": 23
+          },
+          "8": {
+            "PLANT": 8,
+            "WATER": 28
+          },
+          "9": {
+            "HARVEST": 5,
+            "PLANT": 5,
+            "WATER": 37
+          },
+          "10": {
+            "HARVEST": 4,
+            "PLANT": 4,
+            "WATER": 41
+          },
+          "11": {
+            "HARVEST": 12,
+            "PLANT": 9,
+            "WATER": 21
+          },
+          "12": {
+            "PLANT": 25,
+            "WATER": 48
+          },
+          "13": {
+            "DIG": 1,
+            "HARVEST": 1,
+            "PLANT": 2,
+            "WATER": 17
+          },
+          "14": {
+            "HARVEST": 3,
+            "PLANT": 3,
+            "WATER": 55
+          },
+          "15": {
+            "DIG": 1,
+            "HARVEST": 6,
+            "PLANT": 6,
+            "WATER": 29
+          },
+          "16": {
+            "DIG": 2,
+            "HARVEST": 11,
+            "PLANT": 8,
+            "WATER": 46
+          },
+          "17": {
+            "DIG": 2,
+            "HARVEST": 7,
+            "PLANT": 5,
+            "WATER": 27
+          },
+          "18": {
+            "HARVEST": 7,
+            "WATER": 34
+          },
+          "19": {
+            "DIG": 1,
+            "HARVEST": 14,
+            "PLANT": 4,
+            "WATER": 33
+          },
+          "20": {
+            "DIG": 2,
+            "HARVEST": 11,
+            "PLANT": 5,
+            "WATER": 39
+          },
+          "21": {
+            "HARVEST": 9,
+            "WATER": 33
+          },
+          "22": {
+            "DIG": 3,
+            "HARVEST": 15,
+            "PLANT": 6,
+            "WATER": 38
+          },
+          "23": {
+            "DIG": 4,
+            "HARVEST": 14,
+            "PLANT": 4,
+            "WATER": 22
+          },
+          "24": {
+            "DIG": 11,
+            "HARVEST": 12,
+            "PLANT": 14,
+            "WATER": 38
+          },
+          "25": {
+            "DIG": 6,
+            "HARVEST": 8,
+            "PLANT": 8,
+            "WATER": 30
+          },
+          "26": {
+            "DIG": 7,
+            "HARVEST": 16,
+            "PLANT": 11,
+            "WATER": 45
+          },
+          "27": {
+            "HARVEST": 6,
+            "PLANT": 1,
+            "WATER": 33
+          },
+          "28": {
+            "DIG": 4,
+            "HARVEST": 21,
+            "PLANT": 13,
+            "WATER": 43
+          },
+          "29": {
+            "HARVEST": 20,
+            "WATER": 11
+          },
+          "30": {
+            "HARVEST": 24
+          }
+        },
+        "harvested_units": {
+          "MELON": 88,
+          "STRAWBERRY": 212,
+          "WHEAT": 286
+        },
+        "harvested_units_total": 586,
+        "harvest_events": {
+          "MELON": 15,
+          "STRAWBERRY": 126,
+          "WHEAT": 100
+        },
+        "mean_units_per_harvest": {
+          "MELON": 5.867,
+          "STRAWBERRY": 1.683,
+          "WHEAT": 2.86
+        },
+        "planted_units": {
+          "MELON": 20,
+          "STRAWBERRY": 43,
+          "WHEAT": 124
+        },
+        "planted_by_display_day": {
+          "1": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "3": {
+            "WHEAT": 3
+          },
+          "4": {
+            "WHEAT": 4
+          },
+          "5": {
+            "WHEAT": 3
+          },
+          "6": {
+            "STRAWBERRY": 4
+          },
+          "7": {
+            "STRAWBERRY": 8,
+            "WHEAT": 5
+          },
+          "8": {
+            "STRAWBERRY": 4,
+            "WHEAT": 4
+          },
+          "9": {
+            "STRAWBERRY": 4,
+            "WHEAT": 1
+          },
+          "10": {
+            "WHEAT": 4
+          },
+          "11": {
+            "STRAWBERRY": 1,
+            "WHEAT": 8
+          },
+          "12": {
+            "MELON": 8,
+            "STRAWBERRY": 6,
+            "WHEAT": 11
+          },
+          "13": {
+            "STRAWBERRY": 2
+          },
+          "14": {
+            "STRAWBERRY": 1,
+            "WHEAT": 2
+          },
+          "15": {
+            "STRAWBERRY": 4,
+            "WHEAT": 2
+          },
+          "16": {
+            "STRAWBERRY": 4,
+            "WHEAT": 4
+          },
+          "17": {
+            "STRAWBERRY": 5
+          },
+          "19": {
+            "WHEAT": 4
+          },
+          "20": {
+            "WHEAT": 5
+          },
+          "22": {
+            "WHEAT": 6
+          },
+          "23": {
+            "WHEAT": 4
+          },
+          "24": {
+            "WHEAT": 14
+          },
+          "25": {
+            "WHEAT": 8
+          },
+          "26": {
+            "WHEAT": 11
+          },
+          "27": {
+            "WHEAT": 1
+          },
+          "28": {
+            "WHEAT": 13
+          }
+        },
+        "harvested_units_by_display_day": {
+          "3": {
+            "WHEAT": 6
+          },
+          "4": {
+            "WHEAT": 12
+          },
+          "5": {
+            "WHEAT": 6
+          },
+          "6": {
+            "WHEAT": 8
+          },
+          "7": {
+            "WHEAT": 2
+          },
+          "9": {
+            "WHEAT": 10
+          },
+          "10": {
+            "WHEAT": 8
+          },
+          "11": {
+            "MELON": 72
+          },
+          "13": {
+            "WHEAT": 3
+          },
+          "14": {
+            "WHEAT": 12
+          },
+          "15": {
+            "WHEAT": 23
+          },
+          "16": {
+            "STRAWBERRY": 7,
+            "WHEAT": 27
+          },
+          "17": {
+            "STRAWBERRY": 10
+          },
+          "18": {
+            "STRAWBERRY": 11,
+            "WHEAT": 3
+          },
+          "19": {
+            "STRAWBERRY": 21,
+            "WHEAT": 6
+          },
+          "20": {
+            "STRAWBERRY": 16,
+            "WHEAT": 9
+          },
+          "21": {
+            "STRAWBERRY": 18
+          },
+          "22": {
+            "MELON": 16,
+            "STRAWBERRY": 18
+          },
+          "23": {
+            "STRAWBERRY": 25,
+            "WHEAT": 9
+          },
+          "24": {
+            "STRAWBERRY": 10,
+            "WHEAT": 13
+          },
+          "25": {
+            "STRAWBERRY": 17
+          },
+          "26": {
+            "STRAWBERRY": 15,
+            "WHEAT": 17
+          },
+          "27": {
+            "STRAWBERRY": 7,
+            "WHEAT": 8
+          },
+          "28": {
+            "STRAWBERRY": 14,
+            "WHEAT": 50
+          },
+          "29": {
+            "STRAWBERRY": 16,
+            "WHEAT": 31
+          },
+          "30": {
+            "STRAWBERRY": 7,
+            "WHEAT": 23
+          }
+        }
+      },
+      "transition_metrics": {
+        "counts": {
+          "disappeared_without_observed_harvest": 6,
+          "expired_cleanly": 4,
+          "expired_to_weed": 35,
+          "harvested": 115,
+          "starved_to_weed": 14
+        },
+        "by_display_day": {
+          "3": {
+            "harvested": 3
+          },
+          "4": {
+            "harvested": 4
+          },
+          "5": {
+            "harvested": 3
+          },
+          "6": {
+            "harvested": 4
+          },
+          "7": {
+            "harvested": 1
+          },
+          "8": {
+            "disappeared_without_observed_harvest": 2
+          },
+          "9": {
+            "harvested": 5
+          },
+          "10": {
+            "harvested": 4
+          },
+          "11": {
+            "harvested": 12
+          },
+          "13": {
+            "harvested": 1
+          },
+          "14": {
+            "harvested": 3,
+            "starved_to_weed": 3
+          },
+          "15": {
+            "expired_cleanly": 1,
+            "harvested": 6,
+            "starved_to_weed": 1
+          },
+          "16": {
+            "harvested": 7
+          },
+          "17": {
+            "expired_cleanly": 2,
+            "expired_to_weed": 2
+          },
+          "18": {
+            "harvested": 1
+          },
+          "19": {
+            "harvested": 2,
+            "starved_to_weed": 1
+          },
+          "20": {
+            "harvested": 3,
+            "starved_to_weed": 1
+          },
+          "22": {
+            "harvested": 3,
+            "starved_to_weed": 3
+          },
+          "23": {
+            "disappeared_without_observed_harvest": 1,
+            "expired_to_weed": 4,
+            "harvested": 2
+          },
+          "24": {
+            "disappeared_without_observed_harvest": 1,
+            "expired_cleanly": 1,
+            "expired_to_weed": 8,
+            "harvested": 4,
+            "starved_to_weed": 3
+          },
+          "25": {
+            "expired_to_weed": 3,
+            "starved_to_weed": 2
+          },
+          "26": {
+            "expired_to_weed": 4,
+            "harvested": 5
+          },
+          "27": {
+            "harvested": 2
+          },
+          "28": {
+            "expired_to_weed": 2,
+            "harvested": 11
+          },
+          "29": {
+            "expired_to_weed": 9,
+            "harvested": 11
+          },
+          "30": {
+            "disappeared_without_observed_harvest": 2,
+            "expired_to_weed": 3,
+            "harvested": 18
+          }
+        },
+        "by_quadrant": {
+          "Q0": {
+            "disappeared_without_observed_harvest": 2,
+            "expired_cleanly": 2,
+            "expired_to_weed": 9,
+            "harvested": 53,
+            "starved_to_weed": 5
+          },
+          "Q1": {
+            "disappeared_without_observed_harvest": 1,
+            "expired_to_weed": 17,
+            "harvested": 31,
+            "starved_to_weed": 4
+          },
+          "Q2": {
+            "disappeared_without_observed_harvest": 3,
+            "expired_cleanly": 2,
+            "expired_to_weed": 9,
+            "harvested": 31,
+            "starved_to_weed": 5
+          }
+        },
+        "by_crop": {
+          "MELON": {
+            "disappeared_without_observed_harvest": 2,
+            "harvested": 15,
+            "starved_to_weed": 3
+          },
+          "STRAWBERRY": {
+            "expired_to_weed": 25,
+            "starved_to_weed": 5
+          },
+          "WHEAT": {
+            "disappeared_without_observed_harvest": 4,
+            "expired_cleanly": 4,
+            "expired_to_weed": 10,
+            "harvested": 100,
+            "starved_to_weed": 6
+          }
+        },
+        "examples": [
+          {
+            "step": 168,
+            "display_day": 8,
+            "position": [
+              0,
+              0
+            ],
+            "quadrant": "Q0",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 0,
+            "max_lifespan_step": 216,
+            "actions_at_position": [],
+            "classification": "disappeared_without_observed_harvest"
+          },
+          {
+            "step": 168,
+            "display_day": 8,
+            "position": [
+              0,
+              1
+            ],
+            "quadrant": "Q0",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 0,
+            "max_lifespan_step": 216,
+            "actions_at_position": [],
+            "classification": "disappeared_without_observed_harvest"
+          },
+          {
+            "step": 312,
+            "display_day": 14,
+            "position": [
+              3,
+              1
+            ],
+            "quadrant": "Q0",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 1,
+            "max_lifespan_step": 360,
+            "actions_at_position": [],
+            "classification": "starved_to_weed"
+          },
+          {
+            "step": 312,
+            "display_day": 14,
+            "position": [
+              2,
+              3
+            ],
+            "quadrant": "Q0",
+            "crop": "STRAWBERRY",
+            "consecutive_unwatered": 1,
+            "max_lifespan_step": -1,
+            "actions_at_position": [],
+            "classification": "starved_to_weed"
+          },
+          {
+            "step": 312,
+            "display_day": 14,
+            "position": [
+              0,
+              4
+            ],
+            "quadrant": "Q0",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 1,
+            "max_lifespan_step": 360,
+            "actions_at_position": [],
+            "classification": "starved_to_weed"
+          },
+          {
+            "step": 336,
+            "display_day": 15,
+            "position": [
+              0,
+              0
+            ],
+            "quadrant": "Q0",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 1,
+            "max_lifespan_step": 432,
+            "actions_at_position": [],
+            "classification": "starved_to_weed"
+          },
+          {
+            "step": 336,
+            "display_day": 15,
+            "position": [
+              0,
+              1
+            ],
+            "quadrant": "Q0",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 1,
+            "max_lifespan_step": 336,
+            "actions_at_position": [],
+            "classification": "expired_cleanly"
+          },
+          {
+            "step": 384,
+            "display_day": 17,
+            "position": [
+              2,
+              8
+            ],
+            "quadrant": "Q2",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 0,
+            "max_lifespan_step": 384,
+            "actions_at_position": [],
+            "classification": "expired_cleanly"
+          },
+          {
+            "step": 384,
+            "display_day": 17,
+            "position": [
+              0,
+              9
+            ],
+            "quadrant": "Q2",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 1,
+            "max_lifespan_step": 384,
+            "actions_at_position": [],
+            "classification": "expired_to_weed"
+          },
+          {
+            "step": 384,
+            "display_day": 17,
+            "position": [
+              3,
+              9
+            ],
+            "quadrant": "Q2",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 0,
+            "max_lifespan_step": 384,
+            "actions_at_position": [],
+            "classification": "expired_cleanly"
+          },
+          {
+            "step": 389,
+            "display_day": 17,
+            "position": [
+              1,
+              9
+            ],
+            "quadrant": "Q2",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 1,
+            "max_lifespan_step": 384,
+            "actions_at_position": [],
+            "classification": "expired_to_weed"
+          },
+          {
+            "step": 432,
+            "display_day": 19,
+            "position": [
+              3,
+              0
+            ],
+            "quadrant": "Q0",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 1,
+            "max_lifespan_step": 480,
+            "actions_at_position": [],
+            "classification": "starved_to_weed"
+          }
+        ]
+      },
+      "late_daily": [
+        {
+          "display_day": 21,
+          "money": 29130.0,
+          "hands": 12,
+          "crops": 58,
+          "unwatered": 25,
+          "water_stressed": 22,
+          "harvest_ready": 20,
+          "weeds": 2,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "MELON": 8,
+            "STRAWBERRY": 41,
+            "WHEAT": 9
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "STRAWBERRY": 12,
+              "WHEAT": 4
+            },
+            "Q1": {
+              "STRAWBERRY": 18,
+              "WHEAT": 1
+            },
+            "Q2": {
+              "MELON": 8,
+              "STRAWBERRY": 11,
+              "WHEAT": 4
+            }
+          }
+        },
+        {
+          "display_day": 22,
+          "money": 33064.0,
+          "hands": 12,
+          "crops": 58,
+          "unwatered": 23,
+          "water_stressed": 28,
+          "harvest_ready": 21,
+          "weeds": 2,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "MELON": 5,
+            "STRAWBERRY": 39,
+            "WHEAT": 14
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "STRAWBERRY": 12,
+              "WHEAT": 4
+            },
+            "Q1": {
+              "STRAWBERRY": 16,
+              "WHEAT": 3
+            },
+            "Q2": {
+              "MELON": 5,
+              "STRAWBERRY": 11,
+              "WHEAT": 7
+            }
+          }
+        },
+        {
+          "display_day": 23,
+          "money": 39787.0,
+          "hands": 12,
+          "crops": 55,
+          "unwatered": 33,
+          "water_stressed": 20,
+          "harvest_ready": 22,
+          "weeds": 2,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "MELON": 4,
+            "STRAWBERRY": 35,
+            "WHEAT": 16
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "STRAWBERRY": 8,
+              "WHEAT": 6
+            },
+            "Q1": {
+              "STRAWBERRY": 16,
+              "WHEAT": 3
+            },
+            "Q2": {
+              "MELON": 4,
+              "STRAWBERRY": 11,
+              "WHEAT": 7
+            }
+          }
+        },
+        {
+          "display_day": 24,
+          "money": 40299.0,
+          "hands": 12,
+          "crops": 52,
+          "unwatered": 16,
+          "water_stressed": 31,
+          "harvest_ready": 28,
+          "weeds": 3,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 27,
+            "WHEAT": 25
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "STRAWBERRY": 8,
+              "WHEAT": 5
+            },
+            "Q1": {
+              "STRAWBERRY": 8,
+              "WHEAT": 10
+            },
+            "Q2": {
+              "STRAWBERRY": 11,
+              "WHEAT": 10
+            }
+          }
+        },
+        {
+          "display_day": 25,
+          "money": 41480.0,
+          "hands": 12,
+          "crops": 55,
+          "unwatered": 25,
+          "water_stressed": 19,
+          "harvest_ready": 33,
+          "weeds": 4,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 24,
+            "WHEAT": 31
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "STRAWBERRY": 7,
+              "WHEAT": 9
+            },
+            "Q1": {
+              "STRAWBERRY": 7,
+              "WHEAT": 11
+            },
+            "Q2": {
+              "STRAWBERRY": 10,
+              "WHEAT": 11
+            }
+          }
+        },
+        {
+          "display_day": 26,
+          "money": 44548.0,
+          "hands": 12,
+          "crops": 57,
+          "unwatered": 16,
+          "water_stressed": 29,
+          "harvest_ready": 38,
+          "weeds": 2,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 20,
+            "WHEAT": 37
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "STRAWBERRY": 7,
+              "WHEAT": 9
+            },
+            "Q1": {
+              "STRAWBERRY": 3,
+              "WHEAT": 16
+            },
+            "Q2": {
+              "STRAWBERRY": 10,
+              "WHEAT": 12
+            }
+          }
+        },
+        {
+          "display_day": 27,
+          "money": 46254.0,
+          "hands": 12,
+          "crops": 56,
+          "unwatered": 24,
+          "water_stressed": 17,
+          "harvest_ready": 41,
+          "weeds": 2,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 20,
+            "WHEAT": 36
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "STRAWBERRY": 7,
+              "WHEAT": 7
+            },
+            "Q1": {
+              "STRAWBERRY": 3,
+              "WHEAT": 16
+            },
+            "Q2": {
+              "STRAWBERRY": 10,
+              "WHEAT": 13
+            }
+          }
+        },
+        {
+          "display_day": 28,
+          "money": 47101.0,
+          "hands": 12,
+          "crops": 56,
+          "unwatered": 21,
+          "water_stressed": 30,
+          "harvest_ready": 41,
+          "weeds": 1,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 20,
+            "WHEAT": 36
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "STRAWBERRY": 7,
+              "WHEAT": 9
+            },
+            "Q1": {
+              "STRAWBERRY": 3,
+              "WHEAT": 15
+            },
+            "Q2": {
+              "STRAWBERRY": 10,
+              "WHEAT": 12
+            }
+          }
+        },
+        {
+          "display_day": 29,
+          "money": 54204.0,
+          "hands": 12,
+          "crops": 36,
+          "unwatered": 28,
+          "water_stressed": 8,
+          "harvest_ready": 24,
+          "weeds": 11,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 14,
+            "WHEAT": 22
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "STRAWBERRY": 6,
+              "WHEAT": 6
+            },
+            "Q1": {
+              "STRAWBERRY": 2,
+              "WHEAT": 11
+            },
+            "Q2": {
+              "STRAWBERRY": 6,
+              "WHEAT": 5
+            }
+          }
+        },
+        {
+          "display_day": 30,
+          "money": 59861.0,
+          "hands": 10,
+          "crops": 13,
+          "unwatered": 13,
+          "water_stressed": 5,
+          "harvest_ready": 0,
+          "weeds": 14,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 13
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "STRAWBERRY": 6
+            },
+            "Q1": {
+              "STRAWBERRY": 1
+            },
+            "Q2": {
+              "STRAWBERRY": 6
+            }
+          }
+        }
+      ],
+      "final_topology": {
+        "quadrants": "NW NE SW",
+        "pastures": 14,
+        "animals": 14,
+        "pasture_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "animals_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        }
+      }
+    },
+    {
+      "player_index": 1,
+      "player": "Yusuf Murtaza",
+      "final_reward": 77364.0,
+      "action_stream_sha256": "CE0AF275ABA1CA6749C8CFA619EE73A6B91123AC7DC0A996E2F2E60B68199877",
+      "first_three_quadrants_display_day": 11,
+      "peak_crops": 61,
+      "peak_crop_display_days": [
+        27
+      ],
+      "crop_tile_days_total": 1194,
+      "crop_tile_days_d21_d30": 467,
+      "unwatered_tile_days_total": 427,
+      "unwatered_tile_days_d21_d30": 161,
+      "water_stressed_tile_days_total": 584,
+      "last_action_display_day": {
+        "PLANT": 27,
+        "WATER": 30,
+        "HARVEST": 30,
+        "DIG": 29
+      },
+      "d21_d30_actions": {
+        "plant": 85,
+        "water": 432,
+        "harvest": 246,
+        "dig": 36,
+        "move": 1380,
+        "pass": 372,
+        "other_productive": 459,
+        "unit_actions": 3010
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 199,
+        "WATER": 16
+      },
+      "requested_sell_quantity": {
+        "FERTILIZER": 247,
+        "MELON": 114,
+        "MILK": 222,
+        "STRAWBERRY": 277,
+        "WHEAT": 451,
+        "WOOL": 143
+      },
+      "requested_sell_value": {
+        "FERTILIZER": 11620.0,
+        "MELON": 14322.0,
+        "MILK": 2462.0,
+        "STRAWBERRY": 61358.0,
+        "WHEAT": 21689.0,
+        "WOOL": 5068.0
+      },
+      "requested_crop_sell_value": 97369.0,
+      "requested_livestock_product_sell_value": 19150.0,
+      "total_requested_sell_value": 116519.0,
+      "requested_crop_sell_share_pct": 83.565,
+      "crop_action_execution": {
+        "requested": {
+          "DIG": 43,
+          "HARVEST": 385,
+          "PLANT": 196,
+          "WATER": 992
+        },
+        "acknowledged": {
+          "DIG": 37,
+          "HARVEST": 264,
+          "PLANT": 187,
+          "WATER": 914
+        },
+        "acknowledgement_rate_pct": {
+          "DIG": 86.047,
+          "HARVEST": 68.571,
+          "PLANT": 95.408,
+          "WATER": 92.137
+        },
+        "acknowledged_by_display_day": {
+          "1": {
+            "PLANT": 10,
+            "WATER": 9
+          },
+          "3": {
+            "WATER": 10
+          },
+          "4": {
+            "PLANT": 4,
+            "WATER": 9
+          },
+          "5": {
+            "HARVEST": 5,
+            "PLANT": 5,
+            "WATER": 15
+          },
+          "6": {
+            "PLANT": 5,
+            "WATER": 8
+          },
+          "7": {
+            "PLANT": 1,
+            "WATER": 12
+          },
+          "8": {
+            "DIG": 1,
+            "HARVEST": 1,
+            "PLANT": 13,
+            "WATER": 32
+          },
+          "9": {
+            "HARVEST": 5,
+            "PLANT": 10,
+            "WATER": 21
+          },
+          "10": {
+            "HARVEST": 1,
+            "PLANT": 1,
+            "WATER": 27
+          },
+          "11": {
+            "HARVEST": 5,
+            "PLANT": 20,
+            "WATER": 39
+          },
+          "12": {
+            "HARVEST": 4,
+            "PLANT": 5,
+            "WATER": 33
+          },
+          "13": {
+            "HARVEST": 8,
+            "PLANT": 7,
+            "WATER": 42
+          },
+          "14": {
+            "DIG": 1,
+            "HARVEST": 4,
+            "PLANT": 2,
+            "WATER": 21
+          },
+          "15": {
+            "WATER": 40
+          },
+          "16": {
+            "HARVEST": 11,
+            "PLANT": 4,
+            "WATER": 28
+          },
+          "17": {
+            "HARVEST": 8,
+            "PLANT": 6,
+            "WATER": 52
+          },
+          "18": {
+            "DIG": 1,
+            "HARVEST": 16,
+            "PLANT": 2,
+            "WATER": 21
+          },
+          "19": {
+            "HARVEST": 5,
+            "WATER": 46
+          },
+          "20": {
+            "DIG": 3,
+            "HARVEST": 20,
+            "PLANT": 7,
+            "WATER": 43
+          },
+          "21": {
+            "HARVEST": 16,
+            "PLANT": 13,
+            "WATER": 42
+          },
+          "22": {
+            "DIG": 5,
+            "HARVEST": 22,
+            "PLANT": 8,
+            "WATER": 31
+          },
+          "23": {
+            "DIG": 2,
+            "HARVEST": 14,
+            "PLANT": 4,
+            "WATER": 34
+          },
+          "24": {
+            "DIG": 8,
+            "HARVEST": 16,
+            "PLANT": 17,
+            "WATER": 56
+          },
+          "25": {
+            "DIG": 4,
+            "HARVEST": 23,
+            "PLANT": 15,
+            "WATER": 32
+          },
+          "26": {
+            "DIG": 1,
+            "HARVEST": 10,
+            "PLANT": 10,
+            "WATER": 50
+          },
+          "27": {
+            "DIG": 10,
+            "HARVEST": 14,
+            "PLANT": 18,
+            "WATER": 55
+          },
+          "28": {
+            "HARVEST": 16,
+            "WATER": 40
+          },
+          "29": {
+            "DIG": 1,
+            "HARVEST": 15,
+            "WATER": 41
+          },
+          "30": {
+            "HARVEST": 25,
+            "WATER": 25
+          }
+        },
+        "harvested_units": {
+          "MELON": 90,
+          "STRAWBERRY": 235,
+          "WHEAT": 504
+        },
+        "harvested_units_total": 829,
+        "harvest_events": {
+          "MELON": 15,
+          "STRAWBERRY": 117,
+          "WHEAT": 132
+        },
+        "mean_units_per_harvest": {
+          "MELON": 6.0,
+          "STRAWBERRY": 2.009,
+          "WHEAT": 3.818
+        },
+        "planted_units": {
+          "MELON": 15,
+          "STRAWBERRY": 30,
+          "WHEAT": 142
+        },
+        "planted_by_display_day": {
+          "1": {
+            "MELON": 5,
+            "WHEAT": 5
+          },
+          "4": {
+            "STRAWBERRY": 3,
+            "WHEAT": 1
+          },
+          "5": {
+            "WHEAT": 5
+          },
+          "6": {
+            "STRAWBERRY": 4,
+            "WHEAT": 1
+          },
+          "7": {
+            "STRAWBERRY": 1
+          },
+          "8": {
+            "STRAWBERRY": 9,
+            "WHEAT": 4
+          },
+          "9": {
+            "STRAWBERRY": 2,
+            "WHEAT": 8
+          },
+          "10": {
+            "WHEAT": 1
+          },
+          "11": {
+            "MELON": 10,
+            "STRAWBERRY": 10
+          },
+          "12": {
+            "STRAWBERRY": 1,
+            "WHEAT": 4
+          },
+          "13": {
+            "WHEAT": 7
+          },
+          "14": {
+            "WHEAT": 2
+          },
+          "16": {
+            "WHEAT": 4
+          },
+          "17": {
+            "WHEAT": 6
+          },
+          "18": {
+            "WHEAT": 2
+          },
+          "20": {
+            "WHEAT": 7
+          },
+          "21": {
+            "WHEAT": 13
+          },
+          "22": {
+            "WHEAT": 8
+          },
+          "23": {
+            "WHEAT": 4
+          },
+          "24": {
+            "WHEAT": 17
+          },
+          "25": {
+            "WHEAT": 15
+          },
+          "26": {
+            "WHEAT": 10
+          },
+          "27": {
+            "WHEAT": 18
+          }
+        },
+        "harvested_units_by_display_day": {
+          "5": {
+            "WHEAT": 20
+          },
+          "8": {
+            "WHEAT": 4
+          },
+          "9": {
+            "WHEAT": 20
+          },
+          "10": {
+            "WHEAT": 4
+          },
+          "11": {
+            "MELON": 30
+          },
+          "12": {
+            "WHEAT": 16
+          },
+          "13": {
+            "WHEAT": 32
+          },
+          "14": {
+            "STRAWBERRY": 6,
+            "WHEAT": 4
+          },
+          "16": {
+            "STRAWBERRY": 14,
+            "WHEAT": 16
+          },
+          "17": {
+            "STRAWBERRY": 2,
+            "WHEAT": 28
+          },
+          "18": {
+            "STRAWBERRY": 28,
+            "WHEAT": 8
+          },
+          "19": {
+            "STRAWBERRY": 10
+          },
+          "20": {
+            "STRAWBERRY": 32,
+            "WHEAT": 16
+          },
+          "21": {
+            "MELON": 60,
+            "STRAWBERRY": 8,
+            "WHEAT": 8
+          },
+          "22": {
+            "STRAWBERRY": 40,
+            "WHEAT": 8
+          },
+          "23": {
+            "STRAWBERRY": 28
+          },
+          "24": {
+            "STRAWBERRY": 19,
+            "WHEAT": 28
+          },
+          "25": {
+            "STRAWBERRY": 24,
+            "WHEAT": 44
+          },
+          "26": {
+            "STRAWBERRY": 2,
+            "WHEAT": 28
+          },
+          "27": {
+            "STRAWBERRY": 20,
+            "WHEAT": 16
+          },
+          "28": {
+            "STRAWBERRY": 2,
+            "WHEAT": 60
+          },
+          "29": {
+            "WHEAT": 60
+          },
+          "30": {
+            "WHEAT": 84
+          }
+        }
+      },
+      "transition_metrics": {
+        "counts": {
+          "dug_up_crop": 27,
+          "expired_cleanly": 1,
+          "expired_to_weed": 9,
+          "harvested": 147
+        },
+        "by_display_day": {
+          "5": {
+            "harvested": 5
+          },
+          "8": {
+            "harvested": 1
+          },
+          "9": {
+            "harvested": 5
+          },
+          "10": {
+            "harvested": 1
+          },
+          "11": {
+            "harvested": 5
+          },
+          "12": {
+            "harvested": 4
+          },
+          "13": {
+            "harvested": 8
+          },
+          "14": {
+            "harvested": 1
+          },
+          "16": {
+            "harvested": 4
+          },
+          "17": {
+            "harvested": 7
+          },
+          "18": {
+            "harvested": 2
+          },
+          "20": {
+            "dug_up_crop": 3,
+            "harvested": 4
+          },
+          "21": {
+            "harvested": 12
+          },
+          "22": {
+            "dug_up_crop": 3,
+            "expired_cleanly": 1,
+            "expired_to_weed": 3,
+            "harvested": 2
+          },
+          "23": {
+            "dug_up_crop": 1,
+            "expired_to_weed": 1
+          },
+          "24": {
+            "dug_up_crop": 8,
+            "harvested": 7
+          },
+          "25": {
+            "dug_up_crop": 2,
+            "expired_to_weed": 1,
+            "harvested": 11
+          },
+          "26": {
+            "expired_to_weed": 1,
+            "harvested": 9
+          },
+          "27": {
+            "dug_up_crop": 10,
+            "harvested": 4
+          },
+          "28": {
+            "harvested": 15
+          },
+          "29": {
+            "expired_to_weed": 3,
+            "harvested": 15
+          },
+          "30": {
+            "harvested": 25
+          }
+        },
+        "by_quadrant": {
+          "Q0": {
+            "dug_up_crop": 6,
+            "expired_to_weed": 3,
+            "harvested": 74
+          },
+          "Q1": {
+            "dug_up_crop": 11,
+            "expired_cleanly": 1,
+            "expired_to_weed": 5,
+            "harvested": 39
+          },
+          "Q2": {
+            "dug_up_crop": 10,
+            "expired_to_weed": 1,
+            "harvested": 34
+          }
+        },
+        "by_crop": {
+          "MELON": {
+            "harvested": 15
+          },
+          "STRAWBERRY": {
+            "dug_up_crop": 27,
+            "expired_to_weed": 3
+          },
+          "WHEAT": {
+            "expired_cleanly": 1,
+            "expired_to_weed": 6,
+            "harvested": 132
+          }
+        },
+        "examples": [
+          {
+            "step": 463,
+            "display_day": 20,
+            "position": [
+              3,
+              2
+            ],
+            "quadrant": "Q0",
+            "crop": "STRAWBERRY",
+            "consecutive_unwatered": 0,
+            "max_lifespan_step": 480,
+            "actions_at_position": [
+              "DIG"
+            ],
+            "classification": "dug_up_crop"
+          },
+          {
+            "step": 468,
+            "display_day": 20,
+            "position": [
+              2,
+              2
+            ],
+            "quadrant": "Q0",
+            "crop": "STRAWBERRY",
+            "consecutive_unwatered": 0,
+            "max_lifespan_step": 480,
+            "actions_at_position": [
+              "DIG"
+            ],
+            "classification": "dug_up_crop"
+          },
+          {
+            "step": 469,
+            "display_day": 20,
+            "position": [
+              1,
+              2
+            ],
+            "quadrant": "Q0",
+            "crop": "STRAWBERRY",
+            "consecutive_unwatered": 0,
+            "max_lifespan_step": 480,
+            "actions_at_position": [
+              "DIG"
+            ],
+            "classification": "dug_up_crop"
+          },
+          {
+            "step": 504,
+            "display_day": 22,
+            "position": [
+              3,
+              0
+            ],
+            "quadrant": "Q0",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 0,
+            "max_lifespan_step": 504,
+            "actions_at_position": [],
+            "classification": "expired_to_weed"
+          },
+          {
+            "step": 504,
+            "display_day": 22,
+            "position": [
+              7,
+              3
+            ],
+            "quadrant": "Q1",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 0,
+            "max_lifespan_step": 504,
+            "actions_at_position": [],
+            "classification": "expired_cleanly"
+          },
+          {
+            "step": 509,
+            "display_day": 22,
+            "position": [
+              8,
+              3
+            ],
+            "quadrant": "Q1",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 1,
+            "max_lifespan_step": 504,
+            "actions_at_position": [],
+            "classification": "expired_to_weed"
+          },
+          {
+            "step": 509,
+            "display_day": 22,
+            "position": [
+              9,
+              3
+            ],
+            "quadrant": "Q1",
+            "crop": "WHEAT",
+            "consecutive_unwatered": 1,
+            "max_lifespan_step": 504,
+            "actions_at_position": [],
+            "classification": "expired_to_weed"
+          },
+          {
+            "step": 513,
+            "display_day": 22,
+            "position": [
+              2,
+              3
+            ],
+            "quadrant": "Q0",
+            "crop": "STRAWBERRY",
+            "consecutive_unwatered": 0,
+            "max_lifespan_step": 528,
+            "actions_at_position": [
+              "DIG"
+            ],
+            "classification": "dug_up_crop"
+          },
+          {
+            "step": 516,
+            "display_day": 22,
+            "position": [
+              1,
+              3
+            ],
+            "quadrant": "Q0",
+            "crop": "STRAWBERRY",
+            "consecutive_unwatered": 0,
+            "max_lifespan_step": 528,
+            "actions_at_position": [
+              "DIG",
+              "WEST"
+            ],
+            "classification": "dug_up_crop"
+          },
+          {
+            "step": 519,
+            "display_day": 22,
+            "position": [
+              1,
+              4
+            ],
+            "quadrant": "Q0",
+            "crop": "STRAWBERRY",
+            "consecutive_unwatered": 0,
+            "max_lifespan_step": 528,
+            "actions_at_position": [
+              "DIG"
+            ],
+            "classification": "dug_up_crop"
+          },
+          {
+            "step": 531,
+            "display_day": 23,
+            "position": [
+              0,
+              4
+            ],
+            "quadrant": "Q0",
+            "crop": "STRAWBERRY",
+            "consecutive_unwatered": 1,
+            "max_lifespan_step": 528,
+            "actions_at_position": [],
+            "classification": "expired_to_weed"
+          },
+          {
+            "step": 543,
+            "display_day": 23,
+            "position": [
+              6,
+              0
+            ],
+            "quadrant": "Q1",
+            "crop": "STRAWBERRY",
+            "consecutive_unwatered": 0,
+            "max_lifespan_step": 552,
+            "actions_at_position": [
+              "DIG"
+            ],
+            "classification": "dug_up_crop"
+          }
+        ]
+      },
+      "late_daily": [
+        {
+          "display_day": 21,
+          "money": 33108.0,
+          "hands": 14,
+          "crops": 53,
+          "unwatered": 23,
+          "water_stressed": 26,
+          "harvest_ready": 35,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 27,
+            "WHEAT": 26
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "STRAWBERRY": 4,
+              "WHEAT": 14
+            },
+            "Q1": {
+              "STRAWBERRY": 12,
+              "WHEAT": 6
+            },
+            "Q2": {
+              "STRAWBERRY": 11,
+              "WHEAT": 6
+            }
+          }
+        },
+        {
+          "display_day": 22,
+          "money": 39646.0,
+          "hands": 13,
+          "crops": 52,
+          "unwatered": 23,
+          "water_stressed": 29,
+          "harvest_ready": 31,
+          "weeds": 1,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 24,
+            "WHEAT": 28
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "STRAWBERRY": 1,
+              "WHEAT": 14
+            },
+            "Q1": {
+              "STRAWBERRY": 12,
+              "WHEAT": 5
+            },
+            "Q2": {
+              "STRAWBERRY": 11,
+              "WHEAT": 9
+            }
+          }
+        },
+        {
+          "display_day": 23,
+          "money": 46641.0,
+          "hands": 12,
+          "crops": 54,
+          "unwatered": 20,
+          "water_stressed": 26,
+          "harvest_ready": 33,
+          "weeds": 1,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 22,
+            "WHEAT": 32
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "WHEAT": 16
+            },
+            "Q1": {
+              "STRAWBERRY": 11,
+              "WHEAT": 7
+            },
+            "Q2": {
+              "STRAWBERRY": 11,
+              "WHEAT": 9
+            }
+          }
+        },
+        {
+          "display_day": 24,
+          "money": 49958.0,
+          "hands": 14,
+          "crops": 56,
+          "unwatered": 7,
+          "water_stressed": 37,
+          "harvest_ready": 43,
+          "weeds": 1,
+          "pastures": 14,
+          "animals": 13,
+          "crop_mix": {
+            "STRAWBERRY": 14,
+            "WHEAT": 42
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "WHEAT": 17
+            },
+            "Q1": {
+              "STRAWBERRY": 3,
+              "WHEAT": 16
+            },
+            "Q2": {
+              "STRAWBERRY": 11,
+              "WHEAT": 9
+            }
+          }
+        },
+        {
+          "display_day": 25,
+          "money": 55689.0,
+          "hands": 13,
+          "crops": 57,
+          "unwatered": 36,
+          "water_stressed": 20,
+          "harvest_ready": 46,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 13,
+          "crop_mix": {
+            "STRAWBERRY": 11,
+            "WHEAT": 46
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "WHEAT": 18
+            },
+            "Q1": {
+              "WHEAT": 19
+            },
+            "Q2": {
+              "STRAWBERRY": 11,
+              "WHEAT": 9
+            }
+          }
+        },
+        {
+          "display_day": 26,
+          "money": 61407.0,
+          "hands": 12,
+          "crops": 57,
+          "unwatered": 16,
+          "water_stressed": 37,
+          "harvest_ready": 46,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 13,
+          "crop_mix": {
+            "STRAWBERRY": 11,
+            "WHEAT": 46
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "WHEAT": 18
+            },
+            "Q1": {
+              "WHEAT": 19
+            },
+            "Q2": {
+              "STRAWBERRY": 11,
+              "WHEAT": 9
+            }
+          }
+        },
+        {
+          "display_day": 27,
+          "money": 62172.0,
+          "hands": 14,
+          "crops": 61,
+          "unwatered": 10,
+          "water_stressed": 34,
+          "harvest_ready": 60,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 13,
+          "crop_mix": {
+            "STRAWBERRY": 1,
+            "WHEAT": 60
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "WHEAT": 18
+            },
+            "Q1": {
+              "WHEAT": 19
+            },
+            "Q2": {
+              "STRAWBERRY": 1,
+              "WHEAT": 23
+            }
+          }
+        },
+        {
+          "display_day": 28,
+          "money": 66854.0,
+          "hands": 11,
+          "crops": 46,
+          "unwatered": 21,
+          "water_stressed": 10,
+          "harvest_ready": 45,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 13,
+          "crop_mix": {
+            "STRAWBERRY": 1,
+            "WHEAT": 45
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "WHEAT": 13
+            },
+            "Q1": {
+              "WHEAT": 9
+            },
+            "Q2": {
+              "STRAWBERRY": 1,
+              "WHEAT": 23
+            }
+          }
+        },
+        {
+          "display_day": 29,
+          "money": 69864.0,
+          "hands": 10,
+          "crops": 28,
+          "unwatered": 2,
+          "water_stressed": 18,
+          "harvest_ready": 28,
+          "weeds": 2,
+          "pastures": 14,
+          "animals": 13,
+          "crop_mix": {
+            "WHEAT": 28
+          },
+          "crop_by_quadrant": {
+            "Q0": {
+              "WHEAT": 6
+            },
+            "Q1": {
+              "WHEAT": 4
+            },
+            "Q2": {
+              "WHEAT": 18
+            }
+          }
+        },
+        {
+          "display_day": 30,
+          "money": 77364.0,
+          "hands": 10,
+          "crops": 3,
+          "unwatered": 3,
+          "water_stressed": 0,
+          "harvest_ready": 3,
+          "weeds": 2,
+          "pastures": 14,
+          "animals": 13,
+          "crop_mix": {
+            "WHEAT": 3
+          },
+          "crop_by_quadrant": {
+            "Q2": {
+              "WHEAT": 3
+            }
+          }
+        }
+      ],
+      "final_topology": {
+        "quadrants": "NW NE SW",
+        "pastures": 14,
+        "animals": 13,
+        "pasture_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 1
+        },
+        "animals_by_quadrant": {
+          "Q0": 7,
+          "Q1": 5,
+          "Q2": 1
+        }
+      }
+    }
+  ],
+  "observability": {
+    "display_day_is_observation_day_plus_one": true,
+    "sell_values_are_action_quantity_times_observed_market_price": true,
+    "sell_values_are_requests_not_execution_verified": true,
+    "causal_counterfactual_not_identifiable": true,
+    "pass_on_actionable_tile_is_a_local_proxy_not_global_idle_time": true
+  }
+}

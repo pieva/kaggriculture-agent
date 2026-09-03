@@ -1,7 +1,7 @@
 {
   "schema_version": "E18_COMMON_MANIFEST_V1",
   "experiment_id": "E18",
-  "status": "OPEN_ENTRY_BASELINE_FROZEN",
+  "status": "OPEN_E18_4_V1_REJECTED_V2_LOCALITY_GATE_PENDING",
   "date": "2026-09-03",
   "predecessor": {
     "experiment": "E17",
@@ -17,17 +17,16 @@
     "baseline_submission": "submission/submission_codex_e17_topology_662.py",
     "baseline_submission_sha256": "3DF5C15D078552AF0A3849653057303698C9D750B4C7BB087B8A29092FADBAE8"
   },
-  "objective": "OBSERVABLE_MARKET_AND_SERVICE_REGIME_SELECTION_WITH_662_INVARIANTS",
-  "planned_candidate": "CODEX-E18.1-REACTIVE-662-V1",
-  "policy_mutation_authorized": "DEVELOPMENT_ONLY_AFTER_ACTIVATION_FIXTURES",
+  "objective": "TOPOLOGY_PRESERVING_OWN_CAPACITY_RECOVERY_WITH_PUBLIC_OPPONENT_TELEMETRY",
+  "planned_candidate": "CODEX_E18_4_V2_LOCALITY_AWARE_772_NOT_BUILT",
+  "policy_mutation_authorized": "E18_4_V1_DEVELOPMENT_COMPLETE_REJECTED_NO_UPLOAD",
   "invariants": {
-    "pastures_by_quadrant": {
-      "Q0": 6,
-      "Q1": 6,
-      "Q2": 2
-    },
+    "pastures_by_quadrant": [
+      {"Q0": 6, "Q1": 6, "Q2": 2},
+      {"Q0": 7, "Q1": 7, "Q2": 0}
+    ],
     "pasture_fill": "14_OF_14",
-    "q2_pasture_cap": 2,
+    "q2_pasture_cap_by_mode": {"6-6-2": 2, "7-7-0": 0},
     "animal_escapes": 0,
     "topology_cap_breaches": 0,
     "terminal_sellable_residual": 0
@@ -48,6 +47,477 @@
       "Crop Dusta"
     ],
     "selected_top3_are_live_callable_agents": false
+  },
+  "opening_evidence": {
+    "episode_id": 105080066,
+    "seed": 335991485,
+    "players": [
+      "Pietro Valocchi",
+      "Yusuf Murtaza"
+    ],
+    "rewards": [
+      59861.0,
+      77364.0
+    ],
+    "raw_path": "data/replays/json/105080066.json",
+    "raw_local_present": false,
+    "raw_recovery": "KAGGLE_EPISODE_ENDPOINT_PLUS_SHA256",
+    "raw_cache_versioned": false,
+    "raw_sha256": "7AAEE0B4F43FFA5187C37FE8AEFF3FB9892D482CA20506C69B0C905552513F2C",
+    "epistemic_role": "E18_TRAINING_EVIDENCE",
+    "analysis": "experiments/e18/artifacts/discovery/E18_EPISODE_105080066_LIFECYCLE_ANALYSIS_V1.json",
+    "analysis_sha256": "AF6666CD1EBA38FCA41DC4BB042159D857AB1123A216A0C63ECCD1B32A207571",
+    "report": "experiments/e18/reports/common/E18_EPISODE_105080066_CROP_LIFECYCLE_FORENSICS_IT.md",
+    "report_sha256": "B0DB0D3F9A98B2CDA2B5F87BD1BD30B219CC9A951EAE2D4541B2D23DEA303397",
+    "analyzer": "experiments/e18/tools/common/analyze_episode_105080066.py",
+    "analyzer_sha256": "9C94C33A9AAF5352A715898C38F42FF273643F8EAEF21FC62A099EDC51A102DC",
+    "diagnosis": "CROP_LIFECYCLE_SERVICE_AND_HARVEST_CADENCE_GAP",
+    "holdout_consumed": false
+  },
+  "replay_cleanup": {
+    "completed_at": "2026-09-03",
+    "raw_json_removed": 29,
+    "working_copy_mib_removed": 765.18,
+    "remaining_raw_json": 0,
+    "catalog_retained": "data/replays/json/json.md",
+    "derived_artifacts_retained": true,
+    "recovery": "KAGGLE_EPISODE_ENDPOINT_PLUS_CATALOG_SHA256",
+    "git_history_rewritten": false
+  },
+  "live_replay_benchmark": {
+    "benchmark_id": "E18_LIVE_TOP3_AND_CODEX_REPLAY_BENCHMARK_V1",
+    "epistemic_role": "E18_TRAINING_EVIDENCE",
+    "episode_ids": [
+      105075696,
+      105080066,
+      105084394,
+      105088610,
+      105089826,
+      105090557,
+        105100853,
+        105101421,
+        105102327,
+        105107425,
+        105107748
+    ],
+    "artifact": "experiments/e18/artifacts/discovery/E18_LIVE_TOP3_AND_CODEX_REPLAY_BENCHMARK_V1.json",
+    "artifact_sha256": "D8FC01AAB79DA467F9141EF92BEB33533A1464535A7558DFB94596D2BE6B8595",
+    "profiles_csv": "experiments/e18/artifacts/discovery/E18_LIVE_TOP3_AND_CODEX_REPLAY_PROFILES_V1.csv",
+    "profiles_csv_sha256": "59FFB57799C87A3D893302FB7DB826114D0D1A6F21A9E65DE6FD5674BEA8D90D",
+    "report": "experiments/e18/reports/common/E18_LIVE_TOP3_AND_CODEX_REPLAY_BENCHMARK_IT.md",
+    "report_sha256": "5F187238177C017CD046B8A7961605C0D82E9ED815920323C9E828A28C30F5B7",
+    "builder": "experiments/e18/tools/common/build_e18_live_replay_benchmark.py",
+    "builder_sha256": "68C3C5F93D0BF2583600F55CE53CEAFE61C37AC5049880EB183B3DBA921498AB",
+    "codex_unique_lifecycle_profiles": "1_OF_3",
+    "codex_unique_action_streams": "3_OF_3",
+    "top3_unique_lifecycle_profiles": "8_OF_8",
+    "top3_unique_pasture_topologies": 5,
+    "top3_q2_pasture_zero": "7_OF_8",
+    "codex_mean_harvested_units": 586.0,
+    "top3_mean_harvested_units": 872.5,
+    "harvest_delta_percent": 48.9,
+    "opponent_observability": {
+      "public_farm": true,
+      "private_inventory": false,
+      "submission_rating": false,
+      "cross_episode_state_contract": false,
+      "current_codex_snapshot_retains_opponent_farm": false
+    },
+    "holdout_consumed": false
+  },
+  "live_leaderboard_snapshot": {
+    "observed_at": "2026-09-03",
+    "source": "PUBLIC_KAGGLE_LEADERBOARD",
+    "teams": [
+      {
+        "rank": 1,
+        "team": "Crop Dusta",
+        "rating": 2958.7,
+        "submission_id": 55929317,
+        "first_replay_to_acquire": 105089826,
+          "first_replay_sha256": "AEECD456138E4D68AA4B6B8A45D87EEB5C3E65854ADE950775B55A198674AF39",
+          "first_replay_acquired": true,
+          "second_replay": 105100853,
+          "second_replay_sha256": "16005ED98E9E8ACA878F69C0335311E26CEE385635F00730ABDC895E065327A7"
+      },
+      {
+        "rank": 2,
+        "team": "3정훈",
+        "rating": 2948.1,
+        "submission_id": 55969334,
+        "first_replay_to_acquire": 105088610,
+          "first_replay_sha256": "F91D6DB6D6060DA2B930EA519C453C2BE33DA4ABA3C1731DC66C9D1B1F622AC3",
+          "first_replay_acquired": true,
+            "second_replay": 105101421,
+            "second_replay_sha256": "CC67346508AE25E28EA383921858019FD6F1C99E1D8AD21C8DB507F9656FD1E9",
+            "p0_replay": 105107425,
+            "p0_replay_sha256": "DEAA14B2DDC296960C523ECE827FFC8059CC539736500D3A3761C8F74151CB81"
+      },
+      {
+        "rank": 3,
+        "team": "sbol ball",
+        "rating": 2929.8,
+        "submission_id": 55964860,
+        "first_replay_to_acquire": 105090557,
+          "first_replay_sha256": "4070E283C0BA385BA5B70B68DCCD5127751A1ABDE157C3E26FE1FDC4EA1793B2",
+          "first_replay_acquired": true,
+            "second_replay": 105102327,
+            "second_replay_sha256": "38BE4D52332E78E655C3D2F846E14D7BB7D2F9D7EF79B4966C446A00AD7E53AE",
+            "p0_replay": 105107748,
+            "p0_replay_sha256": "5B12DFC3D46647D2D290B31E3B6C052FB877AF0624D60B966378B7F89C484ABA"
+      }
+    ],
+    "replays_acquired": 8
+  },
+  "candidate_intake": {
+    "claude": "E18_1_ADMITTED_TOURNAMENT_V2_NOT_PROMOTED",
+    "copilot": "E18_1_ADMITTED_TOURNAMENT_V2_NOT_PROMOTED",
+    "report": "experiments/e18/reports/common/E18_CLAUDE_COPILOT_CANDIDATE_INTAKE_IT.md",
+    "report_sha256": "B14CD0E9E8B503B9F9E95DA546888710BD96FD3CEE9833DA8BFC3E5CBAA3D4E2",
+    "automatic_tournament_admission": false
+  },
+  "dynamic_architecture_tournament": {
+    "tournament_id": "E18_DYNAMIC_ARCHITECTURE_TOURNAMENT_V1",
+    "epistemic_role": "DEVELOPMENT_ONLY_NON_QUALIFYING",
+    "candidate_id": "CODEX_E18_1_OPPONENT_REACTIVE_662_770_V1",
+    "participants": [
+      "CODEX_E18_REACTIVE_662_770",
+      "CODEX_662_CONTROL",
+      "CLAUDE_V3",
+      "COPILOT_NATIVE"
+    ],
+    "matches": 56,
+    "artifact": "experiments/e18/artifacts/derived/common/E18_DYNAMIC_ARCHITECTURE_TOURNAMENT_V1.json",
+    "artifact_sha256": "A8BFBDD5FA4428A8E5A22F89CADFD7769D62C982C83A2387BF05E052215261E9",
+    "profiles_csv": "experiments/e18/artifacts/derived/common/E18_DYNAMIC_ARCHITECTURE_TOURNAMENT_V1.csv",
+    "profiles_csv_sha256": "DF74CD7CF375029752F92492DF7B0198C17E8FC7B440A71B5343E7569D02D8A6",
+    "report": "experiments/e18/reports/common/E18_DYNAMIC_ARCHITECTURE_TOURNAMENT_V1_REPORT_IT.md",
+    "report_sha256": "794B6617933D255BE9B6A20A498D9A3FFEAD99C270E1FDE70BE186787F4D4258",
+    "runner": "experiments/e18/tools/common/run_e18_dynamic_architecture_tournament_v1.py",
+    "runner_sha256": "B8B1E57C93A0F8C11A0946AC496B7A0ACA139C327CC9B4DBACD36F5B569D833F",
+    "architecture_gate": "PASS_10_OF_10",
+    "topology_modes": {"6-6-2": 28, "7-7-0": 14},
+    "conditioned_action_divergence": "14_OF_14",
+    "conditioned_topology_divergence": "14_OF_14",
+    "money_mean": 111654.45238095238,
+    "money_vs_662_control": 80456.42857142857,
+    "money_delta_vs_662_control": -3472.285714285714,
+    "money_vs_claude": 127072.71428571429,
+    "money_vs_copilot": 127434.21428571429,
+    "pastures_built": "14_OF_14",
+    "pastures_filled": "14_OF_14",
+    "verified_livestock_losses": 0,
+    "technical_errors": 0,
+    "fallbacks": 0,
+    "holdout_consumed": false,
+    "final_confirmation_consumed": false
+  },
+  "four_agent_reactive_tournament": {
+    "tournament_id": "E18_FOUR_AGENT_REACTIVE_TOURNAMENT_V2",
+    "epistemic_role": "DEVELOPMENT_ONLY_NON_QUALIFYING",
+    "participants": [
+      "CODEX_E18_1",
+      "CLAUDE_E18_1",
+      "COPILOT_E18_1",
+      "ANTIGRAVITY_E17_OBSOLETE"
+    ],
+    "matches": 84,
+    "pair_count": 6,
+    "artifact": "experiments/e18/artifacts/derived/common/E18_FOUR_AGENT_REACTIVE_TOURNAMENT_V2.json",
+    "artifact_sha256": "225BB388C087FB77362F6A2E6731604D82C54A2F419980429809A3CA2E6BBD5A",
+    "profiles_csv": "experiments/e18/artifacts/derived/common/E18_FOUR_AGENT_REACTIVE_TOURNAMENT_V2.csv",
+    "profiles_csv_sha256": "016313C65C0419107F0A9BC4A83B4BEC08A921BBDEFF626E580BBD9514FC0A0C",
+    "runner": "experiments/e18/tools/common/run_e18_four_agent_reactive_tournament_v2.py",
+    "runner_sha256": "CB86689CA2D3EAC62B2697A1B47FD65997D52A12CCB65A4BA72B72710C43D520",
+    "report": "experiments/e18/reports/common/E18_FOUR_AGENT_REACTIVE_TOURNAMENT_V2_REPORT_IT.md",
+    "report_sha256": "7953648FE6CA83AEF95067FB336163E0132C2C7B1DD2A88524FE183D848E466E",
+    "integrity_test": "experiments/e18/tests/test_e18_four_agent_reactive_tournament_v2.py",
+    "integrity_test_sha256": "0B05B8D96A3F319BB8D0F33DD1DB6CE41A397DFAF1274BE0496B9B79C58932A6",
+    "standings": {
+      "codex": {"record": "42-0-0", "money_mean": 125983.73809523809, "gate": "FAIL_REACTIVITY"},
+      "claude": {"record": "26-16-0", "money_mean": 6467.476190476191, "gate": "FAIL_SAFETY_AND_ECONOMIC"},
+      "copilot": {"record": "16-26-0", "money_mean": 2840.0, "gate": "FAIL_REACTIVITY_AND_ECONOMIC"},
+      "antigravity": {"record": "0-42-0", "money_mean": 0.0, "gate": "OBSOLETE_COMPATIBILITY_FAIL"}
+    },
+    "antigravity_rounds": {
+      "total": 42,
+      "p0": 21,
+      "p1": 21,
+      "vs_each_opponent": 14,
+      "all_development_seeds_covered": true
+    },
+    "all_promotion_gates_passed": false,
+    "holdout_consumed": false,
+    "final_confirmation_consumed": false
+  },
+  "external_diagnostic_submission": {
+    "path": "submission/submission_codex_e18_opponent_reactive_662_770.py",
+    "sha256": "06727C1673EC289A323CE403596FAB8B272539535D27C9CEE74B8C917B78791B",
+    "release_id": "CODEX-E18.1-OPPONENT-REACTIVE-662-770-KAGGLE-V1",
+    "isolated_import": "PASS",
+    "action_parity": "719_OF_719_IN_BOTH_662_AND_770_REGIMES",
+    "kaggle_upload": "COMPLETE_2026_09_03",
+    "kaggle_score": 825.4,
+    "comparison_snapshot": {
+      "e17_topology_662": 941.4,
+      "e17_v4d": 1131.7,
+      "e17_reactive": 1077.5,
+      "e17_v9": 1082.9,
+      "delta_vs_v4d": -306.3,
+      "delta_percent_vs_v4d": -27.06547671644429
+    },
+    "promotion_status": "EXTERNAL_REGRESSION_CONFIRMED_DIAGNOSTIC_ONLY"
+  },
+  "agent_specific_dynamic_prompts": {
+    "claude": {
+      "path": "experiments/e18/prompts/claude/E18_CLAUDE_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md",
+      "sha256": "341BB9864AFC5E765B7324301D971BCBBDA506A20D602E0AEB8E01C48B5D9098",
+      "economic_baseline_mean": 12850.17857142857,
+      "iteration_m1_mean": 16000,
+      "primary_architecture_gaps": [
+        "NO_EXPLICIT_SELECTOR",
+        "VERIFIED_LIVESTOCK_LOSSES_19",
+        "NO_CAUSAL_ACTIVATION_TELEMETRY"
+      ]
+    },
+    "copilot": {
+      "path": "experiments/e18/prompts/copilot/E18_COPILOT_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md",
+      "sha256": "5C6BDF38FE6A1C2345210BA840FF028EF6007C1477FFD458C16D52F6F5F3567A",
+      "economic_baseline_mean": 9812.464285714286,
+      "iteration_m1_mean": 15000,
+      "primary_architecture_gaps": [
+        "NO_OPPONENT_AWARE_SELECTOR",
+        "ZERO_OF_14_CONDITIONED_TOPOLOGY_DIVERGENCE",
+        "MEAN_PEAK_WEED_34_29"
+      ]
+    },
+    "holdout_authorized": false,
+    "kaggle_submission_authorized": false
+  },
+  "next_iteration_prompts": {
+    "claude": {
+      "path": "experiments/e18/prompts/claude/E18_CLAUDE_OPPONENT_REACTIVE_V2_REMEDIATION_PROMPT_IT.md",
+      "sha256": "7C379F69787E551D002C56E36968A24E8A2A643B3CE7FA2042EB7BF999559C97",
+      "primary_gate": "ZERO_VERIFIED_LIVESTOCK_LOSSES_AND_M1_16000"
+    },
+    "copilot": {
+      "path": "experiments/e18/prompts/copilot/E18_COPILOT_OPPONENT_REACTIVE_V2_REMEDIATION_PROMPT_IT.md",
+      "sha256": "50EC5C820D85B8ECF896E65D809F207146320936430374BA5F9BC391EF937BA1",
+      "primary_gate": "END_TO_END_PRODUCTIVE_CHAIN_AND_M1_15000"
+    },
+    "antigravity": {
+      "path": "experiments/e18/prompts/antigravity/E18_ANTIGRAVITY_REACTIVE_V1_REBOOT_PROMPT_IT.md",
+      "sha256": "8FF4D072B67467355A558834A02C6078826877F9B77B4CCE6C8529B398F6C6AD",
+      "primary_gate": "E18_ENGINE_COMPATIBILITY_BEFORE_REACTIVITY"
+    },
+    "holdout_authorized": false,
+    "kaggle_submission_authorized": false
+  },
+  "peer_v2_intake": {
+    "claude": {
+      "candidate_id": "CLAUDE-E18.2-OPPONENT-REACTIVE-V2",
+      "evidence": "SHARED_REAL_ENGINE_ROUND_ROBIN_42_DEVELOPMENT_MATCHES",
+      "money_mean": 9756.285714285714,
+      "verified_livestock_losses": 44,
+      "architecture_divergence": "14_OF_14",
+      "status": "NOT_PROMOTED_ITERATE"
+    },
+    "copilot": {
+      "candidate_id": "COPILOT-E18.2-OPPONENT-REACTIVE-V2",
+      "callable_tests": "PASS",
+      "claimed_match_artifact": "SYNTHETIC_FORMULA_GENERATED_NOT_ADMISSIBLE_SUPERSEDED",
+      "evidence": "SHARED_REAL_ENGINE_ROUND_ROBIN_42_DEVELOPMENT_MATCHES",
+      "money_mean": 260.0,
+      "architecture_divergence": "0_OF_14",
+      "status": "NOT_PROMOTED_ITERATE"
+    },
+    "v4d_control_money_mean": 125490.40476190476,
+    "e18_1_ablation_money_mean": 104516.71428571429,
+    "match_count": 84,
+    "artifact": "experiments/e18/artifacts/derived/common/E18_PEER_V2_REAL_ENGINE_INTAKE_V1.json",
+    "artifact_sha256": "AE13A6A59B20227212A3460E474D8F17817C748D23EC6E01088C492D940D3FA1",
+    "profiles_csv": "experiments/e18/artifacts/derived/common/E18_PEER_V2_REAL_ENGINE_INTAKE_V1.csv",
+    "profiles_csv_sha256": "0DA3311624EC9116557EE94E61EDE6EBA044490DD04FA244394C6EA0901411D2",
+    "runner": "experiments/e18/tools/common/run_e18_peer_v2_real_engine_intake.py",
+    "runner_sha256": "21638D1AE0CD40956C2C796913F2C51CD95C3F7F2F9C6EE75F0179169D6B65ED",
+    "report": "experiments/e18/reports/common/E18_PEER_V2_REAL_ENGINE_INTAKE_REPORT_IT.md",
+    "report_sha256": "FC324DCA843F3D9ED84F2516A76B2DD270DBE00D5039444E4B9CFD26577F234F",
+    "integrity_test": "experiments/e18/tests/test_e18_peer_v2_real_engine_intake.py",
+    "integrity_test_sha256": "577CEA7E081BDDC1200FDA698725189B0CE9E5BF4105521176EAAC595268A73A",
+    "antigravity_excluded": true,
+    "shared_intake_tests": "36_PASS",
+    "holdout_consumed": false,
+    "final_confirmation_consumed": false
+  },
+  "active_development_roster": {
+    "codex_control": "CODEX_E17_V4D",
+    "codex_ablation": "CODEX_E18_1",
+    "codex_candidate": "CODEX_E18_2_CAPACITY_GOVERNED_V4D",
+    "peer_candidates": [
+      "CLAUDE_E18_2",
+      "COPILOT_E18_2"
+    ],
+    "excluded": {
+      "ANTIGRAVITY_E17_OBSOLETE": "UNTIL_NEW_CALLABLE_ENGINE_COMPATIBLE_RELEASE"
+    },
+    "next_matrix": "E18_2_EXTERNAL_DIAGNOSTIC_AFTER_OWNER_UPLOAD_DECISION",
+    "holdout_authorized": false,
+    "final_confirmation_authorized": false
+  },
+  "codex_latest_vs_e17_v4d_benchmark": {
+    "benchmark_id": "E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_V1",
+    "epistemic_role": "DEVELOPMENT_ONLY_NON_QUALIFYING",
+    "latest_submission": "submission/submission_codex_e18_opponent_reactive_662_770.py",
+    "latest_submission_sha256": "06727C1673EC289A323CE403596FAB8B272539535D27C9CEE74B8C917B78791B",
+    "control_submission": "submission/submission_codex_e17_v4d.py",
+    "control_submission_sha256": "2792244CA71115E6CAAFDFC942B6D9AAAF09B95FC717A5B182D07A31D9717CD7",
+    "new_matches": 56,
+    "reused_frozen_latest_profiles": 42,
+    "direct": {
+      "matches": 14,
+      "latest_record": "0-14-0",
+      "control_record": "14-0-0",
+      "latest_money_mean": 71831.0,
+      "control_money_mean": 89760.57142857143,
+      "latest_delta_money": -17929.571428571435,
+      "latest_delta_percent": -19.974885568592004
+    },
+    "common_opponent_pool": {
+      "opponents": [
+        "CLAUDE_E18_1",
+        "COPILOT_E18_1",
+        "ANTIGRAVITY_E17_OBSOLETE"
+      ],
+      "latest_money_mean": 125983.73809523809,
+      "control_money_mean": 143486.45238095237,
+      "latest_delta_money": -17502.714285714275,
+      "latest_delta_percent": -12.198165049927555
+    },
+    "causal_diagnosis": {
+      "productive_actions_delta_percent": -6.113246220855741,
+      "pass_delta_percent": 24.77007970570202,
+      "weed_tile_days_delta_percent": 320.0,
+      "latest_observed_regime": "6-6-2_IN_56_OF_56_PROFILES",
+      "verdict": "FREED_LIVESTOCK_CAPACITY_BECOMES_PASS_AND_WEED_NOT_CROP_REVENUE"
+    },
+    "decision": "RESTORE_E17_V4D_AS_ECONOMIC_CONTROL_KEEP_E18_1_DIAGNOSTIC_ONLY",
+    "artifact": "experiments/e18/artifacts/derived/codex/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_V1.json",
+    "artifact_sha256": "9CE84ECF171DA2F1F1DB19B05C4578BD6F795D1B4E7E26EDC4D02C551E665FD5",
+    "profiles_csv": "experiments/e18/artifacts/derived/codex/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_V1.csv",
+    "profiles_csv_sha256": "7850E653AA8C5B886BE6615374C327BC4544C4A33C55C54590736D0C42B12BAC",
+    "runner": "experiments/e18/tools/codex/run_e18_latest_vs_e17_v4d_benchmark.py",
+    "runner_sha256": "7155725C43FA52CAB5C4316F46F5E490CEC2892EE2CD8D52E22E16F711B297AA",
+    "report": "experiments/e18/reports/codex/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_REPORT_IT.md",
+    "report_sha256": "E4A04816AB4C150DFCC0B95566CA73D2C7D65EFA8B51C4A90A22D0F7E5644812",
+    "integrity_test": "experiments/e18/tests/test_e18_latest_vs_e17_v4d_benchmark.py",
+    "integrity_test_sha256": "129CA483250CCB5230C236D229FC2AF68A4AB53A2EA11958AA5F94AF096AF6BE",
+    "holdout_consumed": false,
+    "final_confirmation_consumed": false
+  },
+  "codex_e18_2_capacity_governed": {
+    "candidate_id": "CODEX_E18_2_CAPACITY_GOVERNED_V4D_V1",
+    "model_spec_version": "CODEX-E18.2-CAPACITY-GOVERNED-V4D-V1",
+    "epistemic_role": "DEVELOPMENT_ONLY_NON_QUALIFYING",
+    "base_policy": "CODEX-E17.2-POST-FEED-CAPACITY-BATCHED-ROUTING-V4D-D28",
+    "causal_family": "OWN_CAPACITY_PRIMARY_ON_TILE_RECOVERY_PUBLIC_OPPONENT_SECONDARY",
+    "topology": "V4D_7_7_5_PRESERVED",
+    "topology_reclaim_enabled": false,
+    "action_effect_modes": ["DENSE_V4D", "RECOVERY"],
+    "development_gate": "PASS_9_OF_9",
+    "matches": 56,
+    "record": "56-0-0",
+    "money_mean": 121149.83928571429,
+    "direct_v4d": {
+      "matches": 14,
+      "record": "14-0-0",
+      "candidate_money_mean": 93401.71428571429,
+      "control_money_mean": 90012.0,
+      "delta_percent": 3.7658470934034236,
+      "candidate_pass_mean": 688.0,
+      "control_pass_mean": 724.0,
+      "candidate_weed_tile_days_mean": 15.0,
+      "control_weed_tile_days_mean": 14.0
+    },
+    "safety": {
+      "verified_livestock_losses": 0,
+      "technical_errors": 0,
+      "fallbacks": 0,
+      "freed_work_to_pass": 0
+    },
+    "source": "src/agricola/strategy/codex/codex_e18_capacity_governed_v4d.py",
+    "source_sha256": "F4599F7D3330345612DAC9F10D7ED6F0B9A312759425A5BA5F046369328A9864",
+    "config": "experiments/e18/configs/codex/CODEX_E18_2_CAPACITY_GOVERNED_V4D_V1.json",
+    "config_sha256": "6637E246316CB749A03C65B415C4828AFF4A4B443F01052278C8B5A2A04B5A17",
+    "model_spec": "docs/model_specs/codex/MODEL_SPEC_CODEX_E18_2_CAPACITY_GOVERNED_V4D_V1.md",
+    "model_spec_sha256": "33632FA00A3DC05F49640575FDF4E239D3796205324D6C96A8E8C9AA55C7897C",
+    "artifact": "experiments/e18/artifacts/derived/codex/E18_2_CAPACITY_GOVERNED_V4D_DEV_GATE_V1.json",
+    "artifact_sha256": "0F97DBF2A789BF71D49B5694CCA516E77796D766AAD9486A368F34E096BDF5D6",
+    "profiles_csv": "experiments/e18/artifacts/derived/codex/E18_2_CAPACITY_GOVERNED_V4D_DEV_GATE_V1.csv",
+    "profiles_csv_sha256": "0A92F499D88E3AE746DD524ACA45F5386A80D49F4D716D52DB6FE75AAA0E4FAE",
+    "runner": "experiments/e18/tools/codex/run_e18_2_capacity_governed_v4d_gate.py",
+    "runner_sha256": "FFE6423F7F1F52AAC02800578882B7EE357F82154B8C7CE31E17D4486924253E",
+    "report": "experiments/e18/reports/codex/E18_2_CAPACITY_GOVERNED_V4D_DEV_REPORT_IT.md",
+    "report_sha256": "19789E589B5601A37E2A608BCDF44A177168D5496AB19B0FFDC1872E2C173EA9",
+    "integrity_test": "experiments/e18/tests/test_e18_2_capacity_governed_v4d_gate.py",
+    "integrity_test_sha256": "33869FD6C21C8CAD0D96BA8662EDE8107BF4D5D6B156876BC9BD246798B3BC2F",
+    "submission": "submission/submission_codex_e18_2_capacity_governed_v4d.py",
+    "submission_sha256": "C5FB1FC4966B81F238CDD0DE4CA5E15B16EA6B8AE077A08ECC881F8729FD01F7",
+    "submission_isolation": "PASS_BOTH_SEATS_FULL_EPISODE_ACTION_PARITY",
+    "kaggle_upload": "NOT_PERFORMED_OWNER_DECISION_REQUIRED",
+    "holdout_consumed": false,
+    "final_confirmation_consumed": false
+  },
+  "codex_e18_4_state_driven_772_v1": {
+    "status": "REJECTED_DEVELOPMENT_ONLY_NO_KAGGLE_UPLOAD",
+    "candidate_id": "CODEX_E18_4_STATE_DRIVEN_772_V1",
+    "model_spec_version": "CODEX-E18.4-STATE-DRIVEN-772-V1",
+    "topology": {"Q0": 7, "Q1": 7, "Q2": 2},
+    "activation_day": 11,
+    "matches": 14,
+    "record": "0-14-0",
+    "candidate_money_mean": 55940.0,
+    "control_money_mean": 83095.71428571429,
+    "money_delta_percent": -32.68004194818368,
+    "exact_topology_matches": "14_OF_14",
+    "fully_filled_matches": "14_OF_14",
+    "late_crop_tile_days_percent_of_control": 95.22627370388983,
+    "harvested_units_percent_of_control": 80.8273969825784,
+    "move_actions_delta_percent": 29.34719117823475,
+    "productive_actions_delta_percent": -20.949110068278805,
+    "verified_livestock_losses": 0,
+    "technical_errors": 0,
+    "fallbacks": 0,
+    "source": "src/agricola/strategy/codex/codex_e18_state_driven_772.py",
+    "source_sha256": "9BFAECCF9099988C6E14187B7C2209F30EFD5757FB04F3BC5726178D400568FD",
+    "config": "experiments/e18/configs/codex/CODEX_E18_4_STATE_DRIVEN_772_V1.json",
+    "config_sha256": "466589F3D10B4A24BF3CBDF423093C1FFBC7F7F1EDC3997CEBFFE4CF3D5DA09D",
+    "artifact": "experiments/e18/artifacts/derived/codex/E18_4_STATE_DRIVEN_772_DEV_GATE_V1.json",
+    "artifact_sha256": "A721CC24BEAEB495E4A083BF54C221C58B48C30D7A9B1706BD234BD438894A29",
+    "profiles_csv": "experiments/e18/artifacts/derived/codex/E18_4_STATE_DRIVEN_772_DEV_GATE_V1.csv",
+    "profiles_csv_sha256": "E0B56F41B6F5F142A9741C3E89B190A1BA6EA4570E2B1C8F20991834D6E3C5C1",
+    "runner": "experiments/e18/tools/codex/run_e18_4_state_driven_772_gate.py",
+    "runner_sha256": "F03656156A5094B10136A7188153ED5C2110B6F5F120A61E1A204787F4D47583",
+    "report": "experiments/e18/reports/codex/E18_4_STATE_DRIVEN_772_DEV_GATE_REPORT_IT.md",
+    "report_sha256": "F48E8EE7ACBF01C2F02DC7F83DCEB64D43D9284C753F3A25C2C9620527D6042F",
+    "model_spec": "docs/model_specs/codex/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V1.md",
+    "model_spec_sha256": "B83D256238BA74AA83BB8D54CAC46C3AAF6488C57C2665C32F0F7E6C42CC95E3",
+    "integrity_test": "experiments/e18/tests/test_e18_4_state_driven_772_gate_artifact.py",
+    "integrity_test_sha256": "E50EA5100A52578588FDB0A057E61A09E9FDC1C88A0945A6FF61541A7E2F85E5",
+    "kaggle_upload": "NOT_AUTHORIZED_GATE_FAILED",
+    "holdout_consumed": false,
+    "final_confirmation_consumed": false
+  },
+  "kaggle_stability_monitor": {
+    "submission_id": 55981615,
+    "initial_episode_id": 105139822,
+    "requested_frequency": "HOURLY_EUROPE_ROME",
+    "stability_rule": "FOUR_VALID_HOURLY_SNAPSHOTS_OVER_AT_LEAST_THREE_HOURS_WITH_SCORE_RANGE_LT_50",
+    "stale_page_guard": "NEW_COMPLETED_EPISODE_IN_WINDOW_OR_EXPLICITLY_COMPLETE_WITH_NO_IN_PROGRESS_MATCHES",
+    "protocol": "experiments/e18/prompts/codex/E18_CODEX_KAGGLE_STABILITY_MONITOR_PROTOCOL_IT.md",
+    "protocol_sha256": "1C6A532C07278DF2464CF773482955725F0D4AF30D18C180FB665E7E2326DBB7",
+    "schedule_status": "NOT_SCHEDULED_AUTOMATION_TOOL_UNAVAILABLE",
+    "browser_snapshot_status": "ACCESS_RESTORED_2026_09_03_SCORE_825_4",
+    "post_stability_action": "ANALYZE_ALL_SUBMISSION_REPLAYS_THEN_BUILD_CODEX_E18_V2_WITH_V4D_ECONOMIC_GATE_WITHOUT_HOLDOUT_OR_AUTO_SUBMISSION"
   },
   "seed_policy": {
     "development": [
@@ -100,11 +570,12 @@
     "baseline_money_vs_claude": 132217.67857142858,
     "baseline_money_symmetric_662": 79323.85714285714,
     "target_money": 100000,
-    "reactive_action_stream_divergence": "FAIL_0_OF_28",
-    "causal_activation_telemetry": "MISSING",
-    "topology_and_safety": "PASS"
+    "reactive_action_stream_divergence": "PASS_14_OF_14_CONDITIONED_GROUPS",
+    "causal_activation_telemetry": "PASS_42_OF_42_ONE_DECISION_PER_RUN",
+    "dynamic_topology": "PASS_662_AND_770_ACTIVATED",
+    "topology_and_safety": "PASS_14_OF_14_ZERO_LOSSES_ZERO_BREACHES"
   },
   "holdout_consumed": false,
   "final_confirmation_consumed": false,
-  "next_action": "IMPLEMENT_ACTIVATION_FIXTURES_BEFORE_POLICY_OPTIMIZATION"
+  "next_action": "RUN_THREE_INDEPENDENT_REMEDIATIONS_AND_MONITOR_CODEX_KAGGLE_UNTIL_STABLE"
 }
