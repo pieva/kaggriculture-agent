@@ -1,7 +1,7 @@
 """Claude E18.1 opponent-reactive controller — V1.
 
 Five explicit layers, per
-``experiments/e18/prompts/claude/E18_CLAUDE_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md``:
+``docs/model_specs/claude/e18/prompts/E18_CLAUDE_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md``:
 
 1. ``PUBLIC_OPPONENT_SNAPSHOT`` -- a single photograph of the opponent's
    public farm (unlocked quadrants, hands, crop tiles, animals, pastures,
@@ -73,10 +73,7 @@ _THIS_FILE = Path(__file__).resolve()
 _REPO_ROOT = _THIS_FILE.parents[4]
 DEFAULT_CONFIG_PATH = (
     _REPO_ROOT
-    / "experiments"
-    / "e18"
-    / "configs"
-    / "claude"
+    / "docs" / "model_specs" / "claude" / "e18" / "configs"
     / "CLAUDE_E18_1_OPPONENT_REACTIVE_V1.json"
 )
 

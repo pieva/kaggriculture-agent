@@ -25,7 +25,7 @@ from agricola.strategy.codex.codex_e17_batched_cluster_routing_v4 import (
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_TOPOLOGY_662_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments/e17/configs/codex/CODEX_E17_3_TOPOLOGY_CAP_662_V1.json"
+    / "docs/model_specs/codex/e17/configs/CODEX_E17_3_TOPOLOGY_CAP_662_V1.json"
 )
 TOPOLOGY_662_MODEL_SPEC_VERSION = "CODEX-E17.3-TOPOLOGY-FILL-662-V2"
 _SAFE_PASS = {"farmer": ["PASS"], "hands": [], "market": []}

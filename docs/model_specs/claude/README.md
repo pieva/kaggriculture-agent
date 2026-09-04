@@ -1,16 +1,24 @@
 # Indice MODEL_SPEC Claude
 
+> **Linea congelata dal 2026-09-04 — `FROZEN_PERFORMANCE_GAP`.** Le candidate
+> restano riproducibili e consultabili, ma nessuna è attiva per sviluppo o
+> submission. Lo scongelamento richiede una nuova ipotesi preregistrata che
+> superi insieme i gate economico e di sicurezza.
+
 | Stato | File | Uso |
 |---|---|---|
-| REJECTED BEFORE TOURNAMENT | [`MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE.md`](MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE.md) | V1, gate economico e di sicurezza zootecnica falliti; conservata come evidenza. Report: [`E17_1_CLAUDE_REACTIVE_V1_FAILED_GATE_REPORT.md`](../../../experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V1_FAILED_GATE_REPORT.md) e [`E17_1_CLAUDE_REACTIVE_IMPLEMENTATION_REPORT.md`](../../../experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_IMPLEMENTATION_REPORT.md) |
-| FROZEN_WITH_FAILED_GATES / DEVELOPMENT | [`MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE_V2.md`](MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE_V2.md) | V2, remediation della V1: miglioramento netto su tutti i KPI (money +57%, fughe 8→3, MOVE 77%→69%) ma non ancora ammissibile al torneo. Report: [`E17_1_CLAUDE_REACTIVE_V2_IMPLEMENTATION_REPORT.md`](../../../experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V2_IMPLEMENTATION_REPORT.md) |
-| FROZEN_WITH_FAILED_GATES / DEVELOPMENT | [`MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE_V3.md`](MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE_V3.md) | V3, attivazione "10x": guardia di densità Q0 + prontezza workforce, riserva zootecnica dedicata, HIRE attivo in shutdown, concentrazione geografica del bestiame. Miglioramento netto su tutti i KPI (money passivo +23,7%, money conteso +15,0%, fughe 67→18 durante lo sviluppo) ma target "10x" non raggiunto: collo di bottiglia identificato nel throughput della workforce. Piano: [`E17_1_CLAUDE_REACTIVE_V3_IMPROVEMENT_PLAN.md`](../../../experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V3_IMPROVEMENT_PLAN.md). Report: [`E17_1_CLAUDE_REACTIVE_V3_IMPLEMENTATION_REPORT.md`](../../../experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V3_IMPLEMENTATION_REPORT.md) |
+| REJECTED | `MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE.md` | V1, gate economico e zootecnico falliti |
+| DEVELOPMENT / FAILED GATES | `MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE_V2.md` | remediation V2 |
+| DEVELOPMENT / FAILED GATES | `MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE_V3.md` | attivazione 10x e workforce readiness |
+| DEVELOPMENT / FAILED GATES | `MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE_V4.md` | piano statico V4 |
+| DEVELOPMENT / NOT PROMOTED | `MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE_V5.md` | sviluppo V5 |
+| REJECTED | `MODEL_SPEC_CLAUDE_E17_1_3Q_REACTIVE_V6.md` | regressione V6 |
+| DEVELOPMENT | `MODEL_SPEC_CLAUDE_E18_1_OPPONENT_REACTIVE_V1.md` | candidata opponent-reactive V1 |
+| FAILED INTAKE | `MODEL_SPEC_CLAUDE_E18_2_OPPONENT_REACTIVE_V2.md` | candidata V2 con gate real-engine falliti |
 
-Claude condivide la Foundation C2.1, il contratto osservativo e il protocollo
-E17, ma possiede autonomamente modello, feature effettivamente consumate,
-planner, priorità, routing e implementazione.
+Gli asset riproducibili specifici di Claude sono in `e17/` ed `e18/`. Claude
+condivide i manifest e i protocolli comuni, ma mantiene autonomi modello,
+feature consumate, planner, priorità, routing e implementazione.
 
-Le candidate Codex congelate possono essere usate da runner esterni come
-avversari black-box, non come sorgente o componente della policy Claude. La
-decisione normativa è in
-[`E17_CLAUDE_V3_BLACK_BOX_CODEX_BENCHMARK_AUTHORIZATION.md`](../../../experiments/e17/reviews/common/E17_CLAUDE_V3_BLACK_BOX_CODEX_BENCHMARK_AUTHORIZATION.md).
+Le candidate degli altri agenti possono essere usate soltanto come avversari
+black-box nei runner comuni; non sono componenti della policy Claude.

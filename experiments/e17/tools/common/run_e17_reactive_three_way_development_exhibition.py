@@ -29,11 +29,11 @@ ROOT = Path(__file__).resolve().parents[4]
 MANIFEST = ROOT / "experiments/e17/manifest/E17_COMMON_MANIFEST_V1.json"
 CODEX_REACTIVE_FREEZE = (
     ROOT
-    / "experiments/e17/artifacts/freeze/codex/e17_1/E17_1_FREEZE_MANIFEST.json"
+    / "docs/model_specs/codex/e17/artifacts/freeze/e17_1/E17_1_FREEZE_MANIFEST.json"
 )
 CLAUDE_V2_FREEZE = (
     ROOT
-    / "experiments/e17/artifacts/freeze/claude/e17_1_v2/E17_1_V2_FREEZE_MANIFEST.json"
+    / "docs/model_specs/claude/e17/artifacts/freeze/e17_1_v2/E17_1_V2_FREEZE_MANIFEST.json"
 )
 V9_SOURCE = ROOT / "src/agricola/strategy/codex/codex_3q_mixed_high_density.py"
 V9_CONFIG = (

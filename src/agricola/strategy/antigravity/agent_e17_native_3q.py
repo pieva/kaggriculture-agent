@@ -14,10 +14,7 @@ from agricola.strategy.antigravity.antigravity_e17_native_3q import (
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments"
-    / "e17"
-    / "configs"
-    / "antigravity"
+    / "docs" / "model_specs" / "antigravity" / "e17" / "configs"
     / "ANTIGRAVITY_E17_0_NATIVE_3Q_BASELINE_CONFIG.json"
 )
 

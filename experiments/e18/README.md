@@ -1,5 +1,38 @@
 # E18 — opponent-reactive 6-6-2 / 7-7-0 toward Top-3 behavior
 
+## Stato comune al 2026-09-04
+
+La sola linea attiva è Codex exact `7-7-0`. E18.16 passa Gate A locale con
+cap risorse animali 14 e FEED critico, fallisce il benchmark Top-3 e chiude la
+validazione Kaggle a `729,0`, contro `1199,7` di E18.2 (`-39,24%`). È quindi
+respinta esternamente. Antigravity, Claude e Copilot
+sono `FROZEN_PERFORMANCE_GAP`: i loro asset restano nei rispettivi namespace
+`docs/model_specs/<agent>/`, mentre qui restano esclusivamente confronti,
+protocolli ed evidenze condivise.
+
+Lo snapshot live del leaderboard osservato durante l'invio è: keiz `3012,9`,
+Crop Dusta `2995,8`, Jesse Bullard `2971,1`, Giulio Ravasio `2918,1`; Pietro
+Valocchi `1199,7` (rank `2549`). È un'osservazione esterna volatile e non
+sostituisce il corpus topology-matched già analizzato.
+
+## E18.6 Codex — 7-7-0 concentrata su E18.2
+
+La prova development richiesta è completa e respinta. La candidata raggiunge
+topologia e fill `7-7-0` in 14/14, ma perde `0-14` contro E18.2. Le move non
+scendono (`+0,32%`), le productive calano del `5,70%`, il rapporto
+move/productive peggiora del `6,38%`, i PASS crescono del `23,26%` e harvest
+scende del `6,90%`. Money `58.957,00` contro `71.104,43`. Il cap 15 su 14
+slot produce inoltre una perdita verificata per match. Holdout/final non
+consumati e nessun upload autorizzato.
+
+- report: `docs/model_specs/codex/e18/reports/E18_6_CONCENTRATED_770_THROUGHPUT_DEV_GATE_REPORT_IT.md`;
+- artifact: `docs/model_specs/codex/e18/artifacts/derived/E18_6_CONCENTRATED_770_THROUGHPUT_DEV_GATE_V1.json`;
+- model spec: `docs/model_specs/codex/MODEL_SPEC_CODEX_E18_6_CONCENTRATED_770_THROUGHPUT_V1.md`.
+
+La concentrazione geometrica è possibile, ma un overlay sulle rotte 7-7-5
+non risparmia lavoro: prima di una nuova ablation serve un lifecycle/router
+nativo per il Q2 crop-only.
+
 ## E18.4 Codex — state-driven 7-7-2 V1
 
 La prima implementazione con handoff completo D11 è congelata come
@@ -9,23 +42,72 @@ topologia esatta e fill 16/16 in 14/14, senza fughe o errori, ma chiude a
 è preservata (95,23% del controllo), mentre il dispatcher produce +29,35% di
 movimenti e -20,95% di azioni produttive. Nessun upload Kaggle.
 
-- report: `reports/codex/E18_4_STATE_DRIVEN_772_DEV_GATE_REPORT_IT.md`
-- artifact: `artifacts/derived/codex/E18_4_STATE_DRIVEN_772_DEV_GATE_V1.json`
-- model spec: `../../docs/model_specs/codex/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V1.md`
+- report: `docs/model_specs/codex/e18/reports/E18_4_STATE_DRIVEN_772_DEV_GATE_REPORT_IT.md`
+- artifact: `docs/model_specs/codex/e18/artifacts/derived/E18_4_STATE_DRIVEN_772_DEV_GATE_V1.json`
+- model spec: `docs/model_specs/codex/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V1.md`
 - prossimo gate: località per cluster e task aging, senza modificare market o
   topologia.
+
+## E18.4 Codex — locality/task-aging V2
+
+La V2 è stata costruita e respinta a Gate A sui 14 match development. Elimina
+le violazioni tecniche del dispatcher (`0` thrashing, `0` PASS azionabili),
+mantiene topologia 7-7-2 e fill 16/16 in 14/14, ma non raggiunge la parità di
+lavoro: `4.477,43` move, `2.217,43` azioni produttive e rapporto `2,0192`.
+Chiude `0-14` a money medio `47.247,57` contro `77.644,29`. Gate B non è stato
+eseguito e non è autorizzata alcuna submission.
+
+- report: `docs/model_specs/codex/e18/reports/E18_4_STATE_DRIVEN_772_V2_DEV_GATE_REPORT_IT.md`;
+- artifact: `docs/model_specs/codex/e18/artifacts/derived/E18_4_STATE_DRIVEN_772_V2_DEV_GATE.json`;
+- model spec: `docs/model_specs/codex/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V2.md`.
+
+## E18.5 Codex — indice della linea 6-6-2
+
+La linea specifica dell'agente è conservata interamente sotto
+`docs/model_specs/codex/`. Il confronto development comune conferma un segnale
+favorevole ma non materiale sulle move (`-0,57%`) e sul rapporto
+move/productive (`-0,82%`), sotto la soglia `-5%`; integrità 14/14, nessun
+holdout/final/upload. Model spec e report:
+
+- `docs/model_specs/codex/MODEL_SPEC_CODEX_E18_5_STATE_DRIVEN_662_TOPOLOGY_ABLATION_V1.md`;
+- `docs/model_specs/codex/e18/reports/E18_5_STATE_DRIVEN_662_TOPOLOGY_ABLATION_REPORT_IT.md`.
+
+## Top 3 corrente — snapshot 2026-09-04
+
+Il benchmark comune aggiornato usa 11 head-to-head recenti fra `Crop Dusta`
+(3032,3), `Giulio Ravasio` (2967,3) e `Jesse Bullard` (2960,4). Crop chiude
+6-2 nel campione ed espone otto action shape e sette topologie; Giulio e Jesse
+sono molto più compatti e ripetono la stessa action shape in cinque profili su
+sette. Il segnale condiviso non è una geometria: tutti raggiungono
+`1,01–1,26` move/productive e `887–917` raccolti medi, contro `2,00` e `513`
+di E18.5.
+
+- report:
+  `reports/common/E18_CURRENT_TOP3_STRATEGY_RECONSTRUCTION_2026_09_04_IT.md`;
+- artifact:
+  `artifacts/discovery/E18_CURRENT_TOP3_STRATEGY_BENCHMARK_2026_09_04.json`;
+- builder:
+  `tools/common/build_e18_current_top3_strategy_benchmark.py`.
+
+Conclusione: la prossima linea Codex deve ripartire da E18.2/V4D e isolare il
+lifecycle throughput; una topologia Giulio-like Q2 crop-only viene dopo, come
+trattamento separato.
 
 ## Status
 
 ```text
-PHASE: OPEN / E18.4_V1_STATE_DRIVEN_772_REJECTED / V2_LOCALITY_GATE_PENDING
+PHASE: OPEN / E18.16_770_EXTERNAL_REGRESSION_CONFIRMED / PEER_LINES_FROZEN
 ECONOMIC_CONTROL: CODEX-E17.2-POST-FEED-CAPACITY-BATCHED-ROUTING-V4D-D28
-CANDIDATE: CODEX-E18.4-STATE-DRIVEN-772-V1 / REJECTED_NO_UPLOAD
-OBJECTIVE: LOCALITY_AWARE_STATE_DRIVEN_772_WITH_PRODUCTIVE_ACTION_PARITY
+CANDIDATE: NONE_PROMOTED / E18.16_770_EXTERNAL_REGRESSION_SCORE_729.0
+OBJECTIVE: E18.17_NATIVE_LIFECYCLE_AND_ROUTE_COMPLETION_WITH_CAP14_FEED_SAFETY
 OPENING_REPLAY: 105080066 / ANALYZED / E18_TRAINING_EVIDENCE
 OPENING_DIAGNOSIS: CROP_LIFECYCLE_SERVICE_AND_HARVEST_CADENCE_GAP
 TOP3_LIVE_2026_09_03: CROP_DUSTA / 3정훈 / SBOL_BALL
 TOP3_LIVE_CORPUS: 8_REPLAYS / BOTH_SEATS_PER_AGENT / ACQUIRED_AND_ANALYZED
+TOP3_CURRENT_2026_09_04: CROP_DUSTA_3032.3 / GIULIO_RAVASIO_2967.3 / JESSE_BULLARD_2960.4
+TOP3_CURRENT_CORPUS: 11_HEAD_TO_HEAD_REPLAYS / 22_PROFILES / BOTH_SEATS
+TOP3_CURRENT_WORK: PRODUCTIVE_3237_TO_3377 / MOVE_PRODUCTIVE_1.01_TO_1.26 / HARVEST_887_TO_917
+TOP3_CURRENT_STRUCTURE: CROP_7_TOPOLOGIES_Q2_6_OF_8 / GIULIO_AND_JESSE_Q2_ZERO_7_OF_7
 CODEX_EXTERNAL_REACTIVITY: FAIL_1_OF_3_UNIQUE_LIFECYCLE_PROFILES
 TOP3_EXTERNAL_REACTIVITY: 8_OF_8_UNIQUE_LIFECYCLE_PROFILES / 5_TOPOLOGIES
 TOP3_Q2_PASTURES: ZERO_IN_7_OF_8 / RANGE_7-0-0_TO_10-7-0_AND_8-4-3
@@ -59,8 +141,8 @@ LATEST_VS_V4D_DIRECT: 0-14 / 71831.00_VS_89760.57 / DELTA_-19.97_PERCENT
 LATEST_VS_V4D_COMMON_POOL: 125983.74_VS_143486.45 / DELTA_-12.20_PERCENT
 LATEST_VS_V4D_DIAGNOSIS: PRODUCTIVE_-6.11_PERCENT / PASS_+24.77_PERCENT / WEED_TILE_DAYS_+320_PERCENT
 ECONOMIC_CONTROL: E17_V4D_RESTORED / E18.1_ARCHITECTURAL_DIAGNOSTIC_ONLY
-ACTIVE_PEERS: CLAUDE_E18.2_REAL_ENGINE_FAIL_SAFETY_ECONOMY / COPILOT_E18.2_REAL_ENGINE_FAIL_PRODUCTIVE_CHAIN
-ANTIGRAVITY: EXCLUDED_FROM_ACTIVE_TESTS_UNTIL_NEW_RELEASE
+ACTIVE_PEERS: NONE / CLAUDE_COPILOT_ANTIGRAVITY_FROZEN_PERFORMANCE_GAP
+ANTIGRAVITY: FROZEN_PERFORMANCE_GAP
 PEER_V2_REAL_ENGINE_INTAKE: COMPLETE_84_OF_84 / V4D_ONLY_GATE_PASS
 CODEX_E18_2_DEV_GATE: PASS_9_OF_9 / 56_0 / MONEY_121149.84
 CODEX_E18_2_DIRECT_V4D: 14_0 / 93401.71_VS_90012.00 / DELTA_+3.77_PERCENT
@@ -77,7 +159,19 @@ CODEX_E18_3_CAUSAL_RESULT: EXACT_TOPOLOGY_70_OF_70_BUT_REDUCED_GEOMETRIES_FAIL_C
 CODEX_E18_4_GATE: REJECTED_0_14 / 55940_VS_83095.71 / DELTA_-32.68_PERCENT
 CODEX_E18_4_ARCHITECTURE: EXACT_772_14_OF_14 / FILL_16_OF_16_14_OF_14 / LOSSES_0
 CODEX_E18_4_WORK: MOVE_+29.35_PERCENT / PRODUCTIVE_-20.95_PERCENT / HARVEST_80.83_PERCENT_CONTROL
-NEXT_ACTION: BUILD_V2_LOCALITY_TASK_AGING_ABLATION_WITHOUT_KAGGLE_UPLOAD
+CODEX_E18_4_V2_GATE_A: FAIL_0_14 / 47247.57_VS_77644.29
+CODEX_E18_4_V2_INTEGRITY: EXACT_772_AND_FILL_16_16_14_OF_14 / PASS_ACTIONABLE_0 / THRASH_0 / LOSSES_ERRORS_FALLBACKS_0
+CODEX_E18_4_V2_WORK: MOVE_4477.43 / PRODUCTIVE_2217.43 / MOVE_PRODUCTIVE_2.0192 / HARVEST_472.57 / WEED_TD_36.36
+CODEX_E18_5_662_GATE: FAIL / MOVE_-0.57_PERCENT / MOVE_PRODUCTIVE_-0.82_PERCENT / THRESHOLD_-5_PERCENT
+CODEX_E18_5_662_ECONOMY: MONEY_+4.09_PERCENT / HARVEST_+8.59_PERCENT / WEED_TD_-40.08_PERCENT
+CODEX_E18_5_662_INTEGRITY: EXACT_AND_FILLED_14_OF_14_IN_14_OF_14 / ALL_ZERO_VIOLATIONS
+CODEX_E18_6_770_GATE: FAIL_0_14 / 58957.00_VS_71104.43 / MONEY_-17.08_PERCENT
+CODEX_E18_6_770_GEOMETRY: EXACT_AND_FILLED_770_14_OF_14 / Q2_PASTURES_0
+CODEX_E18_6_770_WORK: MOVE_+0.32_PERCENT / PRODUCTIVE_-5.70_PERCENT / MOVE_PRODUCTIVE_+6.38_PERCENT / PASS_+23.26_PERCENT
+CODEX_E18_6_770_LIFECYCLE: HARVEST_-6.90_PERCENT / HARVEST_PER_1000_MOVE_-7.19_PERCENT / LATE_UNWATERED_-2.09_PERCENT
+CODEX_E18_6_770_SAFETY: LOSSES_14 / ERRORS_FALLBACKS_BREACHES_0
+E18_16_EXTERNAL_SUBMISSION: submission/submission_codex_e18_16_770.py / COMPLETE_SCORE_729.0 / VS_E18_2_-39.24_PERCENT
+NEXT_ACTION: MONITOR_E18_16 / SPECIFY_E18_17_NATIVE_LIFECYCLE_AND_ROUTE_COMPLETION / KEEP_770
 ```
 
 ## Entry point
@@ -117,6 +211,18 @@ aggressiva osservata in Yusuf è un meccanismo specifico; il segnale condiviso
 dagli agenti leader è maggiore capacità di servizio e raccolta, con 173,7 late
 unwatered tile-days contro 224.
 
+L'analisi del 2026-09-04 sui quattro replay più recenti di E18.2 conferma lo
+stesso vincolo dopo il miglioramento esterno a rating `1215,9`: topologia Codex
+sempre `7-7-5`, circa 600 unità raccolte e 121 PASS su tile da raccogliere per
+episodio, contro 814 unità medie degli avversari su tre geometrie diverse.
+Report:
+`docs/model_specs/codex/e18/reports/E18_2_RECENT_KAGGLE_REPLAY_ANALYSIS_2026_09_04_IT.md`.
+L'ablation successiva, specificata in
+`docs/model_specs/codex/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V2.md`, ha
+modificato soltanto il dispatcher con ownership locale, task aging e carrier
+affinity. Il Gate A è fallito sui KPI di throughput; la linea è chiusa senza
+Gate B e senza upload.
+
 ## Intake Claude e Copilot
 
 Le nuove linee dichiarate da Claude e Copilot entrano nell'audit E18, non nel
@@ -136,9 +242,9 @@ soli seed development. Holdout e final restano bloccati.
 
 I capitolati della prossima iterazione sono ora separati per linea:
 
-- `prompts/claude/E18_CLAUDE_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md`:
+- `docs/model_specs/claude/e18/prompts/E18_CLAUDE_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md`:
   selector causale, lifecycle e azzeramento delle perdite zootecniche;
-- `prompts/copilot/E18_COPILOT_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md`:
+- `docs/model_specs/copilot/e18/prompts/E18_COPILOT_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md`:
   footprint/workforce dinamici, lifecycle e dimezzamento delle weed.
 
 Entrambi richiedono verdetti distinti per gate tecnico, architetturale ed
@@ -163,9 +269,9 @@ Materiali:
 - `reports/common/E18_FOUR_AGENT_REACTIVE_TOURNAMENT_V2_REPORT_IT.md`;
 - `artifacts/derived/common/E18_FOUR_AGENT_REACTIVE_TOURNAMENT_V2.json`;
 - `tools/common/run_e18_four_agent_reactive_tournament_v2.py`;
-- `prompts/claude/E18_CLAUDE_OPPONENT_REACTIVE_V2_REMEDIATION_PROMPT_IT.md`;
-- `prompts/copilot/E18_COPILOT_OPPONENT_REACTIVE_V2_REMEDIATION_PROMPT_IT.md`;
-- `prompts/antigravity/E18_ANTIGRAVITY_REACTIVE_V1_REBOOT_PROMPT_IT.md`.
+- `docs/model_specs/claude/e18/prompts/E18_CLAUDE_OPPONENT_REACTIVE_V2_REMEDIATION_PROMPT_IT.md`;
+- `docs/model_specs/copilot/e18/prompts/E18_COPILOT_OPPONENT_REACTIVE_V2_REMEDIATION_PROMPT_IT.md`;
+- `docs/model_specs/antigravity/e18/prompts/E18_ANTIGRAVITY_REACTIVE_V1_REBOOT_PROMPT_IT.md`.
 
 Per Codex non viene aperta una V2 locale sulla sola evidenza del torneo: la
 calibrazione attende la stabilizzazione della submission Kaggle e l'analisi
@@ -190,10 +296,10 @@ economico; E18.1 resta soltanto una diagnostica architetturale.
 
 Materiali:
 
-- `reports/codex/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_REPORT_IT.md`;
-- `artifacts/derived/codex/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_V1.json`;
-- `artifacts/derived/codex/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_V1.csv`;
-- `tools/codex/run_e18_latest_vs_e17_v4d_benchmark.py`.
+- `docs/model_specs/codex/e18/reports/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_REPORT_IT.md`;
+- `docs/model_specs/codex/e18/artifacts/derived/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_V1.json`;
+- `docs/model_specs/codex/e18/artifacts/derived/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_V1.csv`;
+- `docs/model_specs/codex/e18/tools/run_e18_latest_vs_e17_v4d_benchmark.py`.
 
 ## Roster attivo dopo le peer V2
 
@@ -225,7 +331,7 @@ e i modi action-effect `DENSE_V4D` e `RECOVERY` sono entrambi attivi.
 Lo standalone è isolato e action-parity verificato in entrambi i seat. È
 pronto per una decisione esplicita di upload, ma non è stato inviato
 automaticamente e non ha consumato holdout/final. Report:
-`reports/codex/E18_2_CAPACITY_GOVERNED_V4D_DEV_REPORT_IT.md`.
+`docs/model_specs/codex/e18/reports/E18_2_CAPACITY_GOVERNED_V4D_DEV_REPORT_IT.md`.
 
 ## Top 3 corrente e acquisizione
 
@@ -272,4 +378,4 @@ in 14/14 match; soltanto il passthrough `7-7-5` resta vicino al controllo
 Il fallimento non è quindi geometrico: i bracci ridotti perdono crop-days
 tardivi, accumulano weed-days, abbandonano più colture e raccolgono meno
 unità. Nessuna submission è autorizzata. Report:
-`reports/codex/E18_3_CODEX_INTERNAL_TOPOLOGY_ABLATION_REPORT_IT.md`.
+`docs/model_specs/codex/e18/reports/E18_3_CODEX_INTERNAL_TOPOLOGY_ABLATION_REPORT_IT.md`.

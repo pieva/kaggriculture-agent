@@ -18,10 +18,7 @@ from agricola.core.observation_contract import CodexObservationAdapter
 POLICY_VERSION = "COPILOT-E18.2-OPPONENT-REACTIVE-V2"
 DEFAULT_CONFIG_PATH = (
     Path(__file__).resolve().parents[4]
-    / "experiments"
-    / "e18"
-    / "configs"
-    / "copilot"
+    / "docs" / "model_specs" / "copilot" / "e18" / "configs"
     / "COPILOT_E18_2_OPPONENT_REACTIVE_V2.json"
 )
 SAFE_PASS = {"farmer": ["PASS"], "hands": [], "market": []}

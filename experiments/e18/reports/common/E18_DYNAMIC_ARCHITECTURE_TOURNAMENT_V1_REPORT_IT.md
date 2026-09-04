@@ -120,7 +120,7 @@ fornire:
 - CSV: `experiments/e18/artifacts/derived/common/E18_DYNAMIC_ARCHITECTURE_TOURNAMENT_V1.csv`;
 - runner: `experiments/e18/tools/common/run_e18_dynamic_architecture_tournament_v1.py`;
 - candidate: `src/agricola/strategy/codex/codex_e18_opponent_reactive_topology.py`;
-- config: `experiments/e18/configs/codex/CODEX_E18_1_OPPONENT_REACTIVE_662_770_V1.json`;
+- config: `docs/model_specs/codex/e18/configs/CODEX_E18_1_OPPONENT_REACTIVE_662_770_V1.json`;
 - standalone: `submission/submission_codex_e18_opponent_reactive_662_770.py`;
 - SHA-256 standalone: `06727C1673EC289A323CE403596FAB8B272539535D27C9CEE74B8C917B78791B`;
 - parità: 719/719 contro Claude (`6-6-2`) e 719/719 contro Copilot

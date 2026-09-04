@@ -10,7 +10,7 @@
   positiva contro Codex, `+3,31%`, ma collassi trovati dal torneo a due
   candidate contro Claude V3, min `78`)
 - **Sorgente:** `src/agricola/strategy/claude/e17_reactive_3q_v6.py`
-- **Config:** `experiments/e17/configs/claude/CLAUDE_E17_1_3Q_REACTIVE_V6.json`
+- **Config:** `docs/model_specs/claude/e17/configs/CLAUDE_E17_1_3Q_REACTIVE_V6.json`
 - **Origine:** `experiments/e17/reports/common/E17_TWO_CANDIDATE_DELTA_TOURNAMENT_V3_REPORT_IT.md`
   (round-robin a 4 partecipanti, 84 match; Claude V5 9-33-0 contro
   controlli 6-6-2, 3Q raggiunto solo 28/42, minimo `78`; testa-a-testa
@@ -136,7 +136,7 @@ controlli Codex conferma il rifiuto: `0-16`, denaro medio `622,88` contro
 accede a holdout, submission o E18.
 
 Risultati in
-`experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V6_REJECTION_REPORT_IT.md`.
+`docs/model_specs/claude/e17/reports/E17_1_CLAUDE_REACTIVE_V6_REJECTION_REPORT_IT.md`.
 
 ---
 

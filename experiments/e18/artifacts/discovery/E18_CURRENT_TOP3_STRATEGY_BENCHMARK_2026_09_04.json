@@ -1,0 +1,6819 @@
+{
+  "schema_version": 1,
+  "benchmark_id": "E18_CURRENT_TOP3_STRATEGY_BENCHMARK_2026_09_04",
+  "epistemic_role": "E18_EXTERNAL_DISCOVERY_EVIDENCE",
+  "leaderboard_snapshot": {
+    "observed_at": "2026-09-04T10:21:06+02:00",
+    "url": "https://www.kaggle.com/competitions/kaggriculture/leaderboard",
+    "entries": [
+      {
+        "rank": 1,
+        "player": "Crop Dusta",
+        "owner": "Rishi Gottumukkala",
+        "rating": 3032.3
+      },
+      {
+        "rank": 2,
+        "player": "Giulio Ravasio",
+        "owner": "Giulio Ravasio",
+        "rating": 2967.3
+      },
+      {
+        "rank": 3,
+        "player": "Jesse Bullard",
+        "owner": "Jesse Bullard",
+        "rating": 2960.4
+      }
+    ]
+  },
+  "sampling_design": {
+    "episodes": 11,
+    "profiles": 22,
+    "pair_counts": {
+      "CROP_GIULIO": 4,
+      "CROP_JESSE": 4,
+      "GIULIO_JESSE": 3
+    },
+    "selection": "Recent balanced head-to-head sample among the current Top 3.",
+    "raw_replays_retained_in_repository": false
+  },
+  "corpus": [
+    {
+      "episode_id": 105380550,
+      "seed": 2082620448,
+      "players": [
+        "Crop Dusta",
+        "Giulio Ravasio"
+      ],
+      "rewards": [
+        112551.0,
+        92510.0
+      ],
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "schema_version": 1,
+      "game_version": "0.1.0",
+      "module_version": "1.32.7",
+      "raw_sha256": "007F84CC0E20DCB54A43122B0FCED2FE5507BEAC9A8AF87B3040EAE1C6E34560",
+      "raw_size_bytes": 32251324,
+      "pair": "CROP_GIULIO",
+      "replay_url": "https://www.kaggle.com/competitions/kaggriculture/episodes/105380550"
+    },
+    {
+      "episode_id": 105377081,
+      "seed": 1448469762,
+      "players": [
+        "Giulio Ravasio",
+        "Crop Dusta"
+      ],
+      "rewards": [
+        73174.0,
+        80271.0
+      ],
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "schema_version": 1,
+      "game_version": "0.1.0",
+      "module_version": "1.32.7",
+      "raw_sha256": "EEBF4DDC4B00086489DE4C438A9020DCD89D5B00368B34E0C820D4BEE525B930",
+      "raw_size_bytes": 32609058,
+      "pair": "CROP_GIULIO",
+      "replay_url": "https://www.kaggle.com/competitions/kaggriculture/episodes/105377081"
+    },
+    {
+      "episode_id": 105366473,
+      "seed": 1833818619,
+      "players": [
+        "Giulio Ravasio",
+        "Crop Dusta"
+      ],
+      "rewards": [
+        72853.0,
+        96303.0
+      ],
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "schema_version": 1,
+      "game_version": "0.1.0",
+      "module_version": "1.32.7",
+      "raw_sha256": "960644FD46E898BD4D596339553D161CFFE26A6CF110A1E51B61A350B71F0551",
+      "raw_size_bytes": 32646021,
+      "pair": "CROP_GIULIO",
+      "replay_url": "https://www.kaggle.com/competitions/kaggriculture/episodes/105366473"
+    },
+    {
+      "episode_id": 105341443,
+      "seed": 470049905,
+      "players": [
+        "Crop Dusta",
+        "Giulio Ravasio"
+      ],
+      "rewards": [
+        106395.0,
+        113106.0
+      ],
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "schema_version": 1,
+      "game_version": "0.1.0",
+      "module_version": "1.32.7",
+      "raw_sha256": "422623CE0CF0C3F8E8DA48261DDAE7D3F5F2B17585701D38AE1913F2F09CCDA7",
+      "raw_size_bytes": 32595623,
+      "pair": "CROP_GIULIO",
+      "replay_url": "https://www.kaggle.com/competitions/kaggriculture/episodes/105341443"
+    },
+    {
+      "episode_id": 105405557,
+      "seed": 1025034461,
+      "players": [
+        "Crop Dusta",
+        "Jesse Bullard"
+      ],
+      "rewards": [
+        74545.0,
+        80320.0
+      ],
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "schema_version": 1,
+      "game_version": "0.1.0",
+      "module_version": "1.32.7",
+      "raw_sha256": "EC0913AC669AEEB3A9E5A26A163E0098F3BC156D271E3DE97B2D7CA9237FB73C",
+      "raw_size_bytes": 32566577,
+      "pair": "CROP_JESSE",
+      "replay_url": "https://www.kaggle.com/competitions/kaggriculture/episodes/105405557"
+    },
+    {
+      "episode_id": 105409114,
+      "seed": 735495351,
+      "players": [
+        "Crop Dusta",
+        "Jesse Bullard"
+      ],
+      "rewards": [
+        76917.0,
+        75644.0
+      ],
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "schema_version": 1,
+      "game_version": "0.1.0",
+      "module_version": "1.32.7",
+      "raw_sha256": "ABA30FABE1355D8EDCF2370597A55D99FCFC0998A5C253B3FCA8B0EDEE96E13E",
+      "raw_size_bytes": 32465856,
+      "pair": "CROP_JESSE",
+      "replay_url": "https://www.kaggle.com/competitions/kaggriculture/episodes/105409114"
+    },
+    {
+      "episode_id": 105398548,
+      "seed": 1129709742,
+      "players": [
+        "Jesse Bullard",
+        "Crop Dusta"
+      ],
+      "rewards": [
+        113002.0,
+        127061.0
+      ],
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "schema_version": 1,
+      "game_version": "0.1.0",
+      "module_version": "1.32.7",
+      "raw_sha256": "BDBDE8F16EEEA3371B9D698867EED840522762085A5571BD573856F0DECDBC85",
+      "raw_size_bytes": 33299421,
+      "pair": "CROP_JESSE",
+      "replay_url": "https://www.kaggle.com/competitions/kaggriculture/episodes/105398548"
+    },
+    {
+      "episode_id": 105384058,
+      "seed": 847999973,
+      "players": [
+        "Jesse Bullard",
+        "Crop Dusta"
+      ],
+      "rewards": [
+        59508.0,
+        61218.0
+      ],
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "schema_version": 1,
+      "game_version": "0.1.0",
+      "module_version": "1.32.7",
+      "raw_sha256": "86CF6EDB52CC13257808D2F1482C87AE1BCB957381D8E63FE0E2F0BFAB2AC032",
+      "raw_size_bytes": 32169317,
+      "pair": "CROP_JESSE",
+      "replay_url": "https://www.kaggle.com/competitions/kaggriculture/episodes/105384058"
+    },
+    {
+      "episode_id": 105398563,
+      "seed": 1939779312,
+      "players": [
+        "Jesse Bullard",
+        "Giulio Ravasio"
+      ],
+      "rewards": [
+        120267.0,
+        119510.0
+      ],
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "schema_version": 1,
+      "game_version": "0.1.0",
+      "module_version": "1.32.7",
+      "raw_sha256": "A5A3BE63A5726BB27C978C653246C90837A74285E6F09C51D6B01F481127C9EA",
+      "raw_size_bytes": 32721608,
+      "pair": "GIULIO_JESSE",
+      "replay_url": "https://www.kaggle.com/competitions/kaggriculture/episodes/105398563"
+    },
+    {
+      "episode_id": 105395068,
+      "seed": 1419956060,
+      "players": [
+        "Giulio Ravasio",
+        "Jesse Bullard"
+      ],
+      "rewards": [
+        109848.0,
+        112727.0
+      ],
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "schema_version": 1,
+      "game_version": "0.1.0",
+      "module_version": "1.32.7",
+      "raw_sha256": "CA23F22343F554B918AE51A3C81FE1310DB78E822377D1F81B30052571C46215",
+      "raw_size_bytes": 33452211,
+      "pair": "GIULIO_JESSE",
+      "replay_url": "https://www.kaggle.com/competitions/kaggriculture/episodes/105395068"
+    },
+    {
+      "episode_id": 105391568,
+      "seed": 327329788,
+      "players": [
+        "Jesse Bullard",
+        "Giulio Ravasio"
+      ],
+      "rewards": [
+        75629.0,
+        75967.0
+      ],
+      "steps": 720,
+      "statuses": [
+        "DONE",
+        "DONE"
+      ],
+      "schema_version": 1,
+      "game_version": "0.1.0",
+      "module_version": "1.32.7",
+      "raw_sha256": "ADEFE74AE0C4A00019C472CCE4C69FA0CC91B3BDB89CD6872C6987421D3260C7",
+      "raw_size_bytes": 32714219,
+      "pair": "GIULIO_JESSE",
+      "replay_url": "https://www.kaggle.com/competitions/kaggriculture/episodes/105391568"
+    }
+  ],
+  "profiles": [
+    {
+      "episode_id": 105380550,
+      "seed": 2082620448,
+      "pair": "CROP_GIULIO",
+      "player_index": 0,
+      "player": "Crop Dusta",
+      "opponent": "Giulio Ravasio",
+      "score": 112551.0,
+      "opponent_score": 92510.0,
+      "margin": 20041.0,
+      "outcome": "WIN",
+      "raw_sha256": "007F84CC0E20DCB54A43122B0FCED2FE5507BEAC9A8AF87B3040EAE1C6E34560",
+      "action_stream_sha256": "74D84E94FF2C6CAE66C4C3FC9FCEE3E8FD59885A935B38A5DA122ED860DC5CF8",
+      "first_three_quadrants_display_day": 9,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 13,
+      "final_pastures": 19,
+      "final_animals": 13,
+      "final_pasture_topology": "9-7-3",
+      "final_pasture_by_quadrant": {
+        "Q0": 9,
+        "Q1": 7,
+        "Q2": 3
+      },
+      "peak_crops": 58,
+      "peak_crop_first_display_day": 10,
+      "crop_tile_days_total": 1203,
+      "crop_tile_days_d21_d30": 378,
+      "unwatered_tile_days_total": 398,
+      "unwatered_tile_days_d21_d30": 122,
+      "late_unwatered_per_crop_tile": 0.322751,
+      "weed_exits": 41,
+      "starved_to_weed": 4,
+      "live_crop_rotations": 0,
+      "harvested_units_total": 879,
+      "harvested_units": {
+        "CARROT": 111,
+        "MELON": 66,
+        "STRAWBERRY": 194,
+        "TOMATO": 0,
+        "WHEAT": 508
+      },
+      "planted_units": {
+        "CARROT": 31,
+        "MELON": 11,
+        "STRAWBERRY": 31,
+        "TOMATO": 0,
+        "WHEAT": 116
+      },
+      "harvest_events": {
+        "CARROT": 28,
+        "MELON": 11,
+        "STRAWBERRY": 109,
+        "WHEAT": 103
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 3.964,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.78,
+        "WHEAT": 4.932
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 100.0,
+        "HARVEST": 60.922,
+        "PLANT": 100.0,
+        "WATER": 99.786
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 103
+      },
+      "requested_sell_value": {
+        "CARROT": 5746.0,
+        "EGG": 6239.0,
+        "FERTILIZER": 11835.0,
+        "MELON": 11322.0,
+        "MILK": 3453.0,
+        "STRAWBERRY": 23611.0,
+        "WHEAT": 76418.0,
+        "WOOL": 65918.0
+      },
+      "total_requested_sell_value": 204542.0,
+      "requested_crop_sell_share_pct": 57.248,
+      "requested_livestock_sell_share_pct": 42.752,
+      "pass_on_actionable_total": 103,
+      "actions": {
+        "plant": 189,
+        "water": 978,
+        "harvest": 421,
+        "dig": 40,
+        "move": 3977,
+        "pass": 338,
+        "other_productive": 1691,
+        "unit_actions": 7634,
+        "productive": 3319,
+        "move_per_productive": 1.198252,
+        "productive_per_move": 0.834549
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 77,
+          "water": 236,
+          "harvest": 26,
+          "dig": 0,
+          "move": 841,
+          "pass": 245,
+          "other_productive": 252,
+          "unit_actions": 1677,
+          "productive": 591,
+          "move_per_productive": 1.423012,
+          "productive_per_move": 0.702735
+        },
+        "D11_D20": {
+          "plant": 44,
+          "water": 387,
+          "harvest": 160,
+          "dig": 6,
+          "move": 1674,
+          "pass": 12,
+          "other_productive": 694,
+          "unit_actions": 2977,
+          "productive": 1291,
+          "move_per_productive": 1.296669,
+          "productive_per_move": 0.771207
+        },
+        "D21_D30": {
+          "plant": 68,
+          "water": 355,
+          "harvest": 235,
+          "dig": 34,
+          "move": 1462,
+          "pass": 81,
+          "other_productive": 745,
+          "unit_actions": 2980,
+          "productive": 1437,
+          "move_per_productive": 1.017397,
+          "productive_per_move": 0.9829
+        }
+      },
+      "harvested_units_per_1000_moves": 221.02087,
+      "score_per_move": 28.300478,
+      "farm_snapshots": {
+        "D01": {
+          "money": 40.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 13,
+          "unwatered": 0,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D05": {
+          "money": 80.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 20,
+          "unwatered": 3,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "STRAWBERRY": 7,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D10": {
+          "money": 105.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 58,
+          "unwatered": 20,
+          "harvest_ready": 33,
+          "weeds": 0,
+          "pastures": 10,
+          "animals": 8,
+          "crop_mix": {
+            "MELON": 11,
+            "STRAWBERRY": 25,
+            "WHEAT": 22
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 3,
+            "Q2": 2
+          }
+        },
+        "D15": {
+          "money": 10749.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 57,
+          "unwatered": 14,
+          "harvest_ready": 26,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "MELON": 6,
+            "STRAWBERRY": 31,
+            "WHEAT": 20
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 4,
+            "Q2": 3
+          }
+        },
+        "D20": {
+          "money": 47995.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 44,
+          "unwatered": 11,
+          "harvest_ready": 15,
+          "weeds": 4,
+          "pastures": 19,
+          "animals": 17,
+          "crop_mix": {
+            "STRAWBERRY": 29,
+            "WHEAT": 15
+          },
+          "pasture_by_quadrant": {
+            "Q0": 9,
+            "Q1": 7,
+            "Q2": 3
+          }
+        },
+        "D25": {
+          "money": 77312.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 46,
+          "unwatered": 13,
+          "harvest_ready": 39,
+          "weeds": 2,
+          "pastures": 19,
+          "animals": 17,
+          "crop_mix": {
+            "CARROT": 5,
+            "STRAWBERRY": 10,
+            "WHEAT": 31
+          },
+          "pasture_by_quadrant": {
+            "Q0": 9,
+            "Q1": 7,
+            "Q2": 3
+          }
+        },
+        "D30": {
+          "money": 112551.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 3,
+          "unwatered": 3,
+          "harvest_ready": 3,
+          "weeds": 1,
+          "pastures": 19,
+          "animals": 13,
+          "crop_mix": {
+            "CARROT": 2,
+            "WHEAT": 1
+          },
+          "pasture_by_quadrant": {
+            "Q0": 9,
+            "Q1": 7,
+            "Q2": 3
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "99E5EE84960A240F2D4ED61749576811A4E1C89AEFDEE4244013916BC8DCC574",
+      "action_shape_sha256": "E66C725FFC5DF04647F3F5CA7556C63115424B6F01D4803C6FE0F1D6298C83A7"
+    },
+    {
+      "episode_id": 105380550,
+      "seed": 2082620448,
+      "pair": "CROP_GIULIO",
+      "player_index": 1,
+      "player": "Giulio Ravasio",
+      "opponent": "Crop Dusta",
+      "score": 92510.0,
+      "opponent_score": 112551.0,
+      "margin": -20041.0,
+      "outcome": "LOSS",
+      "raw_sha256": "007F84CC0E20DCB54A43122B0FCED2FE5507BEAC9A8AF87B3040EAE1C6E34560",
+      "action_stream_sha256": "761C174444B45A54A5A8E7EF1DD55E7D58B63929FF20853E79A7F1D16123A939",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 12,
+      "final_pastures": 9,
+      "final_animals": 9,
+      "final_pasture_topology": "7-2-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 2
+      },
+      "peak_crops": 62,
+      "peak_crop_first_display_day": 13,
+      "crop_tile_days_total": 1348,
+      "crop_tile_days_d21_d30": 513,
+      "unwatered_tile_days_total": 464,
+      "unwatered_tile_days_d21_d30": 201,
+      "late_unwatered_per_crop_tile": 0.391813,
+      "weed_exits": 39,
+      "starved_to_weed": 3,
+      "live_crop_rotations": 2,
+      "harvested_units_total": 884,
+      "harvested_units": {
+        "CARROT": 69,
+        "MELON": 72,
+        "STRAWBERRY": 260,
+        "TOMATO": 0,
+        "WHEAT": 483
+      },
+      "planted_units": {
+        "CARROT": 28,
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "TOMATO": 0,
+        "WHEAT": 165
+      },
+      "harvest_events": {
+        "CARROT": 25,
+        "MELON": 12,
+        "STRAWBERRY": 145,
+        "WHEAT": 160
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.76,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.793,
+        "WHEAT": 3.019
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 91.111,
+        "HARVEST": 74.672,
+        "PLANT": 100.0,
+        "WATER": 99.815
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 226,
+        "WATER": 51
+      },
+      "requested_sell_value": {
+        "CARROT": 4321.0,
+        "EGG": 9008.0,
+        "FERTILIZER": 16018.0,
+        "MELON": 16278.0,
+        "MILK": 3997.0,
+        "STRAWBERRY": 23745.0,
+        "WHEAT": 12444.0,
+        "WOOL": 30372.0
+      },
+      "total_requested_sell_value": 116183.0,
+      "requested_crop_sell_share_pct": 48.878,
+      "requested_livestock_sell_share_pct": 51.122,
+      "pass_on_actionable_total": 277,
+      "actions": {
+        "plant": 243,
+        "water": 1138,
+        "harvest": 469,
+        "dig": 45,
+        "move": 3170,
+        "pass": 882,
+        "other_productive": 1358,
+        "unit_actions": 7305,
+        "productive": 3253,
+        "move_per_productive": 0.974485,
+        "productive_per_move": 1.026183
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 239,
+          "harvest": 32,
+          "dig": 0,
+          "move": 664,
+          "pass": 379,
+          "other_productive": 304,
+          "unit_actions": 1681,
+          "productive": 638,
+          "move_per_productive": 1.040752,
+          "productive_per_move": 0.960843
+        },
+        "D11_D20": {
+          "plant": 90,
+          "water": 452,
+          "harvest": 150,
+          "dig": 5,
+          "move": 1201,
+          "pass": 320,
+          "other_productive": 546,
+          "unit_actions": 2764,
+          "productive": 1243,
+          "move_per_productive": 0.966211,
+          "productive_per_move": 1.034971
+        },
+        "D21_D30": {
+          "plant": 90,
+          "water": 447,
+          "harvest": 287,
+          "dig": 40,
+          "move": 1305,
+          "pass": 183,
+          "other_productive": 508,
+          "unit_actions": 2860,
+          "productive": 1372,
+          "move_per_productive": 0.951166,
+          "productive_per_move": 1.051341
+        }
+      },
+      "harvested_units_per_1000_moves": 278.864353,
+      "score_per_move": 29.182965,
+      "farm_snapshots": {
+        "D01": {
+          "money": 35.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 659.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 12,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 2799.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 0,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 8,
+          "animals": 8,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 2
+          }
+        },
+        "D15": {
+          "money": 23813.0,
+          "worker_slots": 11,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 24,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 9,
+          "animals": 9,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 2
+          }
+        },
+        "D20": {
+          "money": 47943.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 23,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 9,
+          "animals": 9,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 2
+          }
+        },
+        "D25": {
+          "money": 70308.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 17,
+          "harvest_ready": 39,
+          "weeds": 0,
+          "pastures": 9,
+          "animals": 9,
+          "crop_mix": {
+            "CARROT": 7,
+            "STRAWBERRY": 22,
+            "WHEAT": 32
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 2
+          }
+        },
+        "D30": {
+          "money": 92510.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 0,
+          "unwatered": 0,
+          "harvest_ready": 0,
+          "weeds": 0,
+          "pastures": 9,
+          "animals": 9,
+          "crop_mix": {},
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 2
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "33EF3FBE836DDD3B794F999CE8EEB63C86FA6FC62CC7FA72B6AF2092566D86D7",
+      "action_shape_sha256": "7876794391ADC7FFA4F627C8857F342FE5BC29D7DED0BA6F69B164D06CC1BF1C"
+    },
+    {
+      "episode_id": 105377081,
+      "seed": 1448469762,
+      "pair": "CROP_GIULIO",
+      "player_index": 0,
+      "player": "Giulio Ravasio",
+      "opponent": "Crop Dusta",
+      "score": 73174.0,
+      "opponent_score": 80271.0,
+      "margin": -7097.0,
+      "outcome": "LOSS",
+      "raw_sha256": "EEBF4DDC4B00086489DE4C438A9020DCD89D5B00368B34E0C820D4BEE525B930",
+      "action_stream_sha256": "45F7CD42B7E595129714F07962DD8F227289AF8BFF53406B0B1F360A4C74F7CB",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 12,
+      "final_pastures": 12,
+      "final_animals": 12,
+      "final_pasture_topology": "7-5-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 5
+      },
+      "peak_crops": 62,
+      "peak_crop_first_display_day": 13,
+      "crop_tile_days_total": 1350,
+      "crop_tile_days_d21_d30": 515,
+      "unwatered_tile_days_total": 458,
+      "unwatered_tile_days_d21_d30": 197,
+      "late_unwatered_per_crop_tile": 0.382524,
+      "weed_exits": 37,
+      "starved_to_weed": 1,
+      "live_crop_rotations": 2,
+      "harvested_units_total": 886,
+      "harvested_units": {
+        "CARROT": 12,
+        "MELON": 72,
+        "STRAWBERRY": 261,
+        "TOMATO": 0,
+        "WHEAT": 541
+      },
+      "planted_units": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "TOMATO": 0,
+        "WHEAT": 187
+      },
+      "harvest_events": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 145,
+        "WHEAT": 179
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.0,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.8,
+        "WHEAT": 3.022
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 90.698,
+        "HARVEST": 75.0,
+        "PLANT": 100.0,
+        "WATER": 99.819
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 135,
+        "WATER": 13
+      },
+      "requested_sell_value": {
+        "CARROT": 442.0,
+        "EGG": 3744.0,
+        "FERTILIZER": 16021.0,
+        "MELON": 16254.0,
+        "MILK": 23874.0,
+        "STRAWBERRY": 15101.0,
+        "WHEAT": 15263.0,
+        "WOOL": 7026.0
+      },
+      "total_requested_sell_value": 97725.0,
+      "requested_crop_sell_share_pct": 48.156,
+      "requested_livestock_sell_share_pct": 51.844,
+      "pass_on_actionable_total": 148,
+      "actions": {
+        "plant": 243,
+        "water": 1168,
+        "harvest": 467,
+        "dig": 43,
+        "move": 3435,
+        "pass": 559,
+        "other_productive": 1390,
+        "unit_actions": 7305,
+        "productive": 3311,
+        "move_per_productive": 1.037451,
+        "productive_per_move": 0.963901
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 248,
+          "harvest": 32,
+          "dig": 0,
+          "move": 757,
+          "pass": 265,
+          "other_productive": 316,
+          "unit_actions": 1681,
+          "productive": 659,
+          "move_per_productive": 1.14871,
+          "productive_per_move": 0.870542
+        },
+        "D11_D20": {
+          "plant": 90,
+          "water": 464,
+          "harvest": 150,
+          "dig": 5,
+          "move": 1323,
+          "pass": 175,
+          "other_productive": 557,
+          "unit_actions": 2764,
+          "productive": 1266,
+          "move_per_productive": 1.045024,
+          "productive_per_move": 0.956916
+        },
+        "D21_D30": {
+          "plant": 90,
+          "water": 456,
+          "harvest": 285,
+          "dig": 38,
+          "move": 1355,
+          "pass": 119,
+          "other_productive": 517,
+          "unit_actions": 2860,
+          "productive": 1386,
+          "move_per_productive": 0.977633,
+          "productive_per_move": 1.022878
+        }
+      },
+      "harvested_units_per_1000_moves": 257.933042,
+      "score_per_move": 21.302475,
+      "farm_snapshots": {
+        "D01": {
+          "money": 35.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 119.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 12,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 2603.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 0,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 11,
+          "animals": 11,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 5
+          }
+        },
+        "D15": {
+          "money": 26441.0,
+          "worker_slots": 11,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 24,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 5
+          }
+        },
+        "D20": {
+          "money": 41092.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 23,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 5
+          }
+        },
+        "D25": {
+          "money": 52669.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 17,
+          "harvest_ready": 39,
+          "weeds": 0,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "STRAWBERRY": 22,
+            "WHEAT": 39
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 5
+          }
+        },
+        "D30": {
+          "money": 73174.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 2,
+          "unwatered": 0,
+          "harvest_ready": 2,
+          "weeds": 1,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "WHEAT": 2
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 5
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "02DCA8F1F7A4AC80FA4008FDAF4C0AA5D4BF820D312ADAEED8FAB0B2B9580B94",
+      "action_shape_sha256": "C02B6A151272C2642C083E8282B6F8D27F0FA9688F30E4EA1129D771A5AEE60F"
+    },
+    {
+      "episode_id": 105377081,
+      "seed": 1448469762,
+      "pair": "CROP_GIULIO",
+      "player_index": 1,
+      "player": "Crop Dusta",
+      "opponent": "Giulio Ravasio",
+      "score": 80271.0,
+      "opponent_score": 73174.0,
+      "margin": 7097.0,
+      "outcome": "WIN",
+      "raw_sha256": "EEBF4DDC4B00086489DE4C438A9020DCD89D5B00368B34E0C820D4BEE525B930",
+      "action_stream_sha256": "5E1CC5C552E29B41FC85A14C52776D9F3A76DE5E1FB6954869644E63225AE3CF",
+      "first_three_quadrants_display_day": 9,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 13,
+      "final_pastures": 15,
+      "final_animals": 12,
+      "final_pasture_topology": "5-5-5",
+      "final_pasture_by_quadrant": {
+        "Q0": 5,
+        "Q1": 5,
+        "Q2": 5
+      },
+      "peak_crops": 60,
+      "peak_crop_first_display_day": 12,
+      "crop_tile_days_total": 1276,
+      "crop_tile_days_d21_d30": 447,
+      "unwatered_tile_days_total": 447,
+      "unwatered_tile_days_d21_d30": 178,
+      "late_unwatered_per_crop_tile": 0.39821,
+      "weed_exits": 33,
+      "starved_to_weed": 11,
+      "live_crop_rotations": 0,
+      "harvested_units_total": 1105,
+      "harvested_units": {
+        "CARROT": 12,
+        "MELON": 84,
+        "STRAWBERRY": 101,
+        "TOMATO": 0,
+        "WHEAT": 908
+      },
+      "planted_units": {
+        "CARROT": 11,
+        "MELON": 14,
+        "STRAWBERRY": 15,
+        "TOMATO": 0,
+        "WHEAT": 210
+      },
+      "harvest_events": {
+        "CARROT": 3,
+        "MELON": 14,
+        "STRAWBERRY": 55,
+        "WHEAT": 185
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 4.0,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.836,
+        "WHEAT": 4.908
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 100.0,
+        "HARVEST": 60.471,
+        "PLANT": 100.0,
+        "WATER": 99.606
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 128
+      },
+      "requested_sell_value": {
+        "CARROT": 288.0,
+        "EGG": 7062.0,
+        "FERTILIZER": 11564.0,
+        "MELON": 13365.0,
+        "MILK": 29400.0,
+        "STRAWBERRY": 8147.0,
+        "WHEAT": 93808.0,
+        "WOOL": 6013.0
+      },
+      "total_requested_sell_value": 169647.0,
+      "requested_crop_sell_share_pct": 68.146,
+      "requested_livestock_sell_share_pct": 31.854,
+      "pass_on_actionable_total": 128,
+      "actions": {
+        "plant": 250,
+        "water": 1058,
+        "harvest": 428,
+        "dig": 33,
+        "move": 3806,
+        "pass": 366,
+        "other_productive": 1698,
+        "unit_actions": 7639,
+        "productive": 3467,
+        "move_per_productive": 1.097779,
+        "productive_per_move": 0.91093
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 75,
+          "water": 227,
+          "harvest": 26,
+          "dig": 0,
+          "move": 837,
+          "pass": 245,
+          "other_productive": 269,
+          "unit_actions": 1679,
+          "productive": 597,
+          "move_per_productive": 1.40201,
+          "productive_per_move": 0.713262
+        },
+        "D11_D20": {
+          "plant": 89,
+          "water": 442,
+          "harvest": 177,
+          "dig": 14,
+          "move": 1510,
+          "pass": 46,
+          "other_productive": 702,
+          "unit_actions": 2980,
+          "productive": 1424,
+          "move_per_productive": 1.060393,
+          "productive_per_move": 0.943046
+        },
+        "D21_D30": {
+          "plant": 86,
+          "water": 389,
+          "harvest": 225,
+          "dig": 19,
+          "move": 1459,
+          "pass": 75,
+          "other_productive": 727,
+          "unit_actions": 2980,
+          "productive": 1446,
+          "move_per_productive": 1.00899,
+          "productive_per_move": 0.99109
+        }
+      },
+      "harvested_units_per_1000_moves": 290.331056,
+      "score_per_move": 21.090646,
+      "farm_snapshots": {
+        "D01": {
+          "money": 40.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 13,
+          "unwatered": 0,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D05": {
+          "money": 80.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 20,
+          "unwatered": 3,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "STRAWBERRY": 7,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D10": {
+          "money": 2300.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 56,
+          "unwatered": 15,
+          "harvest_ready": 41,
+          "weeds": 0,
+          "pastures": 11,
+          "animals": 11,
+          "crop_mix": {
+            "MELON": 6,
+            "STRAWBERRY": 15,
+            "WHEAT": 35
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 5,
+            "Q2": 1
+          }
+        },
+        "D15": {
+          "money": 20693.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 50,
+          "unwatered": 19,
+          "harvest_ready": 35,
+          "weeds": 8,
+          "pastures": 13,
+          "animals": 13,
+          "crop_mix": {
+            "MELON": 6,
+            "STRAWBERRY": 15,
+            "WHEAT": 29
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 5,
+            "Q2": 3
+          }
+        },
+        "D20": {
+          "money": 39371.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 56,
+          "unwatered": 18,
+          "harvest_ready": 43,
+          "weeds": 0,
+          "pastures": 15,
+          "animals": 15,
+          "crop_mix": {
+            "MELON": 8,
+            "STRAWBERRY": 13,
+            "WHEAT": 35
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 5,
+            "Q2": 5
+          }
+        },
+        "D25": {
+          "money": 58061.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 51,
+          "unwatered": 18,
+          "harvest_ready": 51,
+          "weeds": 0,
+          "pastures": 15,
+          "animals": 15,
+          "crop_mix": {
+            "MELON": 3,
+            "WHEAT": 48
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 5,
+            "Q2": 5
+          }
+        },
+        "D30": {
+          "money": 80271.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 14,
+          "unwatered": 13,
+          "harvest_ready": 14,
+          "weeds": 0,
+          "pastures": 15,
+          "animals": 12,
+          "crop_mix": {
+            "CARROT": 8,
+            "WHEAT": 6
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 5,
+            "Q2": 5
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "5C63F261E851C123B5F63451E7ED5F615F9449BB235D02B9E085256ED7FBD6E7",
+      "action_shape_sha256": "6DBE0C486289669C1008DC3B7BCD3C428B3CBF859FC56325CB7218AB2A10C422"
+    },
+    {
+      "episode_id": 105366473,
+      "seed": 1833818619,
+      "pair": "CROP_GIULIO",
+      "player_index": 0,
+      "player": "Giulio Ravasio",
+      "opponent": "Crop Dusta",
+      "score": 72853.0,
+      "opponent_score": 96303.0,
+      "margin": -23450.0,
+      "outcome": "LOSS",
+      "raw_sha256": "960644FD46E898BD4D596339553D161CFFE26A6CF110A1E51B61A350B71F0551",
+      "action_stream_sha256": "A3E9111E4013C97C0A65BF7CF3EEDD8B178D835D3842AB20C08F6D1B4886332B",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 12,
+      "final_pastures": 14,
+      "final_animals": 14,
+      "final_pasture_topology": "7-7-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "peak_crops": 62,
+      "peak_crop_first_display_day": 13,
+      "crop_tile_days_total": 1350,
+      "crop_tile_days_d21_d30": 515,
+      "unwatered_tile_days_total": 458,
+      "unwatered_tile_days_d21_d30": 197,
+      "late_unwatered_per_crop_tile": 0.382524,
+      "weed_exits": 37,
+      "starved_to_weed": 1,
+      "live_crop_rotations": 2,
+      "harvested_units_total": 886,
+      "harvested_units": {
+        "CARROT": 123,
+        "MELON": 72,
+        "STRAWBERRY": 261,
+        "TOMATO": 0,
+        "WHEAT": 430
+      },
+      "planted_units": {
+        "CARROT": 46,
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "TOMATO": 0,
+        "WHEAT": 147
+      },
+      "harvest_events": {
+        "CARROT": 43,
+        "MELON": 12,
+        "STRAWBERRY": 145,
+        "WHEAT": 142
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.86,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.8,
+        "WHEAT": 3.028
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 90.698,
+        "HARVEST": 75.0,
+        "PLANT": 100.0,
+        "WATER": 99.819
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 135,
+        "WATER": 13
+      },
+      "requested_sell_value": {
+        "CARROT": 8759.0,
+        "FERTILIZER": 17678.0,
+        "MELON": 16254.0,
+        "MILK": 23551.0,
+        "STRAWBERRY": 15986.0,
+        "WHEAT": 15398.0,
+        "WOOL": 5086.0
+      },
+      "total_requested_sell_value": 102712.0,
+      "requested_crop_sell_share_pct": 54.908,
+      "requested_livestock_sell_share_pct": 45.092,
+      "pass_on_actionable_total": 148,
+      "actions": {
+        "plant": 243,
+        "water": 1168,
+        "harvest": 467,
+        "dig": 43,
+        "move": 3435,
+        "pass": 559,
+        "other_productive": 1390,
+        "unit_actions": 7305,
+        "productive": 3311,
+        "move_per_productive": 1.037451,
+        "productive_per_move": 0.963901
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 248,
+          "harvest": 32,
+          "dig": 0,
+          "move": 757,
+          "pass": 265,
+          "other_productive": 316,
+          "unit_actions": 1681,
+          "productive": 659,
+          "move_per_productive": 1.14871,
+          "productive_per_move": 0.870542
+        },
+        "D11_D20": {
+          "plant": 90,
+          "water": 464,
+          "harvest": 150,
+          "dig": 5,
+          "move": 1323,
+          "pass": 175,
+          "other_productive": 557,
+          "unit_actions": 2764,
+          "productive": 1266,
+          "move_per_productive": 1.045024,
+          "productive_per_move": 0.956916
+        },
+        "D21_D30": {
+          "plant": 90,
+          "water": 456,
+          "harvest": 285,
+          "dig": 38,
+          "move": 1355,
+          "pass": 119,
+          "other_productive": 517,
+          "unit_actions": 2860,
+          "productive": 1386,
+          "move_per_productive": 0.977633,
+          "productive_per_move": 1.022878
+        }
+      },
+      "harvested_units_per_1000_moves": 257.933042,
+      "score_per_move": 21.209025,
+      "farm_snapshots": {
+        "D01": {
+          "money": 35.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 119.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 12,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 2401.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 0,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 13,
+          "animals": 13,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 7
+          }
+        },
+        "D15": {
+          "money": 25890.0,
+          "worker_slots": 11,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 24,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D20": {
+          "money": 43037.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 23,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D25": {
+          "money": 51906.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 17,
+          "harvest_ready": 39,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "CARROT": 21,
+            "STRAWBERRY": 22,
+            "WHEAT": 18
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D30": {
+          "money": 72853.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 2,
+          "unwatered": 0,
+          "harvest_ready": 2,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "WHEAT": 2
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "6813A06D16D4ABAF41F9C78F750CAA5741EB7D900ADEF295817B2033E1938977",
+      "action_shape_sha256": "C02B6A151272C2642C083E8282B6F8D27F0FA9688F30E4EA1129D771A5AEE60F"
+    },
+    {
+      "episode_id": 105366473,
+      "seed": 1833818619,
+      "pair": "CROP_GIULIO",
+      "player_index": 1,
+      "player": "Crop Dusta",
+      "opponent": "Giulio Ravasio",
+      "score": 96303.0,
+      "opponent_score": 72853.0,
+      "margin": 23450.0,
+      "outcome": "WIN",
+      "raw_sha256": "960644FD46E898BD4D596339553D161CFFE26A6CF110A1E51B61A350B71F0551",
+      "action_stream_sha256": "69F4F90C2D42A778E1865B62ABFE01C157DB5E32FCFF13E53A62C59E9089E037",
+      "first_three_quadrants_display_day": 9,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 13,
+      "final_pastures": 11,
+      "final_animals": 9,
+      "final_pasture_topology": "5-4-2",
+      "final_pasture_by_quadrant": {
+        "Q0": 5,
+        "Q1": 4,
+        "Q2": 2
+      },
+      "peak_crops": 64,
+      "peak_crop_first_display_day": 13,
+      "crop_tile_days_total": 1438,
+      "crop_tile_days_d21_d30": 512,
+      "unwatered_tile_days_total": 411,
+      "unwatered_tile_days_d21_d30": 139,
+      "late_unwatered_per_crop_tile": 0.271484,
+      "weed_exits": 60,
+      "starved_to_weed": 6,
+      "live_crop_rotations": 0,
+      "harvested_units_total": 941,
+      "harvested_units": {
+        "CARROT": 150,
+        "MELON": 72,
+        "STRAWBERRY": 163,
+        "TOMATO": 166,
+        "WHEAT": 390
+      },
+      "planted_units": {
+        "CARROT": 51,
+        "MELON": 12,
+        "STRAWBERRY": 24,
+        "TOMATO": 25,
+        "WHEAT": 110
+      },
+      "harvest_events": {
+        "CARROT": 43,
+        "MELON": 12,
+        "STRAWBERRY": 92,
+        "TOMATO": 49,
+        "WHEAT": 93
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 3.488,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.772,
+        "TOMATO": 3.388,
+        "WHEAT": 4.194
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 96.429,
+        "HARVEST": 75.654,
+        "PLANT": 100.0,
+        "WATER": 99.484
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 106
+      },
+      "requested_sell_value": {
+        "CARROT": 10285.0,
+        "FERTILIZER": 9913.0,
+        "MELON": 12324.0,
+        "MILK": 21708.0,
+        "STRAWBERRY": 15237.0,
+        "TOMATO": 28876.0,
+        "WHEAT": 73517.0,
+        "WOOL": 4928.0
+      },
+      "total_requested_sell_value": 176788.0,
+      "requested_crop_sell_share_pct": 79.326,
+      "requested_livestock_sell_share_pct": 20.674,
+      "pass_on_actionable_total": 106,
+      "actions": {
+        "plant": 222,
+        "water": 1192,
+        "harvest": 390,
+        "dig": 56,
+        "move": 4208,
+        "pass": 405,
+        "other_productive": 1160,
+        "unit_actions": 7633,
+        "productive": 3020,
+        "move_per_productive": 1.393377,
+        "productive_per_move": 0.717681
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 79,
+          "water": 237,
+          "harvest": 26,
+          "dig": 0,
+          "move": 822,
+          "pass": 239,
+          "other_productive": 270,
+          "unit_actions": 1673,
+          "productive": 612,
+          "move_per_productive": 1.343137,
+          "productive_per_move": 0.744526
+        },
+        "D11_D20": {
+          "plant": 87,
+          "water": 513,
+          "harvest": 160,
+          "dig": 14,
+          "move": 1659,
+          "pass": 90,
+          "other_productive": 457,
+          "unit_actions": 2980,
+          "productive": 1231,
+          "move_per_productive": 1.347685,
+          "productive_per_move": 0.742013
+        },
+        "D21_D30": {
+          "plant": 56,
+          "water": 442,
+          "harvest": 204,
+          "dig": 42,
+          "move": 1727,
+          "pass": 76,
+          "other_productive": 433,
+          "unit_actions": 2980,
+          "productive": 1177,
+          "move_per_productive": 1.46729,
+          "productive_per_move": 0.681529
+        }
+      },
+      "harvested_units_per_1000_moves": 223.621673,
+      "score_per_move": 22.885694,
+      "farm_snapshots": {
+        "D01": {
+          "money": 40.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 13,
+          "unwatered": 0,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D05": {
+          "money": 80.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 20,
+          "unwatered": 3,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "STRAWBERRY": 7,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D10": {
+          "money": 1590.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 60,
+          "unwatered": 12,
+          "harvest_ready": 36,
+          "weeds": 0,
+          "pastures": 11,
+          "animals": 11,
+          "crop_mix": {
+            "MELON": 6,
+            "STRAWBERRY": 24,
+            "WHEAT": 30
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 4,
+            "Q2": 2
+          }
+        },
+        "D15": {
+          "money": 21421.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 63,
+          "unwatered": 20,
+          "harvest_ready": 39,
+          "weeds": 0,
+          "pastures": 11,
+          "animals": 11,
+          "crop_mix": {
+            "MELON": 7,
+            "STRAWBERRY": 24,
+            "WHEAT": 32
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 4,
+            "Q2": 2
+          }
+        },
+        "D20": {
+          "money": 40814.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 64,
+          "unwatered": 13,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 11,
+          "animals": 11,
+          "crop_mix": {
+            "MELON": 6,
+            "STRAWBERRY": 22,
+            "TOMATO": 25,
+            "WHEAT": 11
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 4,
+            "Q2": 2
+          }
+        },
+        "D25": {
+          "money": 49454.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 64,
+          "unwatered": 21,
+          "harvest_ready": 39,
+          "weeds": 0,
+          "pastures": 11,
+          "animals": 11,
+          "crop_mix": {
+            "CARROT": 30,
+            "STRAWBERRY": 7,
+            "TOMATO": 25,
+            "WHEAT": 2
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 4,
+            "Q2": 2
+          }
+        },
+        "D30": {
+          "money": 96303.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 9,
+          "unwatered": 1,
+          "harvest_ready": 1,
+          "weeds": 4,
+          "pastures": 11,
+          "animals": 9,
+          "crop_mix": {
+            "TOMATO": 9
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 4,
+            "Q2": 2
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "93690B40729C596572CED76B861FE845E751C09A37DDDD558D16459733BDB0EE",
+      "action_shape_sha256": "B06699849F10C088511AAD713335B027491A25537E33F7BDEDA91C5B81EBC948"
+    },
+    {
+      "episode_id": 105341443,
+      "seed": 470049905,
+      "pair": "CROP_GIULIO",
+      "player_index": 0,
+      "player": "Crop Dusta",
+      "opponent": "Giulio Ravasio",
+      "score": 106395.0,
+      "opponent_score": 113106.0,
+      "margin": -6711.0,
+      "outcome": "LOSS",
+      "raw_sha256": "422623CE0CF0C3F8E8DA48261DDAE7D3F5F2B17585701D38AE1913F2F09CCDA7",
+      "action_stream_sha256": "8102EB4AF1CF35BBE9A07EBCD392926D9D2D05DE09C91F11785B4662ED882BA5",
+      "first_three_quadrants_display_day": 9,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 13,
+      "final_pastures": 19,
+      "final_animals": 12,
+      "final_pasture_topology": "6-5-8",
+      "final_pasture_by_quadrant": {
+        "Q0": 6,
+        "Q1": 5,
+        "Q2": 8
+      },
+      "peak_crops": 64,
+      "peak_crop_first_display_day": 11,
+      "crop_tile_days_total": 1277,
+      "crop_tile_days_d21_d30": 405,
+      "unwatered_tile_days_total": 313,
+      "unwatered_tile_days_d21_d30": 78,
+      "late_unwatered_per_crop_tile": 0.192593,
+      "weed_exits": 53,
+      "starved_to_weed": 2,
+      "live_crop_rotations": 0,
+      "harvested_units_total": 750,
+      "harvested_units": {
+        "CARROT": 48,
+        "MELON": 60,
+        "STRAWBERRY": 344,
+        "TOMATO": 0,
+        "WHEAT": 298
+      },
+      "planted_units": {
+        "CARROT": 14,
+        "MELON": 10,
+        "STRAWBERRY": 50,
+        "TOMATO": 0,
+        "WHEAT": 72
+      },
+      "harvest_events": {
+        "CARROT": 12,
+        "MELON": 10,
+        "STRAWBERRY": 188,
+        "WHEAT": 65
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 4.0,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.83,
+        "WHEAT": 4.585
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 100.0,
+        "HARVEST": 65.476,
+        "PLANT": 100.0,
+        "WATER": 99.616
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 111
+      },
+      "requested_sell_value": {
+        "CARROT": 1658.0,
+        "EGG": 4886.0,
+        "FERTILIZER": 11962.0,
+        "MELON": 10902.0,
+        "MILK": 16179.0,
+        "STRAWBERRY": 57383.0,
+        "WHEAT": 59208.0,
+        "WOOL": 22985.0
+      },
+      "total_requested_sell_value": 185163.0,
+      "requested_crop_sell_share_pct": 69.75,
+      "requested_livestock_sell_share_pct": 30.25,
+      "pass_on_actionable_total": 111,
+      "actions": {
+        "plant": 146,
+        "water": 1073,
+        "harvest": 431,
+        "dig": 51,
+        "move": 4085,
+        "pass": 298,
+        "other_productive": 1544,
+        "unit_actions": 7628,
+        "productive": 3245,
+        "move_per_productive": 1.25886,
+        "productive_per_move": 0.79437
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 88,
+          "water": 247,
+          "harvest": 32,
+          "dig": 2,
+          "move": 813,
+          "pass": 216,
+          "other_productive": 273,
+          "unit_actions": 1671,
+          "productive": 642,
+          "move_per_productive": 1.266355,
+          "productive_per_move": 0.789668
+        },
+        "D11_D20": {
+          "plant": 18,
+          "water": 455,
+          "harvest": 133,
+          "dig": 5,
+          "move": 1691,
+          "pass": 27,
+          "other_productive": 648,
+          "unit_actions": 2977,
+          "productive": 1259,
+          "move_per_productive": 1.343129,
+          "productive_per_move": 0.74453
+        },
+        "D21_D30": {
+          "plant": 40,
+          "water": 371,
+          "harvest": 266,
+          "dig": 44,
+          "move": 1581,
+          "pass": 55,
+          "other_productive": 623,
+          "unit_actions": 2980,
+          "productive": 1344,
+          "move_per_productive": 1.176339,
+          "productive_per_move": 0.850095
+        }
+      },
+      "harvested_units_per_1000_moves": 183.598531,
+      "score_per_move": 26.045288,
+      "farm_snapshots": {
+        "D01": {
+          "money": 40.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 13,
+          "unwatered": 0,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D05": {
+          "money": 85.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 20,
+          "unwatered": 3,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "STRAWBERRY": 7,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D10": {
+          "money": 111.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 62,
+          "unwatered": 16,
+          "harvest_ready": 22,
+          "weeds": 0,
+          "pastures": 11,
+          "animals": 11,
+          "crop_mix": {
+            "MELON": 6,
+            "STRAWBERRY": 40,
+            "WHEAT": 16
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 4,
+            "Q2": 2
+          }
+        },
+        "D15": {
+          "money": 15540.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 55,
+          "unwatered": 10,
+          "harvest_ready": 6,
+          "weeds": 3,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "MELON": 5,
+            "STRAWBERRY": 50
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 4,
+            "Q2": 4
+          }
+        },
+        "D20": {
+          "money": 36953.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 52,
+          "unwatered": 9,
+          "harvest_ready": 9,
+          "weeds": 1,
+          "pastures": 19,
+          "animals": 15,
+          "crop_mix": {
+            "MELON": 4,
+            "STRAWBERRY": 47,
+            "WHEAT": 1
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 5,
+            "Q2": 8
+          }
+        },
+        "D25": {
+          "money": 83302.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 49,
+          "unwatered": 11,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 19,
+          "animals": 15,
+          "crop_mix": {
+            "STRAWBERRY": 33,
+            "WHEAT": 16
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 5,
+            "Q2": 8
+          }
+        },
+        "D30": {
+          "money": 106395.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 6,
+          "unwatered": 5,
+          "harvest_ready": 5,
+          "weeds": 3,
+          "pastures": 19,
+          "animals": 12,
+          "crop_mix": {
+            "CARROT": 2,
+            "STRAWBERRY": 1,
+            "WHEAT": 3
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 5,
+            "Q2": 8
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "9D0A278CF7FE22FD79B95869FB2AFA9C2884FB24DAF40FD69BE36FFF379584ED",
+      "action_shape_sha256": "2F1ABAF9B0138011047F56AEE9445475F31A682A9E5120ED3E13DFC283196B43"
+    },
+    {
+      "episode_id": 105341443,
+      "seed": 470049905,
+      "pair": "CROP_GIULIO",
+      "player_index": 1,
+      "player": "Giulio Ravasio",
+      "opponent": "Crop Dusta",
+      "score": 113106.0,
+      "opponent_score": 106395.0,
+      "margin": 6711.0,
+      "outcome": "WIN",
+      "raw_sha256": "422623CE0CF0C3F8E8DA48261DDAE7D3F5F2B17585701D38AE1913F2F09CCDA7",
+      "action_stream_sha256": "5F3E66786307382880C17DDAA67B6431E58D4EE80CA853B4B6D50395427E3280",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 12,
+      "final_pastures": 12,
+      "final_animals": 12,
+      "final_pasture_topology": "7-5-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 5
+      },
+      "peak_crops": 62,
+      "peak_crop_first_display_day": 13,
+      "crop_tile_days_total": 1350,
+      "crop_tile_days_d21_d30": 515,
+      "unwatered_tile_days_total": 458,
+      "unwatered_tile_days_d21_d30": 197,
+      "late_unwatered_per_crop_tile": 0.382524,
+      "weed_exits": 37,
+      "starved_to_weed": 1,
+      "live_crop_rotations": 2,
+      "harvested_units_total": 886,
+      "harvested_units": {
+        "CARROT": 12,
+        "MELON": 72,
+        "STRAWBERRY": 261,
+        "TOMATO": 0,
+        "WHEAT": 541
+      },
+      "planted_units": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "TOMATO": 0,
+        "WHEAT": 187
+      },
+      "harvest_events": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 145,
+        "WHEAT": 179
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.0,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.8,
+        "WHEAT": 3.022
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 90.698,
+        "HARVEST": 75.0,
+        "PLANT": 100.0,
+        "WATER": 99.819
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 135,
+        "WATER": 13
+      },
+      "requested_sell_value": {
+        "CARROT": 509.0,
+        "EGG": 3712.0,
+        "FERTILIZER": 15734.0,
+        "MELON": 16278.0,
+        "MILK": 15496.0,
+        "STRAWBERRY": 45697.0,
+        "WHEAT": 16515.0,
+        "WOOL": 23974.0
+      },
+      "total_requested_sell_value": 137915.0,
+      "requested_crop_sell_share_pct": 57.281,
+      "requested_livestock_sell_share_pct": 42.719,
+      "pass_on_actionable_total": 148,
+      "actions": {
+        "plant": 243,
+        "water": 1168,
+        "harvest": 467,
+        "dig": 43,
+        "move": 3435,
+        "pass": 559,
+        "other_productive": 1390,
+        "unit_actions": 7305,
+        "productive": 3311,
+        "move_per_productive": 1.037451,
+        "productive_per_move": 0.963901
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 248,
+          "harvest": 32,
+          "dig": 0,
+          "move": 757,
+          "pass": 265,
+          "other_productive": 316,
+          "unit_actions": 1681,
+          "productive": 659,
+          "move_per_productive": 1.14871,
+          "productive_per_move": 0.870542
+        },
+        "D11_D20": {
+          "plant": 90,
+          "water": 464,
+          "harvest": 150,
+          "dig": 5,
+          "move": 1323,
+          "pass": 175,
+          "other_productive": 557,
+          "unit_actions": 2764,
+          "productive": 1266,
+          "move_per_productive": 1.045024,
+          "productive_per_move": 0.956916
+        },
+        "D21_D30": {
+          "plant": 90,
+          "water": 456,
+          "harvest": 285,
+          "dig": 38,
+          "move": 1355,
+          "pass": 119,
+          "other_productive": 517,
+          "unit_actions": 2860,
+          "productive": 1386,
+          "move_per_productive": 0.977633,
+          "productive_per_move": 1.022878
+        }
+      },
+      "harvested_units_per_1000_moves": 257.933042,
+      "score_per_move": 32.927511,
+      "farm_snapshots": {
+        "D01": {
+          "money": 35.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 120.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 12,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 2676.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 0,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 11,
+          "animals": 11,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 5
+          }
+        },
+        "D15": {
+          "money": 26535.0,
+          "worker_slots": 11,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 24,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 5
+          }
+        },
+        "D20": {
+          "money": 51814.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 23,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 5
+          }
+        },
+        "D25": {
+          "money": 88187.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 17,
+          "harvest_ready": 39,
+          "weeds": 0,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "STRAWBERRY": 22,
+            "WHEAT": 39
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 5
+          }
+        },
+        "D30": {
+          "money": 113106.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 2,
+          "unwatered": 0,
+          "harvest_ready": 2,
+          "weeds": 0,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "WHEAT": 2
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 5
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "02DCA8F1F7A4AC80FA4008FDAF4C0AA5D4BF820D312ADAEED8FAB0B2B9580B94",
+      "action_shape_sha256": "C02B6A151272C2642C083E8282B6F8D27F0FA9688F30E4EA1129D771A5AEE60F"
+    },
+    {
+      "episode_id": 105405557,
+      "seed": 1025034461,
+      "pair": "CROP_JESSE",
+      "player_index": 0,
+      "player": "Crop Dusta",
+      "opponent": "Jesse Bullard",
+      "score": 74545.0,
+      "opponent_score": 80320.0,
+      "margin": -5775.0,
+      "outcome": "LOSS",
+      "raw_sha256": "EC0913AC669AEEB3A9E5A26A163E0098F3BC156D271E3DE97B2D7CA9237FB73C",
+      "action_stream_sha256": "2D7A9E6AA1C426B8FF175C56E411E85950805CE2E2BC09CEB05CB2D6736BD137",
+      "first_three_quadrants_display_day": 9,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 13,
+      "final_pastures": 11,
+      "final_animals": 8,
+      "final_pasture_topology": "5-4-2",
+      "final_pasture_by_quadrant": {
+        "Q0": 5,
+        "Q1": 4,
+        "Q2": 2
+      },
+      "peak_crops": 61,
+      "peak_crop_first_display_day": 11,
+      "crop_tile_days_total": 1353,
+      "crop_tile_days_d21_d30": 476,
+      "unwatered_tile_days_total": 370,
+      "unwatered_tile_days_d21_d30": 122,
+      "late_unwatered_per_crop_tile": 0.256303,
+      "weed_exits": 43,
+      "starved_to_weed": 3,
+      "live_crop_rotations": 0,
+      "harvested_units_total": 899,
+      "harvested_units": {
+        "CARROT": 116,
+        "MELON": 66,
+        "STRAWBERRY": 276,
+        "TOMATO": 0,
+        "WHEAT": 441
+      },
+      "planted_units": {
+        "CARROT": 34,
+        "MELON": 11,
+        "STRAWBERRY": 43,
+        "TOMATO": 0,
+        "WHEAT": 101
+      },
+      "harvest_events": {
+        "CARROT": 31,
+        "MELON": 11,
+        "STRAWBERRY": 160,
+        "WHEAT": 92
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 3.742,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.725,
+        "WHEAT": 4.793
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 100.0,
+        "HARVEST": 68.531,
+        "PLANT": 100.0,
+        "WATER": 99.639
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 97
+      },
+      "requested_sell_value": {
+        "CARROT": 5419.0,
+        "EGG": 5190.0,
+        "FERTILIZER": 10295.0,
+        "MELON": 11637.0,
+        "MILK": 10399.0,
+        "STRAWBERRY": 36521.0,
+        "WHEAT": 95143.0,
+        "WOOL": 4653.0
+      },
+      "total_requested_sell_value": 179257.0,
+      "requested_crop_sell_share_pct": 82.965,
+      "requested_livestock_sell_share_pct": 17.035,
+      "pass_on_actionable_total": 97,
+      "actions": {
+        "plant": 189,
+        "water": 1138,
+        "harvest": 439,
+        "dig": 39,
+        "move": 4145,
+        "pass": 340,
+        "other_productive": 1332,
+        "unit_actions": 7622,
+        "productive": 3137,
+        "move_per_productive": 1.321326,
+        "productive_per_move": 0.756815
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 76,
+          "water": 227,
+          "harvest": 25,
+          "dig": 1,
+          "move": 830,
+          "pass": 236,
+          "other_productive": 269,
+          "unit_actions": 1664,
+          "productive": 598,
+          "move_per_productive": 1.38796,
+          "productive_per_move": 0.720482
+        },
+        "D11_D20": {
+          "plant": 50,
+          "water": 476,
+          "harvest": 151,
+          "dig": 5,
+          "move": 1734,
+          "pass": 44,
+          "other_productive": 518,
+          "unit_actions": 2978,
+          "productive": 1200,
+          "move_per_productive": 1.445,
+          "productive_per_move": 0.692042
+        },
+        "D21_D30": {
+          "plant": 63,
+          "water": 435,
+          "harvest": 263,
+          "dig": 33,
+          "move": 1581,
+          "pass": 60,
+          "other_productive": 545,
+          "unit_actions": 2980,
+          "productive": 1339,
+          "move_per_productive": 1.180732,
+          "productive_per_move": 0.846932
+        }
+      },
+      "harvested_units_per_1000_moves": 216.887817,
+      "score_per_move": 17.984318,
+      "farm_snapshots": {
+        "D01": {
+          "money": 57.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 13,
+          "unwatered": 0,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D05": {
+          "money": 94.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 20,
+          "unwatered": 4,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "STRAWBERRY": 7,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D10": {
+          "money": 208.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 58,
+          "unwatered": 15,
+          "harvest_ready": 27,
+          "weeds": 0,
+          "pastures": 11,
+          "animals": 11,
+          "crop_mix": {
+            "MELON": 7,
+            "STRAWBERRY": 31,
+            "WHEAT": 20
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 4,
+            "Q2": 2
+          }
+        },
+        "D15": {
+          "money": 14273.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 60,
+          "unwatered": 24,
+          "harvest_ready": 18,
+          "weeds": 0,
+          "pastures": 11,
+          "animals": 11,
+          "crop_mix": {
+            "MELON": 6,
+            "STRAWBERRY": 43,
+            "WHEAT": 11
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 4,
+            "Q2": 2
+          }
+        },
+        "D20": {
+          "money": 37534.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 57,
+          "unwatered": 15,
+          "harvest_ready": 19,
+          "weeds": 2,
+          "pastures": 11,
+          "animals": 11,
+          "crop_mix": {
+            "MELON": 4,
+            "STRAWBERRY": 41,
+            "WHEAT": 12
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 4,
+            "Q2": 2
+          }
+        },
+        "D25": {
+          "money": 59615.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 56,
+          "unwatered": 21,
+          "harvest_ready": 35,
+          "weeds": 1,
+          "pastures": 11,
+          "animals": 11,
+          "crop_mix": {
+            "CARROT": 8,
+            "STRAWBERRY": 23,
+            "WHEAT": 25
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 4,
+            "Q2": 2
+          }
+        },
+        "D30": {
+          "money": 74545.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 9,
+          "unwatered": 8,
+          "harvest_ready": 7,
+          "weeds": 5,
+          "pastures": 11,
+          "animals": 8,
+          "crop_mix": {
+            "CARROT": 3,
+            "STRAWBERRY": 6
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 4,
+            "Q2": 2
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "4A23EE9F0C0124D6DA7689EF48DF53BD8217BF06F237675506D7FEBD9B34E7FA",
+      "action_shape_sha256": "45B5BBC5850DF78CC007C768B8E228F0B9851E410DD2B91A6448ED2D43FE3BA3"
+    },
+    {
+      "episode_id": 105405557,
+      "seed": 1025034461,
+      "pair": "CROP_JESSE",
+      "player_index": 1,
+      "player": "Jesse Bullard",
+      "opponent": "Crop Dusta",
+      "score": 80320.0,
+      "opponent_score": 74545.0,
+      "margin": 5775.0,
+      "outcome": "WIN",
+      "raw_sha256": "EC0913AC669AEEB3A9E5A26A163E0098F3BC156D271E3DE97B2D7CA9237FB73C",
+      "action_stream_sha256": "3167C418815379568553C9D97AAA8E6C4D758CEB6E39771EFD4911341D91C3F6",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 12,
+      "final_pastures": 14,
+      "final_animals": 14,
+      "final_pasture_topology": "7-7-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "peak_crops": 62,
+      "peak_crop_first_display_day": 13,
+      "crop_tile_days_total": 1350,
+      "crop_tile_days_d21_d30": 515,
+      "unwatered_tile_days_total": 456,
+      "unwatered_tile_days_d21_d30": 198,
+      "late_unwatered_per_crop_tile": 0.384466,
+      "weed_exits": 37,
+      "starved_to_weed": 1,
+      "live_crop_rotations": 2,
+      "harvested_units_total": 885,
+      "harvested_units": {
+        "CARROT": 93,
+        "MELON": 72,
+        "STRAWBERRY": 260,
+        "TOMATO": 0,
+        "WHEAT": 460
+      },
+      "planted_units": {
+        "CARROT": 42,
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "TOMATO": 0,
+        "WHEAT": 151
+      },
+      "harvest_events": {
+        "CARROT": 38,
+        "MELON": 12,
+        "STRAWBERRY": 145,
+        "WHEAT": 147
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.447,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.793,
+        "WHEAT": 3.129
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 90.698,
+        "HARVEST": 75.0,
+        "PLANT": 100.0,
+        "WATER": 99.82
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 102,
+        "WATER": 13
+      },
+      "requested_sell_value": {
+        "CARROT": 5327.0,
+        "FERTILIZER": 15397.0,
+        "MELON": 16290.0,
+        "MILK": 10354.0,
+        "STRAWBERRY": 36932.0,
+        "WHEAT": 10558.0,
+        "WOOL": 5302.0
+      },
+      "total_requested_sell_value": 100160.0,
+      "requested_crop_sell_share_pct": 68.997,
+      "requested_livestock_sell_share_pct": 31.003,
+      "pass_on_actionable_total": 115,
+      "actions": {
+        "plant": 243,
+        "water": 1172,
+        "harvest": 467,
+        "dig": 43,
+        "move": 3473,
+        "pass": 515,
+        "other_productive": 1392,
+        "unit_actions": 7305,
+        "productive": 3317,
+        "move_per_productive": 1.04703,
+        "productive_per_move": 0.955082
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 254,
+          "harvest": 32,
+          "dig": 0,
+          "move": 790,
+          "pass": 221,
+          "other_productive": 321,
+          "unit_actions": 1681,
+          "productive": 670,
+          "move_per_productive": 1.179104,
+          "productive_per_move": 0.848101
+        },
+        "D11_D20": {
+          "plant": 90,
+          "water": 464,
+          "harvest": 150,
+          "dig": 5,
+          "move": 1329,
+          "pass": 171,
+          "other_productive": 555,
+          "unit_actions": 2764,
+          "productive": 1264,
+          "move_per_productive": 1.051424,
+          "productive_per_move": 0.951091
+        },
+        "D21_D30": {
+          "plant": 90,
+          "water": 454,
+          "harvest": 285,
+          "dig": 38,
+          "move": 1354,
+          "pass": 123,
+          "other_productive": 516,
+          "unit_actions": 2860,
+          "productive": 1383,
+          "move_per_productive": 0.979031,
+          "productive_per_move": 1.021418
+        }
+      },
+      "harvested_units_per_1000_moves": 254.82292,
+      "score_per_move": 23.12698,
+      "farm_snapshots": {
+        "D01": {
+          "money": 75.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 901.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 12,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 3878.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 0,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 13,
+          "animals": 13,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 7
+          }
+        },
+        "D15": {
+          "money": 25489.0,
+          "worker_slots": 11,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 24,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D20": {
+          "money": 45162.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 23,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D25": {
+          "money": 66336.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 17,
+          "harvest_ready": 39,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 22,
+            "WHEAT": 39
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D30": {
+          "money": 80320.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 2,
+          "unwatered": 0,
+          "harvest_ready": 2,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "CARROT": 2
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "407758E8C8F9C269C8E03FF6546FFB4F9BE5037F7545453378093A0834596026",
+      "action_shape_sha256": "0BC483B2339EC9415153DE0854B46FCE3DD4A96F0D17D120206BACFF10A6A7EB"
+    },
+    {
+      "episode_id": 105409114,
+      "seed": 735495351,
+      "pair": "CROP_JESSE",
+      "player_index": 0,
+      "player": "Crop Dusta",
+      "opponent": "Jesse Bullard",
+      "score": 76917.0,
+      "opponent_score": 75644.0,
+      "margin": 1273.0,
+      "outcome": "WIN",
+      "raw_sha256": "ABA30FABE1355D8EDCF2370597A55D99FCFC0998A5C253B3FCA8B0EDEE96E13E",
+      "action_stream_sha256": "BE8FA62B20BFAB3A644762A77350DF60E56D89640D288033E4DAD412A726455B",
+      "first_three_quadrants_display_day": 9,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 13,
+      "final_pastures": 6,
+      "final_animals": 0,
+      "final_pasture_topology": "5-1-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 5,
+        "Q1": 1
+      },
+      "peak_crops": 64,
+      "peak_crop_first_display_day": 10,
+      "crop_tile_days_total": 1319,
+      "crop_tile_days_d21_d30": 437,
+      "unwatered_tile_days_total": 392,
+      "unwatered_tile_days_d21_d30": 126,
+      "late_unwatered_per_crop_tile": 0.28833,
+      "weed_exits": 42,
+      "starved_to_weed": 3,
+      "live_crop_rotations": 0,
+      "harvested_units_total": 924,
+      "harvested_units": {
+        "CARROT": 20,
+        "MELON": 64,
+        "STRAWBERRY": 237,
+        "TOMATO": 0,
+        "WHEAT": 603
+      },
+      "planted_units": {
+        "CARROT": 5,
+        "MELON": 11,
+        "STRAWBERRY": 39,
+        "TOMATO": 0,
+        "WHEAT": 133
+      },
+      "harvest_events": {
+        "CARROT": 5,
+        "MELON": 11,
+        "STRAWBERRY": 140,
+        "WHEAT": 123
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 4.0,
+        "MELON": 5.818,
+        "STRAWBERRY": 1.693,
+        "WHEAT": 4.902
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 100.0,
+        "HARVEST": 57.407,
+        "PLANT": 100.0,
+        "WATER": 99.432
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 108
+      },
+      "requested_sell_value": {
+        "CARROT": 706.0,
+        "EGG": 19092.0,
+        "FERTILIZER": 10546.0,
+        "MELON": 11225.0,
+        "MILK": 3737.0,
+        "STRAWBERRY": 30830.0,
+        "WHEAT": 61408.0,
+        "WOOL": 4755.0
+      },
+      "total_requested_sell_value": 142299.0,
+      "requested_crop_sell_share_pct": 73.204,
+      "requested_livestock_sell_share_pct": 26.796,
+      "pass_on_actionable_total": 108,
+      "actions": {
+        "plant": 188,
+        "water": 1092,
+        "harvest": 489,
+        "dig": 41,
+        "move": 4147,
+        "pass": 313,
+        "other_productive": 1357,
+        "unit_actions": 7627,
+        "productive": 3167,
+        "move_per_productive": 1.309441,
+        "productive_per_move": 0.763685
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 82,
+          "water": 233,
+          "harvest": 25,
+          "dig": 0,
+          "move": 822,
+          "pass": 251,
+          "other_productive": 254,
+          "unit_actions": 1667,
+          "productive": 594,
+          "move_per_productive": 1.383838,
+          "productive_per_move": 0.722628
+        },
+        "D11_D20": {
+          "plant": 50,
+          "water": 469,
+          "harvest": 190,
+          "dig": 4,
+          "move": 1711,
+          "pass": 21,
+          "other_productive": 535,
+          "unit_actions": 2980,
+          "productive": 1248,
+          "move_per_productive": 1.370994,
+          "productive_per_move": 0.729398
+        },
+        "D21_D30": {
+          "plant": 56,
+          "water": 390,
+          "harvest": 274,
+          "dig": 37,
+          "move": 1614,
+          "pass": 41,
+          "other_productive": 568,
+          "unit_actions": 2980,
+          "productive": 1325,
+          "move_per_productive": 1.218113,
+          "productive_per_move": 0.820942
+        }
+      },
+      "harvested_units_per_1000_moves": 222.811671,
+      "score_per_move": 18.547625,
+      "farm_snapshots": {
+        "D01": {
+          "money": 57.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 13,
+          "unwatered": 0,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D05": {
+          "money": 94.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 20,
+          "unwatered": 4,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "STRAWBERRY": 7,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D10": {
+          "money": 968.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 64,
+          "unwatered": 21,
+          "harvest_ready": 34,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 11,
+            "STRAWBERRY": 30,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 1
+          }
+        },
+        "D15": {
+          "money": 11547.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 57,
+          "unwatered": 17,
+          "harvest_ready": 18,
+          "weeds": 1,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 6,
+            "STRAWBERRY": 39,
+            "WHEAT": 12
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 1
+          }
+        },
+        "D20": {
+          "money": 39500.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 58,
+          "unwatered": 12,
+          "harvest_ready": 22,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "STRAWBERRY": 37,
+            "WHEAT": 21
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 1
+          }
+        },
+        "D25": {
+          "money": 59307.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 55,
+          "unwatered": 23,
+          "harvest_ready": 40,
+          "weeds": 1,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "STRAWBERRY": 17,
+            "WHEAT": 38
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 1
+          }
+        },
+        "D30": {
+          "money": 76917.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 4,
+          "unwatered": 2,
+          "harvest_ready": 3,
+          "weeds": 1,
+          "pastures": 6,
+          "animals": 0,
+          "crop_mix": {
+            "STRAWBERRY": 4
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5,
+            "Q1": 1
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "F16ED3345CD9BE8F1B9032A1B9B502D254471C4426A86851D20A78FD11B402EC",
+      "action_shape_sha256": "3D76ED7CA97C924B379244776A1E40E3892212137E1114AB319802A26687E500"
+    },
+    {
+      "episode_id": 105409114,
+      "seed": 735495351,
+      "pair": "CROP_JESSE",
+      "player_index": 1,
+      "player": "Jesse Bullard",
+      "opponent": "Crop Dusta",
+      "score": 75644.0,
+      "opponent_score": 76917.0,
+      "margin": -1273.0,
+      "outcome": "LOSS",
+      "raw_sha256": "ABA30FABE1355D8EDCF2370597A55D99FCFC0998A5C253B3FCA8B0EDEE96E13E",
+      "action_stream_sha256": "448ECAA812C37CEE5A15AC464D8C27195890AD7F682C1ECD690664DF006E6FDF",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 12,
+      "final_pastures": 10,
+      "final_animals": 10,
+      "final_pasture_topology": "7-3-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 3
+      },
+      "peak_crops": 62,
+      "peak_crop_first_display_day": 13,
+      "crop_tile_days_total": 1350,
+      "crop_tile_days_d21_d30": 515,
+      "unwatered_tile_days_total": 456,
+      "unwatered_tile_days_d21_d30": 198,
+      "late_unwatered_per_crop_tile": 0.384466,
+      "weed_exits": 38,
+      "starved_to_weed": 2,
+      "live_crop_rotations": 2,
+      "harvested_units_total": 885,
+      "harvested_units": {
+        "CARROT": 12,
+        "MELON": 72,
+        "STRAWBERRY": 260,
+        "TOMATO": 0,
+        "WHEAT": 541
+      },
+      "planted_units": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "TOMATO": 0,
+        "WHEAT": 187
+      },
+      "harvest_events": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 145,
+        "WHEAT": 179
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.0,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.793,
+        "WHEAT": 3.022
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 90.698,
+        "HARVEST": 75.0,
+        "PLANT": 100.0,
+        "WATER": 99.82
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 102,
+        "WATER": 13
+      },
+      "requested_sell_value": {
+        "CARROT": 438.0,
+        "EGG": 8128.0,
+        "FERTILIZER": 15416.0,
+        "MELON": 16290.0,
+        "MILK": 4026.0,
+        "STRAWBERRY": 31384.0,
+        "WHEAT": 16616.0,
+        "WOOL": 5178.0
+      },
+      "total_requested_sell_value": 97476.0,
+      "requested_crop_sell_share_pct": 66.404,
+      "requested_livestock_sell_share_pct": 33.596,
+      "pass_on_actionable_total": 115,
+      "actions": {
+        "plant": 243,
+        "water": 1172,
+        "harvest": 467,
+        "dig": 43,
+        "move": 3473,
+        "pass": 515,
+        "other_productive": 1392,
+        "unit_actions": 7305,
+        "productive": 3317,
+        "move_per_productive": 1.04703,
+        "productive_per_move": 0.955082
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 254,
+          "harvest": 32,
+          "dig": 0,
+          "move": 790,
+          "pass": 221,
+          "other_productive": 321,
+          "unit_actions": 1681,
+          "productive": 670,
+          "move_per_productive": 1.179104,
+          "productive_per_move": 0.848101
+        },
+        "D11_D20": {
+          "plant": 90,
+          "water": 464,
+          "harvest": 150,
+          "dig": 5,
+          "move": 1329,
+          "pass": 171,
+          "other_productive": 555,
+          "unit_actions": 2764,
+          "productive": 1264,
+          "move_per_productive": 1.051424,
+          "productive_per_move": 0.951091
+        },
+        "D21_D30": {
+          "plant": 90,
+          "water": 454,
+          "harvest": 285,
+          "dig": 38,
+          "move": 1354,
+          "pass": 123,
+          "other_productive": 516,
+          "unit_actions": 2860,
+          "productive": 1383,
+          "move_per_productive": 0.979031,
+          "productive_per_move": 1.021418
+        }
+      },
+      "harvested_units_per_1000_moves": 254.82292,
+      "score_per_move": 21.780593,
+      "farm_snapshots": {
+        "D01": {
+          "money": 75.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 901.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 12,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 4005.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 0,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 9,
+          "animals": 9,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 3
+          }
+        },
+        "D15": {
+          "money": 21163.0,
+          "worker_slots": 11,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 24,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 10,
+          "animals": 10,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 3
+          }
+        },
+        "D20": {
+          "money": 41549.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 23,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 10,
+          "animals": 10,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 3
+          }
+        },
+        "D25": {
+          "money": 61577.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 17,
+          "harvest_ready": 39,
+          "weeds": 0,
+          "pastures": 10,
+          "animals": 10,
+          "crop_mix": {
+            "STRAWBERRY": 22,
+            "WHEAT": 39
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 3
+          }
+        },
+        "D30": {
+          "money": 75644.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 2,
+          "unwatered": 0,
+          "harvest_ready": 2,
+          "weeds": 1,
+          "pastures": 10,
+          "animals": 10,
+          "crop_mix": {
+            "WHEAT": 2
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 3
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "2B9D2A467CB39A5360506D816A36F0678D16AA3D2D1C3235DDB860460C505870",
+      "action_shape_sha256": "0BC483B2339EC9415153DE0854B46FCE3DD4A96F0D17D120206BACFF10A6A7EB"
+    },
+    {
+      "episode_id": 105398548,
+      "seed": 1129709742,
+      "pair": "CROP_JESSE",
+      "player_index": 0,
+      "player": "Jesse Bullard",
+      "opponent": "Crop Dusta",
+      "score": 113002.0,
+      "opponent_score": 127061.0,
+      "margin": -14059.0,
+      "outcome": "LOSS",
+      "raw_sha256": "BDBDE8F16EEEA3371B9D698867EED840522762085A5571BD573856F0DECDBC85",
+      "action_stream_sha256": "61718584D39F12FDC1FCB2E94AE0A6E2A94032525B74B59F1C7EA338CF668FC6",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 11,
+      "peak_workers": 14,
+      "final_workers": 13,
+      "final_pastures": 17,
+      "final_animals": 17,
+      "final_pasture_topology": "10-7-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 10,
+        "Q1": 7
+      },
+      "peak_crops": 64,
+      "peak_crop_first_display_day": 18,
+      "crop_tile_days_total": 1351,
+      "crop_tile_days_d21_d30": 533,
+      "unwatered_tile_days_total": 457,
+      "unwatered_tile_days_d21_d30": 184,
+      "late_unwatered_per_crop_tile": 0.345216,
+      "weed_exits": 25,
+      "starved_to_weed": 1,
+      "live_crop_rotations": 14,
+      "harvested_units_total": 949,
+      "harvested_units": {
+        "CARROT": 88,
+        "MELON": 72,
+        "STRAWBERRY": 237,
+        "TOMATO": 46,
+        "WHEAT": 506
+      },
+      "planted_units": {
+        "CARROT": 37,
+        "MELON": 12,
+        "STRAWBERRY": 33,
+        "TOMATO": 6,
+        "WHEAT": 157
+      },
+      "harvest_events": {
+        "CARROT": 35,
+        "MELON": 12,
+        "STRAWBERRY": 122,
+        "TOMATO": 22,
+        "WHEAT": 155
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.514,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.943,
+        "TOMATO": 2.091,
+        "WHEAT": 3.265
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 91.667,
+        "HARVEST": 74.569,
+        "PLANT": 100.0,
+        "WATER": 99.366
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 196,
+        "WATER": 1
+      },
+      "requested_sell_value": {
+        "CARROT": 4390.0,
+        "FERTILIZER": 13667.0,
+        "MELON": 16338.0,
+        "MILK": 31868.0,
+        "STRAWBERRY": 22438.0,
+        "TOMATO": 9614.0,
+        "WHEAT": 10047.0,
+        "WOOL": 29331.0
+      },
+      "total_requested_sell_value": 137693.0,
+      "requested_crop_sell_share_pct": 45.628,
+      "requested_livestock_sell_share_pct": 54.372,
+      "pass_on_actionable_total": 197,
+      "actions": {
+        "plant": 245,
+        "water": 1166,
+        "harvest": 481,
+        "dig": 36,
+        "move": 3060,
+        "pass": 794,
+        "other_productive": 1528,
+        "unit_actions": 7310,
+        "productive": 3456,
+        "move_per_productive": 0.885417,
+        "productive_per_move": 1.129412
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 233,
+          "harvest": 32,
+          "dig": 1,
+          "move": 621,
+          "pass": 341,
+          "other_productive": 304,
+          "unit_actions": 1595,
+          "productive": 633,
+          "move_per_productive": 0.981043,
+          "productive_per_move": 1.019324
+        },
+        "D11_D20": {
+          "plant": 93,
+          "water": 449,
+          "harvest": 156,
+          "dig": 2,
+          "move": 1162,
+          "pass": 241,
+          "other_productive": 637,
+          "unit_actions": 2740,
+          "productive": 1337,
+          "move_per_productive": 0.86911,
+          "productive_per_move": 1.150602
+        },
+        "D21_D30": {
+          "plant": 89,
+          "water": 484,
+          "harvest": 293,
+          "dig": 33,
+          "move": 1277,
+          "pass": 212,
+          "other_productive": 587,
+          "unit_actions": 2975,
+          "productive": 1486,
+          "move_per_productive": 0.859354,
+          "productive_per_move": 1.163665
+        }
+      },
+      "harvested_units_per_1000_moves": 310.130719,
+      "score_per_move": 36.928758,
+      "farm_snapshots": {
+        "D01": {
+          "money": 75.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 896.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 14,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 4423.0,
+          "worker_slots": 10,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 5,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 13,
+          "animals": 13,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 7
+          }
+        },
+        "D15": {
+          "money": 29711.0,
+          "worker_slots": 11,
+          "quadrants": "NW NE SW",
+          "crops": 57,
+          "unwatered": 23,
+          "harvest_ready": 24,
+          "weeds": 0,
+          "pastures": 17,
+          "animals": 17,
+          "crop_mix": {
+            "STRAWBERRY": 33,
+            "WHEAT": 24
+          },
+          "pasture_by_quadrant": {
+            "Q0": 10,
+            "Q1": 7
+          }
+        },
+        "D20": {
+          "money": 61544.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW SE",
+          "crops": 64,
+          "unwatered": 26,
+          "harvest_ready": 25,
+          "weeds": 0,
+          "pastures": 17,
+          "animals": 17,
+          "crop_mix": {
+            "STRAWBERRY": 33,
+            "TOMATO": 6,
+            "WHEAT": 25
+          },
+          "pasture_by_quadrant": {
+            "Q0": 10,
+            "Q1": 7
+          }
+        },
+        "D25": {
+          "money": 80666.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW SE",
+          "crops": 64,
+          "unwatered": 21,
+          "harvest_ready": 42,
+          "weeds": 0,
+          "pastures": 17,
+          "animals": 17,
+          "crop_mix": {
+            "STRAWBERRY": 17,
+            "TOMATO": 6,
+            "WHEAT": 41
+          },
+          "pasture_by_quadrant": {
+            "Q0": 10,
+            "Q1": 7
+          }
+        },
+        "D30": {
+          "money": 113002.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW SE",
+          "crops": 0,
+          "unwatered": 0,
+          "harvest_ready": 0,
+          "weeds": 7,
+          "pastures": 17,
+          "animals": 17,
+          "crop_mix": {},
+          "pasture_by_quadrant": {
+            "Q0": 10,
+            "Q1": 7
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "B6E8E1C4669620A77F4CBA75F0BC45F9967FAD2A4DBAD5699D299A2B47BEFC6D",
+      "action_shape_sha256": "4EE519283222F54053E1AB2CE0C45BE4B2CB2E2295CA8500D6A9C7BCF6F7C551"
+    },
+    {
+      "episode_id": 105398548,
+      "seed": 1129709742,
+      "pair": "CROP_JESSE",
+      "player_index": 1,
+      "player": "Crop Dusta",
+      "opponent": "Jesse Bullard",
+      "score": 127061.0,
+      "opponent_score": 113002.0,
+      "margin": 14059.0,
+      "outcome": "WIN",
+      "raw_sha256": "BDBDE8F16EEEA3371B9D698867EED840522762085A5571BD573856F0DECDBC85",
+      "action_stream_sha256": "ABCFD40D4AB6BA39459DE48D08C192ED6864715672C384017CEEA3EDD85ABE44",
+      "first_three_quadrants_display_day": 9,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 13,
+      "final_pastures": 19,
+      "final_animals": 12,
+      "final_pasture_topology": "6-8-5",
+      "final_pasture_by_quadrant": {
+        "Q0": 6,
+        "Q1": 8,
+        "Q2": 5
+      },
+      "peak_crops": 60,
+      "peak_crop_first_display_day": 12,
+      "crop_tile_days_total": 1292,
+      "crop_tile_days_d21_d30": 437,
+      "unwatered_tile_days_total": 404,
+      "unwatered_tile_days_d21_d30": 120,
+      "late_unwatered_per_crop_tile": 0.2746,
+      "weed_exits": 50,
+      "starved_to_weed": 5,
+      "live_crop_rotations": 0,
+      "harvested_units_total": 940,
+      "harvested_units": {
+        "CARROT": 42,
+        "MELON": 72,
+        "STRAWBERRY": 160,
+        "TOMATO": 150,
+        "WHEAT": 516
+      },
+      "planted_units": {
+        "CARROT": 14,
+        "MELON": 12,
+        "STRAWBERRY": 22,
+        "TOMATO": 19,
+        "WHEAT": 129
+      },
+      "harvest_events": {
+        "CARROT": 11,
+        "MELON": 12,
+        "STRAWBERRY": 83,
+        "TOMATO": 38,
+        "WHEAT": 113
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 3.818,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.928,
+        "TOMATO": 3.947,
+        "WHEAT": 4.566
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 97.561,
+        "HARVEST": 67.81,
+        "PLANT": 100.0,
+        "WATER": 99.703
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 113
+      },
+      "requested_sell_value": {
+        "CARROT": 1672.0,
+        "FERTILIZER": 11075.0,
+        "MELON": 12312.0,
+        "MILK": 34856.0,
+        "STRAWBERRY": 17521.0,
+        "TOMATO": 28796.0,
+        "WHEAT": 82255.0,
+        "WOOL": 29241.0
+      },
+      "total_requested_sell_value": 217728.0,
+      "requested_crop_sell_share_pct": 65.474,
+      "requested_livestock_sell_share_pct": 34.526,
+      "pass_on_actionable_total": 113,
+      "actions": {
+        "plant": 196,
+        "water": 1057,
+        "harvest": 384,
+        "dig": 45,
+        "move": 4068,
+        "pass": 258,
+        "other_productive": 1633,
+        "unit_actions": 7641,
+        "productive": 3315,
+        "move_per_productive": 1.227149,
+        "productive_per_move": 0.814897
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 85,
+          "water": 246,
+          "harvest": 33,
+          "dig": 0,
+          "move": 809,
+          "pass": 229,
+          "other_productive": 280,
+          "unit_actions": 1682,
+          "productive": 644,
+          "move_per_productive": 1.256211,
+          "productive_per_move": 0.796044
+        },
+        "D11_D20": {
+          "plant": 72,
+          "water": 435,
+          "harvest": 149,
+          "dig": 12,
+          "move": 1593,
+          "pass": 18,
+          "other_productive": 700,
+          "unit_actions": 2979,
+          "productive": 1368,
+          "move_per_productive": 1.164474,
+          "productive_per_move": 0.858757
+        },
+        "D21_D30": {
+          "plant": 39,
+          "water": 376,
+          "harvest": 202,
+          "dig": 33,
+          "move": 1666,
+          "pass": 11,
+          "other_productive": 653,
+          "unit_actions": 2980,
+          "productive": 1303,
+          "move_per_productive": 1.278588,
+          "productive_per_move": 0.782113
+        }
+      },
+      "harvested_units_per_1000_moves": 231.07178,
+      "score_per_move": 31.234267,
+      "farm_snapshots": {
+        "D01": {
+          "money": 57.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 13,
+          "unwatered": 0,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D05": {
+          "money": 101.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 20,
+          "unwatered": 4,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "STRAWBERRY": 7,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D10": {
+          "money": 273.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 59,
+          "unwatered": 21,
+          "harvest_ready": 41,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 12,
+          "crop_mix": {
+            "MELON": 6,
+            "STRAWBERRY": 18,
+            "WHEAT": 35
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 5,
+            "Q2": 3
+          }
+        },
+        "D15": {
+          "money": 21819.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 54,
+          "unwatered": 17,
+          "harvest_ready": 32,
+          "weeds": 3,
+          "pastures": 18,
+          "animals": 17,
+          "crop_mix": {
+            "MELON": 6,
+            "STRAWBERRY": 22,
+            "WHEAT": 26
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 5
+          }
+        },
+        "D20": {
+          "money": 52249.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 55,
+          "unwatered": 17,
+          "harvest_ready": 16,
+          "weeds": 0,
+          "pastures": 19,
+          "animals": 19,
+          "crop_mix": {
+            "MELON": 6,
+            "STRAWBERRY": 20,
+            "TOMATO": 19,
+            "WHEAT": 10
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 8,
+            "Q2": 5
+          }
+        },
+        "D25": {
+          "money": 74981.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 54,
+          "unwatered": 17,
+          "harvest_ready": 35,
+          "weeds": 0,
+          "pastures": 19,
+          "animals": 19,
+          "crop_mix": {
+            "CARROT": 2,
+            "MELON": 1,
+            "STRAWBERRY": 8,
+            "TOMATO": 19,
+            "WHEAT": 24
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 8,
+            "Q2": 5
+          }
+        },
+        "D30": {
+          "money": 127061.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 7,
+          "unwatered": 0,
+          "harvest_ready": 0,
+          "weeds": 5,
+          "pastures": 19,
+          "animals": 12,
+          "crop_mix": {
+            "STRAWBERRY": 1,
+            "TOMATO": 6
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 8,
+            "Q2": 5
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "F4F7E68E6B31500A42EF37FBEE53C54BA2D594EB7B570DD1CFCAC31EAFFCFA79",
+      "action_shape_sha256": "00CED3CCFBBAFC56FC5F022424AE556DB1B59FD49BFA2D4713C562F3A26E0E66"
+    },
+    {
+      "episode_id": 105384058,
+      "seed": 847999973,
+      "pair": "CROP_JESSE",
+      "player_index": 0,
+      "player": "Jesse Bullard",
+      "opponent": "Crop Dusta",
+      "score": 59508.0,
+      "opponent_score": 61218.0,
+      "margin": -1710.0,
+      "outcome": "LOSS",
+      "raw_sha256": "86CF6EDB52CC13257808D2F1482C87AE1BCB957381D8E63FE0E2F0BFAB2AC032",
+      "action_stream_sha256": "F09C1538181F8D3B350FA45C77C05EDF7DFD8FD059C551831452B13C4303F491",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 12,
+      "final_pastures": 14,
+      "final_animals": 14,
+      "final_pasture_topology": "7-7-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "peak_crops": 62,
+      "peak_crop_first_display_day": 13,
+      "crop_tile_days_total": 1350,
+      "crop_tile_days_d21_d30": 515,
+      "unwatered_tile_days_total": 456,
+      "unwatered_tile_days_d21_d30": 198,
+      "late_unwatered_per_crop_tile": 0.384466,
+      "weed_exits": 37,
+      "starved_to_weed": 1,
+      "live_crop_rotations": 2,
+      "harvested_units_total": 885,
+      "harvested_units": {
+        "CARROT": 93,
+        "MELON": 72,
+        "STRAWBERRY": 260,
+        "TOMATO": 0,
+        "WHEAT": 460
+      },
+      "planted_units": {
+        "CARROT": 42,
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "TOMATO": 0,
+        "WHEAT": 151
+      },
+      "harvest_events": {
+        "CARROT": 38,
+        "MELON": 12,
+        "STRAWBERRY": 145,
+        "WHEAT": 147
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.447,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.793,
+        "WHEAT": 3.129
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 90.698,
+        "HARVEST": 75.0,
+        "PLANT": 100.0,
+        "WATER": 99.82
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 102,
+        "WATER": 13
+      },
+      "requested_sell_value": {
+        "CARROT": 4562.0,
+        "FERTILIZER": 13879.0,
+        "MELON": 16254.0,
+        "MILK": 12367.0,
+        "STRAWBERRY": 16081.0,
+        "WHEAT": 12020.0,
+        "WOOL": 5480.0
+      },
+      "total_requested_sell_value": 80643.0,
+      "requested_crop_sell_share_pct": 60.659,
+      "requested_livestock_sell_share_pct": 39.341,
+      "pass_on_actionable_total": 115,
+      "actions": {
+        "plant": 243,
+        "water": 1172,
+        "harvest": 467,
+        "dig": 43,
+        "move": 3473,
+        "pass": 515,
+        "other_productive": 1392,
+        "unit_actions": 7305,
+        "productive": 3317,
+        "move_per_productive": 1.04703,
+        "productive_per_move": 0.955082
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 254,
+          "harvest": 32,
+          "dig": 0,
+          "move": 790,
+          "pass": 221,
+          "other_productive": 321,
+          "unit_actions": 1681,
+          "productive": 670,
+          "move_per_productive": 1.179104,
+          "productive_per_move": 0.848101
+        },
+        "D11_D20": {
+          "plant": 90,
+          "water": 464,
+          "harvest": 150,
+          "dig": 5,
+          "move": 1329,
+          "pass": 171,
+          "other_productive": 555,
+          "unit_actions": 2764,
+          "productive": 1264,
+          "move_per_productive": 1.051424,
+          "productive_per_move": 0.951091
+        },
+        "D21_D30": {
+          "plant": 90,
+          "water": 454,
+          "harvest": 285,
+          "dig": 38,
+          "move": 1354,
+          "pass": 123,
+          "other_productive": 516,
+          "unit_actions": 2860,
+          "productive": 1383,
+          "move_per_productive": 0.979031,
+          "productive_per_move": 1.021418
+        }
+      },
+      "harvested_units_per_1000_moves": 254.82292,
+      "score_per_move": 17.134466,
+      "farm_snapshots": {
+        "D01": {
+          "money": 75.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 896.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 12,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 4020.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 0,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 13,
+          "animals": 13,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 7
+          }
+        },
+        "D15": {
+          "money": 27177.0,
+          "worker_slots": 11,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 24,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D20": {
+          "money": 44350.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 23,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D25": {
+          "money": 49522.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 17,
+          "harvest_ready": 39,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 22,
+            "WHEAT": 39
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D30": {
+          "money": 59508.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 2,
+          "unwatered": 0,
+          "harvest_ready": 2,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "CARROT": 2
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "407758E8C8F9C269C8E03FF6546FFB4F9BE5037F7545453378093A0834596026",
+      "action_shape_sha256": "0BC483B2339EC9415153DE0854B46FCE3DD4A96F0D17D120206BACFF10A6A7EB"
+    },
+    {
+      "episode_id": 105384058,
+      "seed": 847999973,
+      "pair": "CROP_JESSE",
+      "player_index": 1,
+      "player": "Crop Dusta",
+      "opponent": "Jesse Bullard",
+      "score": 61218.0,
+      "opponent_score": 59508.0,
+      "margin": 1710.0,
+      "outcome": "WIN",
+      "raw_sha256": "86CF6EDB52CC13257808D2F1482C87AE1BCB957381D8E63FE0E2F0BFAB2AC032",
+      "action_stream_sha256": "98D3048D4CCEC1D3B28097EBA22B0282CF4B65C507688C1F8343FD0F229532CF",
+      "first_three_quadrants_display_day": 9,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 13,
+      "final_pastures": 12,
+      "final_animals": 4,
+      "final_pasture_topology": "8-4-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 8,
+        "Q1": 4
+      },
+      "peak_crops": 57,
+      "peak_crop_first_display_day": 10,
+      "crop_tile_days_total": 1228,
+      "crop_tile_days_d21_d30": 427,
+      "unwatered_tile_days_total": 421,
+      "unwatered_tile_days_d21_d30": 143,
+      "late_unwatered_per_crop_tile": 0.334895,
+      "weed_exits": 45,
+      "starved_to_weed": 3,
+      "live_crop_rotations": 0,
+      "harvested_units_total": 901,
+      "harvested_units": {
+        "CARROT": 124,
+        "MELON": 72,
+        "STRAWBERRY": 162,
+        "TOMATO": 0,
+        "WHEAT": 543
+      },
+      "planted_units": {
+        "CARROT": 35,
+        "MELON": 12,
+        "STRAWBERRY": 28,
+        "TOMATO": 0,
+        "WHEAT": 128
+      },
+      "harvest_events": {
+        "CARROT": 33,
+        "MELON": 12,
+        "STRAWBERRY": 100,
+        "WHEAT": 110
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 3.758,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.62,
+        "WHEAT": 4.936
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 100.0,
+        "HARVEST": 58.219,
+        "PLANT": 100.0,
+        "WATER": 99.474
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 70
+      },
+      "requested_sell_value": {
+        "CARROT": 5565.0,
+        "EGG": 9775.0,
+        "FERTILIZER": 12025.0,
+        "MELON": 12316.0,
+        "MILK": 14115.0,
+        "STRAWBERRY": 11773.0,
+        "WHEAT": 84871.0,
+        "WOOL": 4422.0
+      },
+      "total_requested_sell_value": 154862.0,
+      "requested_crop_sell_share_pct": 73.953,
+      "requested_livestock_sell_share_pct": 26.047,
+      "pass_on_actionable_total": 70,
+      "actions": {
+        "plant": 203,
+        "water": 992,
+        "harvest": 447,
+        "dig": 46,
+        "move": 4032,
+        "pass": 235,
+        "other_productive": 1540,
+        "unit_actions": 7495,
+        "productive": 3228,
+        "move_per_productive": 1.249071,
+        "productive_per_move": 0.800595
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 76,
+          "water": 190,
+          "harvest": 26,
+          "dig": 1,
+          "move": 776,
+          "pass": 174,
+          "other_productive": 292,
+          "unit_actions": 1535,
+          "productive": 585,
+          "move_per_productive": 1.326496,
+          "productive_per_move": 0.753866
+        },
+        "D11_D20": {
+          "plant": 60,
+          "water": 419,
+          "harvest": 152,
+          "dig": 13,
+          "move": 1672,
+          "pass": 4,
+          "other_productive": 660,
+          "unit_actions": 2980,
+          "productive": 1304,
+          "move_per_productive": 1.282209,
+          "productive_per_move": 0.779904
+        },
+        "D21_D30": {
+          "plant": 67,
+          "water": 383,
+          "harvest": 269,
+          "dig": 32,
+          "move": 1584,
+          "pass": 57,
+          "other_productive": 588,
+          "unit_actions": 2980,
+          "productive": 1339,
+          "move_per_productive": 1.182972,
+          "productive_per_move": 0.845328
+        }
+      },
+      "harvested_units_per_1000_moves": 223.462302,
+      "score_per_move": 15.183036,
+      "farm_snapshots": {
+        "D01": {
+          "money": 57.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 13,
+          "unwatered": 0,
+          "harvest_ready": 13,
+          "weeds": 0,
+          "pastures": 5,
+          "animals": 5,
+          "crop_mix": {
+            "MELON": 5,
+            "WHEAT": 8
+          },
+          "pasture_by_quadrant": {
+            "Q0": 5
+          }
+        },
+        "D05": {
+          "money": 71.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 7,
+          "harvest_ready": 16,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 5,
+            "STRAWBERRY": 3,
+            "WHEAT": 11
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 1977.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 57,
+          "unwatered": 16,
+          "harvest_ready": 35,
+          "weeds": 0,
+          "pastures": 12,
+          "animals": 11,
+          "crop_mix": {
+            "MELON": 7,
+            "STRAWBERRY": 22,
+            "WHEAT": 28
+          },
+          "pasture_by_quadrant": {
+            "Q0": 8,
+            "Q1": 4
+          }
+        },
+        "D15": {
+          "money": 18458.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 52,
+          "unwatered": 16,
+          "harvest_ready": 24,
+          "weeds": 4,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "MELON": 4,
+            "STRAWBERRY": 28,
+            "WHEAT": 20
+          },
+          "pasture_by_quadrant": {
+            "Q0": 8,
+            "Q1": 4
+          }
+        },
+        "D20": {
+          "money": 33712.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 54,
+          "unwatered": 9,
+          "harvest_ready": 28,
+          "weeds": 1,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "MELON": 5,
+            "STRAWBERRY": 26,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 8,
+            "Q1": 4
+          }
+        },
+        "D25": {
+          "money": 45354.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 56,
+          "unwatered": 21,
+          "harvest_ready": 37,
+          "weeds": 0,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "CARROT": 8,
+            "MELON": 3,
+            "STRAWBERRY": 20,
+            "WHEAT": 25
+          },
+          "pasture_by_quadrant": {
+            "Q0": 8,
+            "Q1": 4
+          }
+        },
+        "D30": {
+          "money": 61218.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 0,
+          "unwatered": 0,
+          "harvest_ready": 0,
+          "weeds": 0,
+          "pastures": 12,
+          "animals": 4,
+          "crop_mix": {},
+          "pasture_by_quadrant": {
+            "Q0": 8,
+            "Q1": 4
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "C25129083355E047D4E921C3B6B08FFBBFE94AFB80DDDCD00567C1A38F175836",
+      "action_shape_sha256": "82697B84F531CA63E59DB1345654B78788A4876E9FC8940801CBC23B2149E7FE"
+    },
+    {
+      "episode_id": 105398563,
+      "seed": 1939779312,
+      "pair": "GIULIO_JESSE",
+      "player_index": 0,
+      "player": "Jesse Bullard",
+      "opponent": "Giulio Ravasio",
+      "score": 120267.0,
+      "opponent_score": 119510.0,
+      "margin": 757.0,
+      "outcome": "WIN",
+      "raw_sha256": "A5A3BE63A5726BB27C978C653246C90837A74285E6F09C51D6B01F481127C9EA",
+      "action_stream_sha256": "CD8E980E9E75BF8D01FDFB06F1FD61E8D1E31F13E389A7A316CC98F06F17D590",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 12,
+      "final_pastures": 14,
+      "final_animals": 14,
+      "final_pasture_topology": "7-7-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "peak_crops": 62,
+      "peak_crop_first_display_day": 13,
+      "crop_tile_days_total": 1350,
+      "crop_tile_days_d21_d30": 515,
+      "unwatered_tile_days_total": 456,
+      "unwatered_tile_days_d21_d30": 198,
+      "late_unwatered_per_crop_tile": 0.384466,
+      "weed_exits": 38,
+      "starved_to_weed": 2,
+      "live_crop_rotations": 2,
+      "harvested_units_total": 885,
+      "harvested_units": {
+        "CARROT": 12,
+        "MELON": 72,
+        "STRAWBERRY": 260,
+        "TOMATO": 0,
+        "WHEAT": 541
+      },
+      "planted_units": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "TOMATO": 0,
+        "WHEAT": 187
+      },
+      "harvest_events": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 145,
+        "WHEAT": 179
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.0,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.793,
+        "WHEAT": 3.022
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 90.698,
+        "HARVEST": 75.0,
+        "PLANT": 100.0,
+        "WATER": 99.82
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 102,
+        "WATER": 13
+      },
+      "requested_sell_value": {
+        "CARROT": 433.0,
+        "FERTILIZER": 12922.0,
+        "MELON": 12726.0,
+        "MILK": 60126.0,
+        "STRAWBERRY": 28688.0,
+        "WHEAT": 15041.0,
+        "WOOL": 6164.0
+      },
+      "total_requested_sell_value": 136100.0,
+      "requested_crop_sell_share_pct": 41.799,
+      "requested_livestock_sell_share_pct": 58.201,
+      "pass_on_actionable_total": 115,
+      "actions": {
+        "plant": 243,
+        "water": 1172,
+        "harvest": 467,
+        "dig": 43,
+        "move": 3473,
+        "pass": 515,
+        "other_productive": 1392,
+        "unit_actions": 7305,
+        "productive": 3317,
+        "move_per_productive": 1.04703,
+        "productive_per_move": 0.955082
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 254,
+          "harvest": 32,
+          "dig": 0,
+          "move": 790,
+          "pass": 221,
+          "other_productive": 321,
+          "unit_actions": 1681,
+          "productive": 670,
+          "move_per_productive": 1.179104,
+          "productive_per_move": 0.848101
+        },
+        "D11_D20": {
+          "plant": 90,
+          "water": 464,
+          "harvest": 150,
+          "dig": 5,
+          "move": 1329,
+          "pass": 171,
+          "other_productive": 555,
+          "unit_actions": 2764,
+          "productive": 1264,
+          "move_per_productive": 1.051424,
+          "productive_per_move": 0.951091
+        },
+        "D21_D30": {
+          "plant": 90,
+          "water": 454,
+          "harvest": 285,
+          "dig": 38,
+          "move": 1354,
+          "pass": 123,
+          "other_productive": 516,
+          "unit_actions": 2860,
+          "productive": 1383,
+          "move_per_productive": 0.979031,
+          "productive_per_move": 1.021418
+        }
+      },
+      "harvested_units_per_1000_moves": 254.82292,
+      "score_per_move": 34.629139,
+      "farm_snapshots": {
+        "D01": {
+          "money": 74.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 891.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 12,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 3893.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 0,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 13,
+          "animals": 13,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 7
+          }
+        },
+        "D15": {
+          "money": 28071.0,
+          "worker_slots": 11,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 24,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D20": {
+          "money": 61251.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 23,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D25": {
+          "money": 91208.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 17,
+          "harvest_ready": 39,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 22,
+            "WHEAT": 39
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D30": {
+          "money": 120267.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 2,
+          "unwatered": 0,
+          "harvest_ready": 2,
+          "weeds": 2,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "WHEAT": 2
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "EEEF844D203403C524FFBB0A60D634449BD80719D177D8836395CDA83873C716",
+      "action_shape_sha256": "0BC483B2339EC9415153DE0854B46FCE3DD4A96F0D17D120206BACFF10A6A7EB"
+    },
+    {
+      "episode_id": 105398563,
+      "seed": 1939779312,
+      "pair": "GIULIO_JESSE",
+      "player_index": 1,
+      "player": "Giulio Ravasio",
+      "opponent": "Jesse Bullard",
+      "score": 119510.0,
+      "opponent_score": 120267.0,
+      "margin": -757.0,
+      "outcome": "LOSS",
+      "raw_sha256": "A5A3BE63A5726BB27C978C653246C90837A74285E6F09C51D6B01F481127C9EA",
+      "action_stream_sha256": "48971CD2C2F4BFC0D9D7CCB48F425B61A0A28D6051D3736E8E19630F262E1E7F",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 12,
+      "final_pastures": 14,
+      "final_animals": 14,
+      "final_pasture_topology": "7-7-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "peak_crops": 62,
+      "peak_crop_first_display_day": 13,
+      "crop_tile_days_total": 1350,
+      "crop_tile_days_d21_d30": 515,
+      "unwatered_tile_days_total": 458,
+      "unwatered_tile_days_d21_d30": 197,
+      "late_unwatered_per_crop_tile": 0.382524,
+      "weed_exits": 37,
+      "starved_to_weed": 1,
+      "live_crop_rotations": 2,
+      "harvested_units_total": 882,
+      "harvested_units": {
+        "CARROT": 12,
+        "MELON": 72,
+        "STRAWBERRY": 257,
+        "TOMATO": 0,
+        "WHEAT": 541
+      },
+      "planted_units": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "TOMATO": 0,
+        "WHEAT": 187
+      },
+      "harvest_events": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 145,
+        "WHEAT": 179
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.0,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.772,
+        "WHEAT": 3.022
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 90.698,
+        "HARVEST": 75.0,
+        "PLANT": 100.0,
+        "WATER": 99.819
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 135,
+        "WATER": 13
+      },
+      "requested_sell_value": {
+        "CARROT": 433.0,
+        "FERTILIZER": 15048.0,
+        "MELON": 12726.0,
+        "MILK": 59704.0,
+        "STRAWBERRY": 27063.0,
+        "WHEAT": 15924.0,
+        "WOOL": 6170.0
+      },
+      "total_requested_sell_value": 137068.0,
+      "requested_crop_sell_share_pct": 40.962,
+      "requested_livestock_sell_share_pct": 59.038,
+      "pass_on_actionable_total": 148,
+      "actions": {
+        "plant": 243,
+        "water": 1168,
+        "harvest": 467,
+        "dig": 43,
+        "move": 3435,
+        "pass": 559,
+        "other_productive": 1390,
+        "unit_actions": 7305,
+        "productive": 3311,
+        "move_per_productive": 1.037451,
+        "productive_per_move": 0.963901
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 248,
+          "harvest": 32,
+          "dig": 0,
+          "move": 757,
+          "pass": 265,
+          "other_productive": 316,
+          "unit_actions": 1681,
+          "productive": 659,
+          "move_per_productive": 1.14871,
+          "productive_per_move": 0.870542
+        },
+        "D11_D20": {
+          "plant": 90,
+          "water": 464,
+          "harvest": 150,
+          "dig": 5,
+          "move": 1323,
+          "pass": 175,
+          "other_productive": 557,
+          "unit_actions": 2764,
+          "productive": 1266,
+          "move_per_productive": 1.045024,
+          "productive_per_move": 0.956916
+        },
+        "D21_D30": {
+          "plant": 90,
+          "water": 456,
+          "harvest": 285,
+          "dig": 38,
+          "move": 1355,
+          "pass": 119,
+          "other_productive": 517,
+          "unit_actions": 2860,
+          "productive": 1386,
+          "move_per_productive": 0.977633,
+          "productive_per_move": 1.022878
+        }
+      },
+      "harvested_units_per_1000_moves": 256.768559,
+      "score_per_move": 34.791849,
+      "farm_snapshots": {
+        "D01": {
+          "money": 27.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 113.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 12,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 2271.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 0,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 13,
+          "animals": 13,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 7
+          }
+        },
+        "D15": {
+          "money": 27678.0,
+          "worker_slots": 11,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 24,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D20": {
+          "money": 59909.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 23,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D25": {
+          "money": 90202.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 17,
+          "harvest_ready": 39,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 22,
+            "WHEAT": 39
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D30": {
+          "money": 119510.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 2,
+          "unwatered": 0,
+          "harvest_ready": 2,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "WHEAT": 2
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "EB46A95B62364D770E8A101346DB4CBC64DF4E53C2361FCBE4110446E77C31F9",
+      "action_shape_sha256": "C02B6A151272C2642C083E8282B6F8D27F0FA9688F30E4EA1129D771A5AEE60F"
+    },
+    {
+      "episode_id": 105395068,
+      "seed": 1419956060,
+      "pair": "GIULIO_JESSE",
+      "player_index": 0,
+      "player": "Giulio Ravasio",
+      "opponent": "Jesse Bullard",
+      "score": 109848.0,
+      "opponent_score": 112727.0,
+      "margin": -2879.0,
+      "outcome": "LOSS",
+      "raw_sha256": "CA23F22343F554B918AE51A3C81FE1310DB78E822377D1F81B30052571C46215",
+      "action_stream_sha256": "6B4787C310DBD7497A01E8DA26E2879CAD0E398A48158EE021180B96E9CE779C",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 11,
+      "peak_workers": 13,
+      "final_workers": 12,
+      "final_pastures": 17,
+      "final_animals": 17,
+      "final_pasture_topology": "10-7-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 10,
+        "Q1": 7
+      },
+      "peak_crops": 58,
+      "peak_crop_first_display_day": 16,
+      "crop_tile_days_total": 1279,
+      "crop_tile_days_d21_d30": 479,
+      "unwatered_tile_days_total": 446,
+      "unwatered_tile_days_d21_d30": 176,
+      "late_unwatered_per_crop_tile": 0.367432,
+      "weed_exits": 19,
+      "starved_to_weed": 1,
+      "live_crop_rotations": 14,
+      "harvested_units_total": 896,
+      "harvested_units": {
+        "CARROT": 17,
+        "MELON": 72,
+        "STRAWBERRY": 230,
+        "TOMATO": 0,
+        "WHEAT": 577
+      },
+      "planted_units": {
+        "CARROT": 9,
+        "MELON": 12,
+        "STRAWBERRY": 33,
+        "TOMATO": 0,
+        "WHEAT": 185
+      },
+      "harvest_events": {
+        "CARROT": 8,
+        "MELON": 12,
+        "STRAWBERRY": 122,
+        "WHEAT": 182
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.125,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.885,
+        "WHEAT": 3.17
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 94.286,
+        "HARVEST": 73.303,
+        "PLANT": 100.0,
+        "WATER": 99.237
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 155,
+        "WATER": 5
+      },
+      "requested_sell_value": {
+        "CARROT": 690.0,
+        "EGG": 135864.0,
+        "FERTILIZER": 15951.0,
+        "MELON": 252948.0,
+        "MILK": 4107.0,
+        "STRAWBERRY": 19204.0,
+        "TOMATO": 135864.0,
+        "WHEAT": 71497.0,
+        "WOOL": 70304.0
+      },
+      "total_requested_sell_value": 706429.0,
+      "requested_crop_sell_share_pct": 67.976,
+      "requested_livestock_sell_share_pct": 32.024,
+      "pass_on_actionable_total": 160,
+      "actions": {
+        "plant": 239,
+        "water": 1116,
+        "harvest": 459,
+        "dig": 35,
+        "move": 3107,
+        "pass": 606,
+        "other_productive": 1526,
+        "unit_actions": 7088,
+        "productive": 3375,
+        "move_per_productive": 0.920593,
+        "productive_per_move": 1.086257
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 240,
+          "harvest": 32,
+          "dig": 0,
+          "move": 662,
+          "pass": 343,
+          "other_productive": 305,
+          "unit_actions": 1645,
+          "productive": 640,
+          "move_per_productive": 1.034375,
+          "productive_per_move": 0.966767
+        },
+        "D11_D20": {
+          "plant": 87,
+          "water": 438,
+          "harvest": 156,
+          "dig": 2,
+          "move": 1210,
+          "pass": 135,
+          "other_productive": 650,
+          "unit_actions": 2678,
+          "productive": 1333,
+          "move_per_productive": 0.907727,
+          "productive_per_move": 1.101653
+        },
+        "D21_D30": {
+          "plant": 89,
+          "water": 438,
+          "harvest": 271,
+          "dig": 33,
+          "move": 1235,
+          "pass": 128,
+          "other_productive": 571,
+          "unit_actions": 2765,
+          "productive": 1402,
+          "move_per_productive": 0.880884,
+          "productive_per_move": 1.135223
+        }
+      },
+      "harvested_units_per_1000_moves": 288.381075,
+      "score_per_move": 35.355005,
+      "farm_snapshots": {
+        "D01": {
+          "money": 27.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 653.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 12,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 2098.0,
+          "worker_slots": 10,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 3,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 13,
+          "animals": 13,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 7
+          }
+        },
+        "D15": {
+          "money": 23194.0,
+          "worker_slots": 11,
+          "quadrants": "NW NE SW",
+          "crops": 57,
+          "unwatered": 23,
+          "harvest_ready": 24,
+          "weeds": 0,
+          "pastures": 17,
+          "animals": 17,
+          "crop_mix": {
+            "STRAWBERRY": 33,
+            "WHEAT": 24
+          },
+          "pasture_by_quadrant": {
+            "Q0": 10,
+            "Q1": 7
+          }
+        },
+        "D20": {
+          "money": 57299.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 58,
+          "unwatered": 26,
+          "harvest_ready": 25,
+          "weeds": 0,
+          "pastures": 17,
+          "animals": 17,
+          "crop_mix": {
+            "STRAWBERRY": 33,
+            "WHEAT": 25
+          },
+          "pasture_by_quadrant": {
+            "Q0": 10,
+            "Q1": 7
+          }
+        },
+        "D25": {
+          "money": 82149.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 58,
+          "unwatered": 21,
+          "harvest_ready": 42,
+          "weeds": 0,
+          "pastures": 17,
+          "animals": 17,
+          "crop_mix": {
+            "STRAWBERRY": 17,
+            "WHEAT": 41
+          },
+          "pasture_by_quadrant": {
+            "Q0": 10,
+            "Q1": 7
+          }
+        },
+        "D30": {
+          "money": 109848.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 0,
+          "unwatered": 0,
+          "harvest_ready": 0,
+          "weeds": 0,
+          "pastures": 17,
+          "animals": 17,
+          "crop_mix": {},
+          "pasture_by_quadrant": {
+            "Q0": 10,
+            "Q1": 7
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "E0182BB1022286017B6E1A8BD1CD7AFE79AC653C97E1A3C6CF2562F7232E2E8F",
+      "action_shape_sha256": "04AED743A8155F0BF50EB07B0CC5674CDD4F6BF53F397A5AAEAE4F980A889B37"
+    },
+    {
+      "episode_id": 105395068,
+      "seed": 1419956060,
+      "pair": "GIULIO_JESSE",
+      "player_index": 1,
+      "player": "Jesse Bullard",
+      "opponent": "Giulio Ravasio",
+      "score": 112727.0,
+      "opponent_score": 109848.0,
+      "margin": 2879.0,
+      "outcome": "WIN",
+      "raw_sha256": "CA23F22343F554B918AE51A3C81FE1310DB78E822377D1F81B30052571C46215",
+      "action_stream_sha256": "1A5986BA34522BB2553BF3A5BBF24F740CD6D9E05677B3F7137A1FB5BF5392E2",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 11,
+      "peak_workers": 14,
+      "final_workers": 13,
+      "final_pastures": 21,
+      "final_animals": 21,
+      "final_pasture_topology": "10-7-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 10,
+        "Q1": 7,
+        "Q3": 4
+      },
+      "peak_crops": 58,
+      "peak_crop_first_display_day": 17,
+      "crop_tile_days_total": 1297,
+      "crop_tile_days_d21_d30": 496,
+      "unwatered_tile_days_total": 462,
+      "unwatered_tile_days_d21_d30": 185,
+      "late_unwatered_per_crop_tile": 0.372984,
+      "weed_exits": 25,
+      "starved_to_weed": 1,
+      "live_crop_rotations": 10,
+      "harvested_units_total": 907,
+      "harvested_units": {
+        "CARROT": 15,
+        "MELON": 72,
+        "STRAWBERRY": 256,
+        "TOMATO": 0,
+        "WHEAT": 564
+      },
+      "planted_units": {
+        "CARROT": 9,
+        "MELON": 12,
+        "STRAWBERRY": 33,
+        "TOMATO": 0,
+        "WHEAT": 194
+      },
+      "harvest_events": {
+        "CARROT": 7,
+        "MELON": 12,
+        "STRAWBERRY": 128,
+        "WHEAT": 182
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.143,
+        "MELON": 6.0,
+        "STRAWBERRY": 2.0,
+        "WHEAT": 3.099
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 94.737,
+        "HARVEST": 69.409,
+        "PLANT": 100.0,
+        "WATER": 99.427
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 160,
+        "WATER": 19
+      },
+      "requested_sell_value": {
+        "CARROT": 608.0,
+        "FERTILIZER": 12679.0,
+        "MELON": 13230.0,
+        "MILK": 3322.0,
+        "STRAWBERRY": 18725.0,
+        "WHEAT": 11034.0,
+        "WOOL": 84683.0
+      },
+      "total_requested_sell_value": 144281.0,
+      "requested_crop_sell_share_pct": 30.217,
+      "requested_livestock_sell_share_pct": 69.783,
+      "pass_on_actionable_total": 179,
+      "actions": {
+        "plant": 249,
+        "water": 1108,
+        "harvest": 485,
+        "dig": 38,
+        "move": 3413,
+        "pass": 603,
+        "other_productive": 1718,
+        "unit_actions": 7614,
+        "productive": 3598,
+        "move_per_productive": 0.948583,
+        "productive_per_move": 1.054205
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 241,
+          "harvest": 32,
+          "dig": 0,
+          "move": 738,
+          "pass": 235,
+          "other_productive": 310,
+          "unit_actions": 1619,
+          "productive": 646,
+          "move_per_productive": 1.142415,
+          "productive_per_move": 0.875339
+        },
+        "D11_D20": {
+          "plant": 89,
+          "water": 419,
+          "harvest": 160,
+          "dig": 3,
+          "move": 1307,
+          "pass": 188,
+          "other_productive": 764,
+          "unit_actions": 2930,
+          "productive": 1435,
+          "move_per_productive": 0.910801,
+          "productive_per_move": 1.097934
+        },
+        "D21_D30": {
+          "plant": 97,
+          "water": 448,
+          "harvest": 293,
+          "dig": 35,
+          "move": 1368,
+          "pass": 180,
+          "other_productive": 644,
+          "unit_actions": 3065,
+          "productive": 1517,
+          "move_per_productive": 0.90178,
+          "productive_per_move": 1.108918
+        }
+      },
+      "harvested_units_per_1000_moves": 265.748608,
+      "score_per_move": 33.028714,
+      "farm_snapshots": {
+        "D01": {
+          "money": 74.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 890.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 12,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 3161.0,
+          "worker_slots": 10,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 3,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 13,
+          "animals": 13,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 7
+          }
+        },
+        "D15": {
+          "money": 13172.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW SE",
+          "crops": 57,
+          "unwatered": 19,
+          "harvest_ready": 24,
+          "weeds": 0,
+          "pastures": 21,
+          "animals": 21,
+          "crop_mix": {
+            "STRAWBERRY": 33,
+            "WHEAT": 24
+          },
+          "pasture_by_quadrant": {
+            "Q0": 10,
+            "Q1": 7,
+            "Q3": 4
+          }
+        },
+        "D20": {
+          "money": 54440.0,
+          "worker_slots": 14,
+          "quadrants": "NW NE SW SE",
+          "crops": 58,
+          "unwatered": 27,
+          "harvest_ready": 25,
+          "weeds": 0,
+          "pastures": 21,
+          "animals": 21,
+          "crop_mix": {
+            "STRAWBERRY": 33,
+            "WHEAT": 25
+          },
+          "pasture_by_quadrant": {
+            "Q0": 10,
+            "Q1": 7,
+            "Q3": 4
+          }
+        },
+        "D25": {
+          "money": 80871.0,
+          "worker_slots": 14,
+          "quadrants": "NW NE SW SE",
+          "crops": 58,
+          "unwatered": 19,
+          "harvest_ready": 42,
+          "weeds": 0,
+          "pastures": 21,
+          "animals": 21,
+          "crop_mix": {
+            "STRAWBERRY": 17,
+            "WHEAT": 41
+          },
+          "pasture_by_quadrant": {
+            "Q0": 10,
+            "Q1": 7,
+            "Q3": 4
+          }
+        },
+        "D30": {
+          "money": 112727.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW SE",
+          "crops": 6,
+          "unwatered": 0,
+          "harvest_ready": 6,
+          "weeds": 0,
+          "pastures": 21,
+          "animals": 21,
+          "crop_mix": {
+            "WHEAT": 6
+          },
+          "pasture_by_quadrant": {
+            "Q0": 10,
+            "Q1": 7,
+            "Q3": 4
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "F59D90742074079B9FD4AFCAE61EC3F681C9C8C75BB7A36A942CE54AD5923815",
+      "action_shape_sha256": "DF12528A890F9F82B1672731F310CF2FBC07A7E31CD8971970CFBE46801B7C4D"
+    },
+    {
+      "episode_id": 105391568,
+      "seed": 327329788,
+      "pair": "GIULIO_JESSE",
+      "player_index": 0,
+      "player": "Jesse Bullard",
+      "opponent": "Giulio Ravasio",
+      "score": 75629.0,
+      "opponent_score": 75967.0,
+      "margin": -338.0,
+      "outcome": "LOSS",
+      "raw_sha256": "ADEFE74AE0C4A00019C472CCE4C69FA0CC91B3BDB89CD6872C6987421D3260C7",
+      "action_stream_sha256": "29B1A9C5FE73C4153C729EEB7A3618EACD36F471216DFA89EEA098D92FE644D4",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 12,
+      "final_pastures": 14,
+      "final_animals": 14,
+      "final_pasture_topology": "7-7-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "peak_crops": 62,
+      "peak_crop_first_display_day": 13,
+      "crop_tile_days_total": 1350,
+      "crop_tile_days_d21_d30": 515,
+      "unwatered_tile_days_total": 456,
+      "unwatered_tile_days_d21_d30": 198,
+      "late_unwatered_per_crop_tile": 0.384466,
+      "weed_exits": 37,
+      "starved_to_weed": 1,
+      "live_crop_rotations": 2,
+      "harvested_units_total": 885,
+      "harvested_units": {
+        "CARROT": 12,
+        "MELON": 72,
+        "STRAWBERRY": 260,
+        "TOMATO": 0,
+        "WHEAT": 541
+      },
+      "planted_units": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "TOMATO": 0,
+        "WHEAT": 187
+      },
+      "harvest_events": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 145,
+        "WHEAT": 179
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.0,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.793,
+        "WHEAT": 3.022
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 90.698,
+        "HARVEST": 75.0,
+        "PLANT": 100.0,
+        "WATER": 99.82
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 102,
+        "WATER": 13
+      },
+      "requested_sell_value": {
+        "CARROT": 550.0,
+        "FERTILIZER": 13775.0,
+        "MELON": 12726.0,
+        "MILK": 10992.0,
+        "STRAWBERRY": 33895.0,
+        "WHEAT": 16953.0,
+        "WOOL": 4764.0
+      },
+      "total_requested_sell_value": 93655.0,
+      "requested_crop_sell_share_pct": 68.468,
+      "requested_livestock_sell_share_pct": 31.532,
+      "pass_on_actionable_total": 115,
+      "actions": {
+        "plant": 243,
+        "water": 1172,
+        "harvest": 467,
+        "dig": 43,
+        "move": 3473,
+        "pass": 515,
+        "other_productive": 1392,
+        "unit_actions": 7305,
+        "productive": 3317,
+        "move_per_productive": 1.04703,
+        "productive_per_move": 0.955082
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 254,
+          "harvest": 32,
+          "dig": 0,
+          "move": 790,
+          "pass": 221,
+          "other_productive": 321,
+          "unit_actions": 1681,
+          "productive": 670,
+          "move_per_productive": 1.179104,
+          "productive_per_move": 0.848101
+        },
+        "D11_D20": {
+          "plant": 90,
+          "water": 464,
+          "harvest": 150,
+          "dig": 5,
+          "move": 1329,
+          "pass": 171,
+          "other_productive": 555,
+          "unit_actions": 2764,
+          "productive": 1264,
+          "move_per_productive": 1.051424,
+          "productive_per_move": 0.951091
+        },
+        "D21_D30": {
+          "plant": 90,
+          "water": 454,
+          "harvest": 285,
+          "dig": 38,
+          "move": 1354,
+          "pass": 123,
+          "other_productive": 516,
+          "unit_actions": 2860,
+          "productive": 1383,
+          "move_per_productive": 0.979031,
+          "productive_per_move": 1.021418
+        }
+      },
+      "harvested_units_per_1000_moves": 254.82292,
+      "score_per_move": 21.776274,
+      "farm_snapshots": {
+        "D01": {
+          "money": 74.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 891.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 12,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 3769.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 0,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 13,
+          "animals": 13,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 7
+          }
+        },
+        "D15": {
+          "money": 24065.0,
+          "worker_slots": 11,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 24,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D20": {
+          "money": 42922.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 23,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D25": {
+          "money": 62330.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 17,
+          "harvest_ready": 39,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "STRAWBERRY": 22,
+            "WHEAT": 39
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        },
+        "D30": {
+          "money": 75629.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 2,
+          "unwatered": 0,
+          "harvest_ready": 2,
+          "weeds": 0,
+          "pastures": 14,
+          "animals": 14,
+          "crop_mix": {
+            "WHEAT": 2
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 7
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "F896071E83A5D5070E93063FE45016EBE63437C1884185D8CC24A261A10A3DAE",
+      "action_shape_sha256": "0BC483B2339EC9415153DE0854B46FCE3DD4A96F0D17D120206BACFF10A6A7EB"
+    },
+    {
+      "episode_id": 105391568,
+      "seed": 327329788,
+      "pair": "GIULIO_JESSE",
+      "player_index": 1,
+      "player": "Giulio Ravasio",
+      "opponent": "Jesse Bullard",
+      "score": 75967.0,
+      "opponent_score": 75629.0,
+      "margin": 338.0,
+      "outcome": "WIN",
+      "raw_sha256": "ADEFE74AE0C4A00019C472CCE4C69FA0CC91B3BDB89CD6872C6987421D3260C7",
+      "action_stream_sha256": "08CE1FE0292154D521EA31E66C709C0382D11C59CFD482CA4BBC8798FC552316",
+      "first_three_quadrants_display_day": 12,
+      "first_12_workers_display_day": 10,
+      "peak_workers": 13,
+      "final_workers": 12,
+      "final_pastures": 12,
+      "final_animals": 12,
+      "final_pasture_topology": "7-5-0",
+      "final_pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 5
+      },
+      "peak_crops": 62,
+      "peak_crop_first_display_day": 13,
+      "crop_tile_days_total": 1350,
+      "crop_tile_days_d21_d30": 515,
+      "unwatered_tile_days_total": 458,
+      "unwatered_tile_days_d21_d30": 197,
+      "late_unwatered_per_crop_tile": 0.382524,
+      "weed_exits": 38,
+      "starved_to_weed": 2,
+      "live_crop_rotations": 2,
+      "harvested_units_total": 886,
+      "harvested_units": {
+        "CARROT": 12,
+        "MELON": 72,
+        "STRAWBERRY": 261,
+        "TOMATO": 0,
+        "WHEAT": 541
+      },
+      "planted_units": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "TOMATO": 0,
+        "WHEAT": 187
+      },
+      "harvest_events": {
+        "CARROT": 6,
+        "MELON": 12,
+        "STRAWBERRY": 145,
+        "WHEAT": 179
+      },
+      "mean_units_per_harvest": {
+        "CARROT": 2.0,
+        "MELON": 6.0,
+        "STRAWBERRY": 1.8,
+        "WHEAT": 3.022
+      },
+      "crop_request_acknowledgement_pct": {
+        "DIG": 90.698,
+        "HARVEST": 75.0,
+        "PLANT": 100.0,
+        "WATER": 99.819
+      },
+      "pass_on_actionable_tile": {
+        "HARVEST": 135,
+        "WATER": 13
+      },
+      "requested_sell_value": {
+        "CARROT": 550.0,
+        "EGG": 4032.0,
+        "FERTILIZER": 14922.0,
+        "MELON": 12726.0,
+        "MILK": 10712.0,
+        "STRAWBERRY": 31545.0,
+        "WHEAT": 17452.0,
+        "WOOL": 4764.0
+      },
+      "total_requested_sell_value": 96703.0,
+      "requested_crop_sell_share_pct": 64.396,
+      "requested_livestock_sell_share_pct": 35.604,
+      "pass_on_actionable_total": 148,
+      "actions": {
+        "plant": 243,
+        "water": 1168,
+        "harvest": 467,
+        "dig": 43,
+        "move": 3435,
+        "pass": 559,
+        "other_productive": 1390,
+        "unit_actions": 7305,
+        "productive": 3311,
+        "move_per_productive": 1.037451,
+        "productive_per_move": 0.963901
+      },
+      "action_phases": {
+        "D01_D10": {
+          "plant": 63,
+          "water": 248,
+          "harvest": 32,
+          "dig": 0,
+          "move": 757,
+          "pass": 265,
+          "other_productive": 316,
+          "unit_actions": 1681,
+          "productive": 659,
+          "move_per_productive": 1.14871,
+          "productive_per_move": 0.870542
+        },
+        "D11_D20": {
+          "plant": 90,
+          "water": 464,
+          "harvest": 150,
+          "dig": 5,
+          "move": 1323,
+          "pass": 175,
+          "other_productive": 557,
+          "unit_actions": 2764,
+          "productive": 1266,
+          "move_per_productive": 1.045024,
+          "productive_per_move": 0.956916
+        },
+        "D21_D30": {
+          "plant": 90,
+          "water": 456,
+          "harvest": 285,
+          "dig": 38,
+          "move": 1355,
+          "pass": 119,
+          "other_productive": 517,
+          "unit_actions": 2860,
+          "productive": 1386,
+          "move_per_productive": 0.977633,
+          "productive_per_move": 1.022878
+        }
+      },
+      "harvested_units_per_1000_moves": 257.933042,
+      "score_per_move": 22.115575,
+      "farm_snapshots": {
+        "D01": {
+          "money": 27.0,
+          "worker_slots": 6,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 0,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 4,
+          "animals": 4,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 4
+          }
+        },
+        "D05": {
+          "money": 113.0,
+          "worker_slots": 5,
+          "quadrants": "NW",
+          "crops": 19,
+          "unwatered": 12,
+          "harvest_ready": 19,
+          "weeds": 0,
+          "pastures": 6,
+          "animals": 6,
+          "crop_mix": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6
+          }
+        },
+        "D10": {
+          "money": 2325.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE",
+          "crops": 37,
+          "unwatered": 0,
+          "harvest_ready": 17,
+          "weeds": 0,
+          "pastures": 11,
+          "animals": 11,
+          "crop_mix": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "pasture_by_quadrant": {
+            "Q0": 6,
+            "Q1": 5
+          }
+        },
+        "D15": {
+          "money": 23005.0,
+          "worker_slots": 11,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 24,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 5
+          }
+        },
+        "D20": {
+          "money": 41056.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 23,
+          "harvest_ready": 23,
+          "weeds": 0,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 5
+          }
+        },
+        "D25": {
+          "money": 62363.0,
+          "worker_slots": 13,
+          "quadrants": "NW NE SW",
+          "crops": 61,
+          "unwatered": 17,
+          "harvest_ready": 39,
+          "weeds": 0,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "STRAWBERRY": 22,
+            "WHEAT": 39
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 5
+          }
+        },
+        "D30": {
+          "money": 75967.0,
+          "worker_slots": 12,
+          "quadrants": "NW NE SW",
+          "crops": 2,
+          "unwatered": 0,
+          "harvest_ready": 2,
+          "weeds": 1,
+          "pastures": 12,
+          "animals": 12,
+          "crop_mix": {
+            "WHEAT": 2
+          },
+          "pasture_by_quadrant": {
+            "Q0": 7,
+            "Q1": 5
+          }
+        }
+      },
+      "strategy_fingerprint_sha256": "173DE7FDFFB18BD5325C3B7FD7DC3993B50975E38F456A51707BA5AAAB19649A",
+      "action_shape_sha256": "C02B6A151272C2642C083E8282B6F8D27F0FA9688F30E4EA1129D771A5AEE60F"
+    }
+  ],
+  "agent_aggregates": {
+    "Crop Dusta": {
+      "profiles": 8,
+      "wins": 6,
+      "losses": 2,
+      "seat_0": 4,
+      "seat_1": 4,
+      "score_median": 88287.0,
+      "score_min": 61218.0,
+      "score_max": 127061.0,
+      "topology_counts": {
+        "5-1-0": 1,
+        "5-4-2": 2,
+        "5-5-5": 1,
+        "6-5-8": 1,
+        "6-8-5": 1,
+        "8-4-0": 1,
+        "9-7-3": 1
+      },
+      "topology_mode": [
+        "5-4-2"
+      ],
+      "unique_strategy_fingerprints": 8,
+      "unique_action_streams": 8,
+      "unique_action_shapes": 8,
+      "largest_action_shape_cluster": 1,
+      "mean_score": 91907.625,
+      "mean_margin": 6893.0,
+      "mean_first_three_quadrants_display_day": 9.0,
+      "mean_first_12_workers_display_day": 10.0,
+      "mean_final_pastures": 14.0,
+      "mean_final_animals": 8.75,
+      "mean_peak_crops": 61.0,
+      "mean_crop_tile_days_total": 1298.25,
+      "mean_crop_tile_days_d21_d30": 439.875,
+      "mean_unwatered_tile_days_total": 394.5,
+      "mean_unwatered_tile_days_d21_d30": 128.5,
+      "mean_late_unwatered_per_crop_tile": 0.292396,
+      "mean_weed_exits": 45.875,
+      "mean_live_crop_rotations": 0.0,
+      "mean_harvested_units_total": 917.375,
+      "mean_harvested_units_per_1000_moves": 226.600712,
+      "mean_score_per_move": 22.658919,
+      "mean_requested_crop_sell_share_pct": 71.25825,
+      "mean_pass_on_actionable_total": 104.5,
+      "mean_move": 4058.5,
+      "mean_productive": 3237.25,
+      "mean_pass": 319.125,
+      "mean_unit_actions": 7614.875,
+      "mean_move_per_productive": 1.256907,
+      "phase_action_means": {
+        "D01_D10": {
+          "move": 818.75,
+          "productive": 607.875,
+          "pass": 229.375,
+          "move_per_productive": 1.348627,
+          "plant": 79.75,
+          "water": 230.375,
+          "harvest": 27.375,
+          "dig": 0.5,
+          "other_productive": 269.875
+        },
+        "D11_D20": {
+          "move": 1655.5,
+          "productive": 1290.625,
+          "pass": 32.75,
+          "move_per_productive": 1.288819,
+          "plant": 58.75,
+          "water": 449.5,
+          "harvest": 159.0,
+          "dig": 9.125,
+          "other_productive": 614.25
+        },
+        "D21_D30": {
+          "move": 1584.25,
+          "productive": 1338.75,
+          "pass": 57.0,
+          "move_per_productive": 1.191303,
+          "plant": 59.375,
+          "water": 392.625,
+          "harvest": 242.25,
+          "dig": 34.25,
+          "other_productive": 610.25
+        }
+      },
+      "mean_harvested_units_by_crop": {
+        "CARROT": 77.875,
+        "MELON": 69.5,
+        "STRAWBERRY": 204.625,
+        "TOMATO": 39.5,
+        "WHEAT": 525.875
+      },
+      "mean_planted_units_by_crop": {
+        "CARROT": 24.375,
+        "MELON": 11.625,
+        "STRAWBERRY": 31.5,
+        "TOMATO": 5.5,
+        "WHEAT": 124.875
+      }
+    },
+    "Giulio Ravasio": {
+      "profiles": 7,
+      "wins": 2,
+      "losses": 5,
+      "seat_0": 3,
+      "seat_1": 4,
+      "score_median": 92510.0,
+      "score_min": 72853.0,
+      "score_max": 119510.0,
+      "topology_counts": {
+        "10-7-0": 1,
+        "7-2-0": 1,
+        "7-5-0": 3,
+        "7-7-0": 2
+      },
+      "topology_mode": [
+        "7-5-0"
+      ],
+      "unique_strategy_fingerprints": 6,
+      "unique_action_streams": 7,
+      "unique_action_shapes": 3,
+      "largest_action_shape_cluster": 5,
+      "mean_score": 93852.571429,
+      "mean_margin": -6739.285714,
+      "mean_first_three_quadrants_display_day": 12.0,
+      "mean_first_12_workers_display_day": 10.142857,
+      "mean_final_pastures": 12.857143,
+      "mean_final_animals": 12.857143,
+      "mean_peak_crops": 61.428571,
+      "mean_crop_tile_days_total": 1339.571429,
+      "mean_crop_tile_days_d21_d30": 509.571429,
+      "mean_unwatered_tile_days_total": 457.142857,
+      "mean_unwatered_tile_days_d21_d30": 194.571429,
+      "mean_late_unwatered_per_crop_tile": 0.381695,
+      "mean_weed_exits": 34.857143,
+      "mean_live_crop_rotations": 3.714286,
+      "mean_harvested_units_total": 886.571429,
+      "mean_harvested_units_per_1000_moves": 265.106594,
+      "mean_score_per_move": 28.126344,
+      "mean_requested_crop_sell_share_pct": 54.651,
+      "mean_pass_on_actionable_total": 168.142857,
+      "mean_move": 3350.285714,
+      "mean_productive": 3311.857143,
+      "mean_pass": 611.857143,
+      "mean_unit_actions": 7274.0,
+      "mean_move_per_productive": 1.011762,
+      "phase_action_means": {
+        "D01_D10": {
+          "move": 730.142857,
+          "productive": 653.285714,
+          "pass": 292.428571,
+          "move_per_productive": 1.116954,
+          "plant": 63.0,
+          "water": 245.571429,
+          "harvest": 32.0,
+          "dig": 0.0,
+          "other_productive": 312.714286
+        },
+        "D11_D20": {
+          "move": 1289.428571,
+          "productive": 1272.285714,
+          "pass": 190.0,
+          "move_per_productive": 1.014151,
+          "plant": 89.571429,
+          "water": 458.571429,
+          "harvest": 150.857143,
+          "dig": 4.571429,
+          "other_productive": 568.714286
+        },
+        "D21_D30": {
+          "move": 1330.714286,
+          "productive": 1386.285714,
+          "pass": 129.428571,
+          "move_per_productive": 0.960031,
+          "plant": 89.857143,
+          "water": 452.142857,
+          "harvest": 283.285714,
+          "dig": 37.571429,
+          "other_productive": 523.428571
+        }
+      },
+      "mean_harvested_units_by_crop": {
+        "CARROT": 36.714286,
+        "MELON": 72.0,
+        "STRAWBERRY": 255.857143,
+        "TOMATO": 0.0,
+        "WHEAT": 522.0
+      },
+      "mean_planted_units_by_crop": {
+        "CARROT": 15.285714,
+        "MELON": 12.0,
+        "STRAWBERRY": 37.285714,
+        "TOMATO": 0.0,
+        "WHEAT": 177.857143
+      }
+    },
+    "Jesse Bullard": {
+      "profiles": 7,
+      "wins": 3,
+      "losses": 4,
+      "seat_0": 4,
+      "seat_1": 3,
+      "score_median": 80320.0,
+      "score_min": 59508.0,
+      "score_max": 120267.0,
+      "topology_counts": {
+        "10-7-0": 2,
+        "7-3-0": 1,
+        "7-7-0": 4
+      },
+      "topology_mode": [
+        "7-7-0"
+      ],
+      "unique_strategy_fingerprints": 6,
+      "unique_action_streams": 7,
+      "unique_action_shapes": 3,
+      "largest_action_shape_cluster": 5,
+      "mean_score": 91013.857143,
+      "mean_margin": -1138.428571,
+      "mean_first_three_quadrants_display_day": 12.0,
+      "mean_first_12_workers_display_day": 10.285714,
+      "mean_final_pastures": 14.857143,
+      "mean_final_animals": 14.857143,
+      "mean_peak_crops": 61.714286,
+      "mean_crop_tile_days_total": 1342.571429,
+      "mean_crop_tile_days_d21_d30": 514.857143,
+      "mean_unwatered_tile_days_total": 457.0,
+      "mean_unwatered_tile_days_d21_d30": 194.142857,
+      "mean_late_unwatered_per_crop_tile": 0.377219,
+      "mean_weed_exits": 33.857143,
+      "mean_live_crop_rotations": 4.857143,
+      "mean_harvested_units_total": 897.285714,
+      "mean_harvested_units_per_1000_moves": 264.284847,
+      "mean_score_per_move": 26.914989,
+      "mean_requested_crop_sell_share_pct": 54.596,
+      "mean_pass_on_actionable_total": 135.857143,
+      "mean_move": 3405.428571,
+      "mean_productive": 3377.0,
+      "mean_pass": 567.428571,
+      "mean_unit_actions": 7349.857143,
+      "mean_move_per_productive": 1.009879,
+      "phase_action_means": {
+        "D01_D10": {
+          "move": 758.428571,
+          "productive": 661.285714,
+          "pass": 240.142857,
+          "move_per_productive": 1.145568,
+          "plant": 63.0,
+          "water": 249.142857,
+          "harvest": 32.0,
+          "dig": 0.142857,
+          "other_productive": 317.0
+        },
+        "D11_D20": {
+          "move": 1302.0,
+          "productive": 1298.857143,
+          "pass": 183.428571,
+          "move_per_productive": 1.00529,
+          "plant": 90.285714,
+          "water": 455.428571,
+          "harvest": 152.285714,
+          "dig": 4.285714,
+          "other_productive": 596.571429
+        },
+        "D21_D30": {
+          "move": 1345.0,
+          "productive": 1416.857143,
+          "pass": 143.857143,
+          "move_per_productive": 0.950898,
+          "plant": 90.857143,
+          "water": 457.428571,
+          "harvest": 287.285714,
+          "dig": 36.857143,
+          "other_productive": 544.428571
+        }
+      },
+      "mean_harvested_units_by_crop": {
+        "CARROT": 46.428571,
+        "MELON": 72.0,
+        "STRAWBERRY": 256.142857,
+        "TOMATO": 6.571429,
+        "WHEAT": 516.142857
+      },
+      "mean_planted_units_by_crop": {
+        "CARROT": 21.142857,
+        "MELON": 12.0,
+        "STRAWBERRY": 36.571429,
+        "TOMATO": 0.857143,
+        "WHEAT": 173.428571
+      }
+    }
+  },
+  "e18_5_662_comparison": {
+    "reference_artifact": "docs/model_specs/codex/e18/artifacts/derived/E18_5_STATE_DRIVEN_662_TOPOLOGY_ABLATION_V1.json",
+    "codex_e18_5_662": {
+      "profiles": 14,
+      "mean_score": 49179.42857142857,
+      "mean_move": 4451.857142857143,
+      "mean_productive": 2223.0714285714284,
+      "mean_move_per_productive": 2.0025706878106537,
+      "mean_harvested_units_total": 513.1428571428571,
+      "mean_harvested_units_per_1000_moves": 115.264897,
+      "mean_score_per_move": 11.046947,
+      "topology": "6-6-2"
+    },
+    "top3_minus_codex_absolute": {
+      "Crop Dusta": {
+        "mean_move": -393.357143,
+        "mean_productive": 1014.178571,
+        "mean_move_per_productive": -0.745664,
+        "mean_harvested_units_total": 404.232143,
+        "mean_harvested_units_per_1000_moves": 111.335815,
+        "mean_score_per_move": 11.611972
+      },
+      "Giulio Ravasio": {
+        "mean_move": -1101.571429,
+        "mean_productive": 1088.785714,
+        "mean_move_per_productive": -0.990809,
+        "mean_harvested_units_total": 373.428572,
+        "mean_harvested_units_per_1000_moves": 149.841697,
+        "mean_score_per_move": 17.079397
+      },
+      "Jesse Bullard": {
+        "mean_move": -1046.428572,
+        "mean_productive": 1153.928571,
+        "mean_move_per_productive": -0.992692,
+        "mean_harvested_units_total": 384.142857,
+        "mean_harvested_units_per_1000_moves": 149.01995,
+        "mean_score_per_move": 15.868042
+      }
+    },
+    "comparability_boundary": [
+      "Action groups and harvested-unit extraction use compatible engine semantics.",
+      "The Top-3 sample is live head-to-head play; E18.5 is a fixed local development pool.",
+      "Differences are descriptive and cannot be interpreted as topology causality."
+    ]
+  },
+  "observability": {
+    "public_farms": true,
+    "private_inventory": false,
+    "cross_episode_state": false,
+    "strategy_source_code": false
+  },
+  "limitations": [
+    "Eleven recent games are sufficient for reconstruction hypotheses, not causal identification.",
+    "Players face only current Top-3 opponents, while E18.5 uses a local fixed control.",
+    "Requested market value is quantity times observed price and is not execution-verified.",
+    "Pass-on-actionable is a local tile proxy and is not equivalent to globally wasted time.",
+    "Leaderboard positions and ratings are a point-in-time public snapshot."
+  ]
+}

@@ -107,7 +107,7 @@ Antigravity ha formalizzato il proprio MODEL_SPEC post-revisione in [MODEL_SPEC_
 - **Entry Point:** `src/agricola/strategy/antigravity/agent_c2_3q_v4.py`
 - **Configurazione:** `docs/model_specs/antigravity/configs/ANTIGRAVITY_C2_V4_0_3Q_HIGH_DENSITY_CONFIG.json`
 - **Standalone Freeze:** `docs/governance/history/model_spec_c2/antigravity/freeze/submission_antigravity_v4_tournament.py` (SHA-256: `5786AC521DDC0931539032ED1A4D642F75846911A078E8E8E82535C7F4757872`)
-- **Submission Canonica Corrente:** `experiments/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py`
+- **Submission Canonica Corrente:** `docs/model_specs/antigravity/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py`
 - **Architettura Realmente Implementata:**
   - **Workforce:** 13 lavoratori totali (W0 Farmer + W1..W12 Hands) a saturazione completa su 3 quadranti, con eliminazione totale del bug V3 del ruolo W13.
   - **Zootecnia:** 19 pascoli concentrati nel nucleo centrale Chebyshev $\le 2$ (8 Mucche, 11 Pecore) con protocollo di alimentazione a zero fughe (acquisto 4 Wheat a Step 195).

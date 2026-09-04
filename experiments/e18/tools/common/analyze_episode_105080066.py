@@ -47,7 +47,10 @@ def _quadrant(x: int, y: int) -> str:
     return "Q3"
 
 
-def _unit_commands(action: dict[str, Any]) -> Iterable[tuple[int, list[Any]]]:
+def _unit_commands(
+    action: dict[str, Any] | None,
+) -> Iterable[tuple[int, list[Any]]]:
+    action = action or {}
     farmer = action.get("farmer", ["PASS"]) or ["PASS"]
     yield 0, list(farmer)
     for index, command in enumerate(action.get("hands", []) or [], start=1):
@@ -375,9 +378,10 @@ def analyze(
 
     for step, records in enumerate(steps):
         for player, record in enumerate(records):
+            action = record.get("action") or {}
             action_digests[player].update(
                 json.dumps(
-                    record.get("action", {}),
+                    action,
                     sort_keys=True,
                     separators=(",", ":"),
                 ).encode("utf-8")
@@ -387,7 +391,7 @@ def analyze(
             farm = obs["farms"][player]
             positions = _positions(farm)
             display_day = int(obs["day"]) + 1
-            for unit, command in _unit_commands(record.get("action", {})):
+            for unit, command in _unit_commands(action):
                 opcode = str(command[0]) if command else "PASS"
                 action_counts[player][display_day][opcode] += 1
                 group = (
@@ -404,7 +408,7 @@ def analyze(
                     needed = _actionable_opcode(_tile(farm, positions[unit]))
                     if opcode == "PASS" and needed is not None:
                         pass_on_actionable[player][needed] += 1
-            for order in record.get("action", {}).get("market", []) or []:
+            for order in action.get("market", []) or []:
                 if not order or str(order[0]) != "SELL" or len(order) < 3:
                     continue
                 item = str(order[1])

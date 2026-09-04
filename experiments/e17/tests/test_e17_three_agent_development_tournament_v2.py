@@ -6,6 +6,11 @@ import hashlib
 import json
 from pathlib import Path
 
+from agricola.core.repository_paths import (
+    canonical_repository_path,
+    expected_current_sha256,
+)
+
 ROOT = Path(__file__).resolve().parents[3]
 MANIFEST = ROOT / "experiments/e17/manifest/E17_COMMON_MANIFEST_V1.json"
 RESULTS = (
@@ -77,5 +82,10 @@ def test_tournament_provenance_matches_current_frozen_inputs() -> None:
     results = _load(RESULTS)
     for participant, provenance in results["provenance"].items():
         del participant
-        assert _sha256(ROOT / provenance["source"]) == provenance["source_sha256"]
-        assert _sha256(ROOT / provenance["config"]) == provenance["config_sha256"]
+        source = canonical_repository_path(ROOT, provenance["source"])
+        config = canonical_repository_path(ROOT, provenance["config"])
+        expected_source = expected_current_sha256(
+            provenance["source"], provenance["source_sha256"]
+        )
+        assert _sha256(source) == expected_source
+        assert _sha256(config) == provenance["config_sha256"]

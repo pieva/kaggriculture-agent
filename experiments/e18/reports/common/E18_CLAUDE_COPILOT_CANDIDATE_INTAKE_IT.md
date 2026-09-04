@@ -87,8 +87,8 @@ Prima del benchmark economico ogni candidata Claude/Copilot deve fornire:
 
 ## Fonti
 
-- `experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V5_DEVELOPMENT_REPORT_IT.md`;
-- `experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V6_REJECTION_REPORT_IT.md`;
+- `docs/model_specs/claude/e17/reports/E17_1_CLAUDE_REACTIVE_V5_DEVELOPMENT_REPORT_IT.md`;
+- `docs/model_specs/claude/e17/reports/E17_1_CLAUDE_REACTIVE_V6_REJECTION_REPORT_IT.md`;
 - `experiments/e17/reports/common/E17_TWO_CANDIDATE_DELTA_TOURNAMENT_V3_REPORT_IT.md`;
 - `src/agricola/strategy/claude/e17_reactive_3q_v5.py`;
 - `src/agricola/strategy/claude/e17_reactive_3q_v6.py`;

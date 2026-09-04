@@ -21,10 +21,7 @@ from agricola.core.state import CROPS
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments"
-    / "e17"
-    / "configs"
-    / "antigravity"
+    / "docs" / "model_specs" / "antigravity" / "e17" / "configs"
     / "ANTIGRAVITY_E17_0_NATIVE_3Q_BASELINE_CONFIG.json"
 )
 E17_NATIVE_MODEL_SPEC_VERSION = "ANTIGRAVITY-E17.0-NATIVE-3Q-CROP-FIRST-V1"

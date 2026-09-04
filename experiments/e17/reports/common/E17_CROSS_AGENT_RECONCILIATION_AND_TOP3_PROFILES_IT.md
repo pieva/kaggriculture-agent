@@ -242,16 +242,16 @@ Per il contrasto topologico si aggiunge un target informativo, non ancora un gat
 
 ## 11. Tracciabilità
 
-- `experiments/e17/reports/antigravity/E17_TOP3_REPLAY_ANALYSIS.md`
-- `experiments/e17/artifacts/discovery/antigravity/E17_TOP3_REPLAY_METRICS.json`
-- `experiments/e17/reports/copilot/E17_TOP3_REPLAY_ANALYSIS.md`
-- `experiments/e17/artifacts/discovery/copilot/E17_TOP3_REPLAY_METRICS.json`
-- `experiments/e17/reports/codex/E17_TOP3_REPLAY_ANALYSIS.md`
-- `experiments/e17/artifacts/discovery/codex/E17_TOP3_REPLAY_METRICS.json`
-- `experiments/e17/artifacts/discovery/codex/E17_QUADRANT_DAILY_TIMELINE.csv`
-- `experiments/e17/artifacts/discovery/codex/E17_ANIMAL_ESCAPE_EVENTS.csv`
-- `experiments/e17/reviews/copilot/E17_CROSS_AGENT_FEEDBACK_AND_COPILOT_CRITICAL_ANALYSIS_IT.md`
-- `experiments/e17/reviews/antigravity/E17_CROSS_AGENT_FEEDBACK_AND_ANTIGRAVITY_CRITICAL_ANALYSIS_IT.md`
+- `docs/model_specs/antigravity/e17/reports/E17_TOP3_REPLAY_ANALYSIS.md`
+- `docs/model_specs/antigravity/e17/artifacts/discovery/E17_TOP3_REPLAY_METRICS.json`
+- `docs/model_specs/copilot/e17/reports/E17_TOP3_REPLAY_ANALYSIS.md`
+- `docs/model_specs/copilot/e17/artifacts/discovery/E17_TOP3_REPLAY_METRICS.json`
+- `docs/model_specs/codex/e17/reports/E17_TOP3_REPLAY_ANALYSIS.md`
+- `docs/model_specs/codex/e17/artifacts/discovery/E17_TOP3_REPLAY_METRICS.json`
+- `docs/model_specs/codex/e17/artifacts/discovery/E17_QUADRANT_DAILY_TIMELINE.csv`
+- `docs/model_specs/codex/e17/artifacts/discovery/E17_ANIMAL_ESCAPE_EVENTS.csv`
+- `docs/model_specs/copilot/e17/reviews/E17_CROSS_AGENT_FEEDBACK_AND_COPILOT_CRITICAL_ANALYSIS_IT.md`
+- `docs/model_specs/antigravity/e17/reviews/E17_CROSS_AGENT_FEEDBACK_AND_ANTIGRAVITY_CRITICAL_ANALYSIS_IT.md`
 - `docs/model_specs/codex/MODEL_SPEC_CODEX_C2_3Q_POST_FOUNDATION_REVIEW.md`
 - `docs/governance/history/model_spec_c2/codex/CODEX_V9_0_FINAL_REPORT_IT.md`
 - `docs/governance/history/model_spec_c2/codex/CODEX_V9_0_HOLDOUT_RESULTS.json`
@@ -270,7 +270,7 @@ Il feedback è accolto integralmente nei punti metodologici:
 
 ### Antigravity — `ACCEPT`
 
-Il feedback formale post-riconciliazione (`experiments/e17/reviews/antigravity/E17_CROSS_AGENT_FEEDBACK_AND_ANTIGRAVITY_CRITICAL_ANALYSIS_IT.md`) accoglie integralmente l'impianto metodologico e la roadmap unificata:
+Il feedback formale post-riconciliazione (`docs/model_specs/antigravity/e17/reviews/E17_CROSS_AGENT_FEEDBACK_AND_ANTIGRAVITY_CRITICAL_ANALYSIS_IT.md`) accoglie integralmente l'impianto metodologico e la roadmap unificata:
 
 - **Separazione epistemologica:** pieno accordo su distinzione `OBSERVED`, `DERIVED`, `INFERRED` e separazione fra comandi *requested* ed esiti *executed*;
 - **Audit fughe e composizioni D29:** recepiti l'audit 31/31 su EOD e la natura post-liquidazione di D29;

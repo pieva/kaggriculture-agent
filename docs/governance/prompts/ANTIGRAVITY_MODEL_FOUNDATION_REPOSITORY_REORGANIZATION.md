@@ -283,8 +283,8 @@ NON revertirle e NON includerle automaticamente nel commit del riordino.
 Sono inoltre untracked altri artefatti E16/prompt/script:
 
 ```text
-experiments/archive/e16/prompts/E16_A_R1_CODEX_FORENSIC_DIAGNOSIS_PROMPT.md
-experiments/archive/e16/prompts/E16_CODEX_TILE_LIFECYCLE_FEATURE_AUDIT.md
+docs/model_specs/codex/archive/e16/prompts/E16_A_R1_CODEX_FORENSIC_DIAGNOSIS_PROMPT.md
+docs/model_specs/codex/archive/e16/prompts/E16_CODEX_TILE_LIFECYCLE_FEATURE_AUDIT.md
 results/e16/diagnostics/
 experiments/archive/e01/tools/audit_e16_tile_lifecycle_feature.py
 experiments/archive/e01/tools/diagnose_e16_a_r1_crop_attainment.py

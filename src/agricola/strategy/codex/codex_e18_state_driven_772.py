@@ -35,7 +35,7 @@ from agricola.strategy.codex.codex_e18_capacity_governed_v4d import (
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_E18_STATE_DRIVEN_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments/e18/configs/codex/CODEX_E18_4_STATE_DRIVEN_772_V1.json"
+    / "docs/model_specs/codex/e18/configs/CODEX_E18_4_STATE_DRIVEN_772_V1.json"
 )
 E18_STATE_DRIVEN_MODEL_SPEC_VERSION = "CODEX-E18.4-STATE-DRIVEN-772-V1"
 _PASTURE_ANIMALS = frozenset({"COW", "SHEEP"})

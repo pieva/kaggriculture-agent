@@ -8,6 +8,7 @@ import json
 import pprint
 from pathlib import Path
 
+from agricola.core.repository_paths import expected_current_sha256
 from agricola.strategy.codex.codex_v9_routine_data import (
     ROUTINE_ACTIONS,
     ROUTINE_SHA256,
@@ -18,19 +19,12 @@ TARGET = ROOT / "submission" / "submission_codex_e17_reactive.py"
 SOURCE = ROOT / "src" / "agricola" / "strategy" / "codex" / "codex_e17_reactive_guarded.py"
 CONFIG = (
     ROOT
-    / "experiments"
-    / "e17"
-    / "configs"
-    / "codex"
+    / "docs" / "model_specs" / "codex" / "e17" / "configs"
     / "CODEX_E17_1_3Q_REACTIVE_GUARDED_V1.json"
 )
 FREEZE_MANIFEST = (
     ROOT
-    / "experiments"
-    / "e17"
-    / "artifacts"
-    / "freeze"
-    / "codex"
+    / "docs" / "model_specs" / "codex" / "e17" / "artifacts" / "freeze"
     / "e17_1"
     / "E17_1_FREEZE_MANIFEST.json"
 )
@@ -45,10 +39,17 @@ def _verify_frozen_inputs() -> tuple[dict, dict]:
     config = json.loads(CONFIG.read_text(encoding="utf-8"))
     if manifest.get("status") != "FROZEN_FOR_REACTIVE_TOURNAMENT":
         raise RuntimeError("Codex E17.1 source is not frozen")
-    if _sha256(SOURCE) != manifest["source_sha256"]:
+    historical_source_sha = manifest["source_sha256"]
+    current_source_sha = expected_current_sha256(
+        SOURCE.relative_to(ROOT).as_posix(), historical_source_sha
+    )
+    if _sha256(SOURCE) != current_source_sha:
         raise RuntimeError("Codex E17.1 source hash differs from the freeze manifest")
     if _sha256(CONFIG) != manifest["config_sha256"]:
         raise RuntimeError("Codex E17.1 config hash differs from the freeze manifest")
+    manifest["source_sha256_at_freeze"] = historical_source_sha
+    manifest["source_sha256"] = current_source_sha
+    manifest["repository_migration"] = "AGENT_MATERIAL_MIGRATION_2026_09_04"
     return manifest, config
 
 

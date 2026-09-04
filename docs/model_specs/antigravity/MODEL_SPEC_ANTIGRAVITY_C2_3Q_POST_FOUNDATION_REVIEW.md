@@ -32,7 +32,7 @@ Il documento è agent-local: ontologia, macchina a stati, feature e telemetria s
 | Entry point agente | `src/agricola/strategy/antigravity/agent_c2_3q_v4.py` | `9228DE905A0A7970D8A567D84E04C94325453CF9BE9C054A1689EDFCE7E5D3B5` |
 | Configurazione | `docs/model_specs/antigravity/configs/ANTIGRAVITY_C2_V4_0_3Q_HIGH_DENSITY_CONFIG.json` | `040816C5186ADD37BBD6FB76D9AEC4DB23ECA4362E11B4061B6DAA6349B0B8B7` |
 | Freeze standalone torneo | `docs/governance/history/model_spec_c2/antigravity/freeze/submission_antigravity_v4_tournament.py` | `5786AC521DDC0931539032ED1A4D642F75846911A078E8E8E82535C7F4757872` |
-| Submission standalone disco | `experiments/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py` | `5786AC521DDC0931539032ED1A4D642F75846911A078E8E8E82535C7F4757872` |
+| Submission standalone disco | `docs/model_specs/antigravity/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py` | `5786AC521DDC0931539032ED1A4D642F75846911A078E8E8E82535C7F4757872` |
 
 ### Provenance e identità della routine:
 ```text
@@ -195,7 +195,7 @@ NO_FOREIGN_ROUTINE_IMPORT == PASS
 
 1. La freeze standalone validata è: `docs/governance/history/model_spec_c2/antigravity/freeze/submission_antigravity_v4_tournament.py` (SHA-256: `5786AC521DDC0931539032ED1A4D642F75846911A078E8E8E82535C7F4757872`).
 2. Lo script `scripts/build_submission_antigravity_v4.py` è l'unico autorizzato a rigenerare la freeze Antigravity V4.
-3. La submission canonica `experiments/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py` è stata promossa dalla freeze accettata ed è byte-identica ad essa; ogni futura sostituzione richiederà autorizzazione e verifica SHA-256 esplicite.
+3. La submission canonica `docs/model_specs/antigravity/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py` è stata promossa dalla freeze accettata ed è byte-identica ad essa; ogni futura sostituzione richiederà autorizzazione e verifica SHA-256 esplicite.
 
 ---
 

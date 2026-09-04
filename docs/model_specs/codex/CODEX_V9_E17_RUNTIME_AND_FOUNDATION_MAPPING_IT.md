@@ -240,8 +240,8 @@ intenzionalmente il modello, il contratto o il processo di build.
 | 1 | `src/agricola/strategy/codex/codex_v9_routine_data.py` | `scripts/build_codex_v9_routine_data.py` | `data/replays/json/104498819.json` | Tabella di 719 batch e `ROUTINE_SHA256`. |
 | 2 | `docs/governance/history/model_spec_c2/codex/freeze/submission_codex_v9_tournament.py` | `scripts/build_submission_codex_v9.py` | Routine generata | Standalone congelato per test e torneo locale. |
 | 3 | `submission/submission_codex.py` | Passaggio esplicito di release | Standalone verificato più metadata della release E17 | Unico file caricato su Kaggle. |
-| 4 | `experiments/e17/artifacts/runs/codex/e17_0/*.json*` | `run_e17_0_codex_parity.py` | Policy, seed, opponent e ledger | Evidenza per singola run. |
-| 5 | `experiments/e17/artifacts/derived/codex/E17_0_METRICS.json` | Lo stesso runner | Risultati delle run | Sintesi del gate E17.0. |
+| 4 | `docs/model_specs/codex/e17/artifacts/runs/e17_0/*.json*` | `run_e17_0_codex_parity.py` | Policy, seed, opponent e ledger | Evidenza per singola run. |
+| 5 | `docs/model_specs/codex/e17/artifacts/derived/E17_0_METRICS.json` | Lo stesso runner | Risultati delle run | Sintesi del gate E17.0. |
 
 Il replay al punto 1 è un **input salvato**, non un file prodotto dal builder.
 Il builder lo legge ma non lo modifica.
@@ -273,7 +273,7 @@ $env:PYTHONPATH = "src"
 .\.venv\Scripts\python.exe scripts\build_submission_codex_v9.py
 
 # 3. Verifica isolamento e parità del file E17 già promosso.
-.\.venv\Scripts\python.exe experiments\e17\tools\codex\verify_e17_external_submission.py
+.\.venv\Scripts\python.exe docs\model_specs\codex\e17\tools\verify_e17_external_submission.py
 
 # 4. Esegue i test di build temporanea e parità sorgente/standalone.
 .\.venv\Scripts\python.exe -m pytest tests\test_submission_codex_isolation.py -q

@@ -1,0 +1,46 @@
+{
+  "candidate_id": "CODEX_E18_6_CONCENTRATED_770_THROUGHPUT_V1",
+  "schema_version": "e18.codex.concentrated_770_throughput.v1",
+  "model_spec_version": "CODEX-E18.6-CONCENTRATED-770-THROUGHPUT-V1",
+  "base_policy": "CODEX-E18.2-CAPACITY-GOVERNED-V4D-V1",
+  "causal_family": "Q2_PASTURE_REMOVAL_WITH_IN_PLACE_CROP_TRANSLATION",
+  "hypothesis": "Seven pastures in each mature quadrant are cheaper to service than opening a third livestock cluster for two pastures.",
+  "pasture_targets": [
+    [3, 2], [4, 2], [3, 3], [4, 3], [2, 4], [3, 4], [4, 4],
+    [5, 2], [6, 2], [5, 3], [6, 3], [5, 4], [6, 4], [7, 4]
+  ],
+  "reclaimed_q2_crop_targets": [
+    [3, 5], [4, 5], [3, 6], [4, 6], [4, 7]
+  ],
+  "quadrant_pasture_caps": {"Q0": 7, "Q1": 7, "Q2": 0},
+  "pasture_fill_target": 14,
+  "pre_q2_livestock_resource_cap": 14,
+  "livestock_in_transit_buffer": 1,
+  "livestock_resource_cap": 15,
+  "reclaimed_crop_activation_day": 11,
+  "strawberry_cutoff_day": 19,
+  "rotation_start_day": 20,
+  "rotation_end_day": 23,
+  "wheat_cutoff_day": 25,
+  "seed_batches": {
+    "STRAWBERRY": {"day": 10, "units": 5, "unit_cost": 100.0},
+    "WHEAT": {"day": 19, "units": 5, "unit_cost": 15.0}
+  },
+  "seed_operating_cash_floor": 3000.0,
+  "pasture_fill_mission_day": 12,
+  "pasture_fill_mission_worker_limit": 2,
+  "persistent_fill_worker_limit": 1,
+  "pasture_fill_quadrant_priority": ["Q1", "Q0", "Q2"],
+  "pasture_fill_species_priority": ["SHEEP", "COW"],
+  "fill_purchase_cutoff_day": 26,
+  "fill_operating_cash_floor": 500.0,
+  "animal_costs": {"SHEEP": 500.0, "COW": 400.0},
+  "provider_idle_worker_limit": 0,
+  "global_rerouting_enabled": false,
+  "terminal_passthrough_day": 28,
+  "public_features_only": true,
+  "cross_episode_memory": false,
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "kaggle_upload_authorized": false
+}

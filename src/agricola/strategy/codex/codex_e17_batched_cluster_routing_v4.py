@@ -30,22 +30,22 @@ from agricola.strategy.codex.codex_e17_reactive_service_routing_v3 import (
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_V4A_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments/e17/configs/codex/"
+    / "docs/model_specs/codex/e17/configs/"
     / "CODEX_E17_2_BATCHED_ROUTING_V4A_D28.json"
 )
 DEFAULT_V4B_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments/e17/configs/codex/"
+    / "docs/model_specs/codex/e17/configs/"
     / "CODEX_E17_2_CLUSTERED_ROUTING_V4B_D28.json"
 )
 DEFAULT_V4C_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments/e17/configs/codex/"
+    / "docs/model_specs/codex/e17/configs/"
     / "CODEX_E17_2_CAPACITY_AWARE_BATCHED_ROUTING_V4C_D28.json"
 )
 DEFAULT_V4D_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments/e17/configs/codex/"
+    / "docs/model_specs/codex/e17/configs/"
     / "CODEX_E17_2_POST_FEED_CAPACITY_BATCHED_ROUTING_V4D_D28.json"
 )
 V4A_MODEL_SPEC_VERSION = "CODEX-E17.2-BATCHED-ROUTING-V4A-D28"

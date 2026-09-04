@@ -111,9 +111,9 @@ proprietario.
 
 ## Evidenza primaria
 
-- `experiments/e17/reports/codex/E17_0_IMPLEMENTATION_AND_PARITY_REPORT.md`;
-- `experiments/e17/reports/antigravity/E17_0_IMPLEMENTATION_AND_PARITY_REPORT.md`;
-- `experiments/e17/reports/copilot/E17_0_IMPLEMENTATION_AND_PARITY_REPORT.md`;
+- `docs/model_specs/codex/e17/reports/E17_0_IMPLEMENTATION_AND_PARITY_REPORT.md`;
+- `docs/model_specs/antigravity/e17/reports/E17_0_IMPLEMENTATION_AND_PARITY_REPORT.md`;
+- `docs/model_specs/copilot/e17/reports/E17_0_IMPLEMENTATION_AND_PARITY_REPORT.md`;
 - `experiments/e17/artifacts/derived/{codex,antigravity,copilot}/E17_0_METRICS.json`;
 - `experiments/e17/artifacts/freeze/{codex,antigravity,copilot}/E17_0_FREEZE_MANIFEST.json`.
 

@@ -9,7 +9,7 @@ strategy namespace.
 
 The first authorized deliverable is described in:
 
-`experiments/e17/prompts/claude/E17_CLAUDE_REACTIVE_3Q_INDEPENDENT_BUILD_PROMPT.md`
+`docs/model_specs/claude/e17/prompts/E17_CLAUDE_REACTIVE_3Q_INDEPENDENT_BUILD_PROMPT.md`
 
 V1 was rejected and V2 was frozen with failed economic, escape and passive
 3Q gates. A future V3 is planned but not started. During V3 development Claude

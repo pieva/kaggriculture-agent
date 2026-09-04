@@ -177,9 +177,9 @@ Aggiorna eventuali riferimenti documentali rimasti ai vecchi nomi **solo se nece
 Non rinominare e non modificare i frozen:
 
 ```text
-experiments/archive/e15/artifacts/freeze/MODEL_SPEC_ANTIGRAVITY_E15_FROZEN.md
-experiments/archive/e15/artifacts/freeze/MODEL_SPEC_CODEX_E15_FROZEN.md
-experiments/archive/e15/artifacts/freeze/MODEL_SPEC_COPILOT_E15_FROZEN.md
+docs/model_specs/antigravity/archive/e15/artifacts/freeze/MODEL_SPEC_ANTIGRAVITY_E15_FROZEN.md
+docs/model_specs/codex/archive/e15/artifacts/freeze/MODEL_SPEC_CODEX_E15_FROZEN.md
+docs/model_specs/copilot/archive/e15/artifacts/freeze/MODEL_SPEC_COPILOT_E15_FROZEN.md
 ```
 
 e nessun altro file sotto `results/e15/freeze/`.

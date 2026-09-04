@@ -1,5 +1,22 @@
 # Experiment Log
 
+## 2026-09-04 — E18.16 exact 7-7-0 inviata per validazione esterna
+
+Composto il cap di policy a 14 risorse COW/SHEEP con il guard FEED critico
+D20. Gate A locale: 14 match, `8-6`, money `+1,18%`, worst matched `-0,95%`,
+perdite `0` contro `14`, topologia e fill esatti. Gate B Top-3 fallito: la
+candidata non è una release promossa, ma diventa la base di ricerca da
+validare esternamente. Standalone verificata su 2.880 azioni e inviata a
+Kaggle. Valutazione completata: score `729,0` contro `1199,7` di E18.2,
+delta `-470,7` (`-39,24%`); regressione esterna confermata. SHA-256
+`4CD8F18F317D4C654F9CAB7E019EEE3ABAB906C65B46FA842B6A009EF5EB0350`.
+
+Nello stesso closeout, Antigravity, Claude e Copilot sono congelati per gap di
+performance; il materiale agent-specific è consolidato sotto
+`docs/model_specs/<agent>/`. Audit Foundation C2.1: nessuna revisione
+necessaria, perché cap 14 e guard D20 sono policy già esprimibile con feature
+e transizioni canoniche esistenti.
+
 ## 2026-09-03 — E18.4 state-driven 7-7-2 V1 respinta
 
 Costruito uno scheduler osservazionale completo con bootstrap E18.2 fino a
@@ -14,7 +31,7 @@ V1 congelata come ablation respinta; nessuna submission e nessun holdout usato.
 | Experiment | Title | Result Summary | Status | Key Takeaways & Decisions |
 |---|---|---|:---:|---|
 | E17-EXT1 | Codex E17.0 3Q External Control | Submission E17 behaviorally identical to V9; parity `719/719`, E17.0 `4314/4314`, ledger 100%; rating intermedio `996` da `600` | **EXTERNAL_VALIDATION_LIVE** | Submission Kaggle `559588638`. Rating ancora in assestamento: nessuna conclusione finale o causale. Copilot resta locale, Antigravity è in pausa e il prossimo sviluppo attende la stabilizzazione. |
-| C2-AG-90K | Antigravity C2 Dual-Quadrant (Q0+Q1) Full Livestock Candidate | Gross $91,010.42, Net $63,922.33 (Phase B) / $66,630.67 (Phase C), Peak $87,740.00, 0 Escapes | **ACTIVE_CANDIDATE** | 13-workforce dual-quadrant (Q0+Q1) architecture with dynamic pasture building eligibility on Q1. 12 animals total (6 COW + 6 SHEEP) across 12 pastures. 136.50 Milk, 95.83 Wool, 240 crop units. 0 escapes across all episodes. Gross revenue reached $91,010.42. Parity 100% bit-exact on experiments/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py. 209/209 test pass. |
+| C2-AG-90K | Antigravity C2 Dual-Quadrant (Q0+Q1) Full Livestock Candidate | Gross $91,010.42, Net $63,922.33 (Phase B) / $66,630.67 (Phase C), Peak $87,740.00, 0 Escapes | **ACTIVE_CANDIDATE** | 13-workforce dual-quadrant (Q0+Q1) architecture with dynamic pasture building eligibility on Q1. 12 animals total (6 COW + 6 SHEEP) across 12 pastures. 136.50 Milk, 95.83 Wool, 240 crop units. 0 escapes across all episodes. Gross revenue reached $91,010.42. Parity 100% bit-exact on docs/model_specs/antigravity/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py. 209/209 test pass. |
 | C2-AG-75K | Antigravity C2 Dual-Quadrant (Q0+Q1) 75K Candidate Build & Benchmark | Gross $75,075.00, Net $60,437.17 (Phase B) / $63,811.17 (Phase C), 0 Escapes | **SUPERSEDED** | 13-workforce dual-quadrant (Q0+Q1) architecture with cashflow-gated land unlock (Day 5-8). Superseded by Full Livestock release. |
 | C2-AG-50K | Antigravity C2 Compact-Q0 50K Candidate Build & Benchmark | Mean $56,386.50 (Phase B) / $57,756.33 (Phase C), 0 Escapes, 0 Misses | **SUPERSEDED** | 7-workforce single-quadrant (Q0) architecture with 3 COW + 3 SHEEP and 18 crop tiles. Achieved full livestock safety and recovered crop productivity, surpassing external benchmark. Foundation frozen. |
 | C2-CODEX-V7 | Codex C2 Compact Q0 Routine V7 Candidate Build & Benchmark | Mean $39,265.67, Technical PASS, Economic FAILURE | **BUILD_NOT_READY** | Technical PASS (6/6 episodes DONE, 0 error/fallback). Mean $39,265.67 (+$29.4k vs V6, +$1,268.00 vs AG Q0 3+3, -$17,506.33 vs LuCcc). Crop serviceability strongly improved (MELON 95.0, STRAWBERRY 40.17, $29.8k rev). Livestock serviceability is primary bottleneck (MILK 28.17, WOOL 14.67, 24 escapes, $10.7k rev). Routing inefficient (MOVE/prod 3.1923, util 67.43%, 50 misses). Next step: Read-only AG-vs-Codex V7 serviceability/routing forensic. DLC simplification deferred. Foundation frozen. |
@@ -53,7 +70,7 @@ baseline nativa senza submission; Antigravity è in pausa per crediti.
 **Architecture:** `Q0_Q1_16CROP_12PASTURE_6COW_6SHEEP_13WORKERS`
 **Key Documents:**
 - Submission Description: `results/model_spec_c2/antigravity/SUBMISSION_DESCRIPTION.md`
-- Standalone Submission: `experiments/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py` & `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py`
+- Standalone Submission: `docs/model_specs/antigravity/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py` & `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py`
 - Test Suite: `tests/test_antigravity_75k_candidate.py` (209/209 workspace test pass)
 
 ### Summary Statistics (12 Official Episodes)
@@ -281,12 +298,12 @@ Congelare in modo verificabile e immutabile gli artefatti pre-match (ontologia, 
 ### Key Milestones & Governance Protocol
 1. **7/7 Frozen Artifacts Verified by SHA256**:
    - `Canonical Ontology` (`experiments/archive/e15/artifacts/freeze/ONTOLOGY_E15_FROZEN.md`): `5bab9c13cbf6d88b818ad6aca401fdb9bacc811d656dab4e39fe7d8c634e0bfa`
-   - `Antigravity MODEL_SPEC` (`experiments/archive/e15/artifacts/freeze/MODEL_SPEC_ANTIGRAVITY_E15_FROZEN.md`): `f4eb68d232586394ae83399ddc4405cf211ead57e3afa183c655611eb6943a46`
-   - `Codex MODEL_SPEC` (`experiments/archive/e15/artifacts/freeze/MODEL_SPEC_CODEX_E15_FROZEN.md`): `9e38dfe16b5e22b47df890abc105519920f5987de683e9da22638c0a5a57aed7`
-   - `Copilot MODEL_SPEC` (`experiments/archive/e15/artifacts/freeze/MODEL_SPEC_COPILOT_E15_FROZEN.md`): `d08dde958f929dab1a28f6a92343618d4b31a5b3cc12cf10c6673c92900d0686`
-   - `Antigravity Submission` (`experiments/archive/e15/artifacts/freeze/submission_antigravity_E15_FROZEN.py`): `629c017271891e0b7d7a4b0e655df40b0aac66ee8af1bc00d5718fb8bdfd404d`
-   - `Codex Submission` (`experiments/archive/e15/artifacts/freeze/submission_codex_E15_FROZEN.py`): `fe269bf365dd7167644e5867ca857f1f77d4009f9ce66c0e2afa3e78d6a4c9f3`
-   - `Copilot Submission` (`experiments/archive/e15/artifacts/freeze/submission_copilot_E15_FROZEN.py`): `604bd6201df08b3c4dbfb00c2e49bf8963c7a32b6bba6e14c04d046e308b8abb`
+   - `Antigravity MODEL_SPEC` (`docs/model_specs/antigravity/archive/e15/artifacts/freeze/MODEL_SPEC_ANTIGRAVITY_E15_FROZEN.md`): `f4eb68d232586394ae83399ddc4405cf211ead57e3afa183c655611eb6943a46`
+   - `Codex MODEL_SPEC` (`docs/model_specs/codex/archive/e15/artifacts/freeze/MODEL_SPEC_CODEX_E15_FROZEN.md`): `9e38dfe16b5e22b47df890abc105519920f5987de683e9da22638c0a5a57aed7`
+   - `Copilot MODEL_SPEC` (`docs/model_specs/copilot/archive/e15/artifacts/freeze/MODEL_SPEC_COPILOT_E15_FROZEN.md`): `d08dde958f929dab1a28f6a92343618d4b31a5b3cc12cf10c6673c92900d0686`
+   - `Antigravity Submission` (`docs/model_specs/antigravity/archive/e15/artifacts/freeze/submission_antigravity_E15_FROZEN.py`): `629c017271891e0b7d7a4b0e655df40b0aac66ee8af1bc00d5718fb8bdfd404d`
+   - `Codex Submission` (`docs/model_specs/codex/archive/e15/artifacts/freeze/submission_codex_E15_FROZEN.py`): `fe269bf365dd7167644e5867ca857f1f77d4009f9ce66c0e2afa3e78d6a4c9f3`
+   - `Copilot Submission` (`docs/model_specs/copilot/archive/e15/artifacts/freeze/submission_copilot_E15_FROZEN.py`): `604bd6201df08b3c4dbfb00c2e49bf8963c7a32b6bba6e14c04d046e308b8abb`
 2. **P0/P1 Symmetry Audit**:
    - Audit source-level di `kaggriculture.py` completato in `experiments/archive/e15/artifacts/P0_P1_ENVIRONMENT_AUDIT.md` con esito `NO_MATERIAL_POSITION_BIAS_FOUND`.
 3. **Runner Freeze Enforcement & Fail-Closed**:
@@ -316,7 +333,7 @@ Isolare formalmente i perimetri di codice e i modelli concettuali dei tre agenti
 ### Key Milestones
 1. **Repository & Codebase Isolation**:
    - Decoupled packages created: `src/agricola/strategy/antigravity/`, `src/agricola/strategy/copilot/`, and isolated Codex candidate.
-   - Independent standalone submissions (historical E15 freeze): `experiments/archive/e15/artifacts/freeze/submission_antigravity_E15_FROZEN.py`, `experiments/archive/e15/artifacts/freeze/submission_codex_E15_FROZEN.py`, `experiments/archive/e15/artifacts/freeze/submission_copilot_E15_FROZEN.py`.
+   - Independent standalone submissions (historical E15 freeze): `docs/model_specs/antigravity/archive/e15/artifacts/freeze/submission_antigravity_E15_FROZEN.py`, `docs/model_specs/codex/archive/e15/artifacts/freeze/submission_codex_E15_FROZEN.py`, `docs/model_specs/copilot/archive/e15/artifacts/freeze/submission_copilot_E15_FROZEN.py`.
 2. **Canonical Ontology (64 concept_ids)**:
    - Consolidata in `docs/model_specs/ONTOLOGY.md` attraverso 8 sezioni economiche (A–H).
    - Tassonomia rigorosa: `USED / PARTIAL / NOT_USED` e `FULL / PARTIAL / ABSENT / BROADER / NARROWER / CONFLICT`.
@@ -494,7 +511,7 @@ See `experiments/archive/e01/prompts/E01-01_define_plan.md`, `docs/prompts/E01-0
    - `experiments/archive/e15/artifacts/freeze/legacy_submissions/submission.py` è stato caricato sulla piattaforma Kaggle ed eseguito con successo (Status **`Complete`**, Score iniziale **`600.0`**).
 8. **Esecuzione Osservabile VERIFY**:
    - Eseguito un episodio completo di 720 turni tramite Antigravity ed ispezionato il registro degli stati `env.steps`.
-   - Confermato e documentato in `experiments/archive/e01/reports/E01_verify_antigravity.md` il ciclo operativo: `BUY_SEED → PLANT → WATER → PASS → HARVEST → PLANT → SELL`.
+   - Confermato e documentato in `docs/model_specs/antigravity/archive/e01/reports/E01_verify_antigravity.md` il ciclo operativo: `BUY_SEED → PLANT → WATER → PASS → HARVEST → PLANT → SELL`.
    - Verificato univocamente per l'episodio VERIFY: `status: DONE`, 720/720 turni completati, `money finale: 3564.0`, `reward finale: 3564.0` (`reward == farm["money"]`).
 
 ### Human intervention
@@ -554,9 +571,9 @@ Sostituire la monocultura statica di carote della baseline E01 (`CarrotLoopAgent
 - Implementation Plan: `docs/plans/E02_Dynamic_Crop_Selection_&_ROI_Scaling.md` *(riferimento storico non presente nell'istantanea)*
 - Benchmark JSON E02: [`experiments/archive/e02/artifacts/roi_crop.json`](../experiments/archive/e02/artifacts/roi_crop.json)
 - Evidenza BUILD: `docs/versions/E02_build_antigravity.md` *(riferimento storico non presente nell'istantanea)*
-- Evidenza VERIFY REVIEW: [`experiments/archive/e02/reports/E02_verify_review_antigravity.md`](../experiments/archive/e02/reports/E02_verify_review_antigravity.md)
+- Evidenza VERIFY REVIEW: [`docs/model_specs/antigravity/archive/e02/reports/E02_verify_review_antigravity.md`](../docs/model_specs/antigravity/archive/e02/reports/E02_verify_review_antigravity.md)
 - Evidenza Analisi Simulazione: [`experiments/archive/e02/reports/E02_simulation_analysis.md`](../experiments/archive/e02/reports/E02_simulation_analysis.md)
-- Evidenza SHIP REVIEW: [`experiments/archive/e02/reports/E02_ship_review_antigravity.md`](../experiments/archive/e02/reports/E02_ship_review_antigravity.md)
+- Evidenza SHIP REVIEW: [`docs/model_specs/antigravity/archive/e02/reports/E02_ship_review_antigravity.md`](../docs/model_specs/antigravity/archive/e02/reports/E02_ship_review_antigravity.md)
 
 ### Benchmark & Outcome (Valutazione Locale)
 
@@ -613,9 +630,9 @@ Valutare l'impatto dell'espansione del footprint di coltivazione da 1 tile a un 
 - Implementation Plan: `docs/plans/E03_Multi_Tile_Scaling.md` *(riferimento storico non presente nell'istantanea)*
 - Benchmark JSON E03: [`experiments/archive/e03/artifacts/multi_tile.json`](../experiments/archive/e03/artifacts/multi_tile.json)
 - Evidenza BUILD: `docs/versions/E03_build_antigravity.md` *(riferimento storico non presente nell'istantanea)*
-- Evidenza VERIFY: [`experiments/archive/e03/reports/E03_verify_antigravity.md`](../experiments/archive/e03/reports/E03_verify_antigravity.md)
-- Evidenza REVIEW: [`experiments/archive/e03/reports/E03_review_antigravity.md`](../experiments/archive/e03/reports/E03_review_antigravity.md)
-- Evidenza SHIP: [`experiments/archive/e03/reports/E03_ship_antigravity.md`](../experiments/archive/e03/reports/E03_ship_antigravity.md)
+- Evidenza VERIFY: [`docs/model_specs/antigravity/archive/e03/reports/E03_verify_antigravity.md`](../docs/model_specs/antigravity/archive/e03/reports/E03_verify_antigravity.md)
+- Evidenza REVIEW: [`docs/model_specs/antigravity/archive/e03/reports/E03_review_antigravity.md`](../docs/model_specs/antigravity/archive/e03/reports/E03_review_antigravity.md)
+- Evidenza SHIP: [`docs/model_specs/antigravity/archive/e03/reports/E03_ship_antigravity.md`](../docs/model_specs/antigravity/archive/e03/reports/E03_ship_antigravity.md)
 - Screenshot Kaggle: [`data/screenshots/E03-001_kaggle_submission_successful.png`](../data/screenshots/E03-001_kaggle_submission_successful.png)
 
 ### Benchmark & Outcome (Valutazione Locale)
@@ -693,7 +710,7 @@ Valutare l'espansione del footprint produttivo dal cluster 2×2 (4 tile) di E03 
 ### PLAN & Evidenze
 
 - Implementation Plan: `docs/plans/E04_Initial_NW_Scaling.md` *(riferimento storico non presente nell'istantanea)*
-- Evidenza VERIFY: [`experiments/archive/e04/reports/E04_verify_antigravity.md`](../experiments/archive/e04/reports/E04_verify_antigravity.md)
+- Evidenza VERIFY: [`docs/model_specs/antigravity/archive/e04/reports/E04_verify_antigravity.md`](../docs/model_specs/antigravity/archive/e04/reports/E04_verify_antigravity.md)
 
 ### Benchmark & Outcome (Valutazione Locale 30 Episodi)
 
@@ -862,9 +879,9 @@ Valutare l'inversione della priorità operativa dei worker da `HARVEST > PLANT >
 DEFINE: PASSED
 PLAN: PASSED
 BUILD: PASSED
-VERIFY: PASSED WITH METRIC CAVEAT (`experiments/archive/e06/reports/E06_verify_antigravity.md`)
-REVIEW: PASSED (`experiments/archive/e06/reports/E06_review_antigravity.md`, Verdict: `SUPPORTED`)
-SHIP: PASSED (Tag: `v0.6-e06-water-first`, [`experiments/archive/e06/reports/E06_ship_antigravity.md`](../experiments/archive/e06/reports/E06_ship_antigravity.md))
+VERIFY: PASSED WITH METRIC CAVEAT (`docs/model_specs/antigravity/archive/e06/reports/E06_verify_antigravity.md`)
+REVIEW: PASSED (`docs/model_specs/antigravity/archive/e06/reports/E06_review_antigravity.md`, Verdict: `SUPPORTED`)
+SHIP: PASSED (Tag: `v0.6-e06-water-first`, [`docs/model_specs/antigravity/archive/e06/reports/E06_ship_antigravity.md`](../docs/model_specs/antigravity/archive/e06/reports/E06_ship_antigravity.md))
 
 ---
 
@@ -1679,7 +1696,7 @@ Rieseguire i 28 episodi Stage A con la build corretta R1 (`E16_TREATMENT_BUILD_R
 
 ### Standalone Submission SHIP Artifacts
 - `submission/submission_codex.py`: Certified Standalone Codex C2 V4 (100% exact action equivalence on seeds 1838889274, 1619968655, 710418712).
-- `experiments/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py`: Certified Standalone Antigravity C2 (100% exact action equivalence on seeds 1838889274, 1619968655, 710418712).
+- `docs/model_specs/antigravity/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py`: Certified Standalone Antigravity C2 (100% exact action equivalence on seeds 1838889274, 1619968655, 710418712).
 
 ### Core Lesson Learned
 > `ACTIVE_SURFACE` o peak tile count non sono sufficienti a spiegare la performance. La capacità produttiva deve essere convertita lungo la catena:
@@ -1723,10 +1740,10 @@ un outcome della decisione state-dependent. Il trattamento successivo è
 `MARKET_REGIME_ADAPTATION`, verificato within-seed contro regimi di contesa
 controllati. Il corpus esterno formula l'ipotesi e non viene riutilizzato come
 holdout. Piano:
-`experiments/e17/design/E17_CODEX_TRUE_REACTIVITY_ACTIVATION_PLAN_V1.md`.
+`docs/model_specs/codex/e17/design/E17_CODEX_TRUE_REACTIVITY_ACTIVATION_PLAN_V1.md`.
 
 Report:
-`experiments/e17/reports/codex/E17_REACTIVE_EXTERNAL_REPLAY_BENCHMARK_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_REACTIVE_EXTERNAL_REPLAY_BENCHMARK_IT.md`.
 
 ---
 
@@ -1769,7 +1786,7 @@ state-driven soltanto dopo che il core potrà ripianificare le dipendenze
 strutturali.
 
 Report:
-`experiments/e17/reports/codex/E17_CODEX_TRUE_REACTIVITY_DEVELOPMENT_REPORT_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_CODEX_TRUE_REACTIVITY_DEVELOPMENT_REPORT_IT.md`.
 
 ---
 
@@ -1814,7 +1831,7 @@ monetizzato. Acquisition, placement e quota zootecnica Q2 restano fuori dalla
 mutazione causale.
 
 Report:
-`experiments/e17/reports/codex/E17_CODEX_REACTIVE_SERVICE_AND_ROUTING_DEVELOPMENT_REPORT_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_CODEX_REACTIVE_SERVICE_AND_ROUTING_DEVELOPMENT_REPORT_IT.md`.
 
 ---
 
@@ -1859,7 +1876,7 @@ con routing per cluster e rientri basati su inventario/slack; D27 resta fuori
 perimetro fino alla conservazione di score, sicurezza e liquidazione completa.
 
 Report:
-`experiments/e17/reports/codex/E17_CODEX_REACTIVE_SERVICE_ROUTING_V3_D28_DEVELOPMENT_REPORT_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_CODEX_REACTIVE_SERVICE_ROUTING_V3_D28_DEVELOPMENT_REPORT_IT.md`.
 
 ---
 
@@ -1905,7 +1922,7 @@ candidata interna. Nessun holdout, final confirmation o Kaggle. Prossimo gate:
 stress V4D nei regimi market development controllati prima di testare D27.
 
 Report:
-`experiments/e17/reports/codex/E17_CODEX_BATCHED_CLUSTER_ROUTING_V4_DEVELOPMENT_REPORT_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_CODEX_BATCHED_CLUSTER_ROUTING_V4_DEVELOPMENT_REPORT_IT.md`.
 
 ---
 
@@ -1948,7 +1965,7 @@ regime da sorvegliare perché V4D vi migliora il reward ma non il rapporto
 MOVE/service.
 
 Report:
-`experiments/e17/reports/codex/E17_CODEX_V4D_CONTROLLED_MARKET_STRESS_REPORT_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_CODEX_V4D_CONTROLLED_MARKET_STRESS_REPORT_IT.md`.
 
 ---
 
@@ -1989,7 +2006,7 @@ azioni strutturali del provider nella giornata 27 e applicare override soltanto
 in presenza di fatti osservati.
 
 Report:
-`experiments/e17/reports/codex/E17_CODEX_D27_HANDOFF_ABLATION_REPORT_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_CODEX_D27_HANDOFF_ABLATION_REPORT_IT.md`.
 
 ---
 
@@ -2013,7 +2030,7 @@ inclusa perché respinta dai gate preregistrati.
 Stato: `READY_FOR_OWNER_UPLOAD`; ID Kaggle non ancora registrato.
 
 Report:
-`experiments/e17/reports/codex/E17_CODEX_V4D_KAGGLE_SUBMISSION_READINESS_REPORT_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_CODEX_V4D_KAGGLE_SUBMISSION_READINESS_REPORT_IT.md`.
 
 ---
 
@@ -2072,7 +2089,7 @@ V2 `559767808` registra uno snapshot Kaggle `1009,8`, non ancora finale.
 Report:
 
 - `experiments/e17/reports/common/E17_TWO_CANDIDATE_DELTA_TOURNAMENT_V3_REPORT_IT.md`;
-- `experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V6_REJECTION_REPORT_IT.md`.
+- `docs/model_specs/claude/e17/reports/E17_1_CLAUDE_REACTIVE_V6_REJECTION_REPORT_IT.md`.
 
 Decisione: E17 chiuso; nessuna delle nuove varianti sostituisce la 6-6-2 V2.
 
@@ -2192,7 +2209,7 @@ diretto sia sul pool comune, oltre a dimostrare attivazione di almeno due
 regimi.
 
 Report:
-`experiments/e18/reports/codex/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_REPORT_IT.md`.
+`docs/model_specs/codex/e18/reports/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_REPORT_IT.md`.
 
 ---
 
@@ -2246,7 +2263,7 @@ supera isolamento e parità completa in entrambi i seat. Nessun holdout/final
 consumato; nessun upload Kaggle automatico.
 
 Report:
-`experiments/e18/reports/codex/E18_2_CAPACITY_GOVERNED_V4D_DEV_REPORT_IT.md`.
+`docs/model_specs/codex/e18/reports/E18_2_CAPACITY_GOVERNED_V4D_DEV_REPORT_IT.md`.
 
 ---
 
@@ -2278,4 +2295,123 @@ uno scheduler state-driven con missioni persistenti e feedback di esecuzione,
 iniziando da una transizione conservativa `7-7-5 → 7-7-2`.
 
 Report:
-`experiments/e18/reports/codex/E18_3_CODEX_INTERNAL_TOPOLOGY_ABLATION_REPORT_IT.md`.
+`docs/model_specs/codex/e18/reports/E18_3_CODEX_INTERNAL_TOPOLOGY_ABLATION_REPORT_IT.md`.
+
+---
+
+## E18.7 — torneo di sviluppo Claude/Copilot/Antigravity
+
+**Data:** 2026-09-04
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY_DIRECTIONAL_COMPARATOR`
+
+Con Antigravity E18.1 uscito dai Gate A (audit contratto motore) e B
+(economia indipendente, media 10.712,71 su 28 match contro inert/E17) è stato
+eseguito un round robin a tre sul motore reale: Claude E18.2, Copilot E18.2 e
+Antigravity E18.1, tre coppie, sette seed development, entrambi i seat, 42
+match. Codex è escluso di proposito: resta il riferimento di livello, non un
+partecipante. Nessun holdout/final consumato, nessun candidato promosso.
+
+Classifica: Claude `27-1-0` a `14.236,36` medi; Antigravity `15-13-0` a
+`9.218,46`; Copilot `0-28-0` a `260,00` con deviazione standard **zero** su
+tutti i 28 match, indipendentemente dall'avversario, e `peak_hands_mean=0,0`
+— non assume manodopera in nessuna partita. Antigravity è tecnicamente pulito
+(zero errori/fallback/perdite, due regimi realmente attivati) ma con tetto
+economico stretto (6.442–12.079): il vincolo è throughput/capacità, non
+correttezza lifecycle. Claude vince ampiamente ma con 24 perdite zootecniche
+verificate su 28 match, un difetto di sicurezza indipendente dal lavoro
+lifecycle già pianificato.
+
+Decisione: nessuna promozione. Tre prompt di sviluppo dedicati indirizzano le
+prossime iterazioni — capacità/servizio per Antigravity, diagnosi del blocco
+zero-hands per Copilot prima di qualunque lavoro di regime, lifecycle più fix
+delle perdite zootecniche per Claude.
+
+Report:
+`experiments/e18/reports/common/E18_CLAUDE_COPILOT_ANTIGRAVITY_TOURNAMENT_V1_REPORT_IT.md`.
+
+---
+
+## E18.8 — Claude lifecycle-safety V3
+
+**Data:** 2026-09-04
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY_NON_QUALIFYING`
+
+Il match peggiore del torneo E18.7 (seed `180903002`, seat 0 vs Copilot
+E18.2, 4 perdite verificate) è stato tracciato turno per turno prima di
+scrivere qualunque fix. Due cause distinte, entrambe nel solo layer
+`ACTION_ARBITER`: l'identità del worker era un indice di lista ricostruito
+ogni turno dall'ordine (instabile) di `observation["farms"][seat]["hands"]`,
+per cui lo stesso incarico `FEED_NEEDED` saltava fisicamente da un worker
+all'altro senza mai convergere; il timeout di stallo incrementava solo su
+`PASS`, quindi un worker fermo alla shed a riemettere `PICKUP WHEAT` con la
+shed a zero scorte per un'intera giornata non veniva mai riassegnato.
+
+Corretti con due meccanismi indipendenti — identità persistente per
+abbinamento greedy alla posizione precedente più vicina, e `PICKUP`
+trattato come `PASS` ai fini dello stallo — senza toccare lifecycle,
+buffer di grano, cap di superficie o selector di regime. Sul match di
+diagnosi le perdite scendono da 4 a 0 (test di regressione automatizzato).
+Sulla matrice completa (28 match, stessi due avversari del torneo E18.7):
+`verified_livestock_losses` scende da 24/28 a 13/28 (-45,8%), record
+28-0-0, zero errori/fallback, denaro medio 12.562,50 (-11,8% vs V2, coerente
+col fix: più worker liberi per sicurezza invece che bloccati).
+
+Il gate di sicurezza (`== 0` in 28/28, bloccante) migliora ma non chiude:
+una terza causa residua è stata tracciata e diagnosticata — l'abbinamento
+greedy per distanza minima non è un matching ottimale e fallisce quando
+più worker sono ravvicinati (nello stesso giorno sono stati coniati 15 id
+di mano distinti con forza lavoro stabile a 9) — ma non corretta in questo
+ciclo, per non combinare più cause non isolate nello stesso passaggio.
+
+Decisione: `ITERATE`, non promossa. Prossimo passo: matching a costo
+minimo (es. ungherese) al posto del greedy, poi riverificare 0/28 prima di
+considerare il gate di sicurezza chiuso.
+
+Report:
+`docs/model_specs/claude/e18/reports/E18_CLAUDE_LIFECYCLE_SAFETY_V3_DEVELOPMENT_REPORT_IT.md`.
+
+---
+
+## E18.9 — torneo Claude/Copilot/Antigravity V2 (verifica indipendente)
+
+**Data:** 2026-09-04
+
+**Ruolo evidenza:** `DEVELOPMENT_ONLY_DIRECTIONAL_COMPARATOR`
+
+Dopo che ciascuna linea ha chiuso un proprio ciclo di sviluppo (Claude
+E18.3 lifecycle-safety, Copilot E18.8 economic-recovery V5 dopo il fix
+dispatch-diagnosis, Antigravity E18.2 capacity-governed), stesso harness
+del torneo E18.7 riapplicato ai tre candidati aggiornati: 42 match reali,
+7 seed development, entrambi i seat. Nessun numero self-reportato dalle
+singole linee è stato accettato senza replay indipendente — l'artifact V2
+originale di Copilot era già stato bocciato come sintetico.
+
+Classifica: Copilot `28-0-0` a `21.548,96` medi, unico a superare tutti e
+quattro i gate diagnostici (zero errori/fallback/perdite, media ≥15.000);
+Claude `11-17-0` a `11.247,21` con 12 perdite zootecniche residue (causa
+già diagnosticata, matching greedy non ottimale, non ancora corretta);
+Antigravity `3-25-0` a `9.209,00`, tecnicamente pulito ma economicamente
+quasi invariato rispetto al torneo E18.7 (`9.218,46`) nonostante il nuovo
+capacity governor.
+
+Copilot vince con un'architettura deliberatamente minima: due lavoratori
+(`hire_target=2`, mai di più), una sola coltura veloce (`CARROT`) e zero
+bestiame — evita interamente la logistica di alimentazione che affligge
+Claude. Il proprio confronto interno con Antigravity (14-0 a favore di
+Copilot) usava una versione Antigravity diversa da quella qui testata: la
+lettura corretta è questo torneo, non l'auto-report. L'ablation interna di
+Antigravity (governor on/off, stesso pool avversari) conferma un effetto
+reale ma piccolo (`+646,86`, `+6,9%`): il collo di bottiglia resta
+strutturale — `peak_crops_mean=34,64`, il più alto dei tre, produce comunque
+il denaro più basso.
+
+Decisione: nessuna promozione. Prossimi passi — matching a costo minimo
+per Claude (già pianificato); leva strutturale sulla conversione
+superficie→raccolto per Antigravity, non un secondo incremento di
+capacità marginale; verifica di scalabilità per Copilot prima di toccare
+il loop CARROT che già funziona.
+
+Report:
+`experiments/e18/reports/common/E18_CLAUDE_COPILOT_ANTIGRAVITY_TOURNAMENT_V2_REPORT_IT.md`.

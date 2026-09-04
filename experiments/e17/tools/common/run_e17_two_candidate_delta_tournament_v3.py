@@ -45,7 +45,7 @@ from experiments.e17.tools.common import (
 ROOT = Path(__file__).resolve().parents[4]
 MANIFEST = ROOT / "experiments/e17/manifest/E17_COMMON_MANIFEST_V1.json"
 CODEX_V3_CONFIG = (
-    ROOT / "experiments/e17/configs/codex/CODEX_E17_3_TOPOLOGY_CAP_662_V3.json"
+    ROOT / "docs/model_specs/codex/e17/configs/CODEX_E17_3_TOPOLOGY_CAP_662_V3.json"
 )
 OUTPUT_JSON = (
     ROOT

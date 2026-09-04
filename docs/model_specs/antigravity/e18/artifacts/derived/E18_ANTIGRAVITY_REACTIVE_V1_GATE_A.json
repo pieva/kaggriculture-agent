@@ -1,0 +1,142 @@
+{
+  "candidate_id": "ANTIGRAVITY_E18_1_REACTIVE_REBOOT_V1",
+  "gate": "GATE_A_ENGINE_CONTRACT_AUDIT",
+  "passed": true,
+  "checks": {
+    "all_runs_720_steps": true,
+    "zero_errors": true,
+    "zero_fallbacks": true,
+    "chain_observed_all_runs": true,
+    "productive_actions_positive": true,
+    "peak_crops_positive": true,
+    "money_gt_2840_at_least_once": true
+  },
+  "runs": [
+    {
+      "seed": 180903001,
+      "seat": 0,
+      "steps_completed": 720,
+      "final_money": 9801.0,
+      "technical_errors": 0,
+      "fallbacks": 0,
+      "productive_actions": 1429,
+      "peak_crops": 31,
+      "peak_hands": 8,
+      "actions": {
+        "DIG": 41,
+        "PLANT": 314,
+        "WATER": 796,
+        "HARVEST": 278,
+        "DROP": 227,
+        "SELL_UNITS": 532
+      },
+      "chain_complete": true,
+      "gate_pass": true
+    },
+    {
+      "seed": 180903001,
+      "seat": 1,
+      "steps_completed": 720,
+      "final_money": 9122.0,
+      "technical_errors": 0,
+      "fallbacks": 0,
+      "productive_actions": 1197,
+      "peak_crops": 27,
+      "peak_hands": 6,
+      "actions": {
+        "DIG": 52,
+        "PLANT": 268,
+        "WATER": 655,
+        "HARVEST": 222,
+        "DROP": 174,
+        "SELL_UNITS": 432
+      },
+      "chain_complete": true,
+      "gate_pass": true
+    },
+    {
+      "seed": 180903002,
+      "seat": 0,
+      "steps_completed": 720,
+      "final_money": 7705.0,
+      "technical_errors": 0,
+      "fallbacks": 0,
+      "productive_actions": 1299,
+      "peak_crops": 30,
+      "peak_hands": 6,
+      "actions": {
+        "DIG": 47,
+        "PLANT": 290,
+        "WATER": 718,
+        "HARVEST": 244,
+        "DROP": 185,
+        "SELL_UNITS": 463
+      },
+      "chain_complete": true,
+      "gate_pass": true
+    },
+    {
+      "seed": 180903002,
+      "seat": 1,
+      "steps_completed": 720,
+      "final_money": 11554.0,
+      "technical_errors": 0,
+      "fallbacks": 0,
+      "productive_actions": 1266,
+      "peak_crops": 39,
+      "peak_hands": 6,
+      "actions": {
+        "DIG": 48,
+        "PLANT": 285,
+        "WATER": 694,
+        "HARVEST": 239,
+        "DROP": 176,
+        "SELL_UNITS": 451
+      },
+      "chain_complete": true,
+      "gate_pass": true
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "steps_completed": 720,
+      "final_money": 10552.0,
+      "technical_errors": 0,
+      "fallbacks": 0,
+      "productive_actions": 1417,
+      "peak_crops": 32,
+      "peak_hands": 8,
+      "actions": {
+        "DIG": 38,
+        "PLANT": 310,
+        "WATER": 793,
+        "HARVEST": 276,
+        "DROP": 220,
+        "SELL_UNITS": 523
+      },
+      "chain_complete": true,
+      "gate_pass": true
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "steps_completed": 720,
+      "final_money": 8654.0,
+      "technical_errors": 0,
+      "fallbacks": 0,
+      "productive_actions": 1251,
+      "peak_crops": 32,
+      "peak_hands": 6,
+      "actions": {
+        "DIG": 58,
+        "PLANT": 283,
+        "WATER": 682,
+        "HARVEST": 228,
+        "DROP": 184,
+        "SELL_UNITS": 440
+      },
+      "chain_complete": true,
+      "gate_pass": true
+    }
+  ]
+}

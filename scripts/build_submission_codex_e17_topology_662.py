@@ -8,6 +8,7 @@ import json
 import pprint
 from pathlib import Path
 
+from agricola.core.repository_paths import expected_current_sha256
 from agricola.strategy.codex.codex_e17_topology_cap_662 import (
     DEFAULT_TOPOLOGY_662_CONFIG_PATH,
     TOPOLOGY_662_MODEL_SPEC_VERSION,
@@ -37,8 +38,11 @@ SOURCE_PATH = (
     ROOT / "src/agricola/strategy/codex/codex_e17_topology_cap_662.py"
 )
 CONFIG_PATH = DEFAULT_TOPOLOGY_662_CONFIG_PATH
-EXPECTED_SOURCE_SHA256 = (
+SOURCE_SHA256_AT_FREEZE = (
     "3B7A49FB29187D2E03F58F74E48A0D9A114C2C0E7112EB19908C303826D6315C"
+)
+EXPECTED_SOURCE_SHA256 = expected_current_sha256(
+    SOURCE_PATH.relative_to(ROOT).as_posix(), SOURCE_SHA256_AT_FREEZE
 )
 EXPECTED_CONFIG_SHA256 = (
     "0288AB878C7C9224A56B71E84158BDDDFDBE0CECC6D8EAE0F30093F985CEF50C"
@@ -76,6 +80,7 @@ def _build_body() -> str:
         "model_spec_version": TOPOLOGY_662_MODEL_SPEC_VERSION,
         "base_release_id": V4D_RELEASE_ID,
         "topology_source_sha256": EXPECTED_SOURCE_SHA256,
+        "topology_source_sha256_at_freeze": SOURCE_SHA256_AT_FREEZE,
         "topology_config_sha256": EXPECTED_CONFIG_SHA256,
         "pasture_targets_by_quadrant": {"Q0": 6, "Q1": 6, "Q2": 2},
         "q2_pasture_cap": 2,

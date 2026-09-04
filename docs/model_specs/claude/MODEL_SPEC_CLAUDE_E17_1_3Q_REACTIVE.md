@@ -8,7 +8,7 @@
 - **Ambito:** policy nativa, state-reactive, per il torneo reattivo a tre
   definito in `experiments/e17/design/E17_REACTIVE_THREE_WAY_TOURNAMENT_V1.md`
 - **Sorgente:** `src/agricola/strategy/claude/e17_reactive_3q.py`
-- **Config:** `experiments/e17/configs/claude/CLAUDE_E17_1_3Q_REACTIVE_V1.json`
+- **Config:** `docs/model_specs/claude/e17/configs/CLAUDE_E17_1_3Q_REACTIVE_V1.json`
 
 ---
 

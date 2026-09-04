@@ -35,7 +35,7 @@ from agricola.strategy.codex.codex_e18_opponent_reactive_topology import (
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_E18_CAPACITY_GOVERNED_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments/e18/configs/codex/"
+    / "docs/model_specs/codex/e18/configs/"
     / "CODEX_E18_2_CAPACITY_GOVERNED_V4D_V1.json"
 )
 E18_CAPACITY_GOVERNED_MODEL_SPEC_VERSION = (

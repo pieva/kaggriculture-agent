@@ -60,10 +60,7 @@ _THIS_FILE = Path(__file__).resolve()
 _REPO_ROOT = _THIS_FILE.parents[4]
 DEFAULT_CONFIG_PATH = (
     _REPO_ROOT
-    / "experiments"
-    / "e17"
-    / "configs"
-    / "claude"
+    / "docs" / "model_specs" / "claude" / "e17" / "configs"
     / "CLAUDE_E17_1_3Q_REACTIVE_V2.json"
 )
 

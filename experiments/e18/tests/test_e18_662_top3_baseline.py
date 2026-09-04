@@ -6,6 +6,8 @@ import hashlib
 import json
 from pathlib import Path
 
+from agricola.core.repository_paths import canonical_repository_path
+
 ROOT = Path(__file__).resolve().parents[3]
 ARTIFACT = (
     ROOT
@@ -30,7 +32,10 @@ def test_e18_baseline_sources_and_evidence_boundary() -> None:
     assert data["holdout_consumed"] is False
     assert data["final_confirmation_consumed"] is False
     assert set(data["top3_profiles"]) == {"tetsuya", "OceanMix", "Crop Dusta"}
-    assert all((ROOT / path).is_file() for path in data["sources"].values())
+    assert all(
+        canonical_repository_path(ROOT, path).is_file()
+        for path in data["sources"].values()
+    )
 
 
 def test_e18_baseline_preserves_662_safety_and_exposes_reactivity_gap() -> None:

@@ -33,7 +33,7 @@ from agricola.strategy.codex.codex_e17_reactive_service_routing_core import (
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_V3_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments/e17/configs/codex/"
+    / "docs/model_specs/codex/e17/configs/"
     / "CODEX_E17_2_REACTIVE_SERVICE_ROUTING_CORE_V3_D28.json"
 )
 V3_MODEL_SPEC_VERSION = "CODEX-E17.2-REACTIVE-SERVICE-ROUTING-CORE-V3-D28"

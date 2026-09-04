@@ -20,7 +20,7 @@ Endpoint Kaggle:
 
 `https://www.kaggle.com/competitions/episodes/<EPISODE_ID>/replay.json`
 
-Ultimo aggiornamento: 2026-09-03.
+Ultimo aggiornamento: 2026-09-04.
 
 ## E18 — ciclo colturale e servizio della 6-6-2
 
@@ -57,6 +57,24 @@ causale E18.3. SHA-256, seat, seed, score e identità dell'avversario restano
 `PENDING_REACQUISITION`; prima di un'analisi frame-by-frame vanno riscaricati
 dall'endpoint canonico e verificati. Il loro ruolo è
 `EXTERNAL_DIAGNOSTIC_NOT_HOLDOUT`.
+
+### E18.2 — replay recenti analizzati il 2026-09-04
+
+La submission Codex E18.2 `55991397` è completa a rating `1215,9`. I quattro
+replay più recenti al momento della rilevazione sono stati acquisiti,
+verificati e analizzati; non sono holdout e i JSON grezzi non vengono
+versionati.
+
+| Episode | SHA-256 | Seat Codex | Avversario | Score Codex | Score avversario | Esito | Seed |
+|---:|---|---:|---|---:|---:|---|---:|
+| `105365487` | `A37225AD492D717562780627F04407A193F970E5EBEA0897EC6269E655DEBDE3` | P1 | Victor Hotz | 84.131 | 65.279 | WIN | 470.412.718 |
+| `105355836` | `4C4B3DAD13B5830F90F1DE372152DC0607851E963B68D44617985276CD221D8F` | P0 | Emre Kurubaş | 49.202 | 59.609 | LOSS | 176.537.003 |
+| `105331333` | `708F38AA0675C7CB744FDD8C39AAB6756E6226D628C6591B6934C41EF9F55874` | P1 | moonzfxs | 73.514 | 79.208 | LOSS | 1.802.484.503 |
+| `105323917` | `942FEFC8098BB94A7C70FF4876611B084561E8827528276C6CA1427D13BAB3E1` | P1 | moonzfxs | 56.272 | 55.493 | WIN | 140.933.205 |
+
+Integrità: `schema_version=1`, gioco `0.1.0`, modulo `1.32.7`, 720 step e
+`DONE/DONE` in `4/4`. Report derivato:
+`docs/model_specs/codex/e18/reports/E18_2_RECENT_KAGGLE_REPLAY_ANALYSIS_2026_09_04_IT.md`.
 
 ### Lotti Top 3 live acquisiti
 
@@ -113,7 +131,7 @@ riscaricabili dall'endpoint Kaggle usando gli Episode ID sotto. Gli SHA-256
 permettono di verificare una nuova acquisizione byte per byte.
 
 L'analisi principale è completata in
-`experiments/e17/reports/codex/E17_REACTIVE_EXTERNAL_REPLAY_BENCHMARK_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_REACTIVE_EXTERNAL_REPLAY_BENCHMARK_IT.md`.
 Confronta, dal giorno di apertura Q2 a D28, animal-tile-days, specie, quota
 crop e movimento di Q2 rispetto a Q0. D29 è separato per non confondere la
 topologia produttiva con la liquidazione terminale. Il risultato centrale è

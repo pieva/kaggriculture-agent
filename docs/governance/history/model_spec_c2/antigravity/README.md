@@ -20,7 +20,7 @@ e la relativa evidenza finale. Le linee transitorie 50K, 75K, 90K, 100K e
 - MODEL_SPEC: `docs/model_specs/antigravity/MODEL_SPEC_ANTIGRAVITY_C2_3Q_POST_FOUNDATION_REVIEW.md`;
 - builder: `scripts/build_submission_antigravity_v4.py`;
 - benchmark: `scripts/benchmark_antigravity_v4_3q.py`;
-- submission canonica: `experiments/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py`.
+- submission canonica: `docs/model_specs/antigravity/archive/e16/artifacts/freeze/legacy_submissions/submission_antigravity.py`.
 
 La submission canonica e la freeze sono byte-identiche, con SHA-256
 `5786AC521DDC0931539032ED1A4D642F75846911A078E8E8E82535C7F4757872`.

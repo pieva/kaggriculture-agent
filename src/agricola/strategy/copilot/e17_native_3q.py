@@ -20,10 +20,7 @@ from agricola.core.observation_contract import (
 POLICY_VERSION = "COPILOT-E17.0-NATIVE-3Q-CROP-BASELINE-V1"
 DEFAULT_CONFIG_PATH = (
     Path(__file__).resolve().parents[4]
-    / "experiments"
-    / "e17"
-    / "configs"
-    / "copilot"
+    / "docs" / "model_specs" / "copilot" / "e17" / "configs"
     / "COPILOT_E17_0_NATIVE_3Q_V1.json"
 )
 SAFE_PASS = {"farmer": ["PASS"], "hands": [], "market": []}

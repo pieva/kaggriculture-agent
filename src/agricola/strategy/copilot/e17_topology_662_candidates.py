@@ -22,11 +22,11 @@ from agricola.strategy.codex.codex_e17_topology_cap_662 import (
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_V3_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments/e17/configs/codex/CODEX_E17_3_TOPOLOGY_CAP_662_V3.json"
+    / "docs/model_specs/codex/e17/configs/CODEX_E17_3_TOPOLOGY_CAP_662_V3.json"
 )
 DEFAULT_V4_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments/e17/configs/codex/CODEX_E17_3_TOPOLOGY_CAP_662_V4.json"
+    / "docs/model_specs/codex/e17/configs/CODEX_E17_3_TOPOLOGY_CAP_662_V4.json"
 )
 _PASTURE_LIVESTOCK = frozenset({"COW", "SHEEP"})
 _SAFE_PASS = {"farmer": ["PASS"], "hands": [], "market": []}

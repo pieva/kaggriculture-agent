@@ -25,10 +25,7 @@ from agricola.strategy.codex.codex_e17_reactive_guarded import (
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_TRUE_REACTIVE_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments"
-    / "e17"
-    / "configs"
-    / "codex"
+    / "docs" / "model_specs" / "codex" / "e17" / "configs"
     / "CODEX_E17_1_TRUE_REACTIVE_V2.json"
 )
 TRUE_REACTIVE_MODEL_SPEC_VERSION = "CODEX-E17.1-TRUE-REACTIVE-V2"

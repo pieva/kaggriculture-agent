@@ -11,8 +11,8 @@
   (`FROZEN_WITH_FAILED_GATES`; nessuna regressione voluta, questo è un
   delta additivo su V3, non una remediation di un gate fallito)
 - **Sorgente:** `src/agricola/strategy/claude/e17_reactive_3q_v4.py`
-- **Config:** `experiments/e17/configs/claude/CLAUDE_E17_1_3Q_REACTIVE_V4.json`
-- **Piano di origine:** `experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V4_STATIC_PLAN_IT.md`
+- **Config:** `docs/model_specs/claude/e17/configs/CLAUDE_E17_1_3Q_REACTIVE_V4.json`
+- **Piano di origine:** `docs/model_specs/claude/e17/reports/E17_1_CLAUDE_REACTIVE_V4_STATIC_PLAN_IT.md`
   (Sezione 0, aggiornamento 2026-09-03)
 
 ---
@@ -101,7 +101,7 @@ delta incoerente fra seed (2 negativi, 2 positivi). Non stabile/positivo
 per il criterio del protocollo — **la matrice completa a 7 seed non è
 stata eseguita**. Nessun seed holdout o final-confirmation consumato.
 Dettaglio e interpretazione:
-`experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V4_DEVELOPMENT_REPORT_IT.md`.
+`docs/model_specs/claude/e17/reports/E17_1_CLAUDE_REACTIVE_V4_DEVELOPMENT_REPORT_IT.md`.
 
 ---
 

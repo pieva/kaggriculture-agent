@@ -9,6 +9,7 @@ import pprint
 from pathlib import Path
 from typing import Any
 
+from agricola.core.repository_paths import expected_current_sha256
 from agricola.core.state import CROPS
 from agricola.strategy.codex.codex_e17_batched_cluster_routing_v4 import (
     DEFAULT_V4D_CONFIG_PATH,
@@ -44,20 +45,20 @@ CONFIG_PATHS = {
     / "docs/model_specs/codex/configs/"
     / "CODEX_C2_V9_0_3Q_MIXED_HIGH_DENSITY_CONFIG.json",
     "guarded": ROOT
-    / "experiments/e17/configs/codex/"
+    / "docs/model_specs/codex/e17/configs/"
     / "CODEX_E17_1_3Q_REACTIVE_GUARDED_V1.json",
     "true_reactive": ROOT
-    / "experiments/e17/configs/codex/"
+    / "docs/model_specs/codex/e17/configs/"
     / "CODEX_E17_1_TRUE_REACTIVE_V2.json",
     "routing_core": ROOT
-    / "experiments/e17/configs/codex/"
+    / "docs/model_specs/codex/e17/configs/"
     / "CODEX_E17_2_REACTIVE_SERVICE_ROUTING_CORE_V2.json",
     "routing_v3": ROOT
-    / "experiments/e17/configs/codex/"
+    / "docs/model_specs/codex/e17/configs/"
     / "CODEX_E17_2_REACTIVE_SERVICE_ROUTING_CORE_V3_D28.json",
     "routing_v4": DEFAULT_V4D_CONFIG_PATH,
 }
-EXPECTED_SOURCE_HASHES = {
+SOURCE_HASHES_AT_FREEZE = {
     "observation_contract": "3E7509888B09103C79B86FD058984651337CBFC32AB60CD934E6351A4F2A81A9",
     "v9": "4D99C919B59DAE9B307C403FCF3198763B08FB9D15324AB8C937C4FC2B32090E",
     "guarded": "4B9F1FE9BD839F284D25030B39292CEF77F9195C6CA29711CF908EE5D2968607",
@@ -66,6 +67,12 @@ EXPECTED_SOURCE_HASHES = {
     "routing_v3": "80D909104402473503E1945A6F9EE200DF1CEA5ABA9C66B43C5F6A8AA61A6E91",
     "routing_v4": "9350F8B327B972C703136EB6411F03C74B2A80F6A75A9D99C3E4CA614A60B2A4",
     "routine_data": "AC5819014EBB85ED86BA5D25D4F01DE46F9E4760465B7188DF11E69C8812F774",
+}
+EXPECTED_SOURCE_HASHES = {
+    key: expected_current_sha256(
+        SOURCE_PATHS[key].relative_to(ROOT).as_posix(), historical_sha256
+    )
+    for key, historical_sha256 in SOURCE_HASHES_AT_FREEZE.items()
 }
 EXPECTED_CONFIG_HASHES = {
     "v9": "44DD0EC2F33C9EEEE74AE5676580DC833325AB969D8A9D262EC870FEAAAC6C99",
@@ -123,6 +130,7 @@ def _build_body() -> str:
         "model_spec_version": V4D_MODEL_SPEC_VERSION,
         "routine_sha256": ROUTINE_SHA256,
         "source_sha256": EXPECTED_SOURCE_HASHES,
+        "source_sha256_at_freeze": SOURCE_HASHES_AT_FREEZE,
         "config_sha256": EXPECTED_CONFIG_HASHES,
     }
     return f'''"""Standalone Codex E17.2 V4D D28 Kaggle candidate.

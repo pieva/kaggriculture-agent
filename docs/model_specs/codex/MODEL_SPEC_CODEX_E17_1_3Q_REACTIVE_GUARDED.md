@@ -124,7 +124,7 @@ Reason code ammessi:
 | `allow_animal_purchase_deferral` | true |
 
 La configurazione canonica è
-`experiments/e17/configs/codex/CODEX_E17_1_3Q_REACTIVE_GUARDED_V1.json`.
+`docs/model_specs/codex/e17/configs/CODEX_E17_1_3Q_REACTIVE_GUARDED_V1.json`.
 
 ## 8. Invarianti
 

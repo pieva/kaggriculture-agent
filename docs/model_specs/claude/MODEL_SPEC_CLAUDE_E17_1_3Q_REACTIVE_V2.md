@@ -7,18 +7,18 @@
 - **Stato:** AS-BUILT (development, remediation della V1)
 - **Predecessore:** `CLAUDE-E17.1-3Q-REACTIVE-INDEPENDENT-V1`,
   `REJECTED BEFORE TOURNAMENT`
-  (`experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V1_FAILED_GATE_REPORT.md`)
-- **Autorizzazione:** `experiments/e17/prompts/claude/E17_CLAUDE_REACTIVE_V2_REMEDIATION_PROMPT.md`,
+  (`docs/model_specs/claude/e17/reports/E17_1_CLAUDE_REACTIVE_V1_FAILED_GATE_REPORT.md`)
+- **Autorizzazione:** `docs/model_specs/claude/e17/prompts/E17_CLAUDE_REACTIVE_V2_REMEDIATION_PROMPT.md`,
   `experiments/e17/reviews/common/E17_REACTIVE_TOURNAMENT_CANDIDATE_AMENDMENT_1.md`
 - **Sorgente:** `src/agricola/strategy/claude/e17_reactive_3q_v2.py`
-- **Config:** `experiments/e17/configs/claude/CLAUDE_E17_1_3Q_REACTIVE_V2.json`
+- **Config:** `docs/model_specs/claude/e17/configs/CLAUDE_E17_1_3Q_REACTIVE_V2.json`
 
 ---
 
 ## 1. Diagnosi verificata sulla V1 (non assunta)
 
 Prima di progettare la V2 sono state misurate direttamente, sui ledger e sui
-run reali della V1 conservati sotto `experiments/e17/artifacts/runs/claude/e17_1/`,
+run reali della V1 conservati sotto `docs/model_specs/claude/e17/artifacts/runs/e17_1/`,
 le sei ipotesi elencate dal prompt di remediation. Metodo e risultato per
 ciascuna:
 

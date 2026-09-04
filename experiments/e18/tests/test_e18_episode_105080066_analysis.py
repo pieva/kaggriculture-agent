@@ -1,6 +1,8 @@
 import json
 from pathlib import Path
 
+from experiments.e18.tools.common.analyze_episode_105080066 import _unit_commands
+
 ROOT = Path(__file__).resolve().parents[3]
 ARTIFACT = (
     ROOT
@@ -14,6 +16,10 @@ ARTIFACT = (
 
 def _artifact() -> dict:
     return json.loads(ARTIFACT.read_text(encoding="utf-8"))
+
+
+def test_missing_engine_action_is_treated_as_pass() -> None:
+    assert list(_unit_commands(None)) == [(0, ["PASS"])]
 
 
 def test_episode_identity_and_evidence_boundary() -> None:

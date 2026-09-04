@@ -27,7 +27,7 @@ from agricola.strategy.codex.codex_v9_routine_data import ROUTINE_ACTIONS
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_SERVICE_ROUTING_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments/e17/configs/codex/"
+    / "docs/model_specs/codex/e17/configs/"
     / "CODEX_E17_2_REACTIVE_SERVICE_ROUTING_V1.json"
 )
 SERVICE_ROUTING_MODEL_SPEC_VERSION = "CODEX-E17.2-REACTIVE-SERVICE-ROUTING-V1"

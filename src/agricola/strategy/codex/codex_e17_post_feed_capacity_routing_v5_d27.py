@@ -19,7 +19,7 @@ from agricola.strategy.codex.codex_e17_reactive_service_routing_v3 import (
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_V5_D27_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments/e17/configs/codex/"
+    / "docs/model_specs/codex/e17/configs/"
     / "CODEX_E17_2_POST_FEED_CAPACITY_BATCHED_ROUTING_V5_D27.json"
 )
 V5_D27_MODEL_SPEC_VERSION = (

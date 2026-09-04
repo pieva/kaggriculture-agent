@@ -1,5 +1,82 @@
 # PROJECT_STATE — Kaggriculture
 
+## E18.16 — external validation e concentrazione sulla linea Codex (2026-09-04)
+
+E18.16 exact `7-7-0` è stata costruita come submission autonoma e verificata
+azione per azione (`2.880` azioni, due seat, zero import dal repository). Il
+Gate A locale passa su 14 match: cap risorse COW/SHEEP `14`, una clamp e un
+FEED critico per match, perdite `0` contro `14`, money `+1,18%`, record `8-6`.
+Gate B Top-3 resta fallito e Kaggle conferma la mancata trasferibilità: score
+`729,0` contro `1199,7` di E18.2 (`-39,24%`). E18.16 è quindi una regressione
+esterna, non una promozione; cap 14 e guard FEED restano invarianti di safety
+per la prossima architettura.
+
+Le linee Antigravity, Claude e Copilot sono congelate come
+`FROZEN_PERFORMANCE_GAP`: artefatti preservati, nessuna nuova iterazione o
+submission senza nuova ipotesi preregistrata. La pulizia sposta tutto il
+materiale agent-specific sotto `docs/model_specs/<agent>/`; `experiments/`
+resta riservato a protocolli, tornei ed evidenze comuni.
+
+La verifica Foundation C2.1 non richiede revisione: capacità strutturale,
+capacità servibile, inventari e deadline FEED EOD sono già distinti. Audit:
+`docs/governance/foundation/codex/CODEX_E18_16_FOUNDATION_DELTA_AUDIT_2026_09_04.md`.
+
+Verifica closeout: suite repository `56/56`, suite E18 Codex/common `170/170`,
+parità standalone `2.880/2.880`. La raccolta storica multi-round chiude
+`492 passed / 34 failed`: tutti i fallimenti richiedono esclusivamente il raw
+replay E17 `104498819.json`, rimosso deliberatamente e non necessario alle
+suite operative; nessun fallimento è causato dalla migrazione dei path.
+
+## E18.9 — torneo Claude/Copilot/Antigravity V2, verifica indipendente (2026-09-04)
+
+Stesso harness del torneo E18.7 riapplicato ai candidati aggiornati di
+ciascuna linea (Claude E18.3, Copilot E18.8 economic-recovery V5,
+Antigravity E18.2 capacity-governed), 42 match reali, nessun numero
+self-reportato accettato senza replay. Classifica: Copilot `28-0-0` a
+`21.548,96` (unico a superare tutti i gate diagnostici, architettura
+minima a 2 lavoratori + coltura veloce Carrot + zero bestiame); Claude
+`11-17-0` a `11.247,21` con 12 perdite zootecniche residue (causa già
+diagnosticata, non ancora corretta); Antigravity `3-25-0` a `9.209,00`,
+pulito ma economicamente invariato rispetto al torneo precedente
+(`9.218,46`) nonostante il nuovo capacity governor — la propria ablation
+interna conferma un effetto reale ma piccolo (`+6,9%`). Nessuna
+promozione. Prossimi passi: matching a costo minimo per Claude, leva
+strutturale superficie→raccolto per Antigravity, verifica di scalabilità
+per Copilot.
+
+## E18.8 — Claude lifecycle-safety V3 (2026-09-04)
+
+Audit del match peggiore del torneo E18.7 (seed `180903002` seat 0 vs
+Copilot E18.2, 4 perdite verificate) ha isolato due cause distinte nel solo
+layer `ACTION_ARBITER`: identità del worker basata su un indice di lista
+instabile (l'incarico `FEED_NEEDED` saltava da un worker fisico all'altro
+senza mai convergere) e un timeout di stallo che non riconosceva un
+`PICKUP` ripetuto bloccato (shed a zero scorte per un'intera giornata,
+zero riassegnazione). Corretti con identità persistente per abbinamento
+greedy alla posizione precedente e `PICKUP` trattato come `PASS` ai fini
+dello stallo, senza toccare lifecycle, buffer di grano, cap di superficie
+o selector di regime. Risultato sui 28 match contro Copilot E18.2/Antigravity
+E18.1: perdite `24→13` (-45,8%), record `28-0-0`, zero errori/fallback,
+denaro medio `12.562,50` (-11,8%, coerente col fix). Gate di sicurezza
+ancora `FAIL` (richiesto 0/28): causa residua isolata (abbinamento greedy
+non ottimale sotto affollamento worker) ma non corretta in questo ciclo.
+Stato: `ITERATE`; prossimo passo matching a costo minimo (ungherese).
+
+## E18.7 — torneo di sviluppo Claude/Copilot/Antigravity (2026-09-04)
+
+Con Antigravity E18.1 uscito dai Gate A/B di compatibilità motore, torneo
+diagnostico a tre (Codex escluso) sul motore reale: 3 coppie, 7 seed
+development, entrambi i seat, 42 match. Classifica: Claude `27-1-0` a
+`14.236,36` medi ma con 24 perdite zootecniche verificate su 28 match;
+Antigravity `15-13-0` a `9.218,46`, tecnicamente pulito (zero
+errori/fallback/perdite, due regimi attivati) ma con tetto economico
+stretto; Copilot `0-28-0` a `260,00` con deviazione standard zero su tutti
+i match e zero manodopera assunta in ogni partita — un blocco strutturale
+early-game, più severo di quanto la V2 avesse risolto. Nessuna promozione.
+Prompt di sviluppo dedicati aprono la prossima iterazione per ciascuna
+linea: capacità/servizio per Antigravity, diagnosi del blocco zero-hands
+per Copilot, lifecycle più fix delle perdite zootecniche per Claude.
+
 ## E18.4 Codex V1 — development gate chiuso, non promossa (2026-09-03)
 
 La 7-7-2 state-driven dimostra che cap e fill possono essere corretti senza
@@ -15,8 +92,8 @@ Copilot e Antigravity restano fuori da questo ciclo diagnostico.
 
 ```text
 PROJECT: Kaggriculture
-STATUS_DATE: 2026-09-03
-PHASE: E18 OPEN / E18.4 V1 REJECTED / V2 LOCALITY GATE PENDING
+STATUS_DATE: 2026-09-04
+PHASE: E18 OPEN / E18.16 EXACT_770 EXTERNAL_REGRESSION_CONFIRMED / PEER_LINES_FROZEN
 
 ENGINE_CONTRACT: FROZEN
 ONTOLOGY_C2_1: RECONCILED
@@ -24,13 +101,22 @@ STATE_MACHINE_C2_1: RECONCILED
 FEATURE_MODEL_C2_1: RECONCILED
 SHARED_DELIBERATION_LAYER: NONE
 OBSERVATION_CONTRACT: src/agricola/core/observation_contract.py
+FOUNDATION_DELTA_AUDIT: NO_REVISION_REQUIRED
+ACTIVE_AGENT_LINE: CODEX_ONLY
+FROZEN_AGENT_LINES: ANTIGRAVITY / CLAUDE / COPILOT
+E18_16_GATE_A: PASS_14_MATCHES / RECORD_8_6 / MONEY_+1.18_PERCENT / WORST_-0.95_PERCENT
+E18_16_GATE_B_TOP3: FAIL
+E18_16_SAFETY: RESOURCE_CAP_14 / LOSSES_0_VS_14 / CRITICAL_FEED_ONCE_PER_MATCH
+E18_16_SUBMISSION: submission/submission_codex_e18_16_770.py
+E18_16_SHA256: 4CD8F18F317D4C654F9CAB7E019EEE3ABAB906C65B46FA842B6A009EF5EB0350
+E18_16_KAGGLE_STATUS: COMPLETE_2026_09_04 / SCORE_729.0 / VS_E18_2_-39.24_PERCENT
 
 E18_3_CODEX_ABLATION: COMPLETE_70_OF_70 / FIVE_TOPOLOGIES / CODEX_ONLY
 E18_3_EXACT_TOPOLOGY: 70_OF_70
 E18_3_MONEY_VS_MATCHED_CONTROL: 775_-0.82% / 772_-14.31% / 662_-42.98% / 770_-34.69% / 670_-40.31%
 E18_3_SELECTION: NONE / SUBMISSION_NOT_AUTHORIZED
 E18_3_DIAGNOSIS: GEOMETRY_INSUFFICIENT / NATIVE_STATE_DRIVEN_SCHEDULER_REQUIRED
-E18_3_REPORT: experiments/e18/reports/codex/E18_3_CODEX_INTERNAL_TOPOLOGY_ABLATION_REPORT_IT.md
+E18_3_REPORT: docs/model_specs/codex/e18/reports/E18_3_CODEX_INTERNAL_TOPOLOGY_ABLATION_REPORT_IT.md
 
 E18_4_V1_GATE: REJECTED_0_OF_14 / 55940_VS_83095.71 / DELTA_-32.68_PERCENT
 E18_4_V1_ARCHITECTURE: EXACT_772_14_OF_14 / FILLED_16_OF_16_14_OF_14 / LOSSES_0
@@ -73,14 +159,14 @@ E17_REACTIVE_EXTERNAL_MEAN_MONEY: 78808.7
 E17_REACTIVE_ACTION_STREAMS: 1_UNIQUE_OF_10
 E17_REACTIVE_STRUCTURAL_TRAJECTORIES: 4_UNIQUE_OF_10
 E17_REACTIVE_Q2_VS_Q0_ANIMAL_TILE_DAYS: 63.29%
-E17_TRUE_REACTIVITY_PLAN: experiments/e17/design/E17_CODEX_TRUE_REACTIVITY_ACTIVATION_PLAN_V1.md
+E17_TRUE_REACTIVITY_PLAN: docs/model_specs/codex/e17/design/E17_CODEX_TRUE_REACTIVITY_ACTIVATION_PLAN_V1.md
 E17_TRUE_REACTIVITY_V2: DEVELOPMENT_GATES_PASS_NOT_KAGGLE_READY
 E17_TRUE_REACTIVITY_RUNS: 48
 E17_TRUE_REACTIVITY_INERT_DELTA: +1.55%
 E17_TRUE_REACTIVITY_OVERALL_DELTA_VS_V1: -0.26%
 E17_TRUE_REACTIVITY_Q2_OUTCOME: FINAL_ANIMALS_8_6_5_UNCHANGED
-E17_TRUE_REACTIVITY_REPORT: experiments/e17/reports/codex/E17_CODEX_TRUE_REACTIVITY_DEVELOPMENT_REPORT_IT.md
-E17_SERVICE_ROUTING_PLAN: experiments/e17/design/E17_CODEX_REACTIVE_SERVICE_AND_ROUTING_PLAN_V2.md
+E17_TRUE_REACTIVITY_REPORT: docs/model_specs/codex/e17/reports/E17_CODEX_TRUE_REACTIVITY_DEVELOPMENT_REPORT_IT.md
+E17_SERVICE_ROUTING_PLAN: docs/model_specs/codex/e17/design/E17_CODEX_REACTIVE_SERVICE_AND_ROUTING_PLAN_V2.md
 E17_SERVICE_ROUTING_V2: SUPERSEDED_INTERNAL_BY_V3_D28
 E17_SERVICE_ROUTING_V3: ALL_DEVELOPMENT_GATES_PASS_NOT_KAGGLE_RELEASED
 E17_SERVICE_ROUTING_ACTIVATION_DAY: 28
@@ -95,8 +181,8 @@ E17_SERVICE_ROUTING_MARKET_LEDGER: 78/78_CLASSIFIED
 E17_SERVICE_ROUTING_COMMANDS: ROUTING_2256 / SERVICE_752
 E17_SERVICE_ROUTING_SAFETY: NON_SELL_VIOLATIONS_0 / ANIMAL_ESCAPES_0
 E17_SERVICE_ROUTING_TERMINAL_SELLABLE_RESIDUAL: 0
-E17_SERVICE_ROUTING_REPORT: experiments/e17/reports/codex/E17_CODEX_REACTIVE_SERVICE_ROUTING_V3_D28_DEVELOPMENT_REPORT_IT.md
-E17_BATCHED_ROUTING_PLAN: experiments/e17/design/E17_CODEX_BATCHED_CLUSTER_ROUTING_PLAN_V1.md
+E17_SERVICE_ROUTING_REPORT: docs/model_specs/codex/e17/reports/E17_CODEX_REACTIVE_SERVICE_ROUTING_V3_D28_DEVELOPMENT_REPORT_IT.md
+E17_BATCHED_ROUTING_PLAN: docs/model_specs/codex/e17/design/E17_CODEX_BATCHED_CLUSTER_ROUTING_PLAN_V1.md
 E17_BATCHED_ROUTING_V4A: REJECTED_REWARD_MINUS_2.529%
 E17_CLUSTERED_ROUTING_V4B: REJECTED_NO_LOGISTIC_GAIN
 E17_CAPACITY_ROUTING_V4C: REJECTED_TRIGGER_BLOCKED_BY_WHEAT_GUARD
@@ -109,7 +195,7 @@ E17_V4D_MIN_MATCHED_DELTA: +497
 E17_V4D_MOVE_PER_SERVICE: 2.872
 E17_V4D_LEDGER: UNIT_3198/3198 / MARKET_71/71
 E17_V4D_SAFETY: ERRORS_0 / ESCAPES_0 / TERMINAL_RESIDUAL_0
-E17_V4D_REPORT: experiments/e17/reports/codex/E17_CODEX_BATCHED_CLUSTER_ROUTING_V4_DEVELOPMENT_REPORT_IT.md
+E17_V4D_REPORT: docs/model_specs/codex/e17/reports/E17_CODEX_BATCHED_CLUSTER_ROUTING_V4_DEVELOPMENT_REPORT_IT.md
 E17_V4D_MARKET_STRESS: PASS_48_OF_48 / D27_ADMITTED
 E17_V4D_MARKET_STRESS_MATCHED: 24_OF_24_NONNEGATIVE
 E17_V4D_MARKET_STRESS_MEAN: 124090.17
@@ -118,7 +204,7 @@ E17_V4D_MARKET_STRESS_DELTA: +0.723%
 E17_V4D_MARKET_STRESS_WORST_REGIME: INERT_+0.555%
 E17_V4D_MARKET_STRESS_MOVE_PER_SERVICE: 2.922_VS_2.967
 E17_V4D_MARKET_STRESS_SAFETY: ERRORS_0 / ESCAPES_0 / TERMINAL_RESIDUAL_0
-E17_V4D_MARKET_STRESS_REPORT: experiments/e17/reports/codex/E17_CODEX_V4D_CONTROLLED_MARKET_STRESS_REPORT_IT.md
+E17_V4D_MARKET_STRESS_REPORT: docs/model_specs/codex/e17/reports/E17_CODEX_V4D_CONTROLLED_MARKET_STRESS_REPORT_IT.md
 E17_D27_HANDOFF_ABLATION: FAIL_REWARD / V4D_D28_RETAINED
 E17_D27_RUNS: 12
 E17_D27_MEAN: 133290.33
@@ -128,13 +214,13 @@ E17_D27_MATCHED_NONNEGATIVE: 0/6
 E17_D27_MOVE_PER_SERVICE: 2.605_VS_2.872
 E17_D27_CAUSAL_DIAGNOSIS: ONE_FEWER_Q0_CROP_IN_6/6
 E17_D27_SAFETY: ERRORS_0 / ESCAPES_0 / TERMINAL_RESIDUAL_0
-E17_D27_REPORT: experiments/e17/reports/codex/E17_CODEX_D27_HANDOFF_ABLATION_REPORT_IT.md
+E17_D27_REPORT: docs/model_specs/codex/e17/reports/E17_CODEX_D27_HANDOFF_ABLATION_REPORT_IT.md
 E17_V4D_KAGGLE_RELEASE: READY_FOR_OWNER_UPLOAD
 E17_V4D_SUBMISSION: submission/submission_codex_e17_v4d.py
 E17_V4D_SUBMISSION_SHA256: 2792244CA71115E6CAAFDFC942B6D9AAAF09B95FC717A5B182D07A31D9717CD7
 E17_V4D_SUBMISSION_PARITY: 4314/4314
 E17_V4D_KAGGLE_UPLOAD: NOT_YET_RECORDED
-E17_V4D_RELEASE_REPORT: experiments/e17/reports/codex/E17_CODEX_V4D_KAGGLE_SUBMISSION_READINESS_REPORT_IT.md
+E17_V4D_RELEASE_REPORT: docs/model_specs/codex/e17/reports/E17_CODEX_V4D_KAGGLE_SUBMISSION_READINESS_REPORT_IT.md
 E17_662_MODEL: CODEX-E17.3-TOPOLOGY-FILL-662-V2
 E17_662_SUBMISSION: submission/submission_codex_e17_topology_662.py
 E17_662_SUBMISSION_SHA256: 3DF5C15D078552AF0A3849653057303698C9D750B4C7BB087B8A29092FADBAE8
@@ -167,7 +253,7 @@ CLAUDE_V3_BLACK_BOX_CODEX_BENCHMARK: AUTHORIZED_DEVELOPMENT_ONLY
 CLAUDE_V3_IMPLEMENTATION: COMPLETE_FROZEN_WITH_FAILED_GATES
 CLAUDE_V5_IMPLEMENTATION: COMPLETE_NOT_PROMOTED
 CLAUDE_V6_IMPLEMENTATION: COMPLETE_REJECTED_REGRESSION
-CLAUDE_V3_10X_PROMPT: experiments/e17/prompts/claude/E17_CLAUDE_REACTIVE_V3_10X_ACTIVATION_PROMPT_IT.md
+CLAUDE_V3_10X_PROMPT: docs/model_specs/claude/e17/prompts/E17_CLAUDE_REACTIVE_V3_10X_ACTIVATION_PROMPT_IT.md
 REPLAY_JSON_ROOT: data/replays/json
 REPLAY_JSON_CATALOG: data/replays/json/json.md
 E17_RAW_CODEX_DEV_AND_CLAUDE_V1: REMOVED_REPRODUCIBLE
@@ -176,16 +262,16 @@ ANTIGRAVITY_STATUS: OWNER_UNAVAILABLE_UNTIL_2026_09_04 / EXCLUDED_FROM_E17_3_TOU
 COPILOT_STATUS: 662_V3_BEHAVIORALLY_INERT / NOT_PROMOTED
 NEW_KAGGLE_SUBMISSION: E17_662_ID_559767808 / SCORE_SNAPSHOT_1009.8_STABILIZING
 
-E18_PHASE: OPEN_E18_4_V1_REJECTED_V2_LOCALITY_GATE_PENDING
+E18_PHASE: OPEN_CODEX_E18_16_EXTERNAL_VALIDATION / E18_17_NOT_BUILT
 E18_ECONOMIC_CONTROL: CODEX-E17.2-POST-FEED-CAPACITY-BATCHED-ROUTING-V4D-D28
-E18_CANDIDATE: CODEX-E18.4-STATE-DRIVEN-772-V1 / REJECTED_NO_UPLOAD
+E18_CANDIDATE: CODEX-E18.16-770-EXACT-CAP-CRITICAL-FEED-V1 / EXTERNAL_VALIDATION_ONLY
 E18_CAUSAL_FAMILY: OWN_CAPACITY_PRIMARY_ON_TILE_RECOVERY_PUBLIC_OPPONENT_SECONDARY
 E18_OPENING_REPLAY: 105080066 / ANALYZED / E18_TRAINING_EVIDENCE
 E18_OPENING_DIAGNOSIS: CROP_LIFECYCLE_SERVICE_AND_HARVEST_CADENCE_GAP
 E18_105080066_OUTPUT: CODEX_586_UNITS / YUSUF_829_UNITS / DELTA_-243
 E18_105080066_WEED_EXITS: CODEX_49 / YUSUF_9
 E18_105080066_LATE_UNWATERED_TILE_DAYS: CODEX_224 / YUSUF_161
-E18_TOP3_LIVE_2026_09_03: CROP_DUSTA_2958.7 / 3정훈_2948.1 / SBOL_BALL_2929.8
+E18_TOP4_LIVE_2026_09_04: KEIZ_3012.9 / CROP_DUSTA_2995.8 / JESSE_BULLARD_2971.1 / GIULIO_RAVASIO_2918.1
 E18_TOP3_LIVE_CORPUS: 8_REPLAYS / BOTH_SEATS_PER_AGENT / ACQUIRED_AND_ANALYZED
 E18_CODEX_EXTERNAL_LIFECYCLE_PROFILES: 1_UNIQUE_OF_3 / ACTION_STREAMS_3_UNIQUE_OF_3
 E18_TOP3_EXTERNAL_LIFECYCLE_PROFILES: 8_UNIQUE_OF_8 / 5_UNIQUE_TOPOLOGIES
@@ -217,8 +303,8 @@ E18_DYNAMIC_VS_COPILOT: 127434.21_VS_10967.93
 E18_DYNAMIC_SAFETY: 14_OF_14 / VERIFIED_LOSSES_0 / ERRORS_0 / FALLBACKS_0 / BREACHES_0
 E18_DYNAMIC_REPORT: experiments/e18/reports/common/E18_DYNAMIC_ARCHITECTURE_TOURNAMENT_V1_REPORT_IT.md
 E18_NEXT_CANDIDATE_PROMPT: experiments/e18/prompts/common/E18_DYNAMIC_ARCHITECTURE_NEXT_CANDIDATE_PROMPT_IT.md
-E18_CLAUDE_BUILD_PROMPT: experiments/e18/prompts/claude/E18_CLAUDE_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md
-E18_COPILOT_BUILD_PROMPT: experiments/e18/prompts/copilot/E18_COPILOT_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md
+E18_CLAUDE_BUILD_PROMPT: docs/model_specs/claude/e18/prompts/E18_CLAUDE_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md
+E18_COPILOT_BUILD_PROMPT: docs/model_specs/copilot/e18/prompts/E18_COPILOT_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md
 E18_FOUR_AGENT_TOURNAMENT: COMPLETE_84_OF_84 / 6_PAIRS / 7_DEV_SEEDS / BOTH_SEATS
 E18_FOUR_AGENT_RECORDS: CODEX_42-0 / CLAUDE_26-16 / COPILOT_16-26 / ANTIGRAVITY_0-42
 E18_FOUR_AGENT_MONEY: CODEX_125983.74 / CLAUDE_6467.48 / COPILOT_2840 / ANTIGRAVITY_0
@@ -230,7 +316,7 @@ E18_LATEST_VS_V4D_COMMON_POOL: 125983.74_VS_143486.45 / DELTA_-17502.71_-12.20_P
 E18_LATEST_VS_V4D_PRODUCTIVITY: PRODUCTIVE_-6.11_PERCENT / PASS_+24.77_PERCENT / WEED_TILE_DAYS_+320_PERCENT
 E18_LATEST_SELECTOR_OBSERVED: 662_14_OF_14_DIRECT_AND_42_OF_42_COMMON_POOL
 E18_ECONOMIC_CONTROL: E17_V4D_RESTORED / E18_1_DIAGNOSTIC_ONLY
-E18_LATEST_VS_V4D_REPORT: experiments/e18/reports/codex/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_REPORT_IT.md
+E18_LATEST_VS_V4D_REPORT: docs/model_specs/codex/e18/reports/E18_CODEX_LATEST_VS_E17_V4D_BENCHMARK_REPORT_IT.md
 E18_KAGGLE_LIVE_SNAPSHOT: E18_1_825.4 / E17_662_941.4 / V4D_1131.7 / REACTIVE_1077.5 / V9_1082.9
 E18_KAGGLE_LATEST_VS_V4D: DELTA_-306.3_-27.07_PERCENT
 E18_PEER_V2_REAL_ENGINE_TOURNAMENT: COMPLETE_84_OF_84 / ANTIGRAVITY_EXCLUDED
@@ -238,7 +324,42 @@ E18_PEER_V2_STANDINGS: V4D_42_0_125490.40 / E18_1_28_14_104516.71 / CLAUDE_14_28
 E18_CLAUDE_V2_INTAKE: REAL_ENGINE_MEAN_9756.29 / LOSSES_44 / NOT_PROMOTED
 E18_COPILOT_V2_INTAKE: REAL_ENGINE_MEAN_260 / SINGLE_ARCHITECTURE / NOT_PROMOTED
 E18_ACTIVE_TEST_ROSTER: CODEX_V4D_CONTROL / CODEX_E18_1_ABLATION / CLAUDE_E18_2 / COPILOT_E18_2
-E18_ANTIGRAVITY_ACTIVE_STATUS: EXCLUDED_UNTIL_NEW_RELEASE
+E18_ANTIGRAVITY_ACTIVE_STATUS: READMITTED_2026_09_04_GATE_A_AND_B_PASS
+E18_ANTIGRAVITY_GATE_A: PASS_6_OF_6 / ZERO_ERRORS_FALLBACKS / CHAIN_OBSERVED
+E18_ANTIGRAVITY_GATE_B: PASS_28_OF_28 / MEAN_10712.71 / MIN_5971 / NO_ZERO_MONEY_RUNS
+E18_CCA_TOURNAMENT: COMPLETE_42_OF_42 / CLAUDE_COPILOT_ANTIGRAVITY / CODEX_EXCLUDED_BY_DESIGN
+E18_CCA_STANDINGS: CLAUDE_27_1_0_14236.36 / ANTIGRAVITY_15_13_0_9218.46 / COPILOT_0_28_0_260.00
+E18_CCA_CLAUDE_SAFETY_FLAG: VERIFIED_LIVESTOCK_LOSSES_24_OF_28
+E18_CCA_ANTIGRAVITY_DIAGNOSIS: TECHNICALLY_CLEAN / THROUGHPUT_CAPACITY_CEILING
+E18_CCA_COPILOT_DIAGNOSIS: MONEY_STDEV_ZERO / PEAK_HANDS_MEAN_0 / STRUCTURAL_EARLY_GAME_BLOCK
+E18_CCA_PROMOTION: NONE / DIAGNOSTIC_ONLY_NO_PROMOTION
+E18_CCA_ARTIFACT: experiments/e18/artifacts/derived/common/E18_CLAUDE_COPILOT_ANTIGRAVITY_TOURNAMENT_V1.json
+E18_CCA_REPORT: experiments/e18/reports/common/E18_CLAUDE_COPILOT_ANTIGRAVITY_TOURNAMENT_V1_REPORT_IT.md
+E18_CCA_RUNNER: experiments/e18/tools/common/run_e18_claude_copilot_antigravity_v1_tournament.py
+E18_CLAUDE_V3_LIFECYCLE_SAFETY_PROMPT: docs/model_specs/claude/e18/prompts/E18_CLAUDE_LIFECYCLE_SAFETY_V3_BUILD_PROMPT_IT.md
+E18_COPILOT_V3_ZERO_HANDS_PROMPT: docs/model_specs/copilot/e18/prompts/E18_COPILOT_ZERO_HANDS_DIAGNOSIS_V3_PROMPT_IT.md
+E18_ANTIGRAVITY_V2_CAPACITY_PROMPT: docs/model_specs/antigravity/e18/prompts/E18_ANTIGRAVITY_CAPACITY_THROUGHPUT_V2_PROMPT_IT.md
+E18_CLAUDE_V3_CANDIDATE: CLAUDE-E18.3-LIFECYCLE-SAFETY-V1
+E18_CLAUDE_V3_AUDIT_CAUSES: WORKER_IDENTITY_LIST_INDEX_UNSTABLE / STALL_TIMEOUT_IGNORED_REPEATED_PICKUP
+E18_CLAUDE_V3_DEV_MATRIX: COMPLETE_28_OF_28 / VS_COPILOT_E18_2_AND_ANTIGRAVITY_E18_1
+E18_CLAUDE_V3_RECORD: 28_0_0 / MONEY_MEAN_12562.50
+E18_CLAUDE_V3_SAFETY: VERIFIED_LOSSES_13_OF_28 / WAS_24_OF_28 / DELTA_-45.8_PERCENT / GATE_FAIL_STILL_BLOCKING
+E18_CLAUDE_V3_REGRESSION_SEED_180903002: LOSSES_4_TO_0
+E18_CLAUDE_V3_RESIDUAL_CAUSE: GREEDY_IDENTITY_MATCHING_NOT_OPTIMAL_UNDER_CROWDING
+E18_CLAUDE_V3_DECISION: ITERATE / NOT_PROMOTED
+E18_CLAUDE_V3_NEXT: MINIMUM_COST_MATCHING_HUNGARIAN_ALGORITHM
+E18_CLAUDE_V3_MODEL_SPEC: docs/model_specs/claude/MODEL_SPEC_CLAUDE_E18_3_LIFECYCLE_SAFETY_V1.md
+E18_CLAUDE_V3_REPORT: docs/model_specs/claude/e18/reports/E18_CLAUDE_LIFECYCLE_SAFETY_V3_DEVELOPMENT_REPORT_IT.md
+E18_CLAUDE_V3_TESTS: docs/model_specs/claude/e18/tests/test_claude_e18_lifecycle_safety_v3.py / 13_OF_13_PASS
+E18_CCA_V2_TOURNAMENT: COMPLETE_42_OF_42 / CLAUDE_E18_3_COPILOT_E18_8_ANTIGRAVITY_E18_2
+E18_CCA_V2_STANDINGS: COPILOT_28_0_0_21548.96 / CLAUDE_11_17_0_11247.21 / ANTIGRAVITY_3_25_0_9209.00
+E18_CCA_V2_GATES_PASSED: COPILOT_E18_8_ONLY
+E18_CCA_V2_CLAUDE_SAFETY: VERIFIED_LOSSES_12_OF_28 / RESIDUAL_CAUSE_UNFIXED
+E18_CCA_V2_ANTIGRAVITY_DIAGNOSIS: GOVERNOR_EFFECT_CONFIRMED_SMALL_PLUS_6.9_PERCENT / STRUCTURAL_BOTTLENECK_REMAINS
+E18_CCA_V2_COPILOT_DIAGNOSIS: MINIMAL_ARCHITECTURE_2_WORKERS_CARROT_ONLY_ZERO_LIVESTOCK / NO_SCALE_LEVER_YET
+E18_CCA_V2_ARTIFACT: experiments/e18/artifacts/derived/common/E18_CLAUDE_COPILOT_ANTIGRAVITY_TOURNAMENT_V2.json
+E18_CCA_V2_REPORT: experiments/e18/reports/common/E18_CLAUDE_COPILOT_ANTIGRAVITY_TOURNAMENT_V2_REPORT_IT.md
+E18_CCA_V2_RUNNER: experiments/e18/tools/common/run_e18_claude_copilot_antigravity_v2_tournament.py
 E18_CODEX_V2_DEV_GATE: PASS_9_OF_9 / RECORD_56_0 / MONEY_121149.84
 E18_CODEX_V2_DIRECT_V4D: RECORD_14_0 / 93401.71_VS_90012.00 / DELTA_+3.77_PERCENT
 E18_CODEX_V2_WORK: PASS_688_VS_724 / WEED_TILE_DAYS_15_VS_14
@@ -250,16 +371,16 @@ E18_CODEX_V2_SUBMISSION_SHA256: C5FB1FC4966B81F238CDD0DE4CA5E15B16EA6B8AE077A08E
 E18_CODEX_V2_NEXT: OWNER_UPLOAD_DECISION_THEN_EXTERNAL_STABILITY_MONITOR
 E18_KAGGLE_STABILITY_RULE: 4_VALID_HOURLY_SNAPSHOTS_OVER_3H / SCORE_RANGE_LT_50
 E18_KAGGLE_MONITOR_STATUS: PROTOCOL_READY_NOT_SCHEDULED / BROWSER_ACCESS_RESTORED
-E18_KAGGLE_MONITOR_PROTOCOL: experiments/e18/prompts/codex/E18_CODEX_KAGGLE_STABILITY_MONITOR_PROTOCOL_IT.md
-E18_CLAUDE_V2_PROMPT: experiments/e18/prompts/claude/E18_CLAUDE_OPPONENT_REACTIVE_V2_REMEDIATION_PROMPT_IT.md
-E18_COPILOT_V2_PROMPT: experiments/e18/prompts/copilot/E18_COPILOT_OPPONENT_REACTIVE_V2_REMEDIATION_PROMPT_IT.md
-E18_ANTIGRAVITY_REBOOT_PROMPT: experiments/e18/prompts/antigravity/E18_ANTIGRAVITY_REACTIVE_V1_REBOOT_PROMPT_IT.md
+E18_KAGGLE_MONITOR_PROTOCOL: docs/model_specs/codex/e18/prompts/E18_CODEX_KAGGLE_STABILITY_MONITOR_PROTOCOL_IT.md
+E18_CLAUDE_V2_PROMPT: docs/model_specs/claude/e18/prompts/E18_CLAUDE_OPPONENT_REACTIVE_V2_REMEDIATION_PROMPT_IT.md
+E18_COPILOT_V2_PROMPT: docs/model_specs/copilot/e18/prompts/E18_COPILOT_OPPONENT_REACTIVE_V2_REMEDIATION_PROMPT_IT.md
+E18_ANTIGRAVITY_REBOOT_PROMPT: docs/model_specs/antigravity/e18/prompts/E18_ANTIGRAVITY_REACTIVE_V1_REBOOT_PROMPT_IT.md
 E18_FOUR_AGENT_REPORT: experiments/e18/reports/common/E18_FOUR_AGENT_REACTIVE_TOURNAMENT_V2_REPORT_IT.md
-E18_SUBMISSION: submission/submission_codex_e18_opponent_reactive_662_770.py
-E18_SUBMISSION_SHA256: 06727C1673EC289A323CE403596FAB8B272539535D27C9CEE74B8C917B78791B
-E18_SUBMISSION_PARITY: ISOLATED_PASS / 719_OF_719_IN_BOTH_662_AND_770
-E18_SUBMISSION_ROLE: READY_EXTERNAL_DIAGNOSTIC_NOT_BASELINE_REPLACEMENT
-E18_KAGGLE_STATUS: SUBMITTED_PENDING_2026_09_03 / SCORE_NOT_AVAILABLE
+E18_SUBMISSION: submission/submission_codex_e18_16_770.py
+E18_SUBMISSION_SHA256: 4CD8F18F317D4C654F9CAB7E019EEE3ABAB906C65B46FA842B6A009EF5EB0350
+E18_SUBMISSION_PARITY: ISOLATED_PASS / 2880_ACTIONS / BOTH_SEATS
+E18_SUBMISSION_ROLE: E18_16_EXTERNAL_VALIDATION_NOT_FINAL_PROMOTION
+E18_KAGGLE_STATUS: COMPLETE_2026_09_04 / SCORE_729.0 / EXTERNAL_REGRESSION_VS_E18_2_-39.24_PERCENT
 E18_REACTIVITY_ENTRY_GATE: PASS_CONDITIONED_ACTION_AND_TOPOLOGY_DIVERGENCE
 E18_SAFETY_ENTRY_GATE: PASS_14_OF_14 / VERIFIED_LOSSES_0 / BREACHES_0
 E18_MANIFEST: experiments/e18/manifest/E18_COMMON_MANIFEST_V1.json
@@ -269,7 +390,7 @@ E18_LIFECYCLE_REPORT: experiments/e18/reports/common/E18_EPISODE_105080066_CROP_
 E18_LIVE_BENCHMARK_REPORT: experiments/e18/reports/common/E18_LIVE_TOP3_AND_CODEX_REPLAY_BENCHMARK_IT.md
 E18_HOLDOUT: NOT_CONSUMED / NOT_AUTHORIZED
 E18_FINAL_CONFIRMATION: NOT_CONSUMED / NOT_AUTHORIZED
-NEXT_ACTION: BUILD_E18_4_V2_LOCALITY_TASK_AGING_ABLATION / PEERS_AND_ANTIGRAVITY_EXCLUDED
+NEXT_ACTION: MONITOR_E18_16_EXTERNAL_RESULT / SPECIFY_E18_17_LIFECYCLE_ROUTE_COMPLETION / KEEP_770
 ```
 
 ## E17 chiuso / E18 aperto
@@ -381,7 +502,7 @@ questa è evidenza che le guardie non hanno causato una divergenza osservabile
 nel corpus, non che la policy sia incapace di reagire in qualunque stato. La
 zootecnia Q2 vale il `63,29%` di Q0 nella finestra sblocco-Q2→D28, tra tetsuya
 (`75,38%`), Crop Dusta (`38,17%`) e OceanMix (`0%`). Report canonico:
-`experiments/e17/reports/codex/E17_REACTIVE_EXTERNAL_REPLAY_BENCHMARK_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_REACTIVE_EXTERNAL_REPLAY_BENCHMARK_IT.md`.
 
 Decisione ed esecuzione successive: la quota Q2 non è stata ottimizzata
 direttamente. Il controller Codex `MARKET_REGIME_ADAPTATION` V2 ha completato
@@ -390,7 +511,7 @@ controllo inerte, action-stream differenti fra regimi, tracciabilità 100%,
 zero errori e zero fughe. L'economia resta mista nei regimi stressati e la
 composizione animale 8/6/5 non cambia; la V2 è quindi proof of reactivity, non
 submission. Report:
-`experiments/e17/reports/codex/E17_CODEX_TRUE_REACTIVITY_DEVELOPMENT_REPORT_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_CODEX_TRUE_REACTIVITY_DEVELOPMENT_REPORT_IT.md`.
 
 E17.2 ha quindi introdotto `REACTIVE_SERVICE_AND_ROUTING_CORE_V2`: un
 dispatcher costruisce task fattibili dallo snapshot Foundation e assegna le
@@ -404,7 +525,7 @@ ledger `1434/1434` classificato, zero errori, zero mutazioni market e zero
 fughe. Tutti i gate development passano, ma la candidata è soltanto
 un'architettura di sviluppo: il prossimo test anticipa l'handoff a D28 e rende
 esplicita la catena raccolta→shed→liquidazione. Report:
-`experiments/e17/reports/codex/E17_CODEX_REACTIVE_SERVICE_AND_ROUTING_DEVELOPMENT_REPORT_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_CODEX_REACTIVE_SERVICE_AND_ROUTING_DEVELOPMENT_REPORT_IT.md`.
 
 L'incremento V3 ha anticipato l'handoff a D28 e ha reso esplicita la catena
 HARVEST→DROP→SELL, sfruttando l'ordine reale dell'engine (unità prima del
@@ -416,7 +537,7 @@ Tutti i gate development passano; la candidata resta interna e non è stata
 esposta a holdout o Kaggle. Il prossimo incremento mantiene D28 e riduce il
 rapporto `MOVE/service = 3,000` tramite routing raggruppato per cluster e
 inventario. Report:
-`experiments/e17/reports/codex/E17_CODEX_REACTIVE_SERVICE_ROUTING_V3_D28_DEVELOPMENT_REPORT_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_CODEX_REACTIVE_SERVICE_ROUTING_V3_D28_DEVELOPMENT_REPORT_IT.md`.
 
 Il round logistico successivo ha separato quattro ablation. Il batching puro
 V4A riduce i MOVE ma perde `−2,529%` perché il deposito EOD supera la capacità
@@ -428,7 +549,7 @@ riduce `MOVE/service` da 3,000 a 2,872 e mantiene a zero fughe, errori e residui
 vendibili. Tutti i gate V4D passano; resta candidata development interna. Il
 prossimo gate è uno stress sui regimi di mercato controllati, prima di D27.
 Report:
-`experiments/e17/reports/codex/E17_CODEX_BATCHED_CLUSTER_ROUTING_V4_DEVELOPMENT_REPORT_IT.md`.
+`docs/model_specs/codex/e17/reports/E17_CODEX_BATCHED_CLUSTER_ROUTING_V4_DEVELOPMENT_REPORT_IT.md`.
 
 ## Foundation corrente
 
@@ -554,8 +675,8 @@ comportamentale con la V9: non promette un incremento sistematico rispetto al
 precedente score Kaggle `1159,9`, ma misura la ripetibilità esterna dopo il
 riordino e la chiusura del gate E17.0. Manifest e report sono in:
 
-- `experiments/e17/artifacts/freeze/codex/E17_EXTERNAL_SUBMISSION_MANIFEST.json`;
-- `experiments/e17/reports/codex/E17_EXTERNAL_SUBMISSION_READINESS_REPORT_IT.md`.
+- `docs/model_specs/codex/e17/artifacts/freeze/E17_EXTERNAL_SUBMISSION_MANIFEST.json`;
+- `docs/model_specs/codex/e17/reports/E17_EXTERNAL_SUBMISSION_READINESS_REPORT_IT.md`.
 
 La submission Kaggle `559588638` ha raggiunto prima la rilevazione intermedia
 `996` da `600` (`+396`) e successivamente `1089,7`. La probe E17.1 reattiva ha

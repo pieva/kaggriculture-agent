@@ -7,8 +7,8 @@
 
 ## Fonti effettivamente disponibili
 
-1. **Copilot:** feedback formale post-riconciliazione in `experiments/e17/reviews/copilot/E17_CROSS_AGENT_FEEDBACK_AND_COPILOT_CRITICAL_ANALYSIS_IT.md`.
-2. **Antigravity:** feedback formale post-riconciliazione in `experiments/e17/reviews/antigravity/E17_CROSS_AGENT_FEEDBACK_AND_ANTIGRAVITY_CRITICAL_ANALYSIS_IT.md`.
+1. **Copilot:** feedback formale post-riconciliazione in `docs/model_specs/copilot/e17/reviews/E17_CROSS_AGENT_FEEDBACK_AND_COPILOT_CRITICAL_ANALYSIS_IT.md`.
+2. **Antigravity:** feedback formale post-riconciliazione in `docs/model_specs/antigravity/e17/reviews/E17_CROSS_AGENT_FEEDBACK_AND_ANTIGRAVITY_CRITICAL_ANALYSIS_IT.md`.
 
 La chiusura dei feedback è definitiva sia per Copilot (`ACCEPT_WITH_CHANGES`) che per Antigravity (`ACCEPT`). Entrambi gli agenti convergono sulla roadmap metodologica e sui vincoli epistemologici.
 

@@ -9,10 +9,10 @@
   raggiunto — Sezioni 9-11)
 - **Predecessore:** `CLAUDE-E17.1-3Q-REACTIVE-INDEPENDENT-V2`, `0-0-28`
   nell'esibizione development a tre (media `11.777,64` contro Codex)
-- **Autorizzazioni:** `experiments/e17/prompts/claude/E17_CLAUDE_REACTIVE_V3_10X_ACTIVATION_PROMPT_IT.md`,
+- **Autorizzazioni:** `docs/model_specs/claude/e17/prompts/E17_CLAUDE_REACTIVE_V3_10X_ACTIVATION_PROMPT_IT.md`,
   `experiments/e17/reviews/common/E17_CLAUDE_V3_BLACK_BOX_CODEX_BENCHMARK_AUTHORIZATION.md`
 - **Sorgente:** `src/agricola/strategy/claude/e17_reactive_3q_v3.py`
-- **Config:** `experiments/e17/configs/claude/CLAUDE_E17_1_3Q_REACTIVE_V3.json`
+- **Config:** `docs/model_specs/claude/e17/configs/CLAUDE_E17_1_3Q_REACTIVE_V3.json`
 
 ---
 
@@ -37,7 +37,7 @@ piano `E17_1_CLAUDE_REACTIVE_V3_IMPROVEMENT_PLAN.md` già registrato.
 Il benchmark di sviluppo contro Codex V9/reattivo è **black-box**:
 osservabili azioni, stato e denaro finale; vietata la lettura di sorgenti,
 routine, config o MODEL_SPEC Codex. Lo strumento
-`experiments/e17/tools/claude/run_claude_e17_1_v3_dev_benchmark_vs_codex.py`
+`docs/model_specs/claude/e17/tools/run_claude_e17_1_v3_dev_benchmark_vs_codex.py`
 importa esclusivamente le factory pubbliche (`create_v9_agent`,
 `create_codex_e17_reactive_agent`), il cui nome è stato ricavato leggendo
 solo la riga di import dello strumento comune di esibizione, mai un
@@ -296,7 +296,7 @@ Identico alla V2: intera pipeline protetta da un blocco try/except unico.
 Con la configurazione finale (post-correzioni 1-8), i risultati sono:
 
 **Passivo** (`INERT_PASS_POLICY`, 7 seed × 2 seat = 14 run,
-`experiments/e17/artifacts/derived/claude/E17_1_V3_METRICS.json`):
+`docs/model_specs/claude/e17/artifacts/derived/E17_1_V3_METRICS.json`):
 `final_money` media `17.872,86` (mediana `18.255,5`, min `9.221`, max
 `23.584`, dev. std. popolazione `3.715,82`) — **+23,7%** rispetto alla
 media passiva V2 (`14.445,29`). `derived_eod_escape_count` totale `18`
@@ -308,7 +308,7 @@ riproducibilità bit-per-bit `pass=true` su tutti i 14 run raddoppiati.
 
 **Conteso** (black-box vs `CODEX_V9` e `CODEX_REACTIVE`, 7 seed × 2 seat ×
 2 avversari = 28 match,
-`experiments/e17/artifacts/derived/claude/E17_1_V3_DEV_BENCHMARK_VS_CODEX.json`):
+`docs/model_specs/claude/e17/artifacts/derived/E17_1_V3_DEV_BENCHMARK_VS_CODEX.json`):
 `CLAUDE_MEAN_MONEY = 13.540,86` — **+15,0%** rispetto alla media conteso
 V2 (`11.777,64`). `W-T-L = 0-0-28` (nessuna vittoria contro un avversario
 che gioca a piena densità). Tutti e 14 gli abbinamenti seed×seat unici
@@ -422,4 +422,4 @@ raccomandate per una V4:
 
 Questa diagnosi non è stata falsificata né nascosta: è riportata
 integralmente nel report di implementazione
-(`experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V3_IMPLEMENTATION_REPORT.md`).
+(`docs/model_specs/claude/e17/reports/E17_1_CLAUDE_REACTIVE_V3_IMPLEMENTATION_REPORT.md`).

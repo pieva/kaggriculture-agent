@@ -455,8 +455,8 @@ Lo status riportato al termine e quello completo del workspace condiviso. Le
 modifiche non relative alla review erano gia presenti e non sono state alterate.
 
 ```text
-M  experiments/archive/e16/design/CODEX_E16_TRAINING_PROPOSAL.md
-M  experiments/archive/e16/design/COPILOT_E16_TRAINING_PROPOSAL.md
+M  docs/model_specs/codex/archive/e16/design/CODEX_E16_TRAINING_PROPOSAL.md
+M  docs/model_specs/copilot/archive/e16/design/COPILOT_E16_TRAINING_PROPOSAL.md
  D docs/experiments/E04-01_Competitive_Gap_Analysis.md
  D docs/experiments/E04-02_Experimental_Direction_Decision.md
  D docs/experiments/E05-01_HIRE_Capability_Analysis.md
@@ -488,8 +488,8 @@ R  docs/model/model_specs/post_e15/COPILOT_MODEL_SPEC_REVISION.md -> docs/model/
 ?? docs/governance/prompts/CODEX_FEATURE_MODEL_C2_REVIEW_R1.md
 ?? docs/governance/prompts/CODEX_FOUNDATION_RECONCILIATION_R1_PROMPT.md
 ?? docs/governance/prompts/COPILOT_FEATURE_MODEL_C2.md
-?? experiments/archive/e16/prompts/E16_A_R1_CODEX_FORENSIC_DIAGNOSIS_PROMPT.md
-?? experiments/archive/e16/prompts/E16_CODEX_TILE_LIFECYCLE_FEATURE_AUDIT.md
+?? docs/model_specs/codex/archive/e16/prompts/E16_A_R1_CODEX_FORENSIC_DIAGNOSIS_PROMPT.md
+?? docs/model_specs/codex/archive/e16/prompts/E16_CODEX_TILE_LIFECYCLE_FEATURE_AUDIT.md
 ?? results/e16/diagnostics/
 ?? experiments/archive/e01/tools/audit_e16_tile_lifecycle_feature.py
 ?? experiments/archive/e01/tools/diagnose_e16_a_r1_crop_attainment.py

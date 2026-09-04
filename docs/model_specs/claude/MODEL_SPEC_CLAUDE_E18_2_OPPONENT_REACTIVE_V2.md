@@ -6,8 +6,8 @@
 - **Foundation:** C2.1 (RECONCILED), esperimento E18
 - **Predecessore:** `CLAUDE-E18.1-OPPONENT-REACTIVE-V1`
 - **Sorgente:** `src/agricola/strategy/claude/e18_opponent_reactive_v2.py`
-- **Config:** `experiments/e18/configs/claude/CLAUDE_E18_2_OPPONENT_REACTIVE_V2.json`
-- **Origine:** `experiments/e18/prompts/claude/E18_CLAUDE_OPPONENT_REACTIVE_V2_REMEDIATION_PROMPT_IT.md`
+- **Config:** `docs/model_specs/claude/e18/configs/CLAUDE_E18_2_OPPONENT_REACTIVE_V2.json`
+- **Origine:** `docs/model_specs/claude/e18/prompts/E18_CLAUDE_OPPONENT_REACTIVE_V2_REMEDIATION_PROMPT_IT.md`
 
 ---
 
@@ -149,7 +149,7 @@ avversari congelati Codex E18.1, Copilot E18.1 e Antigravity E17
 (obsoleto) — non più contro Claude V3/Copilot Native usati in V1.
 Risultati completi, quattro verdetti separati (`TECHNICAL`, `SAFETY`,
 `DYNAMIC`, `ECONOMIC`) e decisione finale in
-`experiments/e18/reports/claude/E18_CLAUDE_OPPONENT_REACTIVE_V2_DEVELOPMENT_REPORT_IT.md`.
+`docs/model_specs/claude/e18/reports/E18_CLAUDE_OPPONENT_REACTIVE_V2_DEVELOPMENT_REPORT_IT.md`.
 
 ---
 

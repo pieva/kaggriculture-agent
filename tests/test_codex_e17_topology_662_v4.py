@@ -11,7 +11,7 @@ from agricola.strategy.copilot.e17_topology_662_candidates import (
 def test_codex_topology_cap_662_v4_builds_and_initializes() -> None:
     policy = create_codex_e17_topology_cap_662_v4(
         run_context={"seed": 26090101},
-        config_path="experiments/e17/configs/codex/CODEX_E17_3_TOPOLOGY_CAP_662_V4.json",
+        config_path="docs/model_specs/codex/e17/configs/CODEX_E17_3_TOPOLOGY_CAP_662_V4.json",
     )
     instance = policy.codex_e17_topology_662_v4_instance
     assert isinstance(instance, CodexE17TopologyCap662V4Agent)

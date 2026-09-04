@@ -23,10 +23,7 @@ from agricola.strategy.codex.codex_3q_mixed_high_density import create_v9_agent
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_REACTIVE_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments"
-    / "e17"
-    / "configs"
-    / "codex"
+    / "docs" / "model_specs" / "codex" / "e17" / "configs"
     / "CODEX_E17_1_3Q_REACTIVE_GUARDED_V1.json"
 )
 REACTIVE_MODEL_SPEC_VERSION = "CODEX-E17.1-3Q-REACTIVE-GUARDED-V1"

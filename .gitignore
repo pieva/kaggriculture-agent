@@ -52,10 +52,10 @@ Thumbs.db
 # Temporary scratch directory
 scratch/
 
-# E17.1 large reproducible run ledgers (kept locally for forensic analysis)
-experiments/e17/artifacts/runs/claude/e17_1/
-experiments/e17/artifacts/runs/claude/e17_1_v*/
-experiments/e17/artifacts/runs/codex/e17_1_development/
+# E17.1 large reproducible agent run ledgers (kept locally for forensic analysis)
+docs/model_specs/claude/e17/artifacts/runs/e17_1/
+docs/model_specs/claude/e17/artifacts/runs/e17_1_v*/
+docs/model_specs/codex/e17/artifacts/runs/e17_1_development/
 
 # Transient owner-provided Kaggle captures (evidence is summarized in reports)
 data/screenshots/Screenshot_*_Chrome.png

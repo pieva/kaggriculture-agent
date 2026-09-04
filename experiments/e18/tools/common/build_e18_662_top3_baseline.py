@@ -9,7 +9,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[4]
 TOP3_SOURCE = (
-    ROOT / "experiments/e17/artifacts/discovery/codex/E17_TOP3_REPLAY_METRICS.json"
+    ROOT / "docs/model_specs/codex/e17/artifacts/discovery/E17_TOP3_REPLAY_METRICS.json"
 )
 TOURNAMENT_SOURCE = (
     ROOT

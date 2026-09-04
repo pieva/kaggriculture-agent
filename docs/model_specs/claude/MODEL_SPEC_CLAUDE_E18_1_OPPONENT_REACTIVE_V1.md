@@ -8,8 +8,8 @@
   media `12.850,18`, `12,85%` del target — le linee V4/V5/V6 non sono
   predecessori: V4 e V6 sono state respinte, V5 è ricerca non promossa)
 - **Sorgente:** `src/agricola/strategy/claude/e18_opponent_reactive_v1.py`
-- **Config:** `experiments/e18/configs/claude/CLAUDE_E18_1_OPPONENT_REACTIVE_V1.json`
-- **Origine:** `experiments/e18/prompts/claude/E18_CLAUDE_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md`
+- **Config:** `docs/model_specs/claude/e18/configs/CLAUDE_E18_1_OPPONENT_REACTIVE_V1.json`
+- **Origine:** `docs/model_specs/claude/e18/prompts/E18_CLAUDE_OPPONENT_REACTIVE_V1_BUILD_PROMPT_IT.md`
 
 ---
 
@@ -117,7 +117,7 @@ distinta con priorità propria (5, fra `HARVEST_READY` e `CARE_NEEDED`).
 
 ## 3. Sicurezza e lifecycle: fixture richieste
 
-Tutte implementate come test (`experiments/e18/tests/test_claude_e18_opponent_reactive_v1.py`,
+Tutte implementate come test (`docs/model_specs/claude/e18/tests/test_claude_e18_opponent_reactive_v1.py`,
 29/29 passanti):
 
 1. `test_late_strawberry_is_marked_for_rotation_dig_not_left_to_expire` —
@@ -175,6 +175,6 @@ Kaggle senza nuova autorizzazione.
 
 ## 6. Stato del benchmark
 
-Vedi `experiments/e18/reports/claude/E18_CLAUDE_OPPONENT_REACTIVE_V1_DEVELOPMENT_REPORT_IT.md`
+Vedi `docs/model_specs/claude/e18/reports/E18_CLAUDE_OPPONENT_REACTIVE_V1_DEVELOPMENT_REPORT_IT.md`
 per la matrice di sviluppo completa (7 seed × 2 seat × 3 avversari) e i
 quattro verdetti richiesti dal prompt.

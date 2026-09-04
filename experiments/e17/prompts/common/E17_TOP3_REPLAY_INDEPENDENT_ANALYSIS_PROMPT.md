@@ -193,19 +193,19 @@ Vincoli:
 
 Scrivi esclusivamente:
 
-- `experiments/e17/artifacts/discovery/antigravity/E17_TOP3_REPLAY_METRICS.json`;
-- `experiments/e17/reports/antigravity/E17_TOP3_REPLAY_ANALYSIS.md`;
+- `docs/model_specs/antigravity/e17/artifacts/discovery/E17_TOP3_REPLAY_METRICS.json`;
+- `docs/model_specs/antigravity/e17/reports/E17_TOP3_REPLAY_ANALYSIS.md`;
 - opzionale, se necessario:
-  `experiments/e17/tools/antigravity/analyze_top3_replays.py`.
+  `docs/model_specs/antigravity/e17/tools/analyze_top3_replays.py`.
 
 ### Se `AGENT_ID = copilot`
 
 Scrivi esclusivamente:
 
-- `experiments/e17/artifacts/discovery/copilot/E17_TOP3_REPLAY_METRICS.json`;
-- `experiments/e17/reports/copilot/E17_TOP3_REPLAY_ANALYSIS.md`;
+- `docs/model_specs/copilot/e17/artifacts/discovery/E17_TOP3_REPLAY_METRICS.json`;
+- `docs/model_specs/copilot/e17/reports/E17_TOP3_REPLAY_ANALYSIS.md`;
 - opzionale, se necessario:
-  `experiments/e17/tools/copilot/analyze_top3_replays.py`.
+  `docs/model_specs/copilot/e17/tools/analyze_top3_replays.py`.
 
 Il JSON delle metriche deve contenere almeno:
 

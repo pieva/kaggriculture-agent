@@ -70,6 +70,6 @@ final-confirmation restano bloccati.
 Fonti:
 
 - `experiments/e18/artifacts/baseline/E18_662_TOP3_BASELINE_BENCHMARK_V1.json`;
-- `experiments/e17/artifacts/discovery/codex/E17_TOP3_REPLAY_METRICS.json`;
+- `docs/model_specs/codex/e17/artifacts/discovery/E17_TOP3_REPLAY_METRICS.json`;
 - `experiments/e17/artifacts/derived/common/E17_TWO_CANDIDATE_DELTA_TOURNAMENT_V3.json`;
 - `experiments/e18/design/E18_REACTIVE_662_TOP3_BENCHMARK_PLAN_V1.md`.

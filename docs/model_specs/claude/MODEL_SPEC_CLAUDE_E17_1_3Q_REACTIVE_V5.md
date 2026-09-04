@@ -13,7 +13,7 @@
   (`FROZEN_WITH_FAILED_GATES`; V4 — leva topologica SW/Q2 — è stata
   testata e respinta, esito `-8,9%`, non è il predecessore di V5)
 - **Sorgente:** `src/agricola/strategy/claude/e17_reactive_3q_v5.py`
-- **Config:** `experiments/e17/configs/claude/CLAUDE_E17_1_3Q_REACTIVE_V5.json`
+- **Config:** `docs/model_specs/claude/e17/configs/CLAUDE_E17_1_3Q_REACTIVE_V5.json`
 - **Origine:** `experiments/e17/reports/common/E17_THREE_AGENT_DEVELOPMENT_TOURNAMENT_V2_REPORT_IT.md`
   (torneo a tre 2026-09-03, 42/42 match development, Codex 28-0-0,
   Claude V3 14-14-0, Copilot 0-28-0), Sezione "Decisione": *"Il prossimo
@@ -167,7 +167,7 @@ clustering di Sezione 3.1).
 ## 4. Stato del benchmark
 
 Eseguito secondo lo stesso protocollo già stabilito per V4
-(`experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V4_STATIC_PLAN_IT.md`
+(`docs/model_specs/claude/e17/reports/E17_1_CLAUDE_REACTIVE_V4_STATIC_PLAN_IT.md`
 Sezione 5): spot-check a 4 seed positivo (`+13,6%`), esteso alla matrice
 completa a 7 seed × 2 seat (28 match): denaro medio `13.989,79` contro
 `13.540,86` di V3 (`+3,31%`), `crop_tiles_final` quasi triplicato
@@ -175,7 +175,7 @@ completa a 7 seed × 2 seat (28 match): denaro medio `13.989,79` contro
 (seed `26090101`, seat `0`) resta anomalo — bloccato a `5 hands`/`2Q`
 invece di `8`/`3Q`, non dannoso in quel caso specifico ma non ancora
 compreso. Nessun seed holdout o final-confirmation consumato. Dettaglio:
-`experiments/e17/reports/claude/E17_1_CLAUDE_REACTIVE_V5_DEVELOPMENT_REPORT_IT.md`.
+`docs/model_specs/claude/e17/reports/E17_1_CLAUDE_REACTIVE_V5_DEVELOPMENT_REPORT_IT.md`.
 
 ---
 

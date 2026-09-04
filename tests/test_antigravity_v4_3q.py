@@ -36,7 +36,9 @@ def test_antigravity_v4_archived_submission_matches_freeze():
     root = Path(__file__).resolve().parents[1]
     canonical = (
         root
-        / "experiments"
+        / "docs"
+        / "model_specs"
+        / "antigravity"
         / "archive"
         / "e16"
         / "artifacts"

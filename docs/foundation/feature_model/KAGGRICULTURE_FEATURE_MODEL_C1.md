@@ -29,14 +29,14 @@ La domanda guida è:
 Il Feature Model descrive informazione, non prescrive decisioni. Non assegna
 priorità, pesi, soglie apprese o treatment. Non modifica ontologia, MODEL_SPEC o
 policy. Il riferimento `current_MODEL_SPEC_usage` è il MODEL_SPEC Codex E15
-frozen in `experiments/archive/e15/artifacts/freeze/MODEL_SPEC_CODEX_E15_FROZEN.md`; il consolidato
+frozen in `docs/model_specs/codex/archive/e15/artifacts/freeze/MODEL_SPEC_CODEX_E15_FROZEN.md`; il consolidato
 post-E15 è usato soltanto come riferimento descrittivo aggiuntivo dei gap.
 
 Fonti riutilizzate, senza nuova analisi engine:
 
 - `docs/foundation/state_machine/KAGGRICULTURE_STATE_MACHINE_C1.md`;
 - `docs/foundation/ontology/ONTOLOGY.md`;
-- `experiments/archive/e15/artifacts/freeze/MODEL_SPEC_CODEX_E15_FROZEN.md`;
+- `docs/model_specs/codex/archive/e15/artifacts/freeze/MODEL_SPEC_CODEX_E15_FROZEN.md`;
 - `docs/model_specs/history/POST_E15_CONSOLIDATED_MODEL_SPEC_FINAL.md`;
 - `E16_TILE_LIFECYCLE_FEATURE_AUDIT.md`;
 - `E16_TILE_LIFECYCLE_FEATURE_SCHEMA.json`;

@@ -1,0 +1,3340 @@
+{
+  "causal_variable": "PASTURE_TOPOLOGY_772_TO_662_AND_CAP_16_TO_14_ONLY",
+  "date": "2026-09-04",
+  "efficiency_gate": {
+    "candidate_move_per_productive": 2.002570446293738,
+    "checks": {
+      "all_14_target_pastures_filled": true,
+      "exact_662_topology_all_matches": true,
+      "move_actions_at_least_5pct_lower": false,
+      "move_per_productive_at_least_5pct_lower": false,
+      "productive_actions_at_least_90pct_control": true,
+      "zero_fallbacks": true,
+      "zero_pass_on_actionable": true,
+      "zero_route_thrashing": true,
+      "zero_technical_errors": true,
+      "zero_verified_livestock_losses": true
+    },
+    "control_move_per_productive": 2.019198556886999,
+    "exact_topology_matches": 14,
+    "fully_filled_matches": 14,
+    "move_delta_percent": -0.5711186267628073,
+    "move_per_productive_delta_percent": -0.823500518883921,
+    "passed": false,
+    "productive_delta_percent": 0.2544775157840367
+  },
+  "epistemic_role": "DEVELOPMENT_ONLY_NON_QUALIFYING",
+  "final_confirmation_consumed": false,
+  "frozen_772_reference": {
+    "artifact": "docs/model_specs/codex/e18/artifacts/derived/E18_4_STATE_DRIVEN_772_V2_DEV_GATE.json",
+    "common_opponent": "CODEX_E18_2_CONTROL",
+    "same_development_seeds": true,
+    "same_seats": true,
+    "standings": {
+      "abandoned_crop_count_mean": 30.0,
+      "crop_tile_days_d21_d30_mean": 452.42857142857144,
+      "cross_cluster_transfers_mean": 822.0,
+      "fallbacks": 0,
+      "final_empty_target_pastures_mean": 0.0,
+      "harvested_units_total_mean": 472.57142857142856,
+      "matches": 14,
+      "mean_units_per_harvest_mean": 3.1899613899613897,
+      "money_max": 76991.0,
+      "money_mean": 47247.57142857143,
+      "money_median": 50209.0,
+      "money_min": 18772.0,
+      "move_actions_mean": 4477.428571428572,
+      "move_per_productive_mean": 2.019233256989491,
+      "ownership_changes_mean": 13.0,
+      "pass_actions_mean": 638.2142857142857,
+      "pass_on_actionable_violations_mean": 0.0,
+      "productive_actions_mean": 2217.4285714285716,
+      "route_thrashing_violations_mean": 0.0,
+      "technical_errors": 0,
+      "unwatered_tile_days_d21_d30_mean": 226.71428571428572,
+      "verified_livestock_losses": 0,
+      "weed_tile_days_d21_d30_mean": 36.357142857142854,
+      "wins": 0
+    }
+  },
+  "holdout_consumed": false,
+  "kaggle_upload_authorized": false,
+  "match_count": 14,
+  "matches": [
+    {
+      "margin_p0": -42597.0,
+      "p0": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p0_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 269,
+          "COLLECT_FERTILIZER": 321,
+          "DIG": 24,
+          "DROP": 13,
+          "EAST": 1067,
+          "FEED": 287,
+          "HARVEST": 229,
+          "NORTH": 1227,
+          "PASS": 659,
+          "PICKUP": 110,
+          "PLACE": 61,
+          "PLANT": 168,
+          "SOUTH": 833,
+          "WATER": 910,
+          "WEST": 1326
+        },
+        "aged_task_observations": {
+          "GE_12": 10938,
+          "GE_24": 1273,
+          "GE_6": 19538
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 481.0,
+        "crop_tile_days_total": 1273.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 132,
+          "CARRIER_SHED_TRANSFER": 41,
+          "LOCAL_IDLE_RELEASE": 83,
+          "ON_TILE_SERVICE": 264,
+          "REMOTE_EMERGENCY_NO_OWNER": 294
+        },
+        "cross_cluster_transfers": 814,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 156,
+        "harvested_units_total": 513,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.2884615384615383,
+        "money": 47339.0,
+        "money_d22": 23417.0,
+        "money_d30": 47339.0,
+        "money_gain_d22_d30": 23922.0,
+        "move_actions": 4453,
+        "move_per_productive": 2.00314889788574,
+        "ownership_changes": 13,
+        "pass_actions": 659,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 8,
+        "productive_actions": 2223,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 4,
+            "EMPTY": 13,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 15,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 47339.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 235.0,
+        "unwatered_tile_days_total": 490.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 517.0,
+        "weed_tile_days_d21_d30": 22.0,
+        "weed_tile_days_total": 22.0
+      },
+      "p1": "CODEX_E18_2_CONTROL",
+      "p1_metrics": {
+        "abandoned_crop_count": 47,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 37,
+          "EAST": 814,
+          "FEED": 418,
+          "FERTILIZE": 87,
+          "HARVEST": 404,
+          "NORTH": 1107,
+          "PASS": 685,
+          "PICKUP": 214,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 619,
+          "WATER": 847,
+          "WEST": 1057
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 0,
+        "crop_tile_days_d21_d30": 473.0,
+        "crop_tile_days_total": 1239.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 19,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 1,
+        "final_empty_target_pastures": 1,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 5
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 7,
+        "harvest_events_total": 233,
+        "harvested_units_total": 602,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.5836909871244633,
+        "money": 89936.0,
+        "money_d22": 53404.0,
+        "money_d30": 89936.0,
+        "money_gain_d22_d30": 36532.0,
+        "move_actions": 3597,
+        "move_per_productive": 1.2832679272208347,
+        "ownership_changes": 0,
+        "pass_actions": 685,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2803,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 8,
+            "EMPTY": 9
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 14,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 5,
+            "CROP": 6,
+            "EMPTY": 10,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 89936.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 231.0,
+        "unwatered_tile_days_total": 510.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 565.0,
+        "weed_tile_days_d21_d30": 15.0,
+        "weed_tile_days_total": 15.0
+      },
+      "seed": 180903001,
+      "winner": "CODEX_E18_2_CONTROL"
+    },
+    {
+      "margin_p0": 42597.0,
+      "p0": "CODEX_E18_2_CONTROL",
+      "p0_metrics": {
+        "abandoned_crop_count": 47,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 37,
+          "EAST": 814,
+          "FEED": 418,
+          "FERTILIZE": 87,
+          "HARVEST": 404,
+          "NORTH": 1107,
+          "PASS": 685,
+          "PICKUP": 214,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 619,
+          "WATER": 847,
+          "WEST": 1057
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 0,
+        "crop_tile_days_d21_d30": 473.0,
+        "crop_tile_days_total": 1239.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 19,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 1,
+        "final_empty_target_pastures": 1,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 5
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 7,
+        "harvest_events_total": 233,
+        "harvested_units_total": 602,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.5836909871244633,
+        "money": 89936.0,
+        "money_d22": 53404.0,
+        "money_d30": 89936.0,
+        "money_gain_d22_d30": 36532.0,
+        "move_actions": 3597,
+        "move_per_productive": 1.2832679272208347,
+        "ownership_changes": 0,
+        "pass_actions": 685,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2803,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 8,
+            "EMPTY": 9
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 14,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 5,
+            "CROP": 6,
+            "EMPTY": 10,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 89936.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 231.0,
+        "unwatered_tile_days_total": 510.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 565.0,
+        "weed_tile_days_d21_d30": 15.0,
+        "weed_tile_days_total": 15.0
+      },
+      "p1": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p1_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 269,
+          "COLLECT_FERTILIZER": 321,
+          "DIG": 24,
+          "DROP": 13,
+          "EAST": 1067,
+          "FEED": 287,
+          "HARVEST": 229,
+          "NORTH": 1227,
+          "PASS": 659,
+          "PICKUP": 110,
+          "PLACE": 61,
+          "PLANT": 168,
+          "SOUTH": 833,
+          "WATER": 910,
+          "WEST": 1326
+        },
+        "aged_task_observations": {
+          "GE_12": 10938,
+          "GE_24": 1273,
+          "GE_6": 19538
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 481.0,
+        "crop_tile_days_total": 1273.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 132,
+          "CARRIER_SHED_TRANSFER": 41,
+          "LOCAL_IDLE_RELEASE": 83,
+          "ON_TILE_SERVICE": 264,
+          "REMOTE_EMERGENCY_NO_OWNER": 294
+        },
+        "cross_cluster_transfers": 814,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 156,
+        "harvested_units_total": 513,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.2884615384615383,
+        "money": 47339.0,
+        "money_d22": 23417.0,
+        "money_d30": 47339.0,
+        "money_gain_d22_d30": 23922.0,
+        "move_actions": 4453,
+        "move_per_productive": 2.00314889788574,
+        "ownership_changes": 13,
+        "pass_actions": 659,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 8,
+        "productive_actions": 2223,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 4,
+            "EMPTY": 13,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 15,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 47339.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 235.0,
+        "unwatered_tile_days_total": 490.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 517.0,
+        "weed_tile_days_d21_d30": 22.0,
+        "weed_tile_days_total": 22.0
+      },
+      "seed": 180903001,
+      "winner": "CODEX_E18_2_CONTROL"
+    },
+    {
+      "margin_p0": -37714.0,
+      "p0": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p0_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 269,
+          "COLLECT_FERTILIZER": 321,
+          "DIG": 24,
+          "DROP": 13,
+          "EAST": 1067,
+          "FEED": 287,
+          "HARVEST": 229,
+          "NORTH": 1227,
+          "PASS": 659,
+          "PICKUP": 110,
+          "PLACE": 61,
+          "PLANT": 168,
+          "SOUTH": 833,
+          "WATER": 910,
+          "WEST": 1326
+        },
+        "aged_task_observations": {
+          "GE_12": 10938,
+          "GE_24": 1273,
+          "GE_6": 19538
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 481.0,
+        "crop_tile_days_total": 1273.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 132,
+          "CARRIER_SHED_TRANSFER": 41,
+          "LOCAL_IDLE_RELEASE": 83,
+          "ON_TILE_SERVICE": 264,
+          "REMOTE_EMERGENCY_NO_OWNER": 294
+        },
+        "cross_cluster_transfers": 814,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 156,
+        "harvested_units_total": 513,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.2884615384615383,
+        "money": 73390.0,
+        "money_d22": 27526.0,
+        "money_d30": 73390.0,
+        "money_gain_d22_d30": 45864.0,
+        "move_actions": 4453,
+        "move_per_productive": 2.00314889788574,
+        "ownership_changes": 13,
+        "pass_actions": 659,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 8,
+        "productive_actions": 2223,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 4,
+            "EMPTY": 13,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 15,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 73390.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 235.0,
+        "unwatered_tile_days_total": 490.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 517.0,
+        "weed_tile_days_d21_d30": 22.0,
+        "weed_tile_days_total": 22.0
+      },
+      "p1": "CODEX_E18_2_CONTROL",
+      "p1_metrics": {
+        "abandoned_crop_count": 47,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 37,
+          "EAST": 810,
+          "FEED": 418,
+          "FERTILIZE": 87,
+          "HARVEST": 405,
+          "NORTH": 1105,
+          "PASS": 696,
+          "PICKUP": 214,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 617,
+          "WATER": 847,
+          "WEST": 1053
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 0,
+        "crop_tile_days_d21_d30": 472.0,
+        "crop_tile_days_total": 1238.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 19,
+        "final_crops": 14,
+        "final_empty_livestock_tiles": 1,
+        "final_empty_target_pastures": 1,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 5
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 7,
+        "harvest_events_total": 234,
+        "harvested_units_total": 603,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.576923076923077,
+        "money": 111104.0,
+        "money_d22": 57166.0,
+        "money_d30": 111104.0,
+        "money_gain_d22_d30": 53938.0,
+        "move_actions": 3585,
+        "move_per_productive": 1.278530670470756,
+        "ownership_changes": 0,
+        "pass_actions": 696,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2804,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 7,
+            "EMPTY": 10
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 14,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 5,
+            "CROP": 6,
+            "EMPTY": 10,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 111104.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 230.0,
+        "unwatered_tile_days_total": 509.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 564.0,
+        "weed_tile_days_d21_d30": 15.0,
+        "weed_tile_days_total": 15.0
+      },
+      "seed": 180903002,
+      "winner": "CODEX_E18_2_CONTROL"
+    },
+    {
+      "margin_p0": 37714.0,
+      "p0": "CODEX_E18_2_CONTROL",
+      "p0_metrics": {
+        "abandoned_crop_count": 47,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 37,
+          "EAST": 810,
+          "FEED": 418,
+          "FERTILIZE": 87,
+          "HARVEST": 405,
+          "NORTH": 1105,
+          "PASS": 696,
+          "PICKUP": 214,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 617,
+          "WATER": 847,
+          "WEST": 1053
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 0,
+        "crop_tile_days_d21_d30": 472.0,
+        "crop_tile_days_total": 1238.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 19,
+        "final_crops": 14,
+        "final_empty_livestock_tiles": 1,
+        "final_empty_target_pastures": 1,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 5
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 7,
+        "harvest_events_total": 234,
+        "harvested_units_total": 603,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.576923076923077,
+        "money": 111104.0,
+        "money_d22": 57166.0,
+        "money_d30": 111104.0,
+        "money_gain_d22_d30": 53938.0,
+        "move_actions": 3585,
+        "move_per_productive": 1.278530670470756,
+        "ownership_changes": 0,
+        "pass_actions": 696,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2804,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 7,
+            "EMPTY": 10
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 14,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 5,
+            "CROP": 6,
+            "EMPTY": 10,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 111104.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 230.0,
+        "unwatered_tile_days_total": 509.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 564.0,
+        "weed_tile_days_d21_d30": 15.0,
+        "weed_tile_days_total": 15.0
+      },
+      "p1": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p1_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 269,
+          "COLLECT_FERTILIZER": 321,
+          "DIG": 24,
+          "DROP": 13,
+          "EAST": 1067,
+          "FEED": 287,
+          "HARVEST": 229,
+          "NORTH": 1227,
+          "PASS": 659,
+          "PICKUP": 110,
+          "PLACE": 61,
+          "PLANT": 168,
+          "SOUTH": 833,
+          "WATER": 910,
+          "WEST": 1326
+        },
+        "aged_task_observations": {
+          "GE_12": 10938,
+          "GE_24": 1273,
+          "GE_6": 19538
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 481.0,
+        "crop_tile_days_total": 1273.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 132,
+          "CARRIER_SHED_TRANSFER": 41,
+          "LOCAL_IDLE_RELEASE": 83,
+          "ON_TILE_SERVICE": 264,
+          "REMOTE_EMERGENCY_NO_OWNER": 294
+        },
+        "cross_cluster_transfers": 814,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 156,
+        "harvested_units_total": 513,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.2884615384615383,
+        "money": 73390.0,
+        "money_d22": 27526.0,
+        "money_d30": 73390.0,
+        "money_gain_d22_d30": 45864.0,
+        "move_actions": 4453,
+        "move_per_productive": 2.00314889788574,
+        "ownership_changes": 13,
+        "pass_actions": 659,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 8,
+        "productive_actions": 2223,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 4,
+            "EMPTY": 13,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 15,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 73390.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 235.0,
+        "unwatered_tile_days_total": 490.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 517.0,
+        "weed_tile_days_d21_d30": 22.0,
+        "weed_tile_days_total": 22.0
+      },
+      "seed": 180903002,
+      "winner": "CODEX_E18_2_CONTROL"
+    },
+    {
+      "margin_p0": -27835.0,
+      "p0": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p0_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 269,
+          "COLLECT_FERTILIZER": 321,
+          "DIG": 24,
+          "DROP": 13,
+          "EAST": 1067,
+          "FEED": 287,
+          "HARVEST": 229,
+          "NORTH": 1227,
+          "PASS": 659,
+          "PICKUP": 110,
+          "PLACE": 61,
+          "PLANT": 168,
+          "SOUTH": 833,
+          "WATER": 910,
+          "WEST": 1326
+        },
+        "aged_task_observations": {
+          "GE_12": 10938,
+          "GE_24": 1273,
+          "GE_6": 19538
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 481.0,
+        "crop_tile_days_total": 1273.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 132,
+          "CARRIER_SHED_TRANSFER": 41,
+          "LOCAL_IDLE_RELEASE": 83,
+          "ON_TILE_SERVICE": 264,
+          "REMOTE_EMERGENCY_NO_OWNER": 294
+        },
+        "cross_cluster_transfers": 814,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 156,
+        "harvested_units_total": 513,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.2884615384615383,
+        "money": 40777.0,
+        "money_d22": 19998.0,
+        "money_d30": 40777.0,
+        "money_gain_d22_d30": 20779.0,
+        "move_actions": 4453,
+        "move_per_productive": 2.00314889788574,
+        "ownership_changes": 13,
+        "pass_actions": 659,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 8,
+        "productive_actions": 2223,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 4,
+            "EMPTY": 13,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 15,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 40777.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 235.0,
+        "unwatered_tile_days_total": 490.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 517.0,
+        "weed_tile_days_d21_d30": 22.0,
+        "weed_tile_days_total": 22.0
+      },
+      "p1": "CODEX_E18_2_CONTROL",
+      "p1_metrics": {
+        "abandoned_crop_count": 47,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 37,
+          "EAST": 812,
+          "FEED": 418,
+          "FERTILIZE": 87,
+          "HARVEST": 404,
+          "NORTH": 1105,
+          "PASS": 693,
+          "PICKUP": 214,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 617,
+          "WATER": 847,
+          "WEST": 1055
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 0,
+        "crop_tile_days_d21_d30": 473.0,
+        "crop_tile_days_total": 1239.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 19,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 1,
+        "final_empty_target_pastures": 1,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 5
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 7,
+        "harvest_events_total": 233,
+        "harvested_units_total": 602,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.5836909871244633,
+        "money": 68612.0,
+        "money_d22": 42981.0,
+        "money_d30": 68612.0,
+        "money_gain_d22_d30": 25631.0,
+        "move_actions": 3589,
+        "move_per_productive": 1.2804138423118088,
+        "ownership_changes": 0,
+        "pass_actions": 693,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2803,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 8,
+            "EMPTY": 9
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 14,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 5,
+            "CROP": 6,
+            "EMPTY": 10,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 68612.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 231.0,
+        "unwatered_tile_days_total": 510.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 565.0,
+        "weed_tile_days_d21_d30": 15.0,
+        "weed_tile_days_total": 15.0
+      },
+      "seed": 180903003,
+      "winner": "CODEX_E18_2_CONTROL"
+    },
+    {
+      "margin_p0": 27835.0,
+      "p0": "CODEX_E18_2_CONTROL",
+      "p0_metrics": {
+        "abandoned_crop_count": 47,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 37,
+          "EAST": 812,
+          "FEED": 418,
+          "FERTILIZE": 87,
+          "HARVEST": 404,
+          "NORTH": 1105,
+          "PASS": 693,
+          "PICKUP": 214,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 617,
+          "WATER": 847,
+          "WEST": 1055
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 0,
+        "crop_tile_days_d21_d30": 473.0,
+        "crop_tile_days_total": 1239.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 19,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 1,
+        "final_empty_target_pastures": 1,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 5
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 7,
+        "harvest_events_total": 233,
+        "harvested_units_total": 602,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.5836909871244633,
+        "money": 68612.0,
+        "money_d22": 42981.0,
+        "money_d30": 68612.0,
+        "money_gain_d22_d30": 25631.0,
+        "move_actions": 3589,
+        "move_per_productive": 1.2804138423118088,
+        "ownership_changes": 0,
+        "pass_actions": 693,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2803,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 8,
+            "EMPTY": 9
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 14,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 5,
+            "CROP": 6,
+            "EMPTY": 10,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 68612.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 231.0,
+        "unwatered_tile_days_total": 510.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 565.0,
+        "weed_tile_days_d21_d30": 15.0,
+        "weed_tile_days_total": 15.0
+      },
+      "p1": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p1_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 269,
+          "COLLECT_FERTILIZER": 321,
+          "DIG": 24,
+          "DROP": 13,
+          "EAST": 1067,
+          "FEED": 287,
+          "HARVEST": 229,
+          "NORTH": 1227,
+          "PASS": 659,
+          "PICKUP": 110,
+          "PLACE": 61,
+          "PLANT": 168,
+          "SOUTH": 833,
+          "WATER": 910,
+          "WEST": 1326
+        },
+        "aged_task_observations": {
+          "GE_12": 10938,
+          "GE_24": 1273,
+          "GE_6": 19538
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 481.0,
+        "crop_tile_days_total": 1273.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 132,
+          "CARRIER_SHED_TRANSFER": 41,
+          "LOCAL_IDLE_RELEASE": 83,
+          "ON_TILE_SERVICE": 264,
+          "REMOTE_EMERGENCY_NO_OWNER": 294
+        },
+        "cross_cluster_transfers": 814,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 156,
+        "harvested_units_total": 513,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.2884615384615383,
+        "money": 40777.0,
+        "money_d22": 19998.0,
+        "money_d30": 40777.0,
+        "money_gain_d22_d30": 20779.0,
+        "move_actions": 4453,
+        "move_per_productive": 2.00314889788574,
+        "ownership_changes": 13,
+        "pass_actions": 659,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 8,
+        "productive_actions": 2223,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 4,
+            "EMPTY": 13,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 15,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 40777.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 235.0,
+        "unwatered_tile_days_total": 490.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 517.0,
+        "weed_tile_days_d21_d30": 22.0,
+        "weed_tile_days_total": 22.0
+      },
+      "seed": 180903003,
+      "winner": "CODEX_E18_2_CONTROL"
+    },
+    {
+      "margin_p0": -21166.0,
+      "p0": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p0_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 269,
+          "COLLECT_FERTILIZER": 321,
+          "DIG": 24,
+          "DROP": 13,
+          "EAST": 1067,
+          "FEED": 287,
+          "HARVEST": 229,
+          "NORTH": 1227,
+          "PASS": 659,
+          "PICKUP": 110,
+          "PLACE": 61,
+          "PLANT": 168,
+          "SOUTH": 833,
+          "WATER": 910,
+          "WEST": 1326
+        },
+        "aged_task_observations": {
+          "GE_12": 10938,
+          "GE_24": 1273,
+          "GE_6": 19538
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 481.0,
+        "crop_tile_days_total": 1273.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 132,
+          "CARRIER_SHED_TRANSFER": 41,
+          "LOCAL_IDLE_RELEASE": 83,
+          "ON_TILE_SERVICE": 264,
+          "REMOTE_EMERGENCY_NO_OWNER": 294
+        },
+        "cross_cluster_transfers": 814,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 156,
+        "harvested_units_total": 513,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.2884615384615383,
+        "money": 32006.0,
+        "money_d22": 13168.0,
+        "money_d30": 32006.0,
+        "money_gain_d22_d30": 18838.0,
+        "move_actions": 4453,
+        "move_per_productive": 2.00314889788574,
+        "ownership_changes": 13,
+        "pass_actions": 659,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 8,
+        "productive_actions": 2223,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 4,
+            "EMPTY": 13,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 15,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 32006.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 235.0,
+        "unwatered_tile_days_total": 490.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 517.0,
+        "weed_tile_days_d21_d30": 22.0,
+        "weed_tile_days_total": 22.0
+      },
+      "p1": "CODEX_E18_2_CONTROL",
+      "p1_metrics": {
+        "abandoned_crop_count": 46,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 37,
+          "EAST": 815,
+          "FEED": 418,
+          "FERTILIZE": 87,
+          "HARVEST": 404,
+          "NORTH": 1103,
+          "PASS": 691,
+          "PICKUP": 214,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 615,
+          "WATER": 847,
+          "WEST": 1058
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 0,
+        "crop_tile_days_d21_d30": 472.0,
+        "crop_tile_days_total": 1232.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 19,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 1,
+        "final_empty_target_pastures": 1,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 5
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 232,
+        "harvested_units_total": 599,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.581896551724138,
+        "money": 53172.0,
+        "money_d22": 32178.0,
+        "money_d30": 53172.0,
+        "money_gain_d22_d30": 20994.0,
+        "move_actions": 3591,
+        "move_per_productive": 1.2811273635390652,
+        "ownership_changes": 0,
+        "pass_actions": 691,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2803,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 8,
+            "EMPTY": 8,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 14,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 5,
+            "CROP": 6,
+            "EMPTY": 10,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 53172.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 230.0,
+        "unwatered_tile_days_total": 507.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 561.0,
+        "weed_tile_days_d21_d30": 19.0,
+        "weed_tile_days_total": 26.0
+      },
+      "seed": 180903004,
+      "winner": "CODEX_E18_2_CONTROL"
+    },
+    {
+      "margin_p0": 21225.0,
+      "p0": "CODEX_E18_2_CONTROL",
+      "p0_metrics": {
+        "abandoned_crop_count": 47,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 37,
+          "EAST": 814,
+          "FEED": 418,
+          "FERTILIZE": 87,
+          "HARVEST": 404,
+          "NORTH": 1103,
+          "PASS": 694,
+          "PICKUP": 214,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 614,
+          "WATER": 847,
+          "WEST": 1057
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 0,
+        "crop_tile_days_d21_d30": 473.0,
+        "crop_tile_days_total": 1239.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 19,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 1,
+        "final_empty_target_pastures": 1,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 5
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 7,
+        "harvest_events_total": 233,
+        "harvested_units_total": 602,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.5836909871244633,
+        "money": 54117.0,
+        "money_d22": 32652.0,
+        "money_d30": 54117.0,
+        "money_gain_d22_d30": 21465.0,
+        "move_actions": 3588,
+        "move_per_productive": 1.2800570816981804,
+        "ownership_changes": 0,
+        "pass_actions": 694,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2803,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 8,
+            "EMPTY": 9
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 14,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 5,
+            "CROP": 6,
+            "EMPTY": 10,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 54117.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 231.0,
+        "unwatered_tile_days_total": 510.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 565.0,
+        "weed_tile_days_d21_d30": 15.0,
+        "weed_tile_days_total": 15.0
+      },
+      "p1": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p1_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 260,
+          "COLLECT_FERTILIZER": 322,
+          "DIG": 25,
+          "DROP": 13,
+          "EAST": 1069,
+          "FEED": 293,
+          "HARVEST": 232,
+          "NORTH": 1219,
+          "PASS": 673,
+          "PICKUP": 111,
+          "PLACE": 61,
+          "PLANT": 167,
+          "SOUTH": 804,
+          "WATER": 910,
+          "WEST": 1345
+        },
+        "aged_task_observations": {
+          "GE_12": 10959,
+          "GE_24": 1308,
+          "GE_6": 19537
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 486.0,
+        "crop_tile_days_total": 1278.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 109,
+          "CARRIER_SHED_TRANSFER": 51,
+          "LOCAL_IDLE_RELEASE": 91,
+          "ON_TILE_SERVICE": 272,
+          "REMOTE_EMERGENCY_NO_OWNER": 267
+        },
+        "cross_cluster_transfers": 790,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 16,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 7,
+        "harvest_events_total": 158,
+        "harvested_units_total": 515,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.259493670886076,
+        "money": 32892.0,
+        "money_d22": 13423.0,
+        "money_d30": 32892.0,
+        "money_gain_d22_d30": 19469.0,
+        "move_actions": 4437,
+        "move_per_productive": 1.9950539568345325,
+        "ownership_changes": 13,
+        "pass_actions": 673,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 8,
+        "productive_actions": 2224,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 5,
+            "EMPTY": 11,
+            "WEED": 2
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 17,
+            "WEED": 1
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 32892.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 230.0,
+        "unwatered_tile_days_total": 491.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 521.0,
+        "weed_tile_days_d21_d30": 15.0,
+        "weed_tile_days_total": 15.0
+      },
+      "seed": 180903004,
+      "winner": "CODEX_E18_2_CONTROL"
+    },
+    {
+      "margin_p0": -42233.0,
+      "p0": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p0_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 269,
+          "COLLECT_FERTILIZER": 321,
+          "DIG": 24,
+          "DROP": 13,
+          "EAST": 1067,
+          "FEED": 287,
+          "HARVEST": 229,
+          "NORTH": 1227,
+          "PASS": 659,
+          "PICKUP": 110,
+          "PLACE": 61,
+          "PLANT": 168,
+          "SOUTH": 833,
+          "WATER": 910,
+          "WEST": 1326
+        },
+        "aged_task_observations": {
+          "GE_12": 10938,
+          "GE_24": 1273,
+          "GE_6": 19538
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 481.0,
+        "crop_tile_days_total": 1273.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 132,
+          "CARRIER_SHED_TRANSFER": 41,
+          "LOCAL_IDLE_RELEASE": 83,
+          "ON_TILE_SERVICE": 264,
+          "REMOTE_EMERGENCY_NO_OWNER": 294
+        },
+        "cross_cluster_transfers": 814,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 9,
+        "harvest_events_total": 156,
+        "harvested_units_total": 513,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.2884615384615383,
+        "money": 69107.0,
+        "money_d22": 28227.0,
+        "money_d30": 69107.0,
+        "money_gain_d22_d30": 40880.0,
+        "move_actions": 4453,
+        "move_per_productive": 2.00314889788574,
+        "ownership_changes": 13,
+        "pass_actions": 659,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 9,
+        "productive_actions": 2223,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 4,
+            "EMPTY": 13,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 14,
+            "WEED": 4
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 69107.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 235.0,
+        "unwatered_tile_days_total": 490.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 517.0,
+        "weed_tile_days_d21_d30": 24.0,
+        "weed_tile_days_total": 24.0
+      },
+      "p1": "CODEX_E18_2_CONTROL",
+      "p1_metrics": {
+        "abandoned_crop_count": 47,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 37,
+          "EAST": 818,
+          "FEED": 418,
+          "FERTILIZE": 87,
+          "HARVEST": 403,
+          "NORTH": 1108,
+          "PASS": 678,
+          "PICKUP": 214,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 619,
+          "WATER": 847,
+          "WEST": 1060
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 0,
+        "crop_tile_days_d21_d30": 474.0,
+        "crop_tile_days_total": 1240.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 19,
+        "final_crops": 16,
+        "final_empty_livestock_tiles": 1,
+        "final_empty_target_pastures": 1,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 5
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 7,
+        "harvest_events_total": 232,
+        "harvested_units_total": 600,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.586206896551724,
+        "money": 111340.0,
+        "money_d22": 57795.0,
+        "money_d30": 111340.0,
+        "money_gain_d22_d30": 53545.0,
+        "move_actions": 3605,
+        "move_per_productive": 1.2865810135617417,
+        "ownership_changes": 0,
+        "pass_actions": 678,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2802,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 8,
+            "EMPTY": 9
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 2,
+            "EMPTY": 13,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 5,
+            "CROP": 6,
+            "EMPTY": 10,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 111340.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 232.0,
+        "unwatered_tile_days_total": 511.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 566.0,
+        "weed_tile_days_d21_d30": 15.0,
+        "weed_tile_days_total": 15.0
+      },
+      "seed": 180903005,
+      "winner": "CODEX_E18_2_CONTROL"
+    },
+    {
+      "margin_p0": 42233.0,
+      "p0": "CODEX_E18_2_CONTROL",
+      "p0_metrics": {
+        "abandoned_crop_count": 47,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 37,
+          "EAST": 818,
+          "FEED": 418,
+          "FERTILIZE": 87,
+          "HARVEST": 403,
+          "NORTH": 1108,
+          "PASS": 678,
+          "PICKUP": 214,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 619,
+          "WATER": 847,
+          "WEST": 1060
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 0,
+        "crop_tile_days_d21_d30": 474.0,
+        "crop_tile_days_total": 1240.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 19,
+        "final_crops": 16,
+        "final_empty_livestock_tiles": 1,
+        "final_empty_target_pastures": 1,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 5
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 7,
+        "harvest_events_total": 232,
+        "harvested_units_total": 600,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.586206896551724,
+        "money": 111340.0,
+        "money_d22": 57795.0,
+        "money_d30": 111340.0,
+        "money_gain_d22_d30": 53545.0,
+        "move_actions": 3605,
+        "move_per_productive": 1.2865810135617417,
+        "ownership_changes": 0,
+        "pass_actions": 678,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2802,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 8,
+            "EMPTY": 9
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 2,
+            "EMPTY": 13,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 5,
+            "CROP": 6,
+            "EMPTY": 10,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 111340.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 232.0,
+        "unwatered_tile_days_total": 511.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 566.0,
+        "weed_tile_days_d21_d30": 15.0,
+        "weed_tile_days_total": 15.0
+      },
+      "p1": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p1_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 269,
+          "COLLECT_FERTILIZER": 321,
+          "DIG": 24,
+          "DROP": 13,
+          "EAST": 1067,
+          "FEED": 287,
+          "HARVEST": 229,
+          "NORTH": 1227,
+          "PASS": 659,
+          "PICKUP": 110,
+          "PLACE": 61,
+          "PLANT": 168,
+          "SOUTH": 833,
+          "WATER": 910,
+          "WEST": 1326
+        },
+        "aged_task_observations": {
+          "GE_12": 10938,
+          "GE_24": 1273,
+          "GE_6": 19538
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 481.0,
+        "crop_tile_days_total": 1273.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 132,
+          "CARRIER_SHED_TRANSFER": 41,
+          "LOCAL_IDLE_RELEASE": 83,
+          "ON_TILE_SERVICE": 264,
+          "REMOTE_EMERGENCY_NO_OWNER": 294
+        },
+        "cross_cluster_transfers": 814,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 9,
+        "harvest_events_total": 156,
+        "harvested_units_total": 513,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.2884615384615383,
+        "money": 69107.0,
+        "money_d22": 28227.0,
+        "money_d30": 69107.0,
+        "money_gain_d22_d30": 40880.0,
+        "move_actions": 4453,
+        "move_per_productive": 2.00314889788574,
+        "ownership_changes": 13,
+        "pass_actions": 659,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 9,
+        "productive_actions": 2223,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 4,
+            "EMPTY": 12,
+            "WEED": 2
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 15,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 69107.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 235.0,
+        "unwatered_tile_days_total": 490.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 517.0,
+        "weed_tile_days_d21_d30": 24.0,
+        "weed_tile_days_total": 24.0
+      },
+      "seed": 180903005,
+      "winner": "CODEX_E18_2_CONTROL"
+    },
+    {
+      "margin_p0": -15462.0,
+      "p0": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p0_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 269,
+          "COLLECT_FERTILIZER": 321,
+          "DIG": 24,
+          "DROP": 13,
+          "EAST": 1067,
+          "FEED": 287,
+          "HARVEST": 229,
+          "NORTH": 1227,
+          "PASS": 659,
+          "PICKUP": 110,
+          "PLACE": 61,
+          "PLANT": 168,
+          "SOUTH": 833,
+          "WATER": 910,
+          "WEST": 1326
+        },
+        "aged_task_observations": {
+          "GE_12": 10938,
+          "GE_24": 1273,
+          "GE_6": 19538
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 481.0,
+        "crop_tile_days_total": 1273.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 132,
+          "CARRIER_SHED_TRANSFER": 41,
+          "LOCAL_IDLE_RELEASE": 83,
+          "ON_TILE_SERVICE": 264,
+          "REMOTE_EMERGENCY_NO_OWNER": 294
+        },
+        "cross_cluster_transfers": 814,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 156,
+        "harvested_units_total": 513,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.2884615384615383,
+        "money": 23604.0,
+        "money_d22": 14934.0,
+        "money_d30": 23604.0,
+        "money_gain_d22_d30": 8670.0,
+        "move_actions": 4453,
+        "move_per_productive": 2.00314889788574,
+        "ownership_changes": 13,
+        "pass_actions": 659,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 8,
+        "productive_actions": 2223,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 4,
+            "EMPTY": 13,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 15,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 23604.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 235.0,
+        "unwatered_tile_days_total": 490.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 517.0,
+        "weed_tile_days_d21_d30": 22.0,
+        "weed_tile_days_total": 22.0
+      },
+      "p1": "CODEX_E18_2_CONTROL",
+      "p1_metrics": {
+        "abandoned_crop_count": 48,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 40,
+          "EAST": 804,
+          "FEED": 417,
+          "FERTILIZE": 87,
+          "HARVEST": 402,
+          "NORTH": 1119,
+          "PASS": 685,
+          "PICKUP": 213,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 626,
+          "WATER": 847,
+          "WEST": 1049
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 474.0,
+        "crop_tile_days_total": 1240.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 18,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 2,
+        "final_empty_target_pastures": 2,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 4
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 232,
+        "harvested_units_total": 599,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.581896551724138,
+        "money": 39066.0,
+        "money_d22": 28656.0,
+        "money_d30": 39066.0,
+        "money_gain_d22_d30": 10410.0,
+        "move_actions": 3598,
+        "move_per_productive": 1.285,
+        "ownership_changes": 0,
+        "pass_actions": 685,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2800,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 8,
+            "EMPTY": 8,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 14,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 4,
+            "CROP": 6,
+            "EMPTY": 10,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 39066.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 233.0,
+        "unwatered_tile_days_total": 512.0,
+        "verified_livestock_losses": 1,
+        "water_stressed_tile_days_total": 564.0,
+        "weed_tile_days_d21_d30": 16.0,
+        "weed_tile_days_total": 16.0
+      },
+      "seed": 180903006,
+      "winner": "CODEX_E18_2_CONTROL"
+    },
+    {
+      "margin_p0": 15462.0,
+      "p0": "CODEX_E18_2_CONTROL",
+      "p0_metrics": {
+        "abandoned_crop_count": 48,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 40,
+          "EAST": 804,
+          "FEED": 417,
+          "FERTILIZE": 87,
+          "HARVEST": 402,
+          "NORTH": 1119,
+          "PASS": 685,
+          "PICKUP": 213,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 626,
+          "WATER": 847,
+          "WEST": 1049
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 474.0,
+        "crop_tile_days_total": 1240.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 18,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 2,
+        "final_empty_target_pastures": 2,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 4
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 232,
+        "harvested_units_total": 599,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.581896551724138,
+        "money": 39066.0,
+        "money_d22": 28656.0,
+        "money_d30": 39066.0,
+        "money_gain_d22_d30": 10410.0,
+        "move_actions": 3598,
+        "move_per_productive": 1.285,
+        "ownership_changes": 0,
+        "pass_actions": 685,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2800,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 8,
+            "EMPTY": 8,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 14,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 4,
+            "CROP": 6,
+            "EMPTY": 10,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 39066.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 233.0,
+        "unwatered_tile_days_total": 512.0,
+        "verified_livestock_losses": 1,
+        "water_stressed_tile_days_total": 564.0,
+        "weed_tile_days_d21_d30": 16.0,
+        "weed_tile_days_total": 16.0
+      },
+      "p1": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p1_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 269,
+          "COLLECT_FERTILIZER": 321,
+          "DIG": 24,
+          "DROP": 13,
+          "EAST": 1067,
+          "FEED": 287,
+          "HARVEST": 229,
+          "NORTH": 1227,
+          "PASS": 659,
+          "PICKUP": 110,
+          "PLACE": 61,
+          "PLANT": 168,
+          "SOUTH": 833,
+          "WATER": 910,
+          "WEST": 1326
+        },
+        "aged_task_observations": {
+          "GE_12": 10938,
+          "GE_24": 1273,
+          "GE_6": 19538
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 481.0,
+        "crop_tile_days_total": 1273.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 132,
+          "CARRIER_SHED_TRANSFER": 41,
+          "LOCAL_IDLE_RELEASE": 83,
+          "ON_TILE_SERVICE": 264,
+          "REMOTE_EMERGENCY_NO_OWNER": 294
+        },
+        "cross_cluster_transfers": 814,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 156,
+        "harvested_units_total": 513,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.2884615384615383,
+        "money": 23604.0,
+        "money_d22": 14934.0,
+        "money_d30": 23604.0,
+        "money_gain_d22_d30": 8670.0,
+        "move_actions": 4453,
+        "move_per_productive": 2.00314889788574,
+        "ownership_changes": 13,
+        "pass_actions": 659,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 8,
+        "productive_actions": 2223,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 4,
+            "EMPTY": 13,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 15,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 23604.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 235.0,
+        "unwatered_tile_days_total": 490.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 517.0,
+        "weed_tile_days_d21_d30": 22.0,
+        "weed_tile_days_total": 22.0
+      },
+      "seed": 180903006,
+      "winner": "CODEX_E18_2_CONTROL"
+    },
+    {
+      "margin_p0": -47572.0,
+      "p0": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p0_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 269,
+          "COLLECT_FERTILIZER": 321,
+          "DIG": 24,
+          "DROP": 13,
+          "EAST": 1067,
+          "FEED": 287,
+          "HARVEST": 229,
+          "NORTH": 1227,
+          "PASS": 659,
+          "PICKUP": 110,
+          "PLACE": 61,
+          "PLANT": 168,
+          "SOUTH": 833,
+          "WATER": 910,
+          "WEST": 1326
+        },
+        "aged_task_observations": {
+          "GE_12": 10938,
+          "GE_24": 1273,
+          "GE_6": 19538
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 481.0,
+        "crop_tile_days_total": 1273.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 132,
+          "CARRIER_SHED_TRANSFER": 41,
+          "LOCAL_IDLE_RELEASE": 83,
+          "ON_TILE_SERVICE": 264,
+          "REMOTE_EMERGENCY_NO_OWNER": 294
+        },
+        "cross_cluster_transfers": 814,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 156,
+        "harvested_units_total": 513,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.2884615384615383,
+        "money": 57590.0,
+        "money_d22": 21587.0,
+        "money_d30": 57590.0,
+        "money_gain_d22_d30": 36003.0,
+        "move_actions": 4453,
+        "move_per_productive": 2.00314889788574,
+        "ownership_changes": 13,
+        "pass_actions": 659,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 8,
+        "productive_actions": 2223,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 4,
+            "EMPTY": 13,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 15,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 57590.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 235.0,
+        "unwatered_tile_days_total": 490.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 517.0,
+        "weed_tile_days_d21_d30": 22.0,
+        "weed_tile_days_total": 22.0
+      },
+      "p1": "CODEX_E18_2_CONTROL",
+      "p1_metrics": {
+        "abandoned_crop_count": 47,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 37,
+          "EAST": 823,
+          "FEED": 418,
+          "FERTILIZE": 87,
+          "HARVEST": 404,
+          "NORTH": 1104,
+          "PASS": 677,
+          "PICKUP": 214,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 615,
+          "WATER": 847,
+          "WEST": 1063
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 0,
+        "crop_tile_days_d21_d30": 473.0,
+        "crop_tile_days_total": 1239.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 19,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 1,
+        "final_empty_target_pastures": 1,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 5
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 7,
+        "harvest_events_total": 233,
+        "harvested_units_total": 602,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.5836909871244633,
+        "money": 105162.0,
+        "money_d22": 54929.0,
+        "money_d30": 105162.0,
+        "money_gain_d22_d30": 50233.0,
+        "move_actions": 3605,
+        "move_per_productive": 1.2861220121298609,
+        "ownership_changes": 0,
+        "pass_actions": 677,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2803,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 8,
+            "EMPTY": 9
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 14,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 5,
+            "CROP": 6,
+            "EMPTY": 10,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 105162.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 231.0,
+        "unwatered_tile_days_total": 510.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 565.0,
+        "weed_tile_days_d21_d30": 15.0,
+        "weed_tile_days_total": 15.0
+      },
+      "seed": 180903007,
+      "winner": "CODEX_E18_2_CONTROL"
+    },
+    {
+      "margin_p0": 47572.0,
+      "p0": "CODEX_E18_2_CONTROL",
+      "p0_metrics": {
+        "abandoned_crop_count": 47,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 19,
+          "CARE": 417,
+          "COLLECT_FERTILIZER": 370,
+          "DIG": 45,
+          "DROP": 37,
+          "EAST": 823,
+          "FEED": 418,
+          "FERTILIZE": 87,
+          "HARVEST": 404,
+          "NORTH": 1104,
+          "PASS": 677,
+          "PICKUP": 214,
+          "PLACE": 183,
+          "PLANT": 195,
+          "SOUTH": 615,
+          "WATER": 847,
+          "WEST": 1063
+        },
+        "aged_task_observations": {},
+        "animal_escapes": 0,
+        "crop_tile_days_d21_d30": 473.0,
+        "crop_tile_days_total": 1239.0,
+        "cross_cluster_transfer_reasons": {},
+        "cross_cluster_transfers": 0,
+        "fallbacks": 0,
+        "final_animals": 19,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 1,
+        "final_empty_target_pastures": 1,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 6,
+          "Q2": 5
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "final_quadrants": 3,
+        "final_weeds": 7,
+        "harvest_events_total": 233,
+        "harvested_units_total": 602,
+        "home_cluster_counts": {},
+        "mean_units_per_harvest": 2.5836909871244633,
+        "money": 105162.0,
+        "money_d22": 54929.0,
+        "money_d30": 105162.0,
+        "money_gain_d22_d30": 50233.0,
+        "move_actions": 3605,
+        "move_per_productive": 1.2861220121298609,
+        "ownership_changes": 0,
+        "pass_actions": 677,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 19,
+        "peak_crops": 55,
+        "peak_hands": 12,
+        "peak_weeds": 12,
+        "productive_actions": 2803,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 8,
+            "CROP": 8,
+            "EMPTY": 9
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 14,
+            "EMPTY_LIVESTOCK": 1,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 5,
+            "CROP": 6,
+            "EMPTY": 10,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 105162.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 7,
+          "Q1": 7,
+          "Q2": 5
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 231.0,
+        "unwatered_tile_days_total": 510.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 565.0,
+        "weed_tile_days_d21_d30": 15.0,
+        "weed_tile_days_total": 15.0
+      },
+      "p1": "CODEX_E18_5_STATE_DRIVEN_662",
+      "p1_metrics": {
+        "abandoned_crop_count": 29,
+        "action_counts": {
+          "BUILD_COOP": 1,
+          "BUILD_PASTURE": 14,
+          "CARE": 269,
+          "COLLECT_FERTILIZER": 321,
+          "DIG": 24,
+          "DROP": 13,
+          "EAST": 1067,
+          "FEED": 287,
+          "HARVEST": 229,
+          "NORTH": 1227,
+          "PASS": 659,
+          "PICKUP": 110,
+          "PLACE": 61,
+          "PLANT": 168,
+          "SOUTH": 833,
+          "WATER": 910,
+          "WEST": 1326
+        },
+        "aged_task_observations": {
+          "GE_12": 10938,
+          "GE_24": 1273,
+          "GE_6": 19538
+        },
+        "animal_escapes": 1,
+        "crop_tile_days_d21_d30": 481.0,
+        "crop_tile_days_total": 1273.0,
+        "cross_cluster_transfer_reasons": {
+          "AGED_REMOTE_BACKLOG": 132,
+          "CARRIER_SHED_TRANSFER": 41,
+          "LOCAL_IDLE_RELEASE": 83,
+          "ON_TILE_SERVICE": 264,
+          "REMOTE_EMERGENCY_NO_OWNER": 294
+        },
+        "cross_cluster_transfers": 814,
+        "fallbacks": 0,
+        "final_animals": 15,
+        "final_crops": 15,
+        "final_empty_livestock_tiles": 0,
+        "final_empty_target_pastures": 0,
+        "final_filled_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "final_quadrants": 3,
+        "final_weeds": 8,
+        "harvest_events_total": 156,
+        "harvested_units_total": 513,
+        "home_cluster_counts": {
+          "Q0_NW": 5,
+          "Q1_NE": 4,
+          "Q2_SW": 3,
+          "SHED_CORRIDOR": 1
+        },
+        "mean_units_per_harvest": 3.2884615384615383,
+        "money": 57590.0,
+        "money_d22": 21587.0,
+        "money_d30": 57590.0,
+        "money_gain_d22_d30": 36003.0,
+        "move_actions": 4453,
+        "move_per_productive": 2.00314889788574,
+        "ownership_changes": 13,
+        "pass_actions": 659,
+        "pass_on_actionable_violations": 0,
+        "peak_animals": 15,
+        "peak_crops": 60,
+        "peak_hands": 12,
+        "peak_weeds": 8,
+        "productive_actions": 2223,
+        "q1_activation_day": 6,
+        "q2_activation_day": 11,
+        "quadrant_profile": {
+          "Q0_NW": {
+            "ANIMAL": 7,
+            "CROP": 4,
+            "EMPTY": 13,
+            "WEED": 1
+          },
+          "Q1_NE": {
+            "ANIMAL": 6,
+            "CROP": 1,
+            "EMPTY": 15,
+            "WEED": 3
+          },
+          "Q2_SW": {
+            "ANIMAL": 2,
+            "CROP": 10,
+            "EMPTY": 9,
+            "WEED": 4
+          },
+          "Q3_SE": {
+            "EMPTY": 25
+          }
+        },
+        "reward": 57590.0,
+        "route_thrashing_violations": 0,
+        "status": "DONE",
+        "target_pastures_by_quadrant": {
+          "Q0": 6,
+          "Q1": 6,
+          "Q2": 2
+        },
+        "technical_errors": 0,
+        "unwatered_tile_days_d21_d30": 235.0,
+        "unwatered_tile_days_total": 490.0,
+        "verified_livestock_losses": 0,
+        "water_stressed_tile_days_total": 517.0,
+        "weed_tile_days_d21_d30": 22.0,
+        "weed_tile_days_total": 22.0
+      },
+      "seed": 180903007,
+      "winner": "CODEX_E18_2_CONTROL"
+    }
+  ],
+  "participants": [
+    "CODEX_E18_5_STATE_DRIVEN_662",
+    "CODEX_E18_2_CONTROL"
+  ],
+  "schema_version": "E18_5_STATE_DRIVEN_662_TOPOLOGY_ABLATION_V1",
+  "seats": [
+    0,
+    1
+  ],
+  "seeds": [
+    180903001,
+    180903002,
+    180903003,
+    180903004,
+    180903005,
+    180903006,
+    180903007
+  ],
+  "standings": {
+    "CODEX_E18_2_CONTROL": {
+      "crop_tile_days_d21_d30_mean": 473.07142857142856,
+      "fallbacks": 0,
+      "final_empty_target_pastures_mean": 1.1428571428571428,
+      "harvested_units_total_mean": 601.2142857142857,
+      "matches": 14,
+      "mean_units_per_harvest_mean": 2.582699036570947,
+      "money_max": 111340.0,
+      "money_mean": 82694.92857142857,
+      "money_median": 89936.0,
+      "money_min": 39066.0,
+      "move_actions_mean": 3595.5,
+      "move_per_productive_mean": 1.2829296697590893,
+      "pass_actions_mean": 686.6428571428571,
+      "pass_on_actionable_violations_mean": 0.0,
+      "productive_actions_mean": 2802.5714285714284,
+      "route_thrashing_violations_mean": 0.0,
+      "technical_errors": 0,
+      "verified_livestock_losses": 2,
+      "weed_tile_days_d21_d30_mean": 15.428571428571429,
+      "wins": 14
+    },
+    "CODEX_E18_5_STATE_DRIVEN_662": {
+      "crop_tile_days_d21_d30_mean": 481.35714285714283,
+      "fallbacks": 0,
+      "final_empty_target_pastures_mean": 0.0,
+      "harvested_units_total_mean": 513.1428571428571,
+      "matches": 14,
+      "mean_units_per_harvest_mean": 3.286392405063291,
+      "money_max": 73390.0,
+      "money_mean": 49179.42857142857,
+      "money_median": 47339.0,
+      "money_min": 23604.0,
+      "move_actions_mean": 4451.857142857143,
+      "move_per_productive_mean": 2.0025706878106537,
+      "pass_actions_mean": 660.0,
+      "pass_on_actionable_violations_mean": 0.0,
+      "productive_actions_mean": 2223.0714285714284,
+      "route_thrashing_violations_mean": 0.0,
+      "technical_errors": 0,
+      "verified_livestock_losses": 0,
+      "weed_tile_days_d21_d30_mean": 21.785714285714285,
+      "wins": 0
+    }
+  }
+}

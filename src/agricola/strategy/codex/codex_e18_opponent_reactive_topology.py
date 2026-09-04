@@ -34,7 +34,7 @@ from agricola.strategy.codex.codex_e17_topology_cap_662 import (
 REPO_ROOT = Path(__file__).resolve().parents[4]
 DEFAULT_E18_OPPONENT_REACTIVE_CONFIG_PATH = (
     REPO_ROOT
-    / "experiments/e18/configs/codex/"
+    / "docs/model_specs/codex/e18/configs/"
     / "CODEX_E18_1_OPPONENT_REACTIVE_662_770_V1.json"
 )
 E18_OPPONENT_REACTIVE_MODEL_SPEC_VERSION = (
