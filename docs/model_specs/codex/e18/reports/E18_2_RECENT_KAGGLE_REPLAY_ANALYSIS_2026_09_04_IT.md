@@ -76,7 +76,7 @@ Il risultato esterno converge con la diagnosi locale di E18.4 V1:
 La prossima candidate non deve quindi modificare topologia, mercato o batching.
 Deve sostituire esclusivamente l'assegnazione globale greedy con un dispatcher
 persistente e locale. La specifica è in
-`docs/model_specs/codex/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V2.md`.
+`docs/model_specs/codex/e18/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V2.md`.
 
 ## Evidence boundary
 

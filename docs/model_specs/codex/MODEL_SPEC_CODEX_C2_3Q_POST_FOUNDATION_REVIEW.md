@@ -41,7 +41,7 @@ ROUTINE_SHA256: C2466262E096B03CA330A1B0FDB2E5DEBE53C45F297E046113E007731051E7E4
 La routine deriva dalla distillazione sperimentale del replay Kaggle pubblico `104498819`, poi corretta e validata fuori campione. Questa provenienza va dichiarata; non equivale a riuso della routine privata di un altro agente del repository.
 
 La guida as-built al codice e al collegamento con i layer C2.1 è
-`CODEX_V9_E17_RUNTIME_AND_FOUNDATION_MAPPING_IT.md`. In particolare, distingue
+`e17/CODEX_V9_E17_RUNTIME_AND_FOUNDATION_MAPPING_IT.md`. In particolare, distingue
 il contratto normativo condiviso dalle dipendenze realmente presenti nel
 decision path.
 

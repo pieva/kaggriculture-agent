@@ -1,0 +1,7649 @@
+{
+  "schema_version": 1,
+  "analysis_id": "E18_26_JESSE_770_D01_D20_TRAJECTORIES",
+  "observed_at": "2026-09-05",
+  "methodology": {
+    "sample": "D1-D20 at H24: replay step 24*day-1, observation.day=day-1; same sampling for both cohorts, no interpolation of missing days.",
+    "people": "len(farm.hands)+1 farmer; all employed hands, including positions outside the grid. This is not a count of visible avatars.",
+    "crop_tiles": "Tile kind PLANT grouped by crop, irrespective of maturity; not seeds or harvested units.",
+    "animal_tiles": "Occupied tile grouped by animal; unoccupied livestock structures counted separately, never attributed to a species.",
+    "cohort": "Five historical Jesse final-7-7-0 replays; current episode 105717134 excluded. Two E18.26 seats against incumbent E18.16 on development seed 180903001.",
+    "bands": "Median and observed min-max, not confidence intervals; cohorts have different seeds, markets and opponents.",
+    "checks": "Raw identity, terminal status, topology, historical checkpoints and frozen E18.26 gate parity verified."
+  },
+  "sources": {
+    "plan": "docs\\model_specs\\codex\\e18\\artifacts\\derived\\E18_26_770_JESSE_BOOST_D10_PLAN_V1.json",
+    "plan_sha256": "4b6bfb018e69ec0f7b2aa8d816f1aecf946ebbee77e02ea3e74e6169a3a15616",
+    "frozen_gate": "docs\\model_specs\\codex\\e18\\artifacts\\derived\\E18_26_770_JESSE_BOOST_D10_GATE_V1.json",
+    "frozen_gate_sha256": "f3e98ec6bb4dcb444f11260dbf44365399af41e952b46909c6587b1e80dfd2cb"
+  },
+  "jesse": [
+    {
+      "episode_id": 105405557,
+      "seat": 1,
+      "seed": 1025034461,
+      "opponent": "Crop Dusta",
+      "sha256": "ec0913ac669aeeb3a9e5a26a163e0098f3bc156d271e3de97b2d7ca9237fb73c",
+      "url": "https://www.kaggle.com/competitions/episodes/105405557/replay.json",
+      "daily": [
+        {
+          "day": 1,
+          "step_index": 23,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 75.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 4,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 4,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 2,
+          "step_index": 47,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 263.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 3,
+          "step_index": 71,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 125.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 3,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 5,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 1,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 4,
+          "step_index": 95,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 153.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 3,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 5,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 1,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 5,
+          "step_index": 119,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 901.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 6,
+          "step_index": 143,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 1012.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 3,
+            "STRAWBERRY": 4,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 7,
+          "step_index": 167,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 997.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 12,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 31,
+          "occupied_livestock_tiles": 8,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 50,
+          "other_tiles": 6,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 8,
+          "step_index": 191,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 788.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 9,
+            "STRAWBERRY": 16,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 8,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 10,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 3,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 9,
+          "step_index": 215,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 1311.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 10,
+          "step_index": 239,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 3878.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 11,
+          "step_index": 263,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 19575.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 13,
+            "STRAWBERRY": 21,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 34,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 15,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 50,
+          "other_tiles": 1,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 12,
+          "step_index": 287,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 19077.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 20,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 58,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 15,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 75,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 13,
+          "step_index": 311,
+          "hands": 9,
+          "farmer": 1,
+          "people": 10,
+          "money": 22199.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 24,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 62,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 14,
+          "step_index": 335,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 22786.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 21,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 59,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 16,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 9,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 15,
+          "step_index": 359,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 25489.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 16,
+          "step_index": 383,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 28583.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 17,
+          "step_index": 407,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 32691.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 18,
+          "step_index": 431,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 35779.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 19,
+          "step_index": 455,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 42685.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 20,
+          "step_index": 479,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 45162.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        }
+      ]
+    },
+    {
+      "episode_id": 105384058,
+      "seat": 0,
+      "seed": 847999973,
+      "opponent": "Crop Dusta",
+      "sha256": "86cf6edb52cc13257808d2f1482c87ae1bcb957381d8e63fe0e2f0bfab2ac032",
+      "url": "https://www.kaggle.com/competitions/episodes/105384058/replay.json",
+      "daily": [
+        {
+          "day": 1,
+          "step_index": 23,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 75.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 4,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 4,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 2,
+          "step_index": 47,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 263.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 3,
+          "step_index": 71,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 125.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 3,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 5,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 1,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 4,
+          "step_index": 95,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 150.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 3,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 5,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 1,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 5,
+          "step_index": 119,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 896.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 6,
+          "step_index": 143,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 1005.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 3,
+            "STRAWBERRY": 4,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 7,
+          "step_index": 167,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 990.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 12,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 31,
+          "occupied_livestock_tiles": 8,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 50,
+          "other_tiles": 6,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 8,
+          "step_index": 191,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 774.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 9,
+            "STRAWBERRY": 16,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 8,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 10,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 3,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 9,
+          "step_index": 215,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 1482.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 10,
+          "step_index": 239,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 4020.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 11,
+          "step_index": 263,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 20248.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 13,
+            "STRAWBERRY": 21,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 34,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 15,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 50,
+          "other_tiles": 1,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 12,
+          "step_index": 287,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 20000.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 20,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 58,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 15,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 75,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 13,
+          "step_index": 311,
+          "hands": 9,
+          "farmer": 1,
+          "people": 10,
+          "money": 23518.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 24,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 62,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 14,
+          "step_index": 335,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 24135.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 21,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 59,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 16,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 9,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 15,
+          "step_index": 359,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 27177.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 16,
+          "step_index": 383,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 30336.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 17,
+          "step_index": 407,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 34177.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 18,
+          "step_index": 431,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 37008.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 19,
+          "step_index": 455,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 42594.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 20,
+          "step_index": 479,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 44350.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        }
+      ]
+    },
+    {
+      "episode_id": 105398563,
+      "seat": 0,
+      "seed": 1939779312,
+      "opponent": "Giulio Ravasio",
+      "sha256": "a5a3be63a5726bb27c978c653246c90837a74285e6f09c51d6b01f481127c9ea",
+      "url": "https://www.kaggle.com/competitions/episodes/105398563/replay.json",
+      "daily": [
+        {
+          "day": 1,
+          "step_index": 23,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 74.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 4,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 4,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 2,
+          "step_index": 47,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 261.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 3,
+          "step_index": 71,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 126.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 3,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 5,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 1,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 4,
+          "step_index": 95,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 150.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 3,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 5,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 1,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 5,
+          "step_index": 119,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 891.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 6,
+          "step_index": 143,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 999.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 3,
+            "STRAWBERRY": 4,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 7,
+          "step_index": 167,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 922.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 12,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 31,
+          "occupied_livestock_tiles": 8,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 50,
+          "other_tiles": 6,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 8,
+          "step_index": 191,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 706.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 9,
+            "STRAWBERRY": 16,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 8,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 10,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 3,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 9,
+          "step_index": 215,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 1448.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 10,
+          "step_index": 239,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 3893.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 11,
+          "step_index": 263,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 18935.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 13,
+            "STRAWBERRY": 21,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 34,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 15,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 50,
+          "other_tiles": 1,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 12,
+          "step_index": 287,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 17997.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 20,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 58,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 15,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 75,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 13,
+          "step_index": 311,
+          "hands": 9,
+          "farmer": 1,
+          "people": 10,
+          "money": 21743.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 24,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 62,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 14,
+          "step_index": 335,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 22590.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 21,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 59,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 16,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 9,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 15,
+          "step_index": 359,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 28071.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 16,
+          "step_index": 383,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 33448.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 17,
+          "step_index": 407,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 41670.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 18,
+          "step_index": 431,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 46696.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 19,
+          "step_index": 455,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 55820.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 20,
+          "step_index": 479,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 61251.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        }
+      ]
+    },
+    {
+      "episode_id": 105391568,
+      "seat": 0,
+      "seed": 327329788,
+      "opponent": "Giulio Ravasio",
+      "sha256": "adefe74ae0c4a00019c472cce4c69fa0cc91b3bdb89cd6872c6987421d3260c7",
+      "url": "https://www.kaggle.com/competitions/episodes/105391568/replay.json",
+      "daily": [
+        {
+          "day": 1,
+          "step_index": 23,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 74.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 4,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 4,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 2,
+          "step_index": 47,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 261.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 3,
+          "step_index": 71,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 126.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 3,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 5,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 1,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 4,
+          "step_index": 95,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 150.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 3,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 5,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 1,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 5,
+          "step_index": 119,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 891.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 6,
+          "step_index": 143,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 999.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 3,
+            "STRAWBERRY": 4,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 7,
+          "step_index": 167,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 922.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 12,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 31,
+          "occupied_livestock_tiles": 8,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 50,
+          "other_tiles": 6,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 8,
+          "step_index": 191,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 706.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 9,
+            "STRAWBERRY": 16,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 8,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 10,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 3,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 9,
+          "step_index": 215,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 1322.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 10,
+          "step_index": 239,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 3769.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 11,
+          "step_index": 263,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 18470.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 13,
+            "STRAWBERRY": 21,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 34,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 15,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 50,
+          "other_tiles": 1,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 12,
+          "step_index": 287,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 17285.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 20,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 58,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 15,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 75,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 13,
+          "step_index": 311,
+          "hands": 9,
+          "farmer": 1,
+          "people": 10,
+          "money": 20477.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 24,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 62,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 14,
+          "step_index": 335,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 21089.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 21,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 59,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 16,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 9,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 15,
+          "step_index": 359,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 24065.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 16,
+          "step_index": 383,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 26973.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 17,
+          "step_index": 407,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 30984.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 18,
+          "step_index": 431,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 34066.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 19,
+          "step_index": 455,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 40590.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 20,
+          "step_index": 479,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 42922.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        }
+      ]
+    },
+    {
+      "episode_id": 105565293,
+      "seat": 1,
+      "seed": 1734471329,
+      "opponent": "Andrey Tikhomirov",
+      "sha256": "7de4b68ce4eeb640e125739b4c6ed475834ad5182522580f1fa0a2a738232894",
+      "url": "https://www.kaggle.com/competitions/episodes/105565293/replay.json",
+      "daily": [
+        {
+          "day": 1,
+          "step_index": 23,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 74.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 4,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 4,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 2,
+          "step_index": 47,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 260.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 3,
+          "step_index": 71,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 124.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 3,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 5,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 1,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 4,
+          "step_index": 95,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 150.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 3,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 5,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 1,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 5,
+          "step_index": 119,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 891.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 6,
+          "step_index": 143,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 999.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 3,
+            "STRAWBERRY": 4,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 7,
+          "step_index": 167,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 922.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 12,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 31,
+          "occupied_livestock_tiles": 8,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 50,
+          "other_tiles": 6,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 8,
+          "step_index": 191,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 706.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 9,
+            "STRAWBERRY": 16,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 8,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 10,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 3,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 9,
+          "step_index": 215,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 1323.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 10,
+          "step_index": 239,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 3766.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 11,
+          "step_index": 263,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 18574.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 13,
+            "STRAWBERRY": 21,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 34,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 15,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 50,
+          "other_tiles": 1,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 12,
+          "step_index": 287,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 17388.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 20,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 58,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 15,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 75,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 13,
+          "step_index": 311,
+          "hands": 9,
+          "farmer": 1,
+          "people": 10,
+          "money": 20661.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 24,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 62,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 14,
+          "step_index": 335,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 21354.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 21,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 59,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 16,
+          "empty_livestock_tiles": 2,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 9,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 15,
+          "step_index": 359,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 25090.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 16,
+          "step_index": 383,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 28439.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 17,
+          "step_index": 407,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 32708.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 18,
+          "step_index": 431,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 35716.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 19,
+          "step_index": 455,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 41356.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 20,
+          "step_index": 479,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 43322.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 38,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "crop_tiles": 61,
+          "occupied_livestock_tiles": 14,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        }
+      ]
+    }
+  ],
+  "codex": [
+    {
+      "version": "E18.26 BoostD10",
+      "seat": 0,
+      "seed": 180903001,
+      "opponent": "E18.16",
+      "reward": 54761.0,
+      "matches_frozen_gate": true,
+      "daily": [
+        {
+          "day": 1,
+          "step_index": 23,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 52.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 4,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 4,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 2,
+          "step_index": 47,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 303.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 4,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 4,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 3,
+          "step_index": 71,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 507.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 4,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 4,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 4,
+          "step_index": 95,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 40.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 4,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 4,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 5,
+          "step_index": 119,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 66.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 6,
+          "step_index": 143,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 305.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 2,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 7,
+          "step_index": 167,
+          "hands": 9,
+          "farmer": 1,
+          "people": 10,
+          "money": 105.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 7,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 24,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 20,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 8,
+          "step_index": 191,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 613.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 12,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 29,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 15,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 9,
+          "step_index": 215,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 308.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 17,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 34,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 10,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 10,
+          "step_index": 239,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 1451.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 11,
+          "step_index": 263,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 1128.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 12,
+          "step_index": 287,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 236.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 10,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 51,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 11,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 13,
+          "step_index": 311,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 9.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 10,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 39,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 23,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 14,
+          "step_index": 335,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 11630.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 15,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 44,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 17,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 15,
+          "step_index": 359,
+          "hands": 9,
+          "farmer": 1,
+          "people": 10,
+          "money": 11728.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 52,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 9,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 16,
+          "step_index": 383,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 11414.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 52,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 9,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 17,
+          "step_index": 407,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 12619.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 52,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 9,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 18,
+          "step_index": 431,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 15826.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 52,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 9,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 19,
+          "step_index": 455,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 20913.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 52,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 9,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 20,
+          "step_index": 479,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 24296.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 52,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 9,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        }
+      ]
+    },
+    {
+      "version": "E18.26 BoostD10",
+      "seat": 1,
+      "seed": 180903001,
+      "opponent": "E18.16",
+      "reward": 53968.0,
+      "matches_frozen_gate": true,
+      "daily": [
+        {
+          "day": 1,
+          "step_index": 23,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 52.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 4,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 4,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 2,
+          "step_index": 47,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 303.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 4,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 4,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 3,
+          "step_index": 71,
+          "hands": 4,
+          "farmer": 1,
+          "people": 5,
+          "money": 507.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 4,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 4,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 4,
+          "step_index": 95,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 40.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 4,
+          "livestock_structures": 4,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 2,
+          "pasture_topology": {
+            "Q0": 4,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 5,
+          "step_index": 119,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 66.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7,
+            "STRAWBERRY": 0,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 6,
+          "step_index": 143,
+          "hands": 5,
+          "farmer": 1,
+          "people": 6,
+          "money": 305.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 2,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 19,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 25,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 7,
+          "step_index": 167,
+          "hands": 9,
+          "farmer": 1,
+          "people": 10,
+          "money": 105.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 7,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 24,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 20,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 8,
+          "step_index": 191,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 613.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 12,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 29,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 15,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 9,
+          "step_index": 215,
+          "hands": 10,
+          "farmer": 1,
+          "people": 11,
+          "money": 308.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 17,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2,
+            "GOOSE": 0
+          },
+          "crop_tiles": 34,
+          "occupied_livestock_tiles": 6,
+          "livestock_structures": 6,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 10,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 0,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 10,
+          "step_index": 239,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 1451.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 11,
+          "step_index": 263,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 1128.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 5,
+            "STRAWBERRY": 20,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 37,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 50,
+          "other_tiles": 0,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 12,
+          "step_index": 287,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 236.0,
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 10,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 51,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 11,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 13,
+          "step_index": 311,
+          "hands": 11,
+          "farmer": 1,
+          "people": 12,
+          "money": 9.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 10,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "crop_tiles": 39,
+          "occupied_livestock_tiles": 13,
+          "livestock_structures": 13,
+          "empty_livestock_tiles": 0,
+          "unlocked_tiles": 75,
+          "other_tiles": 23,
+          "pasture_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 14,
+          "step_index": 335,
+          "hands": 8,
+          "farmer": 1,
+          "people": 9,
+          "money": 11630.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 15,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 44,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 17,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 15,
+          "step_index": 359,
+          "hands": 9,
+          "farmer": 1,
+          "people": 10,
+          "money": 11728.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 52,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 9,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 16,
+          "step_index": 383,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 11414.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 52,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 9,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 17,
+          "step_index": 407,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 12612.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 52,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 9,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 18,
+          "step_index": 431,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 15788.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 52,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 9,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 19,
+          "step_index": 455,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 20797.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 52,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 9,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        },
+        {
+          "day": 20,
+          "step_index": 479,
+          "hands": 12,
+          "farmer": 1,
+          "people": 13,
+          "money": 24077.0,
+          "crops": {
+            "MELON": 0,
+            "WHEAT": 23,
+            "STRAWBERRY": 29,
+            "CARROT": 0,
+            "TOMATO": 0
+          },
+          "animals": {
+            "COW": 6,
+            "SHEEP": 3,
+            "GOOSE": 0
+          },
+          "crop_tiles": 52,
+          "occupied_livestock_tiles": 9,
+          "livestock_structures": 14,
+          "empty_livestock_tiles": 5,
+          "unlocked_tiles": 75,
+          "other_tiles": 9,
+          "pasture_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          }
+        }
+      ]
+    }
+  ],
+  "aggregates": {
+    "jesse": [
+      {
+        "day": 1,
+        "metrics": {
+          "people": {
+            "median": 6,
+            "min": 6,
+            "max": 6
+          },
+          "hands": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "crop_tiles": {
+            "median": 19,
+            "min": 19,
+            "max": 19
+          },
+          "empty_livestock_tiles": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 4,
+            "min": 4,
+            "max": 4
+          },
+          "MELON": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 7,
+            "min": 7,
+            "max": 7
+          },
+          "STRAWBERRY": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "SHEEP": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 2,
+        "metrics": {
+          "people": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "hands": {
+            "median": 4,
+            "min": 4,
+            "max": 4
+          },
+          "crop_tiles": {
+            "median": 19,
+            "min": 19,
+            "max": 19
+          },
+          "empty_livestock_tiles": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "livestock_structures": {
+            "median": 6,
+            "min": 6,
+            "max": 6
+          },
+          "MELON": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 7,
+            "min": 7,
+            "max": 7
+          },
+          "STRAWBERRY": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "SHEEP": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 3,
+        "metrics": {
+          "people": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "hands": {
+            "median": 4,
+            "min": 4,
+            "max": 4
+          },
+          "crop_tiles": {
+            "median": 19,
+            "min": 19,
+            "max": 19
+          },
+          "empty_livestock_tiles": {
+            "median": 1,
+            "min": 1,
+            "max": 1
+          },
+          "livestock_structures": {
+            "median": 6,
+            "min": 6,
+            "max": 6
+          },
+          "MELON": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 7,
+            "min": 7,
+            "max": 7
+          },
+          "STRAWBERRY": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 3,
+            "min": 3,
+            "max": 3
+          },
+          "SHEEP": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 4,
+        "metrics": {
+          "people": {
+            "median": 6,
+            "min": 6,
+            "max": 6
+          },
+          "hands": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "crop_tiles": {
+            "median": 19,
+            "min": 19,
+            "max": 19
+          },
+          "empty_livestock_tiles": {
+            "median": 1,
+            "min": 1,
+            "max": 1
+          },
+          "livestock_structures": {
+            "median": 6,
+            "min": 6,
+            "max": 6
+          },
+          "MELON": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 7,
+            "min": 7,
+            "max": 7
+          },
+          "STRAWBERRY": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 3,
+            "min": 3,
+            "max": 3
+          },
+          "SHEEP": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 5,
+        "metrics": {
+          "people": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "hands": {
+            "median": 4,
+            "min": 4,
+            "max": 4
+          },
+          "crop_tiles": {
+            "median": 19,
+            "min": 19,
+            "max": 19
+          },
+          "empty_livestock_tiles": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 6,
+            "min": 6,
+            "max": 6
+          },
+          "MELON": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 7,
+            "min": 7,
+            "max": 7
+          },
+          "STRAWBERRY": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 4,
+            "min": 4,
+            "max": 4
+          },
+          "SHEEP": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 6,
+        "metrics": {
+          "people": {
+            "median": 6,
+            "min": 6,
+            "max": 6
+          },
+          "hands": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "crop_tiles": {
+            "median": 19,
+            "min": 19,
+            "max": 19
+          },
+          "empty_livestock_tiles": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 6,
+            "min": 6,
+            "max": 6
+          },
+          "MELON": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 3,
+            "min": 3,
+            "max": 3
+          },
+          "STRAWBERRY": {
+            "median": 4,
+            "min": 4,
+            "max": 4
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 4,
+            "min": 4,
+            "max": 4
+          },
+          "SHEEP": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 7,
+        "metrics": {
+          "people": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "hands": {
+            "median": 8,
+            "min": 8,
+            "max": 8
+          },
+          "crop_tiles": {
+            "median": 31,
+            "min": 31,
+            "max": 31
+          },
+          "empty_livestock_tiles": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "livestock_structures": {
+            "median": 13,
+            "min": 13,
+            "max": 13
+          },
+          "MELON": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 7,
+            "min": 7,
+            "max": 7
+          },
+          "STRAWBERRY": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 6,
+            "min": 6,
+            "max": 6
+          },
+          "SHEEP": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 8,
+        "metrics": {
+          "people": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "hands": {
+            "median": 8,
+            "min": 8,
+            "max": 8
+          },
+          "crop_tiles": {
+            "median": 37,
+            "min": 37,
+            "max": 37
+          },
+          "empty_livestock_tiles": {
+            "median": 3,
+            "min": 3,
+            "max": 3
+          },
+          "livestock_structures": {
+            "median": 13,
+            "min": 13,
+            "max": 13
+          },
+          "MELON": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "STRAWBERRY": {
+            "median": 16,
+            "min": 16,
+            "max": 16
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 8,
+            "min": 8,
+            "max": 8
+          },
+          "SHEEP": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 9,
+        "metrics": {
+          "people": {
+            "median": 11,
+            "min": 11,
+            "max": 11
+          },
+          "hands": {
+            "median": 10,
+            "min": 10,
+            "max": 10
+          },
+          "crop_tiles": {
+            "median": 37,
+            "min": 37,
+            "max": 37
+          },
+          "empty_livestock_tiles": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 13,
+            "min": 13,
+            "max": 13
+          },
+          "MELON": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "STRAWBERRY": {
+            "median": 20,
+            "min": 20,
+            "max": 20
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 4,
+            "min": 4,
+            "max": 4
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 10,
+        "metrics": {
+          "people": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "hands": {
+            "median": 11,
+            "min": 11,
+            "max": 11
+          },
+          "crop_tiles": {
+            "median": 37,
+            "min": 37,
+            "max": 37
+          },
+          "empty_livestock_tiles": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 13,
+            "min": 13,
+            "max": 13
+          },
+          "MELON": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "STRAWBERRY": {
+            "median": 20,
+            "min": 20,
+            "max": 20
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 4,
+            "min": 4,
+            "max": 4
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 11,
+        "metrics": {
+          "people": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "hands": {
+            "median": 11,
+            "min": 11,
+            "max": 11
+          },
+          "crop_tiles": {
+            "median": 34,
+            "min": 34,
+            "max": 34
+          },
+          "empty_livestock_tiles": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "livestock_structures": {
+            "median": 15,
+            "min": 15,
+            "max": 15
+          },
+          "MELON": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 13,
+            "min": 13,
+            "max": 13
+          },
+          "STRAWBERRY": {
+            "median": 21,
+            "min": 21,
+            "max": 21
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 4,
+            "min": 4,
+            "max": 4
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 12,
+        "metrics": {
+          "people": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "hands": {
+            "median": 11,
+            "min": 11,
+            "max": 11
+          },
+          "crop_tiles": {
+            "median": 58,
+            "min": 58,
+            "max": 58
+          },
+          "empty_livestock_tiles": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "livestock_structures": {
+            "median": 15,
+            "min": 15,
+            "max": 15
+          },
+          "MELON": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 20,
+            "min": 20,
+            "max": 20
+          },
+          "STRAWBERRY": {
+            "median": 38,
+            "min": 38,
+            "max": 38
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 4,
+            "min": 4,
+            "max": 4
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 13,
+        "metrics": {
+          "people": {
+            "median": 10,
+            "min": 10,
+            "max": 10
+          },
+          "hands": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "crop_tiles": {
+            "median": 62,
+            "min": 62,
+            "max": 62
+          },
+          "empty_livestock_tiles": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 13,
+            "min": 13,
+            "max": 13
+          },
+          "MELON": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 24,
+            "min": 24,
+            "max": 24
+          },
+          "STRAWBERRY": {
+            "median": 38,
+            "min": 38,
+            "max": 38
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 4,
+            "min": 4,
+            "max": 4
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 14,
+        "metrics": {
+          "people": {
+            "median": 11,
+            "min": 11,
+            "max": 11
+          },
+          "hands": {
+            "median": 10,
+            "min": 10,
+            "max": 10
+          },
+          "crop_tiles": {
+            "median": 59,
+            "min": 59,
+            "max": 59
+          },
+          "empty_livestock_tiles": {
+            "median": 2,
+            "min": 2,
+            "max": 2
+          },
+          "livestock_structures": {
+            "median": 16,
+            "min": 16,
+            "max": 16
+          },
+          "MELON": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 21,
+            "min": 21,
+            "max": 21
+          },
+          "STRAWBERRY": {
+            "median": 38,
+            "min": 38,
+            "max": 38
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 15,
+        "metrics": {
+          "people": {
+            "median": 11,
+            "min": 11,
+            "max": 11
+          },
+          "hands": {
+            "median": 10,
+            "min": 10,
+            "max": 10
+          },
+          "crop_tiles": {
+            "median": 61,
+            "min": 61,
+            "max": 61
+          },
+          "empty_livestock_tiles": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 14,
+            "min": 14,
+            "max": 14
+          },
+          "MELON": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 23,
+            "min": 23,
+            "max": 23
+          },
+          "STRAWBERRY": {
+            "median": 38,
+            "min": 38,
+            "max": 38
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 16,
+        "metrics": {
+          "people": {
+            "median": 13,
+            "min": 13,
+            "max": 13
+          },
+          "hands": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "crop_tiles": {
+            "median": 61,
+            "min": 61,
+            "max": 61
+          },
+          "empty_livestock_tiles": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 14,
+            "min": 14,
+            "max": 14
+          },
+          "MELON": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 23,
+            "min": 23,
+            "max": 23
+          },
+          "STRAWBERRY": {
+            "median": 38,
+            "min": 38,
+            "max": 38
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 17,
+        "metrics": {
+          "people": {
+            "median": 13,
+            "min": 13,
+            "max": 13
+          },
+          "hands": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "crop_tiles": {
+            "median": 61,
+            "min": 61,
+            "max": 61
+          },
+          "empty_livestock_tiles": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 14,
+            "min": 14,
+            "max": 14
+          },
+          "MELON": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 23,
+            "min": 23,
+            "max": 23
+          },
+          "STRAWBERRY": {
+            "median": 38,
+            "min": 38,
+            "max": 38
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 18,
+        "metrics": {
+          "people": {
+            "median": 13,
+            "min": 13,
+            "max": 13
+          },
+          "hands": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "crop_tiles": {
+            "median": 61,
+            "min": 61,
+            "max": 61
+          },
+          "empty_livestock_tiles": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 14,
+            "min": 14,
+            "max": 14
+          },
+          "MELON": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 23,
+            "min": 23,
+            "max": 23
+          },
+          "STRAWBERRY": {
+            "median": 38,
+            "min": 38,
+            "max": 38
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 19,
+        "metrics": {
+          "people": {
+            "median": 13,
+            "min": 13,
+            "max": 13
+          },
+          "hands": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "crop_tiles": {
+            "median": 61,
+            "min": 61,
+            "max": 61
+          },
+          "empty_livestock_tiles": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 14,
+            "min": 14,
+            "max": 14
+          },
+          "MELON": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 23,
+            "min": 23,
+            "max": 23
+          },
+          "STRAWBERRY": {
+            "median": 38,
+            "min": 38,
+            "max": 38
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 20,
+        "metrics": {
+          "people": {
+            "median": 13,
+            "min": 13,
+            "max": 13
+          },
+          "hands": {
+            "median": 12,
+            "min": 12,
+            "max": 12
+          },
+          "crop_tiles": {
+            "median": 61,
+            "min": 61,
+            "max": 61
+          },
+          "empty_livestock_tiles": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 14,
+            "min": 14,
+            "max": 14
+          },
+          "MELON": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 23,
+            "min": 23,
+            "max": 23
+          },
+          "STRAWBERRY": {
+            "median": 38,
+            "min": 38,
+            "max": 38
+          },
+          "CARROT": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 5,
+            "min": 5,
+            "max": 5
+          },
+          "GOOSE": {
+            "median": 0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      }
+    ],
+    "codex": [
+      {
+        "day": 1,
+        "metrics": {
+          "people": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "hands": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "crop_tiles": {
+            "median": 19.0,
+            "min": 19,
+            "max": 19
+          },
+          "empty_livestock_tiles": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "MELON": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 7.0,
+            "min": 7,
+            "max": 7
+          },
+          "STRAWBERRY": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "SHEEP": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 2,
+        "metrics": {
+          "people": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "hands": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "crop_tiles": {
+            "median": 19.0,
+            "min": 19,
+            "max": 19
+          },
+          "empty_livestock_tiles": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "MELON": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 7.0,
+            "min": 7,
+            "max": 7
+          },
+          "STRAWBERRY": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "SHEEP": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 3,
+        "metrics": {
+          "people": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "hands": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "crop_tiles": {
+            "median": 19.0,
+            "min": 19,
+            "max": 19
+          },
+          "empty_livestock_tiles": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "MELON": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 7.0,
+            "min": 7,
+            "max": 7
+          },
+          "STRAWBERRY": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "SHEEP": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 4,
+        "metrics": {
+          "people": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "hands": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "crop_tiles": {
+            "median": 19.0,
+            "min": 19,
+            "max": 19
+          },
+          "empty_livestock_tiles": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "MELON": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 7.0,
+            "min": 7,
+            "max": 7
+          },
+          "STRAWBERRY": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "SHEEP": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 5,
+        "metrics": {
+          "people": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "hands": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "crop_tiles": {
+            "median": 19.0,
+            "min": 19,
+            "max": 19
+          },
+          "empty_livestock_tiles": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "MELON": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 7.0,
+            "min": 7,
+            "max": 7
+          },
+          "STRAWBERRY": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "SHEEP": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 6,
+        "metrics": {
+          "people": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "hands": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "crop_tiles": {
+            "median": 19.0,
+            "min": 19,
+            "max": 19
+          },
+          "empty_livestock_tiles": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "MELON": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "STRAWBERRY": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "SHEEP": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 7,
+        "metrics": {
+          "people": {
+            "median": 10.0,
+            "min": 10,
+            "max": 10
+          },
+          "hands": {
+            "median": 9.0,
+            "min": 9,
+            "max": 9
+          },
+          "crop_tiles": {
+            "median": 24.0,
+            "min": 24,
+            "max": 24
+          },
+          "empty_livestock_tiles": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "MELON": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "STRAWBERRY": {
+            "median": 7.0,
+            "min": 7,
+            "max": 7
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "SHEEP": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 8,
+        "metrics": {
+          "people": {
+            "median": 9.0,
+            "min": 9,
+            "max": 9
+          },
+          "hands": {
+            "median": 8.0,
+            "min": 8,
+            "max": 8
+          },
+          "crop_tiles": {
+            "median": 29.0,
+            "min": 29,
+            "max": 29
+          },
+          "empty_livestock_tiles": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "MELON": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "STRAWBERRY": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "SHEEP": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 9,
+        "metrics": {
+          "people": {
+            "median": 11.0,
+            "min": 11,
+            "max": 11
+          },
+          "hands": {
+            "median": 10.0,
+            "min": 10,
+            "max": 10
+          },
+          "crop_tiles": {
+            "median": 34.0,
+            "min": 34,
+            "max": 34
+          },
+          "empty_livestock_tiles": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "MELON": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "STRAWBERRY": {
+            "median": 17.0,
+            "min": 17,
+            "max": 17
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "SHEEP": {
+            "median": 2.0,
+            "min": 2,
+            "max": 2
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 10,
+        "metrics": {
+          "people": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "hands": {
+            "median": 11.0,
+            "min": 11,
+            "max": 11
+          },
+          "crop_tiles": {
+            "median": 37.0,
+            "min": 37,
+            "max": 37
+          },
+          "empty_livestock_tiles": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 13.0,
+            "min": 13,
+            "max": 13
+          },
+          "MELON": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "STRAWBERRY": {
+            "median": 20.0,
+            "min": 20,
+            "max": 20
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9.0,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 11,
+        "metrics": {
+          "people": {
+            "median": 9.0,
+            "min": 9,
+            "max": 9
+          },
+          "hands": {
+            "median": 8.0,
+            "min": 8,
+            "max": 8
+          },
+          "crop_tiles": {
+            "median": 37.0,
+            "min": 37,
+            "max": 37
+          },
+          "empty_livestock_tiles": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 13.0,
+            "min": 13,
+            "max": 13
+          },
+          "MELON": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "STRAWBERRY": {
+            "median": 20.0,
+            "min": 20,
+            "max": 20
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9.0,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 12,
+        "metrics": {
+          "people": {
+            "median": 9.0,
+            "min": 9,
+            "max": 9
+          },
+          "hands": {
+            "median": 8.0,
+            "min": 8,
+            "max": 8
+          },
+          "crop_tiles": {
+            "median": 51.0,
+            "min": 51,
+            "max": 51
+          },
+          "empty_livestock_tiles": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 13.0,
+            "min": 13,
+            "max": 13
+          },
+          "MELON": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "WHEAT": {
+            "median": 10.0,
+            "min": 10,
+            "max": 10
+          },
+          "STRAWBERRY": {
+            "median": 29.0,
+            "min": 29,
+            "max": 29
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9.0,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 13,
+        "metrics": {
+          "people": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "hands": {
+            "median": 11.0,
+            "min": 11,
+            "max": 11
+          },
+          "crop_tiles": {
+            "median": 39.0,
+            "min": 39,
+            "max": 39
+          },
+          "empty_livestock_tiles": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "livestock_structures": {
+            "median": 13.0,
+            "min": 13,
+            "max": 13
+          },
+          "MELON": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 10.0,
+            "min": 10,
+            "max": 10
+          },
+          "STRAWBERRY": {
+            "median": 29.0,
+            "min": 29,
+            "max": 29
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 9.0,
+            "min": 9,
+            "max": 9
+          },
+          "SHEEP": {
+            "median": 4.0,
+            "min": 4,
+            "max": 4
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 14,
+        "metrics": {
+          "people": {
+            "median": 9.0,
+            "min": 9,
+            "max": 9
+          },
+          "hands": {
+            "median": 8.0,
+            "min": 8,
+            "max": 8
+          },
+          "crop_tiles": {
+            "median": 44.0,
+            "min": 44,
+            "max": 44
+          },
+          "empty_livestock_tiles": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "livestock_structures": {
+            "median": 14.0,
+            "min": 14,
+            "max": 14
+          },
+          "MELON": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 15.0,
+            "min": 15,
+            "max": 15
+          },
+          "STRAWBERRY": {
+            "median": 29.0,
+            "min": 29,
+            "max": 29
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "SHEEP": {
+            "median": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 15,
+        "metrics": {
+          "people": {
+            "median": 10.0,
+            "min": 10,
+            "max": 10
+          },
+          "hands": {
+            "median": 9.0,
+            "min": 9,
+            "max": 9
+          },
+          "crop_tiles": {
+            "median": 52.0,
+            "min": 52,
+            "max": 52
+          },
+          "empty_livestock_tiles": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "livestock_structures": {
+            "median": 14.0,
+            "min": 14,
+            "max": 14
+          },
+          "MELON": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 23.0,
+            "min": 23,
+            "max": 23
+          },
+          "STRAWBERRY": {
+            "median": 29.0,
+            "min": 29,
+            "max": 29
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "SHEEP": {
+            "median": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 16,
+        "metrics": {
+          "people": {
+            "median": 13.0,
+            "min": 13,
+            "max": 13
+          },
+          "hands": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "crop_tiles": {
+            "median": 52.0,
+            "min": 52,
+            "max": 52
+          },
+          "empty_livestock_tiles": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "livestock_structures": {
+            "median": 14.0,
+            "min": 14,
+            "max": 14
+          },
+          "MELON": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 23.0,
+            "min": 23,
+            "max": 23
+          },
+          "STRAWBERRY": {
+            "median": 29.0,
+            "min": 29,
+            "max": 29
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "SHEEP": {
+            "median": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 17,
+        "metrics": {
+          "people": {
+            "median": 13.0,
+            "min": 13,
+            "max": 13
+          },
+          "hands": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "crop_tiles": {
+            "median": 52.0,
+            "min": 52,
+            "max": 52
+          },
+          "empty_livestock_tiles": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "livestock_structures": {
+            "median": 14.0,
+            "min": 14,
+            "max": 14
+          },
+          "MELON": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 23.0,
+            "min": 23,
+            "max": 23
+          },
+          "STRAWBERRY": {
+            "median": 29.0,
+            "min": 29,
+            "max": 29
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "SHEEP": {
+            "median": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 18,
+        "metrics": {
+          "people": {
+            "median": 13.0,
+            "min": 13,
+            "max": 13
+          },
+          "hands": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "crop_tiles": {
+            "median": 52.0,
+            "min": 52,
+            "max": 52
+          },
+          "empty_livestock_tiles": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "livestock_structures": {
+            "median": 14.0,
+            "min": 14,
+            "max": 14
+          },
+          "MELON": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 23.0,
+            "min": 23,
+            "max": 23
+          },
+          "STRAWBERRY": {
+            "median": 29.0,
+            "min": 29,
+            "max": 29
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "SHEEP": {
+            "median": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 19,
+        "metrics": {
+          "people": {
+            "median": 13.0,
+            "min": 13,
+            "max": 13
+          },
+          "hands": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "crop_tiles": {
+            "median": 52.0,
+            "min": 52,
+            "max": 52
+          },
+          "empty_livestock_tiles": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "livestock_structures": {
+            "median": 14.0,
+            "min": 14,
+            "max": 14
+          },
+          "MELON": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 23.0,
+            "min": 23,
+            "max": 23
+          },
+          "STRAWBERRY": {
+            "median": 29.0,
+            "min": 29,
+            "max": 29
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "SHEEP": {
+            "median": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      },
+      {
+        "day": 20,
+        "metrics": {
+          "people": {
+            "median": 13.0,
+            "min": 13,
+            "max": 13
+          },
+          "hands": {
+            "median": 12.0,
+            "min": 12,
+            "max": 12
+          },
+          "crop_tiles": {
+            "median": 52.0,
+            "min": 52,
+            "max": 52
+          },
+          "empty_livestock_tiles": {
+            "median": 5.0,
+            "min": 5,
+            "max": 5
+          },
+          "livestock_structures": {
+            "median": 14.0,
+            "min": 14,
+            "max": 14
+          },
+          "MELON": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "WHEAT": {
+            "median": 23.0,
+            "min": 23,
+            "max": 23
+          },
+          "STRAWBERRY": {
+            "median": 29.0,
+            "min": 29,
+            "max": 29
+          },
+          "CARROT": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "TOMATO": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          },
+          "COW": {
+            "median": 6.0,
+            "min": 6,
+            "max": 6
+          },
+          "SHEEP": {
+            "median": 3.0,
+            "min": 3,
+            "max": 3
+          },
+          "GOOSE": {
+            "median": 0.0,
+            "min": 0,
+            "max": 0
+          }
+        }
+      }
+    ]
+  },
+  "planned_daily": [
+    {
+      "day": 1,
+      "hands": 5,
+      "people": 6,
+      "crops": {
+        "MELON": 12,
+        "WHEAT": 7
+      },
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      }
+    },
+    {
+      "day": 2,
+      "hands": 4,
+      "people": 5,
+      "crops": {
+        "MELON": 12,
+        "WHEAT": 7
+      },
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      }
+    },
+    {
+      "day": 3,
+      "hands": 4,
+      "people": 5,
+      "crops": {
+        "MELON": 12,
+        "WHEAT": 7
+      },
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      }
+    },
+    {
+      "day": 4,
+      "hands": 5,
+      "people": 6,
+      "crops": {
+        "MELON": 12,
+        "WHEAT": 7
+      },
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      }
+    },
+    {
+      "day": 5,
+      "hands": 5,
+      "people": 6,
+      "crops": {
+        "MELON": 12,
+        "WHEAT": 7
+      },
+      "animals": {
+        "COW": 4,
+        "SHEEP": 2
+      }
+    },
+    {
+      "day": 6,
+      "hands": 5,
+      "people": 6,
+      "crops": {
+        "MELON": 12,
+        "STRAWBERRY": 2,
+        "WHEAT": 5
+      },
+      "animals": {
+        "COW": 4,
+        "SHEEP": 2
+      }
+    },
+    {
+      "day": 7,
+      "hands": 9,
+      "people": 10,
+      "crops": {
+        "MELON": 12,
+        "STRAWBERRY": 7,
+        "WHEAT": 5
+      },
+      "animals": {
+        "COW": 4,
+        "SHEEP": 2
+      }
+    },
+    {
+      "day": 8,
+      "hands": 8,
+      "people": 9,
+      "crops": {
+        "MELON": 12,
+        "STRAWBERRY": 12,
+        "WHEAT": 5
+      },
+      "animals": {
+        "COW": 4,
+        "SHEEP": 2
+      }
+    },
+    {
+      "day": 9,
+      "hands": 10,
+      "people": 11,
+      "crops": {
+        "MELON": 12,
+        "STRAWBERRY": 17,
+        "WHEAT": 5
+      },
+      "animals": {
+        "COW": 4,
+        "SHEEP": 2
+      }
+    },
+    {
+      "day": 10,
+      "hands": 11,
+      "people": 12,
+      "crops": {
+        "MELON": 12,
+        "STRAWBERRY": 20,
+        "WHEAT": 5
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 4
+      }
+    },
+    {
+      "day": 11,
+      "hands": 8,
+      "people": 9,
+      "crops": {
+        "MELON": 12,
+        "STRAWBERRY": 29,
+        "WHEAT": 7
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 4
+      }
+    },
+    {
+      "day": 12,
+      "hands": 8,
+      "people": 9,
+      "crops": {
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "WHEAT": 12
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 4
+      }
+    },
+    {
+      "day": 13,
+      "hands": 11,
+      "people": 12,
+      "crops": {
+        "STRAWBERRY": 38,
+        "WHEAT": 12
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 4
+      }
+    },
+    {
+      "day": 14,
+      "hands": 8,
+      "people": 9,
+      "crops": {
+        "STRAWBERRY": 38,
+        "WHEAT": 17
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 5
+      }
+    },
+    {
+      "day": 15,
+      "hands": 9,
+      "people": 10,
+      "crops": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 5
+      }
+    },
+    {
+      "day": 16,
+      "hands": 12,
+      "people": 13,
+      "crops": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 5
+      }
+    },
+    {
+      "day": 17,
+      "hands": 12,
+      "people": 13,
+      "crops": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 5
+      }
+    },
+    {
+      "day": 18,
+      "hands": 12,
+      "people": 13,
+      "crops": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 5
+      }
+    },
+    {
+      "day": 19,
+      "hands": 12,
+      "people": 13,
+      "crops": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 5
+      }
+    },
+    {
+      "day": 20,
+      "hands": 12,
+      "people": 13,
+      "crops": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 5
+      }
+    }
+  ]
+}

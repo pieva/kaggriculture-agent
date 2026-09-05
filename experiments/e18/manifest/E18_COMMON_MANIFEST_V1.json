@@ -1,8 +1,12 @@
 {
   "schema_version": "E18_COMMON_MANIFEST_V1",
   "experiment_id": "E18",
-  "status": "OPEN_CODEX_E18_16_EXTERNAL_REGRESSION_PEER_LINES_FROZEN",
-  "date": "2026-09-04",
+  "status": "OPEN_CODEX_770_ASSIGNMENT_REDESIGN_PEER_LINES_FROZEN",
+  "date": "2026-09-05",
+  "current_handoff": "docs/NEW_SESSION.md",
+  "reporting_standard": "experiments/e18/reports/common/E18_AGENT_COMPARISON_REPORT_STANDARD_V3_IT.md",
+  "current_target_topology": [7, 7, 0],
+  "historical_protocol_note": "Older topology arms and results below are frozen historical protocols, not current development targets.",
   "predecessor": {
     "experiment": "E17",
     "status": "CLOSED_DEVELOPMENT_COMPLETE_HOLDOUT_UNUSED",
@@ -18,8 +22,8 @@
     "baseline_submission_sha256": "3DF5C15D078552AF0A3849653057303698C9D750B4C7BB087B8A29092FADBAE8"
   },
   "objective": "TOPOLOGY_PRESERVING_OWN_CAPACITY_RECOVERY_WITH_PUBLIC_OPPONENT_TELEMETRY",
-  "planned_candidate": "CODEX_E18_17_770_LIFECYCLE_ROUTE_COMPLETION_NOT_BUILT",
-  "policy_mutation_authorized": "CODEX_E18_16_EXTERNAL_VALIDATION_ONLY",
+  "planned_candidate": "CODEX_E18_30_770_MISSION_DISPATCHER_V1",
+  "policy_mutation_authorized": "CODEX_770_ASSIGNMENT_REDESIGN_INTERNAL_DEVELOPMENT",
   "agent_line_status": {
     "codex": "ACTIVE_EXACT_770_RESEARCH",
     "antigravity": "FROZEN_PERFORMANCE_GAP",
@@ -469,7 +473,7 @@
     "source_sha256": "F4599F7D3330345612DAC9F10D7ED6F0B9A312759425A5BA5F046369328A9864",
     "config": "docs/model_specs/codex/e18/configs/CODEX_E18_2_CAPACITY_GOVERNED_V4D_V1.json",
     "config_sha256": "6637E246316CB749A03C65B415C4828AFF4A4B443F01052278C8B5A2A04B5A17",
-    "model_spec": "docs/model_specs/codex/MODEL_SPEC_CODEX_E18_2_CAPACITY_GOVERNED_V4D_V1.md",
+    "model_spec": "docs/model_specs/codex/e18/MODEL_SPEC_CODEX_E18_2_CAPACITY_GOVERNED_V4D_V1.md",
     "model_spec_sha256": "33632FA00A3DC05F49640575FDF4E239D3796205324D6C96A8E8C9AA55C7897C",
     "artifact": "docs/model_specs/codex/e18/artifacts/derived/E18_2_CAPACITY_GOVERNED_V4D_DEV_GATE_V1.json",
     "artifact_sha256": "0F97DBF2A789BF71D49B5694CCA516E77796D766AAD9486A368F34E096BDF5D6",
@@ -520,7 +524,7 @@
     "runner_sha256": "F03656156A5094B10136A7188153ED5C2110B6F5F120A61E1A204787F4D47583",
     "report": "docs/model_specs/codex/e18/reports/E18_4_STATE_DRIVEN_772_DEV_GATE_REPORT_IT.md",
     "report_sha256": "F48E8EE7ACBF01C2F02DC7F83DCEB64D43D9284C753F3A25C2C9620527D6042F",
-    "model_spec": "docs/model_specs/codex/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V1.md",
+    "model_spec": "docs/model_specs/codex/e18/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V1.md",
     "model_spec_sha256": "B83D256238BA74AA83BB8D54CAC46C3AAF6488C57C2665C32F0F7E6C42CC95E3",
     "integrity_test": "docs/model_specs/codex/e18/tests/test_e18_4_state_driven_772_gate_artifact.py",
     "integrity_test_sha256": "E50EA5100A52578588FDB0A057E61A09E9FDC1C88A0945A6FF61541A7E2F85E5",

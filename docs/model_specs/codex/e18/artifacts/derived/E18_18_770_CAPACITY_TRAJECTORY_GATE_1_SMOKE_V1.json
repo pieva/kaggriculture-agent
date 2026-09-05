@@ -1,0 +1,102 @@
+{
+  "schema_version": "e18.codex.770_capacity_trajectory_gate_1_smoke.v1",
+  "candidate": "CODEX_E18_18_770_TRAJECTORY_GUARDED",
+  "control": "CODEX_E18_16_770_CONTROL",
+  "seed": 180903001,
+  "seats": [
+    0,
+    1
+  ],
+  "epistemic_role": "DEVELOPMENT_SMOKE_NOT_FULL_GATE_1",
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "plan_sha256": "844113c8971ccf3840758cd9d35449e01bc766a1d4b890c7fd8ab29c177410a1",
+  "passed": false,
+  "checks": {
+    "zero_controller_errors": true,
+    "exact_final_770_both_seats": true,
+    "exact_final_9_cow_5_sheep_both_seats": false,
+    "positive_candidate_reward_both_seats": true,
+    "candidate_median_not_below_control": false
+  },
+  "matches": [
+    {
+      "seed": 180903001,
+      "candidate_seat": 0,
+      "candidate_reward": 55934.0,
+      "control_reward": 85578.0,
+      "margin": -29644.0,
+      "candidate_final": {
+        "money": 55934.0,
+        "hands": 2,
+        "unlocked": [
+          "NW",
+          "NE",
+          "SW"
+        ],
+        "crops": {},
+        "animals": {
+          "COW": 7,
+          "SHEEP": 4
+        },
+        "topology": {
+          "Q0": 7,
+          "Q1": 7
+        },
+        "shed_units": 1
+      },
+      "candidate_final_weeds": 2,
+      "controller_errors": 0,
+      "guarded_noops": {
+        "CARE": 39,
+        "COLLECT_FERTILIZER": 11,
+        "DIG": 7,
+        "FEED": 69,
+        "FERTILIZE": 76,
+        "HARVEST": 57,
+        "PLACE": 1,
+        "PLANT": 8,
+        "WATER": 93
+      }
+    },
+    {
+      "seed": 180903001,
+      "candidate_seat": 1,
+      "candidate_reward": 55934.0,
+      "control_reward": 85578.0,
+      "margin": -29644.0,
+      "candidate_final": {
+        "money": 55934.0,
+        "hands": 2,
+        "unlocked": [
+          "NW",
+          "NE",
+          "SW"
+        ],
+        "crops": {},
+        "animals": {
+          "COW": 7,
+          "SHEEP": 4
+        },
+        "topology": {
+          "Q0": 7,
+          "Q1": 7
+        },
+        "shed_units": 1
+      },
+      "candidate_final_weeds": 2,
+      "controller_errors": 0,
+      "guarded_noops": {
+        "CARE": 39,
+        "COLLECT_FERTILIZER": 11,
+        "DIG": 7,
+        "FEED": 69,
+        "FERTILIZE": 76,
+        "HARVEST": 57,
+        "PLACE": 1,
+        "PLANT": 8,
+        "WATER": 93
+      }
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "schema_version": "e18.codex.770_retrying_trajectory_gate_1_smoke.v1",
+  "candidate": "CODEX_E18_19_770_RETRYING_TRAJECTORY",
+  "control": "CODEX_E18_16_770_CONTROL",
+  "seed": 180903001,
+  "seats": [
+    0,
+    1
+  ],
+  "epistemic_role": "DEVELOPMENT_SMOKE_NOT_FULL_GATE_1",
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "plan_sha256": "844113c8971ccf3840758cd9d35449e01bc766a1d4b890c7fd8ab29c177410a1",
+  "passed": false,
+  "checks": {
+    "zero_controller_errors": true,
+    "exact_final_770_both_seats": true,
+    "exact_final_9_cow_5_sheep_both_seats": true,
+    "positive_candidate_reward_both_seats": true,
+    "candidate_median_not_below_control": false
+  },
+  "candidate_median": 51517.0,
+  "control_median": 78653.5,
+  "median_margin": -27136.5,
+  "matches": [
+    {
+      "seed": 180903001,
+      "candidate_seat": 0,
+      "candidate_reward": 51853.0,
+      "control_reward": 79440.0,
+      "margin": -27587.0,
+      "candidate_final": {
+        "money": 51853.0,
+        "hands": 2,
+        "unlocked": [
+          "NW",
+          "NE",
+          "SW"
+        ],
+        "crops": {},
+        "animals": {
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "topology": {
+          "Q0": 7,
+          "Q1": 7
+        },
+        "shed_units": 0
+      },
+      "candidate_final_weeds": 2,
+      "controller_errors": 0,
+      "last_error": null,
+      "recovery_actions": {
+        "PARTIAL_PICKUP": 4,
+        "PLANNED_MOVE": 2762,
+        "POSITION_CORRECTION": 90
+      },
+      "deferred_critical": {
+        "PICKUP": 5,
+        "PLANT": 11
+      },
+      "skipped_stale": {
+        "DIG": 9,
+        "DROP": 6,
+        "FEED": 19,
+        "FERTILIZE": 80,
+        "HARVEST": 40,
+        "PICKUP": 36,
+        "PLANT": 11,
+        "WATER": 102
+      },
+      "unfinished_actions": 4,
+      "unfinished_by_day": {
+        "12": 1,
+        "30": 3
+      }
+    },
+    {
+      "seed": 180903001,
+      "candidate_seat": 1,
+      "candidate_reward": 51181.0,
+      "control_reward": 77867.0,
+      "margin": -26686.0,
+      "candidate_final": {
+        "money": 51181.0,
+        "hands": 2,
+        "unlocked": [
+          "NW",
+          "NE",
+          "SW"
+        ],
+        "crops": {},
+        "animals": {
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "topology": {
+          "Q0": 7,
+          "Q1": 7
+        },
+        "shed_units": 0
+      },
+      "candidate_final_weeds": 2,
+      "controller_errors": 0,
+      "last_error": null,
+      "recovery_actions": {
+        "PARTIAL_PICKUP": 4,
+        "PLANNED_MOVE": 2762,
+        "POSITION_CORRECTION": 90
+      },
+      "deferred_critical": {
+        "PICKUP": 5,
+        "PLANT": 11
+      },
+      "skipped_stale": {
+        "DIG": 8,
+        "DROP": 6,
+        "FEED": 19,
+        "FERTILIZE": 80,
+        "HARVEST": 40,
+        "PICKUP": 36,
+        "PLANT": 11,
+        "WATER": 102
+      },
+      "unfinished_actions": 4,
+      "unfinished_by_day": {
+        "12": 1,
+        "30": 3
+      }
+    }
+  ]
+}

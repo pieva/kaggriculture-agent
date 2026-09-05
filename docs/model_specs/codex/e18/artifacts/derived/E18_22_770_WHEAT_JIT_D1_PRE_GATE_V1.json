@@ -1,0 +1,502 @@
+{
+  "schema_version": "e18.codex.770_wheat_jit_d1_pre_gate.v1",
+  "candidate": "CODEX_E18_22_770_WHEAT_JIT_D1_V1",
+  "parent": "CODEX_E18_21_770_WHEAT_OBLIGATION_LEDGER_V1",
+  "incumbent": "CODEX_E18_16_770_EXACT_CAP_CRITICAL_FEED_V1",
+  "seed": 180903001,
+  "seats": [
+    0,
+    1
+  ],
+  "epistemic_role": "DEVELOPMENT_PRE_GATE_ABLATION",
+  "plan_sha256": "844113c8971ccf3840758cd9d35449e01bc766a1d4b890c7fd8ab29c177410a1",
+  "parent_comparison": {
+    "candidate_median": 76879.5,
+    "opponent_median": 74759.5,
+    "median_margin": 2120.0,
+    "matches": [
+      {
+        "opponent": "E18.21",
+        "candidate_seat": 0,
+        "candidate_reward": 76966.0,
+        "opponent_reward": 74673.0,
+        "margin": 2293.0,
+        "candidate_final": {
+          "money": 76966.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "opponent_final": {
+          "money": 74673.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "candidate_wheat_orders": {
+          "sell_requested_units": 365,
+          "buy_requested_units": 216,
+          "same_batch_overlap_units": 1,
+          "same_batch_overlap_turns": 1,
+          "same_batch_overlap_units_from_activation": 0,
+          "same_batch_overlap_turns_from_activation": 0
+        },
+        "opponent_wheat_orders": {
+          "sell_requested_units": 1792,
+          "buy_requested_units": 1649,
+          "same_batch_overlap_units": 1,
+          "same_batch_overlap_turns": 1,
+          "same_batch_overlap_units_from_activation": 0,
+          "same_batch_overlap_turns_from_activation": 0
+        },
+        "jit_metrics": {
+          "adjusted_turns": 326,
+          "nominal_buy_units": 4479,
+          "removed_d2_buy_units": 4308,
+          "retained_buy_units": 171
+        },
+        "ledger_metrics": {
+          "adjusted_turns": 8,
+          "contract_allocated_units": 0,
+          "contract_reconciled_units": 0,
+          "contract_released_units": 0,
+          "inflight_pickup_units": 277,
+          "protected_sale_units": 76
+        },
+        "skipped_stale": {
+          "DIG": 8,
+          "DROP": 6,
+          "FEED": 7,
+          "FERTILIZE": 81,
+          "HARVEST": 43,
+          "PICKUP": 36,
+          "PLANT": 10,
+          "WATER": 102
+        },
+        "recovery_actions": {
+          "PARTIAL_PICKUP": 1,
+          "PLANNED_MOVE": 2749,
+          "POSITION_CORRECTION": 89
+        },
+        "requested_actions": {
+          "BUILD_PASTURE": 14,
+          "CARE": 252,
+          "COLLECT_FERTILIZER": 115,
+          "DIG": 32,
+          "DROP": 136,
+          "EAST": 695,
+          "FEED": 329,
+          "FERTILIZE": 33,
+          "HARVEST": 285,
+          "NORTH": 757,
+          "PASS": 1200,
+          "PICKUP": 123,
+          "PLACE": 14,
+          "PLANT": 159,
+          "SOUTH": 562,
+          "WATER": 911,
+          "WEST": 824
+        },
+        "feed_skips": 7,
+        "unfinished_actions": 26,
+        "candidate_errors": 0,
+        "opponent_errors": 0
+      },
+      {
+        "opponent": "E18.21",
+        "candidate_seat": 1,
+        "candidate_reward": 76793.0,
+        "opponent_reward": 74846.0,
+        "margin": 1947.0,
+        "candidate_final": {
+          "money": 76793.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "opponent_final": {
+          "money": 74846.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "candidate_wheat_orders": {
+          "sell_requested_units": 359,
+          "buy_requested_units": 214,
+          "same_batch_overlap_units": 1,
+          "same_batch_overlap_turns": 1,
+          "same_batch_overlap_units_from_activation": 0,
+          "same_batch_overlap_turns_from_activation": 0
+        },
+        "opponent_wheat_orders": {
+          "sell_requested_units": 1798,
+          "buy_requested_units": 1651,
+          "same_batch_overlap_units": 1,
+          "same_batch_overlap_turns": 1,
+          "same_batch_overlap_units_from_activation": 0,
+          "same_batch_overlap_turns_from_activation": 0
+        },
+        "jit_metrics": {
+          "adjusted_turns": 326,
+          "nominal_buy_units": 4477,
+          "removed_d2_buy_units": 4308,
+          "retained_buy_units": 169
+        },
+        "ledger_metrics": {
+          "adjusted_turns": 8,
+          "contract_allocated_units": 0,
+          "contract_reconciled_units": 0,
+          "contract_released_units": 0,
+          "inflight_pickup_units": 277,
+          "protected_sale_units": 76
+        },
+        "skipped_stale": {
+          "DIG": 8,
+          "DROP": 6,
+          "FEED": 7,
+          "FERTILIZE": 81,
+          "HARVEST": 44,
+          "PICKUP": 36,
+          "PLANT": 10,
+          "WATER": 105
+        },
+        "recovery_actions": {
+          "DIG_BEFORE_BUILD": 1,
+          "DIG_BEFORE_PLANT": 2,
+          "PARTIAL_PICKUP": 1,
+          "PLANNED_MOVE": 2749,
+          "POSITION_CORRECTION": 89
+        },
+        "requested_actions": {
+          "BUILD_PASTURE": 14,
+          "CARE": 252,
+          "COLLECT_FERTILIZER": 115,
+          "DIG": 35,
+          "DROP": 135,
+          "EAST": 695,
+          "FEED": 329,
+          "FERTILIZE": 33,
+          "HARVEST": 284,
+          "NORTH": 757,
+          "PASS": 1203,
+          "PICKUP": 123,
+          "PLACE": 14,
+          "PLANT": 159,
+          "SOUTH": 562,
+          "WATER": 907,
+          "WEST": 824
+        },
+        "feed_skips": 7,
+        "unfinished_actions": 29,
+        "candidate_errors": 0,
+        "opponent_errors": 0
+      }
+    ]
+  },
+  "incumbent_comparison": {
+    "candidate_median": 52041.5,
+    "opponent_median": 78488.5,
+    "median_margin": -26447.0,
+    "matches": [
+      {
+        "opponent": "E18.16",
+        "candidate_seat": 0,
+        "candidate_reward": 52379.0,
+        "opponent_reward": 79284.0,
+        "margin": -26905.0,
+        "candidate_final": {
+          "money": 52379.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "opponent_final": {
+          "money": 79284.0,
+          "hands": 10,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {
+            "STRAWBERRY": 14
+          },
+          "animals": {
+            "COW": 8,
+            "GOOSE": 1,
+            "SHEEP": 6
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "candidate_wheat_orders": {
+          "sell_requested_units": 365,
+          "buy_requested_units": 220,
+          "same_batch_overlap_units": 1,
+          "same_batch_overlap_turns": 1,
+          "same_batch_overlap_units_from_activation": 0,
+          "same_batch_overlap_turns_from_activation": 0
+        },
+        "opponent_wheat_orders": {
+          "sell_requested_units": 415,
+          "buy_requested_units": 469,
+          "same_batch_overlap_units": 7,
+          "same_batch_overlap_turns": 7,
+          "same_batch_overlap_units_from_activation": 0,
+          "same_batch_overlap_turns_from_activation": 0
+        },
+        "jit_metrics": {
+          "adjusted_turns": 325,
+          "nominal_buy_units": 4475,
+          "removed_d2_buy_units": 4299,
+          "retained_buy_units": 176
+        },
+        "ledger_metrics": {
+          "adjusted_turns": 8,
+          "contract_allocated_units": 0,
+          "contract_reconciled_units": 0,
+          "contract_released_units": 0,
+          "inflight_pickup_units": 277,
+          "protected_sale_units": 76
+        },
+        "skipped_stale": {
+          "DIG": 9,
+          "DROP": 6,
+          "FEED": 12,
+          "FERTILIZE": 80,
+          "HARVEST": 40,
+          "PICKUP": 36,
+          "PLANT": 11,
+          "WATER": 102
+        },
+        "recovery_actions": {
+          "PARTIAL_PICKUP": 1,
+          "PLANNED_MOVE": 2762,
+          "POSITION_CORRECTION": 90
+        },
+        "requested_actions": {
+          "BUILD_PASTURE": 14,
+          "CARE": 252,
+          "COLLECT_FERTILIZER": 115,
+          "DIG": 31,
+          "DROP": 135,
+          "EAST": 695,
+          "FEED": 324,
+          "FERTILIZE": 34,
+          "HARVEST": 288,
+          "NORTH": 760,
+          "PASS": 1205,
+          "PICKUP": 123,
+          "PLACE": 14,
+          "PLANT": 158,
+          "SOUTH": 568,
+          "WATER": 918,
+          "WEST": 829
+        },
+        "feed_skips": 12,
+        "unfinished_actions": 4,
+        "candidate_errors": 0,
+        "opponent_errors": 0
+      },
+      {
+        "opponent": "E18.16",
+        "candidate_seat": 1,
+        "candidate_reward": 51704.0,
+        "opponent_reward": 77693.0,
+        "margin": -25989.0,
+        "candidate_final": {
+          "money": 51704.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "opponent_final": {
+          "money": 77693.0,
+          "hands": 10,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {
+            "STRAWBERRY": 14
+          },
+          "animals": {
+            "COW": 8,
+            "GOOSE": 1,
+            "SHEEP": 6
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "candidate_wheat_orders": {
+          "sell_requested_units": 365,
+          "buy_requested_units": 220,
+          "same_batch_overlap_units": 1,
+          "same_batch_overlap_turns": 1,
+          "same_batch_overlap_units_from_activation": 0,
+          "same_batch_overlap_turns_from_activation": 0
+        },
+        "opponent_wheat_orders": {
+          "sell_requested_units": 417,
+          "buy_requested_units": 469,
+          "same_batch_overlap_units": 7,
+          "same_batch_overlap_turns": 7,
+          "same_batch_overlap_units_from_activation": 0,
+          "same_batch_overlap_turns_from_activation": 0
+        },
+        "jit_metrics": {
+          "adjusted_turns": 325,
+          "nominal_buy_units": 4475,
+          "removed_d2_buy_units": 4299,
+          "retained_buy_units": 176
+        },
+        "ledger_metrics": {
+          "adjusted_turns": 8,
+          "contract_allocated_units": 0,
+          "contract_reconciled_units": 0,
+          "contract_released_units": 0,
+          "inflight_pickup_units": 277,
+          "protected_sale_units": 76
+        },
+        "skipped_stale": {
+          "DIG": 8,
+          "DROP": 6,
+          "FEED": 12,
+          "FERTILIZE": 80,
+          "HARVEST": 40,
+          "PICKUP": 36,
+          "PLANT": 11,
+          "WATER": 102
+        },
+        "recovery_actions": {
+          "PARTIAL_PICKUP": 1,
+          "PLANNED_MOVE": 2762,
+          "POSITION_CORRECTION": 90
+        },
+        "requested_actions": {
+          "BUILD_PASTURE": 14,
+          "CARE": 252,
+          "COLLECT_FERTILIZER": 115,
+          "DIG": 32,
+          "DROP": 135,
+          "EAST": 695,
+          "FEED": 324,
+          "FERTILIZE": 34,
+          "HARVEST": 288,
+          "NORTH": 760,
+          "PASS": 1204,
+          "PICKUP": 123,
+          "PLACE": 14,
+          "PLANT": 158,
+          "SOUTH": 568,
+          "WATER": 918,
+          "WEST": 829
+        },
+        "feed_skips": 12,
+        "unfinished_actions": 4,
+        "candidate_errors": 0,
+        "opponent_errors": 0
+      }
+    ]
+  },
+  "causal_delta_passed": true,
+  "incumbent_gate_passed": false,
+  "checks": {
+    "zero_errors": true,
+    "candidate_exact_770": true,
+    "candidate_exact_9_cow_5_sheep": true,
+    "zero_candidate_same_batch_wheat_overlap_from_activation": true,
+    "d2_wheat_buys_removed": true,
+    "parent_delta_nonnegative_both_seats": true,
+    "incumbent_gate_nonnegative_both_seats": false
+  },
+  "full_gate_1_authorized": false,
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "kaggle_upload_authorized": false
+}

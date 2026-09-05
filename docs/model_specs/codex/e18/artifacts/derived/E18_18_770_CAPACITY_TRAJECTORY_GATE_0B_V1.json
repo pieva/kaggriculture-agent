@@ -1,0 +1,7174 @@
+{
+  "schema_version": "e18.codex.770_capacity_trajectory_gate_0b.v1",
+  "candidate_id": "CODEX_E18_18_770_CAPACITY_TRAJECTORY_PLANNER_V1",
+  "epistemic_role": "DEVELOPMENT_GATE_0B_ORACLE",
+  "seed": 180918001,
+  "configuration": {
+    "episodeSteps": 720,
+    "turnsPerDay": 24,
+    "weedSpawnChance": 0.0,
+    "opponent": "PASSIVE_ORACLE"
+  },
+  "plan_sha256": "844113c8971ccf3840758cd9d35449e01bc766a1d4b890c7fd8ab29c177410a1",
+  "gate_0b_passed": true,
+  "gate_0b_checks": {
+    "gate_0a_precondition": true,
+    "zero_controller_errors": true,
+    "all_composition_checkpoints": true,
+    "exact_final_770": true,
+    "exact_final_9_cow_5_sheep": true,
+    "all_three_target_quadrants_unlocked": true,
+    "positive_terminal_money": true,
+    "terminal_crop_cap": true,
+    "zero_terminal_shed_inventory": true,
+    "zero_exact_crop_starvation": true,
+    "exact_planned_planting_acknowledged": true,
+    "all_plant_and_dig_actions_acknowledged": true,
+    "all_emitted_water_actions_acknowledged": true,
+    "deterministic_exact_replay": true
+  },
+  "policy_build_authorized": true,
+  "executor_authorized": false,
+  "controller": {
+    "errors": 0,
+    "last_error": null,
+    "requested_actions": {
+      "BUILD_PASTURE": 14,
+      "CARE": 252,
+      "COLLECT_FERTILIZER": 115,
+      "DIG": 40,
+      "DROP": 142,
+      "EAST": 695,
+      "FEED": 325,
+      "FERTILIZE": 40,
+      "HARVEST": 317,
+      "NORTH": 760,
+      "PASS": 1013,
+      "PICKUP": 158,
+      "PLACE": 14,
+      "PLANT": 169,
+      "SOUTH": 568,
+      "WATER": 1012,
+      "WEST": 829
+    },
+    "market_requests": {
+      "BUY_ANIMAL": 8,
+      "BUY_LAND": 33,
+      "BUY_PRODUCT": 220,
+      "BUY_SEED": 56,
+      "HIRE": 251,
+      "SELL": 294
+    },
+    "guarded_noops": {
+      "FEED": 11,
+      "FERTILIZE": 74,
+      "HARVEST": 11,
+      "WATER": 8
+    },
+    "market_trace": [
+      {
+        "day": 1,
+        "turn": 1,
+        "money_before": 3000.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            4
+          ],
+          [
+            "BUY_SEED",
+            "MELON",
+            12
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            7
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            2
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            2
+          ]
+        ]
+      },
+      {
+        "day": 1,
+        "turn": 2,
+        "money_before": 57.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 2,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 2,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 4,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 12,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 7
+        },
+        "orders": []
+      },
+      {
+        "day": 1,
+        "turn": 24,
+        "money_before": 57.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": []
+      },
+      {
+        "day": 2,
+        "turn": 1,
+        "money_before": 57.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            4
+          ]
+        ]
+      },
+      {
+        "day": 2,
+        "turn": 2,
+        "money_before": 0.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 2,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            2
+          ]
+        ]
+      },
+      {
+        "day": 2,
+        "turn": 24,
+        "money_before": 299.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 1,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": []
+      },
+      {
+        "day": 3,
+        "turn": 1,
+        "money_before": 299.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 1,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            4
+          ]
+        ]
+      },
+      {
+        "day": 3,
+        "turn": 2,
+        "money_before": 185.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 4,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 1,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": []
+      },
+      {
+        "day": 3,
+        "turn": 24,
+        "money_before": 581.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 1,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": []
+      },
+      {
+        "day": 4,
+        "turn": 1,
+        "money_before": 581.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 1,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            4
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            4
+          ]
+        ]
+      },
+      {
+        "day": 4,
+        "turn": 2,
+        "money_before": 421.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 4,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 1,
+          "TOMATO": 0,
+          "WHEAT": 4
+        },
+        "orders": []
+      },
+      {
+        "day": 4,
+        "turn": 24,
+        "money_before": 421.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 6,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 1,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "SELL",
+            "WHEAT",
+            6
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ]
+        ]
+      },
+      {
+        "day": 5,
+        "turn": 1,
+        "money_before": 199.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 1,
+          "EGG": 0,
+          "FERTILIZER": 4,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 6,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 1,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "SELL",
+            "FERTILIZER",
+            3
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            3
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ]
+      },
+      {
+        "day": 5,
+        "turn": 2,
+        "money_before": 49.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 2,
+          "EGG": 0,
+          "FERTILIZER": 1,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 6,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 1,
+          "TOMATO": 0,
+          "WHEAT": 4
+        },
+        "orders": []
+      },
+      {
+        "day": 5,
+        "turn": 24,
+        "money_before": 39.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 1,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 5,
+          "TOMATO": 0,
+          "WHEAT": 1
+        },
+        "orders": [
+          [
+            "SELL",
+            "WHEAT",
+            6
+          ],
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            4
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            1
+          ]
+        ]
+      },
+      {
+        "day": 6,
+        "turn": 1,
+        "money_before": 49.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 1,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 7,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 6,
+          "TOMATO": 0,
+          "WHEAT": 5
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 6,
+        "turn": 2,
+        "money_before": 45.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 1,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 7,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 6,
+          "TOMATO": 0,
+          "WHEAT": 5
+        },
+        "orders": []
+      },
+      {
+        "day": 6,
+        "turn": 24,
+        "money_before": 45.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 1,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 1,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 4,
+          "TOMATO": 0,
+          "WHEAT": 5
+        },
+        "orders": []
+      },
+      {
+        "day": 7,
+        "turn": 1,
+        "money_before": 45.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 6,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 1,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 4,
+          "TOMATO": 0,
+          "WHEAT": 5
+        },
+        "orders": [
+          [
+            "SELL",
+            "FERTILIZER",
+            6
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            5
+          ]
+        ]
+      },
+      {
+        "day": 7,
+        "turn": 2,
+        "money_before": 418.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 6,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 4,
+          "TOMATO": 0,
+          "WHEAT": 5
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "BUY_LAND"
+          ]
+        ]
+      },
+      {
+        "day": 7,
+        "turn": 24,
+        "money_before": 326.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 1,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 16,
+          "TOMATO": 0,
+          "WHEAT": 15
+        },
+        "orders": []
+      },
+      {
+        "day": 8,
+        "turn": 1,
+        "money_before": 326.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 1,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 16,
+          "TOMATO": 0,
+          "WHEAT": 15
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            5
+          ]
+        ]
+      },
+      {
+        "day": 8,
+        "turn": 2,
+        "money_before": 156.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 6,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 16,
+          "TOMATO": 0,
+          "WHEAT": 15
+        },
+        "orders": []
+      },
+      {
+        "day": 8,
+        "turn": 24,
+        "money_before": 251.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 11,
+          "TOMATO": 0,
+          "WHEAT": 12
+        },
+        "orders": [
+          [
+            "SELL",
+            "WHEAT",
+            12
+          ]
+        ]
+      },
+      {
+        "day": 9,
+        "turn": 1,
+        "money_before": 633.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 5,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 2,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 11,
+          "TOMATO": 0,
+          "WHEAT": 12
+        },
+        "orders": [
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            4
+          ]
+        ]
+      },
+      {
+        "day": 9,
+        "turn": 2,
+        "money_before": 683.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 3,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 6,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 11,
+          "TOMATO": 0,
+          "WHEAT": 12
+        },
+        "orders": []
+      },
+      {
+        "day": 9,
+        "turn": 24,
+        "money_before": 565.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 1,
+          "EGG": 0,
+          "FERTILIZER": 3,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 6,
+          "TOMATO": 0,
+          "WHEAT": 10
+        },
+        "orders": [
+          [
+            "SELL",
+            "MILK",
+            12
+          ],
+          [
+            "BUY_ANIMAL",
+            "COW",
+            4
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            2
+          ],
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            4
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ]
+      },
+      {
+        "day": 10,
+        "turn": 1,
+        "money_before": 265.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 5,
+          "EGG": 0,
+          "FERTILIZER": 6,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 2,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 8,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 10,
+          "TOMATO": 0,
+          "WHEAT": 11
+        },
+        "orders": [
+          [
+            "SELL",
+            "FERTILIZER",
+            1
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            5
+          ],
+          [
+            "BUY_LAND"
+          ]
+        ]
+      },
+      {
+        "day": 10,
+        "turn": 2,
+        "money_before": 178.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 5,
+          "EGG": 0,
+          "FERTILIZER": 5,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 2,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 13,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 10,
+          "TOMATO": 0,
+          "WHEAT": 11
+        },
+        "orders": [
+          [
+            "BUY_LAND"
+          ]
+        ]
+      },
+      {
+        "day": 10,
+        "turn": 24,
+        "money_before": 1947.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 6,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 7,
+          "TOMATO": 0,
+          "WHEAT": 11
+        },
+        "orders": [
+          [
+            "SELL",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "BUY_LAND"
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            1
+          ]
+        ]
+      },
+      {
+        "day": 11,
+        "turn": 1,
+        "money_before": 307.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 2,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 7,
+          "TOMATO": 0,
+          "WHEAT": 12
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            13
+          ],
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            2
+          ]
+        ]
+      },
+      {
+        "day": 11,
+        "turn": 2,
+        "money_before": 18.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 2,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 7,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 7,
+          "TOMATO": 0,
+          "WHEAT": 12
+        },
+        "orders": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            6
+          ],
+          [
+            "BUY_SEED",
+            "STRAWBERRY",
+            2
+          ]
+        ]
+      },
+      {
+        "day": 11,
+        "turn": 24,
+        "money_before": 283.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 7,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 11,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 9,
+          "TOMATO": 0,
+          "WHEAT": 31
+        },
+        "orders": [
+          [
+            "SELL",
+            "FERTILIZER",
+            7
+          ],
+          [
+            "BUY_ANIMAL",
+            "SHEEP",
+            1
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            3
+          ]
+        ]
+      },
+      {
+        "day": 12,
+        "turn": 1,
+        "money_before": 310.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 1,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 9,
+          "TOMATO": 0,
+          "WHEAT": 31
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 12,
+        "turn": 2,
+        "money_before": 167.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 1,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 9,
+          "TOMATO": 0,
+          "WHEAT": 31
+        },
+        "orders": []
+      },
+      {
+        "day": 12,
+        "turn": 24,
+        "money_before": 323.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 6,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 1,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 6,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 25
+        },
+        "orders": [
+          [
+            "SELL",
+            "WHEAT",
+            11
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            21
+          ]
+        ]
+      },
+      {
+        "day": 13,
+        "turn": 1,
+        "money_before": 316.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 5,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 1,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 34,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 25
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 13,
+        "turn": 2,
+        "money_before": 173.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 5,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 1,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 34,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 25
+        },
+        "orders": [
+          [
+            "SELL",
+            "WHEAT",
+            7
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 13,
+        "turn": 24,
+        "money_before": 4300.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 7,
+          "GOOSE": 0,
+          "MELON": 36,
+          "MILK": 0,
+          "SHEEP": 1,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 29
+        },
+        "orders": [
+          [
+            "SELL",
+            "MELON",
+            36
+          ],
+          [
+            "SELL",
+            "WOOL",
+            4
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "MILK",
+            3
+          ]
+        ]
+      },
+      {
+        "day": 14,
+        "turn": 1,
+        "money_before": 15516.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 13,
+          "GOOSE": 0,
+          "MELON": 16,
+          "MILK": 0,
+          "SHEEP": 1,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 8,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 29
+        },
+        "orders": [
+          [
+            "SELL",
+            "MELON",
+            16
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 14,
+        "turn": 2,
+        "money_before": 19484.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 11,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 1,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 8,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 29
+        },
+        "orders": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            6
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            8
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            28
+          ]
+        ]
+      },
+      {
+        "day": 14,
+        "turn": 24,
+        "money_before": 19035.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 8,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 31
+        },
+        "orders": [
+          [
+            "SELL",
+            "FERTILIZER",
+            4
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 15,
+        "turn": 1,
+        "money_before": 18923.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 10,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 31
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            7
+          ]
+        ]
+      },
+      {
+        "day": 15,
+        "turn": 2,
+        "money_before": 18765.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 10,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 38
+        },
+        "orders": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 15,
+        "turn": 24,
+        "money_before": 20253.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 13,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 30
+        },
+        "orders": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            12
+          ],
+          [
+            "SELL",
+            "FERTILIZER",
+            2
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 16,
+        "turn": 1,
+        "money_before": 21817.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 18,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 30
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 16,
+        "turn": 2,
+        "money_before": 21674.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 18,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 30
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            5
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 16,
+        "turn": 24,
+        "money_before": 23441.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 7,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 28
+        },
+        "orders": [
+          [
+            "SELL",
+            "WHEAT",
+            42
+          ],
+          [
+            "SELL",
+            "WOOL",
+            8
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 17,
+        "turn": 1,
+        "money_before": 25713.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 10,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 2,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 28
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 17,
+        "turn": 2,
+        "money_before": 25570.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 10,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 2,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 28
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            9
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 17,
+        "turn": 24,
+        "money_before": 29762.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 35
+        },
+        "orders": [
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 18,
+        "turn": 1,
+        "money_before": 29202.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 6,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 35
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 18,
+        "turn": 2,
+        "money_before": 29059.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 6,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 35
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            6
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            11
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 18,
+        "turn": 24,
+        "money_before": 30243.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 40
+        },
+        "orders": [
+          [
+            "SELL",
+            "MILK",
+            30
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            36
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 19,
+        "turn": 1,
+        "money_before": 38607.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 11,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 40
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 19,
+        "turn": 2,
+        "money_before": 38464.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 11,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 40
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            11
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            10
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 19,
+        "turn": 24,
+        "money_before": 43449.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 10,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 42
+        },
+        "orders": [
+          [
+            "SELL",
+            "WOOL",
+            16
+          ],
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            20
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            18
+          ]
+        ]
+      },
+      {
+        "day": 20,
+        "turn": 1,
+        "money_before": 47197.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 14,
+          "TOMATO": 0,
+          "WHEAT": 32,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 42
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 20,
+        "turn": 2,
+        "money_before": 47054.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 14,
+          "TOMATO": 0,
+          "WHEAT": 32,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 42
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            14
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            4
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_SEED",
+            "WHEAT",
+            9
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            10
+          ]
+        ]
+      },
+      {
+        "day": 20,
+        "turn": 24,
+        "money_before": 54455.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 44
+        },
+        "orders": [
+          [
+            "SELL",
+            "WHEAT",
+            30
+          ],
+          [
+            "SELL",
+            "MILK",
+            3
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 21,
+        "turn": 1,
+        "money_before": 55823.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 13,
+          "TOMATO": 0,
+          "WHEAT": 18,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 44
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 21,
+        "turn": 2,
+        "money_before": 55680.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 13,
+          "TOMATO": 0,
+          "WHEAT": 18,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 44
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            13
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            24
+          ]
+        ]
+      },
+      {
+        "day": 21,
+        "turn": 24,
+        "money_before": 58545.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 39
+        },
+        "orders": [
+          [
+            "SELL",
+            "WHEAT",
+            12
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 22,
+        "turn": 1,
+        "money_before": 58463.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 13,
+          "TOMATO": 0,
+          "WHEAT": 24,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 39
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 22,
+        "turn": 2,
+        "money_before": 58320.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 13,
+          "TOMATO": 0,
+          "WHEAT": 24,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 39
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            13
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            18
+          ]
+        ]
+      },
+      {
+        "day": 22,
+        "turn": 24,
+        "money_before": 62870.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 30
+        },
+        "orders": [
+          [
+            "SELL",
+            "WHEAT",
+            32
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 23,
+        "turn": 1,
+        "money_before": 63625.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 9,
+          "TOMATO": 0,
+          "WHEAT": 20,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 30
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 23,
+        "turn": 2,
+        "money_before": 63482.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 9,
+          "TOMATO": 0,
+          "WHEAT": 20,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 30
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            9
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            22
+          ]
+        ]
+      },
+      {
+        "day": 23,
+        "turn": 24,
+        "money_before": 66887.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 19
+        },
+        "orders": [
+          [
+            "SELL",
+            "MILK",
+            12
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            28
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 24,
+        "turn": 1,
+        "money_before": 70604.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 11,
+          "TOMATO": 0,
+          "WHEAT": 24,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 19
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 24,
+        "turn": 2,
+        "money_before": 70461.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 11,
+          "TOMATO": 0,
+          "WHEAT": 24,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 19
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            11
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            18
+          ]
+        ]
+      },
+      {
+        "day": 24,
+        "turn": 24,
+        "money_before": 75892.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 1,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 9
+        },
+        "orders": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            20
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            1
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 25,
+        "turn": 1,
+        "money_before": 77999.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 17,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 9
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 25,
+        "turn": 2,
+        "money_before": 77856.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 17,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 9
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            17
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 25,
+        "turn": 24,
+        "money_before": 84587.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 6,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            6
+          ],
+          [
+            "SELL",
+            "WOOL",
+            8
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            20
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 26,
+        "turn": 1,
+        "money_before": 87429.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 10,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 26,
+        "turn": 2,
+        "money_before": 87286.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 10,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            10
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 26,
+        "turn": 24,
+        "money_before": 90490.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "SELL",
+            "WHEAT",
+            36
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 27,
+        "turn": 1,
+        "money_before": 91847.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 8,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 27,
+        "turn": 2,
+        "money_before": 91704.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 8,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            8
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 27,
+        "turn": 24,
+        "money_before": 97319.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "SELL",
+            "WHEAT",
+            44
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 28,
+        "turn": 1,
+        "money_before": 98611.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 6,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            6
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 28,
+        "turn": 2,
+        "money_before": 99760.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 42,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "SELL",
+            "WHEAT",
+            14
+          ]
+        ]
+      },
+      {
+        "day": 28,
+        "turn": 24,
+        "money_before": 103670.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 2,
+          "TOMATO": 0,
+          "WHEAT": 20,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            26
+          ],
+          [
+            "SELL",
+            "STRAWBERRY",
+            2
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            8
+          ]
+        ]
+      },
+      {
+        "day": 29,
+        "turn": 1,
+        "money_before": 106724.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 6,
+          "TOMATO": 0,
+          "WHEAT": 18,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "SELL",
+            "STRAWBERRY",
+            6
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            10
+          ]
+        ]
+      },
+      {
+        "day": 29,
+        "turn": 2,
+        "money_before": 108082.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 28,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": []
+      },
+      {
+        "day": 29,
+        "turn": 24,
+        "money_before": 111151.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 10,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "SELL",
+            "MILK",
+            6
+          ],
+          [
+            "SELL",
+            "WOOL",
+            3
+          ],
+          [
+            "SELL",
+            "WHEAT",
+            6
+          ],
+          [
+            "BUY_PRODUCT",
+            "WHEAT",
+            4
+          ]
+        ]
+      },
+      {
+        "day": 30,
+        "turn": 1,
+        "money_before": 113551.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 16,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": [
+          [
+            "SELL",
+            "WHEAT",
+            2
+          ],
+          [
+            "HIRE"
+          ],
+          [
+            "HIRE"
+          ]
+        ]
+      },
+      {
+        "day": 30,
+        "turn": 2,
+        "money_before": 113633.0,
+        "shed_before": {
+          "CARROT": 0,
+          "COW": 0,
+          "EGG": 0,
+          "FERTILIZER": 0,
+          "GOOSE": 0,
+          "MELON": 0,
+          "MILK": 0,
+          "SHEEP": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 14,
+          "WOOL": 0
+        },
+        "seeds_before": {
+          "CARROT": 0,
+          "MELON": 0,
+          "STRAWBERRY": 0,
+          "TOMATO": 0,
+          "WHEAT": 0
+        },
+        "orders": []
+      }
+    ]
+  },
+  "engine_summary": {
+    "player_index": 0,
+    "player": "CODEX E18.18 GATE 0B",
+    "final_reward": 117077.0,
+    "action_stream_sha256": "10053E5155E7892FD3626EDBEA9D4F15218F47DD7DC8F1BC828C37E926D96641",
+    "first_three_quadrants_display_day": 11,
+    "peak_crops": 62,
+    "peak_crop_display_days": [
+      12
+    ],
+    "crop_tile_days_total": 1230,
+    "crop_tile_days_d21_d30": 411,
+    "unwatered_tile_days_total": 401,
+    "unwatered_tile_days_d21_d30": 117,
+    "water_stressed_tile_days_total": 496,
+    "last_action_display_day": {
+      "PLANT": 25,
+      "WATER": 29,
+      "HARVEST": 30,
+      "DIG": 29
+    },
+    "d21_d30_actions": {
+      "plant": 44,
+      "water": 375,
+      "harvest": 182,
+      "dig": 38,
+      "move": 1219,
+      "pass": 310,
+      "other_productive": 348,
+      "unit_actions": 2516
+    },
+    "pass_on_actionable_tile": {
+      "HARVEST": 218,
+      "WATER": 24,
+      "DIG": 19
+    },
+    "requested_sell_quantity": {
+      "FERTILIZER": 75,
+      "MELON": 52,
+      "MILK": 192,
+      "STRAWBERRY": 151,
+      "WHEAT": 2975,
+      "WOOL": 96
+    },
+    "requested_sell_value": {
+      "FERTILIZER": 6907.0,
+      "MELON": 12596.0,
+      "MILK": 48537.0,
+      "STRAWBERRY": 42053.0,
+      "WHEAT": 121483.0,
+      "WOOL": 14295.0
+    },
+    "requested_crop_sell_value": 176132.0,
+    "requested_livestock_product_sell_value": 69739.0,
+    "total_requested_sell_value": 245871.0,
+    "requested_crop_sell_share_pct": 71.636,
+    "crop_action_execution": {
+      "requested": {
+        "DIG": 40,
+        "HARVEST": 317,
+        "PLANT": 169,
+        "WATER": 958
+      },
+      "acknowledged": {
+        "DIG": 40,
+        "HARVEST": 235,
+        "PLANT": 169,
+        "WATER": 958
+      },
+      "acknowledgement_rate_pct": {
+        "DIG": 100.0,
+        "HARVEST": 74.132,
+        "PLANT": 100.0,
+        "WATER": 100.0
+      },
+      "acknowledged_by_display_day": {
+        "1": {
+          "PLANT": 19,
+          "WATER": 18
+        },
+        "2": {
+          "WATER": 10
+        },
+        "3": {
+          "WATER": 13
+        },
+        "4": {
+          "HARVEST": 4,
+          "PLANT": 4,
+          "WATER": 16
+        },
+        "5": {
+          "HARVEST": 3,
+          "PLANT": 3,
+          "WATER": 12
+        },
+        "6": {
+          "DIG": 2,
+          "PLANT": 2,
+          "WATER": 9
+        },
+        "7": {
+          "PLANT": 5,
+          "WATER": 20
+        },
+        "8": {
+          "HARVEST": 3,
+          "PLANT": 8,
+          "WATER": 26
+        },
+        "9": {
+          "HARVEST": 2,
+          "PLANT": 7,
+          "WATER": 25
+        },
+        "10": {
+          "PLANT": 3,
+          "WATER": 23
+        },
+        "11": {
+          "PLANT": 11,
+          "WATER": 34
+        },
+        "12": {
+          "HARVEST": 3,
+          "PLANT": 17,
+          "WATER": 46
+        },
+        "13": {
+          "HARVEST": 14,
+          "PLANT": 2,
+          "WATER": 35
+        },
+        "14": {
+          "HARVEST": 1,
+          "PLANT": 6,
+          "WATER": 36
+        },
+        "15": {
+          "HARVEST": 2,
+          "PLANT": 8,
+          "WATER": 37
+        },
+        "16": {
+          "HARVEST": 8,
+          "PLANT": 7,
+          "WATER": 46
+        },
+        "17": {
+          "HARVEST": 6,
+          "PLANT": 2,
+          "WATER": 40
+        },
+        "18": {
+          "HARVEST": 12,
+          "PLANT": 6,
+          "WATER": 50
+        },
+        "19": {
+          "HARVEST": 16,
+          "PLANT": 8,
+          "WATER": 52
+        },
+        "20": {
+          "HARVEST": 16,
+          "PLANT": 7,
+          "WATER": 49
+        },
+        "21": {
+          "DIG": 3,
+          "HARVEST": 12,
+          "PLANT": 5,
+          "WATER": 48
+        },
+        "22": {
+          "DIG": 3,
+          "HARVEST": 19,
+          "PLANT": 9,
+          "WATER": 46
+        },
+        "23": {
+          "DIG": 3,
+          "HARVEST": 19,
+          "PLANT": 11,
+          "WATER": 51
+        },
+        "24": {
+          "DIG": 3,
+          "HARVEST": 20,
+          "PLANT": 10,
+          "WATER": 54
+        },
+        "25": {
+          "DIG": 4,
+          "HARVEST": 19,
+          "PLANT": 9,
+          "WATER": 46
+        },
+        "26": {
+          "HARVEST": 16,
+          "WATER": 43
+        },
+        "27": {
+          "DIG": 1,
+          "HARVEST": 17,
+          "WATER": 42
+        },
+        "28": {
+          "DIG": 3,
+          "HARVEST": 14,
+          "WATER": 22
+        },
+        "29": {
+          "DIG": 18,
+          "HARVEST": 9,
+          "WATER": 9
+        }
+      },
+      "harvested_units": {
+        "MELON": 72,
+        "STRAWBERRY": 151,
+        "WHEAT": 520
+      },
+      "harvested_units_total": 743,
+      "harvest_events": {
+        "MELON": 12,
+        "STRAWBERRY": 106,
+        "WHEAT": 117
+      },
+      "mean_units_per_harvest": {
+        "MELON": 6.0,
+        "STRAWBERRY": 1.425,
+        "WHEAT": 4.444
+      },
+      "planted_units": {
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "WHEAT": 119
+      },
+      "planted_by_display_day": {
+        "1": {
+          "MELON": 12,
+          "WHEAT": 7
+        },
+        "4": {
+          "WHEAT": 4
+        },
+        "5": {
+          "WHEAT": 3
+        },
+        "6": {
+          "STRAWBERRY": 2
+        },
+        "7": {
+          "STRAWBERRY": 5
+        },
+        "8": {
+          "STRAWBERRY": 5,
+          "WHEAT": 3
+        },
+        "9": {
+          "STRAWBERRY": 5,
+          "WHEAT": 2
+        },
+        "10": {
+          "STRAWBERRY": 3
+        },
+        "11": {
+          "STRAWBERRY": 9,
+          "WHEAT": 2
+        },
+        "12": {
+          "STRAWBERRY": 9,
+          "WHEAT": 8
+        },
+        "13": {
+          "WHEAT": 2
+        },
+        "14": {
+          "WHEAT": 6
+        },
+        "15": {
+          "WHEAT": 8
+        },
+        "16": {
+          "WHEAT": 7
+        },
+        "17": {
+          "WHEAT": 2
+        },
+        "18": {
+          "WHEAT": 6
+        },
+        "19": {
+          "WHEAT": 8
+        },
+        "20": {
+          "WHEAT": 7
+        },
+        "21": {
+          "WHEAT": 5
+        },
+        "22": {
+          "WHEAT": 9
+        },
+        "23": {
+          "WHEAT": 11
+        },
+        "24": {
+          "WHEAT": 10
+        },
+        "25": {
+          "WHEAT": 9
+        }
+      },
+      "harvested_units_by_display_day": {
+        "4": {
+          "WHEAT": 12
+        },
+        "5": {
+          "WHEAT": 12
+        },
+        "8": {
+          "WHEAT": 14
+        },
+        "9": {
+          "WHEAT": 8
+        },
+        "12": {
+          "WHEAT": 18
+        },
+        "13": {
+          "MELON": 72,
+          "WHEAT": 12
+        },
+        "14": {
+          "WHEAT": 2
+        },
+        "15": {
+          "WHEAT": 12
+        },
+        "16": {
+          "STRAWBERRY": 2,
+          "WHEAT": 42
+        },
+        "17": {
+          "STRAWBERRY": 8,
+          "WHEAT": 12
+        },
+        "18": {
+          "STRAWBERRY": 11,
+          "WHEAT": 36
+        },
+        "19": {
+          "STRAWBERRY": 14,
+          "WHEAT": 44
+        },
+        "20": {
+          "STRAWBERRY": 13,
+          "WHEAT": 28
+        },
+        "21": {
+          "STRAWBERRY": 13,
+          "WHEAT": 8
+        },
+        "22": {
+          "STRAWBERRY": 14,
+          "WHEAT": 24
+        },
+        "23": {
+          "STRAWBERRY": 15,
+          "WHEAT": 32
+        },
+        "24": {
+          "STRAWBERRY": 18,
+          "WHEAT": 28
+        },
+        "25": {
+          "STRAWBERRY": 20,
+          "WHEAT": 20
+        },
+        "26": {
+          "STRAWBERRY": 9,
+          "WHEAT": 36
+        },
+        "27": {
+          "STRAWBERRY": 6,
+          "WHEAT": 44
+        },
+        "28": {
+          "STRAWBERRY": 8,
+          "WHEAT": 40
+        },
+        "29": {
+          "WHEAT": 36
+        }
+      }
+    },
+    "transition_metrics": {
+      "counts": {
+        "dug_up_crop": 18,
+        "expired_to_weed": 22,
+        "harvested": 129
+      },
+      "by_display_day": {
+        "4": {
+          "harvested": 4
+        },
+        "5": {
+          "harvested": 3
+        },
+        "6": {
+          "dug_up_crop": 2
+        },
+        "8": {
+          "harvested": 3
+        },
+        "9": {
+          "harvested": 2
+        },
+        "12": {
+          "harvested": 3
+        },
+        "13": {
+          "harvested": 14
+        },
+        "14": {
+          "harvested": 1
+        },
+        "15": {
+          "harvested": 2
+        },
+        "16": {
+          "harvested": 7
+        },
+        "17": {
+          "harvested": 2
+        },
+        "18": {
+          "harvested": 6
+        },
+        "19": {
+          "harvested": 8
+        },
+        "20": {
+          "harvested": 7
+        },
+        "21": {
+          "dug_up_crop": 3,
+          "harvested": 2
+        },
+        "22": {
+          "dug_up_crop": 3,
+          "harvested": 6
+        },
+        "23": {
+          "dug_up_crop": 3,
+          "harvested": 8
+        },
+        "24": {
+          "dug_up_crop": 3,
+          "harvested": 7
+        },
+        "25": {
+          "dug_up_crop": 4,
+          "harvested": 5
+        },
+        "26": {
+          "expired_to_weed": 1,
+          "harvested": 9
+        },
+        "27": {
+          "expired_to_weed": 3,
+          "harvested": 11
+        },
+        "28": {
+          "expired_to_weed": 9,
+          "harvested": 10
+        },
+        "29": {
+          "expired_to_weed": 9,
+          "harvested": 9
+        }
+      },
+      "by_quadrant": {
+        "Q0": {
+          "dug_up_crop": 4,
+          "harvested": 86
+        },
+        "Q1": {
+          "dug_up_crop": 14,
+          "expired_to_weed": 4,
+          "harvested": 15
+        },
+        "Q2": {
+          "expired_to_weed": 18,
+          "harvested": 28
+        }
+      },
+      "by_crop": {
+        "MELON": {
+          "harvested": 12
+        },
+        "STRAWBERRY": {
+          "dug_up_crop": 16,
+          "expired_to_weed": 22
+        },
+        "WHEAT": {
+          "dug_up_crop": 2,
+          "harvested": 117
+        }
+      },
+      "examples": [
+        {
+          "step": 126,
+          "display_day": 6,
+          "position": [
+            2,
+            3
+          ],
+          "quadrant": "Q0",
+          "crop": "WHEAT",
+          "consecutive_unwatered": 0,
+          "max_lifespan_step": 216,
+          "actions_at_position": [
+            "DIG"
+          ],
+          "classification": "dug_up_crop"
+        },
+        {
+          "step": 130,
+          "display_day": 6,
+          "position": [
+            2,
+            2
+          ],
+          "quadrant": "Q0",
+          "crop": "WHEAT",
+          "consecutive_unwatered": 1,
+          "max_lifespan_step": 192,
+          "actions_at_position": [
+            "DIG"
+          ],
+          "classification": "dug_up_crop"
+        },
+        {
+          "step": 486,
+          "display_day": 21,
+          "position": [
+            2,
+            3
+          ],
+          "quadrant": "Q0",
+          "crop": "STRAWBERRY",
+          "consecutive_unwatered": 1,
+          "max_lifespan_step": -1,
+          "actions_at_position": [
+            "DIG"
+          ],
+          "classification": "dug_up_crop"
+        },
+        {
+          "step": 488,
+          "display_day": 21,
+          "position": [
+            5,
+            0
+          ],
+          "quadrant": "Q1",
+          "crop": "STRAWBERRY",
+          "consecutive_unwatered": 0,
+          "max_lifespan_step": -1,
+          "actions_at_position": [
+            "DIG"
+          ],
+          "classification": "dug_up_crop"
+        },
+        {
+          "step": 490,
+          "display_day": 21,
+          "position": [
+            2,
+            2
+          ],
+          "quadrant": "Q0",
+          "crop": "STRAWBERRY",
+          "consecutive_unwatered": 0,
+          "max_lifespan_step": -1,
+          "actions_at_position": [
+            "DIG"
+          ],
+          "classification": "dug_up_crop"
+        },
+        {
+          "step": 512,
+          "display_day": 22,
+          "position": [
+            6,
+            0
+          ],
+          "quadrant": "Q1",
+          "crop": "STRAWBERRY",
+          "consecutive_unwatered": 1,
+          "max_lifespan_step": -1,
+          "actions_at_position": [
+            "DIG"
+          ],
+          "classification": "dug_up_crop"
+        },
+        {
+          "step": 518,
+          "display_day": 22,
+          "position": [
+            8,
+            0
+          ],
+          "quadrant": "Q1",
+          "crop": "STRAWBERRY",
+          "consecutive_unwatered": 1,
+          "max_lifespan_step": -1,
+          "actions_at_position": [
+            "DIG"
+          ],
+          "classification": "dug_up_crop"
+        },
+        {
+          "step": 522,
+          "display_day": 22,
+          "position": [
+            7,
+            0
+          ],
+          "quadrant": "Q1",
+          "crop": "STRAWBERRY",
+          "consecutive_unwatered": 0,
+          "max_lifespan_step": -1,
+          "actions_at_position": [
+            "DIG"
+          ],
+          "classification": "dug_up_crop"
+        },
+        {
+          "step": 537,
+          "display_day": 23,
+          "position": [
+            8,
+            1
+          ],
+          "quadrant": "Q1",
+          "crop": "STRAWBERRY",
+          "consecutive_unwatered": 1,
+          "max_lifespan_step": -1,
+          "actions_at_position": [
+            "DIG"
+          ],
+          "classification": "dug_up_crop"
+        },
+        {
+          "step": 541,
+          "display_day": 23,
+          "position": [
+            9,
+            0
+          ],
+          "quadrant": "Q1",
+          "crop": "STRAWBERRY",
+          "consecutive_unwatered": 0,
+          "max_lifespan_step": 552,
+          "actions_at_position": [
+            "DIG"
+          ],
+          "classification": "dug_up_crop"
+        },
+        {
+          "step": 542,
+          "display_day": 23,
+          "position": [
+            9,
+            1
+          ],
+          "quadrant": "Q1",
+          "crop": "STRAWBERRY",
+          "consecutive_unwatered": 1,
+          "max_lifespan_step": -1,
+          "actions_at_position": [
+            "DIG"
+          ],
+          "classification": "dug_up_crop"
+        },
+        {
+          "step": 559,
+          "display_day": 24,
+          "position": [
+            5,
+            1
+          ],
+          "quadrant": "Q1",
+          "crop": "STRAWBERRY",
+          "consecutive_unwatered": 0,
+          "max_lifespan_step": 576,
+          "actions_at_position": [
+            "DIG"
+          ],
+          "classification": "dug_up_crop"
+        }
+      ]
+    },
+    "late_daily": [
+      {
+        "display_day": 21,
+        "money": 58545.0,
+        "hands": 12,
+        "crops": 61,
+        "unwatered": 15,
+        "water_stressed": 21,
+        "harvest_ready": 39,
+        "weeds": 0,
+        "pastures": 14,
+        "animals": 14,
+        "crop_mix": {
+          "STRAWBERRY": 35,
+          "WHEAT": 26
+        },
+        "crop_by_quadrant": {
+          "Q0": {
+            "WHEAT": 18
+          },
+          "Q1": {
+            "STRAWBERRY": 17,
+            "WHEAT": 1
+          },
+          "Q2": {
+            "STRAWBERRY": 18,
+            "WHEAT": 7
+          }
+        }
+      },
+      {
+        "display_day": 22,
+        "money": 62870.0,
+        "hands": 12,
+        "crops": 61,
+        "unwatered": 21,
+        "water_stressed": 20,
+        "harvest_ready": 46,
+        "weeds": 0,
+        "pastures": 14,
+        "animals": 14,
+        "crop_mix": {
+          "STRAWBERRY": 32,
+          "WHEAT": 29
+        },
+        "crop_by_quadrant": {
+          "Q0": {
+            "WHEAT": 18
+          },
+          "Q1": {
+            "STRAWBERRY": 14,
+            "WHEAT": 4
+          },
+          "Q2": {
+            "STRAWBERRY": 18,
+            "WHEAT": 7
+          }
+        }
+      },
+      {
+        "display_day": 23,
+        "money": 66887.0,
+        "hands": 12,
+        "crops": 61,
+        "unwatered": 18,
+        "water_stressed": 30,
+        "harvest_ready": 49,
+        "weeds": 0,
+        "pastures": 14,
+        "animals": 14,
+        "crop_mix": {
+          "STRAWBERRY": 29,
+          "WHEAT": 32
+        },
+        "crop_by_quadrant": {
+          "Q0": {
+            "WHEAT": 18
+          },
+          "Q1": {
+            "STRAWBERRY": 11,
+            "WHEAT": 7
+          },
+          "Q2": {
+            "STRAWBERRY": 18,
+            "WHEAT": 7
+          }
+        }
+      },
+      {
+        "display_day": 24,
+        "money": 75892.0,
+        "hands": 12,
+        "crops": 61,
+        "unwatered": 14,
+        "water_stressed": 26,
+        "harvest_ready": 46,
+        "weeds": 0,
+        "pastures": 14,
+        "animals": 14,
+        "crop_mix": {
+          "STRAWBERRY": 26,
+          "WHEAT": 35
+        },
+        "crop_by_quadrant": {
+          "Q0": {
+            "WHEAT": 18
+          },
+          "Q1": {
+            "STRAWBERRY": 8,
+            "WHEAT": 10
+          },
+          "Q2": {
+            "STRAWBERRY": 18,
+            "WHEAT": 7
+          }
+        }
+      },
+      {
+        "display_day": 25,
+        "money": 84587.0,
+        "hands": 12,
+        "crops": 61,
+        "unwatered": 20,
+        "water_stressed": 21,
+        "harvest_ready": 47,
+        "weeds": 0,
+        "pastures": 14,
+        "animals": 14,
+        "crop_mix": {
+          "STRAWBERRY": 22,
+          "WHEAT": 39
+        },
+        "crop_by_quadrant": {
+          "Q0": {
+            "WHEAT": 18
+          },
+          "Q1": {
+            "STRAWBERRY": 4,
+            "WHEAT": 14
+          },
+          "Q2": {
+            "STRAWBERRY": 18,
+            "WHEAT": 7
+          }
+        }
+      },
+      {
+        "display_day": 26,
+        "money": 90490.0,
+        "hands": 10,
+        "crops": 51,
+        "unwatered": 17,
+        "water_stressed": 19,
+        "harvest_ready": 40,
+        "weeds": 1,
+        "pastures": 14,
+        "animals": 14,
+        "crop_mix": {
+          "STRAWBERRY": 21,
+          "WHEAT": 30
+        },
+        "crop_by_quadrant": {
+          "Q0": {
+            "WHEAT": 12
+          },
+          "Q1": {
+            "STRAWBERRY": 3,
+            "WHEAT": 11
+          },
+          "Q2": {
+            "STRAWBERRY": 18,
+            "WHEAT": 7
+          }
+        }
+      },
+      {
+        "display_day": 27,
+        "money": 97319.0,
+        "hands": 11,
+        "crops": 37,
+        "unwatered": 6,
+        "water_stressed": 11,
+        "harvest_ready": 31,
+        "weeds": 3,
+        "pastures": 14,
+        "animals": 14,
+        "crop_mix": {
+          "STRAWBERRY": 18,
+          "WHEAT": 19
+        },
+        "crop_by_quadrant": {
+          "Q0": {
+            "WHEAT": 6
+          },
+          "Q1": {
+            "WHEAT": 8
+          },
+          "Q2": {
+            "STRAWBERRY": 18,
+            "WHEAT": 5
+          }
+        }
+      },
+      {
+        "display_day": 28,
+        "money": 103670.0,
+        "hands": 8,
+        "crops": 18,
+        "unwatered": 6,
+        "water_stressed": 0,
+        "harvest_ready": 14,
+        "weeds": 9,
+        "pastures": 14,
+        "animals": 14,
+        "crop_mix": {
+          "STRAWBERRY": 9,
+          "WHEAT": 9
+        },
+        "crop_by_quadrant": {
+          "Q0": {
+            "WHEAT": 4
+          },
+          "Q1": {
+            "WHEAT": 5
+          },
+          "Q2": {
+            "STRAWBERRY": 9
+          }
+        }
+      },
+      {
+        "display_day": 29,
+        "money": 111151.0,
+        "hands": 8,
+        "crops": 0,
+        "unwatered": 0,
+        "water_stressed": 0,
+        "harvest_ready": 0,
+        "weeds": 0,
+        "pastures": 14,
+        "animals": 14,
+        "crop_mix": {},
+        "crop_by_quadrant": {}
+      },
+      {
+        "display_day": 30,
+        "money": 117077.0,
+        "hands": 2,
+        "crops": 0,
+        "unwatered": 0,
+        "water_stressed": 0,
+        "harvest_ready": 0,
+        "weeds": 0,
+        "pastures": 14,
+        "animals": 14,
+        "crop_mix": {},
+        "crop_by_quadrant": {}
+      }
+    ],
+    "final_topology": {
+      "quadrants": "NW NE SW",
+      "pastures": 14,
+      "animals": 14,
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    }
+  },
+  "snapshots": {
+    "D01": {
+      "money": 57.0,
+      "hands": 4,
+      "unlocked": [
+        "NW"
+      ],
+      "crops": {
+        "MELON": 12,
+        "WHEAT": 7
+      },
+      "animals": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "topology": {
+        "Q0": 4
+      },
+      "shed_units": 0
+    },
+    "D05": {
+      "money": 39.0,
+      "hands": 3,
+      "unlocked": [
+        "NW"
+      ],
+      "crops": {
+        "MELON": 12,
+        "WHEAT": 7
+      },
+      "animals": {
+        "COW": 4,
+        "SHEEP": 2
+      },
+      "topology": {
+        "Q0": 6
+      },
+      "shed_units": 1
+    },
+    "D10": {
+      "money": 1947.0,
+      "hands": 6,
+      "unlocked": [
+        "NW",
+        "NE"
+      ],
+      "crops": {
+        "MELON": 12,
+        "STRAWBERRY": 20,
+        "WHEAT": 5
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 4
+      },
+      "topology": {
+        "Q0": 6,
+        "Q1": 7
+      },
+      "shed_units": 6
+    },
+    "D15": {
+      "money": 20253.0,
+      "hands": 9,
+      "unlocked": [
+        "NW",
+        "NE",
+        "SW"
+      ],
+      "crops": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 5
+      },
+      "topology": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "shed_units": 27
+    },
+    "D20": {
+      "money": 54455.0,
+      "hands": 12,
+      "unlocked": [
+        "NW",
+        "NE",
+        "SW"
+      ],
+      "crops": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 5
+      },
+      "topology": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "shed_units": 14
+    },
+    "D25": {
+      "money": 84587.0,
+      "hands": 12,
+      "unlocked": [
+        "NW",
+        "NE",
+        "SW"
+      ],
+      "crops": {
+        "STRAWBERRY": 22,
+        "WHEAT": 39
+      },
+      "animals": {
+        "COW": 9,
+        "SHEEP": 5
+      },
+      "topology": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "shed_units": 20
+    },
+    "D30": {
+      "money": 117077.0,
+      "hands": 2,
+      "unlocked": [
+        "NW",
+        "NE",
+        "SW"
+      ],
+      "crops": {},
+      "animals": {
+        "COW": 9,
+        "SHEEP": 5
+      },
+      "topology": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "shed_units": 0
+    }
+  },
+  "checkpoint_checks": {
+    "D01": {
+      "crop_match": true,
+      "animal_match": true
+    },
+    "D05": {
+      "crop_match": true,
+      "animal_match": true
+    },
+    "D10": {
+      "crop_match": true,
+      "animal_match": true
+    },
+    "D15": {
+      "crop_match": true,
+      "animal_match": true
+    },
+    "D20": {
+      "crop_match": true,
+      "animal_match": true
+    },
+    "D25": {
+      "crop_match": true,
+      "animal_match": true
+    },
+    "D30": {
+      "crop_match": true,
+      "animal_match": true
+    }
+  },
+  "final": {
+    "money": 117077.0,
+    "hands": 2,
+    "unlocked": [
+      "NW",
+      "NE",
+      "SW"
+    ],
+    "crops": {},
+    "animals": {
+      "COW": 9,
+      "SHEEP": 5
+    },
+    "topology": {
+      "Q0": 7,
+      "Q1": 7
+    },
+    "shed_units": 0
+  },
+  "daily_rows": [
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 1,
+      "observation_day": 0,
+      "step": 23,
+      "money": 57.0,
+      "hands": 4,
+      "worker_slots": 5,
+      "quadrants": "NW",
+      "crops": 19,
+      "unwatered": 1,
+      "water_stressed": 19,
+      "harvest_ready": 19,
+      "weeds": 0,
+      "pastures": 4,
+      "animals": 4,
+      "empty": 2,
+      "crop_mix": {
+        "MELON": 12,
+        "WHEAT": 7
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "MELON": 12,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 4
+      },
+      "animals_by_quadrant": {
+        "Q0": 4
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 2,
+      "observation_day": 1,
+      "step": 47,
+      "money": 299.0,
+      "hands": 2,
+      "worker_slots": 3,
+      "quadrants": "NW",
+      "crops": 19,
+      "unwatered": 9,
+      "water_stressed": 0,
+      "harvest_ready": 19,
+      "weeds": 0,
+      "pastures": 4,
+      "animals": 4,
+      "empty": 2,
+      "crop_mix": {
+        "MELON": 12,
+        "WHEAT": 7
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "MELON": 12,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 4
+      },
+      "animals_by_quadrant": {
+        "Q0": 4
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 3,
+      "observation_day": 2,
+      "step": 71,
+      "money": 581.0,
+      "hands": 2,
+      "worker_slots": 3,
+      "quadrants": "NW",
+      "crops": 19,
+      "unwatered": 6,
+      "water_stressed": 9,
+      "harvest_ready": 19,
+      "weeds": 0,
+      "pastures": 4,
+      "animals": 4,
+      "empty": 2,
+      "crop_mix": {
+        "MELON": 12,
+        "WHEAT": 7
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "MELON": 12,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 4
+      },
+      "animals_by_quadrant": {
+        "Q0": 4
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 4,
+      "observation_day": 3,
+      "step": 95,
+      "money": 421.0,
+      "hands": 3,
+      "worker_slots": 4,
+      "quadrants": "NW",
+      "crops": 19,
+      "unwatered": 7,
+      "water_stressed": 10,
+      "harvest_ready": 19,
+      "weeds": 0,
+      "pastures": 4,
+      "animals": 4,
+      "empty": 2,
+      "crop_mix": {
+        "MELON": 12,
+        "WHEAT": 7
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "MELON": 12,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 4
+      },
+      "animals_by_quadrant": {
+        "Q0": 4
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 5,
+      "observation_day": 4,
+      "step": 119,
+      "money": 39.0,
+      "hands": 3,
+      "worker_slots": 4,
+      "quadrants": "NW",
+      "crops": 19,
+      "unwatered": 10,
+      "water_stressed": 9,
+      "harvest_ready": 19,
+      "weeds": 0,
+      "pastures": 6,
+      "animals": 6,
+      "empty": 0,
+      "crop_mix": {
+        "MELON": 12,
+        "WHEAT": 7
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "MELON": 12,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 6
+      },
+      "animals_by_quadrant": {
+        "Q0": 6
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 6,
+      "observation_day": 5,
+      "step": 143,
+      "money": 45.0,
+      "hands": 3,
+      "worker_slots": 4,
+      "quadrants": "NW",
+      "crops": 19,
+      "unwatered": 10,
+      "water_stressed": 11,
+      "harvest_ready": 17,
+      "weeds": 0,
+      "pastures": 6,
+      "animals": 6,
+      "empty": 0,
+      "crop_mix": {
+        "MELON": 12,
+        "STRAWBERRY": 2,
+        "WHEAT": 5
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "MELON": 12,
+          "STRAWBERRY": 2,
+          "WHEAT": 5
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 6
+      },
+      "animals_by_quadrant": {
+        "Q0": 6
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 7,
+      "observation_day": 6,
+      "step": 167,
+      "money": 326.0,
+      "hands": 12,
+      "worker_slots": 13,
+      "quadrants": "NW NE",
+      "crops": 24,
+      "unwatered": 4,
+      "water_stressed": 13,
+      "harvest_ready": 17,
+      "weeds": 0,
+      "pastures": 6,
+      "animals": 6,
+      "empty": 20,
+      "crop_mix": {
+        "MELON": 12,
+        "STRAWBERRY": 7,
+        "WHEAT": 5
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "MELON": 12,
+          "STRAWBERRY": 2,
+          "WHEAT": 5
+        },
+        "Q1": {
+          "STRAWBERRY": 5
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 6
+      },
+      "animals_by_quadrant": {
+        "Q0": 6
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 8,
+      "observation_day": 7,
+      "step": 191,
+      "money": 251.0,
+      "hands": 5,
+      "worker_slots": 6,
+      "quadrants": "NW NE",
+      "crops": 29,
+      "unwatered": 6,
+      "water_stressed": 9,
+      "harvest_ready": 17,
+      "weeds": 0,
+      "pastures": 6,
+      "animals": 6,
+      "empty": 15,
+      "crop_mix": {
+        "MELON": 12,
+        "STRAWBERRY": 12,
+        "WHEAT": 5
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "MELON": 12,
+          "STRAWBERRY": 2,
+          "WHEAT": 5
+        },
+        "Q1": {
+          "STRAWBERRY": 10
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 6
+      },
+      "animals_by_quadrant": {
+        "Q0": 6
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 9,
+      "observation_day": 8,
+      "step": 215,
+      "money": 565.0,
+      "hands": 5,
+      "worker_slots": 6,
+      "quadrants": "NW NE",
+      "crops": 34,
+      "unwatered": 11,
+      "water_stressed": 11,
+      "harvest_ready": 17,
+      "weeds": 0,
+      "pastures": 6,
+      "animals": 6,
+      "empty": 10,
+      "crop_mix": {
+        "MELON": 12,
+        "STRAWBERRY": 17,
+        "WHEAT": 5
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "MELON": 12,
+          "STRAWBERRY": 2,
+          "WHEAT": 5
+        },
+        "Q1": {
+          "STRAWBERRY": 15
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 6
+      },
+      "animals_by_quadrant": {
+        "Q0": 6
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 10,
+      "observation_day": 9,
+      "step": 239,
+      "money": 1947.0,
+      "hands": 6,
+      "worker_slots": 7,
+      "quadrants": "NW NE",
+      "crops": 37,
+      "unwatered": 14,
+      "water_stressed": 12,
+      "harvest_ready": 17,
+      "weeds": 0,
+      "pastures": 13,
+      "animals": 13,
+      "empty": 0,
+      "crop_mix": {
+        "MELON": 12,
+        "STRAWBERRY": 20,
+        "WHEAT": 5
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "MELON": 12,
+          "STRAWBERRY": 2,
+          "WHEAT": 5
+        },
+        "Q1": {
+          "STRAWBERRY": 18
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 6,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 6,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 11,
+      "observation_day": 10,
+      "step": 263,
+      "money": 283.0,
+      "hands": 8,
+      "worker_slots": 9,
+      "quadrants": "NW NE SW",
+      "crops": 48,
+      "unwatered": 14,
+      "water_stressed": 22,
+      "harvest_ready": 19,
+      "weeds": 0,
+      "pastures": 13,
+      "animals": 13,
+      "empty": 14,
+      "crop_mix": {
+        "MELON": 12,
+        "STRAWBERRY": 29,
+        "WHEAT": 7
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "MELON": 12,
+          "STRAWBERRY": 2,
+          "WHEAT": 5
+        },
+        "Q1": {
+          "STRAWBERRY": 18
+        },
+        "Q2": {
+          "STRAWBERRY": 9,
+          "WHEAT": 2
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 6,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 6,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 12,
+      "observation_day": 11,
+      "step": 287,
+      "money": 323.0,
+      "hands": 10,
+      "worker_slots": 11,
+      "quadrants": "NW NE SW",
+      "crops": 62,
+      "unwatered": 19,
+      "water_stressed": 27,
+      "harvest_ready": 24,
+      "weeds": 0,
+      "pastures": 13,
+      "animals": 13,
+      "empty": 0,
+      "crop_mix": {
+        "MELON": 12,
+        "STRAWBERRY": 38,
+        "WHEAT": 12
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "MELON": 12,
+          "STRAWBERRY": 2,
+          "WHEAT": 5
+        },
+        "Q1": {
+          "STRAWBERRY": 18
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 6,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 6,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 13,
+      "observation_day": 12,
+      "step": 311,
+      "money": 4300.0,
+      "hands": 12,
+      "worker_slots": 13,
+      "quadrants": "NW NE SW",
+      "crops": 50,
+      "unwatered": 29,
+      "water_stressed": 17,
+      "harvest_ready": 12,
+      "weeds": 0,
+      "pastures": 13,
+      "animals": 13,
+      "empty": 12,
+      "crop_mix": {
+        "STRAWBERRY": 38,
+        "WHEAT": 12
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "STRAWBERRY": 2,
+          "WHEAT": 5
+        },
+        "Q1": {
+          "STRAWBERRY": 18
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 6,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 6,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 14,
+      "observation_day": 13,
+      "step": 335,
+      "money": 19035.0,
+      "hands": 8,
+      "worker_slots": 9,
+      "quadrants": "NW NE SW",
+      "crops": 55,
+      "unwatered": 20,
+      "water_stressed": 34,
+      "harvest_ready": 17,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 6,
+      "crop_mix": {
+        "STRAWBERRY": 38,
+        "WHEAT": 17
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "STRAWBERRY": 2,
+          "WHEAT": 10
+        },
+        "Q1": {
+          "STRAWBERRY": 18
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 15,
+      "observation_day": 14,
+      "step": 359,
+      "money": 20253.0,
+      "hands": 9,
+      "worker_slots": 10,
+      "quadrants": "NW NE SW",
+      "crops": 61,
+      "unwatered": 26,
+      "water_stressed": 24,
+      "harvest_ready": 23,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 0,
+      "crop_mix": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "STRAWBERRY": 2,
+          "WHEAT": 16
+        },
+        "Q1": {
+          "STRAWBERRY": 18
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 16,
+      "observation_day": 15,
+      "step": 383,
+      "money": 23441.0,
+      "hands": 12,
+      "worker_slots": 13,
+      "quadrants": "NW NE SW",
+      "crops": 61,
+      "unwatered": 22,
+      "water_stressed": 28,
+      "harvest_ready": 24,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 0,
+      "crop_mix": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "STRAWBERRY": 2,
+          "WHEAT": 16
+        },
+        "Q1": {
+          "STRAWBERRY": 18
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 17,
+      "observation_day": 16,
+      "step": 407,
+      "money": 29762.0,
+      "hands": 12,
+      "worker_slots": 13,
+      "quadrants": "NW NE SW",
+      "crops": 61,
+      "unwatered": 23,
+      "water_stressed": 22,
+      "harvest_ready": 25,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 0,
+      "crop_mix": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "STRAWBERRY": 2,
+          "WHEAT": 16
+        },
+        "Q1": {
+          "STRAWBERRY": 18
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 18,
+      "observation_day": 17,
+      "step": 431,
+      "money": 30243.0,
+      "hands": 12,
+      "worker_slots": 13,
+      "quadrants": "NW NE SW",
+      "crops": 61,
+      "unwatered": 17,
+      "water_stressed": 25,
+      "harvest_ready": 26,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 0,
+      "crop_mix": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "STRAWBERRY": 2,
+          "WHEAT": 16
+        },
+        "Q1": {
+          "STRAWBERRY": 18
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 19,
+      "observation_day": 18,
+      "step": 455,
+      "money": 43449.0,
+      "hands": 12,
+      "worker_slots": 13,
+      "quadrants": "NW NE SW",
+      "crops": 61,
+      "unwatered": 17,
+      "water_stressed": 23,
+      "harvest_ready": 28,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 0,
+      "crop_mix": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "STRAWBERRY": 2,
+          "WHEAT": 16
+        },
+        "Q1": {
+          "STRAWBERRY": 18
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 20,
+      "observation_day": 19,
+      "step": 479,
+      "money": 54455.0,
+      "hands": 12,
+      "worker_slots": 13,
+      "quadrants": "NW NE SW",
+      "crops": 61,
+      "unwatered": 19,
+      "water_stressed": 23,
+      "harvest_ready": 29,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 0,
+      "crop_mix": {
+        "STRAWBERRY": 38,
+        "WHEAT": 23
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "STRAWBERRY": 2,
+          "WHEAT": 16
+        },
+        "Q1": {
+          "STRAWBERRY": 18
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 21,
+      "observation_day": 20,
+      "step": 503,
+      "money": 58545.0,
+      "hands": 12,
+      "worker_slots": 13,
+      "quadrants": "NW NE SW",
+      "crops": 61,
+      "unwatered": 15,
+      "water_stressed": 21,
+      "harvest_ready": 39,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 0,
+      "crop_mix": {
+        "STRAWBERRY": 35,
+        "WHEAT": 26
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "WHEAT": 18
+        },
+        "Q1": {
+          "STRAWBERRY": 17,
+          "WHEAT": 1
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 22,
+      "observation_day": 21,
+      "step": 527,
+      "money": 62870.0,
+      "hands": 12,
+      "worker_slots": 13,
+      "quadrants": "NW NE SW",
+      "crops": 61,
+      "unwatered": 21,
+      "water_stressed": 20,
+      "harvest_ready": 46,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 0,
+      "crop_mix": {
+        "STRAWBERRY": 32,
+        "WHEAT": 29
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "WHEAT": 18
+        },
+        "Q1": {
+          "STRAWBERRY": 14,
+          "WHEAT": 4
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 23,
+      "observation_day": 22,
+      "step": 551,
+      "money": 66887.0,
+      "hands": 12,
+      "worker_slots": 13,
+      "quadrants": "NW NE SW",
+      "crops": 61,
+      "unwatered": 18,
+      "water_stressed": 30,
+      "harvest_ready": 49,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 0,
+      "crop_mix": {
+        "STRAWBERRY": 29,
+        "WHEAT": 32
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "WHEAT": 18
+        },
+        "Q1": {
+          "STRAWBERRY": 11,
+          "WHEAT": 7
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 24,
+      "observation_day": 23,
+      "step": 575,
+      "money": 75892.0,
+      "hands": 12,
+      "worker_slots": 13,
+      "quadrants": "NW NE SW",
+      "crops": 61,
+      "unwatered": 14,
+      "water_stressed": 26,
+      "harvest_ready": 46,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 0,
+      "crop_mix": {
+        "STRAWBERRY": 26,
+        "WHEAT": 35
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "WHEAT": 18
+        },
+        "Q1": {
+          "STRAWBERRY": 8,
+          "WHEAT": 10
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 25,
+      "observation_day": 24,
+      "step": 599,
+      "money": 84587.0,
+      "hands": 12,
+      "worker_slots": 13,
+      "quadrants": "NW NE SW",
+      "crops": 61,
+      "unwatered": 20,
+      "water_stressed": 21,
+      "harvest_ready": 47,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 0,
+      "crop_mix": {
+        "STRAWBERRY": 22,
+        "WHEAT": 39
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "WHEAT": 18
+        },
+        "Q1": {
+          "STRAWBERRY": 4,
+          "WHEAT": 14
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 26,
+      "observation_day": 25,
+      "step": 623,
+      "money": 90490.0,
+      "hands": 10,
+      "worker_slots": 11,
+      "quadrants": "NW NE SW",
+      "crops": 51,
+      "unwatered": 17,
+      "water_stressed": 19,
+      "harvest_ready": 40,
+      "weeds": 1,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 9,
+      "crop_mix": {
+        "STRAWBERRY": 21,
+        "WHEAT": 30
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "WHEAT": 12
+        },
+        "Q1": {
+          "STRAWBERRY": 3,
+          "WHEAT": 11
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 7
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 27,
+      "observation_day": 26,
+      "step": 647,
+      "money": 97319.0,
+      "hands": 11,
+      "worker_slots": 12,
+      "quadrants": "NW NE SW",
+      "crops": 37,
+      "unwatered": 6,
+      "water_stressed": 11,
+      "harvest_ready": 31,
+      "weeds": 3,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 21,
+      "crop_mix": {
+        "STRAWBERRY": 18,
+        "WHEAT": 19
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "WHEAT": 6
+        },
+        "Q1": {
+          "WHEAT": 8
+        },
+        "Q2": {
+          "STRAWBERRY": 18,
+          "WHEAT": 5
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 28,
+      "observation_day": 27,
+      "step": 671,
+      "money": 103670.0,
+      "hands": 8,
+      "worker_slots": 9,
+      "quadrants": "NW NE SW",
+      "crops": 18,
+      "unwatered": 6,
+      "water_stressed": 0,
+      "harvest_ready": 14,
+      "weeds": 9,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 34,
+      "crop_mix": {
+        "STRAWBERRY": 9,
+        "WHEAT": 9
+      },
+      "crop_by_quadrant": {
+        "Q0": {
+          "WHEAT": 4
+        },
+        "Q1": {
+          "WHEAT": 5
+        },
+        "Q2": {
+          "STRAWBERRY": 9
+        }
+      },
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 29,
+      "observation_day": 28,
+      "step": 695,
+      "money": 111151.0,
+      "hands": 8,
+      "worker_slots": 9,
+      "quadrants": "NW NE SW",
+      "crops": 0,
+      "unwatered": 0,
+      "water_stressed": 0,
+      "harvest_ready": 0,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 61,
+      "crop_mix": {},
+      "crop_by_quadrant": {},
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 30,
+      "observation_day": 29,
+      "step": 719,
+      "money": 117077.0,
+      "hands": 2,
+      "worker_slots": 3,
+      "quadrants": "NW NE SW",
+      "crops": 0,
+      "unwatered": 0,
+      "water_stressed": 0,
+      "harvest_ready": 0,
+      "weeds": 0,
+      "pastures": 14,
+      "animals": 14,
+      "empty": 61,
+      "crop_mix": {},
+      "crop_by_quadrant": {},
+      "pasture_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      },
+      "animals_by_quadrant": {
+        "Q0": 7,
+        "Q1": 7
+      }
+    }
+  ],
+  "action_rows": [
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 1,
+      "plant": 19,
+      "water": 18,
+      "harvest": 0,
+      "dig": 0,
+      "move": 39,
+      "pass": 18,
+      "other_productive": 18,
+      "unit_actions": 112
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 2,
+      "plant": 0,
+      "water": 11,
+      "harvest": 0,
+      "dig": 0,
+      "move": 32,
+      "pass": 16,
+      "other_productive": 13,
+      "unit_actions": 72
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 3,
+      "plant": 0,
+      "water": 13,
+      "harvest": 0,
+      "dig": 0,
+      "move": 31,
+      "pass": 12,
+      "other_productive": 14,
+      "unit_actions": 70
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 4,
+      "plant": 4,
+      "water": 16,
+      "harvest": 4,
+      "dig": 0,
+      "move": 46,
+      "pass": 7,
+      "other_productive": 15,
+      "unit_actions": 92
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 5,
+      "plant": 3,
+      "water": 13,
+      "harvest": 3,
+      "dig": 0,
+      "move": 34,
+      "pass": 14,
+      "other_productive": 26,
+      "unit_actions": 93
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 6,
+      "plant": 2,
+      "water": 9,
+      "harvest": 0,
+      "dig": 2,
+      "move": 34,
+      "pass": 22,
+      "other_productive": 24,
+      "unit_actions": 93
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 7,
+      "plant": 5,
+      "water": 22,
+      "harvest": 2,
+      "dig": 0,
+      "move": 57,
+      "pass": 175,
+      "other_productive": 26,
+      "unit_actions": 287
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 8,
+      "plant": 8,
+      "water": 29,
+      "harvest": 3,
+      "dig": 0,
+      "move": 55,
+      "pass": 30,
+      "other_productive": 21,
+      "unit_actions": 146
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 9,
+      "plant": 7,
+      "water": 27,
+      "harvest": 4,
+      "dig": 0,
+      "move": 70,
+      "pass": 7,
+      "other_productive": 24,
+      "unit_actions": 139
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 10,
+      "plant": 3,
+      "water": 25,
+      "harvest": 2,
+      "dig": 0,
+      "move": 65,
+      "pass": 5,
+      "other_productive": 61,
+      "unit_actions": 161
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 11,
+      "plant": 11,
+      "water": 37,
+      "harvest": 2,
+      "dig": 0,
+      "move": 95,
+      "pass": 16,
+      "other_productive": 45,
+      "unit_actions": 206
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 12,
+      "plant": 17,
+      "water": 50,
+      "harvest": 3,
+      "dig": 0,
+      "move": 109,
+      "pass": 27,
+      "other_productive": 46,
+      "unit_actions": 252
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 13,
+      "plant": 2,
+      "water": 39,
+      "harvest": 20,
+      "dig": 0,
+      "move": 133,
+      "pass": 48,
+      "other_productive": 54,
+      "unit_actions": 296
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 14,
+      "plant": 6,
+      "water": 36,
+      "harvest": 1,
+      "dig": 0,
+      "move": 89,
+      "pass": 20,
+      "other_productive": 60,
+      "unit_actions": 212
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 15,
+      "plant": 8,
+      "water": 41,
+      "harvest": 6,
+      "dig": 0,
+      "move": 105,
+      "pass": 14,
+      "other_productive": 56,
+      "unit_actions": 230
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 16,
+      "plant": 7,
+      "water": 51,
+      "harvest": 12,
+      "dig": 0,
+      "move": 103,
+      "pass": 69,
+      "other_productive": 53,
+      "unit_actions": 295
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 17,
+      "plant": 2,
+      "water": 42,
+      "harvest": 10,
+      "dig": 0,
+      "move": 102,
+      "pass": 88,
+      "other_productive": 54,
+      "unit_actions": 298
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 18,
+      "plant": 6,
+      "water": 54,
+      "harvest": 17,
+      "dig": 0,
+      "move": 137,
+      "pass": 45,
+      "other_productive": 39,
+      "unit_actions": 298
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 19,
+      "plant": 8,
+      "water": 54,
+      "harvest": 24,
+      "dig": 0,
+      "move": 151,
+      "pass": 31,
+      "other_productive": 30,
+      "unit_actions": 298
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 20,
+      "plant": 7,
+      "water": 50,
+      "harvest": 22,
+      "dig": 0,
+      "move": 146,
+      "pass": 40,
+      "other_productive": 33,
+      "unit_actions": 298
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 21,
+      "plant": 5,
+      "water": 50,
+      "harvest": 12,
+      "dig": 3,
+      "move": 118,
+      "pass": 85,
+      "other_productive": 25,
+      "unit_actions": 298
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 22,
+      "plant": 9,
+      "water": 48,
+      "harvest": 19,
+      "dig": 3,
+      "move": 139,
+      "pass": 43,
+      "other_productive": 37,
+      "unit_actions": 298
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 23,
+      "plant": 11,
+      "water": 51,
+      "harvest": 23,
+      "dig": 3,
+      "move": 168,
+      "pass": 20,
+      "other_productive": 22,
+      "unit_actions": 298
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 24,
+      "plant": 10,
+      "water": 56,
+      "harvest": 25,
+      "dig": 3,
+      "move": 156,
+      "pass": 13,
+      "other_productive": 35,
+      "unit_actions": 298
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 25,
+      "plant": 9,
+      "water": 48,
+      "harvest": 23,
+      "dig": 4,
+      "move": 138,
+      "pass": 46,
+      "other_productive": 30,
+      "unit_actions": 298
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 26,
+      "plant": 0,
+      "water": 44,
+      "harvest": 17,
+      "dig": 0,
+      "move": 130,
+      "pass": 23,
+      "other_productive": 42,
+      "unit_actions": 256
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 27,
+      "plant": 0,
+      "water": 45,
+      "harvest": 21,
+      "dig": 1,
+      "move": 146,
+      "pass": 19,
+      "other_productive": 43,
+      "unit_actions": 275
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 28,
+      "plant": 0,
+      "water": 23,
+      "harvest": 19,
+      "dig": 3,
+      "move": 93,
+      "pass": 32,
+      "other_productive": 41,
+      "unit_actions": 211
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 29,
+      "plant": 0,
+      "water": 10,
+      "harvest": 14,
+      "dig": 18,
+      "move": 108,
+      "pass": 21,
+      "other_productive": 37,
+      "unit_actions": 208
+    },
+    {
+      "player_index": 0,
+      "player": "CODEX E18.18 GATE 0B",
+      "display_day": 30,
+      "plant": 0,
+      "water": 0,
+      "harvest": 9,
+      "dig": 0,
+      "move": 23,
+      "pass": 8,
+      "other_productive": 36,
+      "unit_actions": 76
+    }
+  ],
+  "blocking_note": null,
+  "determinism": {
+    "passed": true,
+    "first": {
+      "plan_sha256": "844113c8971ccf3840758cd9d35449e01bc766a1d4b890c7fd8ab29c177410a1",
+      "action_stream_sha256": "10053E5155E7892FD3626EDBEA9D4F15218F47DD7DC8F1BC828C37E926D96641",
+      "final_reward": 117077.0,
+      "final": {
+        "money": 117077.0,
+        "hands": 2,
+        "unlocked": [
+          "NW",
+          "NE",
+          "SW"
+        ],
+        "crops": {},
+        "animals": {
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "topology": {
+          "Q0": 7,
+          "Q1": 7
+        },
+        "shed_units": 0
+      },
+      "snapshots": {
+        "D01": {
+          "money": 57.0,
+          "hands": 4,
+          "unlocked": [
+            "NW"
+          ],
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2
+          },
+          "topology": {
+            "Q0": 4
+          },
+          "shed_units": 0
+        },
+        "D05": {
+          "money": 39.0,
+          "hands": 3,
+          "unlocked": [
+            "NW"
+          ],
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "topology": {
+            "Q0": 6
+          },
+          "shed_units": 1
+        },
+        "D10": {
+          "money": 1947.0,
+          "hands": 6,
+          "unlocked": [
+            "NW",
+            "NE"
+          ],
+          "crops": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4
+          },
+          "topology": {
+            "Q0": 6,
+            "Q1": 7
+          },
+          "shed_units": 6
+        },
+        "D15": {
+          "money": 20253.0,
+          "hands": 9,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 27
+        },
+        "D20": {
+          "money": 54455.0,
+          "hands": 12,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 14
+        },
+        "D25": {
+          "money": 84587.0,
+          "hands": 12,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {
+            "STRAWBERRY": 22,
+            "WHEAT": 39
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 20
+        },
+        "D30": {
+          "money": 117077.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        }
+      },
+      "transition_counts": {
+        "dug_up_crop": 18,
+        "expired_to_weed": 22,
+        "harvested": 129
+      }
+    },
+    "confirmation": {
+      "plan_sha256": "844113c8971ccf3840758cd9d35449e01bc766a1d4b890c7fd8ab29c177410a1",
+      "action_stream_sha256": "10053E5155E7892FD3626EDBEA9D4F15218F47DD7DC8F1BC828C37E926D96641",
+      "final_reward": 117077.0,
+      "final": {
+        "money": 117077.0,
+        "hands": 2,
+        "unlocked": [
+          "NW",
+          "NE",
+          "SW"
+        ],
+        "crops": {},
+        "animals": {
+          "COW": 9,
+          "SHEEP": 5
+        },
+        "topology": {
+          "Q0": 7,
+          "Q1": 7
+        },
+        "shed_units": 0
+      },
+      "snapshots": {
+        "D01": {
+          "money": 57.0,
+          "hands": 4,
+          "unlocked": [
+            "NW"
+          ],
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "animals": {
+            "COW": 2,
+            "SHEEP": 2
+          },
+          "topology": {
+            "Q0": 4
+          },
+          "shed_units": 0
+        },
+        "D05": {
+          "money": 39.0,
+          "hands": 3,
+          "unlocked": [
+            "NW"
+          ],
+          "crops": {
+            "MELON": 12,
+            "WHEAT": 7
+          },
+          "animals": {
+            "COW": 4,
+            "SHEEP": 2
+          },
+          "topology": {
+            "Q0": 6
+          },
+          "shed_units": 1
+        },
+        "D10": {
+          "money": 1947.0,
+          "hands": 6,
+          "unlocked": [
+            "NW",
+            "NE"
+          ],
+          "crops": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4
+          },
+          "topology": {
+            "Q0": 6,
+            "Q1": 7
+          },
+          "shed_units": 6
+        },
+        "D15": {
+          "money": 20253.0,
+          "hands": 9,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 27
+        },
+        "D20": {
+          "money": 54455.0,
+          "hands": 12,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {
+            "STRAWBERRY": 38,
+            "WHEAT": 23
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 14
+        },
+        "D25": {
+          "money": 84587.0,
+          "hands": 12,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {
+            "STRAWBERRY": 22,
+            "WHEAT": 39
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 20
+        },
+        "D30": {
+          "money": 117077.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        }
+      },
+      "transition_counts": {
+        "dug_up_crop": 18,
+        "expired_to_weed": 22,
+        "harvested": 129
+      }
+    }
+  }
+}

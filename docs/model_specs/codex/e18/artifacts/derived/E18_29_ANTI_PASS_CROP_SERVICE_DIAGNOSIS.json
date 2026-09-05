@@ -1,0 +1,143 @@
+{
+  "complete": true,
+  "matches": [
+    {
+      "variant": "PARENT",
+      "seed": 180903001,
+      "seat": 0,
+      "reward": 77898.0,
+      "refresh_calls": 58,
+      "crop_deaths": []
+    },
+    {
+      "variant": "B",
+      "seed": 180903001,
+      "seat": 0,
+      "reward": 85213.0,
+      "refresh_calls": 58,
+      "crop_deaths": [
+        {
+          "service_day": 21,
+          "displayed_after_day": 22,
+          "position": [
+            2,
+            2
+          ],
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 20,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 600,
+            "fertilized_until_day": -1
+          },
+          "water_starvation": true,
+          "planned_on_tile": [
+            {
+              "step": 461,
+              "day": 20,
+              "turn": 6,
+              "worker": 0,
+              "opcode": "WATER",
+              "arguments": {},
+              "position": [
+                2,
+                2
+              ]
+            },
+            {
+              "step": 462,
+              "day": 20,
+              "turn": 7,
+              "worker": 0,
+              "opcode": "HARVEST",
+              "arguments": {
+                "crop": "STRAWBERRY",
+                "expected_units": 2
+              },
+              "position": [
+                2,
+                2
+              ]
+            },
+            {
+              "step": 500,
+              "day": 21,
+              "turn": 21,
+              "worker": 11,
+              "opcode": "DIG",
+              "arguments": {},
+              "position": [
+                2,
+                2
+              ]
+            },
+            {
+              "step": 501,
+              "day": 21,
+              "turn": 22,
+              "worker": 11,
+              "opcode": "PLANT",
+              "arguments": {
+                "crop": "WHEAT"
+              },
+              "position": [
+                2,
+                2
+              ]
+            },
+            {
+              "step": 502,
+              "day": 21,
+              "turn": 23,
+              "worker": 11,
+              "opcode": "WATER",
+              "arguments": {},
+              "position": [
+                2,
+                2
+              ]
+            }
+          ],
+          "requested_on_tile": [
+            {
+              "day": 20,
+              "turn": 6,
+              "worker": 0,
+              "command": [
+                "WATER"
+              ]
+            },
+            {
+              "day": 20,
+              "turn": 7,
+              "worker": 0,
+              "command": [
+                "HARVEST"
+              ]
+            },
+            {
+              "day": 21,
+              "turn": 23,
+              "worker": 11,
+              "command": [
+                "DIG"
+              ]
+            },
+            {
+              "day": 21,
+              "turn": 24,
+              "worker": 11,
+              "command": [
+                "PLANT",
+                "WHEAT"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

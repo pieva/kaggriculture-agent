@@ -97,7 +97,7 @@ I test di reattività verificano che:
 
 - source: `src/agricola/strategy/codex/codex_e17_reactive_guarded.py`;
 - config: `docs/model_specs/codex/e17/configs/CODEX_E17_1_3Q_REACTIVE_GUARDED_V1.json`;
-- MODEL_SPEC: `docs/model_specs/codex/MODEL_SPEC_CODEX_E17_1_3Q_REACTIVE_GUARDED.md`;
+- MODEL_SPEC: `docs/model_specs/codex/e17/MODEL_SPEC_CODEX_E17_1_3Q_REACTIVE_GUARDED.md`;
 - test: `docs/model_specs/codex/e17/tests/test_codex_e17_1_reactive.py`;
 - runner: `docs/model_specs/codex/e17/tools/run_codex_e17_1_development.py`;
 - metrics: `docs/model_specs/codex/e17/artifacts/derived/E17_1_DEVELOPMENT_METRICS.json`;

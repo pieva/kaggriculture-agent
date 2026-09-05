@@ -1,0 +1,246 @@
+{
+  "schema_version": 1,
+  "analysis_id": "JESSE_BULLARD_REPLAY_105717134_D01_D20_2026_09_05",
+  "observed_at": "2026-09-05",
+  "provenance": {
+    "source": "Kaggle episode visualizer inspected in the authenticated in-app browser",
+    "replay_url": "https://www.kaggle.com/competitions/kaggriculture/leaderboard?submissionId=55994794&episodeId=105717134",
+    "submission_id": 55994794,
+    "episode_id": 105717134,
+    "episode_seed": 1386178497,
+    "player": "Jesse Bullard",
+    "player_index": 1,
+    "opponent": "keiz",
+    "displayed_outcome": "LOSS",
+    "displayed_rating": 2995,
+    "displayed_rating_delta": -4,
+    "rating_note": "The 2995 label is a leaderboard rating, not the farm's economic score."
+  },
+  "methodology": {
+    "checkpoint_definition": "End of day, turn 24/24, at visualizer slider values 23, 119, 239, 359 and 479.",
+    "farm_selection": "Second .farm-grid in the visualizer DOM, corresponding to player 2 / Jesse Bullard.",
+    "cell_normalization": "Each of the 100 board cells was normalized from visible img alt/title attributes and badge text. The 75-cell target consists of Q0, Q1 and Q2; Q3 remains locked.",
+    "quadrants": {
+      "Q0": "rows 0-4, columns 0-4",
+      "Q1": "rows 0-4, columns 5-9",
+      "Q2": "rows 5-9, columns 0-4",
+      "Q3": "rows 5-9, columns 5-9"
+    },
+    "epistemic_status": {
+      "checkpoint_and_tile_fields": "OBSERVED_UI_NORMALIZED",
+      "counts_and_deltas": "DERIVED_FROM_OBSERVED_UI",
+      "strategic_interpretation": "HYPOTHESIS_NOT_CAUSAL"
+    },
+    "caveats": [
+      "Farmhand counts are units visible on the farm grid at the checkpoint; units in town or elsewhere are not visible and must not be treated as absent from ownership.",
+      "The soil.watered/dry counts include livestock structure cells. Unwatered crop tiles are derived separately by counting dry crop cells.",
+      "Crop stage labels are visualizer observations and are not equated to the historical parser field named harvest_ready.",
+      "This replay is not an exact 7-7-0 comparator at D15-D20 and must not replace the homogeneous historical 7-7-0 cohort."
+    ]
+  },
+  "tile_code_legend": {
+    "XX": "locked cell",
+    "Ew/Ed": "empty unlocked watered/dry cell",
+    "W/S/M/C/T": "Wheat/Strawberry/Melon/Carrot/Tomato",
+    "s/m/r": "sprout/midgrowth/ready",
+    "w/d": "watered/dry",
+    "f": "fertilized",
+    "#n": "visible yield badge",
+    "P:C/P:S/P:-": "pasture with Cow/Sheep/empty",
+    "K:G/K:-": "coop with Goose/empty",
+    "@Hn/@F": "Farmhand n / Farmer 2 visible on the cell"
+  },
+  "current_replay_checkpoints": {
+    "D01": {
+      "money": 74,
+      "unlocked_cells": 25,
+      "locked_cells": 75,
+      "crop_tiles": 19,
+      "crops": {"WHEAT": 7, "STRAWBERRY": 0, "MELON": 12, "CARROT": 0, "TOMATO": 0},
+      "crop_stages": {"sprout": 19, "midgrowth": 0, "ready": 0, "fertilized": 0},
+      "crop_water": {"watered": 19, "dry": 0},
+      "livestock_structures": {"pasture": 4, "coop": 0, "total": 4, "by_quadrant": {"Q0": 4, "Q1": 0, "Q2": 0}},
+      "animals": {"COW": 2, "SHEEP": 2, "GOOSE": 0, "total": 4},
+      "agents_visible_on_farm": {"farmhands": [1, 2, 3, 4, 5], "farmer": true, "total": 6},
+      "grid": [
+        "Wsw|Wsw|Wsw@H3|Msw|Msw@H2|XX|XX|XX|XX|XX",
+        "Wsw|Wsw@H4|Msw|Msw|Msw|XX|XX|XX|XX|XX",
+        "Wsw@H1|Msw|Msw|Msw|Ed|XX|XX|XX|XX|XX",
+        "Wsw|Msw@H5|Msw@F|P:S|P:C|XX|XX|XX|XX|XX",
+        "Msw|Msw|Ed|P:S|P:C|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX"
+      ]
+    },
+    "D05": {
+      "money": 890,
+      "unlocked_cells": 25,
+      "locked_cells": 75,
+      "crop_tiles": 19,
+      "crops": {"WHEAT": 7, "STRAWBERRY": 0, "MELON": 12, "CARROT": 0, "TOMATO": 0},
+      "crop_stages": {"sprout": 15, "midgrowth": 4, "ready": 0, "fertilized": 0},
+      "crop_water": {"watered": 7, "dry": 12},
+      "livestock_structures": {"pasture": 6, "coop": 0, "total": 6, "by_quadrant": {"Q0": 6, "Q1": 0, "Q2": 0}},
+      "animals": {"COW": 4, "SHEEP": 2, "GOOSE": 0, "total": 6},
+      "agents_visible_on_farm": {"farmhands": [1, 3, 4], "farmer": false, "total": 3},
+      "grid": [
+        "Wsw|Wsw|Wmw|Msd|Msd|XX|XX|XX|XX|XX",
+        "Wsw|Wmd|Msd|Msd|Msw|XX|XX|XX|XX|XX",
+        "Wmd|Msd|Msd|Msw|P:C|XX|XX|XX|XX|XX",
+        "Wmw@H4|Msd|Msd|P:S|P:C|XX|XX|XX|XX|XX",
+        "Msd|Msd@H1|P:C|P:S|P:C@H3|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX"
+      ]
+    },
+    "D10": {
+      "money": 3233,
+      "unlocked_cells": 50,
+      "locked_cells": 50,
+      "crop_tiles": 37,
+      "crops": {"WHEAT": 5, "STRAWBERRY": 20, "MELON": 12, "CARROT": 0, "TOMATO": 0},
+      "crop_stages": {"sprout": 24, "midgrowth": 13, "ready": 0, "fertilized": 0},
+      "crop_water": {"watered": 34, "dry": 3},
+      "livestock_structures": {"pasture": 9, "coop": 4, "total": 13, "by_quadrant": {"Q0": 6, "Q1": 7, "Q2": 0}},
+      "animals": {"COW": 5, "SHEEP": 4, "GOOSE": 4, "total": 13},
+      "agents_visible_on_farm": {"farmhands": [1, 3, 4, 5, 6, 7, 8, 9], "farmer": true, "total": 9},
+      "grid": [
+        "Wsw@H3|Ssw|Ssw|Mmw|Mmw|Ssw|Ssw|Ssw@H7|Wmd|Wsw",
+        "Wsw|Ssw|Mmw|Mmw|Mmw|Ssw|Ssd@H4|Ssw|Ssw|Wsw",
+        "Ssw|Mmw|Mmw|Mmw|P:C|K:G|P:S@H1|Ssw|Ssw|Ssw@H6",
+        "Ssw|Mmw|Mmw|P:S|P:C|K:G|P:C|Ssw@H9|Ssw|Ssw",
+        "Mmw@H8|Mmw|P:C|P:S|P:C|K:G@H5|K:G|P:S|Ssw|Ssd@F",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX",
+        "XX|XX|XX|XX|XX|XX|XX|XX|XX|XX"
+      ]
+    },
+    "D15": {
+      "money": 19149,
+      "unlocked_cells": 75,
+      "locked_cells": 25,
+      "crop_tiles": 57,
+      "crops": {"WHEAT": 24, "STRAWBERRY": 33, "MELON": 0, "CARROT": 0, "TOMATO": 0},
+      "crop_stages": {"sprout": 20, "midgrowth": 26, "ready": 11, "fertilized": 4},
+      "crop_water": {"watered": 38, "dry": 19},
+      "livestock_structures": {"pasture": 13, "coop": 5, "total": 18, "by_quadrant": {"Q0": 11, "Q1": 7, "Q2": 0}},
+      "animals": {"COW": 5, "SHEEP": 8, "GOOSE": 4, "total": 17},
+      "empty_livestock_structures": 1,
+      "agents_visible_on_farm": {"farmhands": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10], "farmer": true, "total": 11},
+      "grid": [
+        "Wrw#2|Smd|Smwf|Wrw#2@H5|K:-|Smd|Smd|Smd|Wrw#2|Wrw#2",
+        "Wrd#1@F|Smwf|Wrw#2|Wmw|P:S|Smd|Smd|Smd|Smd|Wrw#2@H10",
+        "Smwf|Wmw|Wmw|P:S@H4|P:C|K:G|P:S|Smd|Smd|Smd",
+        "Smwf|Wmw|P:S|P:S|P:C|K:G|P:C@H1|Smd|Smd|Smd",
+        "Wmw@H6|P:S@H8|P:C|P:S|P:C|K:G|K:G|P:S|Smd|Smd",
+        "Wrw#3|Ssw|Ssw|Ssw|Ssw|XX|XX|XX|XX|XX",
+        "Wsw|Ssw|Ssw|Ssw|Ssw|XX|XX|XX|XX|XX",
+        "Wsw|Wsw|Ssw|Ssw@H3|Ssw|XX|XX|XX|XX|XX",
+        "Wmd@H9|Wsw|Wsw|Ssw|Ssw|XX|XX|XX|XX|XX",
+        "Wrd#1@H2|Wsw|Wsw|Wrw#3|Wrw#3@H7|XX|XX|XX|XX|XX"
+      ]
+    },
+    "D20": {
+      "money": 48939,
+      "unlocked_cells": 75,
+      "locked_cells": 25,
+      "crop_tiles": 58,
+      "crops": {"WHEAT": 25, "STRAWBERRY": 33, "MELON": 0, "CARROT": 0, "TOMATO": 0},
+      "crop_stages": {"sprout": 7, "midgrowth": 40, "ready": 11, "fertilized": 23},
+      "crop_water": {"watered": 31, "dry": 27},
+      "livestock_structures": {"pasture": 13, "coop": 4, "total": 17, "by_quadrant": {"Q0": 10, "Q1": 7, "Q2": 0}},
+      "animals": {"COW": 5, "SHEEP": 8, "GOOSE": 4, "total": 17},
+      "empty_livestock_structures": 0,
+      "agents_visible_on_farm": {"farmhands": [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "farmer": true, "total": 12},
+      "grid": [
+        "Wmd|Smd|Smwf|Wrd#2@H11|Wsw|Smwf|Smwf|Smwf|Wmd|Wsd@H12",
+        "Wsw|Smwf|Wrw#3|Wrw#3|P:S|Smwf|Smwf|Smwf|Smd|Wsw@H6",
+        "Smwf|Wrw#3|Wrw#2|P:S@H8|P:C|K:G|P:S|Smwf|Smwf|Smd",
+        "Smwf|Wrw#2|P:S|P:S|P:C|K:G|P:C@H9|Smwf|Smwf@F|Smwf",
+        "Wrd#1|P:S@H4|P:C|P:S|P:C@H1|K:G@H5|K:G|P:S@H3|Smwf|Smwf",
+        "Wsw|Smdf|Smdf|Smdf@H10|Smdf|XX|XX|XX|XX|XX",
+        "Wmd|Smd|Smd|Smd|Smdf|XX|XX|XX|XX|XX",
+        "Wrd#1@H7|Wmd|Smd|Smd|Smdf|XX|XX|XX|XX|XX",
+        "Wsw|Wrw#2|Wmd|Smd|Smd|XX|XX|XX|XX|XX",
+        "Wmd|Wrw#2|Wrw#2|Wmd|Wsw|XX|XX|XX|XX|XX"
+      ]
+    }
+  },
+  "historical_exact_770_reference": {
+    "source_artifact": "docs/model_specs/codex/e18/artifacts/derived/E18_18_770_COMPOSITION_COMPARISON_2026_09_04.json",
+    "selection": "Five Jesse Bullard replays conditioned on exact final 7-7-0 topology.",
+    "episode_ids": [105405557, 105384058, 105398563, 105391568, 105565293],
+    "stable_crop_checkpoints": {
+      "D01": {"MELON": 12, "WHEAT": 7},
+      "D05": {"MELON": 12, "WHEAT": 7},
+      "D10": {"MELON": 12, "STRAWBERRY": 20, "WHEAT": 5},
+      "D15": {"STRAWBERRY": 38, "WHEAT": 23},
+      "D20": {"STRAWBERRY": 38, "WHEAT": 23}
+    },
+    "stable_animal_checkpoints": {
+      "D01": {"COW": 2, "SHEEP": 2},
+      "D05": {"COW": 4, "SHEEP": 2},
+      "D10": {"COW": 9, "SHEEP": 4},
+      "D15": {"COW": 9, "SHEEP": 5},
+      "D20": {"COW": 9, "SHEEP": 5}
+    },
+    "worker_slots": {"D01": 6, "D05": 5, "D10": 12, "D15": 11, "D20": 13},
+    "money_by_episode": {
+      "D01": [75, 75, 74, 74, 74],
+      "D05": [901, 896, 891, 891, 891],
+      "D10": [3878, 4020, 3893, 3769, 3766],
+      "D15": [25489, 27177, 28071, 24065, 25090],
+      "D20": [45162, 44350, 61251, 42922, 43322]
+    },
+    "action_phases": {
+      "D01_D10": {"PLANT": 63, "WATER": 254, "HARVEST": 32, "DIG": 0, "MOVE": 790, "PASS": 221, "OTHER_PRODUCTIVE": 321, "PRODUCTIVE": 670, "UNIT_ACTIONS": 1681},
+      "D11_D20": {"PLANT": 90, "WATER": 464, "HARVEST": 150, "DIG": 5, "MOVE": 1329, "PASS": 171, "OTHER_PRODUCTIVE": 555, "PRODUCTIVE": 1264, "UNIT_ACTIONS": 2764}
+    }
+  },
+  "derived_comparison": {
+    "D10": {
+      "common_core": "Both current replay and exact-770 cohort have 12 MELON + 20 STRAWBERRY + 5 WHEAT and 13 occupied livestock slots.",
+      "divergence": "Current replay uses 5 COW + 4 SHEEP + 4 GOOSE in 9 pastures and 4 coops; exact-770 uses 9 COW + 4 SHEEP in 13 pastures.",
+      "money_current": 3233,
+      "money_exact_770_range": [3766, 4020]
+    },
+    "D15": {
+      "current": "57 crop tiles (33 S + 24 W), 18 livestock structures in an 11-7-0 slot layout, 17 animals and one empty coop.",
+      "exact_770": "61 crop tiles (38 S + 23 W), 14 pastures in a 7-7-0 layout and 14 animals.",
+      "land_accounting": "The four extra livestock structures exactly explain the four missing crop tiles.",
+      "money_current": 19149,
+      "money_exact_770_range": [24065, 28071]
+    },
+    "D20": {
+      "current": "58 crop tiles (33 S + 25 W), 17 livestock structures in a 10-7-0 slot layout and 17 animals.",
+      "exact_770": "61 crop tiles (38 S + 23 W), 14 pastures in a 7-7-0 layout and 14 animals.",
+      "reclaim": "The empty D15 coop at Q0 r0c4 is gone at D20 and the cell is Wheat: one livestock slot is reclaimed into one crop tile.",
+      "money_current": 48939,
+      "money_exact_770_range": [42922, 61251],
+      "money_exact_770_median": 44350,
+      "warning": "The current D20 money is inside the exact-770 range and above its median, but the different topology, species, seed, opponent and market prevent a causal claim."
+    },
+    "phase_money_growth": {
+      "current_D10_D15": 15916,
+      "exact_770_D10_D15_range": [20296, 24178],
+      "current_D15_D20": 29790,
+      "exact_770_D15_D20_range": [17173, 33180]
+    }
+  },
+  "strategic_conclusions": [
+    "Jesse's transferable opening is stable: 12 MELON + 7 WHEAT at D1/D5 and 12 MELON + 20 STRAWBERRY + 5 WHEAT at D10 are reproduced in both the exact-770 cohort and the current replay.",
+    "All 12 MELON disappear before D15 in both strategy families; the next Codex transition must therefore preserve the D10 opening and explicitly schedule full Melon retirement by D15.",
+    "The current replay is a 10-7-0 livestock-slot variant by D20, not evidence that the Codex 7-7-0 lock should change.",
+    "At D15 the current strategy temporarily carries one empty coop and reclaims it into Wheat by D20. This supports a state-driven empty-structure reclaim rule, not a blanket coop policy for Codex.",
+    "The exact-770 normative D15-D20 capacity remains 61 crops with 38 STRAWBERRY + 23 WHEAT and 14 animals. The current 33/24-25 crop mix is conditional on three extra animal slots and geese.",
+    "Current D15-D20 cash acceleration is economically interesting but confounded. It should motivate a separate future topology/species ablation only after the 7-7-0 performance gap has been reduced, not be folded into the next release."
+  ]
+}

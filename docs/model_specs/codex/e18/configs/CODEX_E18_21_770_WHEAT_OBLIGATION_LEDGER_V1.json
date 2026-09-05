@@ -1,0 +1,29 @@
+{
+  "candidate_id": "CODEX_E18_21_770_WHEAT_OBLIGATION_LEDGER_V1",
+  "schema_version": "e18.codex.770_wheat_obligation_ledger.v1",
+  "model_spec_version": "CODEX-E18.21-770-WHEAT-OBLIGATION-LEDGER-V1",
+  "epistemic_role": "DEVELOPMENT_COMPONENT_ABLATION_AND_PRE_GATE",
+  "base_policy": "CODEX_E18_20_770_WHEAT_MARKET_NETTING_V1",
+  "parent_plan_sha256": "844113c8971ccf3840758cd9d35449e01bc766a1d4b890c7fd8ab29c177410a1",
+  "causal_family": "WHEAT_INFLIGHT_PICKUP_SALE_GUARD",
+  "activation_day": 11,
+  "selected_variant": "INFLIGHT_ONLY",
+  "protect_inflight_pickups": true,
+  "protect_procurement_contracts": false,
+  "rejected_pre_gate_variants": [
+    "CONTRACTS_ONLY",
+    "INFLIGHT_AND_CONTRACTS"
+  ],
+  "topology": "7-7-0",
+  "pasture_fill_target": 14,
+  "livestock_resource_cap": 14,
+  "livestock_mix": {"COW": 9, "SHEEP": 5},
+  "workers_peak_hands": 12,
+  "route_mutation": false,
+  "crop_plan_mutation": false,
+  "animal_plan_mutation": false,
+  "full_gate_1_authorized": false,
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "kaggle_upload_authorized": false
+}

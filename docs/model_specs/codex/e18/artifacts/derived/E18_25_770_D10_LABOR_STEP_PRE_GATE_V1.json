@@ -1,0 +1,536 @@
+{
+  "schema_version": "e18.codex.770_d10_labor_step_pre_gate.v1",
+  "candidate": "CODEX_E18_25_770_D10_LABOR_STEP_V1",
+  "parent": "CODEX_E18_22_770_WHEAT_JIT_D1_V1",
+  "incumbent": "CODEX_E18_16_770_EXACT_CAP_CRITICAL_FEED_V1",
+  "seed": 180903001,
+  "seats": [
+    0,
+    1
+  ],
+  "epistemic_role": "DEVELOPMENT_PRE_GATE_ABLATION",
+  "parent_plan_sha256": "844113c8971ccf3840758cd9d35449e01bc766a1d4b890c7fd8ab29c177410a1",
+  "candidate_plan_sha256": "ffa39984acd4d506db39856d5269e3e8e1af909ddf2a4324a9d16955d834a786",
+  "d10_plan": {
+    "parent_planned_hands": 6,
+    "candidate_planned_hands": 11,
+    "parent_active_units": 7,
+    "candidate_active_units": 12,
+    "parent_available_action_slots": 161,
+    "candidate_available_action_slots": 275,
+    "planned_action_slots": 150,
+    "action_counts": {
+      "BUILD_PASTURE": 7,
+      "CARE": 13,
+      "COLLECT_FERTILIZER": 6,
+      "DROP": 2,
+      "EAST": 18,
+      "FEED": 13,
+      "FERTILIZE": 3,
+      "HARVEST": 2,
+      "NORTH": 20,
+      "PICKUP": 9,
+      "PLACE": 7,
+      "PLANT": 3,
+      "SOUTH": 8,
+      "WATER": 26,
+      "WEST": 13
+    }
+  },
+  "competitive_parent_comparison": {
+    "candidate_median": 82349.0,
+    "opponent_median": 67524.0,
+    "median_margin": 14825.0,
+    "matches": [
+      {
+        "opponent": "E18.22",
+        "candidate_seat": 0,
+        "candidate_reward": 82434.0,
+        "opponent_reward": 67439.0,
+        "margin": 14995.0,
+        "candidate_d10": {
+          "money": 1583.0,
+          "hands": 11,
+          "unlocked": [
+            "NW",
+            "NE"
+          ],
+          "crops": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4
+          },
+          "topology": {
+            "Q0": 6,
+            "Q1": 7
+          },
+          "shed_units": 6
+        },
+        "opponent_d10": {
+          "money": 1660.0,
+          "hands": 6,
+          "unlocked": [
+            "NW",
+            "NE"
+          ],
+          "crops": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4
+          },
+          "topology": {
+            "Q0": 6,
+            "Q1": 7
+          },
+          "shed_units": 6
+        },
+        "candidate_final": {
+          "money": 82434.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "opponent_final": {
+          "money": 67439.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 7,
+            "SHEEP": 4
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 1
+        },
+        "candidate_requested_actions": {
+          "BUILD_PASTURE": 14,
+          "CARE": 252,
+          "COLLECT_FERTILIZER": 115,
+          "DIG": 32,
+          "DROP": 136,
+          "EAST": 694,
+          "FEED": 324,
+          "FERTILIZE": 33,
+          "HARVEST": 285,
+          "NORTH": 753,
+          "PASS": 1324,
+          "PICKUP": 124,
+          "PLACE": 14,
+          "PLANT": 159,
+          "SOUTH": 564,
+          "WATER": 911,
+          "WEST": 821
+        },
+        "candidate_unfinished_actions": 26,
+        "opponent_unfinished_actions": 214,
+        "candidate_errors": 0,
+        "opponent_errors": 0
+      },
+      {
+        "opponent": "E18.22",
+        "candidate_seat": 1,
+        "candidate_reward": 82264.0,
+        "opponent_reward": 67609.0,
+        "margin": 14655.0,
+        "candidate_d10": {
+          "money": 1583.0,
+          "hands": 11,
+          "unlocked": [
+            "NW",
+            "NE"
+          ],
+          "crops": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4
+          },
+          "topology": {
+            "Q0": 6,
+            "Q1": 7
+          },
+          "shed_units": 6
+        },
+        "opponent_d10": {
+          "money": 1660.0,
+          "hands": 6,
+          "unlocked": [
+            "NW",
+            "NE"
+          ],
+          "crops": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4
+          },
+          "topology": {
+            "Q0": 6,
+            "Q1": 7
+          },
+          "shed_units": 6
+        },
+        "candidate_final": {
+          "money": 82264.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "opponent_final": {
+          "money": 67609.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 7,
+            "SHEEP": 4
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 1
+        },
+        "candidate_requested_actions": {
+          "BUILD_PASTURE": 14,
+          "CARE": 252,
+          "COLLECT_FERTILIZER": 115,
+          "DIG": 35,
+          "DROP": 135,
+          "EAST": 694,
+          "FEED": 324,
+          "FERTILIZE": 33,
+          "HARVEST": 284,
+          "NORTH": 753,
+          "PASS": 1327,
+          "PICKUP": 124,
+          "PLACE": 14,
+          "PLANT": 159,
+          "SOUTH": 564,
+          "WATER": 907,
+          "WEST": 821
+        },
+        "candidate_unfinished_actions": 28,
+        "opponent_unfinished_actions": 211,
+        "candidate_errors": 0,
+        "opponent_errors": 0
+      }
+    ]
+  },
+  "matched_parent_baseline": {
+    "source": "docs\\model_specs\\codex\\e18\\artifacts\\derived\\E18_22_770_WHEAT_JIT_D1_PRE_GATE_V1.json",
+    "parent_candidate_median": 52041.5,
+    "candidate_median": 52225.5,
+    "median_delta": 184.0,
+    "delta_by_seat": {
+      "0": 184.0,
+      "1": 184.0
+    }
+  },
+  "incumbent_comparison": {
+    "candidate_median": 52225.5,
+    "opponent_median": 78959.5,
+    "median_margin": -26734.0,
+    "matches": [
+      {
+        "opponent": "E18.16",
+        "candidate_seat": 0,
+        "candidate_reward": 52563.0,
+        "opponent_reward": 79755.0,
+        "margin": -27192.0,
+        "candidate_d10": {
+          "money": 1337.0,
+          "hands": 11,
+          "unlocked": [
+            "NW",
+            "NE"
+          ],
+          "crops": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4
+          },
+          "topology": {
+            "Q0": 6,
+            "Q1": 7
+          },
+          "shed_units": 6
+        },
+        "opponent_d10": {
+          "money": 2105.0,
+          "hands": 11,
+          "unlocked": [
+            "NW",
+            "NE"
+          ],
+          "crops": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "animals": {
+            "COW": 8,
+            "SHEEP": 4
+          },
+          "topology": {
+            "Q0": 6,
+            "Q1": 7
+          },
+          "shed_units": 46
+        },
+        "candidate_final": {
+          "money": 52563.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "opponent_final": {
+          "money": 79755.0,
+          "hands": 10,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {
+            "STRAWBERRY": 14
+          },
+          "animals": {
+            "COW": 8,
+            "GOOSE": 1,
+            "SHEEP": 6
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "candidate_requested_actions": {
+          "BUILD_PASTURE": 14,
+          "CARE": 252,
+          "COLLECT_FERTILIZER": 115,
+          "DIG": 31,
+          "DROP": 135,
+          "EAST": 694,
+          "FEED": 321,
+          "FERTILIZE": 34,
+          "HARVEST": 288,
+          "NORTH": 756,
+          "PASS": 1325,
+          "PICKUP": 126,
+          "PLACE": 14,
+          "PLANT": 158,
+          "SOUTH": 570,
+          "WATER": 918,
+          "WEST": 826
+        },
+        "candidate_unfinished_actions": 8,
+        "opponent_unfinished_actions": 0,
+        "candidate_errors": 0,
+        "opponent_errors": 0
+      },
+      {
+        "opponent": "E18.16",
+        "candidate_seat": 1,
+        "candidate_reward": 51888.0,
+        "opponent_reward": 78164.0,
+        "margin": -26276.0,
+        "candidate_d10": {
+          "money": 1337.0,
+          "hands": 11,
+          "unlocked": [
+            "NW",
+            "NE"
+          ],
+          "crops": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "animals": {
+            "COW": 9,
+            "SHEEP": 4
+          },
+          "topology": {
+            "Q0": 6,
+            "Q1": 7
+          },
+          "shed_units": 6
+        },
+        "opponent_d10": {
+          "money": 2105.0,
+          "hands": 11,
+          "unlocked": [
+            "NW",
+            "NE"
+          ],
+          "crops": {
+            "MELON": 12,
+            "STRAWBERRY": 20,
+            "WHEAT": 5
+          },
+          "animals": {
+            "COW": 8,
+            "SHEEP": 4
+          },
+          "topology": {
+            "Q0": 6,
+            "Q1": 7
+          },
+          "shed_units": 46
+        },
+        "candidate_final": {
+          "money": 51888.0,
+          "hands": 2,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {},
+          "animals": {
+            "COW": 9,
+            "SHEEP": 5
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "opponent_final": {
+          "money": 78164.0,
+          "hands": 10,
+          "unlocked": [
+            "NW",
+            "NE",
+            "SW"
+          ],
+          "crops": {
+            "STRAWBERRY": 14
+          },
+          "animals": {
+            "COW": 8,
+            "GOOSE": 1,
+            "SHEEP": 6
+          },
+          "topology": {
+            "Q0": 7,
+            "Q1": 7
+          },
+          "shed_units": 0
+        },
+        "candidate_requested_actions": {
+          "BUILD_PASTURE": 14,
+          "CARE": 252,
+          "COLLECT_FERTILIZER": 115,
+          "DIG": 32,
+          "DROP": 135,
+          "EAST": 694,
+          "FEED": 321,
+          "FERTILIZE": 34,
+          "HARVEST": 288,
+          "NORTH": 756,
+          "PASS": 1324,
+          "PICKUP": 126,
+          "PLACE": 14,
+          "PLANT": 158,
+          "SOUTH": 570,
+          "WATER": 918,
+          "WEST": 826
+        },
+        "candidate_unfinished_actions": 8,
+        "opponent_unfinished_actions": 0,
+        "candidate_errors": 0,
+        "opponent_errors": 0
+      }
+    ]
+  },
+  "causal_delta_passed": true,
+  "incumbent_gate_passed": false,
+  "checks": {
+    "zero_errors": true,
+    "plan_gate_0a_passed": true,
+    "d10_planned_active_units_12": true,
+    "d10_actual_hands_11": true,
+    "d10_productive_action_multiset_unchanged": true,
+    "biological_plan_unchanged": true,
+    "candidate_exact_770": true,
+    "candidate_exact_9_cow_5_sheep": true,
+    "matched_parent_delta_positive_both_seats": true,
+    "incumbent_delta_nonnegative_both_seats": false
+  },
+  "full_gate_1_authorized": false,
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "kaggle_upload_authorized": false
+}

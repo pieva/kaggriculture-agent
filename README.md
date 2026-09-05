@@ -108,7 +108,7 @@ Lo **stato corrente** della Foundation e gli hash dei tre documenti C2.1 sono ma
 
 Per un esempio concreto del passaggio Foundation → MODEL_SPEC → policy →
 submission → telemetria, vedere
-`docs/model_specs/codex/CODEX_V9_E17_RUNTIME_AND_FOUNDATION_MAPPING_IT.md`. La
+`docs/model_specs/codex/e17/CODEX_V9_E17_RUNTIME_AND_FOUNDATION_MAPPING_IT.md`. La
 guida distingue esplicitamente ciò che la Foundation definisce da ciò che la
 V9 consuma realmente nel decision path.
 

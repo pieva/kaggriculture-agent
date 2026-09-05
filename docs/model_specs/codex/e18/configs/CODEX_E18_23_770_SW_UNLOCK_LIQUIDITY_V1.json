@@ -1,0 +1,28 @@
+{
+  "candidate_id": "CODEX_E18_23_770_SW_UNLOCK_LIQUIDITY_V1",
+  "schema_version": "e18.codex.770_sw_unlock_liquidity.v1",
+  "model_spec_version": "CODEX-E18.23-770-SW-UNLOCK-LIQUIDITY-V1",
+  "epistemic_role": "REJECTED_DEVELOPMENT_PRE_GATE_ABLATION",
+  "base_policy": "CODEX_E18_22_770_WHEAT_JIT_D1_V1",
+  "parent_plan_sha256": "844113c8971ccf3840758cd9d35449e01bc766a1d4b890c7fd8ab29c177410a1",
+  "causal_family": "D10_WHEAT_JIT_FOR_SW_UNLOCK_LIQUIDITY",
+  "activation_day": 10,
+  "procurement_horizon_days": 1,
+  "protect_inflight_pickups": true,
+  "topology": "7-7-0",
+  "pasture_fill_target": 14,
+  "livestock_resource_cap": 14,
+  "livestock_mix": {
+    "COW": 9,
+    "SHEEP": 5
+  },
+  "workers_peak_hands": 12,
+  "route_mutation": false,
+  "crop_plan_mutation": false,
+  "animal_plan_mutation": false,
+  "causal_delta_passed": false,
+  "full_gate_1_authorized": false,
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "kaggle_upload_authorized": false
+}

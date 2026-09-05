@@ -21,11 +21,11 @@ Snapshot pubblico Kaggle del `2026-09-04T10:21:06+02:00`:
 |---:|---|---|---:|
 | 1 | Crop Dusta | Rishi Gottumukkala | 3032,3 |
 | 2 | Giulio Ravasio | Giulio Ravasio | 2967,3 |
-| 3 | Jesse Bullard | Jesse Bullard | 2960,4 |
+| 3 | Top770 | Top770 | 2960,4 |
 
 Il corpus contiene undici replay recenti, tutti completi (`720` step,
-`DONE/DONE`): quattro Crop–Giulio, quattro Crop–Jesse e tre Giulio–Jesse. Ne
-derivano otto profili Crop Dusta, sette Giulio e sette Jesse, con entrambi i
+`DONE/DONE`): quattro Crop–Giulio, quattro Crop–Top770 e tre Giulio–Top770. Ne
+derivano otto profili Crop Dusta, sette Giulio e sette Top770, con entrambi i
 seat coperti per ogni player. I replay grezzi sono stati usati in una cache
 temporanea; nel repository restano soltanto artifact derivati e SHA-256.
 
@@ -40,7 +40,7 @@ money di un runner locale sono quantità diverse.
 |---|---:|---:|---:|---|---:|---:|---:|---:|---:|
 | Crop Dusta | 8 | 6-2 | 91.907,6 | variabile; moda `5-4-2` | 4.058,5 | 3.237,3 | 1,2569 | 917,4 | 226,6 |
 | Giulio Ravasio | 7 | 2-5 | 93.852,6 | `7-5-0` | 3.350,3 | 3.311,9 | 1,0118 | 886,6 | 265,1 |
-| Jesse Bullard | 7 | 3-4 | 91.013,9 | `7-7-0` | 3.405,4 | 3.377,0 | 1,0099 | 897,3 | 264,3 |
+| Top770 | 7 | 3-4 | 91.013,9 | `7-7-0` | 3.405,4 | 3.377,0 | 1,0099 | 897,3 | 264,3 |
 | Codex E18.5 6-6-2 | 14 dev | 0-14 | 49.179,4 | `6-6-2` fissa | 4.451,9 | 2.223,1 | 2,0026 | 513,1 | 115,3 |
 
 Il record W-L degli undici replay non ricostruisce la classifica: il rating
@@ -54,7 +54,7 @@ Rispetto a E18.5:
   `37,2%` e il raccolto per 1.000 move sale del `96,6%`;
 - Giulio esegue `-24,7%` move e `+49,0%` produttive; il rapporto scende del
   `49,5%` e il raccolto per 1.000 move sale del `130,0%`;
-- Jesse esegue `-23,5%` move e `+51,9%` produttive; il rapporto scende del
+- Top770 esegue `-23,5%` move e `+51,9%` produttive; il rapporto scende del
   `49,6%` e il raccolto per 1.000 move sale del `129,3%`.
 
 Questi delta sono descrittivi: i leader giocano live fra loro, E18.5 contro un
@@ -89,10 +89,10 @@ prodotti zootecnici. Raccoglie in media 917,4 unità: 525,9 Wheat, 204,6
 Strawberry, 77,9 Carrot, 69,5 Melon e 39,5 Tomato. Non risultano colture vive
 estirpate prima della fine (`0` rotazioni medie), mentre il rapporto fra late
 unwatered tile-days e late crop tile-days è `29,2%`, migliore del `38%` circa
-di Giulio e Jesse.
+di Giulio e Top770.
 
 Crop non è il leader delle move normalizzate: `1,2569` è peggiore di Giulio e
-Jesse. Compensa con espansione tre giorni più precoce, più superficie
+Top770. Compensa con espansione tre giorni più precoce, più superficie
 colturale già a D10 e riallocazione variabile del capitale fra pascoli e crop.
 Nella fase D21–D30 migliora a `1,1913`, con 1.338,8 azioni produttive medie.
 
@@ -108,7 +108,7 @@ capitale disponibile:
    rende conveniente;
 4. riduzione terminale sia dei crop sia di una parte degli animali;
 5. priorità alla crescita e al rendimento assoluto, accettando più percorrenza
-   di Giulio e Jesse.
+   di Giulio e Top770.
 
 Gli otto action shape unici dimostrano adattamento all'episodio, non
 adattamento causale all'identità dell'avversario. La variabilità può essere
@@ -163,18 +163,18 @@ La policy di Giulio sembra una macchina a fasi con routing molto locale:
 La ripetizione della stessa action shape in cinque partite suggerisce che gran
 parte dell'efficienza venga da un template robusto, non da re-planning globale
 continuo. Le variazioni di topologia possono essere esiti condizionati da
-capitale e contesa, non necessariamente quattro target espliciti. Jesse
+capitale e contesa, non necessariamente quattro target espliciti. Top770
 mostra un archetipo quasi identico e costituisce un controllo importante: la
 firma efficiente non è esclusiva di Giulio.
 
 Il campione non dimostra che `7-5-0` sia ottimale. Giulio è 1-3 contro Crop e
-1-2 contro Jesse nei replay selezionati, pur essendo secondo in leaderboard e
+1-2 contro Top770 nei replay selezionati, pur essendo secondo in leaderboard e
 avendo lo score medio più alto. La stabilità competitiva può dipendere dalla
 minor varianza su una popolazione di avversari molto più ampia.
 
-## Jesse Bullard — terzo comparatore
+## Top770 — terzo comparatore
 
-Jesse conferma il segnale di Giulio: zero pascoli Q2, `7-7-0` in quattro
+Top770 conferma il segnale di Giulio: zero pascoli Q2, `7-7-0` in quattro
 replay su sette, 14,86 animali medi, tre action shape con una shape ripetuta
 cinque volte, rapporto move/produttive `1,0099` e 264,3 raccolti per 1.000
 move. Produce leggermente più lavoro e raccolto di Giulio nel campione, ma con
@@ -191,7 +191,7 @@ manteneva un rapporto di circa due move per azione utile.
 
 I leader falsificano due letture troppo forti:
 
-- **“più compatto è sempre meglio”**: Giulio e Jesse sono compatti, ma Crop è
+- **“più compatto è sempre meglio”**: Giulio e Top770 sono compatti, ma Crop è
   primo con pasture Q2 in sei replay su otto e topologie fino a 19 pascoli;
 - **“la dispersione impone molte move”**: Crop mantiene una struttura più
   dispersa ma usa comunque 393 move in meno e produce 1.014 azioni utili in

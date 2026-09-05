@@ -1,0 +1,80 @@
+{
+  "candidate_id": "CODEX_E18_18_770_CAPACITY_TRAJECTORY_PLANNER_V1",
+  "schema_version": "e18.codex.770_capacity_trajectory_planner.v1",
+  "model_spec_version": "CODEX-E18.18-770-CAPACITY-TRAJECTORY-PLANNER-V1",
+  "epistemic_role": "DEVELOPMENT_GATE_0A_ONLY",
+  "topology": "7-7-0",
+  "pasture_targets": [
+    [3, 2], [4, 2], [3, 3], [4, 3], [2, 4], [3, 4], [4, 4],
+    [5, 2], [6, 2], [5, 3], [6, 3], [5, 4], [6, 4], [7, 4]
+  ],
+  "late_q0_pasture": [2, 4],
+  "late_q0_pasture_day": 14,
+  "pasture_fill_target": 14,
+  "livestock_resource_cap": 14,
+  "livestock_mix": {"COW": 9, "SHEEP": 5},
+  "crop_checkpoints": {
+    "D01": {"MELON": 12, "WHEAT": 7},
+    "D05": {"MELON": 12, "WHEAT": 7},
+    "D10": {"MELON": 12, "STRAWBERRY": 20, "WHEAT": 5},
+    "D15": {"STRAWBERRY": 38, "WHEAT": 23},
+    "D20": {"STRAWBERRY": 38, "WHEAT": 23},
+    "D25": {"STRAWBERRY": 22, "WHEAT": 39},
+    "D30": {}
+  },
+  "animal_checkpoints": {
+    "D01": {"COW": 2, "SHEEP": 2},
+    "D05": {"COW": 4, "SHEEP": 2},
+    "D10": {"COW": 9, "SHEEP": 4},
+    "D15": {"COW": 9, "SHEEP": 5},
+    "D20": {"COW": 9, "SHEEP": 5},
+    "D25": {"COW": 9, "SHEEP": 5},
+    "D30": {"COW": 9, "SHEEP": 5}
+  },
+  "daily_available_action_slots": [
+    129, 117, 116, 138, 117, 136, 204, 206, 245, 273,
+    275, 270, 233, 250, 253, 295, 297, 297, 297, 297,
+    297, 297, 297, 296, 296, 275, 275, 276, 276, 275
+  ],
+  "action_slots_provenance": {
+    "role": "benchmark reference only; planning capacity uses real HIRE activation timing",
+    "source": "five exact 7-7-0 Jesse Bullard replays",
+    "episode_ids": [105405557, 105384058, 105398563, 105391568, 105565293],
+    "invariant_across_sample": true
+  },
+  "reserve_ratio": 0.01,
+  "fertilizer_collection_caps_by_day": {
+    "16": 3, "17": 0, "18": 0, "19": 0, "20": 0, "21": 0,
+    "22": 0, "23": 0, "24": 0, "25": 0, "26": 0, "27": 0,
+    "28": 0, "29": 0, "30": 0
+  },
+  "fertilizer_budget_by_crop": {"STRAWBERRY": 79, "WHEAT": 59},
+  "animal_feed_blackout_days": [],
+  "animal_care_blackout_days": [19, 20, 21, 23, 24, 25],
+  "ongoing_harvest_phase_modulus": 2,
+  "q2_water_defer_days": [20, 23, 25],
+  "fertilizer_daily_caps_by_crop": {
+    "STRAWBERRY": {
+      "18": 3, "19": 7, "20": 13, "21": 4, "22": 0,
+      "23": 0, "24": 10, "25": 2, "26": 9, "27": 9
+    },
+    "WHEAT": {
+      "3": 0, "20": 4, "21": 2, "22": 0, "23": 0, "24": 0,
+      "25": 0, "26": 6, "27": 7
+    }
+  },
+  "workers_peak_hands": 12,
+  "workers_peak_units": 13,
+  "max_hires_per_turn": 10,
+  "force_peak_hands_from_day": 16,
+  "force_peak_hands_through_day": 25,
+  "turns_per_day": 24,
+  "annual_replant_last_day": 25,
+  "terminal_crop_clear_day": 29,
+  "terminal_residual_crop_cap": 2,
+  "public_features_only": true,
+  "cross_episode_memory": false,
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "kaggle_upload_authorized": false
+}

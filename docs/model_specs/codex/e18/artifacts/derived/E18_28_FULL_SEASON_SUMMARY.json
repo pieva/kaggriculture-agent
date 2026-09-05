@@ -1,0 +1,718 @@
+{
+  "selected": "C",
+  "incumbent_promoted": false,
+  "holdout_consumed": false,
+  "summaries": {
+    "B": {
+      "n": 14,
+      "mean_reward": 72343.57142857143,
+      "min_reward": 42601.0,
+      "max_reward": 97519.0,
+      "direct_wins": 0,
+      "mean_opponent_reward": 86122.85714285714,
+      "mean_30d_economic_parts": {
+        "harvested:MELON": 71,
+        "harvested:MILK": 198,
+        "harvested:STRAWBERRY": 145.14285714285714,
+        "harvested:WHEAT": 590.4285714285714,
+        "harvested:WOOL": 93.85714285714286,
+        "hire_cash": 6858.0,
+        "land_cash": 3000.0,
+        "planted:MELON": 12,
+        "planted:STRAWBERRY": 37.857142857142854,
+        "planted:WHEAT": 162.71428571428572,
+        "purchase_cash:BUY_ANIMAL:COW": 3600,
+        "purchase_cash:BUY_ANIMAL:SHEEP": 2428.5714285714284,
+        "purchase_cash:BUY_PRODUCT:WHEAT": 8877.92857142857,
+        "purchase_cash:BUY_SEED:MELON": 960,
+        "purchase_cash:BUY_SEED:STRAWBERRY": 3785.714285714286,
+        "purchase_cash:BUY_SEED:WHEAT": 1627.142857142857,
+        "sales_cash:FERTILIZER": 6163,
+        "sales_cash:MELON": 12445,
+        "sales_cash:MILK": 23005.714285714286,
+        "sales_cash:STRAWBERRY": 26751.785714285714,
+        "sales_cash:WHEAT": 21855.071428571428,
+        "sales_cash:WOOL": 10260.357142857143,
+        "sold_units:FERTILIZER": 74.57142857142857,
+        "sold_units:MELON": 71,
+        "sold_units:MILK": 198,
+        "sold_units:STRAWBERRY": 145.14285714285714,
+        "sold_units:WHEAT": 474.2857142857143,
+        "sold_units:WOOL": 93.85714285714286,
+        "unit_cash_delta": 0.0
+      }
+    },
+    "C": {
+      "n": 14,
+      "mean_reward": 74491.57142857143,
+      "min_reward": 51338.0,
+      "max_reward": 96030.0,
+      "direct_wins": 1,
+      "mean_opponent_reward": 86176.42857142857,
+      "mean_30d_economic_parts": {
+        "harvested:CARROT": 83,
+        "harvested:MELON": 71,
+        "harvested:MILK": 198,
+        "harvested:STRAWBERRY": 145.14285714285714,
+        "harvested:WHEAT": 507.42857142857144,
+        "harvested:WOOL": 93.85714285714286,
+        "hire_cash": 6858.0,
+        "land_cash": 3000.0,
+        "planted:CARROT": 32,
+        "planted:MELON": 12,
+        "planted:STRAWBERRY": 37.857142857142854,
+        "planted:WHEAT": 130.71428571428572,
+        "purchase_cash:BUY_ANIMAL:COW": 3600,
+        "purchase_cash:BUY_ANIMAL:SHEEP": 2428.5714285714284,
+        "purchase_cash:BUY_PRODUCT:WHEAT": 8877.92857142857,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:MELON": 960,
+        "purchase_cash:BUY_SEED:STRAWBERRY": 3785.714285714286,
+        "purchase_cash:BUY_SEED:WHEAT": 1307.142857142857,
+        "sales_cash:CARROT": 6315.142857142857,
+        "sales_cash:FERTILIZER": 6163,
+        "sales_cash:MELON": 12445,
+        "sales_cash:MILK": 23005.714285714286,
+        "sales_cash:STRAWBERRY": 26751.785714285714,
+        "sales_cash:WHEAT": 18007.928571428572,
+        "sales_cash:WOOL": 10260.357142857143,
+        "sold_units:CARROT": 83,
+        "sold_units:FERTILIZER": 74.57142857142857,
+        "sold_units:MELON": 71,
+        "sold_units:MILK": 198,
+        "sold_units:STRAWBERRY": 145.14285714285714,
+        "sold_units:WHEAT": 391.2857142857143,
+        "sold_units:WOOL": 93.85714285714286,
+        "unit_cash_delta": 0.0
+      }
+    },
+    "PARENT": {
+      "n": 14,
+      "mean_reward": 69156.0,
+      "min_reward": 41141.0,
+      "max_reward": 92680.0,
+      "direct_wins": 0,
+      "mean_opponent_reward": 86316.0,
+      "mean_30d_economic_parts": {
+        "harvested:MELON": 71,
+        "harvested:MILK": 198,
+        "harvested:STRAWBERRY": 145.14285714285714,
+        "harvested:WHEAT": 507.42857142857144,
+        "harvested:WOOL": 93.85714285714286,
+        "hire_cash": 5442.0,
+        "land_cash": 3000.0,
+        "planted:MELON": 12,
+        "planted:STRAWBERRY": 37.857142857142854,
+        "planted:WHEAT": 130.71428571428572,
+        "purchase_cash:BUY_ANIMAL:COW": 3600,
+        "purchase_cash:BUY_ANIMAL:SHEEP": 2428.5714285714284,
+        "purchase_cash:BUY_PRODUCT:WHEAT": 7304.5,
+        "purchase_cash:BUY_SEED:MELON": 960,
+        "purchase_cash:BUY_SEED:STRAWBERRY": 3785.714285714286,
+        "purchase_cash:BUY_SEED:WHEAT": 1307.142857142857,
+        "sales_cash:FERTILIZER": 6163,
+        "sales_cash:MELON": 12445,
+        "sales_cash:MILK": 22391.214285714286,
+        "sales_cash:STRAWBERRY": 26658.35714285714,
+        "sales_cash:WHEAT": 16435.64285714286,
+        "sales_cash:WOOL": 9890.714285714286,
+        "sold_units:FERTILIZER": 74.57142857142857,
+        "sold_units:MELON": 71,
+        "sold_units:MILK": 192,
+        "sold_units:STRAWBERRY": 145.14285714285714,
+        "sold_units:WHEAT": 359.14285714285717,
+        "sold_units:WOOL": 90.14285714285714,
+        "unit_cash_delta": 0.0
+      }
+    }
+  },
+  "comparisons": [
+    {
+      "seed": 180903001,
+      "seat": 0,
+      "parent": 74287.0,
+      "B": 77434.0,
+      "C": 77898.0,
+      "C_minus_parent": 3611.0,
+      "C_minus_B": 464,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 4664,
+        "sales_cash:WHEAT": -3880,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    },
+    {
+      "seed": 180903001,
+      "seat": 1,
+      "parent": 74287.0,
+      "B": 77434.0,
+      "C": 77898.0,
+      "C_minus_parent": 3611.0,
+      "C_minus_B": 464,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 4664,
+        "sales_cash:WHEAT": -3880,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    },
+    {
+      "seed": 180903002,
+      "seat": 0,
+      "parent": 66154.0,
+      "B": 69729.0,
+      "C": 69773.0,
+      "C_minus_parent": 3619.0,
+      "C_minus_B": 44,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 4434,
+        "sales_cash:WHEAT": -4070,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    },
+    {
+      "seed": 180903002,
+      "seat": 1,
+      "parent": 66154.0,
+      "B": 69729.0,
+      "C": 69773.0,
+      "C_minus_parent": 3619.0,
+      "C_minus_B": 44,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 4434,
+        "sales_cash:WHEAT": -4070,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "parent": 52684.0,
+      "B": 54865.0,
+      "C": 61940.0,
+      "C_minus_parent": 9256.0,
+      "C_minus_B": 7075,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 11235,
+        "sales_cash:WHEAT": -3840,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "parent": 52684.0,
+      "B": 54865.0,
+      "C": 61940.0,
+      "C_minus_parent": 9256.0,
+      "C_minus_B": 7075,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 11235,
+        "sales_cash:WHEAT": -3840,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    },
+    {
+      "seed": 180903004,
+      "seat": 0,
+      "parent": 48427.0,
+      "B": 50386.0,
+      "C": 59438.0,
+      "C_minus_parent": 11011.0,
+      "C_minus_B": 9052,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 12285,
+        "sales_cash:WHEAT": -2913,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    },
+    {
+      "seed": 180903004,
+      "seat": 1,
+      "parent": 41141.0,
+      "B": 42601.0,
+      "C": 51338.0,
+      "C_minus_parent": 10197.0,
+      "C_minus_B": 8737,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 12285,
+        "sales_cash:WHEAT": -3228,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    },
+    {
+      "seed": 180903005,
+      "seat": 0,
+      "parent": 90769.0,
+      "B": 95066.0,
+      "C": 93875.0,
+      "C_minus_parent": 3106.0,
+      "C_minus_B": -1191,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 3400,
+        "sales_cash:WHEAT": -4271,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    },
+    {
+      "seed": 180903005,
+      "seat": 1,
+      "parent": 90146.0,
+      "B": 94441.0,
+      "C": 93250.0,
+      "C_minus_parent": 3104.0,
+      "C_minus_B": -1191,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 3400,
+        "sales_cash:WHEAT": -4271,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    },
+    {
+      "seed": 180903006,
+      "seat": 0,
+      "parent": 92680.0,
+      "B": 97519.0,
+      "C": 96030.0,
+      "C_minus_parent": 3350.0,
+      "C_minus_B": -1489,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 2646,
+        "sales_cash:WHEAT": -3815,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    },
+    {
+      "seed": 180903006,
+      "seat": 1,
+      "parent": 92680.0,
+      "B": 97519.0,
+      "C": 96030.0,
+      "C_minus_parent": 3350.0,
+      "C_minus_B": -1489,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 2646,
+        "sales_cash:WHEAT": -3815,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    },
+    {
+      "seed": 180903007,
+      "seat": 0,
+      "parent": 67924.0,
+      "B": 70617.0,
+      "C": 71963.0,
+      "C_minus_parent": 4039.0,
+      "C_minus_B": 1346,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 5542,
+        "sales_cash:WHEAT": -3876,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    },
+    {
+      "seed": 180903007,
+      "seat": 1,
+      "parent": 58167.0,
+      "B": 60605.0,
+      "C": 61736.0,
+      "C_minus_parent": 3569.0,
+      "C_minus_B": 1131,
+      "C_minus_B_cash_parts": {
+        "harvested:CARROT": 83,
+        "harvested:WHEAT": -83,
+        "planted:CARROT": 32,
+        "planted:WHEAT": -32,
+        "purchase_cash:BUY_SEED:CARROT": 640,
+        "purchase_cash:BUY_SEED:WHEAT": -320,
+        "sales_cash:CARROT": 5542,
+        "sales_cash:WHEAT": -4091,
+        "sold_units:CARROT": 83,
+        "sold_units:WHEAT": -83
+      }
+    }
+  ],
+  "rejected_progressive": {
+    "SMOKE_PROGRESSIVE": [
+      {
+        "variant": "D_CARROT",
+        "seed": 180903001,
+        "seat": 0,
+        "reward": 74300.0,
+        "cows_d1_d10": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          5,
+          7,
+          8
+        ],
+        "losses": [
+          {
+            "recorded_step": 264,
+            "display_day_after": 12,
+            "x": 6,
+            "y": 4,
+            "animal": "SHEEP",
+            "fed_today_before_refresh": false,
+            "consecutive_unfed_before_refresh": 1,
+            "actual_before_animals": 12,
+            "pre_refresh_animals": 12,
+            "actual_after_animals": 11,
+            "candidate_batch": {
+              "farmer": [
+                "PASS"
+              ],
+              "hands": [
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "DROP"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "DROP"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ]
+              ],
+              "market": [
+                [
+                  "SELL",
+                  "MELON",
+                  42
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "variant": "D_CARROT",
+        "seed": 180903001,
+        "seat": 1,
+        "reward": 74300.0,
+        "cows_d1_d10": [
+          2,
+          2,
+          2,
+          2,
+          3,
+          3,
+          3,
+          5,
+          7,
+          8
+        ],
+        "losses": [
+          {
+            "recorded_step": 264,
+            "display_day_after": 12,
+            "x": 6,
+            "y": 4,
+            "animal": "SHEEP",
+            "fed_today_before_refresh": false,
+            "consecutive_unfed_before_refresh": 1,
+            "actual_before_animals": 12,
+            "pre_refresh_animals": 12,
+            "actual_after_animals": 11,
+            "candidate_batch": {
+              "farmer": [
+                "PASS"
+              ],
+              "hands": [
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "DROP"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "DROP"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ]
+              ],
+              "market": [
+                [
+                  "SELL",
+                  "MELON",
+                  42
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "SMOKE_PROGRESSIVE_E": [
+      {
+        "variant": "E_CARROT",
+        "seed": 180903001,
+        "seat": 0,
+        "reward": 69912.0,
+        "cows_d1_d10": [
+          2,
+          2,
+          2,
+          3,
+          4,
+          4,
+          4,
+          6,
+          7,
+          8
+        ],
+        "losses": [
+          {
+            "recorded_step": 264,
+            "display_day_after": 12,
+            "x": 6,
+            "y": 4,
+            "animal": "SHEEP",
+            "fed_today_before_refresh": false,
+            "consecutive_unfed_before_refresh": 1,
+            "actual_before_animals": 12,
+            "pre_refresh_animals": 12,
+            "actual_after_animals": 11,
+            "candidate_batch": {
+              "farmer": [
+                "PASS"
+              ],
+              "hands": [
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "DROP"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ]
+              ],
+              "market": [
+                [
+                  "SELL",
+                  "MELON",
+                  18
+                ]
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "variant": "E_CARROT",
+        "seed": 180903001,
+        "seat": 1,
+        "reward": 69912.0,
+        "cows_d1_d10": [
+          2,
+          2,
+          2,
+          3,
+          4,
+          4,
+          4,
+          6,
+          7,
+          8
+        ],
+        "losses": [
+          {
+            "recorded_step": 264,
+            "display_day_after": 12,
+            "x": 6,
+            "y": 4,
+            "animal": "SHEEP",
+            "fed_today_before_refresh": false,
+            "consecutive_unfed_before_refresh": 1,
+            "actual_before_animals": 12,
+            "pre_refresh_animals": 12,
+            "actual_after_animals": 11,
+            "candidate_batch": {
+              "farmer": [
+                "PASS"
+              ],
+              "hands": [
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "DROP"
+                ],
+                [
+                  "PASS"
+                ],
+                [
+                  "PASS"
+                ]
+              ],
+              "market": [
+                [
+                  "SELL",
+                  "MELON",
+                  18
+                ]
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  "safe_zero_terminal_inventory_all_14": true
+}

@@ -6,3 +6,10 @@
 
 # Binary evidence must never undergo line-ending conversion.
 *.png binary
+
+# E18 forensic freezes were produced on Windows. Preserve their actual bytes,
+# including line endings, so recorded SHA-256 values survive clone/checkout.
+docs/model_specs/codex/e18/artifacts/derived/** -text whitespace=cr-at-eol
+docs/model_specs/codex/e18/configs/*.json -text whitespace=cr-at-eol
+docs/model_specs/codex/e18/tools/analyze_e18_28_external_pass.py -text whitespace=cr-at-eol
+submission/submission_codex_e18_28_770.py -text whitespace=cr-at-eol

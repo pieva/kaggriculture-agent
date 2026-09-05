@@ -1,0 +1,308 @@
+{
+  "candidate": "E18.27 V3",
+  "incomplete_crop_cases": [
+    {
+      "opponent": "E18.16",
+      "seed": 180903004,
+      "seat": 0,
+      "D15": {
+        "MELON": 0,
+        "WHEAT": 23,
+        "STRAWBERRY": 37,
+        "CARROT": 0,
+        "TOMATO": 0
+      }
+    },
+    {
+      "opponent": "E18.16",
+      "seed": 180903004,
+      "seat": 1,
+      "D15": {
+        "MELON": 0,
+        "WHEAT": 23,
+        "STRAWBERRY": 37,
+        "CARROT": 0,
+        "TOMATO": 0
+      }
+    },
+    {
+      "opponent": "E18.16",
+      "seed": 180903005,
+      "seat": 1,
+      "D15": {
+        "MELON": 0,
+        "WHEAT": 23,
+        "STRAWBERRY": 37,
+        "CARROT": 0,
+        "TOMATO": 0
+      }
+    }
+  ],
+  "incomplete_livestock_cases": [
+    {
+      "opponent": "E18.16",
+      "seed": 180903007,
+      "seat": 0,
+      "D10": {
+        "COW": 9,
+        "SHEEP": 3,
+        "GOOSE": 0
+      },
+      "D15": {
+        "COW": 9,
+        "SHEEP": 4,
+        "GOOSE": 0
+      },
+      "D30": {
+        "COW": 9,
+        "SHEEP": 4,
+        "GOOSE": 0
+      }
+    },
+    {
+      "opponent": "E18.16",
+      "seed": 180903007,
+      "seat": 1,
+      "D10": {
+        "COW": 9,
+        "SHEEP": 3,
+        "GOOSE": 0
+      },
+      "D15": {
+        "COW": 9,
+        "SHEEP": 4,
+        "GOOSE": 0
+      },
+      "D30": {
+        "COW": 9,
+        "SHEEP": 4,
+        "GOOSE": 0
+      }
+    }
+  ],
+  "groups": [
+    {
+      "opponent": "E18.16",
+      "paired_cases": 14,
+      "parent_mean": 60964.642857142855,
+      "candidate_mean": 69156.0,
+      "delta_mean": 8191.357142857145,
+      "delta_percent": 13.43624231843985,
+      "positive_pairs": 10,
+      "worst_delta": -21920.0,
+      "best_delta": 20319.0,
+      "opponent_mean_against_candidate": 86316.0,
+      "candidate_wins": 0,
+      "checks": {
+        "prefix_d1_d9_identical": true,
+        "zero_errors": true,
+        "zero_escapes": true,
+        "feed_d11_d15_complete": true,
+        "resources_cap_14": true,
+        "hands_cap_12": true,
+        "topology_770_d15_d30": true,
+        "mix_9_5_d15_d30": false,
+        "crops_d15_38_23": false,
+        "melon_sold_by_d12": true,
+        "matched_parent_positive": false,
+        "incumbent_margin_nonnegative": false
+      }
+    },
+    {
+      "opponent": "E18.25",
+      "paired_cases": 2,
+      "parent_mean": 63096.0,
+      "candidate_mean": 75002.5,
+      "delta_mean": 11906.5,
+      "delta_percent": 18.870451375681508,
+      "positive_pairs": 2,
+      "worst_delta": 10577.0,
+      "best_delta": 13236.0,
+      "opponent_mean_against_candidate": 58562.0,
+      "candidate_wins": 2,
+      "checks": {
+        "prefix_d1_d9_identical": true,
+        "zero_errors": true,
+        "zero_escapes": true,
+        "feed_d11_d15_complete": true,
+        "resources_cap_14": true,
+        "hands_cap_12": true,
+        "topology_770_d15_d30": true,
+        "mix_9_5_d15_d30": true,
+        "crops_d15_38_23": true,
+        "melon_sold_by_d12": true,
+        "matched_parent_positive": true,
+        "incumbent_margin_nonnegative": true
+      }
+    },
+    {
+      "opponent": "E18.2/V4D",
+      "paired_cases": 2,
+      "parent_mean": 56543.0,
+      "candidate_mean": 57680.0,
+      "delta_mean": 1137.0,
+      "delta_percent": 2.0108589922713582,
+      "positive_pairs": 1,
+      "worst_delta": -1392.0,
+      "best_delta": 3666.0,
+      "opponent_mean_against_candidate": 85694.0,
+      "candidate_wins": 0,
+      "checks": {
+        "prefix_d1_d9_identical": true,
+        "zero_errors": true,
+        "zero_escapes": true,
+        "feed_d11_d15_complete": true,
+        "resources_cap_14": true,
+        "hands_cap_12": true,
+        "topology_770_d15_d30": true,
+        "mix_9_5_d15_d30": true,
+        "crops_d15_38_23": true,
+        "melon_sold_by_d12": true,
+        "matched_parent_positive": false,
+        "incumbent_margin_nonnegative": false
+      }
+    }
+  ],
+  "unique_matches": 36,
+  "unique_paired_cases": 18,
+  "checks": {
+    "prefix_d1_d9_identical": true,
+    "zero_errors": true,
+    "zero_escapes": true,
+    "feed_d11_d15_complete": true,
+    "resources_cap_14": true,
+    "hands_cap_12": true,
+    "topology_770_d15_d30": true,
+    "mix_9_5_d15_d30": false,
+    "crops_d15_38_23": false,
+    "melon_sold_by_d12": true,
+    "matched_parent_positive": false,
+    "incumbent_margin_nonnegative": false
+  },
+  "temporal_smoke_vs_e18_16": [
+    {
+      "day": 10,
+      "E18.26": {
+        "cash_h24": 1451.0,
+        "cash_after_all_day_actions": 1451.0,
+        "people": 12.0,
+        "strawberry": 20.0,
+        "crop_tiles": 37.0,
+        "animals": 13.0
+      },
+      "E18.27": {
+        "cash_h24": 1451.0,
+        "cash_after_all_day_actions": 1451.0,
+        "people": 12.0,
+        "strawberry": 20.0,
+        "crop_tiles": 37.0,
+        "animals": 13.0
+      }
+    },
+    {
+      "day": 11,
+      "E18.26": {
+        "cash_h24": 1128.0,
+        "cash_after_all_day_actions": 67.0,
+        "people": 9.0,
+        "strawberry": 20.0,
+        "crop_tiles": 37.0,
+        "animals": 13.0
+      },
+      "E18.27": {
+        "cash_h24": 3956.0,
+        "cash_after_all_day_actions": 10321.0,
+        "people": 12.0,
+        "strawberry": 20.0,
+        "crop_tiles": 25.0,
+        "animals": 13.0
+      }
+    },
+    {
+      "day": 12,
+      "E18.26": {
+        "cash_h24": 236.0,
+        "cash_after_all_day_actions": 236.0,
+        "people": 9.0,
+        "strawberry": 29.0,
+        "crop_tiles": 51.0,
+        "animals": 13.0
+      },
+      "E18.27": {
+        "cash_h24": 9766.0,
+        "cash_after_all_day_actions": 9766.0,
+        "people": 12.0,
+        "strawberry": 38.0,
+        "crop_tiles": 50.0,
+        "animals": 13.0
+      }
+    },
+    {
+      "day": 13,
+      "E18.26": {
+        "cash_h24": 9.0,
+        "cash_after_all_day_actions": 6399.0,
+        "people": 12.0,
+        "strawberry": 29.0,
+        "crop_tiles": 39.0,
+        "animals": 13.0
+      },
+      "E18.27": {
+        "cash_h24": 12158.0,
+        "cash_after_all_day_actions": 14098.0,
+        "people": 8.0,
+        "strawberry": 38.0,
+        "crop_tiles": 50.0,
+        "animals": 13.0
+      }
+    },
+    {
+      "day": 14,
+      "E18.26": {
+        "cash_h24": 11630.0,
+        "cash_after_all_day_actions": 11697.0,
+        "people": 9.0,
+        "strawberry": 29.0,
+        "crop_tiles": 44.0,
+        "animals": 9.0
+      },
+      "E18.27": {
+        "cash_h24": 14010.0,
+        "cash_after_all_day_actions": 14010.0,
+        "people": 9.0,
+        "strawberry": 38.0,
+        "crop_tiles": 55.0,
+        "animals": 14.0
+      }
+    },
+    {
+      "day": 15,
+      "E18.26": {
+        "cash_h24": 11728.0,
+        "cash_after_all_day_actions": 12591.0,
+        "people": 10.0,
+        "strawberry": 29.0,
+        "crop_tiles": 52.0,
+        "animals": 9.0
+      },
+      "E18.27": {
+        "cash_h24": 13712.0,
+        "cash_after_all_day_actions": 14585.0,
+        "people": 10.0,
+        "strawberry": 38.0,
+        "crop_tiles": 61.0,
+        "animals": 14.0
+      }
+    }
+  ],
+  "animal_escapes": 0,
+  "technical_errors": 0,
+  "holdout_consumed": false,
+  "kaggle_upload_authorized": false,
+  "sources": {
+    "SMOKE": "E18_27_D10_D15_SMOKE_V3.json",
+    "DEVELOPMENT": "E18_27_D10_D15_DEVELOPMENT_V3.json",
+    "V4D": "E18_27_D10_D15_V4D_V3.json"
+  },
+  "status": "DEVELOPMENT_PROGRESS_NOT_PROMOTED"
+}

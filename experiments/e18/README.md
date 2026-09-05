@@ -1,6 +1,22 @@
-# E18 — opponent-reactive 6-6-2 / 7-7-0 toward Top-3 behavior
+# E18 — sviluppo target 7-7-0 e protocolli comuni
 
-## Stato comune al 2026-09-04
+## Stato operativo al 2026-09-05
+
+Sola linea attiva Codex, topologia target 770, cap 14 animali e massimo 12
+manovali; le altre tre linee restano congelate. Ultima pubblicata E18.28 C;
+analisi esterna completata su 30 replay. Handoff e stato aggiornato in
+`docs/NEW_SESSION.md` e `docs/PROJECT_STATE.md`; specifiche/diagnosi della
+nuova linea anti-PASS in `docs/model_specs/codex/e18/`, non in questa directory.
+I confronti e le classifiche riportati più sotto sono cronologia, non stato live.
+
+## Standard di reporting adottato il 2026-09-05
+
+[Confronto agenti V3: grafici D1-D30 e dizionario KPI](reports/common/E18_AGENT_COMPARISON_REPORT_STANDARD_V3_IT.md).
+Top770 vs una sola versione, 21 pannelli: WATER/FEED riusciti al giorno,
+nessun diagramma Cause PASS. Specie a zero visibili, cassa e persone, strutture
+vuote distinte; tabelle economiche/operative complementari e denominatori reali.
+
+## Snapshot storico al 2026-09-04
 
 La sola linea attiva è Codex exact `7-7-0`. E18.16 passa Gate A locale con
 cap risorse animali 14 e FEED critico, fallisce il benchmark Top-3 e chiude la
@@ -11,7 +27,7 @@ sono `FROZEN_PERFORMANCE_GAP`: i loro asset restano nei rispettivi namespace
 protocolli ed evidenze condivise.
 
 Lo snapshot live del leaderboard osservato durante l'invio è: keiz `3012,9`,
-Crop Dusta `2995,8`, Jesse Bullard `2971,1`, Giulio Ravasio `2918,1`; Pietro
+Crop Dusta `2995,8`, Top770 `2971,1`, Giulio Ravasio `2918,1`; Pietro
 Valocchi `1199,7` (rank `2549`). È un'osservazione esterna volatile e non
 sostituisce il corpus topology-matched già analizzato.
 
@@ -27,7 +43,7 @@ consumati e nessun upload autorizzato.
 
 - report: `docs/model_specs/codex/e18/reports/E18_6_CONCENTRATED_770_THROUGHPUT_DEV_GATE_REPORT_IT.md`;
 - artifact: `docs/model_specs/codex/e18/artifacts/derived/E18_6_CONCENTRATED_770_THROUGHPUT_DEV_GATE_V1.json`;
-- model spec: `docs/model_specs/codex/MODEL_SPEC_CODEX_E18_6_CONCENTRATED_770_THROUGHPUT_V1.md`.
+- model spec: `docs/model_specs/codex/e18/MODEL_SPEC_CODEX_E18_6_CONCENTRATED_770_THROUGHPUT_V1.md`.
 
 La concentrazione geometrica è possibile, ma un overlay sulle rotte 7-7-5
 non risparmia lavoro: prima di una nuova ablation serve un lifecycle/router
@@ -44,7 +60,7 @@ movimenti e -20,95% di azioni produttive. Nessun upload Kaggle.
 
 - report: `docs/model_specs/codex/e18/reports/E18_4_STATE_DRIVEN_772_DEV_GATE_REPORT_IT.md`
 - artifact: `docs/model_specs/codex/e18/artifacts/derived/E18_4_STATE_DRIVEN_772_DEV_GATE_V1.json`
-- model spec: `docs/model_specs/codex/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V1.md`
+- model spec: `docs/model_specs/codex/e18/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V1.md`
 - prossimo gate: località per cluster e task aging, senza modificare market o
   topologia.
 
@@ -59,7 +75,7 @@ eseguito e non è autorizzata alcuna submission.
 
 - report: `docs/model_specs/codex/e18/reports/E18_4_STATE_DRIVEN_772_V2_DEV_GATE_REPORT_IT.md`;
 - artifact: `docs/model_specs/codex/e18/artifacts/derived/E18_4_STATE_DRIVEN_772_V2_DEV_GATE.json`;
-- model spec: `docs/model_specs/codex/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V2.md`.
+- model spec: `docs/model_specs/codex/e18/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V2.md`.
 
 ## E18.5 Codex — indice della linea 6-6-2
 
@@ -69,14 +85,14 @@ favorevole ma non materiale sulle move (`-0,57%`) e sul rapporto
 move/productive (`-0,82%`), sotto la soglia `-5%`; integrità 14/14, nessun
 holdout/final/upload. Model spec e report:
 
-- `docs/model_specs/codex/MODEL_SPEC_CODEX_E18_5_STATE_DRIVEN_662_TOPOLOGY_ABLATION_V1.md`;
+- `docs/model_specs/codex/e18/MODEL_SPEC_CODEX_E18_5_STATE_DRIVEN_662_TOPOLOGY_ABLATION_V1.md`;
 - `docs/model_specs/codex/e18/reports/E18_5_STATE_DRIVEN_662_TOPOLOGY_ABLATION_REPORT_IT.md`.
 
 ## Top 3 corrente — snapshot 2026-09-04
 
 Il benchmark comune aggiornato usa 11 head-to-head recenti fra `Crop Dusta`
-(3032,3), `Giulio Ravasio` (2967,3) e `Jesse Bullard` (2960,4). Crop chiude
-6-2 nel campione ed espone otto action shape e sette topologie; Giulio e Jesse
+(3032,3), `Giulio Ravasio` (2967,3) e `Top770` (2960,4). Crop chiude
+6-2 nel campione ed espone otto action shape e sette topologie; Giulio e Top770
 sono molto più compatti e ripetono la stessa action shape in cinque profili su
 sette. Il segnale condiviso non è una geometria: tutti raggiungono
 `1,01–1,26` move/productive e `887–917` raccolti medi, contro `2,00` e `513`
@@ -104,10 +120,10 @@ OPENING_REPLAY: 105080066 / ANALYZED / E18_TRAINING_EVIDENCE
 OPENING_DIAGNOSIS: CROP_LIFECYCLE_SERVICE_AND_HARVEST_CADENCE_GAP
 TOP3_LIVE_2026_09_03: CROP_DUSTA / 3정훈 / SBOL_BALL
 TOP3_LIVE_CORPUS: 8_REPLAYS / BOTH_SEATS_PER_AGENT / ACQUIRED_AND_ANALYZED
-TOP3_CURRENT_2026_09_04: CROP_DUSTA_3032.3 / GIULIO_RAVASIO_2967.3 / JESSE_BULLARD_2960.4
+TOP3_CURRENT_2026_09_04: CROP_DUSTA_3032.3 / GIULIO_RAVASIO_2967.3 / TOP770_2960.4
 TOP3_CURRENT_CORPUS: 11_HEAD_TO_HEAD_REPLAYS / 22_PROFILES / BOTH_SEATS
 TOP3_CURRENT_WORK: PRODUCTIVE_3237_TO_3377 / MOVE_PRODUCTIVE_1.01_TO_1.26 / HARVEST_887_TO_917
-TOP3_CURRENT_STRUCTURE: CROP_7_TOPOLOGIES_Q2_6_OF_8 / GIULIO_AND_JESSE_Q2_ZERO_7_OF_7
+TOP3_CURRENT_STRUCTURE: CROP_7_TOPOLOGIES_Q2_6_OF_8 / GIULIO_AND_TOP770_Q2_ZERO_7_OF_7
 CODEX_EXTERNAL_REACTIVITY: FAIL_1_OF_3_UNIQUE_LIFECYCLE_PROFILES
 TOP3_EXTERNAL_REACTIVITY: 8_OF_8_UNIQUE_LIFECYCLE_PROFILES / 5_TOPOLOGIES
 TOP3_Q2_PASTURES: ZERO_IN_7_OF_8 / RANGE_7-0-0_TO_10-7-0_AND_8-4-3
@@ -218,7 +234,7 @@ episodio, contro 814 unità medie degli avversari su tre geometrie diverse.
 Report:
 `docs/model_specs/codex/e18/reports/E18_2_RECENT_KAGGLE_REPLAY_ANALYSIS_2026_09_04_IT.md`.
 L'ablation successiva, specificata in
-`docs/model_specs/codex/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V2.md`, ha
+`docs/model_specs/codex/e18/MODEL_SPEC_CODEX_E18_4_STATE_DRIVEN_772_V2.md`, ha
 modificato soltanto il dispatcher con ownership locale, task aging e carrier
 affinity. Il Gate A è fallito sui KPI di throughput; la linea è chiusa senza
 Gate B e senza upload.

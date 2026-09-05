@@ -4,15 +4,15 @@
 
 Tenendo fissa la topologia finale `7-7-0`, il gap di E18.6 non è spiegato
 dalla geometria. La candidata emette il `2,9%` di comandi unità in più del
-pool Giulio/Jesse equivalente, ma produce `-18,1%` di servizio crop,
+pool Giulio/Top770 equivalente, ma produce `-18,1%` di servizio crop,
 `+60,5%` PASS, `+4,1%` move e `-36,7%` unità raccolte. Il problema prioritario
 è la conversione del tempo-worker in lifecycle crop locale.
 
 Il confronto esatto contiene 14 profili locali Codex, due replay `7-7-0` di
-Giulio e quattro di Jesse. Crop Dusta non presenta nessun `7-7-0` negli otto
+Giulio e quattro di Top770. Crop Dusta non presenta nessun `7-7-0` negli otto
 profili del corpus congelato ed è quindi escluso, non approssimato con altre
 topologie. La leaderboard è stata riverificata: Crop `3035,3`, Giulio
-`2976,0`, Jesse `2963,4`.
+`2976,0`, Top770 `2963,4`.
 
 ## Confronto normalizzato
 
@@ -21,7 +21,7 @@ PASS. È la sola tassonomia confrontabile: il KPI locale `productive_actions`
 esclude PICKUP/DROP/PLACE, quello dei replay li include. Money locale e score
 Kaggle non vengono confrontati.
 
-| KPI | Codex 770 | Giulio 770 | Jesse 770 | Pool 770 | Gap Codex |
+| KPI | Codex 770 | Giulio 770 | Top770 770 | Pool 770 | Gap Codex |
 |---|---:|---:|---:|---:|---:|
 | Profili | 14 | 2 | 4 | 6 | — |
 | Comandi unità | 7.519,0 | 7.305,0 | 7.305,0 | 7.305,0 | +2.9% |
@@ -46,7 +46,7 @@ Kaggle non vengono confrontati.
 
 ## Cosa fanno gli equivalenti Top-3
 
-Giulio e Jesse condividono praticamente lo stesso schedule: `243` PLANT,
+Giulio e Top770 condividono praticamente lo stesso schedule: `243` PLANT,
 `1.168–1.172` WATER, `467` HARVEST e `43` DIG. Nell'episodio `105398563`
 si affrontano direttamente con `7-7-0` entrambi e restano a sole sei azioni
 produttive di distanza. Questo rende il pattern più credibile di una media
@@ -95,7 +95,7 @@ regime esatto.
 ## Limiti
 
 La topologia è controllata, ma gli ambienti non lo sono: Codex gioca localmente
-contro E18.2, Giulio e Jesse giocano replay live. Il confronto identifica gap
+contro E18.2, Giulio e Top770 giocano replay live. Il confronto identifica gap
 e ipotesi, non stima l'effetto causale di una modifica. Il prossimo esperimento
 deve cambiare una sola priorità alla volta sulla nostra `7-7-0`, usando gli
 stessi seed e seat del gate E18.6.

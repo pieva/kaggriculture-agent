@@ -1,0 +1,22 @@
+{
+  "analysis_id": "E18_29_B3_SIMULATION_REPORT_D01_D30_V1",
+  "method": "Local QA documents, actual iframe viewport, CUA screenshots and DOM inspection",
+  "cases": [
+    {"width": 736, "theme": "light", "panels": 24, "series_lines": 68, "axis_titles": 48, "stacked_bar_segments": 120, "label_overlaps": 0, "horizontal_overflow": false},
+    {"width": 360, "theme": "dark", "panels": 24, "series_lines": 68, "axis_titles": 48, "stacked_bar_segments": 120, "label_overlaps": 0, "horizontal_overflow": false},
+    {"width": 360, "theme": "light", "panels": 24, "series_lines": 68, "axis_titles": 48, "stacked_bar_segments": 120, "label_overlaps": 0, "horizontal_overflow": false},
+    {"width": 736, "theme": "dark", "panels": 24, "series_lines": 68, "axis_titles": 48, "stacked_bar_segments": 120, "label_overlaps": 0, "horizontal_overflow": false}
+  ],
+  "checks": {
+    "cash_tooltip_three_visible_series_and_three_markers": true,
+    "parent_legend_off_hides_path_and_tooltip_row": true,
+    "filtered_cash_tooltip_two_visible_series_and_two_markers": true,
+    "click_pin_persists_for_screenshot": true,
+    "physical_touch_device_tested": false,
+    "collected_fertilizer_top770_explicit_nd": true,
+    "pass_reasons_tooltip_shows_daily_means_and_total": true,
+    "all_series_paths_and_stacked_bars_within_chart_frames_at_736_dark": true,
+    "data_tests_passed": 7
+  },
+  "limits": "Frozen comparison, no new replay acquisition, game simulations, policy changes, upload, promotion or Git alignment. QA wrappers are reproducible and task-local."
+}

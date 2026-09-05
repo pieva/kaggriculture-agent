@@ -1,0 +1,16 @@
+{
+  "candidate_id": "CODEX_E18_27_770_D10_D15_CASHFLOW_V3",
+  "parent_config": "CODEX_E18_26_770_JESSE_BOOST_D10_V1.json",
+  "parent_plan_sha256": "4b6bfb018e69ec0f7b2aa8d816f1aecf946ebbee77e02ea3e74e6169a3a15616",
+  "causal_family": "D10_D15_MELON_CASHFLOW_AND_SERVICE",
+  "overrides": {
+    "melon_harvest_day": 11,
+    "minimum_hands_by_day": {"11": 11, "12": 11},
+    "q2_plant_day": 12,
+    "same_batch_melon_sales": true,
+    "freeze_opening_market_horizon": true
+  },
+  "development_seeds": [180903001, 180903002, 180903003, 180903004, 180903005, 180903006, 180903007],
+  "holdout_consumed": false,
+  "kaggle_upload_authorized": false
+}

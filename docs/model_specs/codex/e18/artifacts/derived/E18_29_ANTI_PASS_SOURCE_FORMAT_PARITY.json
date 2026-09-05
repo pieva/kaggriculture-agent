@@ -1,0 +1,35 @@
+{
+  "scope": "Formatting after development gate, before E18.2/V4D check",
+  "policy_and_fertilizer_audit_ast_equivalent": true,
+  "normalization": "ast.dump without positions; names inside each import sorted",
+  "runner_import_statements_reordered_by_ruff": true,
+  "before": {
+    "e18_29_anti_pass_controller.py": {
+      "source": "54d96ad59ae9fbd284340e444d301a46ada5f820661c3fd7c7d304773d35e822",
+      "ast": "b75b03560f52db4b66b4fffce5962eadafb693b7d547136686f0ea5542f35afd"
+    },
+    "e18_29_fertilizer_audit.py": {
+      "source": "fab190f6c32334854928fd39539533f13e5c28c25fb9c79a77d8598d256fffe7",
+      "ast": "42691970c5a7c84d037ec98a282aff1e616c4fa5454c7c9e84efab2daca1e710"
+    },
+    "run_e18_29_anti_pass_gate.py": {
+      "source": "95eec644345afe7b54c02da8aab7f7b4d06fd79e1e93c13e44dc2f6d73017898",
+      "ast": "f3072370b175966c8584e06ef913c717c1e61136077168a61470ef1334e698b9"
+    }
+  },
+  "after": {
+    "e18_29_anti_pass_controller.py": {
+      "source": "69ac89db3078107ca15a30add21f47d131e12c47b9d4a1ba921e6fcfb48e0e15",
+      "ast": "b75b03560f52db4b66b4fffce5962eadafb693b7d547136686f0ea5542f35afd"
+    },
+    "e18_29_fertilizer_audit.py": {
+      "source": "28d0273499dc51529077022a54e8b971489256b0ec6c8280de4da0acb628c832",
+      "ast": "42691970c5a7c84d037ec98a282aff1e616c4fa5454c7c9e84efab2daca1e710"
+    },
+    "run_e18_29_anti_pass_gate.py": {
+      "source": "cb10e15845230e062a4e1a605cb8b4229ca51751316bd964a395d3ec8e79c7a5",
+      "ast": "9e9c2347b5daaa640c255cb1b5620735f7a8e2050f3868fdc450f51eb03dba5b"
+    }
+  },
+  "unit_regression_tests_passed": 41
+}

@@ -1,5 +1,14 @@
 # JSON dei replay Kaggriculture
 
+## Pulizia verificata — 2026-09-05
+
+Eliminate 22 cache grezze catalogate (643,77 MiB), previo controllo di tutti
+i percorsi, dimensioni e SHA-256. Nessun derivato eliminato. Recupero:
+`experiments/e18/reports/common/E18_REPLAY_DOWNLOAD_REFERENCE_20260905_IT.md`
+e relativo catalogo JSON comune. I 30 replay della diagnosi E18.28 sono
+ancora in Downloads, fuori dal repository: provenienza completa in
+`docs/model_specs/codex/e18/artifacts/derived/E18_28_EXTERNAL_PASS_DIAGNOSIS_20260905_V2.json`.
+
 Questa è la cartella canonica del catalogo replay. I JSON grezzi sono cache
 temporanee riscaricabili e sono esclusi da Git; il catalogo ne conserva Episode
 ID, origine e SHA-256. Config, metriche derivate, freeze e ledger generati dai
@@ -75,6 +84,41 @@ versionati.
 Integrità: `schema_version=1`, gioco `0.1.0`, modulo `1.32.7`, 720 step e
 `DONE/DONE` in `4/4`. Report derivato:
 `docs/model_specs/codex/e18/reports/E18_2_RECENT_KAGGLE_REPLAY_ANALYSIS_2026_09_04_IT.md`.
+
+### E18.16 — sconfitte della submission 56012496
+
+Snapshot del 2026-09-04 a rating `952`: 37 replay completati, 20 vittorie e
+17 sconfitte. Le 17 sconfitte sono state acquisite dall'endpoint canonico e
+verificate (`schema_version=1`, gioco `0.1.0`, modulo `1.32.7`, 720 step,
+`DONE/DONE`, filename coerente con `info.EpisodeId`). Il ruolo del corpus è
+`EXTERNAL_DIAGNOSTIC_NOT_HOLDOUT`; è evidenza per la prossima release, non una
+validazione indipendente.
+
+| Episode | Avversario | SHA-256 |
+|---:|---|---|
+| `105496417` | Rf28 | `C93856398014C1D043EFE4F8CA1B9D77CF53B216A96A0176823DEA803C146591` |
+| `105493733` | AMANI DD | `9EA00E6CA0B807D5D9D7047997D8C1DF1D2C391C9FF510070197B2D45DB89E3E` |
+| `105492836` | Csaba József | `DC66CABB358FF7FBEFE7020B4B579C5D4E96D029BBAA8C4E2FEF5DFFB6C4BE2F` |
+| `105491963` | 好7吊黑上唔去 | `618339AEAC54347C2B55E769ECFA42073BB22D3E8B8804FF4EAD4972E5CCD32C` |
+| `105491066` | Pablo Montenegro | `67CF8D8D74C11C7325F0A7DE08C14FE6229FE5CC6041BAD8ABE7305A1D21709D` |
+| `105490149` | CyberRacoon | `31B944941718B9078C6ED81AC9229700450059712BF36A3B921F3737F98A25FA` |
+| `105488377` | Nikita Biryukov | `ED9A3D330DA17BD32A4744C8F311625A4B55A6CF34729113DCCF0859FA4534F9` |
+| `105486567` | Mutte1904 | `0AC09F46C0C2DD030182B9BD9AFBD218A9BF26B0E46FEA96F0D91FD2370ACC76` |
+| `105485677` | Sujith Kumar Sashikanth | `3FF9FB090600BE499C2058A31E86BEB72596E06C7BDE9B5FC5A63C483B27E4EF` |
+| `105483909` | monnosuke | `727CB6784D0CACCC12835CAAF61F43392E5B86AE03A37381951AB65BE7F804E5` |
+| `105480327` | Jiarui (Jerry) Cao | `12B4FA3AAD0093EE443FECF411C7AB06DC73080896271127B2B4B8A97DFE83C2` |
+| `105477657` | Tekin24 | `D6665395434CDB700C3652EF3AF741335D2FB1470FD8B786C7B4D846B467B34B` |
+| `105476781` | Monster | `797D5AEF0C85F42F1CA9FB6A88D85A4C8298178B67623BFCDDD1721E4510F5E5` |
+| `105475877` | Avvy Lavoienne | `F95D9BDB0C4474A292A49C745537A1600C07E50B6A490BEB5D0D0FB7251D372E` |
+| `105474957` | ziheng | `67821264AC9EA95E0CAC3EDD01993BAA617BDE636751C0001E35A13BB8507690` |
+| `105473174` | Pascal | `27B547CF5D4C3A70B3A4A156C7F48E7AED5FD8E8591645D1E6D801B23B1A30DD` |
+| `105470464` | kaggle_bbgg | `7B3449C3CEEBC84471D99916B2EA80D7BC661D365FA98BD7153719BCFF843ECA` |
+
+Report diagnostico, KPI aggregati e dettaglio per episodio:
+`docs/model_specs/codex/e18/reports/E18_16_KAGGLE_LOSS_DIAGNOSTIC_2026_09_04_IT.md`.
+Il ledger machine-readable con seed, seat, score, action-stream hash e metriche
+derivate è in
+`docs/model_specs/codex/e18/artifacts/derived/E18_16_KAGGLE_LOSS_DIAGNOSTIC_2026_09_04.json`.
 
 ### Lotti Top 3 live acquisiti
 

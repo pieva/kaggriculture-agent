@@ -1,0 +1,31 @@
+{
+  "candidate_id": "CODEX_E18_19_770_RETRYING_TRAJECTORY_V1",
+  "schema_version": "e18.codex.770_retrying_trajectory.v1",
+  "model_spec_version": "CODEX-E18.19-770-RETRYING-TRAJECTORY-V1",
+  "epistemic_role": "DEVELOPMENT_CANDIDATE",
+  "parent_plan": "CODEX_E18_18_770_CAPACITY_TRAJECTORY_PLANNER_V1",
+  "parent_plan_sha256": "844113c8971ccf3840758cd9d35449e01bc766a1d4b890c7fd8ab29c177410a1",
+  "causal_family": "STATE_ACK_AND_BOUNDED_TASK_RETRY",
+  "topology": "7-7-0",
+  "pasture_fill_target": 14,
+  "livestock_resource_cap": 14,
+  "livestock_mix": {"COW": 9, "SHEEP": 5},
+  "workers_peak_hands": 12,
+  "execution": {
+    "queue_scope": "PER_DAY_PER_WORKER",
+    "respect_planned_turn": true,
+    "consume_overdue_pass_as_slack": true,
+    "position_correction": true,
+    "weed_repair_before_plant_or_build": true,
+    "partial_pickup_residual_retry": true,
+    "max_procurement_wait_turns": 1,
+    "feed_without_carried_wheat": "SKIP_TO_PRESERVE_REMAINDER_OF_ROUTE",
+    "stale_optional_action": "SKIP"
+  },
+  "gate_1_smoke_seed": 180903001,
+  "gate_1_smoke_seats": [0, 1],
+  "full_gate_1_authorized": false,
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "kaggle_upload_authorized": false
+}

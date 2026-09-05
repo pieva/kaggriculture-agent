@@ -1,0 +1,27 @@
+{
+  "candidate_id": "CODEX_E18_24_770_DEFERRED_PLANT_ON_WATER_V1",
+  "schema_version": "e18.codex.770_deferred_plant_on_water.v1",
+  "model_spec_version": "CODEX-E18.24-770-DEFERRED-PLANT-ON-WATER-V1",
+  "epistemic_role": "REJECTED_DEVELOPMENT_PRE_GATE_ABLATION",
+  "base_policy": "CODEX_E18_22_770_WHEAT_JIT_D1_V1",
+  "parent_plan_sha256": "844113c8971ccf3840758cd9d35449e01bc766a1d4b890c7fd8ab29c177410a1",
+  "causal_family": "ROUTE_PRESERVING_DEFERRED_D11_PLANT_RECOVERY",
+  "target_day": 11,
+  "recovery_action_slot": "LATER_WATER_ON_SAME_TILE",
+  "topology": "7-7-0",
+  "pasture_fill_target": 14,
+  "livestock_resource_cap": 14,
+  "livestock_mix": {
+    "COW": 9,
+    "SHEEP": 5
+  },
+  "workers_peak_hands": 12,
+  "route_mutation": false,
+  "market_plan_mutation": false,
+  "animal_plan_mutation": false,
+  "causal_delta_passed": false,
+  "full_gate_1_authorized": false,
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "kaggle_upload_authorized": false
+}

@@ -1,0 +1,23 @@
+{
+  "analysis_id": "E18_29_B3_SIMULATION_REPORT_D01_D30_V2",
+  "method": "Local CUA browser QA at actual iframe widths, screenshots and read-only DOM geometry",
+  "cases": [
+    {"width": 736, "theme": "dark", "panels": 25, "lines": 49, "axes": 50, "bars": 0, "series": ["candidate", "top770"], "parentLines": 0, "overlap": 0, "overflow": false},
+    {"width": 736, "theme": "light", "panels": 25, "lines": 49, "axes": 50, "bars": 0, "series": ["candidate", "top770"], "parentLines": 0, "overlap": 0, "overflow": false},
+    {"width": 360, "theme": "dark", "panels": 25, "lines": 49, "axes": 50, "bars": 0, "series": ["candidate", "top770"], "parentLines": 0, "overlap": 0, "overflow": false},
+    {"width": 360, "theme": "light", "panels": 25, "lines": 49, "axes": 50, "bars": 0, "series": ["candidate", "top770"], "parentLines": 0, "overlap": 0, "overflow": false}
+  ],
+  "checks": {
+    "data_and_report_contract_tests_passed": 11,
+    "water_tooltip_two_series_and_two_markers": true,
+    "feed_tooltip_two_series": true,
+    "pass_tooltip_two_series": true,
+    "cow_trajectory_without_parent_visually_inspected": true,
+    "all_series_paths_within_frames_360_light": true,
+    "click_pin_verified": true,
+    "physical_touch_device_tested": false,
+    "no_pass_reason_diagram": true,
+    "no_parent_series_in_fragment_data": true
+  },
+  "limits": "Source cohorts unchanged; no new simulations or policy changes. Top770 remains descriptive. Raw PASS reasons retained in derived data, not charted. Prior QA V1 is historical."
+}
