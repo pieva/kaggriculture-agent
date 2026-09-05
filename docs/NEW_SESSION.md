@@ -68,7 +68,10 @@ Fonti da leggere, sotto `docs/model_specs/codex/e18/`:
    un comando emesso non costituisce conferma di esecuzione. Nessuna assunzione
    soltanto prevista può aggiungere capacità al batch corrente.
 3. Prima tranche isolata: nucleo di assegnazione e test di contratti/regressione.
-   Poi adattatore osservazioni, acknowledgement e route admission completa.
+   **Implementata: 25 test pass, incluso stress su 100 scenari sintetici.**
+   File `docs/model_specs/codex/e18/tools/e18_30_mission_dispatcher.py`;
+   report `docs/model_specs/codex/e18/reports/E18_30_MISSION_DISPATCHER_GATE_0_IT.md`.
+   Ripartire dall'adattatore osservazioni, acknowledgement e route admission completa.
    Tenere separati recupero payroll/HIRE e missioni discrezionali redditizie.
 4. Congelare economia, mix e topologia del parent per la prima ablation.
    Mai ridurre PASS aggiungendo movimento, WATER inutile o lavoro senza vendita.
@@ -104,3 +107,6 @@ negativi, fonti e audit. Eliminare solo cache riscaricabili catalogate e QA
 rigenerabili, previa verifica hash/path; niente rimozione di evidenza unica.
 Il monitor dei primi replay E18.28 è stato messo in pausa: questa chiusura
 viene eseguita nella sessione attuale, senza duplicare commit o upload.
+Checkpoint pubblicato su Git: `4a3b7fd`, con preservazione byte dei freeze
+completata in `f036cd6` (193 file verificati identici all'indice). La prima
+tranche E18.30 viene salvata in un commit successivo, non nel file Kaggle.

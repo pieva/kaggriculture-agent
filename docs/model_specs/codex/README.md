@@ -37,7 +37,7 @@ Cause PASS, oltre ai KPI economico-operativi complementari.
 | DEVELOPMENT — ROBUSTNESS / INCUMBENT GATE FAIL | `e18/MODEL_SPEC_CODEX_E18_27_770_D10_D15_CASHFLOW_V3.md` | Melon D11, Q2 D12, zero fughe; +13,44% matched su sette seed contro E18.16, 10/14 positivi; non promossa |
 | PUBLISHED — EXTERNAL VALIDATION | `e18/MODEL_SPEC_CODEX_E18_28_770_FULL_SEASON_V1.md` | C pubblicata; 30 replay esterni, 17 sconfitte, 13 vittorie; non incumbent |
 | DEVELOPMENT — SAFETY GATE FAIL | `e18/MODEL_SPEC_CODEX_E18_29_770_ANTI_PASS_V3.md` | B3 +7,68% matched, PASS -26,78%; morte crop ereditata, non promossa |
-| ACTIVE DEVELOPMENT | `e18/MODEL_SPEC_CODEX_E18_30_770_MISSION_DISPATCHER_V1.md` | riprogettazione assegnazione, manodopera reale e missioni confermate |
+| ACTIVE DEVELOPMENT — CORE CONTRACTS PASS | `e18/MODEL_SPEC_CODEX_E18_30_770_MISSION_DISPATCHER_V1.md` | nucleo con 25 test; adattatore/runtime e beneficio economico da verificare |
 
 Handoff corrente: `docs/NEW_SESSION.md`.
 Il seguente handoff E18.27 è storico (2026-09-05):

@@ -10,7 +10,7 @@ assegnazione e ciclo di vita delle missioni, non cambiare topologia.
 |---|---|---|
 | Ultima pubblicata | E18.28 C / 56036993 | immutabile, verifica esterna; non promossa |
 | Ultimo sviluppo | E18.29 B3 | +7,68% matched locale, mortalità residua; non pubblicata |
-| Nuovo sviluppo | E18.30 mission dispatcher | specifica e avvio nucleo isolato; gate end-to-end da eseguire |
+| Nuovo sviluppo | E18.30 mission dispatcher | nucleo isolato, 25 test pass; adattatore/runtime e gate end-to-end da eseguire |
 | Controlli | E18.16, E18.2 | benchmark interni e riferimento esterno storico |
 
 Corpus E18.28 congelato: 30 replay (17 LOSS, 13 WIN), 21.570 batch shadow
@@ -36,3 +36,5 @@ La cronologia precedente e i vecchi stati CURRENT sono archiviati in
 La Foundation non viene alterata per mascherare difetti di implementazione:
 restano separati capacità strutturale/servibile, scorte, cassa e deadline.
 Closeout e verifiche: `docs/model_specs/codex/e18/reports/E18_ANTI_PASS_CHECKPOINT_20260905_IT.md`.
+Checkpoint `4a3b7fd` e freeze byte-identici `f036cd6` pubblicati su origin/main.
+Primo avvio E18.30 salvato separatamente; non è una nuova submission.

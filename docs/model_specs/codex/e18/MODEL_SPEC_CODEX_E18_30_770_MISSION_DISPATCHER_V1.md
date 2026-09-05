@@ -1,6 +1,6 @@
 # E18.30 V1 — 770, motore di assegnazione per missioni
 
-Stato: **SPECIFIED / CORE_IMPLEMENTATION_PENDING**, 2026-09-05.
+Stato: **CORE_CONTRACTS_PASS / RUNTIME_ADAPTER_PENDING**, 2026-09-05.
 Parent economico immutabile: E18.28 C (56036993). E18.29 B3 è un controllo
 secondario, non un rilascio promosso. Topologia 770, 14 pascoli, cap 14 animali,
 massimo 12 manovali. Cambia assegnazione, non mix/specie/apertura/topologia.
@@ -70,3 +70,17 @@ Poi standalone parity e validazione esterna del migliore sviluppo eleggibile.
 I 30 replay pubblici sono corpus diagnostico, non holdout o target da ottimizzare.
 Stress sintetici low-cash/hiring fallito e cambi roster devono essere generici,
 non branch sui seed/ID degli episodi. Nessun nuovo upload prima dei gate.
+
+## As-built della prima tranche
+
+Implementato `tools/e18_30_mission_dispatcher.py`: ledger e pool condiviso,
+manovali osservati, recupero orfani, deduplica, conferme, deadline e claim
+quantitativi. Offerte fresche e fattibili per l'intera rotta residua, compresa
+consegna, devono essere fornite dall'adattatore; non sono inferite dal nucleo.
+25 test pass, incluso stress deterministico su 100 scenari sintetici.
+Report: `reports/E18_30_MISSION_DISPATCHER_GATE_0_IT.md`.
+
+Questa è solo la parte contratti del Gate 0. Mancano adattatore osservazioni,
+generazione rotte complete, acknowledgement nel motore, OFF parity,
+payroll/retry HIRE e benchmark end-to-end. Nessuna azione del parent sostituita:
+non sono dimostrati recupero crop, riduzione PASS o delta economici.

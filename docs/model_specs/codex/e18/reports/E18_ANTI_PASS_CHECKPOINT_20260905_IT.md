@@ -50,6 +50,13 @@ CRLF/LF altererebbe gli SHA-256 di provenienza. Il codice ordinario resta LF.
 Commit/push del checkpoint precedono l'implementazione del nucleo E18.30.
 Nessun upload nuovo e nessun holdout consumato.
 
+Checkpoint pubblicato: `4a3b7fd`. Dopo il primo commit l'indice manteneva la
+versione normalizzata nonostante i nuovi attributi: ristaging esplicito
+`--renormalize` e commit correttivo `f036cd6`, senza riscrivere la storia.
+Verificati **193 freeze byte-identici** tra file locali e oggetti Git, incluso
+SHA-256 E18.28 `8788f68c74b95c56c21feffba6fd5c49654d1c2dc5e71b5a0ca94800f988969d`.
+Entrambi i commit inviati su origin/main prima della ripartenza E18.30.
+
 ## Ripartenza
 
 E18.30 è una riprogettazione per missioni, non un riempitivo dei PASS.
@@ -57,3 +64,8 @@ Prima tranche: ledger/assegnatore puro, lavoratori reali, recupero orfani,
 prerequisiti, claim, deadline e acknowledgement. Adattatore runtime e verifica
 economica end-to-end sono gate successivi: non dichiarare risolto il difetto
 per il solo superamento dei test del nucleo.
+
+Ripartenza eseguita: nucleo E18.30 implementato con **25 test pass**, incluso
+un test su 100 scenari sintetici. Specifica aggiornata as-built e report
+`E18_30_MISSION_DISPATCHER_GATE_0_IT.md`. Nessun wiring nel runtime o vantaggio
+economico dichiarato. Il nuovo codice viene salvato in un commit distinto.
