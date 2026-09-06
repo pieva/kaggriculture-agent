@@ -4,14 +4,33 @@ Riferimento esterno: alias documentale **Top770**. Episode ID e hash restano
 le fonti di provenienza; i nomi tecnici congelati in config, piani e schemi
 dei test restano invariati per compatibilità.
 
-Priorità corrente: [E18.30 — motore di assegnazione](e18/MODEL_SPEC_CODEX_E18_30_770_MISSION_DISPATCHER_V1.md).
-E18.28 C è l'ultima pubblicata (56036993), E18.29 B3 resta development non
+Priorità corrente: [E18.33 — policy comuni di pascoli e colture](e18/MODEL_SPEC_CODEX_E18_33_COMMON_RESOURCE_POLICY_V1.md).
+[Audit dei residui e Q0](e18/reports/E18_33_LEGACY_POLICY_AUDIT_20260906_IT.md).
+Kernel e adattatore nativo implementati: stessa policy per Q0/Q1/Q2, nessun
+caricamento dei piani storici. **Prototipo non eleggibile**: 97 test mirati
+E18.32/E18.33 passati; l'estensione dell'avvio V9 si rilascia D16–D17 ma fallisce
+in tutti i quattro casi la 770. Non è autonomia dimostrata.
+[Chiusura e prova di autonomia](e18/reports/E18_CLOSEOUT_AND_BOOTSTRAP_20260906_IT.md).
+[Checkpoint completo](e18/reports/E18_33_NATIVE_POLICY_CHECKPOINT_20260906_IT.md).
+[E19: roadmap parametrica 770/772/662](e19/MODEL_SPEC_CODEX_E19_PARAMETRIC_VALIDATION_DRAFT.md),
+subordinata al consolidamento E18, nessun esperimento avviato.
+E18.32 V9 è pubblicata come **controllo provvisorio, non benchmark E19**:
+56056189, Complete, 2026-09-06 13:27:24 UTC. Conserva il calendario storico;
+Q0 ha ancora dodici tile libere D11–D13. E18.31 resta controllo immutabile.
+E18.30 V2 resta la baseline verificata; E18.31 è pubblicata per diagnosi esterna
+(56050866, Complete), non promossa. E18.28 C è il parent pubblico immutabile
+(56036993), E18.29 B3 resta development non
 promossa. [Diagnosi esterna su 30 replay](e18/reports/E18_28_EXTERNAL_PASS_CAUSES_AND_NEXT_ACTIONS_IT.md).
 
 [Report D1-D30 completo e audit COOP](e18/reports/E18_27_TOP770_D01_D30_COMPLETE_KPI_IT.md),
-salvato come esempio storico. Il [formato standard corrente V3](../../../experiments/e18/reports/common/E18_AGENT_COMPARISON_REPORT_STANDARD_V3_IT.md)
-prevede Top770 vs una sola candidata, 21 pannelli con WATER/FEED e senza
+salvato come esempio storico. Il [formato standard corrente V4](../../../experiments/e18/reports/common/E18_AGENT_COMPARISON_REPORT_STANDARD_V4_IT.md)
+prevede Top770 vs una sola candidata, 22 pannelli con WATER/FEED/CARE separati e senza
 Cause PASS, oltre ai KPI economico-operativi complementari.
+
+[Diagnosi pubblica E18.31 e Top770-002](e18/reports/E18_31_PUBLIC_TOP002_DIAGNOSTIC_20260906_IT.md):
+sei replay nostri (5 WIN / 1 LOSS), quattro 770 del nuovo riferimento su cinque
+esaminati; ledger riconciliati. Registro comune aggiornato, entrambi i Top770
+consumati per release future. Corpus, report e riferimenti di recupero sotto E18.
 
 | Stato | File | Uso |
 |---|---|---|
@@ -37,7 +56,11 @@ Cause PASS, oltre ai KPI economico-operativi complementari.
 | DEVELOPMENT — ROBUSTNESS / INCUMBENT GATE FAIL | `e18/MODEL_SPEC_CODEX_E18_27_770_D10_D15_CASHFLOW_V3.md` | Melon D11, Q2 D12, zero fughe; +13,44% matched su sette seed contro E18.16, 10/14 positivi; non promossa |
 | PUBLISHED — EXTERNAL VALIDATION | `e18/MODEL_SPEC_CODEX_E18_28_770_FULL_SEASON_V1.md` | C pubblicata; 30 replay esterni, 17 sconfitte, 13 vittorie; non incumbent |
 | DEVELOPMENT — SAFETY GATE FAIL | `e18/MODEL_SPEC_CODEX_E18_29_770_ANTI_PASS_V3.md` | B3 +7,68% matched, PASS -26,78%; morte crop ereditata, non promossa |
-| ACTIVE DEVELOPMENT — CORE CONTRACTS PASS | `e18/MODEL_SPEC_CODEX_E18_30_770_MISSION_DISPATCHER_V1.md` | nucleo con 25 test; adattatore/runtime e beneficio economico da verificare |
+| VERIFIED DEVELOPMENT BASELINE | `e18/MODEL_SPEC_CODEX_E18_30_770_MISSION_DISPATCHER_V1.md` | CROP_POOL: +10,05% matched, 14/14 safety, 371 test; standalone verificato, NON pubblicato |
+| PUBLISHED DIAGNOSTIC — ECONOMY NOT YET PASSED | `e18/MODEL_SPEC_CODEX_E18_31_770_PRODUCTIVE_EXPANSION_V1.md` | UNIFIED V11 / 56050866: 28/28 safety interno, sei primi replay pubblici senza perdite; non promossa |
+| FROZEN INTERNAL CONTROL | `e18/MODEL_SPEC_CODEX_E18_32_770_READY_WORK_V1.md` | DEMAND RELEASE V9 verificata; calendario legacy, non conforme alla policy comune; non pubblicata |
+| CURRENT DEVELOPMENT — GATE FAIL | `e18/MODEL_SPEC_CODEX_E18_33_COMMON_RESOURCE_POLICY_V1.md` | Kernel e prototipo nativo, 67 test; V5 non raggiunge 770, economia -12,95% su quattro casi matched; non eleggibile |
+| ROADMAP — NOT STARTED | `e19/MODEL_SPEC_CODEX_E19_PARAMETRIC_VALIDATION_DRAFT.md` | Confronto 770/772/662 con stessa policy soltanto dopo consolidamento E18 |
 
 Handoff corrente: `docs/NEW_SESSION.md`.
 Il seguente handoff E18.27 è storico (2026-09-05):
@@ -49,6 +72,6 @@ Consolida gradino Melon D11, fughe al cambio D14 e mancata risposta ai
 pascoli vuoti, con gate della prossima versione e seconda fase di chiusura.
 
 Le specifiche e gli asset riproducibili di Codex sono raggruppati per round in
-`e17/` ed `e18/`: model spec, config, design, prompt, report, review, tool, test
+`e17/`, `e18/` ed `e19/`: model spec, config, design, prompt, report, review, tool, test
 e artifact.
 I manifest, i tornei e i confronti condivisi restano sotto `experiments/`.

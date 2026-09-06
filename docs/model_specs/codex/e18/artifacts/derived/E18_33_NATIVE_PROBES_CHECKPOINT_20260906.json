@@ -1,0 +1,378 @@
+{
+  "probes": [
+    {
+      "file": "E18_33_COMMON_GATE_NATIVE_V1_SMOKE_20260906.json",
+      "complete": true,
+      "failures": [],
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 13149.0,
+          "control_cash": 85073.0,
+          "cash_delta": -71924.0,
+          "PASS": 1084,
+          "MOVE": 2013,
+          "control_PASS": 847,
+          "control_MOVE": 3447,
+          "crop_deaths": 36,
+          "animal_losses": 13,
+          "incomplete_missions": 0,
+          "final_topology": {
+            "Q0": 5,
+            "Q1": 6,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "exact770": false,
+          "cash_parity_errors": 0,
+          "max_resources": 11,
+          "max_hands": 12,
+          "gate_pass": false
+        }
+      ],
+      "means": {
+        "cash": 13149.0,
+        "control_cash": 85073.0,
+        "cash_delta": -71924.0,
+        "PASS": 1084,
+        "MOVE": 2013,
+        "control_PASS": 847,
+        "control_MOVE": 3447
+      },
+      "gate_pass_count": 0
+    },
+    {
+      "file": "E18_33_COMMON_GATE_NATIVE_V2_FUNDING_SMOKE_20260906.json",
+      "complete": true,
+      "failures": [],
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 20517.0,
+          "control_cash": 85073.0,
+          "cash_delta": -64556.0,
+          "PASS": 1296,
+          "MOVE": 1669,
+          "control_PASS": 847,
+          "control_MOVE": 3447,
+          "crop_deaths": 59,
+          "animal_losses": 8,
+          "incomplete_missions": 0,
+          "final_topology": {
+            "Q0": 6,
+            "Q1": 4,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "exact770": false,
+          "cash_parity_errors": 0,
+          "max_resources": 10,
+          "max_hands": 12,
+          "gate_pass": false
+        }
+      ],
+      "means": {
+        "cash": 20517.0,
+        "control_cash": 85073.0,
+        "cash_delta": -64556.0,
+        "PASS": 1296,
+        "MOVE": 1669,
+        "control_PASS": 847,
+        "control_MOVE": 3447
+      },
+      "gate_pass_count": 0
+    },
+    {
+      "file": "E18_33_COMMON_GATE_NATIVE_V3_LEDGER_SMOKE_20260906.json",
+      "complete": true,
+      "failures": [],
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 24324.0,
+          "control_cash": 85073.0,
+          "cash_delta": -60749.0,
+          "PASS": 1116,
+          "MOVE": 3803,
+          "control_PASS": 847,
+          "control_MOVE": 3447,
+          "crop_deaths": 0,
+          "animal_losses": 0,
+          "incomplete_missions": 0,
+          "final_topology": {
+            "Q0": 6,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "exact770": false,
+          "cash_parity_errors": 0,
+          "max_resources": 13,
+          "max_hands": 12,
+          "gate_pass": false
+        }
+      ],
+      "means": {
+        "cash": 24324.0,
+        "control_cash": 85073.0,
+        "cash_delta": -60749.0,
+        "PASS": 1116,
+        "MOVE": 3803,
+        "control_PASS": 847,
+        "control_MOVE": 3447
+      },
+      "gate_pass_count": 0
+    },
+    {
+      "file": "E18_33_COMMON_GATE_NATIVE_V4_PORTFOLIO_SMOKE_20260906.json",
+      "complete": true,
+      "failures": [],
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 44230.0,
+          "control_cash": 85073.0,
+          "cash_delta": -40843.0,
+          "PASS": 1121,
+          "MOVE": 3761,
+          "control_PASS": 847,
+          "control_MOVE": 3447,
+          "crop_deaths": 0,
+          "animal_losses": 2,
+          "incomplete_missions": 0,
+          "final_topology": {
+            "Q0": 5,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "exact770": false,
+          "cash_parity_errors": 0,
+          "max_resources": 12,
+          "max_hands": 12,
+          "gate_pass": false
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 44230.0,
+          "control_cash": 85073.0,
+          "cash_delta": -40843.0,
+          "PASS": 1121,
+          "MOVE": 3761,
+          "control_PASS": 847,
+          "control_MOVE": 3447,
+          "crop_deaths": 0,
+          "animal_losses": 2,
+          "incomplete_missions": 0,
+          "final_topology": {
+            "Q0": 5,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "exact770": false,
+          "cash_parity_errors": 0,
+          "max_resources": 12,
+          "max_hands": 12,
+          "gate_pass": false
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 46595.0,
+          "control_cash": 80047.0,
+          "cash_delta": -33452.0,
+          "PASS": 1163,
+          "MOVE": 3761,
+          "control_PASS": 846,
+          "control_MOVE": 3446,
+          "crop_deaths": 0,
+          "animal_losses": 2,
+          "incomplete_missions": 1,
+          "final_topology": {
+            "Q0": 5,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "exact770": false,
+          "cash_parity_errors": 0,
+          "max_resources": 12,
+          "max_hands": 12,
+          "gate_pass": false
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 46595.0,
+          "control_cash": 80047.0,
+          "cash_delta": -33452.0,
+          "PASS": 1163,
+          "MOVE": 3761,
+          "control_PASS": 846,
+          "control_MOVE": 3446,
+          "crop_deaths": 0,
+          "animal_losses": 2,
+          "incomplete_missions": 1,
+          "final_topology": {
+            "Q0": 5,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "exact770": false,
+          "cash_parity_errors": 0,
+          "max_resources": 12,
+          "max_hands": 12,
+          "gate_pass": false
+        }
+      ],
+      "means": {
+        "cash": 45412.5,
+        "control_cash": 82560.0,
+        "cash_delta": -37147.5,
+        "PASS": 1142,
+        "MOVE": 3761,
+        "control_PASS": 846.5,
+        "control_MOVE": 3446.5
+      },
+      "gate_pass_count": 0
+    },
+    {
+      "file": "E18_33_COMMON_GATE_NATIVE_V5_FEED_DISTRIBUTION_SMOKE_20260906.json",
+      "complete": true,
+      "failures": [],
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 75347.0,
+          "control_cash": 85073.0,
+          "cash_delta": -9726.0,
+          "PASS": 908,
+          "MOVE": 4027,
+          "control_PASS": 847,
+          "control_MOVE": 3447,
+          "crop_deaths": 0,
+          "animal_losses": 0,
+          "incomplete_missions": 0,
+          "final_topology": {
+            "Q0": 6,
+            "Q1": 5,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "exact770": false,
+          "cash_parity_errors": 0,
+          "max_resources": 11,
+          "max_hands": 12,
+          "gate_pass": false
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 72309.0,
+          "control_cash": 85073.0,
+          "cash_delta": -12764.0,
+          "PASS": 891,
+          "MOVE": 3999,
+          "control_PASS": 847,
+          "control_MOVE": 3447,
+          "crop_deaths": 0,
+          "animal_losses": 0,
+          "incomplete_missions": 1,
+          "final_topology": {
+            "Q0": 6,
+            "Q1": 5,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "exact770": false,
+          "cash_parity_errors": 0,
+          "max_resources": 11,
+          "max_hands": 12,
+          "gate_pass": false
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 62481.0,
+          "control_cash": 80047.0,
+          "cash_delta": -17566.0,
+          "PASS": 906,
+          "MOVE": 4022,
+          "control_PASS": 846,
+          "control_MOVE": 3446,
+          "crop_deaths": 0,
+          "animal_losses": 0,
+          "incomplete_missions": 0,
+          "final_topology": {
+            "Q0": 6,
+            "Q1": 5,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "exact770": false,
+          "cash_parity_errors": 0,
+          "max_resources": 11,
+          "max_hands": 12,
+          "gate_pass": false
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 77340.0,
+          "control_cash": 80047.0,
+          "cash_delta": -2707.0,
+          "PASS": 864,
+          "MOVE": 4048,
+          "control_PASS": 846,
+          "control_MOVE": 3446,
+          "crop_deaths": 0,
+          "animal_losses": 0,
+          "incomplete_missions": 1,
+          "final_topology": {
+            "Q0": 6,
+            "Q1": 5,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "exact770": false,
+          "cash_parity_errors": 0,
+          "max_resources": 11,
+          "max_hands": 12,
+          "gate_pass": false
+        }
+      ],
+      "means": {
+        "cash": 71869.25,
+        "control_cash": 82560.0,
+        "cash_delta": -10690.75,
+        "PASS": 892.25,
+        "MOVE": 4024,
+        "control_PASS": 846.5,
+        "control_MOVE": 3446.5
+      },
+      "gate_pass_count": 0
+    }
+  ],
+  "selection": "NONE_ELIGIBLE",
+  "e19_started": false,
+  "holdout_consumed": false
+}

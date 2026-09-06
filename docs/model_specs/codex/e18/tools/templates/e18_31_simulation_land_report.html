@@ -1,0 +1,186 @@
+<div id="e29-simulation-d30">
+  <h2>Traiettorie 7–7–0 · D1–D30</h2>
+  <div class="e29-legend" aria-label="Serie del confronto">
+    <button type="button" aria-pressed="true" data-series="candidate"><span style="color:var(--viz-series-1)">● ━</span> E18.29 B3 · n14</button>
+    <button type="button" aria-pressed="true" data-series="top770"><span style="color:var(--viz-series-2)">■ ┅</span> Top770 · n5</button>
+  </div>
+  <div class="text-small">Mediana e intervallo min–max · confronto descrittivo con Top770</div>
+  <div class="e29-grid">
+    <section data-metric="money" data-unit="Cassa ($)"><h3>01 · Cassa</h3><div class="e29-chart"></div></section>
+    <section data-metric="people" data-unit="Persone (n)"><h3>02 · Persone, incluso farmer</h3><div class="e29-chart"></div></section>
+    <section data-metric="crop_tiles" data-unit="Tile (n)" data-land-panel><h3>03 · Tile coltivate e totali sbloccate</h3><div class="e29-legend" aria-label="Quantità di terreno"><button type="button" aria-pressed="true" data-land-metric="crop_tiles">● ━ Coltivate</button><button type="button" aria-pressed="true" data-land-metric="unlocked_tiles">○ ┅ Totali sbloccate</button></div><div class="text-small">25: Q0 · 50: +Q1 · 75: +Q2 · animali nel pannello 04</div><div class="e29-chart"></div></section>
+    <section data-metric="occupied_livestock_tiles" data-unit="Tile (n)"><h3>04 · Tile con animali</h3><div class="e29-chart"></div></section>
+    <section data-metric="COW" data-family="animals" data-unit="Animali (n)"><h3>05 · Mucche</h3><div class="e29-chart"></div></section>
+    <section data-metric="SHEEP" data-family="animals" data-unit="Animali (n)"><h3>06 · Pecore</h3><div class="e29-chart"></div></section>
+    <section data-metric="GOOSE" data-family="animals" data-unit="Animali (n)"><h3>07 · Oche</h3><div class="e29-chart"></div></section>
+    <section data-metric="empty_pastures" data-unit="Tile (n)"><h3>08 · Pascoli vuoti</h3><div class="e29-chart"></div></section>
+    <section data-metric="MELON" data-family="crops" data-unit="Tile (n)"><h3>09 · Meloni</h3><div class="e29-chart"></div></section>
+    <section data-metric="WHEAT" data-family="crops" data-unit="Tile (n)"><h3>10 · Grano</h3><div class="e29-chart"></div></section>
+    <section data-metric="STRAWBERRY" data-family="crops" data-unit="Tile (n)"><h3>11 · Fragole</h3><div class="e29-chart"></div></section>
+    <section data-metric="CARROT" data-family="crops" data-unit="Tile (n)"><h3>12 · Carote</h3><div class="e29-chart"></div></section>
+    <section data-metric="TOMATO" data-family="crops" data-unit="Tile (n)"><h3>13 · Pomodori</h3><div class="e29-chart"></div></section>
+    <section data-metric="empty_coops" data-unit="Tile (n)"><h3>14 · Ricoveri oche vuoti</h3><div class="e29-chart"></div></section>
+    <section data-metric="MOVE" data-unit="MOVE / giorno"><h3>15 · Movimenti</h3><div class="e29-chart"></div></section>
+    <section data-metric="PASS" data-unit="PASS / giorno"><h3>16 · PASS</h3><div class="e29-chart"></div></section>
+    <section data-metric="unwatered_tiles_h24" data-unit="Tile (n)"><h3>17 · Colture non irrigate a H24</h3><div class="e29-chart"></div></section>
+    <section data-metric="verified_animal_losses" data-unit="Perdite / giorno"><h3>18 · Perdite animali verificate</h3><div class="e29-chart"></div></section>
+    <section data-metric="weed_tiles" data-unit="Tile (n)"><h3>19 · Tile di erbacce</h3><div class="e29-chart"></div></section>
+    <section data-metric="WATER" data-unit="WATER / giorno"><h3>20 · WATER eseguiti al giorno</h3><div class="e29-chart"></div></section>
+    <section data-metric="FEED" data-unit="FEED / giorno"><h3>21 · FEED eseguiti al giorno</h3><div class="e29-chart"></div></section>
+    <section data-metric="pass_share" data-unit="PASS (%)"><h3>22 · Quota PASS sui comandi</h3><div class="e29-chart"></div></section>
+    <section data-metric="net_cash_100_slots" data-unit="$/100 comandi"><h3>23 · Flusso netto / 100 comandi</h3><div class="e29-chart"></div></section>
+    <section data-metric="fertilizer_collected" data-unit="Unità / giorno"><h3>24 · Fertilizzante raccolto</h3><div class="text-small">Top770: N/D · quantità verificate</div><div class="e29-chart"></div></section>
+    <section data-metric="fertilizer_used" data-unit="Unità / giorno"><h3>25 · Fertilizzante utilizzato</h3><div class="e29-chart"></div></section>
+  </div>
+  <div class="tooltip e29-tooltip" role="tooltip" hidden></div>
+</div>
+<style>
+#e29-simulation-d30 {position:relative;color:var(--foreground);width:100%;}
+#e29-simulation-d30 .e29-grid {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px 20px;}
+#e29-simulation-d30 section {min-width:0;}
+#e29-simulation-d30 h3 {margin-bottom:6px;}
+#e29-simulation-d30 .e29-legend {display:flex;gap:8px 18px;flex-wrap:wrap;align-items:center;}
+#e29-simulation-d30 .e29-legend {margin-bottom:8px;}
+#e29-simulation-d30 .e29-legend button {background:transparent;border:0;border-radius:0;box-shadow:none;padding:3px 0;color:var(--foreground);font:inherit;cursor:pointer;}
+#e29-simulation-d30 .e29-legend button[aria-pressed="false"] {opacity:.45;}
+#e29-simulation-d30 .e29-chart {width:100%;}
+#e29-simulation-d30 svg.e29-plot {display:block;overflow:visible;}
+#e29-simulation-d30 svg.e29-plot text {fill:var(--foreground);font-size:12px;font-weight:400;}
+#e29-simulation-d30 svg.e29-plot .domain,#e29-simulation-d30 svg.e29-plot .tick line {stroke:var(--border);}
+#e29-simulation-d30 .e29-tooltip {position:absolute;pointer-events:none;z-index:5;max-width:calc(100% - 12px);background:var(--popover);color:var(--popover-foreground);padding:8px;box-sizing:border-box;}
+#e29-simulation-d30 .e29-tooltip[hidden] {display:none;}
+#e29-simulation-d30 .e29-tooltip div {white-space:normal;}
+@media(max-width:600px) {#e29-simulation-d30 .e29-grid {grid-template-columns:minmax(0,1fr);}}
+@media(pointer:coarse) {#e29-simulation-d30 .e29-legend button {min-height:44px;}}
+</style>
+<script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+<script>
+(() => {
+  const root=document.getElementById('e29-simulation-d30');
+  const data=__REPORT_SERIES__;
+  const tooltip=root.querySelector('.e29-tooltip');
+  const series=[
+    {key:'top770',name:'Top770',color:'var(--viz-series-2)',dash:'6 3',symbol:d3.symbolSquare},
+    {key:'candidate',name:'E18.29 B3',color:'var(--viz-series-1)',dash:null,symbol:d3.symbolCircle}
+  ];
+  const visible=new Set(series.map(s=>s.key));
+  const landVisible=new Set(['crop_tiles','unlocked_tiles']);
+  const shown=s=>visible.has(s.key)&&(!s.landMetric||landVisible.has(s.landMetric));
+  function updateVisibility(){
+    root.querySelectorAll('[data-series-group]').forEach(g=>{
+      const show=visible.has(g.dataset.seriesGroup)&&(!g.dataset.landMetric||landVisible.has(g.dataset.landMetric));
+      g.setAttribute('display',show?'inline':'none');
+    });
+  }
+  const families={animals:['COW','SHEEP','GOOSE'],crops:['MELON','WHEAT','STRAWBERRY','CARROT','TOMATO']};
+  const number=new Intl.NumberFormat('it-IT',{maximumFractionDigits:1});
+  let activeHide=()=>{};
+  function showTooltip(event,rows){
+    tooltip.replaceChildren();
+    rows.forEach(text=>{const el=document.createElement('div');el.textContent=text;tooltip.append(el);});
+    tooltip.hidden=false;
+    const rb=root.getBoundingClientRect(),tb=tooltip.getBoundingClientRect();
+    const left=Math.max(4,Math.min(event.clientX-rb.left+12,rb.width-tb.width-4));
+    const top=Math.max(0,event.clientY-rb.top-tb.height-14);
+    tooltip.style.left=left+'px';tooltip.style.top=top+'px';
+  }
+  function checkLabels(svg){
+    const nodes=[...svg.node().querySelectorAll('.tick text,.axis-title,[data-value-label]')].filter(n=>n.getClientRects().length);
+    const bounds=nodes.map(n=>n.getBoundingClientRect());
+    const overlap=bounds.some((a,i)=>bounds.slice(i+1).some(b=>a.left<b.right+4&&a.right+4>b.left&&a.top<b.bottom+4&&a.bottom+4>b.top));
+    svg.attr('data-label-overlap',String(overlap));
+  }
+  function frame(section,values){
+    const box=section.querySelector('.e29-chart'),width=box.clientWidth,height=224;
+    const m={left:64,right:14,top:16,bottom:50};
+    d3.select(box).selectAll('*').remove();
+    const svg=d3.select(box).append('svg').attr('class','e29-plot').attr('width',width).attr('height',height).attr('viewBox',`0 0 ${width} ${height}`).attr('role','img').attr('aria-label',section.querySelector('h3').textContent+' · D1–D30');
+    const [lo,hi]=d3.extent([0,...values]);
+    const span=hi-lo||1;
+    const y=d3.scaleLinear().domain([lo<0?lo-span*.08:0,hi+span*.12]).nice(4).range([height-m.bottom-5,m.top+5]);
+    const x=d3.scaleLinear().domain([1,30]).range([m.left+5,width-m.right-5]);
+    svg.append('rect').attr('data-chart-frame','').attr('x',m.left).attr('y',m.top).attr('width',width-m.left-m.right).attr('height',height-m.top-m.bottom).attr('fill','none').attr('stroke','var(--border)');
+    let ticks=y.ticks(4);
+    if(!['pass_share','net_cash_100_slots'].includes(section.dataset.metric)) ticks=ticks.filter(Number.isInteger);
+    svg.append('g').attr('transform',`translate(${m.left},0)`).call(d3.axisLeft(y).tickValues(ticks).tickFormat(v=>Math.abs(v)>=1000?number.format(v/1000)+'k':number.format(v)).tickSize(0).tickPadding(8)).call(g=>g.select('.domain').remove());
+    const gx=svg.append('g').attr('transform',`translate(0,${height-m.bottom})`).call(d3.axisBottom(x).tickValues([1,10,20,30]).tickFormat(v=>'D'+v).tickSize(0).tickPadding(8));
+    gx.select('.domain').remove();gx.selectAll('.tick text').attr('text-anchor',v=>v===1?'start':v===30?'end':'middle');
+    svg.append('text').attr('class','axis-title').attr('data-axis','x').attr('x',(m.left+width-m.right)/2).attr('y',height-4).attr('text-anchor','middle').text('Giorno');
+    svg.append('text').attr('class','axis-title').attr('data-axis','y').attr('transform',`translate(13,${(m.top+height-m.bottom)/2}) rotate(-90)`).attr('text-anchor','middle').text(section.dataset.unit);
+    return {svg,x,y,width,height,m};
+  }
+  function interaction(section,f,draw){
+    const {svg,x,width,height,m}=f;
+    const guide=svg.append('line').attr('data-chart-hover-guide','').attr('y1',m.top).attr('y2',height-m.bottom).attr('stroke','var(--foreground)').attr('stroke-width',1).attr('visibility','hidden');
+    const marks=svg.append('g').attr('data-hover-marks','');
+    let pinned=false;
+    const hide=()=>{pinned=false;guide.attr('visibility','hidden');marks.selectAll('*').remove();tooltip.hidden=true;};
+    const move=event=>{
+      const pixel=Math.max(x.range()[0],Math.min(x.range()[1],d3.pointer(event,svg.node())[0]));
+      guide.attr('x1',pixel).attr('x2',pixel).attr('visibility','visible');
+      marks.selectAll('*').remove();
+      draw(event,x.invert(pixel),pixel,marks);
+    };
+    svg.append('rect').attr('data-chart-hit','').attr('data-chart-hover-overlay','cross-series').attr('x',m.left).attr('y',m.top).attr('width',width-m.left-m.right).attr('height',height-m.top-m.bottom).attr('fill','transparent').style('touch-action','pan-y')
+      .on('pointerenter',event=>{activeHide();activeHide=hide;move(event);})
+      .on('pointermove',event=>{if(!pinned)move(event);})
+      .on('pointerleave',()=>{if(!pinned)hide();})
+      .on('click',event=>{pinned=!pinned;move(event);});
+    checkLabels(svg);
+  }
+  function render(section){
+    const metric=section.dataset.metric;
+    const land=section.hasAttribute('data-land-panel');
+    const plotted=land?series.flatMap(s=>['crop_tiles','unlocked_tiles'].map(k=>({
+      ...s,id:s.key+'_'+k,metric:k,landMetric:k,
+      name:s.name+' · '+(k==='crop_tiles'?'coltivate':'totali'),
+      dash:k==='unlocked_tiles'?'6 3':null,open:k==='unlocked_tiles'
+    }))):series.filter(s=>data[s.key][metric]).map(s=>({...s,metric,id:s.key}));
+    const metrics=land?['crop_tiles','unlocked_tiles']:(families[section.dataset.family]||[metric]);
+    const all=series.flatMap(s=>metrics.filter(k=>data[s.key][k]).flatMap(k=>data[s.key][k].flat()));
+    const f=frame(section,all),{svg,x,y}=f;
+    const line=d3.line().x((d,i)=>x(i+1)).y(d=>y(d[0])).curve(d3.curveStepAfter);
+    const area=d3.area().x((d,i)=>x(i+1)).y0(d=>y(d[1])).y1(d=>y(d[2])).curve(d3.curveStepAfter);
+    const descriptions=[];
+    plotted.forEach(s=>{
+      const rows=data[s.key][s.metric];
+      const g=svg.append('g').attr('data-series-group',s.key).attr('data-land-metric',s.landMetric||null).attr('display',shown(s)?null:'none');
+      g.append('path').attr('d',area(rows)).attr('fill',s.color).attr('opacity',s.open?.04:.1);
+      g.append('path').attr('data-series-line',s.id).attr('d',line(rows)).attr('fill','none').attr('stroke',s.color).attr('stroke-width',1.8).attr('stroke-dasharray',s.dash);
+      g.selectAll('path.point').data(rows).enter().append('path').attr('class','point').attr('d',d3.symbol().type(s.symbol).size(13)).attr('transform',(d,i)=>`translate(${x(i+1)},${y(d[0])})`).attr('fill',s.open?'none':s.color).attr('stroke',s.open?s.color:null).attr('stroke-width',s.open?1:null);
+      descriptions.push(s.name+': '+rows.map((r,i)=>'D'+(i+1)+' '+number.format(r[0])+' ['+number.format(r[1])+'–'+number.format(r[2])+']').join('; '));
+    });
+    svg.append('desc').text(descriptions.join(' | '));
+    const localValues=plotted.flatMap(s=>data[s.key][s.metric].flat());
+    if(localValues.every(v=>v===0)) svg.append('text').attr('x',f.m.left+12).attr('y',f.m.top+22).text('0 · tutte le serie disponibili');
+    interaction(section,f,(event,day,pixel,marks)=>{
+      // Daily stocks/flows are piecewise constant, matching curveStepAfter.
+      const positions=Array.from({length:30},(_,i)=>({x:i+1}));
+      let index=d3.bisector(d=>d.x).center(positions,day);
+      if(positions[index].x>day&&index>0)index--;
+      const lines=['D'+(index+1)+' · mediana [min–max]'];
+      plotted.filter(shown).forEach(s=>{
+        const r=data[s.key][s.metric][index];
+        marks.append('path').attr('data-chart-hover-marker',s.id).attr('d',d3.symbol().type(s.symbol).size(38)).attr('transform',`translate(${pixel},${y(r[0])})`).attr('fill',s.color);
+        lines.push(s.name+': '+number.format(r[0])+' ['+number.format(r[1])+'–'+number.format(r[2])+']');
+      });
+      if(metric==='fertilizer_collected'&&visible.has('top770'))lines.push('Top770: N/D');
+      showTooltip(event,lines);
+    });
+  }
+  const panels=[...root.querySelectorAll('section')];
+  root.querySelectorAll('button[data-series]').forEach(button=>button.addEventListener('click',()=>{
+    const key=button.dataset.series;
+    if(visible.has(key))visible.delete(key);else visible.add(key);
+    button.setAttribute('aria-pressed',String(visible.has(key)));activeHide();
+    updateVisibility();
+  }));
+  root.querySelectorAll('button[data-land-metric]').forEach(button=>button.addEventListener('click',()=>{
+    const key=button.dataset.landMetric;
+    if(landVisible.has(key))landVisible.delete(key);else landVisible.add(key);
+    button.setAttribute('aria-pressed',String(landVisible.has(key)));activeHide();updateVisibility();
+  }));
+  const observer=new ResizeObserver(entries=>entries.forEach(entry=>render(entry.target)));
+  panels.forEach(panel=>observer.observe(panel));
+})();
+</script>

@@ -1,0 +1,363 @@
+{
+  "analysis_id": "E18_30_PASS_PHASE_DIAGNOSIS_20260906",
+  "sources": {
+    "E18_30_MISSION_GATE_CROP_STRESS_V2_20260906.json": "3ae0fb3b1ef4c8b7ec47a7df8e462d719e5cd06ec251c52b575a83e133b5e3b8",
+    "E18_30_MISSION_GATE_CROP_DEVELOPMENT_V2_20260906.json": "d6eebf9599b59a277fc4ecd22bafc59e2d786f72576cd8590b6589c05d4dd49b",
+    "E18_30_MISSION_GATE_SMOKE_V1_20260906.json": "26a868a26de116a655a1fec2cc256bb4ae5f79a7a40e039518f171bbdee5def4",
+    "E18_30_MISSION_GATE_DEVELOPMENT_V1_20260906.json": "269b0729389b7c8e98b628b2618933731367b6fee79248b729f5be17ca0f3af5",
+    "E18_26_JESSE_770_D01_D30_CLOSURE.json": "2007120dfefa0f58bb656c9182e4fa633aebcb8aba23b8fd2bc1467a345b9e73",
+    "E18_28_FULL_SEASON_C_PLAN_V1.json": "643970c6a8b4b6636f8352d4479c5550c6c985861104b9cc1e126f4723cdf9b8",
+    "tools/e18_30_mission_runtime.py": "2818f3c4f1b1cf15acddf741cb98291f3341f3ffd5abe39f59b2d9dc605f8144",
+    "tools/e18_19_retrying_trajectory_controller.py": "30b68cf47c8a3f9662b6aab2f480531420cdcc3d1ce4abc96659974d9294befe",
+    "tools/e18_18_capacity_trajectory_planner.py": "b5b810bfa19e80a15f74eabfabbdc759bfa807fe89fd053d34bf1d6f1ca05eb2"
+  },
+  "windows": {
+    "D1-D6": {
+      "parent": 270.57142857142856,
+      "candidate": 270.57142857142856,
+      "top770": 141,
+      "reduction_vs_parent_pct": 0.0
+    },
+    "D7-D11": {
+      "parent": 439.64285714285717,
+      "candidate": 439.64285714285717,
+      "top770": 112,
+      "reduction_vs_parent_pct": 0.0
+    },
+    "D1-D14": {
+      "parent": 833.3571428571429,
+      "candidate": 786.7142857142857,
+      "top770": 305,
+      "reduction_vs_parent_pct": 5.596982943344486
+    },
+    "D15-D30": {
+      "parent": 734.7142857142857,
+      "candidate": 303.57142857142856,
+      "top770": 209,
+      "reduction_vs_parent_pct": 58.681703286019825
+    },
+    "D1-D15": {
+      "parent": 847.6428571428571,
+      "candidate": 801,
+      "top770": 315,
+      "reduction_vs_parent_pct": 5.502654419819663
+    },
+    "D16-D30": {
+      "parent": 720.4285714285714,
+      "candidate": 289.2857142857143,
+      "top770": 199,
+      "reduction_vs_parent_pct": 59.84533016061868
+    }
+  },
+  "daily": [
+    {
+      "day": 1,
+      "candidate_pass_mean": 43,
+      "parent_pass_mean": 43,
+      "pool_missions_started_mean": 0,
+      "pool_fertilizer_ack_mean": 0,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 2,
+      "candidate_pass_mean": 54,
+      "parent_pass_mean": 54,
+      "pool_missions_started_mean": 0,
+      "pool_fertilizer_ack_mean": 0,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 4
+    },
+    {
+      "day": 3,
+      "candidate_pass_mean": 3,
+      "parent_pass_mean": 3,
+      "pool_missions_started_mean": 0,
+      "pool_fertilizer_ack_mean": 0,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 4
+    },
+    {
+      "day": 4,
+      "candidate_pass_mean": 74,
+      "parent_pass_mean": 74,
+      "pool_missions_started_mean": 0,
+      "pool_fertilizer_ack_mean": 0,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 4
+    },
+    {
+      "day": 5,
+      "candidate_pass_mean": 39.285714285714285,
+      "parent_pass_mean": 39.285714285714285,
+      "pool_missions_started_mean": 0,
+      "pool_fertilizer_ack_mean": 0,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 4
+    },
+    {
+      "day": 6,
+      "candidate_pass_mean": 57.285714285714285,
+      "parent_pass_mean": 57.285714285714285,
+      "pool_missions_started_mean": 0,
+      "pool_fertilizer_ack_mean": 0,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 6
+    },
+    {
+      "day": 7,
+      "candidate_pass_mean": 65.57142857142857,
+      "parent_pass_mean": 65.57142857142857,
+      "pool_missions_started_mean": 0,
+      "pool_fertilizer_ack_mean": 0,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 6
+    },
+    {
+      "day": 8,
+      "candidate_pass_mean": 103,
+      "parent_pass_mean": 103,
+      "pool_missions_started_mean": 0,
+      "pool_fertilizer_ack_mean": 0,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 6
+    },
+    {
+      "day": 9,
+      "candidate_pass_mean": 97,
+      "parent_pass_mean": 97,
+      "pool_missions_started_mean": 0,
+      "pool_fertilizer_ack_mean": 0,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 6
+    },
+    {
+      "day": 10,
+      "candidate_pass_mean": 105.64285714285714,
+      "parent_pass_mean": 105.64285714285714,
+      "pool_missions_started_mean": 0,
+      "pool_fertilizer_ack_mean": 0,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 6
+    },
+    {
+      "day": 11,
+      "candidate_pass_mean": 68.42857142857143,
+      "parent_pass_mean": 68.42857142857143,
+      "pool_missions_started_mean": 0,
+      "pool_fertilizer_ack_mean": 0,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 13
+    },
+    {
+      "day": 12,
+      "candidate_pass_mean": 52.92857142857143,
+      "parent_pass_mean": 89.21428571428571,
+      "pool_missions_started_mean": 5.857142857142857,
+      "pool_fertilizer_ack_mean": 5.785714285714286,
+      "pool_crop_ack_mean": 0.07142857142857142,
+      "planned_collection_commands": 7
+    },
+    {
+      "day": 13,
+      "candidate_pass_mean": 16,
+      "parent_pass_mean": 26.285714285714285,
+      "pool_missions_started_mean": 1,
+      "pool_fertilizer_ack_mean": 1,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 11
+    },
+    {
+      "day": 14,
+      "candidate_pass_mean": 7.571428571428571,
+      "parent_pass_mean": 7.642857142857143,
+      "pool_missions_started_mean": 0,
+      "pool_fertilizer_ack_mean": 0,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 13
+    },
+    {
+      "day": 15,
+      "candidate_pass_mean": 14.285714285714286,
+      "parent_pass_mean": 14.285714285714286,
+      "pool_missions_started_mean": 0,
+      "pool_fertilizer_ack_mean": 0,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 14
+    },
+    {
+      "day": 16,
+      "candidate_pass_mean": 23.285714285714285,
+      "parent_pass_mean": 75.64285714285714,
+      "pool_missions_started_mean": 9.857142857142858,
+      "pool_fertilizer_ack_mean": 9.857142857142858,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 3
+    },
+    {
+      "day": 17,
+      "candidate_pass_mean": 32.714285714285715,
+      "parent_pass_mean": 82.28571428571429,
+      "pool_missions_started_mean": 9,
+      "pool_fertilizer_ack_mean": 9,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 18,
+      "candidate_pass_mean": 15.285714285714286,
+      "parent_pass_mean": 47.5,
+      "pool_missions_started_mean": 3.857142857142857,
+      "pool_fertilizer_ack_mean": 3.857142857142857,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 19,
+      "candidate_pass_mean": 23.571428571428573,
+      "parent_pass_mean": 38.42857142857143,
+      "pool_missions_started_mean": 3,
+      "pool_fertilizer_ack_mean": 3,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 20,
+      "candidate_pass_mean": 21,
+      "parent_pass_mean": 54.5,
+      "pool_missions_started_mean": 6.857142857142857,
+      "pool_fertilizer_ack_mean": 6.857142857142857,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 21,
+      "candidate_pass_mean": 14,
+      "parent_pass_mean": 60.357142857142854,
+      "pool_missions_started_mean": 7.857142857142857,
+      "pool_fertilizer_ack_mean": 7.857142857142857,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 22,
+      "candidate_pass_mean": 23,
+      "parent_pass_mean": 80.42857142857143,
+      "pool_missions_started_mean": 11.857142857142858,
+      "pool_fertilizer_ack_mean": 11.857142857142858,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 23,
+      "candidate_pass_mean": 11.571428571428571,
+      "parent_pass_mean": 21.357142857142858,
+      "pool_missions_started_mean": 2.857142857142857,
+      "pool_fertilizer_ack_mean": 2.857142857142857,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 24,
+      "candidate_pass_mean": 21.285714285714285,
+      "parent_pass_mean": 57.42857142857143,
+      "pool_missions_started_mean": 6.857142857142857,
+      "pool_fertilizer_ack_mean": 6.857142857142857,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 25,
+      "candidate_pass_mean": 9.428571428571429,
+      "parent_pass_mean": 25.428571428571427,
+      "pool_missions_started_mean": 3,
+      "pool_fertilizer_ack_mean": 3,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 26,
+      "candidate_pass_mean": 17.428571428571427,
+      "parent_pass_mean": 40.5,
+      "pool_missions_started_mean": 6,
+      "pool_fertilizer_ack_mean": 6,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 27,
+      "candidate_pass_mean": 13.285714285714286,
+      "parent_pass_mean": 21.285714285714285,
+      "pool_missions_started_mean": 2,
+      "pool_fertilizer_ack_mean": 2,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 28,
+      "candidate_pass_mean": 16.142857142857142,
+      "parent_pass_mean": 39.57142857142857,
+      "pool_missions_started_mean": 6,
+      "pool_fertilizer_ack_mean": 6,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 29,
+      "candidate_pass_mean": 24.285714285714285,
+      "parent_pass_mean": 31.285714285714285,
+      "pool_missions_started_mean": 1,
+      "pool_fertilizer_ack_mean": 1,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    },
+    {
+      "day": 30,
+      "candidate_pass_mean": 23,
+      "parent_pass_mean": 44.42857142857143,
+      "pool_missions_started_mean": 5.857142857142857,
+      "pool_fertilizer_ack_mean": 5.857142857142857,
+      "pool_crop_ack_mean": 0,
+      "planned_collection_commands": 0
+    }
+  ],
+  "legacy_calendar_rules": {
+    "fertilizer_collection_caps_by_day": {
+      "12": 7,
+      "13": 11,
+      "16": 3,
+      "17": 0,
+      "18": 0,
+      "19": 0,
+      "20": 0,
+      "21": 0,
+      "22": 0,
+      "23": 0,
+      "24": 0,
+      "25": 0,
+      "26": 0,
+      "27": 0,
+      "28": 0,
+      "29": 0,
+      "30": 0
+    },
+    "animal_care_blackout_days": [
+      19,
+      20,
+      21,
+      23,
+      24,
+      25
+    ],
+    "force_peak_hands_from_day": 16,
+    "force_peak_hands_through_day": 30,
+    "workers_peak_hands": 12
+  },
+  "new_simulation": false,
+  "policy_changed": false,
+  "limitations": [
+    "Top770 descriptive, not matched markets/opponents",
+    "No quantified all-cause decomposition of V2 PASS from aggregate records",
+    "V2 core has no D15 dispatcher switch; inherited plan has dated rules"
+  ]
+}

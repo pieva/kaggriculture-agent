@@ -1,0 +1,748 @@
+{
+  "candidate_source": "E18_31_ASSIGNMENT_GATE_DEVELOPMENT_V7_20260906.json",
+  "baseline_sources": [
+    "E18_30_MISSION_GATE_CROP_STRESS_V2_20260906.json",
+    "E18_30_MISSION_GATE_CROP_DEVELOPMENT_V2_20260906.json",
+    "E18_30_MISSION_GATE_CROP_CONTROL_V2_20260906.json"
+  ],
+  "holdout_consumed": false,
+  "supplementary_crn_included": false,
+  "safety": [
+    {
+      "case": [
+        "E18.16",
+        180903001,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.16",
+        180903001,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.16",
+        180903002,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.16",
+        180903002,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.16",
+        180903003,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.16",
+        180903003,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.16",
+        180903004,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.16",
+        180903004,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.16",
+        180903005,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.16",
+        180903005,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.16",
+        180903006,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.16",
+        180903006,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.16",
+        180903007,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.16",
+        180903007,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903001,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903001,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903002,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903002,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903003,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903003,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903004,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903004,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903005,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903005,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903006,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903006,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903007,
+        0
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    },
+    {
+      "case": [
+        "E18.2/V4D",
+        180903007,
+        1
+      ],
+      "checks": {
+        "errors": true,
+        "crop_deaths": true,
+        "animal_losses": true,
+        "missions": true,
+        "money": true,
+        "cap": true,
+        "filled": true,
+        "topology": true
+      },
+      "passed": true
+    }
+  ],
+  "summaries": [
+    {
+      "opponent": "E18.16",
+      "n_paired": 14,
+      "n_candidate": 14,
+      "baseline_cash": 81976.0,
+      "candidate_cash": 80845.5,
+      "paired_positive": 8,
+      "candidate_wins": 6,
+      "baseline_wins": 5,
+      "cash_delta": -1130.5,
+      "cash_delta_pct": -1.3790621645359618,
+      "phases": {
+        "D1_D15": {
+          "baseline": {
+            "passes": 801,
+            "moves": 1027.9285714285713,
+            "slots": 2932,
+            "cow_days": 82
+          },
+          "candidate": {
+            "passes": 558.7142857142857,
+            "moves": 1196.5714285714287,
+            "slots": 2907.1428571428573,
+            "cow_days": 86.71428571428571
+          }
+        },
+        "D5_D10": {
+          "baseline": {
+            "passes": 467.7857142857143,
+            "moves": 371,
+            "slots": 1246,
+            "cow_days": 29
+          },
+          "candidate": {
+            "passes": 297.07142857142856,
+            "moves": 486.14285714285717,
+            "slots": 1234.2857142857142,
+            "cow_days": 33.714285714285715
+          }
+        },
+        "D16_D30": {
+          "baseline": {
+            "passes": 289.2857142857143,
+            "moves": 2264,
+            "slots": 4457,
+            "cow_days": 135
+          },
+          "candidate": {
+            "passes": 281.2857142857143,
+            "moves": 2264.9285714285716,
+            "slots": 4457,
+            "cow_days": 135
+          }
+        }
+      },
+      "days": [
+        {
+          "day": 5,
+          "baseline_pass": 39.285714285714285,
+          "candidate_pass": 32,
+          "baseline_cows": 4,
+          "candidate_cows": 4,
+          "baseline_hands": 5,
+          "candidate_hands": 5
+        },
+        {
+          "day": 6,
+          "baseline_pass": 57.285714285714285,
+          "candidate_pass": 42,
+          "baseline_cows": 4,
+          "candidate_cows": 4,
+          "baseline_hands": 5,
+          "candidate_hands": 5
+        },
+        {
+          "day": 7,
+          "baseline_pass": 65.57142857142857,
+          "candidate_pass": 37,
+          "baseline_cows": 4,
+          "candidate_cows": 4,
+          "baseline_hands": 9,
+          "candidate_hands": 9
+        },
+        {
+          "day": 8,
+          "baseline_pass": 103,
+          "candidate_pass": 71,
+          "baseline_cows": 4,
+          "candidate_cows": 5,
+          "baseline_hands": 8,
+          "candidate_hands": 8
+        },
+        {
+          "day": 9,
+          "baseline_pass": 97,
+          "candidate_pass": 53.714285714285715,
+          "baseline_cows": 4,
+          "candidate_cows": 7.714285714285714,
+          "baseline_hands": 10,
+          "candidate_hands": 10
+        },
+        {
+          "day": 10,
+          "baseline_pass": 105.64285714285714,
+          "candidate_pass": 61.357142857142854,
+          "baseline_cows": 9,
+          "candidate_cows": 9,
+          "baseline_hands": 11,
+          "candidate_hands": 10.571428571428571
+        }
+      ]
+    },
+    {
+      "opponent": "E18.2/V4D",
+      "n_paired": 2,
+      "n_candidate": 14,
+      "baseline_cash": 69768.0,
+      "candidate_cash": 74413.0,
+      "paired_positive": 2,
+      "candidate_wins": 0,
+      "baseline_wins": 0,
+      "cash_delta": 4645.0,
+      "cash_delta_pct": 6.657780071092764,
+      "phases": {
+        "D1_D15": {
+          "baseline": {
+            "passes": 797,
+            "moves": 1028,
+            "slots": 2932,
+            "cow_days": 82
+          },
+          "candidate": {
+            "passes": 544,
+            "moves": 1204,
+            "slots": 2905,
+            "cow_days": 87
+          }
+        },
+        "D5_D10": {
+          "baseline": {
+            "passes": 466,
+            "moves": 371,
+            "slots": 1246,
+            "cow_days": 29
+          },
+          "candidate": {
+            "passes": 281,
+            "moves": 487,
+            "slots": 1219,
+            "cow_days": 34
+          }
+        },
+        "D16_D30": {
+          "baseline": {
+            "passes": 279,
+            "moves": 2266,
+            "slots": 4457,
+            "cow_days": 135
+          },
+          "candidate": {
+            "passes": 288,
+            "moves": 2264,
+            "slots": 4457,
+            "cow_days": 135
+          }
+        }
+      },
+      "days": [
+        {
+          "day": 5,
+          "baseline_pass": 39,
+          "candidate_pass": 32,
+          "baseline_cows": 4,
+          "candidate_cows": 4,
+          "baseline_hands": 5,
+          "candidate_hands": 5
+        },
+        {
+          "day": 6,
+          "baseline_pass": 57,
+          "candidate_pass": 42,
+          "baseline_cows": 4,
+          "candidate_cows": 4,
+          "baseline_hands": 5,
+          "candidate_hands": 5
+        },
+        {
+          "day": 7,
+          "baseline_pass": 65,
+          "candidate_pass": 37,
+          "baseline_cows": 4,
+          "candidate_cows": 4,
+          "baseline_hands": 9,
+          "candidate_hands": 9
+        },
+        {
+          "day": 8,
+          "baseline_pass": 103,
+          "candidate_pass": 71,
+          "baseline_cows": 4,
+          "candidate_cows": 5,
+          "baseline_hands": 8,
+          "candidate_hands": 8
+        },
+        {
+          "day": 9,
+          "baseline_pass": 97,
+          "candidate_pass": 52,
+          "baseline_cows": 4,
+          "candidate_cows": 8,
+          "baseline_hands": 10,
+          "candidate_hands": 10
+        },
+        {
+          "day": 10,
+          "baseline_pass": 105,
+          "candidate_pass": 47,
+          "baseline_cows": 9,
+          "candidate_cows": 9,
+          "baseline_hands": 11,
+          "candidate_hands": 10
+        }
+      ]
+    }
+  ],
+  "caveats": [
+    "Two seats of a seed are not independent seeds.",
+    "The stock engine couples empty-tile RNG draws to town-shop selection.",
+    "Cow-days use the standard daily stock snapshot, not exact animal-hours.",
+    "Report available matched coverage explicitly; do not impute missing controls."
+  ]
+}

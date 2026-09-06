@@ -1,6 +1,6 @@
 # E18.30 V1 — 770, motore di assegnazione per missioni
 
-Stato: **CORE_CONTRACTS_PASS / RUNTIME_ADAPTER_PENDING**, 2026-09-05.
+Stato: **CROP_POOL V2 — DEVELOPMENT_ECONOMIC_AND_SAFETY_PASS / STANDALONE_PASS**, 2026-09-06.
 Parent economico immutabile: E18.28 C (56036993). E18.29 B3 è un controllo
 secondario, non un rilascio promosso. Topologia 770, 14 pascoli, cap 14 animali,
 massimo 12 manovali. Cambia assegnazione, non mix/specie/apertura/topologia.
@@ -80,7 +80,54 @@ consegna, devono essere fornite dall'adattatore; non sono inferite dal nucleo.
 25 test pass, incluso stress deterministico su 100 scenari sintetici.
 Report: `reports/E18_30_MISSION_DISPATCHER_GATE_0_IT.md`.
 
-Questa è solo la parte contratti del Gate 0. Mancano adattatore osservazioni,
-generazione rotte complete, acknowledgement nel motore, OFF parity,
-payroll/retry HIRE e benchmark end-to-end. Nessuna azione del parent sostituita:
-non sono dimostrati recupero crop, riduzione PASS o delta economici.
+La prima tranche copriva solo i contratti. L'integrazione online successiva
+è descritta sotto; il report Gate 0 rimane storico, non stato corrente.
+
+## Tranche online — 2026-09-06
+
+Adattatore `tools/e18_30_mission_runtime.py`, runner e riepilogo matched dedicati.
+Preregistrazione: `reports/E18_30_RUNTIME_PREREGISTRATION_20260906_IT.md`.
+Identità giorno/slot osservato, percorsi verificati nel motore, ritorno prima
+del successivo task parent, prenotazione shed e acknowledgement dopo esecuzione.
+OFF delega al parent; RESCUE recupera WATER già dovuti a rischio deadline;
+POOL aggiunge, separatamente, missioni complete di fertilizzante non prenotato.
+Economia parent e target 770/cap 14/max 12 hands conservati; HIRE non modificato.
+
+36 test contratti/adattatore passati. Smoke: 16 partite, seed 180903001,
+entrambi i seat contro E18.16 ed E18.2/V4D. OFF: 2.876 batch identici al parent.
+RESCUE invariata nello smoke senza deficit. POOL contro E18.16: 87.549 contro
+77.898 parent; contro E18.2: 69.768 contro 60.612. PASS 1.076 contro 1.558,
+MOVE 3.294 contro 3.053. Zero morti crop/fughe/errori/missioni incomplete nei
+quattro casi POOL; nessuna vittoria contro i controlli. Non è una promozione.
+Fonte: `reports/E18_30_SMOKE_SUMMARY_V1_20260906_IT.md`.
+
+Gate V1 completato: POOL +7456,21 medio contro parent, 14/14 positivi, ma
+13/14 safety: rimane la morte Strawberry anche nel parent. NON promossa.
+Report `reports/E18_30_DEVELOPMENT_SUMMARY_V1_20260906_IT.md`; source V1 congelata
+in `artifacts/source/E18_30_MISSION_RUNTIME_V1.py` con SHA originale verificato.
+
+## CROP_POOL V2 — ciclo colturale completo
+
+Aggiunge missioni per PLANT→WATER già presenti consecutivamente nel piano quando
+l'ETA dell'owner reale supera la deadline. Target vuoto/WEED, DIG se necessario,
+semi osservati prenotati e percorso completo comprensivo di ritorno se richiesto.
+Semina confermata prima di WATER; obbligo donor e fabbisogno semi riconciliati solo
+dopo conferma. Nessuna nuova coltura né eccezione per D12, tile o seed.
+ETA coerente con i cursori già avanzati e il comando baseline del batch.
+
+44 test dedicati e 371 test complessivi pass. Gate contro E18.16: 14/14 delte
+positive e safety pass, cassa 81.976 contro 74.491,57 (+10,05%), worst +4.471;
+PASS 1090,29 contro 1568,07 (-30,47%), D15–D30 303,57 contro 734,71 (-58,68%),
+MOVE +7,83%. Vittorie 5/14 contro 1/14 parent. E18.2 smoke: +9.156 rispetto al
+parent, ma ancora 0/2 vittorie. Zero crop/animal deaths, errori o missioni incomplete
+in tutti i 16 casi V2; nessuna diminuzione giornaliera di WATER/FEED/CARE eseguiti.
+
+Standalone `submission/submission_codex_e18_30_770.py`, SHA-256
+`5c47e641aed7d2e619a356a187654f3fe2bfaed3e1302c5f978d2ee742ce01de`:
+quattro casi, 2.876 batch identici source/bundle e 2.876 via file-loader Kaggle.
+NON pubblicata, non incumbent promosso, nessun holdout consumato. Si tratta della
+prima migrazione ibrida delle code legacy, non della risoluzione globale dei PASS.
+HIRE/payroll e generazione CARE/HARVEST restano tranche separate.
+
+Risultati, decomposizione economica, limiti e prossime verifiche:
+`reports/E18_30_RUNTIME_V2_CONSOLIDATED_20260906_IT.md`.

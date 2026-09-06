@@ -1,0 +1,2458 @@
+{
+  "candidate_source": "E18_32_READY_WORK_GATE_RELEASE_V9_DEVELOPMENT_20260906.json",
+  "baseline_source": "E18_31_ASSIGNMENT_GATE_UNIFIED_V11_DEVELOPMENT_20260906.json",
+  "holdout_consumed": false,
+  "all": {
+    "n": 28,
+    "independent_seeds": 7,
+    "baseline_cash": 78750.28571428571,
+    "candidate_cash": 78931.17857142857,
+    "positive": 28,
+    "minimum_cash_delta": 118.0,
+    "wins_baseline": 16,
+    "wins_candidate": 16,
+    "cash_delta_percent": 0.22970438202492005,
+    "phases": {
+      "D1_D10": {
+        "baseline": {
+          "passes": 428.92857142857144,
+          "moves": 664,
+          "slots": 1757,
+          "pass_percent": 24.412553866167983,
+          "productive_requests": 560.0714285714286,
+          "productive_percent": 31.87657533132775,
+          "hire_cash": 579.0,
+          "cow_days": 45
+        },
+        "candidate": {
+          "passes": 322.07142857142856,
+          "moves": 636.8571428571429,
+          "slots": 1613.4285714285713,
+          "pass_percent": 19.958423476999975,
+          "productive_requests": 562.0714285714286,
+          "productive_percent": 34.83851721536965,
+          "hire_cash": 427.2857142857143,
+          "cow_days": 45
+        }
+      },
+      "D5_D10": {
+        "baseline": {
+          "passes": 294.92857142857144,
+          "moves": 478,
+          "slots": 1247,
+          "pass_percent": 23.651048230037805,
+          "productive_requests": 390.07142857142856,
+          "productive_percent": 31.2807881773399,
+          "hire_cash": 541.0,
+          "cow_days": 36
+        },
+        "candidate": {
+          "passes": 230.07142857142858,
+          "moves": 456.85714285714283,
+          "slots": 1149.4285714285713,
+          "pass_percent": 20.00924169054985,
+          "productive_requests": 390.07142857142856,
+          "productive_percent": 33.93887875486626,
+          "hire_cash": 397.2857142857143,
+          "cow_days": 36
+        }
+      },
+      "D11_D15": {
+        "baseline": {
+          "passes": 126.46428571428571,
+          "moves": 525.2857142857143,
+          "slots": 1176,
+          "pass_percent": 10.753765792031098,
+          "productive_requests": 463.32142857142856,
+          "productive_percent": 39.39808066083577,
+          "hire_cash": 639.0,
+          "cow_days": 45
+        },
+        "candidate": {
+          "passes": 136.67857142857142,
+          "moves": 496,
+          "slots": 1154,
+          "pass_percent": 11.843897004208962,
+          "productive_requests": 463.32142857142856,
+          "productive_percent": 40.14917058677891,
+          "hire_cash": 550.0,
+          "cow_days": 45
+        }
+      },
+      "D16_D30": {
+        "baseline": {
+          "passes": 285.5357142857143,
+          "moves": 2263.714285714286,
+          "slots": 4457,
+          "pass_percent": 6.4064553351068945,
+          "productive_requests": 1634.25,
+          "productive_percent": 36.66704061027597,
+          "hire_cash": 5640.0,
+          "cow_days": 135
+        },
+        "candidate": {
+          "passes": 281.89285714285717,
+          "moves": 2265.25,
+          "slots": 4457,
+          "pass_percent": 6.324721946216225,
+          "productive_requests": 1634.107142857143,
+          "productive_percent": 36.66383537933908,
+          "hire_cash": 5640.0,
+          "cow_days": 135
+        }
+      },
+      "D1_D30": {
+        "baseline": {
+          "passes": 840.9285714285714,
+          "moves": 3453,
+          "slots": 7390,
+          "pass_percent": 11.379277015271603,
+          "productive_requests": 2657.6428571428573,
+          "productive_percent": 35.9626908950319,
+          "hire_cash": 6858.0,
+          "cow_days": 225
+        },
+        "candidate": {
+          "passes": 740.6428571428571,
+          "moves": 3398.1071428571427,
+          "slots": 7224.428571428572,
+          "pass_percent": 10.251627272399764,
+          "productive_requests": 2659.5,
+          "productive_percent": 36.812698421347385,
+          "hire_cash": 6617.285714285715,
+          "cow_days": 225
+        }
+      }
+    },
+    "days": [
+      {
+        "day": 1,
+        "baseline_pass": 43,
+        "candidate_pass": 43,
+        "baseline_hands": 5,
+        "candidate_hands": 5,
+        "baseline_cows": 2,
+        "candidate_cows": 2
+      },
+      {
+        "day": 2,
+        "baseline_pass": 38,
+        "candidate_pass": 28,
+        "baseline_hands": 4,
+        "candidate_hands": 4,
+        "baseline_cows": 2,
+        "candidate_cows": 2
+      },
+      {
+        "day": 3,
+        "baseline_pass": 3,
+        "candidate_pass": 3,
+        "baseline_hands": 4,
+        "candidate_hands": 4,
+        "baseline_cows": 2,
+        "candidate_cows": 2
+      },
+      {
+        "day": 4,
+        "baseline_pass": 50,
+        "candidate_pass": 18,
+        "baseline_hands": 5,
+        "candidate_hands": 3,
+        "baseline_cows": 3,
+        "candidate_cows": 3
+      },
+      {
+        "day": 5,
+        "baseline_pass": 25,
+        "candidate_pass": 25,
+        "baseline_hands": 5,
+        "candidate_hands": 5,
+        "baseline_cows": 4,
+        "candidate_cows": 4
+      },
+      {
+        "day": 6,
+        "baseline_pass": 42,
+        "candidate_pass": 24,
+        "baseline_hands": 5,
+        "candidate_hands": 4,
+        "baseline_cows": 4,
+        "candidate_cows": 4
+      },
+      {
+        "day": 7,
+        "baseline_pass": 42,
+        "candidate_pass": 42,
+        "baseline_hands": 9,
+        "candidate_hands": 9,
+        "baseline_cows": 4,
+        "candidate_cows": 4
+      },
+      {
+        "day": 8,
+        "baseline_pass": 60,
+        "candidate_pass": 24,
+        "baseline_hands": 8,
+        "candidate_hands": 6,
+        "baseline_cows": 7,
+        "candidate_cows": 7
+      },
+      {
+        "day": 9,
+        "baseline_pass": 60,
+        "candidate_pass": 60,
+        "baseline_hands": 10,
+        "candidate_hands": 10,
+        "baseline_cows": 8,
+        "candidate_cows": 8
+      },
+      {
+        "day": 10,
+        "baseline_pass": 65.92857142857143,
+        "candidate_pass": 55.07142857142857,
+        "baseline_hands": 11,
+        "candidate_hands": 9.714285714285714,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 11,
+        "baseline_pass": 53,
+        "candidate_pass": 53,
+        "baseline_hands": 11,
+        "candidate_hands": 11,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 12,
+        "baseline_pass": 36.5,
+        "candidate_pass": 47.714285714285715,
+        "baseline_hands": 11,
+        "candidate_hands": 10,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 13,
+        "baseline_pass": 20,
+        "candidate_pass": 20,
+        "baseline_hands": 7,
+        "candidate_hands": 7,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 14,
+        "baseline_pass": 7.071428571428571,
+        "candidate_pass": 7.071428571428571,
+        "baseline_hands": 8,
+        "candidate_hands": 8,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 15,
+        "baseline_pass": 9.892857142857142,
+        "candidate_pass": 8.892857142857142,
+        "baseline_hands": 9,
+        "candidate_hands": 9,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 16,
+        "baseline_pass": 25.75,
+        "candidate_pass": 25.642857142857142,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 17,
+        "baseline_pass": 19.214285714285715,
+        "candidate_pass": 17.428571428571427,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 18,
+        "baseline_pass": 13.678571428571429,
+        "candidate_pass": 13.678571428571429,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 19,
+        "baseline_pass": 22.214285714285715,
+        "candidate_pass": 22.214285714285715,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 20,
+        "baseline_pass": 24.964285714285715,
+        "candidate_pass": 24.964285714285715,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 21,
+        "baseline_pass": 15.142857142857142,
+        "candidate_pass": 15.142857142857142,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 22,
+        "baseline_pass": 22.285714285714285,
+        "candidate_pass": 22.642857142857142,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 23,
+        "baseline_pass": 15.5,
+        "candidate_pass": 15.5,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 24,
+        "baseline_pass": 21.428571428571427,
+        "candidate_pass": 20.535714285714285,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 25,
+        "baseline_pass": 8.25,
+        "candidate_pass": 8.25,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 26,
+        "baseline_pass": 17.142857142857142,
+        "candidate_pass": 17.178571428571427,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 27,
+        "baseline_pass": 14.357142857142858,
+        "candidate_pass": 14.357142857142858,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 28,
+        "baseline_pass": 12.892857142857142,
+        "candidate_pass": 12.714285714285714,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 29,
+        "baseline_pass": 27.857142857142858,
+        "candidate_pass": 26.857142857142858,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      },
+      {
+        "day": 30,
+        "baseline_pass": 24.857142857142858,
+        "candidate_pass": 24.785714285714285,
+        "baseline_hands": 12,
+        "candidate_hands": 12,
+        "baseline_cows": 9,
+        "candidate_cows": 9
+      }
+    ],
+    "pairs": [
+      {
+        "case": [
+          "E18.16",
+          180903001,
+          0
+        ],
+        "baseline_cash": 85073.0,
+        "candidate_cash": 85199.0,
+        "cash_delta": 126.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.16",
+          180903001,
+          1
+        ],
+        "baseline_cash": 85073.0,
+        "candidate_cash": 85199.0,
+        "cash_delta": 126.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.16",
+          180903002,
+          0
+        ],
+        "baseline_cash": 97057.0,
+        "candidate_cash": 97202.0,
+        "cash_delta": 145.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.16",
+          180903002,
+          1
+        ],
+        "baseline_cash": 97057.0,
+        "candidate_cash": 97202.0,
+        "cash_delta": 145.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.16",
+          180903003,
+          0
+        ],
+        "baseline_cash": 69066.0,
+        "candidate_cash": 69193.0,
+        "cash_delta": 127.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.16",
+          180903003,
+          1
+        ],
+        "baseline_cash": 69066.0,
+        "candidate_cash": 69193.0,
+        "cash_delta": 127.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.16",
+          180903004,
+          0
+        ],
+        "baseline_cash": 73624.0,
+        "candidate_cash": 73753.0,
+        "cash_delta": 129.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.16",
+          180903004,
+          1
+        ],
+        "baseline_cash": 84280.0,
+        "candidate_cash": 84411.0,
+        "cash_delta": 131.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.16",
+          180903005,
+          0
+        ],
+        "baseline_cash": 106186.0,
+        "candidate_cash": 106346.0,
+        "cash_delta": 160.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.16",
+          180903005,
+          1
+        ],
+        "baseline_cash": 106086.0,
+        "candidate_cash": 106346.0,
+        "cash_delta": 260.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.16",
+          180903006,
+          0
+        ],
+        "baseline_cash": 64519.0,
+        "candidate_cash": 64637.0,
+        "cash_delta": 118.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.16",
+          180903006,
+          1
+        ],
+        "baseline_cash": 64519.0,
+        "candidate_cash": 64637.0,
+        "cash_delta": 118.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.16",
+          180903007,
+          0
+        ],
+        "baseline_cash": 71169.0,
+        "candidate_cash": 71389.0,
+        "cash_delta": 220.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.16",
+          180903007,
+          1
+        ],
+        "baseline_cash": 74744.0,
+        "candidate_cash": 74954.0,
+        "cash_delta": 210.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903001,
+          0
+        ],
+        "baseline_cash": 80047.0,
+        "candidate_cash": 80243.0,
+        "cash_delta": 196.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903001,
+          1
+        ],
+        "baseline_cash": 80047.0,
+        "candidate_cash": 80243.0,
+        "cash_delta": 196.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903002,
+          0
+        ],
+        "baseline_cash": 93967.0,
+        "candidate_cash": 94173.0,
+        "cash_delta": 206.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903002,
+          1
+        ],
+        "baseline_cash": 83881.0,
+        "candidate_cash": 84074.0,
+        "cash_delta": 193.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903003,
+          0
+        ],
+        "baseline_cash": 65887.0,
+        "candidate_cash": 66183.0,
+        "cash_delta": 296.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903003,
+          1
+        ],
+        "baseline_cash": 65887.0,
+        "candidate_cash": 66183.0,
+        "cash_delta": 296.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903004,
+          0
+        ],
+        "baseline_cash": 65961.0,
+        "candidate_cash": 66094.0,
+        "cash_delta": 133.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903004,
+          1
+        ],
+        "baseline_cash": 57384.0,
+        "candidate_cash": 57519.0,
+        "cash_delta": 135.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903005,
+          1
+        ],
+        "baseline_cash": 105204.0,
+        "candidate_cash": 105431.0,
+        "cash_delta": 227.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903005,
+          0
+        ],
+        "baseline_cash": 105304.0,
+        "candidate_cash": 105431.0,
+        "cash_delta": 127.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903006,
+          1
+        ],
+        "baseline_cash": 53286.0,
+        "candidate_cash": 53581.0,
+        "cash_delta": 295.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903006,
+          0
+        ],
+        "baseline_cash": 53286.0,
+        "candidate_cash": 53581.0,
+        "cash_delta": 295.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903007,
+          0
+        ],
+        "baseline_cash": 71700.0,
+        "candidate_cash": 71864.0,
+        "cash_delta": 164.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      },
+      {
+        "case": [
+          "E18.2/V4D",
+          180903007,
+          1
+        ],
+        "baseline_cash": 75648.0,
+        "candidate_cash": 75812.0,
+        "cash_delta": 164.0,
+        "cow_day_delta": 0,
+        "checks": {
+          "errors": true,
+          "crop_deaths": true,
+          "escapes": true,
+          "missions": true,
+          "ledger": true,
+          "cap": true,
+          "filled": true,
+          "topology": true
+        }
+      }
+    ],
+    "daily_cow_stock_identical": true,
+    "daily_crop_stock_identical": true,
+    "harvested_units": {
+      "CARROT": {
+        "baseline": 83,
+        "candidate": 83
+      },
+      "MELON": {
+        "baseline": 72,
+        "candidate": 72
+      },
+      "MILK": {
+        "baseline": 212.71428571428572,
+        "candidate": 212.82142857142858
+      },
+      "STRAWBERRY": {
+        "baseline": 172.5,
+        "candidate": 172.5
+      },
+      "WHEAT": {
+        "baseline": 539.3571428571429,
+        "candidate": 539.3571428571429
+      },
+      "WOOL": {
+        "baseline": 102.57142857142857,
+        "candidate": 102.57142857142857
+      }
+    }
+  },
+  "opponents": {
+    "E18.16": {
+      "n": 14,
+      "independent_seeds": 7,
+      "baseline_cash": 81965.64285714286,
+      "candidate_cash": 82118.64285714286,
+      "positive": 14,
+      "minimum_cash_delta": 118.0,
+      "wins_baseline": 12,
+      "wins_candidate": 12,
+      "cash_delta_percent": 0.18666357594079308,
+      "phases": {
+        "D1_D10": {
+          "baseline": {
+            "passes": 428.92857142857144,
+            "moves": 664,
+            "slots": 1757,
+            "pass_percent": 24.412553866167983,
+            "productive_requests": 560.0714285714286,
+            "productive_percent": 31.87657533132775,
+            "hire_cash": 579.0,
+            "cow_days": 45
+          },
+          "candidate": {
+            "passes": 322.07142857142856,
+            "moves": 636.8571428571429,
+            "slots": 1613.4285714285713,
+            "pass_percent": 19.958423476999975,
+            "productive_requests": 562.0714285714286,
+            "productive_percent": 34.83851721536965,
+            "hire_cash": 427.2857142857143,
+            "cow_days": 45
+          }
+        },
+        "D5_D10": {
+          "baseline": {
+            "passes": 294.92857142857144,
+            "moves": 478,
+            "slots": 1247,
+            "pass_percent": 23.651048230037805,
+            "productive_requests": 390.07142857142856,
+            "productive_percent": 31.2807881773399,
+            "hire_cash": 541.0,
+            "cow_days": 36
+          },
+          "candidate": {
+            "passes": 230.07142857142858,
+            "moves": 456.85714285714283,
+            "slots": 1149.4285714285713,
+            "pass_percent": 20.00924169054985,
+            "productive_requests": 390.07142857142856,
+            "productive_percent": 33.93887875486626,
+            "hire_cash": 397.2857142857143,
+            "cow_days": 36
+          }
+        },
+        "D11_D15": {
+          "baseline": {
+            "passes": 126.35714285714286,
+            "moves": 525.2857142857143,
+            "slots": 1176,
+            "pass_percent": 10.744655004859085,
+            "productive_requests": 463.42857142857144,
+            "productive_percent": 39.40719144800778,
+            "hire_cash": 639.0,
+            "cow_days": 45
+          },
+          "candidate": {
+            "passes": 136.57142857142858,
+            "moves": 496,
+            "slots": 1154,
+            "pass_percent": 11.834612527853428,
+            "productive_requests": 463.42857142857144,
+            "productive_percent": 40.15845506313444,
+            "hire_cash": 550.0,
+            "cow_days": 45
+          }
+        },
+        "D16_D30": {
+          "baseline": {
+            "passes": 282.92857142857144,
+            "moves": 2266.214285714286,
+            "slots": 4457,
+            "pass_percent": 6.34795987050867,
+            "productive_requests": 1635.2142857142858,
+            "productive_percent": 36.68867591909997,
+            "hire_cash": 5640.0,
+            "cow_days": 135
+          },
+          "candidate": {
+            "passes": 279.7142857142857,
+            "moves": 2267.6428571428573,
+            "slots": 4457,
+            "pass_percent": 6.275842174428668,
+            "productive_requests": 1634.857142857143,
+            "productive_percent": 36.68066284175775,
+            "hire_cash": 5640.0,
+            "cow_days": 135
+          }
+        },
+        "D1_D30": {
+          "baseline": {
+            "passes": 838.2142857142857,
+            "moves": 3455.5,
+            "slots": 7390,
+            "pass_percent": 11.342547844577615,
+            "productive_requests": 2658.714285714286,
+            "productive_percent": 35.97718925188479,
+            "hire_cash": 6858.0,
+            "cow_days": 225
+          },
+          "candidate": {
+            "passes": 738.3571428571429,
+            "moves": 3400.5,
+            "slots": 7224.428571428572,
+            "pass_percent": 10.219979514938819,
+            "productive_requests": 2660.3571428571427,
+            "productive_percent": 36.82456160239032,
+            "hire_cash": 6617.285714285715,
+            "cow_days": 225
+          }
+        }
+      },
+      "days": [
+        {
+          "day": 1,
+          "baseline_pass": 43,
+          "candidate_pass": 43,
+          "baseline_hands": 5,
+          "candidate_hands": 5,
+          "baseline_cows": 2,
+          "candidate_cows": 2
+        },
+        {
+          "day": 2,
+          "baseline_pass": 38,
+          "candidate_pass": 28,
+          "baseline_hands": 4,
+          "candidate_hands": 4,
+          "baseline_cows": 2,
+          "candidate_cows": 2
+        },
+        {
+          "day": 3,
+          "baseline_pass": 3,
+          "candidate_pass": 3,
+          "baseline_hands": 4,
+          "candidate_hands": 4,
+          "baseline_cows": 2,
+          "candidate_cows": 2
+        },
+        {
+          "day": 4,
+          "baseline_pass": 50,
+          "candidate_pass": 18,
+          "baseline_hands": 5,
+          "candidate_hands": 3,
+          "baseline_cows": 3,
+          "candidate_cows": 3
+        },
+        {
+          "day": 5,
+          "baseline_pass": 25,
+          "candidate_pass": 25,
+          "baseline_hands": 5,
+          "candidate_hands": 5,
+          "baseline_cows": 4,
+          "candidate_cows": 4
+        },
+        {
+          "day": 6,
+          "baseline_pass": 42,
+          "candidate_pass": 24,
+          "baseline_hands": 5,
+          "candidate_hands": 4,
+          "baseline_cows": 4,
+          "candidate_cows": 4
+        },
+        {
+          "day": 7,
+          "baseline_pass": 42,
+          "candidate_pass": 42,
+          "baseline_hands": 9,
+          "candidate_hands": 9,
+          "baseline_cows": 4,
+          "candidate_cows": 4
+        },
+        {
+          "day": 8,
+          "baseline_pass": 60,
+          "candidate_pass": 24,
+          "baseline_hands": 8,
+          "candidate_hands": 6,
+          "baseline_cows": 7,
+          "candidate_cows": 7
+        },
+        {
+          "day": 9,
+          "baseline_pass": 60,
+          "candidate_pass": 60,
+          "baseline_hands": 10,
+          "candidate_hands": 10,
+          "baseline_cows": 8,
+          "candidate_cows": 8
+        },
+        {
+          "day": 10,
+          "baseline_pass": 65.92857142857143,
+          "candidate_pass": 55.07142857142857,
+          "baseline_hands": 11,
+          "candidate_hands": 9.714285714285714,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 11,
+          "baseline_pass": 53,
+          "candidate_pass": 53,
+          "baseline_hands": 11,
+          "candidate_hands": 11,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 12,
+          "baseline_pass": 36.5,
+          "candidate_pass": 47.714285714285715,
+          "baseline_hands": 11,
+          "candidate_hands": 10,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 13,
+          "baseline_pass": 20,
+          "candidate_pass": 20,
+          "baseline_hands": 7,
+          "candidate_hands": 7,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 14,
+          "baseline_pass": 7,
+          "candidate_pass": 7,
+          "baseline_hands": 8,
+          "candidate_hands": 8,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 15,
+          "baseline_pass": 9.857142857142858,
+          "candidate_pass": 8.857142857142858,
+          "baseline_hands": 9,
+          "candidate_hands": 9,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 16,
+          "baseline_pass": 25.5,
+          "candidate_pass": 25.428571428571427,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 17,
+          "baseline_pass": 18.857142857142858,
+          "candidate_pass": 17.142857142857142,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 18,
+          "baseline_pass": 13.428571428571429,
+          "candidate_pass": 13.428571428571429,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 19,
+          "baseline_pass": 22.285714285714285,
+          "candidate_pass": 22.285714285714285,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 20,
+          "baseline_pass": 24.428571428571427,
+          "candidate_pass": 24.428571428571427,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 21,
+          "baseline_pass": 15.285714285714286,
+          "candidate_pass": 15.285714285714286,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 22,
+          "baseline_pass": 21.571428571428573,
+          "candidate_pass": 22.285714285714285,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 23,
+          "baseline_pass": 15.428571428571429,
+          "candidate_pass": 15.428571428571429,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 24,
+          "baseline_pass": 21.285714285714285,
+          "candidate_pass": 20.285714285714285,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 25,
+          "baseline_pass": 8.285714285714286,
+          "candidate_pass": 8.285714285714286,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 26,
+          "baseline_pass": 16.714285714285715,
+          "candidate_pass": 16.714285714285715,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 27,
+          "baseline_pass": 14.428571428571429,
+          "candidate_pass": 14.428571428571429,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 28,
+          "baseline_pass": 12.857142857142858,
+          "candidate_pass": 12.857142857142858,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 29,
+          "baseline_pass": 27.714285714285715,
+          "candidate_pass": 26.857142857142858,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 30,
+          "baseline_pass": 24.857142857142858,
+          "candidate_pass": 24.571428571428573,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        }
+      ],
+      "pairs": [
+        {
+          "case": [
+            "E18.16",
+            180903001,
+            0
+          ],
+          "baseline_cash": 85073.0,
+          "candidate_cash": 85199.0,
+          "cash_delta": 126.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.16",
+            180903001,
+            1
+          ],
+          "baseline_cash": 85073.0,
+          "candidate_cash": 85199.0,
+          "cash_delta": 126.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.16",
+            180903002,
+            0
+          ],
+          "baseline_cash": 97057.0,
+          "candidate_cash": 97202.0,
+          "cash_delta": 145.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.16",
+            180903002,
+            1
+          ],
+          "baseline_cash": 97057.0,
+          "candidate_cash": 97202.0,
+          "cash_delta": 145.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.16",
+            180903003,
+            0
+          ],
+          "baseline_cash": 69066.0,
+          "candidate_cash": 69193.0,
+          "cash_delta": 127.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.16",
+            180903003,
+            1
+          ],
+          "baseline_cash": 69066.0,
+          "candidate_cash": 69193.0,
+          "cash_delta": 127.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.16",
+            180903004,
+            0
+          ],
+          "baseline_cash": 73624.0,
+          "candidate_cash": 73753.0,
+          "cash_delta": 129.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.16",
+            180903004,
+            1
+          ],
+          "baseline_cash": 84280.0,
+          "candidate_cash": 84411.0,
+          "cash_delta": 131.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.16",
+            180903005,
+            0
+          ],
+          "baseline_cash": 106186.0,
+          "candidate_cash": 106346.0,
+          "cash_delta": 160.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.16",
+            180903005,
+            1
+          ],
+          "baseline_cash": 106086.0,
+          "candidate_cash": 106346.0,
+          "cash_delta": 260.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.16",
+            180903006,
+            0
+          ],
+          "baseline_cash": 64519.0,
+          "candidate_cash": 64637.0,
+          "cash_delta": 118.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.16",
+            180903006,
+            1
+          ],
+          "baseline_cash": 64519.0,
+          "candidate_cash": 64637.0,
+          "cash_delta": 118.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.16",
+            180903007,
+            0
+          ],
+          "baseline_cash": 71169.0,
+          "candidate_cash": 71389.0,
+          "cash_delta": 220.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.16",
+            180903007,
+            1
+          ],
+          "baseline_cash": 74744.0,
+          "candidate_cash": 74954.0,
+          "cash_delta": 210.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        }
+      ],
+      "daily_cow_stock_identical": true,
+      "daily_crop_stock_identical": true,
+      "harvested_units": {
+        "CARROT": {
+          "baseline": 83,
+          "candidate": 83
+        },
+        "MELON": {
+          "baseline": 72,
+          "candidate": 72
+        },
+        "MILK": {
+          "baseline": 213.21428571428572,
+          "candidate": 213.42857142857142
+        },
+        "STRAWBERRY": {
+          "baseline": 172.42857142857142,
+          "candidate": 172.42857142857142
+        },
+        "WHEAT": {
+          "baseline": 539.7142857142857,
+          "candidate": 539.7142857142857
+        },
+        "WOOL": {
+          "baseline": 103.14285714285714,
+          "candidate": 103.14285714285714
+        }
+      }
+    },
+    "E18.2/V4D": {
+      "n": 14,
+      "independent_seeds": 7,
+      "baseline_cash": 75534.92857142857,
+      "candidate_cash": 75743.71428571429,
+      "positive": 14,
+      "minimum_cash_delta": 127.0,
+      "wins_baseline": 4,
+      "wins_candidate": 4,
+      "cash_delta_percent": 0.2764094945668649,
+      "phases": {
+        "D1_D10": {
+          "baseline": {
+            "passes": 428.92857142857144,
+            "moves": 664,
+            "slots": 1757,
+            "pass_percent": 24.412553866167983,
+            "productive_requests": 560.0714285714286,
+            "productive_percent": 31.87657533132775,
+            "hire_cash": 579.0,
+            "cow_days": 45
+          },
+          "candidate": {
+            "passes": 322.07142857142856,
+            "moves": 636.8571428571429,
+            "slots": 1613.4285714285713,
+            "pass_percent": 19.958423476999975,
+            "productive_requests": 562.0714285714286,
+            "productive_percent": 34.83851721536965,
+            "hire_cash": 427.2857142857143,
+            "cow_days": 45
+          }
+        },
+        "D5_D10": {
+          "baseline": {
+            "passes": 294.92857142857144,
+            "moves": 478,
+            "slots": 1247,
+            "pass_percent": 23.651048230037805,
+            "productive_requests": 390.07142857142856,
+            "productive_percent": 31.2807881773399,
+            "hire_cash": 541.0,
+            "cow_days": 36
+          },
+          "candidate": {
+            "passes": 230.07142857142858,
+            "moves": 456.85714285714283,
+            "slots": 1149.4285714285713,
+            "pass_percent": 20.00924169054985,
+            "productive_requests": 390.07142857142856,
+            "productive_percent": 33.93887875486626,
+            "hire_cash": 397.2857142857143,
+            "cow_days": 36
+          }
+        },
+        "D11_D15": {
+          "baseline": {
+            "passes": 126.57142857142857,
+            "moves": 525.2857142857143,
+            "slots": 1176,
+            "pass_percent": 10.762876579203109,
+            "productive_requests": 463.2142857142857,
+            "productive_percent": 39.388969873663754,
+            "hire_cash": 639.0,
+            "cow_days": 45
+          },
+          "candidate": {
+            "passes": 136.78571428571428,
+            "moves": 496,
+            "slots": 1154,
+            "pass_percent": 11.853181480564496,
+            "productive_requests": 463.2142857142857,
+            "productive_percent": 40.139886110423376,
+            "hire_cash": 550.0,
+            "cow_days": 45
+          }
+        },
+        "D16_D30": {
+          "baseline": {
+            "passes": 288.14285714285717,
+            "moves": 2261.214285714286,
+            "slots": 4457,
+            "pass_percent": 6.464950799705119,
+            "productive_requests": 1633.2857142857142,
+            "productive_percent": 36.64540530145197,
+            "hire_cash": 5640.0,
+            "cow_days": 135
+          },
+          "candidate": {
+            "passes": 284.07142857142856,
+            "moves": 2262.8571428571427,
+            "slots": 4457,
+            "pass_percent": 6.373601718003782,
+            "productive_requests": 1633.357142857143,
+            "productive_percent": 36.647007916920415,
+            "hire_cash": 5640.0,
+            "cow_days": 135
+          }
+        },
+        "D1_D30": {
+          "baseline": {
+            "passes": 843.6428571428571,
+            "moves": 3450.5,
+            "slots": 7390,
+            "pass_percent": 11.41600618596559,
+            "productive_requests": 2656.5714285714284,
+            "productive_percent": 35.94819253817901,
+            "hire_cash": 6858.0,
+            "cow_days": 225
+          },
+          "candidate": {
+            "passes": 742.9285714285714,
+            "moves": 3395.714285714286,
+            "slots": 7224.428571428572,
+            "pass_percent": 10.28327502986071,
+            "productive_requests": 2658.6428571428573,
+            "productive_percent": 36.80083524030445,
+            "hire_cash": 6617.285714285715,
+            "cow_days": 225
+          }
+        }
+      },
+      "days": [
+        {
+          "day": 1,
+          "baseline_pass": 43,
+          "candidate_pass": 43,
+          "baseline_hands": 5,
+          "candidate_hands": 5,
+          "baseline_cows": 2,
+          "candidate_cows": 2
+        },
+        {
+          "day": 2,
+          "baseline_pass": 38,
+          "candidate_pass": 28,
+          "baseline_hands": 4,
+          "candidate_hands": 4,
+          "baseline_cows": 2,
+          "candidate_cows": 2
+        },
+        {
+          "day": 3,
+          "baseline_pass": 3,
+          "candidate_pass": 3,
+          "baseline_hands": 4,
+          "candidate_hands": 4,
+          "baseline_cows": 2,
+          "candidate_cows": 2
+        },
+        {
+          "day": 4,
+          "baseline_pass": 50,
+          "candidate_pass": 18,
+          "baseline_hands": 5,
+          "candidate_hands": 3,
+          "baseline_cows": 3,
+          "candidate_cows": 3
+        },
+        {
+          "day": 5,
+          "baseline_pass": 25,
+          "candidate_pass": 25,
+          "baseline_hands": 5,
+          "candidate_hands": 5,
+          "baseline_cows": 4,
+          "candidate_cows": 4
+        },
+        {
+          "day": 6,
+          "baseline_pass": 42,
+          "candidate_pass": 24,
+          "baseline_hands": 5,
+          "candidate_hands": 4,
+          "baseline_cows": 4,
+          "candidate_cows": 4
+        },
+        {
+          "day": 7,
+          "baseline_pass": 42,
+          "candidate_pass": 42,
+          "baseline_hands": 9,
+          "candidate_hands": 9,
+          "baseline_cows": 4,
+          "candidate_cows": 4
+        },
+        {
+          "day": 8,
+          "baseline_pass": 60,
+          "candidate_pass": 24,
+          "baseline_hands": 8,
+          "candidate_hands": 6,
+          "baseline_cows": 7,
+          "candidate_cows": 7
+        },
+        {
+          "day": 9,
+          "baseline_pass": 60,
+          "candidate_pass": 60,
+          "baseline_hands": 10,
+          "candidate_hands": 10,
+          "baseline_cows": 8,
+          "candidate_cows": 8
+        },
+        {
+          "day": 10,
+          "baseline_pass": 65.92857142857143,
+          "candidate_pass": 55.07142857142857,
+          "baseline_hands": 11,
+          "candidate_hands": 9.714285714285714,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 11,
+          "baseline_pass": 53,
+          "candidate_pass": 53,
+          "baseline_hands": 11,
+          "candidate_hands": 11,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 12,
+          "baseline_pass": 36.5,
+          "candidate_pass": 47.714285714285715,
+          "baseline_hands": 11,
+          "candidate_hands": 10,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 13,
+          "baseline_pass": 20,
+          "candidate_pass": 20,
+          "baseline_hands": 7,
+          "candidate_hands": 7,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 14,
+          "baseline_pass": 7.142857142857143,
+          "candidate_pass": 7.142857142857143,
+          "baseline_hands": 8,
+          "candidate_hands": 8,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 15,
+          "baseline_pass": 9.928571428571429,
+          "candidate_pass": 8.928571428571429,
+          "baseline_hands": 9,
+          "candidate_hands": 9,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 16,
+          "baseline_pass": 26,
+          "candidate_pass": 25.857142857142858,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 17,
+          "baseline_pass": 19.571428571428573,
+          "candidate_pass": 17.714285714285715,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 18,
+          "baseline_pass": 13.928571428571429,
+          "candidate_pass": 13.928571428571429,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 19,
+          "baseline_pass": 22.142857142857142,
+          "candidate_pass": 22.142857142857142,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 20,
+          "baseline_pass": 25.5,
+          "candidate_pass": 25.5,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 21,
+          "baseline_pass": 15,
+          "candidate_pass": 15,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 22,
+          "baseline_pass": 23,
+          "candidate_pass": 23,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 23,
+          "baseline_pass": 15.571428571428571,
+          "candidate_pass": 15.571428571428571,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 24,
+          "baseline_pass": 21.571428571428573,
+          "candidate_pass": 20.785714285714285,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 25,
+          "baseline_pass": 8.214285714285714,
+          "candidate_pass": 8.214285714285714,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 26,
+          "baseline_pass": 17.571428571428573,
+          "candidate_pass": 17.642857142857142,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 27,
+          "baseline_pass": 14.285714285714286,
+          "candidate_pass": 14.285714285714286,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 28,
+          "baseline_pass": 12.928571428571429,
+          "candidate_pass": 12.571428571428571,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 29,
+          "baseline_pass": 28,
+          "candidate_pass": 26.857142857142858,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        },
+        {
+          "day": 30,
+          "baseline_pass": 24.857142857142858,
+          "candidate_pass": 25,
+          "baseline_hands": 12,
+          "candidate_hands": 12,
+          "baseline_cows": 9,
+          "candidate_cows": 9
+        }
+      ],
+      "pairs": [
+        {
+          "case": [
+            "E18.2/V4D",
+            180903001,
+            0
+          ],
+          "baseline_cash": 80047.0,
+          "candidate_cash": 80243.0,
+          "cash_delta": 196.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.2/V4D",
+            180903001,
+            1
+          ],
+          "baseline_cash": 80047.0,
+          "candidate_cash": 80243.0,
+          "cash_delta": 196.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.2/V4D",
+            180903002,
+            0
+          ],
+          "baseline_cash": 93967.0,
+          "candidate_cash": 94173.0,
+          "cash_delta": 206.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.2/V4D",
+            180903002,
+            1
+          ],
+          "baseline_cash": 83881.0,
+          "candidate_cash": 84074.0,
+          "cash_delta": 193.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.2/V4D",
+            180903003,
+            0
+          ],
+          "baseline_cash": 65887.0,
+          "candidate_cash": 66183.0,
+          "cash_delta": 296.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.2/V4D",
+            180903003,
+            1
+          ],
+          "baseline_cash": 65887.0,
+          "candidate_cash": 66183.0,
+          "cash_delta": 296.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.2/V4D",
+            180903004,
+            0
+          ],
+          "baseline_cash": 65961.0,
+          "candidate_cash": 66094.0,
+          "cash_delta": 133.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.2/V4D",
+            180903004,
+            1
+          ],
+          "baseline_cash": 57384.0,
+          "candidate_cash": 57519.0,
+          "cash_delta": 135.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.2/V4D",
+            180903005,
+            1
+          ],
+          "baseline_cash": 105204.0,
+          "candidate_cash": 105431.0,
+          "cash_delta": 227.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.2/V4D",
+            180903005,
+            0
+          ],
+          "baseline_cash": 105304.0,
+          "candidate_cash": 105431.0,
+          "cash_delta": 127.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.2/V4D",
+            180903006,
+            1
+          ],
+          "baseline_cash": 53286.0,
+          "candidate_cash": 53581.0,
+          "cash_delta": 295.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.2/V4D",
+            180903006,
+            0
+          ],
+          "baseline_cash": 53286.0,
+          "candidate_cash": 53581.0,
+          "cash_delta": 295.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.2/V4D",
+            180903007,
+            0
+          ],
+          "baseline_cash": 71700.0,
+          "candidate_cash": 71864.0,
+          "cash_delta": 164.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        },
+        {
+          "case": [
+            "E18.2/V4D",
+            180903007,
+            1
+          ],
+          "baseline_cash": 75648.0,
+          "candidate_cash": 75812.0,
+          "cash_delta": 164.0,
+          "cow_day_delta": 0,
+          "checks": {
+            "errors": true,
+            "crop_deaths": true,
+            "escapes": true,
+            "missions": true,
+            "ledger": true,
+            "cap": true,
+            "filled": true,
+            "topology": true
+          }
+        }
+      ],
+      "daily_cow_stock_identical": true,
+      "daily_crop_stock_identical": true,
+      "harvested_units": {
+        "CARROT": {
+          "baseline": 83,
+          "candidate": 83
+        },
+        "MELON": {
+          "baseline": 72,
+          "candidate": 72
+        },
+        "MILK": {
+          "baseline": 212.21428571428572,
+          "candidate": 212.21428571428572
+        },
+        "STRAWBERRY": {
+          "baseline": 172.57142857142858,
+          "candidate": 172.57142857142858
+        },
+        "WHEAT": {
+          "baseline": 539,
+          "candidate": 539
+        },
+        "WOOL": {
+          "baseline": 102,
+          "candidate": 102
+        }
+      }
+    }
+  }
+}
