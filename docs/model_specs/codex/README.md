@@ -1,17 +1,17 @@
 # Indice MODEL_SPEC Codex
 
-## Checkpoint operativo 2026-09-08: V48 e PASS
-
-**Priorità assoluta della prossima versione: ridurre i PASS evitabili attraverso la pianificazione biologica e della manodopera, solo 770.** V48 pubblicata (56101593) resta congelata; nessuna nuova variante o pubblicazione in questo checkpoint.
-
-[Stato, piano, inventario completo dei sorgenti e riproduzione](../../foundation/V48_PLANNING_AND_BUILD_IT.md). I checkpoint precedenti sono storici; i nuovi Top sono ormai esposti e non costituiscono holdout.
-
+Questo indice raccoglie le specifiche e i riferimenti dei modelli Codex.
+Lo stato operativo e le priorità sono mantenuti nel
+[Project State](../../PROJECT_STATE.md); la catena della V48 è documentata
+nell'[inventario di pianificazione e produzione](../../foundation/V48_PLANNING_AND_BUILD_IT.md).
 
 Riferimento esterno: alias documentale **Top770**. Episode ID e hash restano
 le fonti di provenienza; i nomi tecnici congelati in config, piani e schemi
 dei test restano invariati per compatibilità.
 
-Priorità corrente: [E18.33 — policy comuni di pascoli e colture](e18/MODEL_SPEC_CODEX_E18_33_COMMON_RESOURCE_POLICY_V1.md).
+## Checkpoint storico E18.33 — 6 settembre 2026
+
+[E18.33 — policy comuni di pascoli e colture](e18/MODEL_SPEC_CODEX_E18_33_COMMON_RESOURCE_POLICY_V1.md).
 [Audit dei residui e Q0](e18/reports/E18_33_LEGACY_POLICY_AUDIT_20260906_IT.md).
 Kernel e adattatore nativo implementati: stessa policy per Q0/Q1/Q2, nessun
 caricamento dei piani storici. **Prototipo non eleggibile**: 97 test mirati
