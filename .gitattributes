@@ -20,3 +20,6 @@ docs/model_specs/codex/e18/artifacts/source/** -text whitespace=cr-at-eol
 submission/** -text whitespace=cr-at-eol
 # Generated plots contain intentional whitespace in SVG path data.
 *.svg -whitespace
+
+# Exact pre-edit copies retained by the foundation documentation review.
+docs/governance/history/foundation_documentation_20260908/** -text whitespace=cr-at-eol

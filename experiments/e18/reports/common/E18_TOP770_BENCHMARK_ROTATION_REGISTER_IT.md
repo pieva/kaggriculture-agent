@@ -163,3 +163,12 @@ Report: docs/model_specs/codex/e19/reports/new_top_v48_20260908/REPORT_NUOVI_TOP
 Quattro report da 22 KPI: Top770-003 filtrato n4, corpus completo n5, Matthew n5,
 Suliman n3. Confronto V48 locale n6, non appaiato a questi replay esterni.
 Nessuna nuova policy, nessuna 662, nessuna ulteriore submission.
+
+
+## Esposizione avversari V48 — coorte 38 del 2026-09-08
+
+38 replay contro altri giocatori (30 nuovi), cutoff 106869264. Gli avversari elencati sono osservati e analizzati: non sono una nuova coorte Top770 qualificata e non vanno riutilizzati come holdout indipendente.
+
+Aditya Kapadia; Aditya Mishra; Attension_Seeker; Bibek; Dandan Li; DataLover; DeokJin; Hafida Belayd; Jia Chen; Kaggler Albafica; Kanny912; Kenny; LittleScottyy; MD.Firoj Khondokar; MOHSIN525; Nguyễn Nhật Thanh; Nikola010; PRITIKA SA; Peter Thompson; Rheal Thomas; SanggeunParrk; Sarah Ng; Shane Thivaharraja; Sidharth Hulyalkar; Singaraj B; Terrance Luangrath; Tita Kongolo; Udbhaw Anand; Udit Jain #2; Yihan Guo; eternitywinner; huanghaoyu7280; lava; my; ricardo; typeIIIfairy; コーラ.
+
+Report: `docs/model_specs/codex/e19/reports/v48_external_pass_update_20260908/REPORT_V48_REPLAY_PASS_IT.html`.

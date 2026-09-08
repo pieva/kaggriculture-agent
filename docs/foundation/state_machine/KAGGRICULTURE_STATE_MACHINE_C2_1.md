@@ -1,37 +1,40 @@
-# Kaggriculture State Machine C2.1 — Environment & Domain riconciliata post-3Q
+# Macchina a stati — come evolve la fattoria
 
-- **Fase:** Model Foundation C2.1 / Post-3Q Review Pass
-- **Stato:** RECONCILED / FOUNDATION POST-3Q COMPLETE
-- **Data:** 2026-09-01
-- **Ambito:** Macchina a stati canonica, causale e period-aware dell'ambiente di simulazione Kaggriculture
-- **Fonte normativa primaria:** `results/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md` (FROZEN)
-- **Ontologia di riferimento:** `docs/model/ontology/ONTOLOGY_C2.md` (CONSOLIDATED)
-- **Baseline di audit:** `results/model_spec_c2/foundation_revision/CODEX_C2_ENGINE_CONTRACT_PERIOD_LEDGER_AUDIT.md` (FROZEN)
-- **Reconciliation Authority:** `results/model_spec_c2/foundation_revision/FOUNDATION_CROSS_REVIEW_RECONCILIATION.md` (CONSOLIDATED)
-- **Runtime di riferimento:** `kaggle-environments` 1.32.7 (`kaggriculture` 0.1.0) — Fingerprint: `4378b60f61a3af22ed875969e1be7e7f11af0b0e050b51aa80c0778c4113207d`
-- **Baseline congelata:** `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2.md`
-- **Review candidate preservata:** `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1_POST_3Q_REVIEW_CANDIDATE.md`
-- **Destinazione riconciliata:** `docs/model/state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md`
+La macchina a stati descrive come un'azione o il passare del tempo modifica
+la partita. Per ogni transizione identifica lo stato iniziale, le condizioni
+necessarie e il risultato. Il piano dell'agente sceglie le azioni; l'engine
+decide quali effetti producono.
 
----
+## Le trasformazioni principali
 
-## 1. Scopo, perimetro e separazione architetturale
+| Sistema | Evoluzione | Evento determinante |
+|---|---|---|
+| Coltura | Casella vuota → pianta in crescita → raccolta disponibile → terreno libero o nuova produzione. | Semina, età biologica e HARVEST. |
+| Fine ciclo | Pianta esaurita → perdita della resa residua → infestante. | Decadimento dopo la fine della vita produttiva. |
+| Carenza idrica | Pianta → infestante. | Raggiungimento della soglia di giorni senza acqua al refresh. |
+| Animale | Struttura vuota → animale presente → prodotto disponibile. | Collocazione e calendario di produzione. |
+| Carenza alimentare | Struttura con animale → struttura vuota. | Fuga al raggiungimento della soglia senza alimentazione. |
+| Lavoro | Assunzione → persona disponibile → fine del contratto giornaliero. | HIRE e cambio di giornata. |
+| Prodotto | Casella → inventario della persona → deposito → denaro. | Raccolta, trasferimento e vendita. |
 
-Questo documento definisce la **macchina a stati formale dell'ambiente di simulazione Kaggriculture (Environment / Domain State Machine)**. È la revisione C2.1 riconciliata dopo i feedback indipendenti post-3Q; la baseline C2 resta preservata come riferimento storico congelato.
+Le transizioni avvengono in un ordine preciso. Le azioni delle persone
+precedono il mercato; decadimento e refresh vengono dopo. Lo stato mostrato
+prima di un turno non è il risultato delle azioni che verranno eseguite in
+quel turno. Le sezioni seguenti definiscono guardie, clock e ordine degli eventi.
 
-La State Machine risponde alla domanda fondamentale:
-> **Come evolve lo stato dell'ambiente simulato, quali transizioni fisiche e biologiche sono ammesse, quali guardie le governano e in quale ordine causale avvengono?**
+Il [contratto dell'engine](../ENGINE_CONTRACT.md) introduce il funzionamento
+generale; l'[ontologia](../ontology/ONTOLOGY_C2_1.md) definisce i concetti usati qui.
 
-### 1.1 Separazione di principio: Dinamica dell'Ambiente vs Policy agent-local
+### Separazione di principio: Dinamica dell'Ambiente vs Policy agent-local
 La State Machine modella **esclusivamente le leggi causali della simulazione**, non il processo cognitivo o decisionale dell'agente.
 
 In particolare:
 - **NON contiene stati deliberativi dell'agente:** concetti come `DEFINE`, `PLAN`, `COMMITTED`, `VERIFY` e `REVIEW` sono scelte architetturali agent-local e sono categoricamente esclusi dalla Foundation condivisa;
 - **NON prescrive scelte o strategie:** non include preferenze colturali, ranking di profitto, target di animali, calendari fissi di espansione, soglie di cassa, regole di dispatching o algoritmi di routing;
-- **Quadripartizione Epistemica del Processo Operativo (CORR-13):**
+- **Quadripartizione Epistemica del Processo Operativo:**
   $$\text{STATE}_t \xrightarrow{\text{ACTION\_REQUEST}_t} \text{SNAPSHOT\_ELIGIBILITY} \xrightarrow{\text{EXECUTION\_OUTCOME}} \text{STATE}_{t+1} \xrightarrow{\text{POST\_STATE\_EVIDENCE}}$$
 
-### 1.2 Evidence Status Canonici
+### Evidence Status Canonici
 
 | Status | Significato formale in questo documento |
 |---|---|
@@ -42,9 +45,9 @@ In particolare:
 
 ---
 
-## 2. Clock, fase e ciclo globale dell'engine
+## Clock, fase e ciclo globale dell'engine
 
-### 2.1 Clock canonico parametrico ($T$) e configurazione
+### Clock canonico parametrico ($T$) e configurazione
 L'orologio della simulazione è parametrizzato sulla costante di discretizzazione giornaliera $T = \text{turnsPerDay}$ (configurabile dall'engine; default $T=24$). Nessuna costante assoluta di step (es. 24, 48, 72) è assunta come universale.
 
 Le coordinate temporali canoniche soddisfano l'invariante universale:
@@ -55,7 +58,7 @@ $$\text{step} \equiv \text{day} \cdot T + \text{hour}, \quad \text{con } \text{h
 - **Trigger End-of-Day (EOD):** l'evento di fine giornata si attiva all'ultimo step di ciascun giorno:
   $$\text{EOD\_STEP}(d) = (d + 1) \cdot T - 1 \iff (\text{step} + 1) \pmod T == 0$$
 
-### 2.2 Phase Contract e ordine deterministico del ciclo di esecuzione (CORR-08, CORR-14)
+### Phase Contract e ordine deterministico del ciclo di esecuzione
 A ogni step $t$ dell'episodio, l'interpreter dell'ambiente esegue le operazioni secondo una sequenza deterministica ordinata in 11 fasi:
 
 1. **Inizializzazione (`_initialize`):** se $\text{step} == 0$, creazione dello stato globale pubblico (`farms`, `market`, `town`) e privato (`private.shed`, `private.seeds`, `private.inventories`);
@@ -70,7 +73,7 @@ A ogni step $t$ dell'episodio, l'interpreter dell'ambiente esegue le operazioni 
 10. **Emissione stato risultante $S_{t+1}$:** generazione dell'osservazione post-transizione;
 11. **Terminal Evaluation:** se $\text{step} + 1 \ge \text{episodeSteps}$, transizione a terminale e assegnazione del saldo monetario `farms[player].money` come `final_money_outcome`.
 
-### 2.3 Ordine causale dettagliato della sequenza EOD (Fase 8) (CORR-04, CORR-06)
+### Ordine causale dettagliato della sequenza EOD (Fase 8)
 
 ```text
 [EOD Step: hour == T - 1]
@@ -122,9 +125,9 @@ A ogni step $t$ dell'episodio, l'interpreter dell'ambiente esegue le operazioni 
 
 ---
 
-## 3. Crop & Tile State Machine
+## Crop & Tile State Machine
 
-### 3.1 Variabili Engine-Native e Derived Tile Lifecycle Views (CORR-07)
+### Variabili Engine-Native e Derived Tile Lifecycle Views
 
 La State Machine separa rigorosamente le **variabili e stati primitivi memorizzati dall'engine** dalle **viste derivate di lifecycle**.
 
@@ -138,7 +141,7 @@ L'engine mantiene e muta deterministicamente le seguenti grandezze per ciascuna 
 - **Finestra fertilizzazione:** `fertilized_until_day` (Intero indicante l'ultimo giorno di efficacia);
 - **Strutture e Bestiame:** tipo struttura (`COOP`, `PASTURE`), specie animale (`animal`), `consecutive_unfed`, `fed_today`, `cared_today`, `pending_care_bonus`, `fertilizer_available`, `yield_units`.
 
-#### B. Derived Tile Lifecycle Views (5 Viste Ambientali Pure) (CORR-07)
+#### B. Derived Tile Lifecycle Views (5 Viste Ambientali Pure)
 La partizione ambientale esaustiva dell'ambiente fisico consiste di **5 viste derivate deterministiche**:
 
 ```text
@@ -153,15 +156,15 @@ GROWING        : [DERIVED VIEW] tile con PLANT attiva in accrescimento non ancor
 - **`in_working_set` (`POL-WS`):** assegnazione deliberativa della tile al perimetro operativo dell'agente (`POLICY_CONTEXT`);
 - **`policy_retirement_due` (`POL-RET`):** marcatura deliberativa di una pianta da estirpare tramite `DIG` (`POLICY_CONTEXT`).
 
-### 3.2 Condizione ortogonale `tile_care_due_condition` (Anti-Loss Alert)
+### Condizione ortogonale `tile_care_due_condition` (Anti-Loss Alert)
 $$\text{tile\_care\_due\_condition}(\text{tile}) \iff \text{tile.kind} == \text{PLANT} \quad \land \quad \text{tile.watered\_today} == \text{False} \quad \land \quad \text{tile.consecutive\_unwatered} == 1$$
 
-### 3.3 Predicato formale di HARVEST Readiness e Silent No-Op
+### Predicato formale di HARVEST Readiness e Silent No-Op
 $$\text{crop\_harvest\_readiness} \iff \begin{cases} \text{tile.kind} == \text{PLANT} \\ \text{tile.yield\_units} > 0 \\ \text{current\_day} - \text{tile.planted\_day} \ge \text{first\_yield\_day} \end{cases}$$
 
 Se un worker emette `HARVEST` quando $\text{current\_day} - \text{tile.planted\_day} < \text{first\_yield\_day}$, l'azione è un **silent no-op**: la pianta **non viene distrutta** e il suo stato biologico rimane inalterato.
 
-### 3.4 Parametri biologici e period ledger delle colture
+### Parametri biologici e period ledger delle colture
 
 | Specie | Tipo | `first_yield_day` | Water Yield Ages | Ongoing Interval | Max Yield | Max Lifespan ($\text{step}$) | Resa per Irrigazione (Base / Fert) |
 |---|---|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -173,22 +176,22 @@ Se un worker emette `HARVEST` quando $\text{current\_day} - \text{tile.planted\_
 
 ---
 
-## 4. Fertilizer State Machine
+## Fertilizer State Machine
 
-### 4.1 Applicazione e Finestra Temporale (`fertilizer_effect_window`)
+### Applicazione e Finestra Temporale (`fertilizer_effect_window`)
 L'azione atomica `FERTILIZE` eseguita su una tile `PLANT` consuma 1 unità di `FERTILIZER` dal worker inventory e imposta:
 $$\text{fertilized\_until\_day} = \max(\text{precedente}, \text{current\_day} + 2)$$
 avente durata di **3 giorni di calendario inclusivi** ($\text{current\_day} \dots \text{current\_day} + 2$).
 
-### 4.2 Semantica di resa ed esclusioni causali (CORR-04)
+### Semantica di resa ed esclusioni causali
 - **Resa e Uplift Netto:** L'incremento per evento passa da 1 a 2 ($\text{FERTILIZER\_UPLIFT} = \mathbf{+1}$) **se e solo se la pianta è stata irrigata nel giorno corrente** (`was_watered == True` $\land$ `fertilized_until_day >= current_day`).
 - **Invarianza Biologica:** Il fertilizzante **NON accelera l'età biologica (`age`)**, **NON anticipa `first_yield_day`** e **NON modifica la data di lifespan decay**.
 
 ---
 
-## 5. Livestock State Machine
+## Livestock State Machine
 
-### 5.1 Specie supportate, strutture e allocazione (CORR-01, CORR-05)
+### Specie supportate, strutture e allocazione
 
 | Specie | Costo Acquisto | Struttura Dedicata | Costo Costruzione | Max Held Tile Resa | Primo Output | Intervallo Produzione | Prodotto Primario | Prodotto Secondario |
 |---|:---:|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
@@ -198,44 +201,44 @@ avente durata di **3 giorni di calendario inclusivi** ($\text{current\_day} \dot
 
 *Nota:* `ANIMALS.max_held` è il limite di resa accumulabile sulla tile della struttura zootecnica. **L'inventario del lavoratore non ha limiti di capienza** (`kaggriculture.py:299-309`). `BUILD_COOP` e `BUILD_PASTURE` costano **0 cassa**.
 
-### 5.2 Struttura degli stati dell'entità animale
+### Struttura degli stati dell'entità animale
 ```text
 EMPTY_STRUCTURE   : struttura costruita (COOP/PASTURE), priva di animale
 OCCUPIED_ANIMAL   : animale presente alloggiato (consecutive_unfed in [0, 1])
 ESCAPED_ANIMAL    : transizione a EOD su consecutive_unfed >= 2 -> la struttura torna EMPTY_STRUCTURE
 ```
 
-### 5.3 Meccanica di alimentazione (`FEED`), fuga e disaccoppiamento produzione base
+### Meccanica di alimentazione (`FEED`), fuga e disaccoppiamento produzione base
 - **Azione `FEED`:** richiede 1 `WHEAT` nel worker inventory. Consuma 1 Wheat e imposta **`fed_today = True`**;
 - **Aggiornamento Digiuno e Fuga a EOD:** se `fed_today == True` $\implies \text{consecutive\_unfed} = 0$; altrimenti $\text{consecutive\_unfed} += 1$. Se $\text{consecutive\_unfed} \ge 2$, l'animale fugge all'EOD;
 - **Produzione di Base (Disaccoppiata da FEED):** nel giorno biologico programmato, se l'animale non è fuggito, viene erogato **$\text{base\_output} = 1$**. `FEED` **NON è il gate abilitante del base output**.
 
-### 5.4 Meccanica di cura (`CARE`) e reset programmato del bonus (CORR-06)
+### Meccanica di cura (`CARE`) e reset programmato del bonus
 - **Azione `CARE`:** imposta `cared_today = True`;
 - **Ordine causale EOD di Consumo, Reset e Accumulo:**
   1. *Consumo e Reset:* ad ogni giorno di produzione programmata, se `fed_today == True`, viene applicato il `pending_care_bonus` preesistente. **In ogni caso, a ogni produzione programmata, `pending_care_bonus` viene resettato a 0** (`kaggriculture.py:823-828`);
   2. *Accumulo:* **dopo** la produzione, se `fed_today == True AND cared_today == True`, $\text{pending\_care\_bonus} \leftarrow \text{pending\_care\_bonus} + 1$ (salvato per produzioni future).
 
-### 5.5 Fertilizer Animale e raccolta
+### Fertilizer Animale e raccolta
 - A ogni EOD in cui l'animale sopravvive, $\text{fertilizer\_available} = \text{True}$ (flag booleano non-cumulativo);
 - `COLLECT_FERTILIZER` trasferisce 1 `FERTILIZER` al worker inventory e reimposta $\text{fertilizer\_available} = \text{False}$.
 
 ---
 
-## 6. Workforce, Movimento e Inventory State Machine
+## Workforce, Movimento e Inventory State Machine
 
-### 6.1 Multi-Occupancy e Assenza di Collisioni
+### Multi-Occupancy e Assenza di Collisioni
 $$\text{worker\_multi\_occupancy} \implies \text{ENGINE\_VERIFIED}$$
 L'engine consente a molteplici worker di occupare contemporaneamente la medesima coordinata spaziale $(x, y)$ senza collisioni fisiche.
 
-### 6.2 Ciclo di vita dei Worker e Inventario (CORR-01)
+### Ciclo di vita dei Worker e Inventario
 - **Main Farmer:** permanente, attivo dal tick 0. A ogni EOD viene riposizionato alla coordinata di spawn dello shed;
 - **Farm Hands:** assunti tramite `HIRE`. Operativi a $t+1$, hanno contratto giornaliero e vengono rimossi a EOD, con reset di $\text{hires\_today} = 0$;
 - **Costo di `HIRE`:** viene addebitato una sola volta al commit dell'ordine secondo la progressione Fibonacci configurata per `hires_today`. L'engine non applica salario, wage floor o costo ricorrente a EOD;
 - **Scadenza senza insolvenza:** la rimozione degli Hands a EOD è una transizione temporale incondizionata, non un licenziamento causato da liquidità insufficiente;
 - **Capienza Inventario Worker:** l'inventario del lavoratore è un dizionario dinamico **privo di limite di carico** (`_inv_add` inserisce senza guardie di spazio).
 
-### 6.3 Semantica di scarico inventario e gestione Overflow
+### Semantica di scarico inventario e gestione Overflow
 L'ambiente modella tre modalità distinte di trasferimento merci verso lo shed centrale (`shedCapacity`, default 100):
 
 ```text
@@ -257,9 +260,9 @@ L'ambiente modella tre modalità distinte di trasferimento merci verso lo shed c
 
 ---
 
-## 7. Market, Capitale e Monetizzazione State Machine
+## Market, Capitale e Monetizzazione State Machine
 
-### 7.1 Ordini di mercato e batch limit
+### Ordini di mercato e batch limit
 Gli ordini di mercato vengono elaborati nella Fase 5 del ciclo di step:
 - Ordini ammessi: `BUY_SEED`, `BUY_PRODUCT`, `BUY_ANIMAL`, `SELL`, `BUY_LAND`, `HIRE`;
 - **Limite di batch:** $\text{maxMarketOrdersPerTurn}$ ordini per turno (default 10); ordini eccedenti vengono ignorati;
@@ -285,13 +288,13 @@ truncate_batches -> for order_slot -> collect_same_slot_intents
 
 L'ordine effettivo dei giocatori è parte del contratto dell'engine e deve essere controbilanciato nei tornei usando entrambi i seat. Il solo ordine di commit non dimostra però un vantaggio di stock: ogni asimmetria deve essere attribuita tramite ledger post-transizione e guardie reali.
 
-### 7.2 Separazione Cassa Online vs Outcome Terminale
+### Separazione Cassa Online vs Outcome Terminale
 - `current_money_state`: saldo liquido osservabile in tempo reale (`farms[player].money`);
 - `final_money_outcome`: saldo terminale a $\text{step} \ge \text{episodeSteps}$, costituente la reward della simulazione.
 
 ---
 
-## 8. Diagramma Mermaid Complessivo C2 (Environment / Domain)
+## Diagramma Mermaid Complessivo (Environment / Domain)
 
 ```mermaid
 flowchart TB
@@ -450,7 +453,7 @@ end
 
 ---
 
-## 9. Tabella Canonica delle Transizioni C2
+## Tabella Canonica delle Transizioni
 
 | Subsystem | Stato Iniziale | Stato Finale | Trigger Event | Condizione / Guardia Engine | Natura | Osservabilità | Azione Coinvolta | Evidence Status |
 |---|---|---|---|---|---|---|---|:---:|
@@ -493,53 +496,8 @@ end
 | **Workforce** | `NO_HANDS` | `HANDS_ACTIVATED` | `HIRE` Order | Cassa $\ge \text{costo HIRE}$, slot ordine | Deterministica | Online Obs | `HIRE` (attivo da $t+1$) | `ENGINE_VERIFIED` |
 | **Workforce** | `HANDS_ACTIVATED` | `NO_HANDS` | EOD Contract Expiry | EOD refresh (Fase 8.5) | Deterministica | Online Obs | None (EOD reset) | `ENGINE_VERIFIED` |
 
----
+## Fonti e documenti precedenti
 
-## 10. Audit di Policy Contamination e Separazioni Non Negoziabili
-
-La presente State Machine è integralmente bonificata da elementi di policy o deliberazione strategica:
-
-1. **Assenza di Stati Cognitivi/Deliberativi:** Nessuno stato appartiene al controller (`DEFINE`, `PLAN`, `VERIFY`, `REVIEW`, `COMMITTED`).
-2. **Assenza di Target o Preferenze Economiche:** Rimossa ogni indicazione di mix colturale preferito, ROI o convenienza relativa tra colture e animali.
-3. **Neutralità del Working Set:** L'assegnazione di quadranti o tile a un working set è una scelta di policy dell'agente (`POLICY_CONTEXT`).
-4. **Separazione Tripartita della Serviceability:**
-   - $\text{action\_eligible\_now}$: predicato deterministico online dell'environment (`DERIVED_ENGINE_FACT`);
-   - $\text{reserved\_serviceable\_before\_deadline}$: stima deliberativa di policy (`POLICY_CONTEXT`);
-   - $\text{realized\_serviceable\_in_window}$: metrica diagnostica post-hoc (`POST_HOC_METRIC`).
-5. **Capacità Strutturale vs Serviceable:**
-   - $\text{livestock\_structural\_capacity}$: limite fisico derivato da strutture (`COOP`/`PASTURE`) e regole di placement (`DERIVED_ENGINE_FACT`);
-   - $\text{livestock\_serviceable\_capacity}$: capacità pianificata sostenibile dalla policy (`POLICY_CONTEXT`).
-
----
-
-## 11. Impatto downstream per i layer successivi di Model Foundation C2
-
-### Per `KAGGRICULTURE_FEATURE_MODEL_C2_1.md`:
-- **Derived Tile Classifier:** derivare le 5 lifecycle views pure (`OUT_OF_SCOPE`, `LOST_WEED`, `EMPTY_AVAILABLE`, `HARVEST_READY`, `GROWING`) dai campi engine-native tramite predicati deterministici;
-- **Governance `policy_retirement_due`:** trattare `policy_retirement_due` (`POL-RET`) e `in_working_set` (`POL-WS`) esclusivamente come feature di `POLICY_CONTEXT`;
-- **Readiness e Allerte:** implementare `crop_harvest_readiness` con guardie su `first_yield_day` ed età biologica, e `tile_care_due_condition` come feature di allerta ortogonale anti-loss ($\text{consecutive\_unwatered} == 1 \land \text{not watered\_today}$);
-- **Divieto Future Leakage:** vietare rigorosamente il consumo online di feature telemetriche o esiti post-hoc (`realized_serviceable_in_window`, `final_money_outcome`);
-- **Parametri Biologici:** implementare l'uplift netto fertilizzante $+1$ (richiede `was_watered == True`) e la finestra inclusiva $d \dots d+2$.
-
-### Per adapter e snapshot downstream:
-- usare il contratto osservativo neutrale `src/agricola/core/observation_contract.py` per clock, snapshot immutabile, hashing e normalizzazione;
-- mantenere deliberazione, planner, working set e routine nei layer agent-local;
-- evitare che un contratto comune imponga la medesima strategia o la medesima routine ai tre agenti.
-
----
-
-## 12. Delta C2.1 sottoposti a revisione
-
-1. esplicitata l'assenza di salari o wage floor a EOD;
-2. dettagliata la risoluzione lockstep e order-sensitive del mercato condiviso;
-3. separati stato online e outcome effettivo post-transizione;
-4. estratto il contratto osservativo neutrale ed eliminata la macchina deliberativa condivisa non utilizzata.
-
-**Fine di KAGGRICULTURE_STATE_MACHINE C2.1 (Reconciled; Foundation post-3Q completata).**
-
-
-## Checkpoint operativo 2026-09-08: V48 e PASS
-
-Gli audit devono ricostruire azione e successivo refresh nella sequenza dell’engine: raccolta finale, esaurimento, decadimento e perdita idrica non sono equivalenti. Il calendario previsto dal planner va confrontato con le transizioni effettive; una previsione non è un evento osservato.
-
-Pianificazione e inventario downstream: [V48 e priorità PASS](../V48_PLANNING_AND_BUILD_IT.md). Nessuna modifica alle costanti dell’engine; supplemento operativo alla baseline riconciliata.
+Le regole sono descritte nel [contratto dell’engine](../ENGINE_CONTRACT.md).
+Le versioni precedenti e i verbali sono [conservati nell’archivio](../../governance/history/foundation_documentation_20260908/README.md).
+I nomi tecnici e le formule del catalogo rimangono riferimenti di implementazione; questa revisione riorganizza la documentazione e non modifica il codice del gioco.

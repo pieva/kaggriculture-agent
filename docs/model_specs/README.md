@@ -1,5 +1,24 @@
 # Agent-owned model material
 
+## Contenuto delle MODEL_SPEC
+
+Una MODEL_SPEC descrive la strategia di un modello decisionale e come è
+realizzata nel codice. Deve contenere:
+
+1. Obiettivo, ambito e ipotesi del modello.
+2. Pianificazione, criteri di scelta e priorità fra azioni concorrenti.
+3. Vincoli, reazioni agli imprevisti e comportamento di chiusura.
+4. Elenco dei file di implementazione, con collegamenti e responsabilità.
+5. Collegamenti a configurazione, builder e verifiche della policy.
+
+Distinguere il comportamento implementato da quello proposto. Stato del lavoro,
+risultati dei benchmark e prossime attività vanno nei registri o nei report,
+collegati dalla specifica. Gli esperimenti storici congelati restano preservati.
+
+Esempio: [strategia Codex 770 e sorgenti](codex/e19/MODEL_SPEC_CODEX_770_V48.md).
+
+## Organizzazione dei materiali
+
 `docs/model_specs/<agent>/` is the canonical home for every asset owned by a
 single agent. This includes model specifications and, under the round folder,
 agent-specific configs, designs, prompts, reports, reviews, tools, tests,

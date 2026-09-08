@@ -1,27 +1,30 @@
-# ONTOLOGY C2.1 — Ontologia comune riconciliata post-3Q
+# Ontologia — entità e concetti del gioco
 
-- **Fase:** Model Foundation C2.1 / Post-3Q Review Pass
-- **Stato:** RECONCILED / FOUNDATION POST-3Q COMPLETE
-- **Data:** 2026-09-01
-- **Ambito:** Vocabolario semantico comune e neutrale per Antigravity, Codex e Copilot
-- **Fonte normativa:** `results/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md` (FROZEN)
-- **Baseline di audit:** `results/model_spec_c2/foundation_revision/CODEX_C2_ENGINE_CONTRACT_PERIOD_LEDGER_AUDIT.md` (FROZEN)
-- **Reconciliation Authority:** `results/model_spec_c2/foundation_revision/FOUNDATION_CROSS_REVIEW_RECONCILIATION.md` (CONSOLIDATED)
-- **Runtime di riferimento:** `kaggle-environments` 1.32.7 (`kaggriculture` 0.1.0) — Fingerprint: `4378b60f61a3af22ed875969e1be7e7f11af0b0e050b51aa80c0778c4113207d`
-- **Baseline congelata:** `docs/model/ontology/ONTOLOGY_C2.md`
-- **Review candidate preservata:** `docs/model/ontology/ONTOLOGY_C2_1_POST_3Q_REVIEW_CANDIDATE.md`
-- **Destinazione riconciliata:** `docs/model/ontology/ONTOLOGY_C2_1.md`
+L'ontologia dà un significato comune alle parole usate per descrivere la
+fattoria. Distingue ciò che esiste, ciò che cambia nel tempo e ciò che viene
+misurato. Consente a modelli diversi di parlare dello stesso fenomeno senza
+confondere le regole del gioco con le proprie scelte strategiche.
 
----
+## Come leggere il dominio
 
-## 1. Scopo e governance
+| Famiglia | Entità e concetti | Esempio di distinzione |
+|---|---|---|
+| Terreno | Fattoria, quadrante, casella, superficie disponibile e coltivata. | Terreno acquistato non equivale a terreno produttivo. |
+| Produzione | Pianta, animale, struttura, ciclo biologico e prodotto. | Un pascolo vuoto è una struttura, non un animale produttivo. |
+| Lavoro | Persona, posizione, azione, tempo disponibile e lavoro necessario. | Avere persone disponibili non garantisce che un servizio sia completabile. |
+| Logistica | Semi, inventario personale, deposito e capacità. | Un prodotto raccolto non è ancora una vendita. |
+| Economia | Cassa, costo, ricavo, mercato e risultato finale. | La cassa osservata è un dato; la riserva desiderata è una scelta del modello. |
+| Tempo e controllo | Evento, scadenza, condizione di legalità e risultato di esecuzione. | Un comando richiesto può non produrre una transizione. |
 
-Questa ontologia definisce il vocabolario concettuale comune, period-aware e rigorosamente neutrale rispetto alle policy decisionali per descrivere i fenomeni del dominio simulato di **Kaggriculture**. È la revisione C2.1 riconciliata dopo i feedback indipendenti post-3Q; la baseline C2 resta preservata come riferimento storico congelato.
+Le proprietà osservate, le grandezze derivate, le previsioni del modello e i
+risultati misurati a posteriori restano distinti. Il catalogo seguente conserva
+i nomi tecnici dei concetti per collegare descrizione, feature e codice.
 
-L'ontologia risponde alla domanda fondamentale:
-> **Che cosa esiste nel dominio Kaggriculture, quali proprietà possiede e che cosa significa?**
+Per le regole operative leggere il [contratto dell'engine](../ENGINE_CONTRACT.md);
+per le transizioni la [macchina a stati](../state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md);
+per formule e osservabilità il [Feature Model](../feature_model/KAGGRICULTURE_FEATURE_MODEL_C2_1.md).
 
-### 1.1 Separazione di principio: Fatti di Dominio vs Policy
+### Separazione di principio: Fatti di Dominio vs Policy
 L'ontologia descrive **l'ambiente di simulazione**, non le preferenze o le strategie di un agente. Ogni concetto appartiene a una delle seguenti quattro classi di rigore epistemico:
 
 1. `ENGINE_FACT`: fatto normativo primitivo o legge causale definita direttamente dal codice dell'ambiente (`kaggriculture.py`);
@@ -38,7 +41,7 @@ L'ontologia **NON definisce né prescrive**:
 - target economici di fatturato o soglie monetarie;
 - architetture di implementazione, codice o submission.
 
-### 1.2 Principio OR e criteri di ammissione
+### Principio OR e criteri di ammissione
 L'ontologia è l'**unione semantica (OR)** dei fenomeni rilevanti del dominio identificati e verificati nel codice dell'ambiente, non l'intersezione minimale delle scelte dei singoli modellatori.
 
 Un concetto appartiene al registry canonico se soddisfa quattro criteri:
@@ -47,7 +50,7 @@ Un concetto appartiene al registry canonico se soddisfa quattro criteri:
 3. **Assenza di policy leakage:** non codifica euristiche proprietarie o assunzioni di strategia come leggi dell'ambiente;
 4. **Engine grounding verificato:** dispone di una definizione fondata sulle regole dell'ambiente congelato (`ENGINE_VERIFIED`), formalmente derivata (`DERIVED`), esplicitamente dichiarata come contesto di policy (`POLICY_DECLARED`) o metrica post-hoc (`POST_HOC_METRIC`).
 
-### 1.3 Mapping dei modelli e liceità di `NONE_DIRECT`
+### Mapping dei modelli e liceità di `NONE_DIRECT`
 Ciascun `MODEL_SPEC` e ciascun layer downstream mappa i concetti canonici secondo la propria architettura decisionale:
 - **Usage:** `USED`, `PARTIAL`, `NOT_USED`
 - **Mapping semantico:** `FULL`, `PARTIAL`, `ABSENT`, `BROADER`, `NARROWER`, `CONFLICT`
@@ -56,9 +59,9 @@ Ciascun `MODEL_SPEC` e ciascun layer downstream mappa i concetti canonici second
 
 ---
 
-## 2. Tassonomia ed Evidence Classification
+## Tassonomia ed Evidence Classification
 
-### 2.1 Tipi ontologici primari
+### Tipi ontologici primari
 I tipi canonici assegnati ai concetti sono:
 - `STATE`: proprietà discreta o continua dello stato del sistema o degli attori;
 - `FLOW`: tasso di transizione, volume di azioni o movimento di entità/risorse nel tempo;
@@ -72,7 +75,7 @@ I tipi canonici assegnati ai concetti sono:
 - `DERIVED_METRIC`: grandezza computata da stati, flussi o eventi elementari;
 - `OUTCOME`: risultato terminale o metrica di sintesi aggregata dell'episodio.
 
-### 2.2 Assi di classificazione epistemica
+### Assi di classificazione epistemica
 
 #### Asse dell'Evidenza (`evidence_status`):
 - `ENGINE_VERIFIED`: comportamento o formula verificata direttamente nel codice sorgente dell'ambiente simulato (`kaggriculture.py`);
@@ -88,7 +91,7 @@ I tipi canonici assegnati ai concetti sono:
 - `ENGINE_INTERNAL`: variabile interna mantenuta dall'environment non visibile all'agente;
 - `OUTCOME_ONLY`: valore disponibile esclusivamente al termine dell'episodio o post-evento.
 
-### 2.3 Quadripartizione Epistemica del Processo Decisionale (CORR-13)
+### Quadripartizione Epistemica del Processo Decisionale
 L'ontologia formalizza quattro fasi temporali ed epistemicamente distinte del processo operativo:
 1. `ACTION_REQUEST` ($A_t$): intenzione o comando formulato dall'agente sulla base dello stato $S_t$;
 2. `SNAPSHOT_ELIGIBILITY`: legalità e ammissibilità teorica dell'azione valutata staticamente sullo snapshot $S_t$ prima dell'esecuzione;
@@ -99,9 +102,9 @@ Nessun dato appartenente a `EXECUTION_OUTCOME` o `POST_STATE_EVIDENCE` è dispon
 
 ---
 
-## 3. Concetti Canonici (Canonical Registry C2)
+## Concetti Canonici (Canonical Registry )
 
-Il registry canonico C2 consolida **85 concept_id** organizzati in 9 domini tematici (A–I).
+Il catalogo definisce **85 concept_id** organizzati in 9 domini tematici (A–I).
 
 ---
 
@@ -562,7 +565,7 @@ Il registry canonico C2 consolida **85 concept_id** organizzati in 9 domini tema
 - **Osservabilità:** `ONLINE_OBSERVABLE`
 - **Descrizione:** Presenza, densità e distribuzione spaziale delle erbe infestanti (`WEED`) sulla superficie posseduta.
 
-### `tile_lifecycle_state` (CORR-07)
+### `tile_lifecycle_state`
 - **Tipo:** `STATE / DERIVED_METRIC`
 - **Evidence status:** `DERIVED_ENGINE_FACT`
 - **Osservabilità:** `ONLINE_DERIVABLE`
@@ -676,7 +679,7 @@ Il registry canonico C2 consolida **85 concept_id** organizzati in 9 domini tema
 
 ---
 
-## 4. Relazioni canoniche C2
+## Relazioni canoniche
 
 ### Terreno, Workforce e Produttività
 - `land_surface_total enables activated_land_surface`
@@ -741,7 +744,7 @@ Il registry canonico C2 consolida **85 concept_id** organizzati in 9 domini tema
 
 ---
 
-## 5. Separazioni canoniche non negoziabili C2
+## Separazioni canoniche non negoziabili
 
 1. **Terreno posseduto $\neq$ Terreno attivato $\neq$ Terreno mantenuto:** la proprietà fondiaria non implica produzione attiva né manutenzione sostenibile.
 2. **Worker headcount $\neq$ Throughput operativo $\neq$ Azioni monetizzate:** avere più worker non aumenta il valore generato se il movimento saturano la capacità temporale.
@@ -759,7 +762,7 @@ Il registry canonico C2 consolida **85 concept_id** organizzati in 9 domini tema
 
 ---
 
-## 6. Concetti model-local e policy esclusi dall'ontologia
+## Concetti model-local e policy esclusi dall'ontologia
 
 Restano categoricamente esclusi dall'ontologia canonica:
 - assunzioni dogmatiche di convenienza economica;
@@ -771,27 +774,7 @@ Restano categoricamente esclusi dall'ontologia canonica:
 
 ---
 
-## 7. Tracciabilità dei termini storici e mapping C1 $\to$ C2
-
-| Termine storico C1 | Stato C2 | Trattamento in C2 |
-|---|---|---|
-| `contract_inventory_loss` | **CORRETTO** | Rinominato/ridefinito come `shed_overflow_loss`. |
-| `shed_overflow_eod_loss` | **REVISED** | Generalizzato in `shed_overflow_loss` (`MANUAL_DROP` ed `EOD_AUTO_DROP`). |
-| `harvest_readiness` | **AGGIUNTO** | Formalizzato come `crop_harvest_readiness` vincolato da `first_yield_day`. |
-| `tile_lifecycle` | **REVISED** | Formalizzato come `tile_lifecycle_state` a 5 stati fisici + 2 overlay di policy. |
-| `care_due` | **AGGIUNTO** | Formalizzato come `tile_care_due_condition` ortogonale al lifecycle. |
-| `worker_multi_occupancy` | **AGGIUNTO** | Promosso a `ENGINE_VERIFIED`. |
-| `worker_capacity` | **CORRETTO** | Riconosciuta l'assenza di capienza fisica di carico del lavoratore (`_inv_add`). |
-| `livestock_capacity` | **DEPRECATED / SPLIT** | Suddiviso in `livestock_structural_capacity` e `livestock_output_storage_capacity` (`max_held`). |
-| `fertilizer_window` | **CORRETTO** | Formalizzato come `fertilizer_effect_window` (`day..day+2`, richiede `was_watered`). |
-| `care_bonus_accumulation` | **CORRETTO** | Formalizzato con reset programmato ad ogni produzione (`pending_care_bonus_accumulation`). |
-| `structure_cost` | **CORRETTO** | Formalizzato a costo monetario 0 (`structure_construction_cost`). |
-| `feed_production_gate` | **FALSIFICATO** | Sostituito da `livestock_base_production` dissociato da FEED. |
-| `chicken_species` | **DEPRECATED** | Dichiarato `CHICKEN = NOT_SUPPORTED`; sostituito da `GOOSE`. |
-
----
-
-## 8. Contratto di osservabilità, no-future-leakage e telemetry
+## Contratto di osservabilità, no-future-leakage e telemetry
 
 Ogni analisi o componente di feature engineering deve rispettare le quattro classi di osservabilità:
 1. **Stato Online Primario (`ONLINE_OBSERVABLE`):** grandezze direttamente esposte dall'observation dictionary (`step`, `money`, `farmer_pos`, `inventory`, `tiles`, `market_prices`, `day`).
@@ -803,21 +786,8 @@ La categoria 4 include inoltre `market_transaction_value` e `shared_market_conte
 
 **Vincolo di No-Future-Leakage:** nessun dato appartenente a *Telemetria Post-Azione* o *Outcome* può essere consumato come feature decisionale online prima della conclusione della finestra/evento a cui si riferisce.
 
----
+## Fonti e documenti precedenti
 
-## 9. Delta C2.1 sottoposti a revisione
-
-1. corretto il percorso canonico della liquidità online;
-2. riclassificato il controvalore effettivo di mercato come telemetria post-azione;
-3. introdotta l'esternalità di contesa del mercato condiviso;
-4. mantenuta la separazione tra fatti di dominio, contesto di policy e metriche post-hoc;
-5. esclusi falsi costi salariali a EOD: `HIRE` addebita soltanto il costo Fibonacci al commit dell'ordine e gli Hands scadono a EOD senza un secondo addebito.
-
-**Fine di ONTOLOGY C2.1 (Reconciled; Foundation post-3Q completata).**
-
-
-## Checkpoint operativo 2026-09-08: V48 e PASS
-
-Distinguere capacità disponibile, lavoro biologico dovuto, lavoro fattibile e attesa. PASS è un esito osservabile, non prova di assenza di lavoro. Piante produttive, esaurite e prodotto detenuto sono concetti distinti. Le categorie diagnostiche di policy non sono nuove regole dell’engine.
-
-Pianificazione e inventario downstream: [V48 e priorità PASS](../V48_PLANNING_AND_BUILD_IT.md). Nessuna modifica alle costanti dell’engine; supplemento operativo alla baseline riconciliata.
+Le regole sono descritte nel [contratto dell’engine](../ENGINE_CONTRACT.md).
+Le versioni precedenti e i verbali sono [conservati nell’archivio](../../governance/history/foundation_documentation_20260908/README.md).
+I nomi tecnici e le formule del catalogo rimangono riferimenti di implementazione; questa revisione riorganizza la documentazione e non modifica il codice del gioco.

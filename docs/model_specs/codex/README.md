@@ -1,6 +1,8 @@
 # Indice MODEL_SPEC Codex
 
 Questo indice raccoglie le specifiche e i riferimenti dei modelli Codex.
+La [specifica della strategia 770 pubblicata](e19/MODEL_SPEC_CODEX_770_V48.md)
+descrive le decisioni del modello e i file che le implementano.
 Lo stato operativo e le priorità sono mantenuti nel
 [Project State](../../PROJECT_STATE.md); la catena della V48 è documentata
 nell'[inventario di pianificazione e produzione](../../foundation/V48_PLANNING_AND_BUILD_IT.md).

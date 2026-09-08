@@ -1,47 +1,35 @@
-# Model Foundation C2.1 — Manifest corrente
+# Manifest della Foundation
 
-## ACTIVE / RECONCILED
+Questo indice identifica le descrizioni correnti del dominio e ne registra
+gli hash per verificarne l’integrità. Non contiene il piano di sviluppo delle policy.
+La [guida di lettura](README.md) spiega il ruolo di ciascun documento.
 
-| Layer | File | SHA-256 |
+## Documenti correnti
+
+| Documento | File | SHA-256 |
 |---|---|---|
-| Ontology | `ontology/ONTOLOGY_C2_1.md` | `F9A44BD57511C062EC03E6D8493E4CF4A76C0BA321E2A1EFDBAFF6B0AEC9D2BD` |
-| Environment State Machine | `state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md` | `26E901DB33FC5F138ACC7807AB4970F2200C1B178967858E21980C69A63BF3C3` |
-| Feature Model | `feature_model/KAGGRICULTURE_FEATURE_MODEL_C2_1.md` | `9AF8D3043DC82D9F1D0C97F21311407ADA0D012854ABED7536930621473E4470` |
-| Observation Contract runtime | `../../src/agricola/core/observation_contract.py` | `3E7509888B09103C79B86FD058984651337CBFC32AB60CD934E6351A4F2A81A9` |
+| ENGINE_CONTRACT.md | `ENGINE_CONTRACT.md` | `34EDFE102B7FB5949F1189029978138A375BB76A0BF27E474AAA1F9CEACC4CB8` |
+| ontology/ONTOLOGY_C2_1.md | `ontology/ONTOLOGY_C2_1.md` | `63C6BF13D03C0376C49AB589B69190DB626868D759CBFE3BB7ED1A1927D2FF82` |
+| state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md | `state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md` | `954E943E16C816204C63CADC566847C6DA51E90A139E5DF5BB3FCD735869BE0E` |
+| feature_model/KAGGRICULTURE_FEATURE_MODEL_C2_1.md | `feature_model/KAGGRICULTURE_FEATURE_MODEL_C2_1.md` | `80A5600CC086259484ABC84BE4AC2582473789ADF6D3D094EA17418649C136D2` |
+| feature_model/FEATURE_CATALOG.md | `feature_model/FEATURE_CATALOG.md` | `EBA5BD23955E1C858F7770FA1F0A112FE0C96127CB7660B185A36003677BBF2F` |
 
-Engine aggregate fingerprint:
+## Fonti e confini
 
-```text
-4378b60f61a3af22ed875969e1be7e7f11af0b0e050b51aa80c0778c4113207d
-```
+Le fonti effettivamente lette per l’engine sono identificate in
+[ENGINE_SOURCE_MANIFEST.json](ENGINE_SOURCE_MANIFEST.json). Il contratto
+osservativo del progetto è in [observation_contract.py](../../src/agricola/core/observation_contract.py).
+Quest’ultimo normalizza osservazioni, clock e snapshot; non definisce una strategia.
 
-## REVIEW & RECONCILIATION EVIDENCE
+I modelli condividono concetti, regole e definizioni delle misure. Planner,
+priorità e routine appartengono alle MODEL_SPEC. La revisione editoriale
+non modifica engine o policy e non costituisce una nuova certificazione incrociata.
 
-- `../governance/history/model_spec_c2/foundation_revision/C2_1_POST_3Q_FOUNDATION_RECONCILIATION.md`;
-- `../governance/history/model_spec_c2/foundation_revision_feedback/ANTIGRAVITY_C2_1_POST_3Q_FOUNDATION_REVIEW.md`;
-- `../governance/history/model_spec_c2/foundation_revision_feedback/COPILOT_C2_1_POST_3Q_FOUNDATION_REVIEW.md`.
+## Archivio e provenienza
 
-## HISTORICAL / FROZEN
+- [Copie precedenti e manifest dei loro hash](../governance/history/foundation_documentation_20260908/README.md).
+- [Verbale storico di riconciliazione dell’engine](../governance/history/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md).
+- [Inventario degli artefatti conservati localmente](evidence/LOCAL_ARTIFACTS_20260908.json).
 
-- `ontology/ONTOLOGY_C2.md`;
-- `state_machine/KAGGRICULTURE_STATE_MACHINE_C2.md`;
-- `feature_model/KAGGRICULTURE_FEATURE_MODEL_C2.md`.
-
-Le baseline C2 non vanno cancellate: servono come confronto frozen e audit trail.
-
-## Contratto osservativo runtime
-
-Clock, snapshot, hashing e normalizzazione sono isolati in `src/agricola/core/observation_contract.py`. La Foundation non contiene una macchina di deliberazione condivisa: planner, priorità, working set e routine sono agent-local.
-
-## Regola di indipendenza
-
-I tre agenti condividono Foundation, engine facts, schema di telemetria e protocolli. Non condividono routine, action table, planner, dispatcher o schedule. Un modello che importa una routine altrui è una baseline derivativa, anche se cambia namespace, config o liquidazione terminale.
-
-## Prossimo lavoro
-
-La baseline post-3Q resta riconciliata. Stato operativo al 2026-09-08: V48 pubblicata; prossima versione 770 dedicata ai PASS evitabili. Gli hash sopra includono il supplemento operativo del 8 settembre, non attestano una nuova revisione incrociata.
-
-
-## Checkpoint operativo 2026-09-08: V48 e PASS
-
-Catena completa e protocollo: [V48 e priorità PASS](V48_PLANNING_AND_BUILD_IT.md). Le baseline C1/C2 e i verbali storici rimangono congelati.
+Le vecchie copie C1/C2 e le evidenze di ambiente sono conservate per audit;
+non sostituiscono i documenti correnti elencati sopra.
