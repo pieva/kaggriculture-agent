@@ -1,0 +1,49 @@
+{
+  "version": "E19-CONTROL-770-V2",
+  "profile": {
+    "schema_version": "e18.codex.common_resource_policy.v2",
+    "pastures": {
+      "target": 14,
+      "uniform_capacity_per_quadrant": 7
+    },
+    "livestock_mix_weights": {
+      "COW": 9,
+      "SHEEP": 5
+    },
+    "maximum_unlocked_quadrants": 3,
+    "maximum_hands": 12,
+    "allowed_crops": [
+      "WHEAT",
+      "CARROT",
+      "TOMATO",
+      "STRAWBERRY",
+      "MELON"
+    ],
+    "bootstrap": {
+      "livestock_ceiling": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "allowed_crops": [
+        "WHEAT",
+        "CARROT"
+      ],
+      "retire_on": "first_confirmed_crop_harvest"
+    }
+  },
+  "sources": {
+    "C:\\Users\\pietr\\Projects\\kaggriculture-agent\\docs\\model_specs\\codex\\e18\\configs\\CODEX_E18_33_COMMON_RESOURCE_POLICY_V2_BOOTSTRAP.json": "e2d312dadca690222bcb95ea6bc8457fae0b8d8cbaa977e40922eac660d8a86f",
+    "C:\\Users\\pietr\\Projects\\kaggriculture-agent\\.venv\\Lib\\site-packages\\kaggle_environments\\envs\\kaggriculture\\kaggriculture.py": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+    "C:\\Users\\pietr\\Projects\\kaggriculture-agent\\docs\\model_specs\\codex\\e18\\tools\\e18_33_common_policy.py": "49e8ad67f48622515f0c50a0b0f7ecee4d9f90cf05a1314fc5e33b1a043a51c2",
+    "C:\\Users\\pietr\\Projects\\kaggriculture-agent\\docs\\model_specs\\codex\\e18\\tools\\e18_33_common_controller.py": "ace9cbc6c67d87a3ed6640787e7e03311883e9826651c26d99ff24d55e50673f",
+    "C:\\Users\\pietr\\Projects\\kaggriculture-agent\\docs\\model_specs\\codex\\e18\\tools\\build_e18_33_parametric_submission.py": "19d77b0ff4dd36ef3cb032781b3e857cf53fe073d6b1ccaf3a5bb8ec7df4442c"
+  },
+  "core_sha256": {
+    "e18_33_common_policy.py": "49e8ad67f48622515f0c50a0b0f7ecee4d9f90cf05a1314fc5e33b1a043a51c2",
+    "e18_33_common_controller.py": "ace9cbc6c67d87a3ed6640787e7e03311883e9826651c26d99ff24d55e50673f"
+  },
+  "submission": "C:\\Users\\pietr\\Projects\\kaggriculture-agent\\submission\\submission_codex_e19_control_770_v2.py",
+  "submission_sha256": "73d27802df67901afdf71c7f27230b1527b9a145557340274238285db6a033ef",
+  "status": "LOCAL_CANDIDATE_REQUIRES_PARITY_AND_ACCEPTANCE",
+  "uploaded": false
+}

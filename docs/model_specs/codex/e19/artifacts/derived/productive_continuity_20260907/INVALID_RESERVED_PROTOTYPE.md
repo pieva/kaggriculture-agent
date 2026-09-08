@@ -1,0 +1,1 @@
+I sei file wheat_reserved_*.json in questa cartella sono INVALIDI: il primo prototipo conteneva un indice errato nella deduplicazione delle offerte (s[5] anziché s[4]). Le eccezioni del callback non erano incluse nel contatore del core. Non usare questi file per confronti o report. Il runner corretto verifica esplicitamente le eccezioni e salva in ../wheat_reserved_20260907/.

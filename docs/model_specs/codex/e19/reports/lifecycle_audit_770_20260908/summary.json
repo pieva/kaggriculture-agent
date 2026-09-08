@@ -1,0 +1,608 @@
+{
+  "cases": [
+    [
+      180903001,
+      0,
+      2,
+      2,
+      0,
+      99574.0
+    ],
+    [
+      180903001,
+      1,
+      2,
+      2,
+      0,
+      99574.0
+    ],
+    [
+      180903002,
+      0,
+      2,
+      2,
+      0,
+      114111.0
+    ],
+    [
+      180903002,
+      1,
+      2,
+      2,
+      0,
+      114111.0
+    ],
+    [
+      180903003,
+      0,
+      7,
+      6,
+      1,
+      62931.0
+    ],
+    [
+      180903003,
+      1,
+      7,
+      6,
+      1,
+      62931.0
+    ]
+  ],
+  "legacy_events": 22,
+  "productive_events": 20,
+  "spent_events": 2,
+  "held_units": 12,
+  "events": [
+    {
+      "seed": 180903001,
+      "seat": 0,
+      "service_day": 21,
+      "position": [
+        9,
+        3
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": true,
+      "last_production_day": 24,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 7,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": 18
+      }
+    },
+    {
+      "seed": 180903001,
+      "seat": 0,
+      "service_day": 22,
+      "position": [
+        9,
+        4
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 2,
+      "future_production": true,
+      "last_production_day": 23,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 6,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 2,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": 21
+      }
+    },
+    {
+      "seed": 180903001,
+      "seat": 1,
+      "service_day": 21,
+      "position": [
+        9,
+        3
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": true,
+      "last_production_day": 24,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 7,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": 18
+      }
+    },
+    {
+      "seed": 180903001,
+      "seat": 1,
+      "service_day": 22,
+      "position": [
+        9,
+        4
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 2,
+      "future_production": true,
+      "last_production_day": 23,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 6,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 2,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": 21
+      }
+    },
+    {
+      "seed": 180903002,
+      "seat": 0,
+      "service_day": 21,
+      "position": [
+        9,
+        3
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": true,
+      "last_production_day": 24,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 7,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": 18
+      }
+    },
+    {
+      "seed": 180903002,
+      "seat": 0,
+      "service_day": 22,
+      "position": [
+        9,
+        4
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 2,
+      "future_production": true,
+      "last_production_day": 23,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 6,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 2,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": 21
+      }
+    },
+    {
+      "seed": 180903002,
+      "seat": 1,
+      "service_day": 21,
+      "position": [
+        9,
+        3
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": true,
+      "last_production_day": 24,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 7,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": 18
+      }
+    },
+    {
+      "seed": 180903002,
+      "seat": 1,
+      "service_day": 22,
+      "position": [
+        9,
+        4
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 2,
+      "future_production": true,
+      "last_production_day": 23,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 6,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 2,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": 21
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "service_day": 16,
+      "position": [
+        9,
+        0
+      ],
+      "crop": "WHEAT",
+      "held_units_after_actions": 1,
+      "future_production": true,
+      "last_production_day": null,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 13,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 1,
+        "max_lifespan_step": 432,
+        "fertilized_until_day": -1
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "service_day": 16,
+      "position": [
+        9,
+        2
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": true,
+      "last_production_day": 24,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 7,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": -1
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "service_day": 16,
+      "position": [
+        8,
+        3
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": true,
+      "last_production_day": 23,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 6,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": -1
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "service_day": 16,
+      "position": [
+        9,
+        4
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": true,
+      "last_production_day": 23,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 6,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": -1
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "service_day": 19,
+      "position": [
+        8,
+        0
+      ],
+      "crop": "WHEAT",
+      "held_units_after_actions": 1,
+      "future_production": true,
+      "last_production_day": null,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 16,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 1,
+        "max_lifespan_step": 504,
+        "fertilized_until_day": -1
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "service_day": 23,
+      "position": [
+        9,
+        3
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": true,
+      "last_production_day": 24,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 7,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": 18
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "service_day": 28,
+      "position": [
+        2,
+        9
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": false,
+      "last_production_day": 28,
+      "physical_cause": "water_refresh",
+      "productive_loss": false,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 11,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": 672,
+        "fertilized_until_day": -1
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "service_day": 16,
+      "position": [
+        9,
+        0
+      ],
+      "crop": "WHEAT",
+      "held_units_after_actions": 1,
+      "future_production": true,
+      "last_production_day": null,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 13,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 1,
+        "max_lifespan_step": 432,
+        "fertilized_until_day": -1
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "service_day": 16,
+      "position": [
+        9,
+        2
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": true,
+      "last_production_day": 24,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 7,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": -1
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "service_day": 16,
+      "position": [
+        8,
+        3
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": true,
+      "last_production_day": 23,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 6,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": -1
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "service_day": 16,
+      "position": [
+        9,
+        4
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": true,
+      "last_production_day": 23,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 6,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": -1
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "service_day": 19,
+      "position": [
+        8,
+        0
+      ],
+      "crop": "WHEAT",
+      "held_units_after_actions": 1,
+      "future_production": true,
+      "last_production_day": null,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "WHEAT",
+        "planted_day": 16,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 1,
+        "max_lifespan_step": 504,
+        "fertilized_until_day": -1
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "service_day": 23,
+      "position": [
+        9,
+        3
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": true,
+      "last_production_day": 24,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 7,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": 18
+      }
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "service_day": 28,
+      "position": [
+        2,
+        9
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": false,
+      "last_production_day": 28,
+      "physical_cause": "water_refresh",
+      "productive_loss": false,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 11,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": 672,
+        "fertilized_until_day": -1
+      }
+    }
+  ]
+}

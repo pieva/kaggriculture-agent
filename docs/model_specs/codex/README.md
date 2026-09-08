@@ -1,5 +1,12 @@
 # Indice MODEL_SPEC Codex
 
+## Checkpoint operativo 2026-09-08: V48 e PASS
+
+**Priorità assoluta della prossima versione: ridurre i PASS evitabili attraverso la pianificazione biologica e della manodopera, solo 770.** V48 pubblicata (56101593) resta congelata; nessuna nuova variante o pubblicazione in questo checkpoint.
+
+[Stato, piano, inventario completo dei sorgenti e riproduzione](../../foundation/V48_PLANNING_AND_BUILD_IT.md). I checkpoint precedenti sono storici; i nuovi Top sono ormai esposti e non costituiscono holdout.
+
+
 Riferimento esterno: alias documentale **Top770**. Episode ID e hash restano
 le fonti di provenienza; i nomi tecnici congelati in config, piani e schemi
 dei test restano invariati per compatibilità.

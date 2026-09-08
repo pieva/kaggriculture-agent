@@ -1,0 +1,1222 @@
+{
+  "gate": "docs\\model_specs\\codex\\e19\\artifacts\\derived\\E19_GATE_V2_DEVELOPMENT_20260907.json",
+  "control": "docs\\model_specs\\codex\\e19\\artifacts\\derived\\E19_GATE_CONTROL_770_V2_20260907.json",
+  "external_benchmark": false,
+  "candidate": {
+    "cases": 28,
+    "cash_mean": 68348.71428571429,
+    "crop_deaths": 0,
+    "animal_losses": 0,
+    "incomplete_missions": 0,
+    "errors": 0,
+    "cash_parity_errors": 0,
+    "max_call_seconds": 2.2840679000364617,
+    "maximum_overage_seconds": 2.0275915000820532,
+    "pass_d5_d10_mean": 359.07142857142856,
+    "daily": [
+      {
+        "day": 1,
+        "cash_mean": 819.0,
+        "cows_median": 2.0,
+        "sheep_median": 2.0,
+        "hands_median": 7.0,
+        "crops_mean": 21,
+        "pass_mean": 57,
+        "move_mean": 58,
+        "executed_mean": {
+          "FEED": 4,
+          "CARE": 4,
+          "WATER": 21,
+          "HARVEST": 0
+        }
+      },
+      {
+        "day": 2,
+        "cash_mean": 1102.0,
+        "cows_median": 2.0,
+        "sheep_median": 2.0,
+        "hands_median": 1.0,
+        "crops_mean": 21,
+        "pass_mean": 7,
+        "move_mean": 9,
+        "executed_mean": {
+          "FEED": 4,
+          "CARE": 4,
+          "WATER": 0,
+          "HARVEST": 0
+        }
+      },
+      {
+        "day": 3,
+        "cash_mean": 962.0,
+        "cows_median": 2.0,
+        "sheep_median": 2.0,
+        "hands_median": 6.0,
+        "crops_mean": 21,
+        "pass_mean": 19,
+        "move_mean": 72,
+        "executed_mean": {
+          "FEED": 4,
+          "CARE": 1,
+          "WATER": 21,
+          "HARVEST": 0
+        }
+      },
+      {
+        "day": 4,
+        "cash_mean": 662.4285714285714,
+        "cows_median": 2.0,
+        "sheep_median": 3.0,
+        "hands_median": 9.0,
+        "crops_mean": 20,
+        "pass_mean": 26,
+        "move_mean": 85,
+        "executed_mean": {
+          "FEED": 5,
+          "CARE": 5,
+          "WATER": 23,
+          "HARVEST": 3
+        }
+      },
+      {
+        "day": 5,
+        "cash_mean": 772.4285714285714,
+        "cows_median": 2.0,
+        "sheep_median": 3.0,
+        "hands_median": 6.0,
+        "crops_mean": 6,
+        "pass_mean": 31,
+        "move_mean": 60,
+        "executed_mean": {
+          "FEED": 5,
+          "CARE": 5,
+          "WATER": 18,
+          "HARVEST": 14
+        }
+      },
+      {
+        "day": 6,
+        "cash_mean": 495.0,
+        "cows_median": 2.0,
+        "sheep_median": 5.0,
+        "hands_median": 9.0,
+        "crops_mean": 9.571428571428571,
+        "pass_mean": 64.71428571428571,
+        "move_mean": 69,
+        "executed_mean": {
+          "FEED": 7,
+          "CARE": 6.285714285714286,
+          "WATER": 9.571428571428571,
+          "HARVEST": 0
+        }
+      },
+      {
+        "day": 7,
+        "cash_mean": 1335.2857142857142,
+        "cows_median": 4.0,
+        "sheep_median": 5.0,
+        "hands_median": 11.0,
+        "crops_mean": 20.285714285714285,
+        "pass_mean": 88,
+        "move_mean": 48.142857142857146,
+        "executed_mean": {
+          "FEED": 9,
+          "CARE": 8,
+          "WATER": 10.714285714285714,
+          "HARVEST": 2
+        }
+      },
+      {
+        "day": 8,
+        "cash_mean": 804.1428571428571,
+        "cows_median": 5.0,
+        "sheep_median": 5.0,
+        "hands_median": 9.0,
+        "crops_mean": 24.285714285714285,
+        "pass_mean": 60.285714285714285,
+        "move_mean": 97,
+        "executed_mean": {
+          "FEED": 9.571428571428571,
+          "CARE": 6.857142857142857,
+          "WATER": 13.857142857142858,
+          "HARVEST": 0.2857142857142857
+        }
+      },
+      {
+        "day": 9,
+        "cash_mean": 2385.4285714285716,
+        "cows_median": 5.0,
+        "sheep_median": 5.0,
+        "hands_median": 8.0,
+        "crops_mean": 27,
+        "pass_mean": 51.57142857142857,
+        "move_mean": 100,
+        "executed_mean": {
+          "FEED": 9.714285714285714,
+          "CARE": 6.857142857142857,
+          "WATER": 16.857142857142858,
+          "HARVEST": 2.142857142857143
+        }
+      },
+      {
+        "day": 10,
+        "cash_mean": 1909.0714285714287,
+        "cows_median": 7.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 30.142857142857142,
+        "pass_mean": 63.5,
+        "move_mean": 113.92857142857143,
+        "executed_mean": {
+          "FEED": 10.571428571428571,
+          "CARE": 9.285714285714286,
+          "WATER": 22.428571428571427,
+          "HARVEST": 6.714285714285714
+        }
+      },
+      {
+        "day": 11,
+        "cash_mean": 2163.4285714285716,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 35.285714285714285,
+        "pass_mean": 56.357142857142854,
+        "move_mean": 140.42857142857142,
+        "executed_mean": {
+          "FEED": 13.357142857142858,
+          "CARE": 11.214285714285714,
+          "WATER": 24.285714285714285,
+          "HARVEST": 4.428571428571429
+        }
+      },
+      {
+        "day": 12,
+        "cash_mean": 3498.0714285714284,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 39.57142857142857,
+        "pass_mean": 55.42857142857143,
+        "move_mean": 151.42857142857142,
+        "executed_mean": {
+          "FEED": 12.5,
+          "CARE": 10.571428571428571,
+          "WATER": 23.285714285714285,
+          "HARVEST": 3
+        }
+      },
+      {
+        "day": 13,
+        "cash_mean": 5231.642857142857,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 39.714285714285715,
+        "pass_mean": 39.785714285714285,
+        "move_mean": 169.92857142857142,
+        "executed_mean": {
+          "FEED": 11.714285714285714,
+          "CARE": 10.214285714285714,
+          "WATER": 26.142857142857142,
+          "HARVEST": 6.071428571428571
+        }
+      },
+      {
+        "day": 14,
+        "cash_mean": 5112.928571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 41.92857142857143,
+        "pass_mean": 31.892857142857142,
+        "move_mean": 172.03571428571428,
+        "executed_mean": {
+          "FEED": 12.035714285714286,
+          "CARE": 10.75,
+          "WATER": 32.285714285714285,
+          "HARVEST": 0.75
+        }
+      },
+      {
+        "day": 15,
+        "cash_mean": 7893.607142857143,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 45.607142857142854,
+        "pass_mean": 28.607142857142858,
+        "move_mean": 164,
+        "executed_mean": {
+          "FEED": 11.928571428571429,
+          "CARE": 10.821428571428571,
+          "WATER": 33.857142857142854,
+          "HARVEST": 8.571428571428571
+        }
+      },
+      {
+        "day": 16,
+        "cash_mean": 11485.07142857143,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 43.17857142857143,
+        "pass_mean": 21.892857142857142,
+        "move_mean": 181.03571428571428,
+        "executed_mean": {
+          "FEED": 11.392857142857142,
+          "CARE": 10.107142857142858,
+          "WATER": 29.928571428571427,
+          "HARVEST": 7.035714285714286
+        }
+      },
+      {
+        "day": 17,
+        "cash_mean": 13093.464285714286,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 43.92857142857143,
+        "pass_mean": 20.392857142857142,
+        "move_mean": 179.39285714285714,
+        "executed_mean": {
+          "FEED": 11.785714285714286,
+          "CARE": 10.571428571428571,
+          "WATER": 33.142857142857146,
+          "HARVEST": 5.857142857142857
+        }
+      },
+      {
+        "day": 18,
+        "cash_mean": 18498.678571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 43.035714285714285,
+        "pass_mean": 19.571428571428573,
+        "move_mean": 172.14285714285714,
+        "executed_mean": {
+          "FEED": 11.285714285714286,
+          "CARE": 10.142857142857142,
+          "WATER": 31.285714285714285,
+          "HARVEST": 8.928571428571429
+        }
+      },
+      {
+        "day": 19,
+        "cash_mean": 25696.5,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 35.464285714285715,
+        "pass_mean": 17.071428571428573,
+        "move_mean": 181.42857142857142,
+        "executed_mean": {
+          "FEED": 11.321428571428571,
+          "CARE": 8.571428571428571,
+          "WATER": 28.285714285714285,
+          "HARVEST": 14.464285714285714
+        }
+      },
+      {
+        "day": 20,
+        "cash_mean": 29422.821428571428,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 33.857142857142854,
+        "pass_mean": 21.357142857142858,
+        "move_mean": 176.25,
+        "executed_mean": {
+          "FEED": 11.535714285714286,
+          "CARE": 9.214285714285714,
+          "WATER": 25.071428571428573,
+          "HARVEST": 10.392857142857142
+        }
+      },
+      {
+        "day": 21,
+        "cash_mean": 33144.142857142855,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 32.357142857142854,
+        "pass_mean": 19.357142857142858,
+        "move_mean": 182.25,
+        "executed_mean": {
+          "FEED": 11.071428571428571,
+          "CARE": 9.107142857142858,
+          "WATER": 21.535714285714285,
+          "HARVEST": 12.928571428571429
+        }
+      },
+      {
+        "day": 22,
+        "cash_mean": 36812.142857142855,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 28.392857142857142,
+        "pass_mean": 22.714285714285715,
+        "move_mean": 172.92857142857142,
+        "executed_mean": {
+          "FEED": 11.464285714285714,
+          "CARE": 8.857142857142858,
+          "WATER": 20.607142857142858,
+          "HARVEST": 16.357142857142858
+        }
+      },
+      {
+        "day": 23,
+        "cash_mean": 40082.71428571428,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 26.857142857142858,
+        "pass_mean": 21.178571428571427,
+        "move_mean": 181.10714285714286,
+        "executed_mean": {
+          "FEED": 11.821428571428571,
+          "CARE": 9.607142857142858,
+          "WATER": 17.392857142857142,
+          "HARVEST": 13.464285714285714
+        }
+      },
+      {
+        "day": 24,
+        "cash_mean": 43436.32142857143,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 27.428571428571427,
+        "pass_mean": 24.142857142857142,
+        "move_mean": 175.89285714285714,
+        "executed_mean": {
+          "FEED": 12.107142857142858,
+          "CARE": 9.071428571428571,
+          "WATER": 16.785714285714285,
+          "HARVEST": 13.285714285714286
+        }
+      },
+      {
+        "day": 25,
+        "cash_mean": 48497.5,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 27.464285714285715,
+        "pass_mean": 20.035714285714285,
+        "move_mean": 180.25,
+        "executed_mean": {
+          "FEED": 11.821428571428571,
+          "CARE": 8.821428571428571,
+          "WATER": 15.178571428571429,
+          "HARVEST": 19.214285714285715
+        }
+      },
+      {
+        "day": 26,
+        "cash_mean": 52361.21428571428,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 27.071428571428573,
+        "pass_mean": 20.892857142857142,
+        "move_mean": 180.32142857142858,
+        "executed_mean": {
+          "FEED": 11,
+          "CARE": 8.142857142857142,
+          "WATER": 17.464285714285715,
+          "HARVEST": 16.464285714285715
+        }
+      },
+      {
+        "day": 27,
+        "cash_mean": 57616.46428571428,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 25.821428571428573,
+        "pass_mean": 24.392857142857142,
+        "move_mean": 172.64285714285714,
+        "executed_mean": {
+          "FEED": 11.571428571428571,
+          "CARE": 8.785714285714286,
+          "WATER": 15.035714285714286,
+          "HARVEST": 20.25
+        }
+      },
+      {
+        "day": 28,
+        "cash_mean": 62075.53571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 21.821428571428573,
+        "pass_mean": 32.5,
+        "move_mean": 166.28571428571428,
+        "executed_mean": {
+          "FEED": 12.178571428571429,
+          "CARE": 5.428571428571429,
+          "WATER": 13.714285714285714,
+          "HARVEST": 20
+        }
+      },
+      {
+        "day": 29,
+        "cash_mean": 66472.28571428571,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 16.071428571428573,
+        "pass_mean": 51.07142857142857,
+        "move_mean": 158.71428571428572,
+        "executed_mean": {
+          "FEED": 13.321428571428571,
+          "CARE": 0,
+          "WATER": 8,
+          "HARVEST": 17.214285714285715
+        }
+      },
+      {
+        "day": 30,
+        "cash_mean": 68348.71428571429,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 9.678571428571429,
+        "pass_mean": 35.75,
+        "move_mean": 90.07142857142857,
+        "executed_mean": {
+          "FEED": 10.857142857142858,
+          "CARE": 0,
+          "WATER": 6.642857142857143,
+          "HARVEST": 9.964285714285714
+        }
+      }
+    ]
+  },
+  "reference": {
+    "cases": 28,
+    "cash_mean": 63426.642857142855,
+    "crop_deaths": 0,
+    "animal_losses": 0,
+    "incomplete_missions": 0,
+    "errors": 0,
+    "cash_parity_errors": 0,
+    "max_call_seconds": 2.389288099948317,
+    "maximum_overage_seconds": 2.161914199939929,
+    "pass_d5_d10_mean": 345,
+    "daily": [
+      {
+        "day": 1,
+        "cash_mean": 819.0,
+        "cows_median": 2.0,
+        "sheep_median": 2.0,
+        "hands_median": 7.0,
+        "crops_mean": 21,
+        "pass_mean": 57,
+        "move_mean": 58,
+        "executed_mean": {
+          "FEED": 4,
+          "CARE": 4,
+          "WATER": 21,
+          "HARVEST": 0
+        }
+      },
+      {
+        "day": 2,
+        "cash_mean": 1102.0,
+        "cows_median": 2.0,
+        "sheep_median": 2.0,
+        "hands_median": 1.0,
+        "crops_mean": 21,
+        "pass_mean": 7,
+        "move_mean": 9,
+        "executed_mean": {
+          "FEED": 4,
+          "CARE": 4,
+          "WATER": 0,
+          "HARVEST": 0
+        }
+      },
+      {
+        "day": 3,
+        "cash_mean": 962.0,
+        "cows_median": 2.0,
+        "sheep_median": 2.0,
+        "hands_median": 6.0,
+        "crops_mean": 21,
+        "pass_mean": 19,
+        "move_mean": 72,
+        "executed_mean": {
+          "FEED": 4,
+          "CARE": 1,
+          "WATER": 21,
+          "HARVEST": 0
+        }
+      },
+      {
+        "day": 4,
+        "cash_mean": 662.4285714285714,
+        "cows_median": 2.0,
+        "sheep_median": 3.0,
+        "hands_median": 9.0,
+        "crops_mean": 20,
+        "pass_mean": 26,
+        "move_mean": 85,
+        "executed_mean": {
+          "FEED": 5,
+          "CARE": 5,
+          "WATER": 23,
+          "HARVEST": 3
+        }
+      },
+      {
+        "day": 5,
+        "cash_mean": 772.4285714285714,
+        "cows_median": 2.0,
+        "sheep_median": 3.0,
+        "hands_median": 6.0,
+        "crops_mean": 6,
+        "pass_mean": 31,
+        "move_mean": 60,
+        "executed_mean": {
+          "FEED": 5,
+          "CARE": 5,
+          "WATER": 18,
+          "HARVEST": 14
+        }
+      },
+      {
+        "day": 6,
+        "cash_mean": 495.0,
+        "cows_median": 2.0,
+        "sheep_median": 5.0,
+        "hands_median": 9.0,
+        "crops_mean": 9.571428571428571,
+        "pass_mean": 64.71428571428571,
+        "move_mean": 69,
+        "executed_mean": {
+          "FEED": 7,
+          "CARE": 6.285714285714286,
+          "WATER": 9.571428571428571,
+          "HARVEST": 0
+        }
+      },
+      {
+        "day": 7,
+        "cash_mean": 1402.857142857143,
+        "cows_median": 4.0,
+        "sheep_median": 5.0,
+        "hands_median": 10.0,
+        "crops_mean": 20.714285714285715,
+        "pass_mean": 83.14285714285714,
+        "move_mean": 46.57142857142857,
+        "executed_mean": {
+          "FEED": 9,
+          "CARE": 8,
+          "WATER": 11.142857142857142,
+          "HARVEST": 2
+        }
+      },
+      {
+        "day": 8,
+        "cash_mean": 779.2857142857143,
+        "cows_median": 5.0,
+        "sheep_median": 5.0,
+        "hands_median": 9.0,
+        "crops_mean": 25.571428571428573,
+        "pass_mean": 49.642857142857146,
+        "move_mean": 110.71428571428571,
+        "executed_mean": {
+          "FEED": 10,
+          "CARE": 7.571428571428571,
+          "WATER": 14.714285714285714,
+          "HARVEST": 0.2857142857142857
+        }
+      },
+      {
+        "day": 9,
+        "cash_mean": 3039.0,
+        "cows_median": 5.0,
+        "sheep_median": 5.0,
+        "hands_median": 10.0,
+        "crops_mean": 27.142857142857142,
+        "pass_mean": 59.57142857142857,
+        "move_mean": 98.57142857142857,
+        "executed_mean": {
+          "FEED": 9.285714285714286,
+          "CARE": 7,
+          "WATER": 16.142857142857142,
+          "HARVEST": 2.142857142857143
+        }
+      },
+      {
+        "day": 10,
+        "cash_mean": 1733.4285714285713,
+        "cows_median": 7.5,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 27.142857142857142,
+        "pass_mean": 56.92857142857143,
+        "move_mean": 120.92857142857143,
+        "executed_mean": {
+          "FEED": 11.357142857142858,
+          "CARE": 10.5,
+          "WATER": 20.714285714285715,
+          "HARVEST": 6.571428571428571
+        }
+      },
+      {
+        "day": 11,
+        "cash_mean": 1936.357142857143,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 31.928571428571427,
+        "pass_mean": 50.642857142857146,
+        "move_mean": 141.21428571428572,
+        "executed_mean": {
+          "FEED": 13.642857142857142,
+          "CARE": 12.071428571428571,
+          "WATER": 23.5,
+          "HARVEST": 4.285714285714286
+        }
+      },
+      {
+        "day": 12,
+        "cash_mean": 3220.214285714286,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 39.92857142857143,
+        "pass_mean": 48.214285714285715,
+        "move_mean": 148.5,
+        "executed_mean": {
+          "FEED": 13.571428571428571,
+          "CARE": 11.214285714285714,
+          "WATER": 23.857142857142858,
+          "HARVEST": 3.2857142857142856
+        }
+      },
+      {
+        "day": 13,
+        "cash_mean": 4864.178571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 41.92857142857143,
+        "pass_mean": 42.214285714285715,
+        "move_mean": 163.60714285714286,
+        "executed_mean": {
+          "FEED": 12.321428571428571,
+          "CARE": 9.607142857142858,
+          "WATER": 24.857142857142858,
+          "HARVEST": 5
+        }
+      },
+      {
+        "day": 14,
+        "cash_mean": 4802.928571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 43.67857142857143,
+        "pass_mean": 34.535714285714285,
+        "move_mean": 174.5,
+        "executed_mean": {
+          "FEED": 11.071428571428571,
+          "CARE": 9.392857142857142,
+          "WATER": 33.535714285714285,
+          "HARVEST": 0.5714285714285714
+        }
+      },
+      {
+        "day": 15,
+        "cash_mean": 7090.535714285715,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 46.392857142857146,
+        "pass_mean": 28.428571428571427,
+        "move_mean": 164.25,
+        "executed_mean": {
+          "FEED": 12.535714285714286,
+          "CARE": 11.5,
+          "WATER": 31.035714285714285,
+          "HARVEST": 8.642857142857142
+        }
+      },
+      {
+        "day": 16,
+        "cash_mean": 10512.82142857143,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 43.67857142857143,
+        "pass_mean": 18.5,
+        "move_mean": 190.71428571428572,
+        "executed_mean": {
+          "FEED": 9.964285714285714,
+          "CARE": 8.25,
+          "WATER": 31.964285714285715,
+          "HARVEST": 6.714285714285714
+        }
+      },
+      {
+        "day": 17,
+        "cash_mean": 12272.214285714286,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 44.857142857142854,
+        "pass_mean": 23.821428571428573,
+        "move_mean": 173.96428571428572,
+        "executed_mean": {
+          "FEED": 11.892857142857142,
+          "CARE": 11.142857142857142,
+          "WATER": 30.642857142857142,
+          "HARVEST": 6.857142857142857
+        }
+      },
+      {
+        "day": 18,
+        "cash_mean": 16983.428571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 42.714285714285715,
+        "pass_mean": 20.035714285714285,
+        "move_mean": 181.46428571428572,
+        "executed_mean": {
+          "FEED": 10.892857142857142,
+          "CARE": 9.178571428571429,
+          "WATER": 31.535714285714285,
+          "HARVEST": 9.071428571428571
+        }
+      },
+      {
+        "day": 19,
+        "cash_mean": 24326.928571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 34.92857142857143,
+        "pass_mean": 18.607142857142858,
+        "move_mean": 179.17857142857142,
+        "executed_mean": {
+          "FEED": 10.428571428571429,
+          "CARE": 8.25,
+          "WATER": 28.964285714285715,
+          "HARVEST": 14.035714285714286
+        }
+      },
+      {
+        "day": 20,
+        "cash_mean": 26823.964285714286,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 32.607142857142854,
+        "pass_mean": 22.214285714285715,
+        "move_mean": 180.53571428571428,
+        "executed_mean": {
+          "FEED": 11,
+          "CARE": 8.5,
+          "WATER": 24.428571428571427,
+          "HARVEST": 9.857142857142858
+        }
+      },
+      {
+        "day": 21,
+        "cash_mean": 29715.64285714286,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 31.178571428571427,
+        "pass_mean": 19.821428571428573,
+        "move_mean": 179.75,
+        "executed_mean": {
+          "FEED": 10.928571428571429,
+          "CARE": 9.392857142857142,
+          "WATER": 22.178571428571427,
+          "HARVEST": 13.178571428571429
+        }
+      },
+      {
+        "day": 22,
+        "cash_mean": 33857.82142857143,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 28.178571428571427,
+        "pass_mean": 21.892857142857142,
+        "move_mean": 175.85714285714286,
+        "executed_mean": {
+          "FEED": 11.25,
+          "CARE": 8.035714285714286,
+          "WATER": 18.142857142857142,
+          "HARVEST": 17.464285714285715
+        }
+      },
+      {
+        "day": 23,
+        "cash_mean": 36711.857142857145,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 26.214285714285715,
+        "pass_mean": 23.178571428571427,
+        "move_mean": 181.75,
+        "executed_mean": {
+          "FEED": 11.142857142857142,
+          "CARE": 8.321428571428571,
+          "WATER": 17.25,
+          "HARVEST": 14.571428571428571
+        }
+      },
+      {
+        "day": 24,
+        "cash_mean": 40794.28571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 26.071428571428573,
+        "pass_mean": 21.25,
+        "move_mean": 179.67857142857142,
+        "executed_mean": {
+          "FEED": 12.5,
+          "CARE": 8.428571428571429,
+          "WATER": 15.071428571428571,
+          "HARVEST": 16.25
+        }
+      },
+      {
+        "day": 25,
+        "cash_mean": 45788.107142857145,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 26,
+        "pass_mean": 21.571428571428573,
+        "move_mean": 177.82142857142858,
+        "executed_mean": {
+          "FEED": 11.5,
+          "CARE": 8.357142857142858,
+          "WATER": 15.607142857142858,
+          "HARVEST": 19.142857142857142
+        }
+      },
+      {
+        "day": 26,
+        "cash_mean": 49171.17857142857,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 26.25,
+        "pass_mean": 20.928571428571427,
+        "move_mean": 182.03571428571428,
+        "executed_mean": {
+          "FEED": 11.142857142857142,
+          "CARE": 7.821428571428571,
+          "WATER": 16,
+          "HARVEST": 16.321428571428573
+        }
+      },
+      {
+        "day": 27,
+        "cash_mean": 53839.53571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 25.928571428571427,
+        "pass_mean": 23.928571428571427,
+        "move_mean": 176.53571428571428,
+        "executed_mean": {
+          "FEED": 11.535714285714286,
+          "CARE": 8.178571428571429,
+          "WATER": 14.535714285714286,
+          "HARVEST": 18.464285714285715
+        }
+      },
+      {
+        "day": 28,
+        "cash_mean": 58034.107142857145,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 22.892857142857142,
+        "pass_mean": 36.107142857142854,
+        "move_mean": 166.78571428571428,
+        "executed_mean": {
+          "FEED": 12.571428571428571,
+          "CARE": 4.714285714285714,
+          "WATER": 11.821428571428571,
+          "HARVEST": 20.178571428571427
+        }
+      },
+      {
+        "day": 29,
+        "cash_mean": 61180.42857142857,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 13.357142857142858,
+        "pass_mean": 82.75,
+        "move_mean": 135.53571428571428,
+        "executed_mean": {
+          "FEED": 12.857142857142858,
+          "CARE": 0,
+          "WATER": 6.892857142857143,
+          "HARVEST": 13.714285714285714
+        }
+      },
+      {
+        "day": 30,
+        "cash_mean": 63426.642857142855,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 7.392857142857143,
+        "pass_mean": 36.92857142857143,
+        "move_mean": 84.03571428571429,
+        "executed_mean": {
+          "FEED": 10.714285714285714,
+          "CARE": 0,
+          "WATER": 6.642857142857143,
+          "HARVEST": 11.464285714285714
+        }
+      }
+    ]
+  },
+  "cash_change_percent": 7.760258476327553,
+  "exact_populated_topology": 28,
+  "safety_pass": 28,
+  "paired_cash": [
+    {
+      "seed": 180903001,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 80436.0,
+      "reference": 80429.0,
+      "difference": 7.0
+    },
+    {
+      "seed": 180903001,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 48323.0,
+      "reference": 61237.0,
+      "difference": -12914.0
+    },
+    {
+      "seed": 180903001,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 70570.0,
+      "reference": 70903.0,
+      "difference": -333.0
+    },
+    {
+      "seed": 180903001,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 46124.0,
+      "reference": 61237.0,
+      "difference": -15113.0
+    },
+    {
+      "seed": 180903002,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 57645.0,
+      "reference": 70178.0,
+      "difference": -12533.0
+    },
+    {
+      "seed": 180903002,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 74744.0,
+      "reference": 50992.0,
+      "difference": 23752.0
+    },
+    {
+      "seed": 180903002,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 70340.0,
+      "reference": 69125.0,
+      "difference": 1215.0
+    },
+    {
+      "seed": 180903002,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 72952.0,
+      "reference": 49449.0,
+      "difference": 23503.0
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 38934.0,
+      "reference": 41379.0,
+      "difference": -2445.0
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 35182.0,
+      "reference": 46746.0,
+      "difference": -11564.0
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 38934.0,
+      "reference": 41379.0,
+      "difference": -2445.0
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 35182.0,
+      "reference": 37483.0,
+      "difference": -2301.0
+    },
+    {
+      "seed": 180903004,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 85490.0,
+      "reference": 67401.0,
+      "difference": 18089.0
+    },
+    {
+      "seed": 180903004,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 76940.0,
+      "reference": 52269.0,
+      "difference": 24671.0
+    },
+    {
+      "seed": 180903004,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 83838.0,
+      "reference": 66567.0,
+      "difference": 17271.0
+    },
+    {
+      "seed": 180903004,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 78796.0,
+      "reference": 62698.0,
+      "difference": 16098.0
+    },
+    {
+      "seed": 180903005,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 81450.0,
+      "reference": 67571.0,
+      "difference": 13879.0
+    },
+    {
+      "seed": 180903005,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 58317.0,
+      "reference": 62331.0,
+      "difference": -4014.0
+    },
+    {
+      "seed": 180903005,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 81850.0,
+      "reference": 66364.0,
+      "difference": 15486.0
+    },
+    {
+      "seed": 180903005,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 60121.0,
+      "reference": 60931.0,
+      "difference": -810.0
+    },
+    {
+      "seed": 180903006,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 87712.0,
+      "reference": 69753.0,
+      "difference": 17959.0
+    },
+    {
+      "seed": 180903006,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 69465.0,
+      "reference": 72650.0,
+      "difference": -3185.0
+    },
+    {
+      "seed": 180903006,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 87712.0,
+      "reference": 69753.0,
+      "difference": 17959.0
+    },
+    {
+      "seed": 180903006,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 69465.0,
+      "reference": 72650.0,
+      "difference": -3185.0
+    },
+    {
+      "seed": 180903007,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 88372.0,
+      "reference": 75511.0,
+      "difference": 12861.0
+    },
+    {
+      "seed": 180903007,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 88812.0,
+      "reference": 70837.0,
+      "difference": 17975.0
+    },
+    {
+      "seed": 180903007,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 71665.0,
+      "reference": 85061.0,
+      "difference": -13396.0
+    },
+    {
+      "seed": 180903007,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 74393.0,
+      "reference": 73062.0,
+      "difference": 1331.0
+    }
+  ]
+}

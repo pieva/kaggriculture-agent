@@ -96,3 +96,70 @@ La nostra release resta quella già verificata: 770 e massimo 12 manovali.
 Le ipotesi estratte devono riguardare prerequisiti, capacità, valore economico
 e scadenze, non quote/date copiate dal benchmark; devono essere valide anche
 quando in futuro cambierà l'architettura.
+
+
+## 2026-09-07 — richiesta esplicita di report storico V4C/Top770
+
+Riutilizzati i corpus congelati Top770-001 e Top770-002 solo per il report
+storico descrittivo V4C, richiesto dal proprietario. Nessuna nuova release
+valutata, nessun nuovo episodio acquisito, nessun ripristino dello stato
+holdout. Avversario V4C INERT_PASS e topologia 7-7-5 dichiarati nel report.
+
+
+## 2026-09-07 — nuova 770 assistita D1–D30 contro i Top già utilizzati
+
+Riuso esplicitamente richiesto dal proprietario degli stessi cinque replay
+Top770-001 e quattro Top770-002 selezionati nel report V4C. Nessun nuovo
+episodio esterno acquisito; nessun ripristino dello stato holdout. Nuova 770
+assistita V1 congelata misurata localmente per D1–D30 contro V4D, 7 semi di
+sviluppo e entrambe le posizioni. Il report separa le curve storiche esterne
+dal confronto diretto locale, senza dedurre un ranking dai ricavi fra corpus.
+Report in `docs/model_specs/codex/e19/reports/assisted_770_top770_d30_20260907/`.
+
+
+## 2026-09-07 — formato completo richiesto per la nuova 770
+
+Il proprietario ha indicato E18_27_TOP770_D01_D30_COMPLETE_KPI.html come
+riferimento di presentazione. Rigenerati i report nel formato V4.1, 22 pannelli,
+un confronto separato per Top770-001 e Top770-002. Stessi corpus esposti,
+nessun nuovo episodio pubblico. Riprodotti i medesimi 14 run locali per
+completare i KPI operativi H24, verificando la parità dei risultati precedenti.
+
+
+## 2026-09-08 — ciclo V48 e analisi per fasi
+
+V48 congelata e pubblicata prima del confronto. Esclusi tutti gli autori
+consumati/esposti elencati sopra, comprese le righe dello screening precedente.
+I seguenti autori sono ora ESPOSTI per il ciclo V48; non sono holdout per release future.
+La selezione segue l'ordine osservato durante lo screening, con classifica variabile.
+
+| Autore | Submission | Corpus congelato | Stato |
+|---|---:|---|---|
+| SpaTaro | 56089825 | 106824217, 106817281, 106815633 | ESPOSTO; screening o analisi esplorativa |
+| Otter Vibe | 56097405 | 106831672, 106830724, 106829767 | ESPOSTO; screening o analisi esplorativa |
+| binghua | 56092906 | 106828029, 106821108, 106818377 | ESPOSTO; screening o analisi esplorativa |
+| Matthew Huang | 56096542 | 106829776, 106828804, 106824954, 106823287, 106818211 | ESPOSTO; screening o analisi esplorativa |
+| Ad Space Available | 56058327 | 106829767, 106827849, 106825938 | ESPOSTO; screening o analisi esplorativa |
+| Tarang222 | 56091994 | 106829955, 106829522, 106825688 | ESPOSTO; screening o analisi esplorativa |
+| THUNDER THUNDER | 56089409 | 106833660, 106824849, 106819193 | ESPOSTO; screening o analisi esplorativa |
+| carbonapi | 56092842 | 106828023, 106820397, 106820129 | ESPOSTO; screening o analisi esplorativa |
+| Suliman Tadros | 56082927 | 106831569, 106829740, 106824940 | ESPOSTO; screening o analisi esplorativa |
+| kwa | 56071845 | 106833694, 106825206, 106824970 | ESPOSTO; screening o analisi esplorativa |
+| JustinLee | 56065461 | 106833569, 106833660, 106830724 | ESPOSTO; screening o analisi esplorativa |
+| Subin An | 56098520 | 106835267, 106834322, 106833359, 106832424, 106831443 | Top770-003; 4/5 finali 770, 16/16 checkpoint per ciascuno dei quattro; CONSUMATO nel ciclo diagnostico V48 |
+
+Il quinto replay di Top770-003 (106835267, 10-7-0) è conservato ed è incluso nel
+report del corpus completo. Matthew: 3/5 finali 770, non qualificato dal criterio storico.
+Suliman: 10-7-0 in 3/3, alternativa esplorativa, non prova di superiorità.
+
+Su richiesta successiva del proprietario aggiunta analisi D15, moda D15-D25,
+sblocco/utilizzo Q2 e D30. Questo criterio aggiunto non è retroattivamente
+preregistrato e non sostituisce silenziosamente il criterio finale originario.
+Un solo nuovo autore Top770 qualificato, non dodici nuovi Top770.
+Gli avversari incidentali nei replay sono stati visibili nello screening:
+la loro presenza non qualifica nuovi alias né va trattata come cecità completa.
+
+Report: docs/model_specs/codex/e19/reports/new_top_v48_20260908/REPORT_NUOVI_TOP_V48_IT.html
+Quattro report da 22 KPI: Top770-003 filtrato n4, corpus completo n5, Matthew n5,
+Suliman n3. Confronto V48 locale n6, non appaiato a questi replay esterni.
+Nessuna nuova policy, nessuna 662, nessuna ulteriore submission.

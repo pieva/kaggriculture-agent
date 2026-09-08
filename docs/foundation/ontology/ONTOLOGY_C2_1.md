@@ -814,3 +814,10 @@ La categoria 4 include inoltre `market_transaction_value` e `shared_market_conte
 5. esclusi falsi costi salariali a EOD: `HIRE` addebita soltanto il costo Fibonacci al commit dell'ordine e gli Hands scadono a EOD senza un secondo addebito.
 
 **Fine di ONTOLOGY C2.1 (Reconciled; Foundation post-3Q completata).**
+
+
+## Checkpoint operativo 2026-09-08: V48 e PASS
+
+Distinguere capacità disponibile, lavoro biologico dovuto, lavoro fattibile e attesa. PASS è un esito osservabile, non prova di assenza di lavoro. Piante produttive, esaurite e prodotto detenuto sono concetti distinti. Le categorie diagnostiche di policy non sono nuove regole dell’engine.
+
+Pianificazione e inventario downstream: [V48 e priorità PASS](../V48_PLANNING_AND_BUILD_IT.md). Nessuna modifica alle costanti dell’engine; supplemento operativo alla baseline riconciliata.

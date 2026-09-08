@@ -1,0 +1,5322 @@
+{
+  "runs": [
+    {
+      "file": "E18_33_COMMON_GATE_V10_SHORT_BOOTSTRAP_20260907.json",
+      "sha256": "faeb789be33777c13603d51f58e8a23160762ee0a42a66111ef2eb38876d48d8",
+      "complete": true,
+      "failures": [],
+      "cases": 4,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 87160.0,
+          "control_cash": 85073.0,
+          "cash_delta": 2087.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": null,
+          "PASS": 1337,
+          "control_PASS": 847,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 256,
+            "PLANT": 84,
+            "CARE": 228,
+            "WATER": 555,
+            "HARVEST": 244,
+            "DIG": 11,
+            "FERTILIZE": 52
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 75,
+            "WOOL": 122,
+            "MILK": 134,
+            "TOMATO": 43,
+            "MELON": 122,
+            "STRAWBERRY": 128
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 85118.0,
+          "control_cash": 85073.0,
+          "cash_delta": 45.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": null,
+          "PASS": 1337,
+          "control_PASS": 847,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 256,
+            "PLANT": 84,
+            "CARE": 228,
+            "WATER": 555,
+            "HARVEST": 244,
+            "DIG": 11,
+            "FERTILIZE": 52
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 75,
+            "WOOL": 122,
+            "MILK": 134,
+            "TOMATO": 43,
+            "MELON": 122,
+            "STRAWBERRY": 128
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 84581.0,
+          "control_cash": 80047.0,
+          "cash_delta": 4534.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": null,
+          "PASS": 1338,
+          "control_PASS": 846,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 263,
+            "PLANT": 83,
+            "CARE": 234,
+            "WATER": 546,
+            "HARVEST": 241,
+            "DIG": 12,
+            "FERTILIZE": 51
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 65,
+            "WOOL": 123,
+            "MILK": 145,
+            "TOMATO": 34,
+            "MELON": 125,
+            "STRAWBERRY": 133
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 81224.0,
+          "control_cash": 80047.0,
+          "cash_delta": 1177.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": null,
+          "PASS": 1338,
+          "control_PASS": 846,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 263,
+            "PLANT": 83,
+            "CARE": 234,
+            "WATER": 546,
+            "HARVEST": 241,
+            "DIG": 12,
+            "FERTILIZE": 51
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 65,
+            "WOOL": 123,
+            "MILK": 145,
+            "TOMATO": 34,
+            "MELON": 125,
+            "STRAWBERRY": 133
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 84520.75,
+        "control_cash": 82560.0,
+        "cash_delta": 1960.75,
+        "cash_delta_percent": 2.3749394379845024,
+        "safety_pass": 4,
+        "exact_populated_770": 4,
+        "crop_deaths": 0,
+        "animal_escapes": 0,
+        "incomplete_missions": 0,
+        "median_cows_d10": 4.0,
+        "median_control_cows_d10": 9.0,
+        "mean_pass_d5_d10": 408,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903001": 1960.75
+        },
+        "max_call_seconds": null
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V11_CACHED_SHORT_20260907.json",
+      "sha256": "3025db458ae9948e7515d5d32c2b30e1437ea5116421a0929d2cfeac3ae0afe9",
+      "complete": true,
+      "failures": [],
+      "cases": 1,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 87160.0,
+          "control_cash": 85073.0,
+          "cash_delta": 2087.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 2.3628464000066742,
+          "PASS": 1337,
+          "control_PASS": 847,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 256,
+            "PLANT": 84,
+            "CARE": 228,
+            "WATER": 555,
+            "HARVEST": 244,
+            "DIG": 11,
+            "FERTILIZE": 52
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 75,
+            "WOOL": 122,
+            "MILK": 134,
+            "TOMATO": 43,
+            "MELON": 122,
+            "STRAWBERRY": 128
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 87160.0,
+        "control_cash": 85073.0,
+        "cash_delta": 2087.0,
+        "cash_delta_percent": 2.4531872627038043,
+        "safety_pass": 1,
+        "exact_populated_770": 1,
+        "crop_deaths": 0,
+        "animal_escapes": 0,
+        "incomplete_missions": 0,
+        "median_cows_d10": 4,
+        "median_control_cows_d10": 9,
+        "mean_pass_d5_d10": 408,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903001": 2087.0
+        },
+        "max_call_seconds": 2.3628464000066742
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V12_EARLY_COW31_20260907.json",
+      "sha256": "2ced5168ab1afb112087a20f7e6cff0e2dcd951906705da59310ca56d03e08be",
+      "complete": true,
+      "failures": [],
+      "cases": 4,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 68818.0,
+          "control_cash": 85073.0,
+          "cash_delta": -16255.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 8.0,
+          "max_call_seconds": 3.581525999936275,
+          "PASS": 1348,
+          "control_PASS": 847,
+          "pass_d5_d10": 481,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 248,
+            "PLANT": 103,
+            "CARE": 222,
+            "WATER": 648,
+            "HARVEST": 275,
+            "DIG": 9,
+            "FERTILIZE": 49
+          },
+          "harvested": {
+            "CARROT": 14,
+            "WHEAT": 129,
+            "WOOL": 106,
+            "MILK": 137,
+            "TOMATO": 60,
+            "MELON": 115,
+            "STRAWBERRY": 131
+          },
+          "bootstrap_release": [
+            {
+              "day": 3,
+              "hour": 6,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 75092.0,
+          "control_cash": 85073.0,
+          "cash_delta": -9981.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 8.0,
+          "max_call_seconds": 3.7824682999635115,
+          "PASS": 1339,
+          "control_PASS": 847,
+          "pass_d5_d10": 481,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 248,
+            "PLANT": 103,
+            "CARE": 222,
+            "WATER": 648,
+            "HARVEST": 275,
+            "DIG": 9,
+            "FERTILIZE": 49
+          },
+          "harvested": {
+            "CARROT": 14,
+            "WHEAT": 129,
+            "WOOL": 106,
+            "MILK": 137,
+            "TOMATO": 60,
+            "MELON": 115,
+            "STRAWBERRY": 131
+          },
+          "bootstrap_release": [
+            {
+              "day": 3,
+              "hour": 6,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 62341.0,
+          "control_cash": 80047.0,
+          "cash_delta": -17706.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 8.0,
+          "max_call_seconds": 2.1702446000417694,
+          "PASS": 1349,
+          "control_PASS": 846,
+          "pass_d5_d10": 481,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 234,
+            "PLANT": 107,
+            "CARE": 209,
+            "WATER": 670,
+            "HARVEST": 289,
+            "DIG": 8,
+            "FERTILIZE": 50
+          },
+          "harvested": {
+            "CARROT": 14,
+            "WHEAT": 129,
+            "WOOL": 90,
+            "MILK": 125,
+            "TOMATO": 82,
+            "MELON": 120,
+            "STRAWBERRY": 134
+          },
+          "bootstrap_release": [
+            {
+              "day": 3,
+              "hour": 6,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 67428.0,
+          "control_cash": 80047.0,
+          "cash_delta": -12619.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 8.0,
+          "max_call_seconds": 2.1947904999833554,
+          "PASS": 1349,
+          "control_PASS": 846,
+          "pass_d5_d10": 481,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 234,
+            "PLANT": 107,
+            "CARE": 209,
+            "WATER": 670,
+            "HARVEST": 289,
+            "DIG": 8,
+            "FERTILIZE": 50
+          },
+          "harvested": {
+            "CARROT": 14,
+            "WHEAT": 129,
+            "WOOL": 90,
+            "MILK": 125,
+            "TOMATO": 82,
+            "MELON": 120,
+            "STRAWBERRY": 134
+          },
+          "bootstrap_release": [
+            {
+              "day": 3,
+              "hour": 6,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 68419.75,
+        "control_cash": 82560.0,
+        "cash_delta": -14140.25,
+        "cash_delta_percent": -17.127240794573638,
+        "safety_pass": 4,
+        "exact_populated_770": 4,
+        "crop_deaths": 0,
+        "animal_escapes": 0,
+        "incomplete_missions": 0,
+        "median_cows_d10": 4.0,
+        "median_control_cows_d10": 9.0,
+        "mean_pass_d5_d10": 481,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903001": -14140.25
+        },
+        "max_call_seconds": 3.7824682999635115
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V13_ROUTE_CACHE_20260907.json",
+      "sha256": "3162046c3a9fa5126090a2de3c9c56012ed25bfd38d704d13984adc784aa9abe",
+      "complete": true,
+      "failures": [],
+      "cases": 1,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 87160.0,
+          "control_cash": 85073.0,
+          "cash_delta": 2087.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.45977139996830374,
+          "PASS": 1337,
+          "control_PASS": 847,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 256,
+            "PLANT": 84,
+            "CARE": 228,
+            "WATER": 555,
+            "HARVEST": 244,
+            "DIG": 11,
+            "FERTILIZE": 52
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 75,
+            "WOOL": 122,
+            "MILK": 134,
+            "TOMATO": 43,
+            "MELON": 122,
+            "STRAWBERRY": 128
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 87160.0,
+        "control_cash": 85073.0,
+        "cash_delta": 2087.0,
+        "cash_delta_percent": 2.4531872627038043,
+        "safety_pass": 1,
+        "exact_populated_770": 1,
+        "crop_deaths": 0,
+        "animal_escapes": 0,
+        "incomplete_missions": 0,
+        "median_cows_d10": 4,
+        "median_control_cows_d10": 9,
+        "mean_pass_d5_d10": 408,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903001": 2087.0
+        },
+        "max_call_seconds": 0.45977139996830374
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V14_CROP_PORTFOLIO_20260907.json",
+      "sha256": "305dd0cd81641e7f64b45f07edffb8deb799e5463ea414f2760f82f418e0b1c5",
+      "complete": true,
+      "failures": [],
+      "cases": 4,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 59028.0,
+          "control_cash": 85073.0,
+          "cash_delta": -26045.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 22.0,
+          "max_call_seconds": 0.5976805000100285,
+          "PASS": 1476,
+          "control_PASS": 847,
+          "pass_d5_d10": 528,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 257,
+            "PLANT": 89,
+            "CARE": 230,
+            "WATER": 571,
+            "HARVEST": 249,
+            "DIG": 12,
+            "FERTILIZE": 43
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 102,
+            "WOOL": 128,
+            "MILK": 126,
+            "TOMATO": 87,
+            "MELON": 132,
+            "STRAWBERRY": 81
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 59028.0,
+          "control_cash": 85073.0,
+          "cash_delta": -26045.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 22.0,
+          "max_call_seconds": 0.591923899948597,
+          "PASS": 1476,
+          "control_PASS": 847,
+          "pass_d5_d10": 528,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 257,
+            "PLANT": 89,
+            "CARE": 230,
+            "WATER": 571,
+            "HARVEST": 249,
+            "DIG": 12,
+            "FERTILIZE": 43
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 102,
+            "WOOL": 128,
+            "MILK": 126,
+            "TOMATO": 87,
+            "MELON": 132,
+            "STRAWBERRY": 81
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 73822.0,
+          "control_cash": 80047.0,
+          "cash_delta": -6225.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 22.0,
+          "max_call_seconds": 0.8464632000541314,
+          "PASS": 1442,
+          "control_PASS": 846,
+          "pass_d5_d10": 528,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 257,
+            "PLANT": 92,
+            "CARE": 231,
+            "WATER": 580,
+            "HARVEST": 249,
+            "DIG": 11,
+            "FERTILIZE": 50
+          },
+          "harvested": {
+            "CARROT": 21,
+            "WHEAT": 98,
+            "WOOL": 123,
+            "MILK": 126,
+            "TOMATO": 86,
+            "MELON": 127,
+            "STRAWBERRY": 83
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 73822.0,
+          "control_cash": 80047.0,
+          "cash_delta": -6225.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 22.0,
+          "max_call_seconds": 0.897987800068222,
+          "PASS": 1442,
+          "control_PASS": 846,
+          "pass_d5_d10": 528,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 257,
+            "PLANT": 92,
+            "CARE": 231,
+            "WATER": 580,
+            "HARVEST": 249,
+            "DIG": 11,
+            "FERTILIZE": 50
+          },
+          "harvested": {
+            "CARROT": 21,
+            "WHEAT": 98,
+            "WOOL": 123,
+            "MILK": 126,
+            "TOMATO": 86,
+            "MELON": 127,
+            "STRAWBERRY": 83
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 66425.0,
+        "control_cash": 82560.0,
+        "cash_delta": -16135.0,
+        "cash_delta_percent": -19.543362403100772,
+        "safety_pass": 4,
+        "exact_populated_770": 4,
+        "crop_deaths": 0,
+        "animal_escapes": 0,
+        "incomplete_missions": 0,
+        "median_cows_d10": 4.0,
+        "median_control_cows_d10": 9.0,
+        "mean_pass_d5_d10": 528,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903001": -16135.0
+        },
+        "max_call_seconds": 0.897987800068222
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V15_LIQUIDITY_BOOTSTRAP_20260907.json",
+      "sha256": "9f9a024e313a3ee023e6c780f8e03884f81ccbe43ec29e8d66f6ed0e4c317acc",
+      "complete": true,
+      "failures": [],
+      "cases": 4,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 54267.0,
+          "control_cash": 85073.0,
+          "cash_delta": -30806.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 9.0,
+          "max_call_seconds": 0.39599560003262013,
+          "PASS": 1563,
+          "control_PASS": 847,
+          "pass_d5_d10": 489,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 6,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 234,
+            "PLANT": 91,
+            "CARE": 212,
+            "WATER": 555,
+            "HARVEST": 245,
+            "DIG": 16,
+            "FERTILIZE": 41
+          },
+          "harvested": {
+            "CARROT": 33,
+            "WOOL": 115,
+            "WHEAT": 50,
+            "MILK": 120,
+            "TOMATO": 92,
+            "MELON": 102,
+            "STRAWBERRY": 91
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 8,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 56271.0,
+          "control_cash": 85073.0,
+          "cash_delta": -28802.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 9.0,
+          "max_call_seconds": 0.4007347000297159,
+          "PASS": 1529,
+          "control_PASS": 847,
+          "pass_d5_d10": 489,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 6,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 238,
+            "PLANT": 90,
+            "CARE": 217,
+            "WATER": 556,
+            "HARVEST": 246,
+            "DIG": 16,
+            "FERTILIZE": 48
+          },
+          "harvested": {
+            "CARROT": 33,
+            "WOOL": 118,
+            "WHEAT": 44,
+            "MILK": 126,
+            "TOMATO": 91,
+            "MELON": 102,
+            "STRAWBERRY": 98
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 8,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 41914.0,
+          "control_cash": 80047.0,
+          "cash_delta": -38133.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 9.0,
+          "max_call_seconds": 0.5172384999459609,
+          "PASS": 1566,
+          "control_PASS": 846,
+          "pass_d5_d10": 489,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 6,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 234,
+            "PLANT": 100,
+            "CARE": 209,
+            "WATER": 578,
+            "HARVEST": 252,
+            "DIG": 18,
+            "FERTILIZE": 37
+          },
+          "harvested": {
+            "CARROT": 33,
+            "WOOL": 109,
+            "WHEAT": 55,
+            "MILK": 116,
+            "TOMATO": 74,
+            "MELON": 101,
+            "STRAWBERRY": 100
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 8,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 43436.0,
+          "control_cash": 80047.0,
+          "cash_delta": -36611.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 9.0,
+          "max_call_seconds": 0.4666910000378266,
+          "PASS": 1549,
+          "control_PASS": 846,
+          "pass_d5_d10": 489,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 6,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 242,
+            "PLANT": 90,
+            "CARE": 214,
+            "WATER": 562,
+            "HARVEST": 261,
+            "DIG": 16,
+            "FERTILIZE": 28
+          },
+          "harvested": {
+            "CARROT": 33,
+            "WOOL": 108,
+            "WHEAT": 35,
+            "MILK": 139,
+            "TOMATO": 94,
+            "MELON": 102,
+            "STRAWBERRY": 83
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 8,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 48972.0,
+        "control_cash": 82560.0,
+        "cash_delta": -33588.0,
+        "cash_delta_percent": -40.683139534883715,
+        "safety_pass": 4,
+        "exact_populated_770": 4,
+        "crop_deaths": 0,
+        "animal_escapes": 0,
+        "incomplete_missions": 0,
+        "median_cows_d10": 6.0,
+        "median_control_cows_d10": 9.0,
+        "mean_pass_d5_d10": 489,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903001": -33588.0
+        },
+        "max_call_seconds": 0.5172384999459609
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V16_GAIN_FIRST_20260907.json",
+      "sha256": "15514343a85cb45e02ebe74a5917df3d1a807febc266f3c7dc9660f4c94f8017",
+      "complete": true,
+      "failures": [],
+      "cases": 4,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 70173.0,
+          "control_cash": 85073.0,
+          "cash_delta": -14900.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 343.0,
+          "max_call_seconds": 0.3095687000313774,
+          "PASS": 1595,
+          "control_PASS": 847,
+          "pass_d5_d10": 448,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 7,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 269,
+            "PLANT": 75,
+            "CARE": 242,
+            "WATER": 511,
+            "HARVEST": 232,
+            "DIG": 8,
+            "FERTILIZE": 47
+          },
+          "harvested": {
+            "CARROT": 13,
+            "WHEAT": 65,
+            "WOOL": 121,
+            "MILK": 165,
+            "MELON": 143,
+            "TOMATO": 57,
+            "STRAWBERRY": 93
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 56619.0,
+          "control_cash": 85073.0,
+          "cash_delta": -28454.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 343.0,
+          "max_call_seconds": 0.27125520003028214,
+          "PASS": 1478,
+          "control_PASS": 847,
+          "pass_d5_d10": 448,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 7,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 266,
+            "PLANT": 83,
+            "CARE": 240,
+            "WATER": 531,
+            "HARVEST": 241,
+            "DIG": 9,
+            "FERTILIZE": 45
+          },
+          "harvested": {
+            "CARROT": 42,
+            "WHEAT": 57,
+            "WOOL": 115,
+            "MILK": 173,
+            "MELON": 144,
+            "TOMATO": 55,
+            "STRAWBERRY": 92
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 44086.0,
+          "control_cash": 80047.0,
+          "cash_delta": -35961.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 343.0,
+          "max_call_seconds": 0.3185687999939546,
+          "PASS": 1477,
+          "control_PASS": 846,
+          "pass_d5_d10": 448,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 7,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 267,
+            "PLANT": 81,
+            "CARE": 241,
+            "WATER": 527,
+            "HARVEST": 242,
+            "DIG": 11,
+            "FERTILIZE": 38
+          },
+          "harvested": {
+            "CARROT": 36,
+            "WHEAT": 57,
+            "WOOL": 121,
+            "MILK": 166,
+            "MELON": 143,
+            "TOMATO": 88,
+            "STRAWBERRY": 62
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 41602.0,
+          "control_cash": 80047.0,
+          "cash_delta": -38445.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 343.0,
+          "max_call_seconds": 0.4131520000519231,
+          "PASS": 1569,
+          "control_PASS": 846,
+          "pass_d5_d10": 448,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 7,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 265,
+            "PLANT": 82,
+            "CARE": 239,
+            "WATER": 540,
+            "HARVEST": 247,
+            "DIG": 9,
+            "FERTILIZE": 33
+          },
+          "harvested": {
+            "CARROT": 30,
+            "WHEAT": 73,
+            "WOOL": 116,
+            "MILK": 167,
+            "MELON": 149,
+            "TOMATO": 92,
+            "STRAWBERRY": 48
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 53120.0,
+        "control_cash": 82560.0,
+        "cash_delta": -29440.0,
+        "cash_delta_percent": -35.65891472868217,
+        "safety_pass": 4,
+        "exact_populated_770": 4,
+        "crop_deaths": 0,
+        "animal_escapes": 0,
+        "incomplete_missions": 0,
+        "median_cows_d10": 7.0,
+        "median_control_cows_d10": 9.0,
+        "mean_pass_d5_d10": 448,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903001": -29440.0
+        },
+        "max_call_seconds": 0.4131520000519231
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V17_RENEWAL_VISIT_20260907.json",
+      "sha256": "31df8ae6ca045e7e36285b6139c48ff6a358a92070128adc0095909566682133",
+      "complete": true,
+      "failures": [],
+      "cases": 4,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 58055.0,
+          "control_cash": 85073.0,
+          "cash_delta": -27018.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 2.0,
+          "max_call_seconds": 0.4135087999748066,
+          "PASS": 1433,
+          "control_PASS": 847,
+          "pass_d5_d10": 463,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 227,
+            "PLANT": 106,
+            "CARE": 203,
+            "WATER": 641,
+            "HARVEST": 267,
+            "DIG": 14,
+            "FERTILIZE": 44
+          },
+          "harvested": {
+            "CARROT": 26,
+            "WHEAT": 90,
+            "WOOL": 104,
+            "MILK": 92,
+            "TOMATO": 58,
+            "MELON": 114,
+            "STRAWBERRY": 125
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 8,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 51589.0,
+          "control_cash": 85073.0,
+          "cash_delta": -33484.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 8,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": false,
+          "crop_deaths": 0,
+          "animal_escapes": 1,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 2.0,
+          "max_call_seconds": 0.362768099992536,
+          "PASS": 1415,
+          "control_PASS": 847,
+          "pass_d5_d10": 463,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 221,
+            "PLANT": 108,
+            "CARE": 199,
+            "WATER": 660,
+            "HARVEST": 273,
+            "DIG": 15,
+            "FERTILIZE": 35
+          },
+          "harvested": {
+            "CARROT": 12,
+            "WHEAT": 99,
+            "WOOL": 105,
+            "MILK": 80,
+            "TOMATO": 76,
+            "MELON": 114,
+            "STRAWBERRY": 111
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 8,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": false
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 42457.0,
+          "control_cash": 80047.0,
+          "cash_delta": -37590.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 2.0,
+          "max_call_seconds": 0.6737966999644414,
+          "PASS": 1427,
+          "control_PASS": 846,
+          "pass_d5_d10": 463,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 227,
+            "PLANT": 106,
+            "CARE": 204,
+            "WATER": 634,
+            "HARVEST": 261,
+            "DIG": 13,
+            "FERTILIZE": 46
+          },
+          "harvested": {
+            "CARROT": 12,
+            "WHEAT": 124,
+            "WOOL": 112,
+            "MILK": 111,
+            "TOMATO": 59,
+            "MELON": 114,
+            "STRAWBERRY": 117
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 8,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 43800.0,
+          "control_cash": 80047.0,
+          "cash_delta": -36247.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 2.0,
+          "max_call_seconds": 0.6195003000320867,
+          "PASS": 1448,
+          "control_PASS": 846,
+          "pass_d5_d10": 463,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 226,
+            "PLANT": 106,
+            "CARE": 205,
+            "WATER": 632,
+            "HARVEST": 257,
+            "DIG": 13,
+            "FERTILIZE": 46
+          },
+          "harvested": {
+            "CARROT": 12,
+            "WHEAT": 121,
+            "WOOL": 112,
+            "MILK": 112,
+            "TOMATO": 58,
+            "MELON": 114,
+            "STRAWBERRY": 116
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 8,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 48975.25,
+        "control_cash": 82560.0,
+        "cash_delta": -33584.75,
+        "cash_delta_percent": -40.679203003875976,
+        "safety_pass": 3,
+        "exact_populated_770": 3,
+        "crop_deaths": 0,
+        "animal_escapes": 1,
+        "incomplete_missions": 0,
+        "median_cows_d10": 4.0,
+        "median_control_cows_d10": 9.0,
+        "mean_pass_d5_d10": 463,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903001": -33584.75
+        },
+        "max_call_seconds": 0.6737966999644414
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V18_FEED_ACCESS_20260907.json",
+      "sha256": "eafe82c480a61d72a4f30cc859dd0700fe5350efe622b63b9d96a20be2819cd7",
+      "complete": true,
+      "failures": [],
+      "cases": 4,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 77528.0,
+          "control_cash": 85073.0,
+          "cash_delta": -7545.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 5.0,
+          "max_call_seconds": 0.6018754999386147,
+          "PASS": 1481,
+          "control_PASS": 847,
+          "pass_d5_d10": 489,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 252,
+            "PLANT": 93,
+            "CARE": 227,
+            "WATER": 585,
+            "HARVEST": 268,
+            "DIG": 10,
+            "FERTILIZE": 47
+          },
+          "harvested": {
+            "CARROT": 12,
+            "WHEAT": 94,
+            "WOOL": 122,
+            "MILK": 113,
+            "TOMATO": 54,
+            "MELON": 112,
+            "STRAWBERRY": 134
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 87761.0,
+          "control_cash": 85073.0,
+          "cash_delta": 2688.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 5.0,
+          "max_call_seconds": 0.5971808000467718,
+          "PASS": 1485,
+          "control_PASS": 847,
+          "pass_d5_d10": 489,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 252,
+            "PLANT": 93,
+            "CARE": 228,
+            "WATER": 586,
+            "HARVEST": 269,
+            "DIG": 10,
+            "FERTILIZE": 47
+          },
+          "harvested": {
+            "CARROT": 12,
+            "WHEAT": 99,
+            "WOOL": 123,
+            "MILK": 113,
+            "TOMATO": 55,
+            "MELON": 112,
+            "STRAWBERRY": 135
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 76822.0,
+          "control_cash": 80047.0,
+          "cash_delta": -3225.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 5.0,
+          "max_call_seconds": 1.0313858999870718,
+          "PASS": 1467,
+          "control_PASS": 846,
+          "pass_d5_d10": 489,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 248,
+            "PLANT": 95,
+            "CARE": 224,
+            "WATER": 595,
+            "HARVEST": 271,
+            "DIG": 12,
+            "FERTILIZE": 50
+          },
+          "harvested": {
+            "CARROT": 12,
+            "WHEAT": 109,
+            "WOOL": 126,
+            "MILK": 104,
+            "TOMATO": 54,
+            "MELON": 118,
+            "STRAWBERRY": 137
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 75076.0,
+          "control_cash": 80047.0,
+          "cash_delta": -4971.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 5.0,
+          "max_call_seconds": 0.7218179000774398,
+          "PASS": 1467,
+          "control_PASS": 846,
+          "pass_d5_d10": 489,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 248,
+            "PLANT": 95,
+            "CARE": 224,
+            "WATER": 595,
+            "HARVEST": 271,
+            "DIG": 12,
+            "FERTILIZE": 50
+          },
+          "harvested": {
+            "CARROT": 12,
+            "WHEAT": 109,
+            "WOOL": 126,
+            "MILK": 104,
+            "TOMATO": 54,
+            "MELON": 118,
+            "STRAWBERRY": 137
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 79296.75,
+        "control_cash": 82560.0,
+        "cash_delta": -3263.25,
+        "cash_delta_percent": -3.952579941860468,
+        "safety_pass": 4,
+        "exact_populated_770": 4,
+        "crop_deaths": 0,
+        "animal_escapes": 0,
+        "incomplete_missions": 0,
+        "median_cows_d10": 5.0,
+        "median_control_cows_d10": 9.0,
+        "mean_pass_d5_d10": 489,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903001": -3263.25
+        },
+        "max_call_seconds": 1.0313858999870718
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V19_INITIAL_PORTFOLIO_20260907.json",
+      "sha256": "17ee519bc6d196fcbe3aea0ff7f81ee7bf86df02c2418ff47cde027dc8151026",
+      "complete": true,
+      "failures": [],
+      "cases": 4,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 60828.0,
+          "control_cash": 85073.0,
+          "cash_delta": -24245.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 88.0,
+          "max_call_seconds": 0.6510015999665484,
+          "PASS": 1209,
+          "control_PASS": 847,
+          "pass_d5_d10": 198,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 233,
+            "PLANT": 82,
+            "CARE": 208,
+            "WATER": 610,
+            "HARVEST": 261,
+            "DIG": 4,
+            "FERTILIZE": 50
+          },
+          "harvested": {
+            "WHEAT": 79,
+            "WOOL": 104,
+            "MILK": 116,
+            "MELON": 122,
+            "TOMATO": 39,
+            "STRAWBERRY": 169
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 16,
+              "event": "bootstrap_retired",
+              "reason": "initial_portfolio_established"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 60828.0,
+          "control_cash": 85073.0,
+          "cash_delta": -24245.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 88.0,
+          "max_call_seconds": 0.5830750000895932,
+          "PASS": 1209,
+          "control_PASS": 847,
+          "pass_d5_d10": 198,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 233,
+            "PLANT": 82,
+            "CARE": 208,
+            "WATER": 610,
+            "HARVEST": 261,
+            "DIG": 4,
+            "FERTILIZE": 50
+          },
+          "harvested": {
+            "WHEAT": 79,
+            "WOOL": 104,
+            "MILK": 116,
+            "MELON": 122,
+            "TOMATO": 39,
+            "STRAWBERRY": 169
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 16,
+              "event": "bootstrap_retired",
+              "reason": "initial_portfolio_established"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 57245.0,
+          "control_cash": 80047.0,
+          "cash_delta": -22802.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 88.0,
+          "max_call_seconds": 0.6374921000096947,
+          "PASS": 1213,
+          "control_PASS": 846,
+          "pass_d5_d10": 198,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 237,
+            "PLANT": 78,
+            "CARE": 212,
+            "WATER": 598,
+            "HARVEST": 260,
+            "DIG": 4,
+            "FERTILIZE": 53
+          },
+          "harvested": {
+            "WHEAT": 68,
+            "WOOL": 115,
+            "MILK": 116,
+            "MELON": 126,
+            "TOMATO": 44,
+            "STRAWBERRY": 164
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 16,
+              "event": "bootstrap_retired",
+              "reason": "initial_portfolio_established"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 57245.0,
+          "control_cash": 80047.0,
+          "cash_delta": -22802.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 88.0,
+          "max_call_seconds": 0.792990899994038,
+          "PASS": 1213,
+          "control_PASS": 846,
+          "pass_d5_d10": 198,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 237,
+            "PLANT": 78,
+            "CARE": 212,
+            "WATER": 598,
+            "HARVEST": 260,
+            "DIG": 4,
+            "FERTILIZE": 53
+          },
+          "harvested": {
+            "WHEAT": 68,
+            "WOOL": 115,
+            "MILK": 116,
+            "MELON": 126,
+            "TOMATO": 44,
+            "STRAWBERRY": 164
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 16,
+              "event": "bootstrap_retired",
+              "reason": "initial_portfolio_established"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 59036.5,
+        "control_cash": 82560.0,
+        "cash_delta": -23523.5,
+        "cash_delta_percent": -28.49261143410853,
+        "safety_pass": 4,
+        "exact_populated_770": 4,
+        "crop_deaths": 0,
+        "animal_escapes": 0,
+        "incomplete_missions": 0,
+        "median_cows_d10": 5.0,
+        "median_control_cows_d10": 9.0,
+        "mean_pass_d5_d10": 198,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903001": -23523.5
+        },
+        "max_call_seconds": 0.792990899994038
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V20_OBLIGATIONS_FIRST_20260907.json",
+      "sha256": "fca5b802291f0159316b5ec80f6d7d84d8b89033160d27b5d2bcccbe0edfd89e",
+      "complete": true,
+      "failures": [],
+      "cases": 4,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 81003.0,
+          "control_cash": 85073.0,
+          "cash_delta": -4070.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 4,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 6,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": false,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 11,
+          "min_cash": 153.0,
+          "max_call_seconds": 0.462645799969323,
+          "PASS": 1292,
+          "control_PASS": 847,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 11,
+            "FEED": 265,
+            "PLANT": 114,
+            "CARE": 243,
+            "WATER": 645,
+            "HARVEST": 263,
+            "DIG": 15,
+            "FERTILIZE": 45
+          },
+          "harvested": {
+            "CARROT": 73,
+            "WHEAT": 92,
+            "WOOL": 150,
+            "MILK": 157,
+            "TOMATO": 33,
+            "MELON": 129,
+            "STRAWBERRY": 132
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 81003.0,
+          "control_cash": 85073.0,
+          "cash_delta": -4070.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 4,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 6,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": false,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 11,
+          "min_cash": 153.0,
+          "max_call_seconds": 0.4247438999591395,
+          "PASS": 1292,
+          "control_PASS": 847,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 11,
+            "FEED": 265,
+            "PLANT": 114,
+            "CARE": 243,
+            "WATER": 645,
+            "HARVEST": 263,
+            "DIG": 15,
+            "FERTILIZE": 45
+          },
+          "harvested": {
+            "CARROT": 73,
+            "WHEAT": 92,
+            "WOOL": 150,
+            "MILK": 157,
+            "TOMATO": 33,
+            "MELON": 129,
+            "STRAWBERRY": 132
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 64851.0,
+          "control_cash": 80047.0,
+          "cash_delta": -15196.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 4,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 6,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": false,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 11,
+          "min_cash": 153.0,
+          "max_call_seconds": 0.7498348999070004,
+          "PASS": 1208,
+          "control_PASS": 846,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 11,
+            "FEED": 261,
+            "PLANT": 128,
+            "CARE": 242,
+            "WATER": 677,
+            "HARVEST": 271,
+            "DIG": 16,
+            "FERTILIZE": 45
+          },
+          "harvested": {
+            "CARROT": 101,
+            "WHEAT": 90,
+            "WOOL": 147,
+            "MILK": 153,
+            "TOMATO": 34,
+            "MELON": 129,
+            "STRAWBERRY": 129
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 64851.0,
+          "control_cash": 80047.0,
+          "cash_delta": -15196.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 4,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 6,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": false,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 11,
+          "min_cash": 153.0,
+          "max_call_seconds": 0.68822310003452,
+          "PASS": 1208,
+          "control_PASS": 846,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 11,
+            "FEED": 261,
+            "PLANT": 128,
+            "CARE": 242,
+            "WATER": 677,
+            "HARVEST": 271,
+            "DIG": 16,
+            "FERTILIZE": 45
+          },
+          "harvested": {
+            "CARROT": 101,
+            "WHEAT": 90,
+            "WOOL": 147,
+            "MILK": 153,
+            "TOMATO": 34,
+            "MELON": 129,
+            "STRAWBERRY": 129
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 72927.0,
+        "control_cash": 82560.0,
+        "cash_delta": -9633.0,
+        "cash_delta_percent": -11.667877906976742,
+        "safety_pass": 4,
+        "exact_populated_770": 0,
+        "crop_deaths": 0,
+        "animal_escapes": 0,
+        "incomplete_missions": 0,
+        "median_cows_d10": 5.0,
+        "median_control_cows_d10": 9.0,
+        "mean_pass_d5_d10": 408,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903001": -9633.0
+        },
+        "max_call_seconds": 0.7498348999070004
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V21_YIELD_DEADLINES_20260907.json",
+      "sha256": "4edd9c9a0cd8db69e4396fec488c876982e98ce510ad414d89e1343a20e8aa00",
+      "complete": true,
+      "failures": [],
+      "cases": 4,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 58823.0,
+          "control_cash": 85073.0,
+          "cash_delta": -26250.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 6,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 8,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": false,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 13,
+          "min_cash": 46.0,
+          "max_call_seconds": 0.45055870001669973,
+          "PASS": 2034,
+          "control_PASS": 847,
+          "pass_d5_d10": 543,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 8,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 13,
+            "FEED": 246,
+            "PLANT": 107,
+            "CARE": 219,
+            "WATER": 569,
+            "HARVEST": 241,
+            "DIG": 7,
+            "FERTILIZE": 33
+          },
+          "harvested": {
+            "CARROT": 68,
+            "WHEAT": 119,
+            "WOOL": 130,
+            "MILK": 174,
+            "TOMATO": 53,
+            "MELON": 120,
+            "STRAWBERRY": 66
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 18,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 57908.0,
+          "control_cash": 85073.0,
+          "cash_delta": -27165.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 6,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 8,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": false,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 1,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 13,
+          "min_cash": 46.0,
+          "max_call_seconds": 0.43933429999742657,
+          "PASS": 2032,
+          "control_PASS": 847,
+          "pass_d5_d10": 543,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 8,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 13,
+            "FEED": 246,
+            "PLANT": 108,
+            "CARE": 219,
+            "WATER": 572,
+            "HARVEST": 243,
+            "DIG": 6,
+            "FERTILIZE": 33
+          },
+          "harvested": {
+            "CARROT": 70,
+            "WHEAT": 119,
+            "WOOL": 130,
+            "MILK": 174,
+            "TOMATO": 55,
+            "MELON": 120,
+            "STRAWBERRY": 66
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 18,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": false
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 55717.0,
+          "control_cash": 80047.0,
+          "cash_delta": -24330.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 6,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 8,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": false,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 13,
+          "min_cash": 46.0,
+          "max_call_seconds": 0.663214199943468,
+          "PASS": 2022,
+          "control_PASS": 846,
+          "pass_d5_d10": 543,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 8,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 13,
+            "FEED": 246,
+            "PLANT": 111,
+            "CARE": 219,
+            "WATER": 583,
+            "HARVEST": 247,
+            "DIG": 5,
+            "FERTILIZE": 32
+          },
+          "harvested": {
+            "CARROT": 78,
+            "WHEAT": 127,
+            "WOOL": 129,
+            "MILK": 175,
+            "TOMATO": 53,
+            "MELON": 120,
+            "STRAWBERRY": 67
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 18,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 55717.0,
+          "control_cash": 80047.0,
+          "cash_delta": -24330.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 6,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 8,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": false,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 13,
+          "min_cash": 46.0,
+          "max_call_seconds": 0.6748446000274271,
+          "PASS": 2022,
+          "control_PASS": 846,
+          "pass_d5_d10": 543,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 8,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 13,
+            "FEED": 246,
+            "PLANT": 111,
+            "CARE": 219,
+            "WATER": 583,
+            "HARVEST": 247,
+            "DIG": 5,
+            "FERTILIZE": 32
+          },
+          "harvested": {
+            "CARROT": 78,
+            "WHEAT": 127,
+            "WOOL": 129,
+            "MILK": 175,
+            "TOMATO": 53,
+            "MELON": 120,
+            "STRAWBERRY": 67
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 18,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 57041.25,
+        "control_cash": 82560.0,
+        "cash_delta": -25518.75,
+        "cash_delta_percent": -30.9093386627907,
+        "safety_pass": 3,
+        "exact_populated_770": 0,
+        "crop_deaths": 0,
+        "animal_escapes": 0,
+        "incomplete_missions": 1,
+        "median_cows_d10": 8.0,
+        "median_control_cows_d10": 9.0,
+        "mean_pass_d5_d10": 543,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903001": -25518.75
+        },
+        "max_call_seconds": 0.6748446000274271
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V22_SHORT_BOOTSTRAP_DEVELOPMENT_20260907.json",
+      "sha256": "085d219578003760913467edcef6ec7a8079fb0fed5f6bfebdb83a65c34d8b02",
+      "complete": false,
+      "failures": [],
+      "cases": 24,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 87160.0,
+          "control_cash": 85073.0,
+          "cash_delta": 2087.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.3216468000318855,
+          "PASS": 1337,
+          "control_PASS": 847,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 256,
+            "PLANT": 84,
+            "CARE": 228,
+            "WATER": 555,
+            "HARVEST": 244,
+            "DIG": 11,
+            "FERTILIZE": 52
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 75,
+            "WOOL": 122,
+            "MILK": 134,
+            "TOMATO": 43,
+            "MELON": 122,
+            "STRAWBERRY": 128
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 85118.0,
+          "control_cash": 85073.0,
+          "cash_delta": 45.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.38638719997834414,
+          "PASS": 1337,
+          "control_PASS": 847,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 256,
+            "PLANT": 84,
+            "CARE": 228,
+            "WATER": 555,
+            "HARVEST": 244,
+            "DIG": 11,
+            "FERTILIZE": 52
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 75,
+            "WOOL": 122,
+            "MILK": 134,
+            "TOMATO": 43,
+            "MELON": 122,
+            "STRAWBERRY": 128
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903002,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 76547.0,
+          "control_cash": 97057.0,
+          "cash_delta": -20510.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 160.0,
+          "max_call_seconds": 0.7523886000271887,
+          "PASS": 1324,
+          "control_PASS": 827,
+          "pass_d5_d10": 464,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 6,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 247,
+            "PLANT": 78,
+            "CARE": 223,
+            "WATER": 554,
+            "HARVEST": 249,
+            "DIG": 9,
+            "FERTILIZE": 49
+          },
+          "harvested": {
+            "CARROT": 12,
+            "WHEAT": 50,
+            "WOOL": 110,
+            "MILK": 138,
+            "TOMATO": 35,
+            "MELON": 106,
+            "STRAWBERRY": 141
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903002,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 69593.0,
+          "control_cash": 97057.0,
+          "cash_delta": -27464.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 160.0,
+          "max_call_seconds": 0.7095072999363765,
+          "PASS": 1339,
+          "control_PASS": 826,
+          "pass_d5_d10": 464,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 6,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 247,
+            "PLANT": 77,
+            "CARE": 225,
+            "WATER": 542,
+            "HARVEST": 248,
+            "DIG": 11,
+            "FERTILIZE": 47
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 53,
+            "WOOL": 117,
+            "MILK": 138,
+            "TOMATO": 34,
+            "MELON": 115,
+            "STRAWBERRY": 142
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903003,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 31399.0,
+          "control_cash": 69066.0,
+          "cash_delta": -37667.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 6,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 7,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": false,
+          "crop_deaths": 0,
+          "animal_escapes": 1,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 13,
+          "min_cash": 232.0,
+          "max_call_seconds": 0.4316427999874577,
+          "PASS": 1402,
+          "control_PASS": 838,
+          "pass_d5_d10": 448,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 13,
+            "FEED": 237,
+            "PLANT": 97,
+            "CARE": 217,
+            "WATER": 593,
+            "HARVEST": 257,
+            "DIG": 9,
+            "FERTILIZE": 33
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 85,
+            "WOOL": 117,
+            "MILK": 131,
+            "MELON": 129,
+            "TOMATO": 132,
+            "STRAWBERRY": 52
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": false
+        },
+        {
+          "seed": 180903003,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 32034.0,
+          "control_cash": 69066.0,
+          "cash_delta": -37032.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 6,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 7,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": false,
+          "crop_deaths": 0,
+          "animal_escapes": 1,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 13,
+          "min_cash": 232.0,
+          "max_call_seconds": 0.5475604999810457,
+          "PASS": 1416,
+          "control_PASS": 838,
+          "pass_d5_d10": 448,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 13,
+            "FEED": 239,
+            "PLANT": 101,
+            "CARE": 219,
+            "WATER": 604,
+            "HARVEST": 260,
+            "DIG": 9,
+            "FERTILIZE": 35
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 114,
+            "WOOL": 122,
+            "MILK": 131,
+            "MELON": 125,
+            "TOMATO": 124,
+            "STRAWBERRY": 51
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": false
+        },
+        {
+          "seed": 180903004,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 77950.0,
+          "control_cash": 73624.0,
+          "cash_delta": 4326.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.39405090000946075,
+          "PASS": 1288,
+          "control_PASS": 845,
+          "pass_d5_d10": 396,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 7,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 242,
+            "PLANT": 82,
+            "CARE": 221,
+            "WATER": 583,
+            "HARVEST": 264,
+            "DIG": 11,
+            "FERTILIZE": 43
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 58,
+            "WOOL": 106,
+            "MILK": 137,
+            "TOMATO": 31,
+            "MELON": 116,
+            "STRAWBERRY": 157
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903004,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 72336.0,
+          "control_cash": 84280.0,
+          "cash_delta": -11944.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.3601008999394253,
+          "PASS": 1317,
+          "control_PASS": 846,
+          "pass_d5_d10": 396,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 7,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 239,
+            "PLANT": 85,
+            "CARE": 218,
+            "WATER": 599,
+            "HARVEST": 266,
+            "DIG": 10,
+            "FERTILIZE": 45
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 64,
+            "WOOL": 109,
+            "MILK": 120,
+            "TOMATO": 43,
+            "MELON": 122,
+            "STRAWBERRY": 147
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903005,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 43061.0,
+          "control_cash": 106086.0,
+          "cash_delta": -63025.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.43805180001072586,
+          "PASS": 1478,
+          "control_PASS": 823,
+          "pass_d5_d10": 420,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 255,
+            "PLANT": 92,
+            "CARE": 229,
+            "WATER": 585,
+            "HARVEST": 266,
+            "DIG": 11,
+            "FERTILIZE": 31
+          },
+          "harvested": {
+            "CARROT": 24,
+            "WHEAT": 94,
+            "WOOL": 123,
+            "MILK": 145,
+            "TOMATO": 124,
+            "MELON": 127,
+            "STRAWBERRY": 50
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903005,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 43170.0,
+          "control_cash": 106186.0,
+          "cash_delta": -63016.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.4955347999930382,
+          "PASS": 1537,
+          "control_PASS": 826,
+          "pass_d5_d10": 420,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 255,
+            "PLANT": 108,
+            "CARE": 231,
+            "WATER": 602,
+            "HARVEST": 260,
+            "DIG": 14,
+            "FERTILIZE": 28
+          },
+          "harvested": {
+            "CARROT": 57,
+            "WHEAT": 106,
+            "WOOL": 122,
+            "MILK": 137,
+            "TOMATO": 82,
+            "MELON": 124,
+            "STRAWBERRY": 55
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903006,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 75384.0,
+          "control_cash": 64519.0,
+          "cash_delta": 10865.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 232.0,
+          "max_call_seconds": 0.3444233000045642,
+          "PASS": 1491,
+          "control_PASS": 837,
+          "pass_d5_d10": 498,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 243,
+            "PLANT": 85,
+            "CARE": 222,
+            "WATER": 577,
+            "HARVEST": 248,
+            "DIG": 6,
+            "FERTILIZE": 43
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 63,
+            "WOOL": 112,
+            "MILK": 129,
+            "MELON": 121,
+            "TOMATO": 24,
+            "STRAWBERRY": 145
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903006,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 75384.0,
+          "control_cash": 64519.0,
+          "cash_delta": 10865.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 232.0,
+          "max_call_seconds": 0.3320805999683216,
+          "PASS": 1491,
+          "control_PASS": 837,
+          "pass_d5_d10": 498,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 243,
+            "PLANT": 85,
+            "CARE": 222,
+            "WATER": 577,
+            "HARVEST": 248,
+            "DIG": 6,
+            "FERTILIZE": 43
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 63,
+            "WOOL": 112,
+            "MILK": 129,
+            "MELON": 121,
+            "TOMATO": 24,
+            "STRAWBERRY": 145
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903007,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 77315.0,
+          "control_cash": 74744.0,
+          "cash_delta": 2571.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.42604469996877015,
+          "PASS": 1392,
+          "control_PASS": 849,
+          "pass_d5_d10": 423,
+          "control_pass_d5_d10": 294,
+          "cows_d10": 6,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 260,
+            "PLANT": 91,
+            "CARE": 232,
+            "WATER": 568,
+            "HARVEST": 248,
+            "DIG": 10,
+            "FERTILIZE": 57
+          },
+          "harvested": {
+            "CARROT": 14,
+            "WHEAT": 112,
+            "WOOL": 133,
+            "MILK": 127,
+            "TOMATO": 20,
+            "MELON": 130,
+            "STRAWBERRY": 148
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903007,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 77289.0,
+          "control_cash": 71169.0,
+          "cash_delta": 6120.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.8406191999092698,
+          "PASS": 1454,
+          "control_PASS": 849,
+          "pass_d5_d10": 432,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 6,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 257,
+            "PLANT": 84,
+            "CARE": 229,
+            "WATER": 552,
+            "HARVEST": 257,
+            "DIG": 11,
+            "FERTILIZE": 50
+          },
+          "harvested": {
+            "CARROT": 13,
+            "WHEAT": 65,
+            "WOOL": 129,
+            "MILK": 135,
+            "TOMATO": 101,
+            "MELON": 126,
+            "STRAWBERRY": 97
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 84581.0,
+          "control_cash": 80047.0,
+          "cash_delta": 4534.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.5585585000226274,
+          "PASS": 1338,
+          "control_PASS": 846,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 263,
+            "PLANT": 83,
+            "CARE": 234,
+            "WATER": 546,
+            "HARVEST": 241,
+            "DIG": 12,
+            "FERTILIZE": 51
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 65,
+            "WOOL": 123,
+            "MILK": 145,
+            "TOMATO": 34,
+            "MELON": 125,
+            "STRAWBERRY": 133
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 81224.0,
+          "control_cash": 80047.0,
+          "cash_delta": 1177.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.5619974000146613,
+          "PASS": 1338,
+          "control_PASS": 846,
+          "pass_d5_d10": 408,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 263,
+            "PLANT": 83,
+            "CARE": 234,
+            "WATER": 546,
+            "HARVEST": 241,
+            "DIG": 12,
+            "FERTILIZE": 51
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 65,
+            "WOOL": 123,
+            "MILK": 145,
+            "TOMATO": 34,
+            "MELON": 125,
+            "STRAWBERRY": 133
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903002,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 53318.0,
+          "control_cash": 93967.0,
+          "cash_delta": -40649.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 160.0,
+          "max_call_seconds": 0.7379542000126094,
+          "PASS": 1350,
+          "control_PASS": 831,
+          "pass_d5_d10": 464,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 6,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 245,
+            "PLANT": 82,
+            "CARE": 227,
+            "WATER": 568,
+            "HARVEST": 253,
+            "DIG": 9,
+            "FERTILIZE": 43
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 61,
+            "WOOL": 116,
+            "MILK": 140,
+            "TOMATO": 36,
+            "MELON": 105,
+            "STRAWBERRY": 135
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903002,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 70357.0,
+          "control_cash": 83881.0,
+          "cash_delta": -13524.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 160.0,
+          "max_call_seconds": 0.7870296000037342,
+          "PASS": 1403,
+          "control_PASS": 843,
+          "pass_d5_d10": 464,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 6,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 250,
+            "PLANT": 80,
+            "CARE": 229,
+            "WATER": 563,
+            "HARVEST": 255,
+            "DIG": 10,
+            "FERTILIZE": 40
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 50,
+            "WOOL": 118,
+            "MILK": 153,
+            "TOMATO": 42,
+            "MELON": 115,
+            "STRAWBERRY": 130
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903003,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 30836.0,
+          "control_cash": 65887.0,
+          "cash_delta": -35051.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 6,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 8,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": false,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 13,
+          "min_cash": 232.0,
+          "max_call_seconds": 0.451101400074549,
+          "PASS": 1427,
+          "control_PASS": 845,
+          "pass_d5_d10": 448,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 13,
+            "FEED": 245,
+            "PLANT": 92,
+            "CARE": 224,
+            "WATER": 581,
+            "HARVEST": 258,
+            "DIG": 8,
+            "FERTILIZE": 35
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 82,
+            "WOOL": 119,
+            "MILK": 142,
+            "MELON": 129,
+            "TOMATO": 130,
+            "STRAWBERRY": 51
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903003,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 31931.0,
+          "control_cash": 65887.0,
+          "cash_delta": -33956.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 6,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 8,
+            "SHEEP": 4,
+            "GOOSE": 0
+          },
+          "exact_populated_770": false,
+          "crop_deaths": 0,
+          "animal_escapes": 1,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 13,
+          "min_cash": 232.0,
+          "max_call_seconds": 0.5798718000296503,
+          "PASS": 1446,
+          "control_PASS": 845,
+          "pass_d5_d10": 448,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 13,
+            "FEED": 240,
+            "PLANT": 100,
+            "CARE": 221,
+            "WATER": 594,
+            "HARVEST": 255,
+            "DIG": 9,
+            "FERTILIZE": 35
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 115,
+            "WOOL": 117,
+            "MILK": 143,
+            "MELON": 129,
+            "TOMATO": 125,
+            "STRAWBERRY": 49
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": false
+        },
+        {
+          "seed": 180903004,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 73805.0,
+          "control_cash": 65961.0,
+          "cash_delta": 7844.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.4748033999931067,
+          "PASS": 1295,
+          "control_PASS": 846,
+          "pass_d5_d10": 396,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 7,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 246,
+            "PLANT": 82,
+            "CARE": 223,
+            "WATER": 583,
+            "HARVEST": 259,
+            "DIG": 11,
+            "FERTILIZE": 47
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 58,
+            "WOOL": 111,
+            "MILK": 137,
+            "TOMATO": 32,
+            "MELON": 116,
+            "STRAWBERRY": 146
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903004,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 72782.0,
+          "control_cash": 57384.0,
+          "cash_delta": 15398.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.4912156000500545,
+          "PASS": 1296,
+          "control_PASS": 853,
+          "pass_d5_d10": 396,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 7,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 238,
+            "PLANT": 85,
+            "CARE": 219,
+            "WATER": 594,
+            "HARVEST": 263,
+            "DIG": 11,
+            "FERTILIZE": 46
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 68,
+            "WOOL": 107,
+            "MILK": 125,
+            "TOMATO": 33,
+            "MELON": 118,
+            "STRAWBERRY": 152
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903005,
+          "seat": 0,
+          "opponent": "E18.2/V4D",
+          "cash": 41594.0,
+          "control_cash": 105304.0,
+          "cash_delta": -63710.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 1.562138400040567,
+          "PASS": 1546,
+          "control_PASS": 826,
+          "pass_d5_d10": 420,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 260,
+            "PLANT": 99,
+            "CARE": 235,
+            "WATER": 575,
+            "HARVEST": 255,
+            "DIG": 13,
+            "FERTILIZE": 28
+          },
+          "harvested": {
+            "CARROT": 45,
+            "WHEAT": 92,
+            "WOOL": 126,
+            "MILK": 143,
+            "TOMATO": 90,
+            "MELON": 129,
+            "STRAWBERRY": 50
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903005,
+          "seat": 1,
+          "opponent": "E18.2/V4D",
+          "cash": 40015.0,
+          "control_cash": 105204.0,
+          "cash_delta": -65189.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 241.0,
+          "max_call_seconds": 0.7389735999749973,
+          "PASS": 1505,
+          "control_PASS": 823,
+          "pass_d5_d10": 420,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 4,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 253,
+            "PLANT": 92,
+            "CARE": 225,
+            "WATER": 589,
+            "HARVEST": 264,
+            "DIG": 13,
+            "FERTILIZE": 33
+          },
+          "harvested": {
+            "CARROT": 21,
+            "WHEAT": 82,
+            "WOOL": 119,
+            "MILK": 136,
+            "TOMATO": 133,
+            "MELON": 119,
+            "STRAWBERRY": 47
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 9,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 62674.291666666664,
+        "control_cash": 81295.33333333333,
+        "cash_delta": -18621.041666666668,
+        "cash_delta_percent": -22.9054250756501,
+        "safety_pass": 21,
+        "exact_populated_770": 20,
+        "crop_deaths": 0,
+        "animal_escapes": 3,
+        "incomplete_missions": 0,
+        "median_cows_d10": 4.5,
+        "median_control_cows_d10": 9.0,
+        "mean_pass_d5_d10": 433.125,
+        "mean_control_pass_d5_d10": 294.9583333333333,
+        "seed_mean_deltas": {
+          "180903001": 1960.75,
+          "180903002": -25536.75,
+          "180903003": -35926.5,
+          "180903004": 3906.0,
+          "180903005": -63735.0,
+          "180903006": 10865.0,
+          "180903007": 4345.5
+        },
+        "max_call_seconds": 1.562138400040567
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V23_ESSENTIAL_SERVICE_REGRESSION_20260907.json",
+      "sha256": "ffdd0a85affbb8241f7a229368396a4615df1c5b08ddaf96e1c901083af1adb3",
+      "complete": true,
+      "failures": [],
+      "cases": 2,
+      "matches": [
+        {
+          "seed": 180903003,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 49621.0,
+          "control_cash": 69066.0,
+          "cash_delta": -19445.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 39.0,
+          "max_call_seconds": 0.8938074000179768,
+          "PASS": 1085,
+          "control_PASS": 838,
+          "pass_d5_d10": 316,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 313,
+            "PLANT": 104,
+            "CARE": 221,
+            "WATER": 609,
+            "HARVEST": 263,
+            "DIG": 10,
+            "FERTILIZE": 37
+          },
+          "harvested": {
+            "CARROT": 30,
+            "WHEAT": 147,
+            "WOOL": 123,
+            "MILK": 163,
+            "TOMATO": 77,
+            "MELON": 134,
+            "STRAWBERRY": 71
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 6,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903003,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 48822.0,
+          "control_cash": 69066.0,
+          "cash_delta": -20244.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 39.0,
+          "max_call_seconds": 1.048035400104709,
+          "PASS": 1103,
+          "control_PASS": 838,
+          "pass_d5_d10": 316,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 308,
+            "PLANT": 103,
+            "CARE": 223,
+            "WATER": 599,
+            "HARVEST": 260,
+            "DIG": 9,
+            "FERTILIZE": 36
+          },
+          "harvested": {
+            "CARROT": 30,
+            "WHEAT": 142,
+            "WOOL": 126,
+            "MILK": 159,
+            "TOMATO": 73,
+            "MELON": 134,
+            "STRAWBERRY": 72
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 6,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 49221.5,
+        "control_cash": 69066.0,
+        "cash_delta": -19844.5,
+        "cash_delta_percent": -28.73266151217676,
+        "safety_pass": 2,
+        "exact_populated_770": 2,
+        "crop_deaths": 0,
+        "animal_escapes": 0,
+        "incomplete_missions": 0,
+        "median_cows_d10": 5.0,
+        "median_control_cows_d10": 9.0,
+        "mean_pass_d5_d10": 316,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903003": -19844.5
+        },
+        "max_call_seconds": 1.048035400104709
+      }
+    },
+    {
+      "file": "E18_CLOSEOUT_GATE_V24_ESSENTIAL_SERVICE_DEVELOPMENT_20260907.json",
+      "sha256": "192e6507ec5ca71bfd7aed2c59d5a2fbf5bd69ffe9af9035e74a1045a2dfbd7c",
+      "complete": false,
+      "failures": [],
+      "cases": 5,
+      "matches": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 77174.0,
+          "control_cash": 85073.0,
+          "cash_delta": -7899.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 32.0,
+          "max_call_seconds": 0.48434540000744164,
+          "PASS": 1002,
+          "control_PASS": 847,
+          "pass_d5_d10": 338,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 7,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 306,
+            "PLANT": 82,
+            "CARE": 229,
+            "WATER": 587,
+            "HARVEST": 260,
+            "DIG": 8,
+            "FERTILIZE": 36
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 76,
+            "WOOL": 135,
+            "MILK": 155,
+            "TOMATO": 30,
+            "MELON": 125,
+            "STRAWBERRY": 130
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 6,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903001,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 69086.0,
+          "control_cash": 85073.0,
+          "cash_delta": -15987.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 32.0,
+          "max_call_seconds": 0.5180903000291437,
+          "PASS": 1032,
+          "control_PASS": 847,
+          "pass_d5_d10": 338,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 7,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 298,
+            "PLANT": 85,
+            "CARE": 220,
+            "WATER": 599,
+            "HARVEST": 262,
+            "DIG": 8,
+            "FERTILIZE": 40
+          },
+          "harvested": {
+            "CARROT": 9,
+            "WHEAT": 76,
+            "WOOL": 134,
+            "MILK": 144,
+            "TOMATO": 31,
+            "MELON": 121,
+            "STRAWBERRY": 142
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 6,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        },
+        {
+          "seed": 180903002,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 52567.0,
+          "control_cash": 97057.0,
+          "cash_delta": -44490.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 1,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 32.0,
+          "max_call_seconds": 0.646212900057435,
+          "PASS": 1032,
+          "control_PASS": 827,
+          "pass_d5_d10": 307,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 6,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 289,
+            "PLANT": 84,
+            "CARE": 223,
+            "WATER": 586,
+            "HARVEST": 259,
+            "DIG": 5,
+            "FERTILIZE": 36
+          },
+          "harvested": {
+            "CARROT": 12,
+            "WHEAT": 97,
+            "WOOL": 124,
+            "MILK": 144,
+            "TOMATO": 26,
+            "MELON": 134,
+            "STRAWBERRY": 134
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 6,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": false
+        },
+        {
+          "seed": 180903002,
+          "seat": 1,
+          "opponent": "E18.16",
+          "cash": 53862.0,
+          "control_cash": 97057.0,
+          "cash_delta": -43195.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 1,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 32.0,
+          "max_call_seconds": 0.5056164000416175,
+          "PASS": 1051,
+          "control_PASS": 826,
+          "pass_d5_d10": 307,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 6,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 287,
+            "PLANT": 84,
+            "CARE": 224,
+            "WATER": 590,
+            "HARVEST": 257,
+            "DIG": 5,
+            "FERTILIZE": 40
+          },
+          "harvested": {
+            "CARROT": 12,
+            "WHEAT": 97,
+            "WOOL": 122,
+            "MILK": 143,
+            "TOMATO": 26,
+            "MELON": 134,
+            "STRAWBERRY": 140
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 6,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": false
+        },
+        {
+          "seed": 180903003,
+          "seat": 0,
+          "opponent": "E18.16",
+          "cash": 49621.0,
+          "control_cash": 69066.0,
+          "cash_delta": -19445.0,
+          "final_topology": {
+            "Q0": 7,
+            "Q1": 7,
+            "Q2": 0,
+            "Q3": 0
+          },
+          "final_animals": {
+            "COW": 9,
+            "SHEEP": 5,
+            "GOOSE": 0
+          },
+          "exact_populated_770": true,
+          "crop_deaths": 0,
+          "animal_escapes": 0,
+          "errors": 0,
+          "statuses": [
+            "DONE",
+            "DONE"
+          ],
+          "incomplete_missions": 0,
+          "cash_parity_errors": 0,
+          "max_hands": 12,
+          "max_animals": 14,
+          "min_cash": 39.0,
+          "max_call_seconds": 1.3177832999499515,
+          "PASS": 1085,
+          "control_PASS": 838,
+          "pass_d5_d10": 316,
+          "control_pass_d5_d10": 295,
+          "cows_d10": 5,
+          "control_cows_d10": 9,
+          "executed_services": {
+            "BUILD_PASTURE": 14,
+            "FEED": 313,
+            "PLANT": 104,
+            "CARE": 221,
+            "WATER": 609,
+            "HARVEST": 263,
+            "DIG": 10,
+            "FERTILIZE": 37
+          },
+          "harvested": {
+            "CARROT": 30,
+            "WHEAT": 147,
+            "WOOL": 123,
+            "MILK": 163,
+            "TOMATO": 77,
+            "MELON": 134,
+            "STRAWBERRY": 71
+          },
+          "bootstrap_release": [
+            {
+              "day": 4,
+              "hour": 6,
+              "event": "bootstrap_retired",
+              "reason": "confirmed_crop_harvest"
+            }
+          ],
+          "safety_pass": true
+        }
+      ],
+      "aggregate": {
+        "cash": 60462.0,
+        "control_cash": 86665.2,
+        "cash_delta": -26203.2,
+        "cash_delta_percent": -30.23497320723889,
+        "safety_pass": 3,
+        "exact_populated_770": 5,
+        "crop_deaths": 0,
+        "animal_escapes": 0,
+        "incomplete_missions": 2,
+        "median_cows_d10": 6,
+        "median_control_cows_d10": 9,
+        "mean_pass_d5_d10": 321.2,
+        "mean_control_pass_d5_d10": 295,
+        "seed_mean_deltas": {
+          "180903001": -11943.0,
+          "180903002": -43842.5,
+          "180903003": -19445.0
+        },
+        "max_call_seconds": 1.3177832999499515
+      }
+    }
+  ],
+  "uploaded": false,
+  "e19_started": false,
+  "interpretation": "Internal matched development evidence; no claim of Top770 equivalence. Incomplete runs are not completed gates."
+}

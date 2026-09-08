@@ -1,0 +1,12 @@
+from pathlib import Path
+p=Path('docs/model_specs/codex/e19/tools')
+s=(p/'build_final_services_770_report.py').read_text(encoding='utf-8')
+s=s.replace('reports/final_services_770_20260908','reports/final_water_770_20260908').replace("else 'v46'","else 'v47'")
+s=s.replace("['v33','v38','v39','v41','v44','v45','v46']","['v33','v38','v39','v41','v44','v45','v46','v47']",1)
+s=s.replace("['v41','v45','v46']","['v41','v45','v46','v47']")
+s=s.replace("closing_versions=['v41','v45',chosen]","closing_versions=['v41','v45','v46',chosen]")
+s=s.replace('Servizi fino a D29: V46','Servizi e scadenze idriche finali: V46 e V47')
+s=s.replace("<p><strong>{chosen.upper()}, sei casi:","<p>La V46 introduce 12 perdite idriche aggiuntive a D28: 10 carote e 2 fragole sul totale dei sei casi. Il suo WATER complessivo aumenta, ma non copre tutte le scadenze. La V47 conserva il piano V46 e protegge le visite WATER delle piante gia rimaste un giorno senza acqua, solo a D28–D29: precedenza di percorso e possibilita di recupero fuori area. Non applica questa protezione all'acqua delle nuove semine. Scorte terminali vuote non escludono perdite di prodotto avvenute prima del termine.</p><p><strong>{chosen.upper()}, sei casi:")
+s=s.replace("('V45','V45 locale',aggregate(prof('v45')),'TOP770')","('V45','V45 locale',aggregate(prof('v45')),'TOP770'),('V46','V46 locale',aggregate(prof('v46')),'TOP770')")
+s=s.replace("BASE/'tests/test_final_services_v46.py'","BASE/'tests/test_final_services_v46.py',BASE/'tests/test_final_water_v47.py'")
+(p/'build_final_water_770_report.py').write_text(s,encoding='utf-8')

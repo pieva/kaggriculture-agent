@@ -1,5 +1,18 @@
 # E18.33 — policy comune di pascoli, colture e capacità
 
+Aggiornamento 2026-09-07: **V24, GATE ECONOMICO FALLITO, NON RIFERIMENTO
+FINALE.** 28/28 topologie 770 popolate e zero perdite biologiche; cinque
+missioni terminali incomplete, cassa media -21,80% vs E18.31 matched.
+Il servizio indispensabile è ora distinto dalla visita opzionale quando
+questa non entra nel tempo residuo. Cache verificate; 86 test e parità
+source/bundle/file-loader su quattro casi. Profilo attivo nelle prove:
+V2_BOOTSTRAP, 2 COW/2 SHEEP fino al primo raccolto. Gli avvii alternativi
+e il profilo v3 con portafoglio iniziale non sono promossi.
+Nessun nuovo upload o avvio E19. Report e limiti:
+`reports/E18_PARAMETRIC_RELEASE_WORKLOG_20260907_IT.md`.
+Le sezioni normative sotto restano il target di implementazione; i test
+non dimostrano implementato l'intero certificato del portafoglio futuro.
+
 Stato 2026-09-06: **KERNEL E PROTOTIPO NATIVO IMPLEMENTATI, gate fallito;
 non candidato pubblicabile.** La specifica normativa non è ancora implementata
 integralmente: vedere sezione 9 e checkpoint delle prove.

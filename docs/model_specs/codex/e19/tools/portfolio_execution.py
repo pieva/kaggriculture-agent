@@ -1,0 +1,53 @@
+"""Separate daily biological service from certified portfolio rotations."""
+import ast
+from pathlib import Path
+from docs.model_specs.codex.e19.tools.portfolio_succession import install as install_portfolio
+
+
+def install(core):
+    install_portfolio(core)
+    services=core._services
+    growth=core._growth
+    certificate=core._day_route_certificate
+
+    def split_services():
+        result=[]
+        for target,commands,priority,value,kind in services():
+            required=[c for c in commands if c[0] in {'FEED','WATER'}]
+            if required:
+                result.append((target,required,3,1,'BIOLOGICAL'))
+            optional=[c for c in commands if c[0] not in {'FEED','WATER'}]
+            if optional:
+                # A full service can still be selected after all free workers
+                # have been matched to observed biological obligations.
+                result.append((target,commands,0,value,kind))
+        return result
+
+    def rotation_offers(cash):
+        return [(t,cmd,4 if k=='NEW_ROTATION' else p,v,k) for t,cmd,p,v,k in growth(cash)]
+
+    def required_once(worker,job,offers=None):
+        offers=split_services() if offers is None else offers
+        # The BIOLOGICAL offer already contains the full mandatory service.
+        return certificate(worker,job,[s for s in offers if s[4]=='BIOLOGICAL'])
+
+    core._services=split_services
+    core._growth=rotation_offers
+    core._day_route_certificate=required_once
+    source=Path(__file__).resolve().parents[5]/'submission/submission_codex_e19_control_770_v2.py'
+    tree=ast.parse(source.read_text(encoding='utf-8'))
+    cls=next(n for n in tree.body if isinstance(n,ast.ClassDef) and n.name=='CommonController')
+    method=next(n for n in cls.body if isinstance(n,ast.FunctionDef) and n.name=='__call__')
+    replacements=[0,0]
+    for n in ast.walk(method):
+        if isinstance(n,ast.Assign) and any(isinstance(t,ast.Name) and t.id=='score' for t in n.targets):
+            assert ast.unparse(n.value.elts[0])=='int(priority == 3)'
+            n.value.elts[0]=ast.parse('2*int(priority==3)+int(priority==4)',mode='eval').body
+            replacements[0]+=1
+        if isinstance(n,ast.If) and ast.unparse(n.test)=="steps is None and kind == 'SERVICE'":
+            n.test=ast.parse("steps is None and kind in {'SERVICE','BIOLOGICAL'}",mode='eval').body
+            replacements[1]+=1
+    assert replacements==[1,1]
+    namespace={}
+    exec(compile(ast.fix_missing_locations(ast.Module(body=[method],type_ignores=[])),str(__file__),'exec'),core.__call__.__func__.__globals__,namespace)
+    core.__class__=type('PortfolioExecutionController',(core.__class__,),{'__call__':namespace['__call__']})

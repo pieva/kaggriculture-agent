@@ -1,0 +1,49 @@
+{
+  "topology": "662",
+  "status": "LOCAL_D11_EXPERIMENT_NOT_PUBLISHED",
+  "uploaded": false,
+  "assisted_days": 11,
+  "mechanism": "Historical V4D teacher with observed target-cap filter; frozen common V2 core from D12",
+  "profile": {
+    "schema_version": "e18.codex.common_resource_policy.v2",
+    "pastures": {
+      "target": 14,
+      "uniform_capacity_per_quadrant": 6
+    },
+    "livestock_mix_weights": {
+      "COW": 9,
+      "SHEEP": 5
+    },
+    "maximum_unlocked_quadrants": 3,
+    "maximum_hands": 12,
+    "allowed_crops": [
+      "WHEAT",
+      "CARROT",
+      "TOMATO",
+      "STRAWBERRY",
+      "MELON"
+    ],
+    "bootstrap": {
+      "livestock_ceiling": {
+        "COW": 2,
+        "SHEEP": 2
+      },
+      "allowed_crops": [
+        "WHEAT",
+        "CARROT"
+      ],
+      "retire_on": "first_confirmed_crop_harvest"
+    }
+  },
+  "core_sha256": {
+    "e18_33_common_policy.py": "49e8ad67f48622515f0c50a0b0f7ecee4d9f90cf05a1314fc5e33b1a043a51c2",
+    "e18_33_common_controller.py": "ace9cbc6c67d87a3ed6640787e7e03311883e9826651c26d99ff24d55e50673f"
+  },
+  "sources": {
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7",
+    "submission\\submission_codex_e19_1_662_v2.py": "ba0a4780a0d25bc3535d842f6e40bb1ae9954e5da181b46cea28e62f0b1474bc",
+    "docs\\model_specs\\codex\\e19\\tools\\assisted_start.py": "d46119da18b679186d7e1724cbea74c6bcbfee4705528b58ae67951302659122",
+    "docs\\model_specs\\codex\\e19\\tools\\build_assisted_start.py": "47c0915405e552a15889476ce133236292ce11ef631b7125ac19fbae9f440347"
+  },
+  "submission_sha256": "e466d46500bc724f56f5a0b3a6089b65117396b36f2b5ca2409cff915d82d16c"
+}

@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "E18.33 one-time initial portfolio profile",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "pastures",
+    "livestock_mix_weights",
+    "maximum_unlocked_quadrants",
+    "maximum_hands",
+    "allowed_crops",
+    "bootstrap"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "e18.codex.common_resource_policy.v3"
+    },
+    "pastures": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "target",
+        "uniform_capacity_per_quadrant"
+      ],
+      "properties": {
+        "target": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "uniform_capacity_per_quadrant": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "livestock_mix_weights": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "COW",
+        "SHEEP"
+      ],
+      "properties": {
+        "COW": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "SHEEP": {
+          "type": "integer",
+          "minimum": 1
+        }
+      }
+    },
+    "maximum_unlocked_quadrants": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "maximum_hands": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "allowed_crops": {
+      "$ref": "#/$defs/crops"
+    },
+    "bootstrap": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "livestock_ceiling",
+        "allowed_crops",
+        "retire_on",
+        "crop_mix_weights"
+      ],
+      "properties": {
+        "livestock_ceiling": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "COW",
+            "SHEEP"
+          ],
+          "properties": {
+            "COW": {
+              "type": "integer",
+              "minimum": 0
+            },
+            "SHEEP": {
+              "type": "integer",
+              "minimum": 0
+            }
+          }
+        },
+        "allowed_crops": {
+          "$ref": "#/$defs/crops"
+        },
+        "retire_on": {
+          "const": "initial_portfolio_established"
+        },
+        "crop_mix_weights": {
+          "type": "object",
+          "minProperties": 1,
+          "propertyNames": {
+            "enum": [
+              "WHEAT",
+              "CARROT",
+              "TOMATO",
+              "STRAWBERRY",
+              "MELON"
+            ]
+          },
+          "additionalProperties": {
+            "type": "integer",
+            "minimum": 1
+          }
+        }
+      }
+    }
+  },
+  "$defs": {
+    "crops": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "WHEAT",
+          "CARROT",
+          "TOMATO",
+          "STRAWBERRY",
+          "MELON"
+        ]
+      }
+    }
+  }
+}

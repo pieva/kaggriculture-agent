@@ -13,3 +13,10 @@ docs/model_specs/codex/e18/artifacts/derived/** -text whitespace=cr-at-eol
 docs/model_specs/codex/e18/configs/*.json -text whitespace=cr-at-eol
 docs/model_specs/codex/e18/tools/analyze_e18_28_external_pass.py -text whitespace=cr-at-eol
 submission/submission_codex_e18_28_770.py -text whitespace=cr-at-eol
+
+# E19/V48 session provenance records hashes of actual Windows-produced bytes.
+docs/model_specs/codex/e19/** -text whitespace=cr-at-eol
+docs/model_specs/codex/e18/artifacts/source/** -text whitespace=cr-at-eol
+submission/** -text whitespace=cr-at-eol
+# Generated plots contain intentional whitespace in SVG path data.
+*.svg -whitespace

@@ -1,0 +1,88 @@
+{
+  "case": "180903001 seat0",
+  "exact_kpi_ledger_parity": true,
+  "period": "D16-D30",
+  "pass_counts": {
+    "PASS_unassigned": 601,
+    "PASS_unassigned_on_uncared_animal": 122,
+    "PASS_unassigned_on_uncared_animal_D16_D27": 78,
+    "PASS_unassigned_with_exhausted_search": 62
+  },
+  "failed_harvests": {
+    "WEED:yield=0": 140
+  },
+  "weed_origins_full_game": {
+    "crop_decay": 28,
+    "missed_water": 0,
+    "spawn_on_empty": 0,
+    "decay_WHEAT": 13,
+    "decay_STRAWBERRY": 6,
+    "decay_CARROT": 9
+  },
+  "examples": [
+    {
+      "day": 17,
+      "hour": 8,
+      "worker": 1,
+      "tile": {
+        "kind": "WEED"
+      }
+    },
+    {
+      "day": 17,
+      "hour": 9,
+      "worker": 1,
+      "tile": {
+        "kind": "WEED"
+      }
+    },
+    {
+      "day": 17,
+      "hour": 10,
+      "worker": 1,
+      "tile": {
+        "kind": "WEED"
+      }
+    },
+    {
+      "day": 17,
+      "hour": 11,
+      "worker": 1,
+      "tile": {
+        "kind": "WEED"
+      }
+    },
+    {
+      "day": 17,
+      "hour": 12,
+      "worker": 1,
+      "tile": {
+        "kind": "WEED"
+      }
+    },
+    {
+      "day": 17,
+      "hour": 13,
+      "worker": 1,
+      "tile": {
+        "kind": "WEED"
+      }
+    },
+    {
+      "day": 17,
+      "hour": 14,
+      "worker": 1,
+      "tile": {
+        "kind": "WEED"
+      }
+    },
+    {
+      "day": 17,
+      "hour": 15,
+      "worker": 1,
+      "tile": {
+        "kind": "WEED"
+      }
+    }
+  ]
+}

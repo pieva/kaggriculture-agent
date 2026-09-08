@@ -4,9 +4,9 @@
 
 | Layer | File | SHA-256 |
 |---|---|---|
-| Ontology | `ontology/ONTOLOGY_C2_1.md` | `10C910388EE4DED8D99B5A5530035D26B336EDE2E4D8EB02026C3599C4566778` |
-| Environment State Machine | `state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md` | `5E4056555315AB23B80038DB96889EA1F659E1B6FC74B9047BF004A6F572676E` |
-| Feature Model | `feature_model/KAGGRICULTURE_FEATURE_MODEL_C2_1.md` | `4FCBBDEC664BD25217A3F2EB8B76142E95E4335AD98947A33D60C326A4F0A3CA` |
+| Ontology | `ontology/ONTOLOGY_C2_1.md` | `F9A44BD57511C062EC03E6D8493E4CF4A76C0BA321E2A1EFDBAFF6B0AEC9D2BD` |
+| Environment State Machine | `state_machine/KAGGRICULTURE_STATE_MACHINE_C2_1.md` | `26E901DB33FC5F138ACC7807AB4970F2200C1B178967858E21980C69A63BF3C3` |
+| Feature Model | `feature_model/KAGGRICULTURE_FEATURE_MODEL_C2_1.md` | `9AF8D3043DC82D9F1D0C97F21311407ADA0D012854ABED7536930621473E4470` |
 | Observation Contract runtime | `../../src/agricola/core/observation_contract.py` | `3E7509888B09103C79B86FD058984651337CBFC32AB60CD934E6351A4F2A81A9` |
 
 Engine aggregate fingerprint:
@@ -39,4 +39,9 @@ I tre agenti condividono Foundation, engine facts, schema di telemetria e protoc
 
 ## Prossimo lavoro
 
-La revisione Foundation post-3Q è chiusa. La sequenza sperimentale riprende dal primo esperimento successivo a E16, normalmente E17.
+La baseline post-3Q resta riconciliata. Stato operativo al 2026-09-08: V48 pubblicata; prossima versione 770 dedicata ai PASS evitabili. Gli hash sopra includono il supplemento operativo del 8 settembre, non attestano una nuova revisione incrociata.
+
+
+## Checkpoint operativo 2026-09-08: V48 e PASS
+
+Catena completa e protocollo: [V48 e priorità PASS](V48_PLANNING_AND_BUILD_IT.md). Le baseline C1/C2 e i verbali storici rimangono congelati.

@@ -1,5 +1,12 @@
 # Kaggriculture — Experimental Training of Decision Models
 
+## Checkpoint operativo 2026-09-08: V48 e PASS
+
+**Priorità assoluta della prossima versione: ridurre i PASS evitabili attraverso la pianificazione biologica e della manodopera, solo 770.** V48 pubblicata (56101593) resta congelata; nessuna nuova variante o pubblicazione in questo checkpoint.
+
+[Stato, piano, inventario completo dei sorgenti e riproduzione](docs/foundation/V48_PLANNING_AND_BUILD_IT.md). I checkpoint precedenti sono storici; i nuovi Top sono ormai esposti e non costituiscono holdout.
+
+
 Kaggriculture è un laboratorio sperimentale per l'**addestramento, il tuning e la validazione di modelli decisionali espliciti** in un ambiente competitivo.
 
 La competizione Kaggle **Kaggriculture** fornisce l'ambiente, le regole e un target economico osservabile. Non costituisce l'obiettivo principale del progetto: è l'**ambiente sperimentale** nel quale formulare modelli strategici, trasformarli in policy eseguibili, raccogliere evidenza e revisionare progressivamente il modello.

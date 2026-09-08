@@ -1,0 +1,12 @@
+from pathlib import Path
+b=Path('docs/model_specs/codex/e19/tools')
+s=(b/'daily_routes_770_v28.py').read_text(encoding='utf-8')
+s=s.replace("if harvest_due(core._tile(target),core.day,core.turns):continue", "# Due annual harvests may include a certified same-visit successor.")
+s=s.replace("overrides[target]=(target,renewal_commands(visits[target][1],commands),priority,value,kind)","overrides[target]=(target,renewal_commands(visits[target][1],commands),7 if harvest_due(core._tile(target),core.day,core.turns) else priority,value,kind)")
+s=s.replace('result=list(by_target.values())', "result=list(by_target.values())\n        # Failure to admit a successor must never prevent the due harvest.\n        for o in current:\n            if o[2]==6 and overrides.get(tuple(o[0]),(None,None,None,None,None))[4]=='NEW_ROTATION':\n                result.append(o)")
+(b/'daily_routes_770_v30.py').write_text(s,encoding='utf-8')
+s=(b/'daily_route_scheduler_770_v29.py').read_text(encoding='utf-8').replace('daily_routes_770_v28','daily_routes_770_v30').replace('(6*int(priority==6)', '(9*int(priority==7)+6*int(priority==6)')
+(b/'daily_route_scheduler_770_v30.py').write_text(s,encoding='utf-8')
+s=(b/'run_daily_routes_770_v29.py').read_text(encoding='utf-8').replace('daily_route_scheduler_770_v29','daily_route_scheduler_770_v30').replace('daily_routes_770_v28.py','daily_routes_770_v30.py').replace('daily_routes_v29','daily_routes_v30')
+s=s.replace("cases=[('daily_routes_v30',s,t) for s in range(180903001,180903004) for t in (0,1)]", "cases=[('daily_routes_v30',180903001,0)] if '--screen' in sys.argv else [('daily_routes_v30',s,t) for s in range(180903001,180903004) for t in (0,1)]")
+(b/'run_daily_routes_770_v30.py').write_text(s,encoding='utf-8')

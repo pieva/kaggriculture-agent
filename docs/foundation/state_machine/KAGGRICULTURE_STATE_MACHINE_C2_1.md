@@ -536,3 +536,10 @@ La presente State Machine è integralmente bonificata da elementi di policy o de
 4. estratto il contratto osservativo neutrale ed eliminata la macchina deliberativa condivisa non utilizzata.
 
 **Fine di KAGGRICULTURE_STATE_MACHINE C2.1 (Reconciled; Foundation post-3Q completata).**
+
+
+## Checkpoint operativo 2026-09-08: V48 e PASS
+
+Gli audit devono ricostruire azione e successivo refresh nella sequenza dell’engine: raccolta finale, esaurimento, decadimento e perdita idrica non sono equivalenti. Il calendario previsto dal planner va confrontato con le transizioni effettive; una previsione non è un evento osservato.
+
+Pianificazione e inventario downstream: [V48 e priorità PASS](../V48_PLANNING_AND_BUILD_IT.md). Nessuna modifica alle costanti dell’engine; supplemento operativo alla baseline riconciliata.

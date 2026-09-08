@@ -1,0 +1,1619 @@
+{
+  "case": {
+    "seed": 180903001,
+    "seat": 0
+  },
+  "source_hashes": {
+    "docs\\model_specs\\codex\\e19\\artifacts\\derived\\daily_routes_v25_audit_20260908\\replay.json": "328a7ae13607ab7b2eb4546b8b07c0d6bdcd8745d4fbe2c442855204c88a8ab6",
+    "docs\\model_specs\\codex\\e19\\artifacts\\derived\\daily_routes_v26_audit_20260908\\replay.json": "5563b753a78fe7f421e20584312e70423c7847924bb580ff850d2eca33ee569e"
+  },
+  "variants": {
+    "v25": {
+      "counts": {
+        "decay_with_product": 23,
+        "water": 1,
+        "spent_crop": 17
+      },
+      "by_crop": {
+        "decay_with_product:WHEAT": 19,
+        "water:STRAWBERRY": 1,
+        "decay_with_product:STRAWBERRY": 4,
+        "spent_crop:STRAWBERRY": 17
+      },
+      "events": [
+        {
+          "day": 17,
+          "hour": 5,
+          "position": [
+            0,
+            6
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 384,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 17,
+          "hour": 5,
+          "position": [
+            2,
+            6
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 384,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 17,
+          "hour": 5,
+          "position": [
+            4,
+            6
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 384,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 17,
+          "hour": 5,
+          "position": [
+            1,
+            7
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 384,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 17,
+          "hour": 5,
+          "position": [
+            3,
+            7
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 384,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 17,
+          "hour": 5,
+          "position": [
+            0,
+            8
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 384,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 17,
+          "hour": 5,
+          "position": [
+            4,
+            8
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 384,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 17,
+          "hour": 5,
+          "position": [
+            3,
+            9
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 384,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 19,
+          "hour": 5,
+          "position": [
+            9,
+            0
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 13,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 432,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 19,
+          "hour": 5,
+          "position": [
+            0,
+            1
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 13,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 432,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 20,
+          "hour": 5,
+          "position": [
+            3,
+            1
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 14,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 456,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 20,
+          "hour": 5,
+          "position": [
+            0,
+            4
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 14,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 456,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 22,
+          "hour": 24,
+          "position": [
+            8,
+            3
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "water",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 6,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 2,
+            "max_lifespan_step": -1,
+            "fertilized_until_day": 19
+          }
+        },
+        {
+          "day": 23,
+          "hour": 3,
+          "position": [
+            2,
+            0
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 5,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 528,
+            "fertilized_until_day": 22
+          }
+        },
+        {
+          "day": 23,
+          "hour": 5,
+          "position": [
+            0,
+            0
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 17,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 528,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 23,
+          "hour": 5,
+          "position": [
+            3,
+            9
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 17,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 528,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 24,
+          "hour": 3,
+          "position": [
+            8,
+            2
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 6,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 552,
+            "fertilized_until_day": 21
+          }
+        },
+        {
+          "day": 24,
+          "hour": 3,
+          "position": [
+            8,
+            4
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 6,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 552,
+            "fertilized_until_day": 21
+          }
+        },
+        {
+          "day": 24,
+          "hour": 5,
+          "position": [
+            4,
+            0
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 18,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 552,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 24,
+          "hour": 5,
+          "position": [
+            2,
+            1
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 18,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 552,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 24,
+          "hour": 5,
+          "position": [
+            0,
+            8
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 18,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 552,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 25,
+          "hour": 3,
+          "position": [
+            8,
+            1
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 7,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 576,
+            "fertilized_until_day": 22
+          }
+        },
+        {
+          "day": 25,
+          "hour": 5,
+          "position": [
+            9,
+            0
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 19,
+            "watered_today": false,
+            "consecutive_unwatered": 0,
+            "yield_units": 1,
+            "max_lifespan_step": 576,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 25,
+          "hour": 5,
+          "position": [
+            0,
+            6
+          ],
+          "crop": "WHEAT",
+          "cause": "decay_with_product",
+          "before": {
+            "kind": "PLANT",
+            "crop": "WHEAT",
+            "planted_day": 19,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 1,
+            "max_lifespan_step": 576,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            4,
+            1
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            1,
+            2
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            0,
+            5
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            1,
+            5
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            2,
+            5
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            3,
+            5
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            4,
+            5
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            1,
+            6
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            3,
+            6
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            0,
+            7
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            4,
+            7
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            3,
+            8
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            0,
+            9
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 0,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 24
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            2,
+            9
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 30,
+          "hour": 1,
+          "position": [
+            2,
+            7
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 12,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 696,
+            "fertilized_until_day": 29
+          }
+        },
+        {
+          "day": 30,
+          "hour": 1,
+          "position": [
+            1,
+            8
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 12,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 696,
+            "fertilized_until_day": 29
+          }
+        },
+        {
+          "day": 30,
+          "hour": 1,
+          "position": [
+            4,
+            9
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 12,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 696,
+            "fertilized_until_day": 27
+          }
+        }
+      ]
+    },
+    "v26": {
+      "counts": {
+        "water": 3,
+        "spent_crop": 35
+      },
+      "by_crop": {
+        "water:STRAWBERRY": 3,
+        "spent_crop:STRAWBERRY": 35
+      },
+      "events": [
+        {
+          "day": 16,
+          "hour": 24,
+          "position": [
+            8,
+            1
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "water",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 7,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": -1,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 16,
+          "hour": 24,
+          "position": [
+            9,
+            4
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "water",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 6,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": -1,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 18,
+          "hour": 24,
+          "position": [
+            8,
+            3
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "water",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 6,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": -1,
+            "fertilized_until_day": -1
+          }
+        },
+        {
+          "day": 23,
+          "hour": 1,
+          "position": [
+            2,
+            0
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 5,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 528,
+            "fertilized_until_day": 20
+          }
+        },
+        {
+          "day": 23,
+          "hour": 1,
+          "position": [
+            1,
+            1
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 5,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 528,
+            "fertilized_until_day": 20
+          }
+        },
+        {
+          "day": 23,
+          "hour": 1,
+          "position": [
+            0,
+            2
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 5,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 528,
+            "fertilized_until_day": 20
+          }
+        },
+        {
+          "day": 23,
+          "hour": 1,
+          "position": [
+            0,
+            3
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 5,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 528,
+            "fertilized_until_day": 20
+          }
+        },
+        {
+          "day": 24,
+          "hour": 1,
+          "position": [
+            5,
+            1
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 6,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 552,
+            "fertilized_until_day": 21
+          }
+        },
+        {
+          "day": 24,
+          "hour": 1,
+          "position": [
+            6,
+            1
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 6,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 552,
+            "fertilized_until_day": 21
+          }
+        },
+        {
+          "day": 24,
+          "hour": 1,
+          "position": [
+            7,
+            2
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 6,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 552,
+            "fertilized_until_day": 23
+          }
+        },
+        {
+          "day": 24,
+          "hour": 1,
+          "position": [
+            8,
+            2
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 6,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 552,
+            "fertilized_until_day": 23
+          }
+        },
+        {
+          "day": 24,
+          "hour": 1,
+          "position": [
+            7,
+            3
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 6,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 552,
+            "fertilized_until_day": 21
+          }
+        },
+        {
+          "day": 24,
+          "hour": 1,
+          "position": [
+            8,
+            4
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 6,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 552,
+            "fertilized_until_day": 21
+          }
+        },
+        {
+          "day": 25,
+          "hour": 1,
+          "position": [
+            1,
+            0
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 7,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 576,
+            "fertilized_until_day": 24
+          }
+        },
+        {
+          "day": 25,
+          "hour": 1,
+          "position": [
+            9,
+            2
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 7,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 576,
+            "fertilized_until_day": 24
+          }
+        },
+        {
+          "day": 25,
+          "hour": 1,
+          "position": [
+            9,
+            3
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 7,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 576,
+            "fertilized_until_day": 18
+          }
+        },
+        {
+          "day": 26,
+          "hour": 1,
+          "position": [
+            5,
+            0
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 8,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 600,
+            "fertilized_until_day": 25
+          }
+        },
+        {
+          "day": 26,
+          "hour": 1,
+          "position": [
+            6,
+            0
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 8,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 600,
+            "fertilized_until_day": 25
+          }
+        },
+        {
+          "day": 26,
+          "hour": 1,
+          "position": [
+            7,
+            0
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 8,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 600,
+            "fertilized_until_day": 23
+          }
+        },
+        {
+          "day": 26,
+          "hour": 1,
+          "position": [
+            7,
+            1
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 8,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 600,
+            "fertilized_until_day": 23
+          }
+        },
+        {
+          "day": 28,
+          "hour": 1,
+          "position": [
+            2,
+            3
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 10,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 648,
+            "fertilized_until_day": 25
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            4,
+            1
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            1,
+            2
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            0,
+            5
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            1,
+            5
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            2,
+            5
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 0,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 27
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            3,
+            5
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            4,
+            5
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            1,
+            6
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 0,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 27
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            3,
+            6
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 0,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 27
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            0,
+            7
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            4,
+            7
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            3,
+            8
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 27
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            0,
+            9
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 0,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 24
+          }
+        },
+        {
+          "day": 29,
+          "hour": 1,
+          "position": [
+            2,
+            9
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 11,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 672,
+            "fertilized_until_day": 26
+          }
+        },
+        {
+          "day": 30,
+          "hour": 1,
+          "position": [
+            2,
+            7
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 12,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 696,
+            "fertilized_until_day": 29
+          }
+        },
+        {
+          "day": 30,
+          "hour": 1,
+          "position": [
+            1,
+            8
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 12,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 696,
+            "fertilized_until_day": 25
+          }
+        },
+        {
+          "day": 30,
+          "hour": 1,
+          "position": [
+            4,
+            9
+          ],
+          "crop": "STRAWBERRY",
+          "cause": "spent_crop",
+          "before": {
+            "kind": "PLANT",
+            "crop": "STRAWBERRY",
+            "planted_day": 12,
+            "watered_today": false,
+            "consecutive_unwatered": 1,
+            "yield_units": 0,
+            "max_lifespan_step": 696,
+            "fertilized_until_day": 29
+          }
+        }
+      ]
+    }
+  }
+}

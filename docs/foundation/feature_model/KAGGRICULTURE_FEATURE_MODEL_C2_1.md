@@ -656,3 +656,10 @@ end
 5. ribadito che la telemetria comune non deve contenere né imporre routine condivise.
 
 **Fine di KAGGRICULTURE_FEATURE_MODEL C2.1 (Reconciled; Foundation post-3Q completata).**
+
+
+## Checkpoint operativo 2026-09-08: V48 e PASS
+
+Telemetria richiesta per il prossimo modello: PASS per persona/ora e motivo verificato, lavoro dovuto/fattibile/scartato, tempo di servizio e viaggio, carico previsto/realizzato, copertura dei servizi e perdite produttive. Le previsioni usano solo stato e regole disponibili al decision time; i replay futuri sono esclusivamente evidenza offline. Queste feature diagnostiche sono proposte, non tutte implementate.
+
+Pianificazione e inventario downstream: [V48 e priorità PASS](../V48_PLANNING_AND_BUILD_IT.md). Nessuna modifica alle costanti dell’engine; supplemento operativo alla baseline riconciliata.

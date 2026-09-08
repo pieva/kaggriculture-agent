@@ -1,0 +1,508 @@
+{
+  "stats": {
+    "12": {
+      "offer_NEW_ANIMAL": 111,
+      "offer_NEW_CROP": 1115,
+      "prepare_False": 1377,
+      "prepare_True": 1779,
+      "certificate_False": 80,
+      "portfolio_certificate_evaluations": 104,
+      "certificate_True": 24
+    },
+    "13": {
+      "offer_NEW_ROTATION": 1,
+      "offer_NEW_CROP": 114,
+      "prepare_False": 216,
+      "prepare_True": 71,
+      "certificate_False": 9,
+      "portfolio_certificate_evaluations": 15,
+      "certificate_True": 6
+    },
+    "14": {
+      "offer_NEW_ROTATION": 10,
+      "prepare_False": 206,
+      "offer_NEW_CROP": 30,
+      "prepare_True": 40,
+      "certificate_True": 4,
+      "portfolio_certificate_evaluations": 4
+    },
+    "15": {
+      "offer_NEW_ROTATION": 36,
+      "prepare_False": 759,
+      "prepare_True": 71,
+      "offer_NEW_CROP": 104,
+      "certificate_False": 5,
+      "portfolio_certificate_evaluations": 13,
+      "certificate_True": 8
+    },
+    "16": {
+      "offer_NEW_ROTATION": 36,
+      "prepare_False": 1640,
+      "prepare_True": 69,
+      "offer_NEW_CROP": 319,
+      "certificate_False": 2,
+      "portfolio_certificate_evaluations": 2
+    },
+    "17": {
+      "offer_NEW_CROP": 410,
+      "offer_NEW_ROTATION": 6,
+      "prepare_False": 2343,
+      "prepare_True": 149,
+      "certificate_True": 11,
+      "portfolio_certificate_evaluations": 21,
+      "certificate_False": 10
+    },
+    "18": {
+      "offer_NEW_ROTATION": 6,
+      "offer_NEW_CROP": 162,
+      "prepare_False": 684,
+      "prepare_True": 22,
+      "certificate_True": 3,
+      "portfolio_certificate_evaluations": 3
+    },
+    "19": {
+      "offer_NEW_ROTATION": 36,
+      "offer_NEW_CROP": 228,
+      "prepare_False": 879,
+      "prepare_True": 67,
+      "certificate_True": 7,
+      "portfolio_certificate_evaluations": 7
+    },
+    "20": {
+      "offer_NEW_CROP": 73,
+      "prepare_False": 216,
+      "prepare_True": 27,
+      "certificate_False": 2,
+      "portfolio_certificate_evaluations": 5,
+      "certificate_True": 3
+    },
+    "21": {
+      "offer_NEW_ROTATION": 66,
+      "prepare_False": 1682,
+      "prepare_True": 78,
+      "offer_NEW_CROP": 367,
+      "certificate_False": 3,
+      "portfolio_certificate_evaluations": 3
+    },
+    "22": {
+      "offer_NEW_ROTATION": 28,
+      "offer_NEW_CROP": 805,
+      "prepare_False": 4392,
+      "prepare_True": 98,
+      "certificate_False": 5,
+      "portfolio_certificate_evaluations": 5
+    },
+    "23": {
+      "offer_NEW_CROP": 1475,
+      "offer_NEW_ROTATION": 120,
+      "prepare_False": 7665,
+      "prepare_True": 165,
+      "certificate_False": 10,
+      "portfolio_certificate_evaluations": 10
+    },
+    "24": {
+      "offer_NEW_CROP": 2286,
+      "offer_NEW_ROTATION": 21,
+      "prepare_False": 9558,
+      "prepare_True": 178,
+      "certificate_True": 9,
+      "portfolio_certificate_evaluations": 11,
+      "certificate_False": 2
+    },
+    "25": {
+      "offer_NEW_CROP": 2089,
+      "offer_NEW_ROTATION": 6,
+      "prepare_False": 9153,
+      "prepare_True": 209,
+      "certificate_True": 11,
+      "portfolio_certificate_evaluations": 33,
+      "certificate_False": 22
+    },
+    "26": {
+      "offer_NEW_CROP": 2450,
+      "prepare_True": 3930,
+      "prepare_False": 3298,
+      "certificate_True": 9,
+      "portfolio_certificate_evaluations": 33,
+      "certificate_False": 24
+    },
+    "27": {
+      "offer_NEW_CROP": 2020,
+      "offer_NEW_ROTATION": 10,
+      "prepare_True": 3112,
+      "prepare_False": 2662,
+      "certificate_False": 58,
+      "portfolio_certificate_evaluations": 58
+    },
+    "28": {
+      "offer_NEW_CROP": 2644,
+      "offer_NEW_ROTATION": 253,
+      "prepare_True": 4833,
+      "prepare_False": 4094,
+      "certificate_False": 91,
+      "portfolio_certificate_evaluations": 91
+    }
+  },
+  "examples": [
+    {
+      "day": 21,
+      "hour": 20,
+      "job": {
+        "target": [
+          0,
+          8
+        ],
+        "steps": [
+          [
+            [
+              "WEST"
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          [
+            [
+              "PLANT",
+              "WHEAT"
+            ],
+            [
+              0,
+              8
+            ]
+          ],
+          [
+            [
+              "WATER"
+            ],
+            [
+              0,
+              8
+            ]
+          ]
+        ],
+        "kind": "NEW_CROP"
+      },
+      "ok": false,
+      "metrics": {
+        "portfolio_certificate_evaluations": 1
+      }
+    },
+    {
+      "day": 21,
+      "hour": 20,
+      "job": {
+        "target": [
+          3,
+          9
+        ],
+        "steps": [
+          [
+            [
+              "WEST"
+            ],
+            [
+              3,
+              9
+            ]
+          ],
+          [
+            [
+              "PLANT",
+              "WHEAT"
+            ],
+            [
+              3,
+              9
+            ]
+          ],
+          [
+            [
+              "WATER"
+            ],
+            [
+              3,
+              9
+            ]
+          ]
+        ],
+        "kind": "NEW_CROP"
+      },
+      "ok": false,
+      "metrics": {
+        "portfolio_certificate_evaluations": 1
+      }
+    },
+    {
+      "day": 21,
+      "hour": 20,
+      "job": {
+        "target": [
+          3,
+          9
+        ],
+        "steps": [
+          [
+            [
+              "WEST"
+            ],
+            [
+              3,
+              9
+            ]
+          ],
+          [
+            [
+              "PLANT",
+              "WHEAT"
+            ],
+            [
+              3,
+              9
+            ]
+          ],
+          [
+            [
+              "WATER"
+            ],
+            [
+              3,
+              9
+            ]
+          ]
+        ],
+        "kind": "NEW_CROP"
+      },
+      "ok": false,
+      "metrics": {
+        "portfolio_certificate_evaluations": 1
+      }
+    },
+    {
+      "day": 22,
+      "hour": 20,
+      "job": {
+        "target": [
+          3,
+          7
+        ],
+        "steps": [
+          [
+            [
+              "WEST"
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          [
+            [
+              "PLANT",
+              "WHEAT"
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          [
+            [
+              "WATER"
+            ],
+            [
+              3,
+              7
+            ]
+          ]
+        ],
+        "kind": "NEW_CROP"
+      },
+      "ok": false,
+      "metrics": {
+        "portfolio_certificate_evaluations": 1
+      }
+    },
+    {
+      "day": 22,
+      "hour": 20,
+      "job": {
+        "target": [
+          3,
+          7
+        ],
+        "steps": [
+          [
+            [
+              "WEST"
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          [
+            [
+              "PLANT",
+              "WHEAT"
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          [
+            [
+              "WATER"
+            ],
+            [
+              3,
+              7
+            ]
+          ]
+        ],
+        "kind": "NEW_CROP"
+      },
+      "ok": false,
+      "metrics": {
+        "portfolio_certificate_evaluations": 1
+      }
+    },
+    {
+      "day": 22,
+      "hour": 20,
+      "job": {
+        "target": [
+          3,
+          7
+        ],
+        "steps": [
+          [
+            [
+              "WEST"
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          [
+            [
+              "PLANT",
+              "WHEAT"
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          [
+            [
+              "WATER"
+            ],
+            [
+              3,
+              7
+            ]
+          ]
+        ],
+        "kind": "NEW_CROP"
+      },
+      "ok": false,
+      "metrics": {
+        "portfolio_certificate_evaluations": 1
+      }
+    },
+    {
+      "day": 22,
+      "hour": 20,
+      "job": {
+        "target": [
+          3,
+          7
+        ],
+        "steps": [
+          [
+            [
+              "WEST"
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          [
+            [
+              "PLANT",
+              "WHEAT"
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          [
+            [
+              "WATER"
+            ],
+            [
+              3,
+              7
+            ]
+          ]
+        ],
+        "kind": "NEW_CROP"
+      },
+      "ok": false,
+      "metrics": {
+        "portfolio_certificate_evaluations": 1
+      }
+    },
+    {
+      "day": 22,
+      "hour": 20,
+      "job": {
+        "target": [
+          3,
+          7
+        ],
+        "steps": [
+          [
+            [
+              "WEST"
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          [
+            [
+              "PLANT",
+              "WHEAT"
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          [
+            [
+              "WATER"
+            ],
+            [
+              3,
+              7
+            ]
+          ]
+        ],
+        "kind": "NEW_CROP"
+      },
+      "ok": false,
+      "metrics": {
+        "portfolio_certificate_evaluations": 1
+      }
+    }
+  ]
+}

@@ -1,0 +1,738 @@
+{
+  "gate": "docs\\model_specs\\codex\\e19\\artifacts\\derived\\E19_GATE_V1_DEVELOPMENT_20260907.json",
+  "control": "docs\\model_specs\\codex\\e18\\artifacts\\derived\\E18_CLOSEOUT_GATE_V24_ESSENTIAL_SERVICE_DEVELOPMENT_20260907.json",
+  "external_benchmark": false,
+  "candidate": {
+    "cases": 28,
+    "cash_mean": 65538.57142857143,
+    "crop_deaths": 0,
+    "animal_losses": 0,
+    "incomplete_missions": 7,
+    "errors": 0,
+    "cash_parity_errors": 0,
+    "max_call_seconds": 1.163821900030598,
+    "daily": [
+      {
+        "day": 1,
+        "cash_mean": 819.0,
+        "cows_median": 2.0,
+        "sheep_median": 2.0,
+        "hands_median": 7.0,
+        "crops_mean": 21
+      },
+      {
+        "day": 2,
+        "cash_mean": 1102.0,
+        "cows_median": 2.0,
+        "sheep_median": 2.0,
+        "hands_median": 1.0,
+        "crops_mean": 21
+      },
+      {
+        "day": 3,
+        "cash_mean": 962.0,
+        "cows_median": 2.0,
+        "sheep_median": 2.0,
+        "hands_median": 6.0,
+        "crops_mean": 21
+      },
+      {
+        "day": 4,
+        "cash_mean": 662.4285714285714,
+        "cows_median": 2.0,
+        "sheep_median": 3.0,
+        "hands_median": 9.0,
+        "crops_mean": 20
+      },
+      {
+        "day": 5,
+        "cash_mean": 772.4285714285714,
+        "cows_median": 2.0,
+        "sheep_median": 3.0,
+        "hands_median": 6.0,
+        "crops_mean": 6
+      },
+      {
+        "day": 6,
+        "cash_mean": 495.0,
+        "cows_median": 2.0,
+        "sheep_median": 5.0,
+        "hands_median": 9.0,
+        "crops_mean": 9.571428571428571
+      },
+      {
+        "day": 7,
+        "cash_mean": 1367.857142857143,
+        "cows_median": 4.0,
+        "sheep_median": 5.0,
+        "hands_median": 11.0,
+        "crops_mean": 20
+      },
+      {
+        "day": 8,
+        "cash_mean": 811.4285714285714,
+        "cows_median": 5.0,
+        "sheep_median": 5.0,
+        "hands_median": 9.0,
+        "crops_mean": 24.428571428571427
+      },
+      {
+        "day": 9,
+        "cash_mean": 1784.9285714285713,
+        "cows_median": 5.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 28.071428571428573
+      },
+      {
+        "day": 10,
+        "cash_mean": 1872.0714285714287,
+        "cows_median": 6.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 32.785714285714285
+      },
+      {
+        "day": 11,
+        "cash_mean": 2182.9285714285716,
+        "cows_median": 8.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 37
+      },
+      {
+        "day": 12,
+        "cash_mean": 3513.1428571428573,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 39.857142857142854
+      },
+      {
+        "day": 13,
+        "cash_mean": 5295.392857142857,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 40.714285714285715
+      },
+      {
+        "day": 14,
+        "cash_mean": 5300.714285714285,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 42.714285714285715
+      },
+      {
+        "day": 15,
+        "cash_mean": 8033.607142857143,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 43.892857142857146
+      },
+      {
+        "day": 16,
+        "cash_mean": 11556.17857142857,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 41.67857142857143
+      },
+      {
+        "day": 17,
+        "cash_mean": 12960.67857142857,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 42.535714285714285
+      },
+      {
+        "day": 18,
+        "cash_mean": 18604.321428571428,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 39.17857142857143
+      },
+      {
+        "day": 19,
+        "cash_mean": 25192.0,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 31.892857142857142
+      },
+      {
+        "day": 20,
+        "cash_mean": 28831.75,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 29.928571428571427
+      },
+      {
+        "day": 21,
+        "cash_mean": 32674.285714285714,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 28.071428571428573
+      },
+      {
+        "day": 22,
+        "cash_mean": 35972.0,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 24.214285714285715
+      },
+      {
+        "day": 23,
+        "cash_mean": 39217.71428571428,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 24.428571428571427
+      },
+      {
+        "day": 24,
+        "cash_mean": 43164.71428571428,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 24.821428571428573
+      },
+      {
+        "day": 25,
+        "cash_mean": 47946.892857142855,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 25.321428571428573
+      },
+      {
+        "day": 26,
+        "cash_mean": 51464.142857142855,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 23.928571428571427
+      },
+      {
+        "day": 27,
+        "cash_mean": 56131.392857142855,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 21.821428571428573
+      },
+      {
+        "day": 28,
+        "cash_mean": 60186.17857142857,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 20.535714285714285
+      },
+      {
+        "day": 29,
+        "cash_mean": 63371.78571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 14.392857142857142
+      },
+      {
+        "day": 30,
+        "cash_mean": 65538.57142857143,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 6.928571428571429
+      }
+    ]
+  },
+  "reference": {
+    "cases": 28,
+    "cash_mean": 61579.0,
+    "crop_deaths": 0,
+    "animal_losses": 0,
+    "incomplete_missions": 5,
+    "errors": 0,
+    "cash_parity_errors": 0,
+    "max_call_seconds": 1.6000217000255361,
+    "daily": [
+      {
+        "day": 1,
+        "cash_mean": 819.0,
+        "cows_median": 2.0,
+        "sheep_median": 2.0,
+        "hands_median": 7.0,
+        "crops_mean": 21
+      },
+      {
+        "day": 2,
+        "cash_mean": 1102.0,
+        "cows_median": 2.0,
+        "sheep_median": 2.0,
+        "hands_median": 1.0,
+        "crops_mean": 21
+      },
+      {
+        "day": 3,
+        "cash_mean": 962.0,
+        "cows_median": 2.0,
+        "sheep_median": 2.0,
+        "hands_median": 6.0,
+        "crops_mean": 21
+      },
+      {
+        "day": 4,
+        "cash_mean": 662.4285714285714,
+        "cows_median": 2.0,
+        "sheep_median": 3.0,
+        "hands_median": 9.0,
+        "crops_mean": 20
+      },
+      {
+        "day": 5,
+        "cash_mean": 772.4285714285714,
+        "cows_median": 2.0,
+        "sheep_median": 3.0,
+        "hands_median": 6.0,
+        "crops_mean": 6
+      },
+      {
+        "day": 6,
+        "cash_mean": 495.0,
+        "cows_median": 2.0,
+        "sheep_median": 5.0,
+        "hands_median": 9.0,
+        "crops_mean": 9.571428571428571
+      },
+      {
+        "day": 7,
+        "cash_mean": 1435.4285714285713,
+        "cows_median": 4.0,
+        "sheep_median": 5.0,
+        "hands_median": 10.0,
+        "crops_mean": 20.428571428571427
+      },
+      {
+        "day": 8,
+        "cash_mean": 791.4285714285714,
+        "cows_median": 5.0,
+        "sheep_median": 5.0,
+        "hands_median": 9.0,
+        "crops_mean": 25.428571428571427
+      },
+      {
+        "day": 9,
+        "cash_mean": 2549.4285714285716,
+        "cows_median": 5.0,
+        "sheep_median": 5.0,
+        "hands_median": 9.0,
+        "crops_mean": 28.571428571428573
+      },
+      {
+        "day": 10,
+        "cash_mean": 1749.4285714285713,
+        "cows_median": 7.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 32.714285714285715
+      },
+      {
+        "day": 11,
+        "cash_mean": 1919.5714285714287,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 37.285714285714285
+      },
+      {
+        "day": 12,
+        "cash_mean": 3428.1428571428573,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 40.42857142857143
+      },
+      {
+        "day": 13,
+        "cash_mean": 4900.25,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 40
+      },
+      {
+        "day": 14,
+        "cash_mean": 4816.464285714285,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 42.714285714285715
+      },
+      {
+        "day": 15,
+        "cash_mean": 7479.142857142857,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 45.75
+      },
+      {
+        "day": 16,
+        "cash_mean": 10977.142857142857,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 43.464285714285715
+      },
+      {
+        "day": 17,
+        "cash_mean": 12511.964285714286,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 45.32142857142857
+      },
+      {
+        "day": 18,
+        "cash_mean": 16254.714285714286,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 45.607142857142854
+      },
+      {
+        "day": 19,
+        "cash_mean": 23139.39285714286,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 38.107142857142854
+      },
+      {
+        "day": 20,
+        "cash_mean": 26835.678571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 34.82142857142857
+      },
+      {
+        "day": 21,
+        "cash_mean": 30375.571428571428,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 32.464285714285715
+      },
+      {
+        "day": 22,
+        "cash_mean": 33752.392857142855,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 27.321428571428573
+      },
+      {
+        "day": 23,
+        "cash_mean": 36156.03571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 26.428571428571427
+      },
+      {
+        "day": 24,
+        "cash_mean": 39761.0,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 27.428571428571427
+      },
+      {
+        "day": 25,
+        "cash_mean": 44080.03571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 27.5
+      },
+      {
+        "day": 26,
+        "cash_mean": 47605.53571428572,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 27.25
+      },
+      {
+        "day": 27,
+        "cash_mean": 52726.17857142857,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 24.035714285714285
+      },
+      {
+        "day": 28,
+        "cash_mean": 56897.892857142855,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 19.285714285714285
+      },
+      {
+        "day": 29,
+        "cash_mean": 60165.642857142855,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 13.5
+      },
+      {
+        "day": 30,
+        "cash_mean": 61579.0,
+        "cows_median": 9.0,
+        "sheep_median": 5.0,
+        "hands_median": 12.0,
+        "crops_mean": 7.714285714285714
+      }
+    ]
+  },
+  "cash_change_percent": 6.430067764288849,
+  "exact_populated_topology": 28,
+  "safety_pass": 23,
+  "paired_cash": [
+    {
+      "seed": 180903001,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 65334.0,
+      "reference": 77174.0,
+      "difference": -11840.0
+    },
+    {
+      "seed": 180903001,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 53080.0,
+      "reference": 51043.0,
+      "difference": 2037.0
+    },
+    {
+      "seed": 180903001,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 65334.0,
+      "reference": 69086.0,
+      "difference": -3752.0
+    },
+    {
+      "seed": 180903001,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 53080.0,
+      "reference": 51043.0,
+      "difference": 2037.0
+    },
+    {
+      "seed": 180903002,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 53395.0,
+      "reference": 52567.0,
+      "difference": 828.0
+    },
+    {
+      "seed": 180903002,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 64264.0,
+      "reference": 51003.0,
+      "difference": 13261.0
+    },
+    {
+      "seed": 180903002,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 51599.0,
+      "reference": 53862.0,
+      "difference": -2263.0
+    },
+    {
+      "seed": 180903002,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 62104.0,
+      "reference": 44319.0,
+      "difference": 17785.0
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 49897.0,
+      "reference": 49621.0,
+      "difference": 276.0
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 35856.0,
+      "reference": 45303.0,
+      "difference": -9447.0
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 48327.0,
+      "reference": 48822.0,
+      "difference": -495.0
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 41212.0,
+      "reference": 43257.0,
+      "difference": -2045.0
+    },
+    {
+      "seed": 180903004,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 88481.0,
+      "reference": 83515.0,
+      "difference": 4966.0
+    },
+    {
+      "seed": 180903004,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 66808.0,
+      "reference": 69683.0,
+      "difference": -2875.0
+    },
+    {
+      "seed": 180903004,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 92718.0,
+      "reference": 81966.0,
+      "difference": 10752.0
+    },
+    {
+      "seed": 180903004,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 70799.0,
+      "reference": 73527.0,
+      "difference": -2728.0
+    },
+    {
+      "seed": 180903005,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 84529.0,
+      "reference": 64997.0,
+      "difference": 19532.0
+    },
+    {
+      "seed": 180903005,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 60437.0,
+      "reference": 64481.0,
+      "difference": -4044.0
+    },
+    {
+      "seed": 180903005,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 84529.0,
+      "reference": 64508.0,
+      "difference": 20021.0
+    },
+    {
+      "seed": 180903005,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 60437.0,
+      "reference": 62941.0,
+      "difference": -2504.0
+    },
+    {
+      "seed": 180903006,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 70296.0,
+      "reference": 49410.0,
+      "difference": 20886.0
+    },
+    {
+      "seed": 180903006,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 67028.0,
+      "reference": 49999.0,
+      "difference": 17029.0
+    },
+    {
+      "seed": 180903006,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 70296.0,
+      "reference": 49410.0,
+      "difference": 20886.0
+    },
+    {
+      "seed": 180903006,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 67028.0,
+      "reference": 49999.0,
+      "difference": 17029.0
+    },
+    {
+      "seed": 180903007,
+      "seat": 0,
+      "opponent": "E18.16",
+      "candidate": 79953.0,
+      "reference": 85054.0,
+      "difference": -5101.0
+    },
+    {
+      "seed": 180903007,
+      "seat": 0,
+      "opponent": "E18.2/V4D",
+      "candidate": 68943.0,
+      "reference": 80183.0,
+      "difference": -11240.0
+    },
+    {
+      "seed": 180903007,
+      "seat": 1,
+      "opponent": "E18.16",
+      "candidate": 77411.0,
+      "reference": 70693.0,
+      "difference": 6718.0
+    },
+    {
+      "seed": 180903007,
+      "seat": 1,
+      "opponent": "E18.2/V4D",
+      "candidate": 81905.0,
+      "reference": 86746.0,
+      "difference": -4841.0
+    }
+  ]
+}
