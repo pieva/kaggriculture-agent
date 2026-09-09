@@ -1,5 +1,36 @@
 # Experiment Log
 
+## 2026-09-09 — Torneo a tre vie e chiusura delle linee Antigravity, Claude, Copilot
+
+Ogni linea aveva prodotto una nuova bozza (Antigravity E19.2, Claude E18.5,
+Copilot E18.10 V6). Eseguito il torneo dal vivo mancante (Copilot V6 vs Codex
+V48, 14 partite, 7 seed di sviluppo × 2 ruoli) e riutilizzati i profili già in
+cache per le altre candidate; costruiti tre report KPI D1–D30 (22 pannelli,
+standard E18 V4.1) a confronto a tre vie — nuova bozza, versione precedente,
+Codex V48 (pool 28 partite Codex, 14 per candidata) — con lo strumento
+`experiments/e18/tools/common/build_new_vs_old_vs_codex_kpi_reports.py`:
+
+| Linea | Nuova | Precedente | Cassa media nuova | Cassa media precedente | Δ nuova vs precedente |
+|---|---|---|---:|---:|---:|
+| Antigravity | E19.2 Hybrid Livestock | E19.1 Hybrid Livestock | 15.491 | 19.225 | **-19,4%** |
+| Claude | E18.5 Wheat-Market-Fix | E18.4 Capacity-Certified | 3.598 | 11.147 | **-67,7%** |
+| Copilot | E18.10 Economic Recovery V6 | E18.8 Economic Recovery V5 | 10.721 | 14.917 | **-28,1%** |
+
+In tutte e tre le linee la bozza più recente peggiora la bozza precedente, ed
+entrambe restano molto al di sotto di Codex V48 (media pool 108.360 nel
+confronto Claude). Report:
+[Antigravity](../experiments/e18/reports/common/E18_ANTIGRAVITY_E19_2_VS_E19_1_VS_CODEX_V48_D01_D30_COMPLETE_KPI.html) ·
+[Claude](../experiments/e18/reports/common/E18_CLAUDE_E18_5_VS_E18_4_VS_CODEX_V48_D01_D30_COMPLETE_KPI.html) ·
+[Copilot](../experiments/e18/reports/common/E18_COPILOT_E18_10_VS_E18_8_VS_CODEX_V48_D01_D30_COMPLETE_KPI.html).
+Manifest: [E18_NEW_VS_OLD_VS_CODEX_V48_TOURNAMENT_MANIFEST.json](../experiments/e18/reports/common/E18_NEW_VS_OLD_VS_CODEX_V48_TOURNAMENT_MANIFEST.json).
+
+**Decisione del proprietario:** sviluppo abbandonato per le tre linee
+(`ABANDONED_PERFORMANCE_GAP`, aggiornato nei rispettivi
+`docs/model_specs/<agent>/README.md`). Nessuna nuova iterazione, tuning o
+submission su Antigravity, Claude o Copilot. Gli asset restano nel repository
+come evidenza storica e avversari black-box nei runner comuni; Codex resta
+l'unica linea di sviluppo attiva.
+
 ## 2026-09-04 — E18.16 exact 7-7-0 inviata per validazione esterna
 
 Composto il cap di policy a 14 risorse COW/SHEEP con il guard FEED critico

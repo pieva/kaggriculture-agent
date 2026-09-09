@@ -24,6 +24,12 @@ from agricola.strategy.copilot.e18_economic_recovery_v5 import (
     create_copilot_e18_economic_recovery_v5,
     load_copilot_e18_economic_recovery_v5_config,
 )
+from agricola.strategy.copilot.e18_step_driven_v1 import (
+    CopilotE18StepDrivenV1Config,
+    CopilotE18StepDrivenV1Policy,
+    create_copilot_e18_step_driven_v1,
+    load_copilot_e18_step_driven_v1_config,
+)
 from agricola.strategy.copilot.e18_opponent_reactive_v1 import (
     CopilotE18OpponentReactiveConfig,
     CopilotE18OpponentReactiveV1Policy,
@@ -49,6 +55,8 @@ __all__ = [
     "CopilotE18EconomicRecoveryV4Policy",
     "CopilotE18EconomicRecoveryV5Config",
     "CopilotE18EconomicRecoveryV5Policy",
+    "CopilotE18StepDrivenV1Config",
+    "CopilotE18StepDrivenV1Policy",
     "CopilotE18OpponentReactiveConfig",
     "CopilotE18OpponentReactiveV1Policy",
     "CopilotThreeQAgent",
@@ -58,10 +66,12 @@ __all__ = [
     "create_copilot_e18_economic_recovery_v3",
     "create_copilot_e18_economic_recovery_v4",
     "create_copilot_e18_economic_recovery_v5",
+    "create_copilot_e18_step_driven_v1",
     "create_copilot_e18_opponent_reactive_v1",
     "load_copilot_e18_economic_recovery_v2_config",
     "load_copilot_e18_economic_recovery_v3_config",
     "load_copilot_e18_economic_recovery_v4_config",
     "load_copilot_e18_economic_recovery_v5_config",
+    "load_copilot_e18_step_driven_v1_config",
     "load_copilot_e18_opponent_reactive_v1_config",
 ]

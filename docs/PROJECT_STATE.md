@@ -70,6 +70,20 @@ Gli identificativi sono congelati nell'analizzatore e nella coorte. I profili
 sono cache dell'audit legate agli hash dei replay; se cambia la logica di audit,
 produrre una nuova directory di analisi anziché riutilizzarli come nuovi risultati.
 
+## Linee peer chiuse — 2026-09-09
+
+Antigravity, Claude e Copilot sono passati da `FROZEN_PERFORMANCE_GAP` ad
+**abbandono definitivo** (`ABANDONED_PERFORMANCE_GAP`) per decisione del
+proprietario, dopo il torneo a tre vie sulle rispettive bozze più recenti
+(Antigravity E19.2, Claude E18.5, Copilot E18.10 V6) contro la versione
+precedente e contro Codex V48: tutte e tre peggiorano la propria versione
+precedente (-19,4%, -67,7%, -28,1% di cassa media) e restano molto al di
+sotto di Codex. Dettagli in
+[Experiment Log 2026-09-09](EXPERIMENT_LOG.md#2026-09-09--torneo-a-tre-vie-e-chiusura-delle-linee-antigravity-claude-copilot)
+e nei rispettivi `docs/model_specs/<agent>/README.md`. **Codex resta l'unica
+linea di sviluppo attiva.** Gli asset delle tre linee chiuse restano nel
+repository solo come evidenza storica e avversari black-box nei runner comuni.
+
 ## Documentazione corrente
 
 - [Foundation descrittiva](foundation/README.md): engine, ontologia, transizioni e feature.

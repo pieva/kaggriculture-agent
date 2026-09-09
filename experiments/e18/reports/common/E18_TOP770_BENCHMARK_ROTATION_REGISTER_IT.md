@@ -159,7 +159,8 @@ Un solo nuovo autore Top770 qualificato, non dodici nuovi Top770.
 Gli avversari incidentali nei replay sono stati visibili nello screening:
 la loro presenza non qualifica nuovi alias né va trattata come cecità completa.
 
-Report: docs/model_specs/codex/e19/reports/new_top_v48_20260908/REPORT_NUOVI_TOP_V48_IT.html
+Report: [selezione e analisi dei nuovi riferimenti V48](../../../../docs/model_specs/codex/e19/reports/new_top_v48_20260908/REPORT_NUOVI_TOP_V48_IT.html).
+Report grafico: [22 KPI D01–D30 — V48 e Top770-003, quattro replay 770](../../../../docs/model_specs/codex/e19/reports/new_top_v48_20260908/V48_VS_TOP770_003_D01_D30_COMPLETE_KPI.html).
 Quattro report da 22 KPI: Top770-003 filtrato n4, corpus completo n5, Matthew n5,
 Suliman n3. Confronto V48 locale n6, non appaiato a questi replay esterni.
 Nessuna nuova policy, nessuna 662, nessuna ulteriore submission.

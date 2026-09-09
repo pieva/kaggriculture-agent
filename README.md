@@ -194,6 +194,12 @@ Il metodo procede per cicli: ogni esperimento serve a capire quali scelte funzio
 
 Le ipotesi smentite vengono registrate e guidano le revisioni successive. I casi già usati per correggere un modello non diventano prove indipendenti della sua qualità.
 
+### Processo di benchmark e report grafico dei KPI
+
+Il benchmark confronta i risultati delle policy attraverso partite locali controllate e analisi dei replay esterni. La selezione dei riferimenti e il loro stato di esposizione sono documentati nel [registro dei benchmark](experiments/e18/reports/common/E18_TOP770_BENCHMARK_ROTATION_REGISTER_IT.md). I KPI aiutano a leggere insieme risultato economico, produzione, servizi e impiego della manodopera lungo la partita.
+
+Il [report grafico dei KPI D01–D30 — V48 e Top770-003](docs/model_specs/codex/e19/reports/new_top_v48_20260908/V48_VS_TOP770_003_D01_D30_COMPLETE_KPI.html) presenta 22 pannelli di confronto; il [report di selezione e analisi dei riferimenti](docs/model_specs/codex/e19/reports/new_top_v48_20260908/REPORT_NUOVI_TOP_V48_IT.html) ne documenta il contesto. È un riferimento diagnostico del ciclo V48: confronta sei run locali con quattro replay esterni 770, non appaiati, e non dimostra una superiorità causale né costituisce un holdout per nuove release.
+
 Una lezione emersa dagli esperimenti è che l'espansione va pianificata insieme alla manodopera: acquistare terreno è utile quando si riesce a mantenerlo produttivo e a venderne i prodotti.
 
 ## Protocollo di revisione dei MODEL_SPEC

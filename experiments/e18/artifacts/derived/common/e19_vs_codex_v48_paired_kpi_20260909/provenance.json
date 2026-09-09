@@ -1,0 +1,57 @@
+{
+  "seeds": [
+    180903001,
+    180903002,
+    180903003,
+    180903004,
+    180903005,
+    180903006,
+    180903007
+  ],
+  "seats": [
+    0,
+    1
+  ],
+  "pairings": [
+    "CLAUDE_E18_4",
+    "ANTIGRAVITY_E19_1",
+    "ANTIGRAVITY_E19_2",
+    "COPILOT_E18_8_V5",
+    "CLAUDE_E18_5",
+    "COPILOT_E18_10_V6"
+  ],
+  "opponent": "CODEX_V48",
+  "match_count": 14,
+  "holdout_consumed": false,
+  "final_confirmation_consumed": false,
+  "provenance": {
+    "CLAUDE_E18_4": {
+      "source": "src/agricola/strategy/claude/e18_capacity_certified_v4.py",
+      "source_sha256": "FDDC9714AC4A804CF1AF326A22639D46A6B6CE5B3D1C8775C4D12BEAC68A3D89"
+    },
+    "ANTIGRAVITY_E19_1": {
+      "source": "src/agricola/strategy/antigravity/antigravity_e19_hybrid_livestock_v1.py",
+      "source_sha256": "114E43FC58A6D22F9D675386086C87E8E281F53983662F749DF1388380C85408"
+    },
+    "ANTIGRAVITY_E19_2": {
+      "source": "src/agricola/strategy/antigravity/antigravity_e19_2_hybrid_livestock.py",
+      "source_sha256": "911E81715211D02C0E7BB7D52FD297A01792D3198C8B4C9492236CF0B751ADD6"
+    },
+    "COPILOT_E18_8_V5": {
+      "source": "src/agricola/strategy/copilot/e18_economic_recovery_v5.py",
+      "source_sha256": "9FC19871B60C3FAB52FE13EC77C531F9F404766D8B33B8B9C244E92AE23D74E9"
+    },
+    "CLAUDE_E18_5": {
+      "source": "src/agricola/strategy/claude/e18_wheat_market_fix_v5.py",
+      "source_sha256": "72E7F2A896EC74055C8CDD29083B90F5A18D72B50191BC8967D14213B81385A9"
+    },
+    "COPILOT_E18_10_V6": {
+      "source": "src/agricola/strategy/copilot/e18_economic_recovery_v6.py",
+      "source_sha256": "576B3B5C6CF01DF4B7F4C629751A6F1AB03707274F339BC061006FD954A8F0CD"
+    },
+    "CODEX_V48": {
+      "source": "submission/submission_codex_e18_770_v48_external.py",
+      "source_sha256": "57E7155E69A4B0DB43CCB22295A7172FC4D338999DAE6A6E775081B67ECF7743"
+    }
+  }
+}
