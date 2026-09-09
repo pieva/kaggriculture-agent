@@ -1,0 +1,39 @@
+{
+  "variant": "v49f",
+  "seed": 180903001,
+  "seat": 1,
+  "bundle_sha256": "eabe7bc782fcffab354ffbe9f454bdc1a1b5d37419e30b957c5d260193c96f31",
+  "configuration": {
+    "seed": null,
+    "episodeSteps": 720,
+    "turnsPerDay": 24,
+    "actTimeout": 1,
+    "runTimeout": 1200,
+    "boardSize": 10,
+    "startingMoney": 3000,
+    "maxMarketOrdersPerTurn": 10,
+    "shedCapacity": 100,
+    "weedSpawnChance": 0.005,
+    "townShopUnlockInterval": 3,
+    "townShopSellInterval": 4,
+    "townCenterSellInterval": 24,
+    "farmHandCostMult": 1,
+    "marketParams": {}
+  },
+  "calls": 719,
+  "statuses": [
+    "DONE",
+    "DONE"
+  ],
+  "rewards": [
+    93101.0,
+    99577.0
+  ],
+  "missing": [],
+  "errors": [],
+  "max_seconds": 4.036409500055015,
+  "overage": 20.295940099982545,
+  "passed": true,
+  "note": "Serial local run with standard actTimeout and engine overage; not a Kaggle publication or hardware equivalence guarantee.",
+  "recorded_action_parity": true
+}

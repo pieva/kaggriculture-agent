@@ -52,6 +52,9 @@ Thumbs.db
 # Temporary scratch directory
 scratch/
 
+# Transient report execution logs; reproducible results and manifests stay tracked.
+/docs/model_specs/codex/e19/reports/*/*.log
+
 # E17.1 large reproducible agent run ledgers (kept locally for forensic analysis)
 docs/model_specs/claude/e17/artifacts/runs/e17_1/
 docs/model_specs/claude/e17/artifacts/runs/e17_1_v*/

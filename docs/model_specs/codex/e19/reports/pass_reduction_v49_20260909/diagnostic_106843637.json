@@ -1,0 +1,578 @@
+{
+  "episode": 106843637,
+  "replay_sha256": "7cd440f9556b7f68a4cfd8e0ba0731c3a5d5d41de2ad529047918ca8bac2a048",
+  "calls": 719,
+  "mismatches": [],
+  "detail": "scratch\\v49\\diagnostic_106843637.json.gz",
+  "total": 1074,
+  "causes": {
+    "opening_teacher_or_governor": 443,
+    "waiting_observed_input": 28,
+    "reservation_rejection_present_not_proven_causal": 388,
+    "prepare_rejection_resources_time_or_policy": 127,
+    "no_offer_unknown_useful_work": 70,
+    "admission_certificate_rejection": 18
+  },
+  "daily": [
+    {
+      "day": 1,
+      "total": 35,
+      "causes": {
+        "opening_teacher_or_governor": 35
+      },
+      "workers": {
+        "0": 16,
+        "5": 7,
+        "1": 4,
+        "4": 4,
+        "2": 3,
+        "3": 1
+      }
+    },
+    {
+      "day": 2,
+      "total": 69,
+      "causes": {
+        "opening_teacher_or_governor": 69
+      },
+      "workers": {
+        "1": 19,
+        "3": 23,
+        "4": 13,
+        "2": 11,
+        "0": 3
+      }
+    },
+    {
+      "day": 3,
+      "total": 28,
+      "causes": {
+        "opening_teacher_or_governor": 28
+      },
+      "workers": {
+        "1": 22,
+        "3": 4,
+        "0": 1,
+        "2": 1
+      }
+    },
+    {
+      "day": 4,
+      "total": 28,
+      "causes": {
+        "opening_teacher_or_governor": 28
+      },
+      "workers": {
+        "1": 12,
+        "3": 2,
+        "5": 6,
+        "4": 5,
+        "2": 2,
+        "0": 1
+      }
+    },
+    {
+      "day": 5,
+      "total": 37,
+      "causes": {
+        "opening_teacher_or_governor": 37
+      },
+      "workers": {
+        "1": 23,
+        "3": 8,
+        "4": 3,
+        "2": 2,
+        "0": 1
+      }
+    },
+    {
+      "day": 6,
+      "total": 36,
+      "causes": {
+        "opening_teacher_or_governor": 36
+      },
+      "workers": {
+        "5": 22,
+        "2": 5,
+        "3": 4,
+        "0": 2,
+        "1": 2,
+        "4": 1
+      }
+    },
+    {
+      "day": 7,
+      "total": 16,
+      "causes": {
+        "opening_teacher_or_governor": 16
+      },
+      "workers": {
+        "3": 6,
+        "6": 1,
+        "7": 5,
+        "4": 3,
+        "1": 1
+      }
+    },
+    {
+      "day": 8,
+      "total": 38,
+      "causes": {
+        "opening_teacher_or_governor": 38
+      },
+      "workers": {
+        "2": 13,
+        "3": 7,
+        "8": 6,
+        "0": 5,
+        "4": 3,
+        "7": 3,
+        "1": 1
+      }
+    },
+    {
+      "day": 9,
+      "total": 34,
+      "causes": {
+        "opening_teacher_or_governor": 34
+      },
+      "workers": {
+        "5": 7,
+        "10": 11,
+        "3": 9,
+        "9": 4,
+        "1": 1,
+        "6": 1,
+        "8": 1
+      }
+    },
+    {
+      "day": 10,
+      "total": 66,
+      "causes": {
+        "opening_teacher_or_governor": 66
+      },
+      "workers": {
+        "8": 17,
+        "7": 10,
+        "2": 8,
+        "3": 7,
+        "6": 5,
+        "4": 4,
+        "5": 4,
+        "10": 3,
+        "0": 2,
+        "1": 2,
+        "9": 2,
+        "11": 2
+      }
+    },
+    {
+      "day": 11,
+      "total": 56,
+      "causes": {
+        "opening_teacher_or_governor": 56
+      },
+      "workers": {
+        "8": 12,
+        "3": 11,
+        "6": 11,
+        "7": 4,
+        "11": 9,
+        "5": 4,
+        "0": 1,
+        "1": 1,
+        "4": 1,
+        "9": 1,
+        "10": 1
+      }
+    },
+    {
+      "day": 12,
+      "total": 51,
+      "causes": {
+        "waiting_observed_input": 6,
+        "reservation_rejection_present_not_proven_causal": 11,
+        "prepare_rejection_resources_time_or_policy": 34
+      },
+      "workers": {
+        "1": 7,
+        "4": 6,
+        "5": 1,
+        "10": 2,
+        "7": 9,
+        "3": 6,
+        "6": 4,
+        "8": 4,
+        "2": 3,
+        "12": 3,
+        "0": 2,
+        "9": 2,
+        "11": 2
+      }
+    },
+    {
+      "day": 13,
+      "total": 50,
+      "causes": {
+        "waiting_observed_input": 3,
+        "reservation_rejection_present_not_proven_causal": 47
+      },
+      "workers": {
+        "8": 8,
+        "9": 4,
+        "10": 4,
+        "12": 9,
+        "6": 5,
+        "0": 4,
+        "7": 4,
+        "2": 3,
+        "3": 3,
+        "4": 2,
+        "5": 2,
+        "11": 2
+      }
+    },
+    {
+      "day": 14,
+      "total": 44,
+      "causes": {
+        "waiting_observed_input": 3,
+        "reservation_rejection_present_not_proven_causal": 19,
+        "no_offer_unknown_useful_work": 20,
+        "prepare_rejection_resources_time_or_policy": 2
+      },
+      "workers": {
+        "10": 6,
+        "1": 6,
+        "12": 2,
+        "11": 7,
+        "0": 5,
+        "7": 5,
+        "3": 4,
+        "5": 2,
+        "8": 2,
+        "9": 2,
+        "2": 1,
+        "4": 1,
+        "6": 1
+      }
+    },
+    {
+      "day": 15,
+      "total": 45,
+      "causes": {
+        "waiting_observed_input": 1,
+        "reservation_rejection_present_not_proven_causal": 44
+      },
+      "workers": {
+        "12": 6,
+        "6": 6,
+        "0": 10,
+        "1": 4,
+        "4": 4,
+        "5": 3,
+        "10": 3,
+        "2": 2,
+        "3": 2,
+        "7": 2,
+        "8": 2,
+        "11": 1
+      }
+    },
+    {
+      "day": 16,
+      "total": 44,
+      "causes": {
+        "waiting_observed_input": 2,
+        "admission_certificate_rejection": 16,
+        "reservation_rejection_present_not_proven_causal": 26
+      },
+      "workers": {
+        "8": 3,
+        "12": 5,
+        "1": 11,
+        "11": 9,
+        "3": 6,
+        "7": 2,
+        "6": 4,
+        "0": 1,
+        "2": 1,
+        "9": 1,
+        "10": 1
+      }
+    },
+    {
+      "day": 17,
+      "total": 34,
+      "causes": {
+        "reservation_rejection_present_not_proven_causal": 11,
+        "no_offer_unknown_useful_work": 4,
+        "prepare_rejection_resources_time_or_policy": 19
+      },
+      "workers": {
+        "3": 10,
+        "12": 1,
+        "0": 4,
+        "1": 4,
+        "9": 4,
+        "4": 3,
+        "6": 2,
+        "7": 2,
+        "8": 2,
+        "2": 1,
+        "10": 1
+      }
+    },
+    {
+      "day": 18,
+      "total": 23,
+      "causes": {
+        "waiting_observed_input": 2,
+        "reservation_rejection_present_not_proven_causal": 21
+      },
+      "workers": {
+        "2": 3,
+        "6": 2,
+        "11": 4,
+        "1": 5,
+        "7": 4,
+        "0": 2,
+        "4": 1,
+        "8": 1,
+        "10": 1
+      }
+    },
+    {
+      "day": 19,
+      "total": 33,
+      "causes": {
+        "waiting_observed_input": 1,
+        "reservation_rejection_present_not_proven_causal": 31,
+        "admission_certificate_rejection": 1
+      },
+      "workers": {
+        "4": 3,
+        "7": 6,
+        "1": 2,
+        "10": 5,
+        "9": 4,
+        "3": 3,
+        "0": 2,
+        "6": 2,
+        "8": 2,
+        "2": 1,
+        "5": 1,
+        "11": 1,
+        "12": 1
+      }
+    },
+    {
+      "day": 20,
+      "total": 34,
+      "causes": {
+        "reservation_rejection_present_not_proven_causal": 34
+      },
+      "workers": {
+        "6": 9,
+        "10": 8,
+        "1": 6,
+        "2": 3,
+        "4": 3,
+        "0": 2,
+        "3": 1,
+        "7": 1,
+        "11": 1
+      }
+    },
+    {
+      "day": 21,
+      "total": 11,
+      "causes": {
+        "waiting_observed_input": 2,
+        "reservation_rejection_present_not_proven_causal": 9
+      },
+      "workers": {
+        "6": 2,
+        "5": 5,
+        "1": 1,
+        "3": 1,
+        "8": 1,
+        "11": 1
+      }
+    },
+    {
+      "day": 22,
+      "total": 12,
+      "causes": {
+        "waiting_observed_input": 1,
+        "reservation_rejection_present_not_proven_causal": 11
+      },
+      "workers": {
+        "3": 1,
+        "2": 3,
+        "11": 2,
+        "6": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "12": 1
+      }
+    },
+    {
+      "day": 23,
+      "total": 9,
+      "causes": {
+        "waiting_observed_input": 1,
+        "reservation_rejection_present_not_proven_causal": 8
+      },
+      "workers": {
+        "5": 1,
+        "9": 3,
+        "11": 3,
+        "4": 1,
+        "10": 1
+      }
+    },
+    {
+      "day": 24,
+      "total": 24,
+      "causes": {
+        "waiting_observed_input": 5,
+        "reservation_rejection_present_not_proven_causal": 1,
+        "prepare_rejection_resources_time_or_policy": 18
+      },
+      "workers": {
+        "7": 3,
+        "9": 3,
+        "10": 2,
+        "1": 3,
+        "4": 3,
+        "11": 3,
+        "2": 2,
+        "8": 2,
+        "12": 2,
+        "0": 1
+      }
+    },
+    {
+      "day": 25,
+      "total": 13,
+      "causes": {
+        "waiting_observed_input": 1,
+        "reservation_rejection_present_not_proven_causal": 12
+      },
+      "workers": {
+        "0": 2,
+        "3": 2,
+        "7": 2,
+        "1": 1,
+        "2": 1,
+        "4": 1,
+        "6": 1,
+        "8": 1,
+        "10": 1,
+        "12": 1
+      }
+    },
+    {
+      "day": 26,
+      "total": 13,
+      "causes": {
+        "admission_certificate_rejection": 1,
+        "reservation_rejection_present_not_proven_causal": 12
+      },
+      "workers": {
+        "3": 2,
+        "10": 3,
+        "11": 3,
+        "2": 1,
+        "5": 1,
+        "6": 1,
+        "9": 1,
+        "12": 1
+      }
+    },
+    {
+      "day": 27,
+      "total": 19,
+      "causes": {
+        "reservation_rejection_present_not_proven_causal": 1,
+        "prepare_rejection_resources_time_or_policy": 18
+      },
+      "workers": {
+        "7": 3,
+        "2": 2,
+        "5": 2,
+        "8": 2,
+        "11": 2,
+        "0": 1,
+        "1": 1,
+        "3": 1,
+        "4": 1,
+        "6": 1,
+        "9": 1,
+        "10": 1,
+        "12": 1
+      }
+    },
+    {
+      "day": 28,
+      "total": 15,
+      "causes": {
+        "reservation_rejection_present_not_proven_causal": 1,
+        "prepare_rejection_resources_time_or_policy": 14
+      },
+      "workers": {
+        "5": 3,
+        "0": 2,
+        "3": 2,
+        "2": 1,
+        "4": 1,
+        "7": 1,
+        "8": 1,
+        "9": 1,
+        "10": 1,
+        "11": 1,
+        "12": 1
+      }
+    },
+    {
+      "day": 29,
+      "total": 135,
+      "causes": {
+        "reservation_rejection_present_not_proven_causal": 89,
+        "no_offer_unknown_useful_work": 46
+      },
+      "workers": {
+        "12": 16,
+        "0": 15,
+        "7": 15,
+        "9": 15,
+        "10": 15,
+        "3": 12,
+        "6": 12,
+        "5": 11,
+        "1": 9,
+        "8": 7,
+        "2": 6,
+        "4": 2
+      }
+    },
+    {
+      "day": 30,
+      "total": 22,
+      "causes": {
+        "prepare_rejection_resources_time_or_policy": 22
+      },
+      "workers": {
+        "1": 6,
+        "3": 5,
+        "0": 4,
+        "2": 4,
+        "4": 3
+      }
+    }
+  ]
+}

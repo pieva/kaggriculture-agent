@@ -1,0 +1,329 @@
+{
+  "development": {
+    "n": 6,
+    "averages": {
+      "v48": {
+        "cash": 92205.33333333333,
+        "pass_count": 1069.3333333333333,
+        "share": 14.729731883604316,
+        "slots": 7259.666666666667,
+        "move": 3468.6666666666665,
+        "hire_cash": 7471.0,
+        "FEED": 317,
+        "CARE": 283.3333333333333,
+        "WATER": 887,
+        "HARVEST": 385,
+        "losses": 3.3333333333333335,
+        "escapes": 0
+      },
+      "v49": {
+        "cash": 92208.33333333333,
+        "pass_count": 1046.3333333333333,
+        "share": 14.458720394743873,
+        "slots": 7236.666666666667,
+        "move": 3468.6666666666665,
+        "hire_cash": 7468.0,
+        "FEED": 317,
+        "CARE": 283.3333333333333,
+        "WATER": 887,
+        "HARVEST": 385,
+        "losses": 3.3333333333333335,
+        "escapes": 0
+      }
+    },
+    "paired_deltas": [
+      {
+        "seed": 180903001,
+        "seat": 0,
+        "cash": 3.0,
+        "cash_percent": 0.0030128346757196667,
+        "pass_count": -23,
+        "share": -0.2713327573584259,
+        "slots": -23,
+        "move": 0,
+        "hire_cash": -3.0,
+        "FEED": 0,
+        "CARE": 0,
+        "WATER": 0,
+        "HARVEST": 0,
+        "losses": 0,
+        "escapes": 0
+      },
+      {
+        "seed": 180903001,
+        "seat": 1,
+        "cash": 3.0,
+        "cash_percent": 0.0030128346757196667,
+        "pass_count": -23,
+        "share": -0.2713327573584259,
+        "slots": -23,
+        "move": 0,
+        "hire_cash": -3.0,
+        "FEED": 0,
+        "CARE": 0,
+        "WATER": 0,
+        "HARVEST": 0,
+        "losses": 0,
+        "escapes": 0
+      },
+      {
+        "seed": 180903002,
+        "seat": 0,
+        "cash": 3.0,
+        "cash_percent": 0.002629019112965203,
+        "pass_count": -23,
+        "share": -0.2713327573584259,
+        "slots": -23,
+        "move": 0,
+        "hire_cash": -3.0,
+        "FEED": 0,
+        "CARE": 0,
+        "WATER": 0,
+        "HARVEST": 0,
+        "losses": 0,
+        "escapes": 0
+      },
+      {
+        "seed": 180903002,
+        "seat": 1,
+        "cash": 3.0,
+        "cash_percent": 0.002629019112965203,
+        "pass_count": -23,
+        "share": -0.2713327573584259,
+        "slots": -23,
+        "move": 0,
+        "hire_cash": -3.0,
+        "FEED": 0,
+        "CARE": 0,
+        "WATER": 0,
+        "HARVEST": 0,
+        "losses": 0,
+        "escapes": 0
+      },
+      {
+        "seed": 180903003,
+        "seat": 0,
+        "cash": 3.0,
+        "cash_percent": 0.0047671258997850074,
+        "pass_count": -23,
+        "share": -0.2703689518644765,
+        "slots": -23,
+        "move": 0,
+        "hire_cash": -3.0,
+        "FEED": 0,
+        "CARE": 0,
+        "WATER": 0,
+        "HARVEST": 0,
+        "losses": 0,
+        "escapes": 0
+      },
+      {
+        "seed": 180903003,
+        "seat": 1,
+        "cash": 3.0,
+        "cash_percent": 0.0047671258997850074,
+        "pass_count": -23,
+        "share": -0.2703689518644765,
+        "slots": -23,
+        "move": 0,
+        "hire_cash": -3.0,
+        "FEED": 0,
+        "CARE": 0,
+        "WATER": 0,
+        "HARVEST": 0,
+        "losses": 0,
+        "escapes": 0
+      }
+    ],
+    "gates": {
+      "complete_errors_incomplete": true,
+      "pass_absolute": true,
+      "pass_share": true,
+      "move": true,
+      "cash_mean": true,
+      "cash_cases": true,
+      "productive_losses": true,
+      "escapes": true,
+      "service_counts": true,
+      "observed_obligation_deficits": true
+    },
+    "coverage": {
+      "v48": {
+        "missed_feed": 114,
+        "missed_useful_care": 180,
+        "missed_critical_water": 20,
+        "decay_lost_units": 0,
+        "productive_water_loss_units": 12
+      },
+      "v49": {
+        "missed_feed": 114,
+        "missed_useful_care": 180,
+        "missed_critical_water": 20,
+        "decay_lost_units": 0,
+        "productive_water_loss_units": 12
+      }
+    }
+  },
+  "validation": {
+    "n": 4,
+    "averages": {
+      "v48": {
+        "cash": 53037.5,
+        "pass_count": 1108.5,
+        "share": 15.26352107019454,
+        "slots": 7262,
+        "move": 3443,
+        "hire_cash": 7433.0,
+        "FEED": 321,
+        "CARE": 286.5,
+        "WATER": 881.5,
+        "HARVEST": 381.5,
+        "losses": 4,
+        "escapes": 0
+      },
+      "v49": {
+        "cash": 53040.5,
+        "pass_count": 1085.5,
+        "share": 14.994290314017366,
+        "slots": 7239,
+        "move": 3443,
+        "hire_cash": 7430.0,
+        "FEED": 321,
+        "CARE": 286.5,
+        "WATER": 881.5,
+        "HARVEST": 381.5,
+        "losses": 4,
+        "escapes": 0
+      }
+    },
+    "paired_deltas": [
+      {
+        "seed": 260909101,
+        "seat": 0,
+        "cash": 3.0,
+        "cash_percent": 0.00787587619122121,
+        "pass_count": -23,
+        "share": -0.2664271835483234,
+        "slots": -23,
+        "move": 0,
+        "hire_cash": -3.0,
+        "FEED": 0,
+        "CARE": 0,
+        "WATER": 0,
+        "HARVEST": 0,
+        "losses": 0,
+        "escapes": 0
+      },
+      {
+        "seed": 260909101,
+        "seat": 1,
+        "cash": 3.0,
+        "cash_percent": 0.00787587619122121,
+        "pass_count": -23,
+        "share": -0.2664271835483234,
+        "slots": -23,
+        "move": 0,
+        "hire_cash": -3.0,
+        "FEED": 0,
+        "CARE": 0,
+        "WATER": 0,
+        "HARVEST": 0,
+        "losses": 0,
+        "escapes": 0
+      },
+      {
+        "seed": 260909102,
+        "seat": 0,
+        "cash": 3.0,
+        "cash_percent": 0.004412803012465716,
+        "pass_count": -23,
+        "share": -0.2720343288060256,
+        "slots": -23,
+        "move": 0,
+        "hire_cash": -3.0,
+        "FEED": 0,
+        "CARE": 0,
+        "WATER": 0,
+        "HARVEST": 0,
+        "losses": 0,
+        "escapes": 0
+      },
+      {
+        "seed": 260909102,
+        "seat": 1,
+        "cash": 3.0,
+        "cash_percent": 0.004412803012465716,
+        "pass_count": -23,
+        "share": -0.2720343288060256,
+        "slots": -23,
+        "move": 0,
+        "hire_cash": -3.0,
+        "FEED": 0,
+        "CARE": 0,
+        "WATER": 0,
+        "HARVEST": 0,
+        "losses": 0,
+        "escapes": 0
+      }
+    ],
+    "gates": {
+      "complete_errors_incomplete": true,
+      "pass_absolute": true,
+      "pass_share": true,
+      "move": true,
+      "cash_mean": true,
+      "cash_cases": true,
+      "productive_losses": true,
+      "escapes": true,
+      "service_counts": true,
+      "observed_obligation_deficits": true
+    },
+    "coverage": {
+      "v48": {
+        "missed_feed": 60,
+        "missed_useful_care": 108,
+        "missed_critical_water": 16,
+        "decay_lost_units": 0,
+        "productive_water_loss_units": 8
+      },
+      "v49": {
+        "missed_feed": 60,
+        "missed_useful_care": 108,
+        "missed_critical_water": 16,
+        "decay_lost_units": 0,
+        "productive_water_loss_units": 8
+      }
+    }
+  },
+  "parity": [
+    {
+      "input": "development_v49f_180903001_0.json",
+      "seat": 0,
+      "seed": 180903001,
+      "actions": 719,
+      "mismatches": 0,
+      "bundle_sha256": "eabe7bc782fcffab354ffbe9f454bdc1a1b5d37419e30b957c5d260193c96f31",
+      "frozen_v48_intact": true,
+      "runtime_note": "Offline, no instrumentation; may overlap other processes. First call includes loading policy.",
+      "max_seconds": 20.377098899916746,
+      "overage": 54.00826939952094
+    },
+    {
+      "input": "development_v49f_180903001_1.json",
+      "seat": 1,
+      "seed": 180903001,
+      "actions": 719,
+      "mismatches": 0,
+      "bundle_sha256": "eabe7bc782fcffab354ffbe9f454bdc1a1b5d37419e30b957c5d260193c96f31",
+      "frozen_v48_intact": true,
+      "runtime_note": "Offline, no instrumentation; may overlap other processes. First call includes loading policy.",
+      "max_seconds": 10.855421099928208,
+      "overage": 57.72280459990725
+    }
+  ],
+  "candidate_sha256": "eabe7bc782fcffab354ffbe9f454bdc1a1b5d37419e30b957c5d260193c96f31",
+  "external_unexposed_opponent_gate": "NOT_RUN",
+  "kaggle_runtime_gate": "NOT_CERTIFIED_LOCAL_TIMEOUT_RELAXED",
+  "promotion": "LOCAL_CANDIDATE_ONLY",
+  "selected_variant": "v49f"
+}

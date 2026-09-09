@@ -1,0 +1,186 @@
+{
+  "development": {
+    "n": 6,
+    "averages": {
+      "v48": {
+        "cash": 92205.33333333333,
+        "pass_count": 1069.3333333333333,
+        "share": 14.729731883604316,
+        "slots": 7259.666666666667,
+        "move": 3468.6666666666665,
+        "hire_cash": 7471.0,
+        "FEED": 317,
+        "CARE": 283.3333333333333,
+        "WATER": 887,
+        "HARVEST": 385,
+        "losses": 3.3333333333333335,
+        "escapes": 0
+      },
+      "v49": {
+        "cash": 91923.33333333333,
+        "pass_count": 1016,
+        "share": 14.110218766234608,
+        "slots": 7200,
+        "move": 3462.3333333333335,
+        "hire_cash": 7286.0,
+        "FEED": 318.3333333333333,
+        "CARE": 288.6666666666667,
+        "WATER": 884.3333333333334,
+        "HARVEST": 386.6666666666667,
+        "losses": 3.3333333333333335,
+        "escapes": 0
+      }
+    },
+    "paired_deltas": [
+      {
+        "seed": 180903001,
+        "seat": 0,
+        "cash": 403.0,
+        "cash_percent": 0.4047241247715272,
+        "pass_count": -71,
+        "share": -0.8528251985088637,
+        "slots": -66,
+        "move": 0,
+        "hire_cash": -288.0,
+        "FEED": 0,
+        "CARE": 5,
+        "WATER": 0,
+        "HARVEST": 3,
+        "losses": 0,
+        "escapes": 0
+      },
+      {
+        "seed": 180903001,
+        "seat": 1,
+        "cash": 403.0,
+        "cash_percent": 0.4047241247715272,
+        "pass_count": -71,
+        "share": -0.8528251985088637,
+        "slots": -66,
+        "move": 0,
+        "hire_cash": -288.0,
+        "FEED": 0,
+        "CARE": 5,
+        "WATER": 0,
+        "HARVEST": 3,
+        "losses": 0,
+        "escapes": 0
+      },
+      {
+        "seed": 180903002,
+        "seat": 0,
+        "cash": 514.0,
+        "cash_percent": 0.45043860802200797,
+        "pass_count": -71,
+        "share": -0.8528251985088637,
+        "slots": -66,
+        "move": 0,
+        "hire_cash": -288.0,
+        "FEED": 0,
+        "CARE": 5,
+        "WATER": 0,
+        "HARVEST": 3,
+        "losses": 0,
+        "escapes": 0
+      },
+      {
+        "seed": 180903002,
+        "seat": 1,
+        "cash": 514.0,
+        "cash_percent": 0.45043860802200797,
+        "pass_count": -71,
+        "share": -0.8528251985088637,
+        "slots": -66,
+        "move": 0,
+        "hire_cash": -288.0,
+        "FEED": 0,
+        "CARE": 5,
+        "WATER": 0,
+        "HARVEST": 3,
+        "losses": 0,
+        "escapes": 0
+      },
+      {
+        "seed": 180903003,
+        "seat": 0,
+        "cash": -1763.0,
+        "cash_percent": -2.80148098711287,
+        "pass_count": -18,
+        "share": -0.15288895509139522,
+        "slots": -47,
+        "move": -19,
+        "hire_cash": 21.0,
+        "FEED": 4,
+        "CARE": 6,
+        "WATER": -8,
+        "HARVEST": -1,
+        "losses": 0,
+        "escapes": 0
+      },
+      {
+        "seed": 180903003,
+        "seat": 1,
+        "cash": -1763.0,
+        "cash_percent": -2.80148098711287,
+        "pass_count": -18,
+        "share": -0.15288895509139522,
+        "slots": -47,
+        "move": -19,
+        "hire_cash": 21.0,
+        "FEED": 4,
+        "CARE": 6,
+        "WATER": -8,
+        "HARVEST": -1,
+        "losses": 0,
+        "escapes": 0
+      }
+    ],
+    "gates": {
+      "complete_errors_incomplete": true,
+      "pass_absolute": true,
+      "pass_share": true,
+      "move": true,
+      "cash_mean": false,
+      "cash_cases": false,
+      "productive_losses": true,
+      "escapes": true,
+      "service_counts": true,
+      "observed_obligation_deficits": false
+    },
+    "coverage": {
+      "v48": {
+        "missed_feed": 114,
+        "missed_useful_care": 180,
+        "missed_critical_water": 20,
+        "decay_lost_units": 0,
+        "productive_water_loss_units": 12
+      },
+      "v49": {
+        "missed_feed": 106,
+        "missed_useful_care": 148,
+        "missed_critical_water": 20,
+        "decay_lost_units": 0,
+        "productive_water_loss_units": 16
+      }
+    }
+  },
+  "parity": [
+    {
+      "input": "development_v49_180903001_0.json",
+      "seat": 0,
+      "seed": 180903001,
+      "actions": 719,
+      "mismatches": 0,
+      "bundle_sha256": "64a450157bbe16a65fe9cc2de1bcc706f37674ff85f58fb378f8ce1144be13c6",
+      "frozen_v48_intact": true,
+      "runtime_note": "Offline, no instrumentation; may overlap other processes. First call includes loading policy.",
+      "max_seconds": 40.25188849994447,
+      "overage": 106.15375559974927
+    }
+  ],
+  "candidate_sha256": "64a450157bbe16a65fe9cc2de1bcc706f37674ff85f58fb378f8ce1144be13c6",
+  "external_unexposed_opponent_gate": "NOT_RUN",
+  "kaggle_runtime_gate": "NOT_CERTIFIED_LOCAL_TIMEOUT_RELAXED",
+  "promotion": "REJECTED",
+  "selected_variant": "v49"
+}

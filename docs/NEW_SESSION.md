@@ -1,9 +1,79 @@
-# Ripresa della sessione — ottimizzazione 770 dopo V48
+[Checkpoint di ripresa e riproduzione](SESSION_CHECKPOINT_V51_20260909.md). Ramo di salvataggio: `codex/v51-benchmark-checkpoint`.
 
-Leggere prima la specifica della strategia e il nuovo report esterno.
-Non avviare 662, non pubblicare nuove varianti e non trattare il rating cresciuto
-come soluzione dei PASS. Il lavoro successivo è la diagnosi strumentata della
-pianificazione e della capacità di lavoro, a parità di policy congelata.
+## Benchmark esterno V51C con i leader — 9 settembre 2026
+
+Completati tre nuovi riferimenti, cinque replay ciascuno: Top770-004 Himanshu Kumar (4/5 finali 770), Top770-005 pensukesan (5/5), Top770-006 kanno (4/5). Corpus completi nei grafici Leader-V51-01/02/03; tutti i 15 replay inclusi. Controllo: V51C esterna n42. Confronto descrittivo, non appaiato; nuovi riferimenti ora esposti.
+
+D16-D25: V51C PASS 27,08, MOVE 154,18, personale 13, WATER 35,06, CARE 11,61, costo assunzioni 376/giorno. Leader: PASS 4,16-8,48, MOVE circa 113, personale circa 11,67, WATER circa 44, CARE circa 17, costo circa 204. Il divario permane nel sottoinsieme 770. I mix biologici differiscono; evitare tagli ciechi di personale. Prossima priorita diagnostica: servizio e percorsi nella fase produttiva. Nessuna variante implementata durante il benchmark.
+
+[Report benchmark e tre confronti da 22 KPI](model_specs/codex/e19/reports/top_v51_20260909/REPORT_TOP_V51_IT.html). Protocollo, catalogo, CSV e manifest nella stessa cartella.
+
+## Submission esterna V51C: audit replay del 9 settembre 2026
+
+Submission **56124996 Complete**, rating osservato **942,1**. Coorte congelata: 42 partite contro altri giocatori, 22 vittorie / 20 sconfitte, cassa media 79.977,83. Un self-play escluso. PASS medi 33,18/giorno (13,94% degli slot); D29 34,36 contro 76,34 nella coorte storica V48 (confronto non appaiato). Nessun obbligo biologico mancato a D29; restano deficit negli altri giorni. Nessuna fuga animale o perdita per decadimento. Il ledger rileva una differenza di 1 nella cassa dell'avversario Scorpi, episodio 107183104 step 566; cassa V51C riconciliata, risultati originali Kaggle conservati.
+
+[Report KPI esterno](model_specs/codex/e19/reports/v51_external_20260909/REPORT_V51_REPLAY_KPI_IT.html), coorte, hash, CSV e diagnosi nella stessa cartella. Ricevuta aggiornata in `docs/model_specs/codex/e19/artifacts/derived/v51_external_publication_receipt.json`. Tutti questi episodi sono ora esposti. Nessuna nuova variante o submission prodotta durante questo audit. Il checkpoint locale seguente precede la pubblicazione; le sue frasi di mancato invio sono storiche.
+
+# Ripresa della sessione — V51C candidata locale verificata
+
+V51C impegna percorsi completi al giorno 29 e dimensiona le assunzioni sulle
+visite residue. I sei casi di sviluppo passano: cash medio +345, PASS −53,
+MOVE −34,33 rispetto a V49F; servizi e deficit non peggiorati. Bundle fissato:
+`43d5c6c3b70cf2940afaa83f3a243cba75e52f89db459d31ecb96187c4f13fda`.
+Parità sorgente/bundle/replay: 719 azioni. Sette test mirati passati.
+La validazione 260909201/202 è stata aperta il 2026-09-09 13:45:22 UTC,
+entrambi i posti; questi seed sono ora esposti. Risultati e protocollo in
+`docs/model_specs/codex/e19/reports/pass_reduction_v51`. Nessuna submission.
+Validazione completata: cash medio +64,50, PASS −45,50, MOVE −61; tutti i
+gate aggregati passano, servizi e deficit invariati. Il seed 260909201 peggiora
+su cash/PASS, quindi non affermare che ogni seed migliora. Le due prove seriali
+standard passano, 719 azioni identiche per posto; overage 32,75/44,93 s su 60.
+[Report finale](model_specs/codex/e19/reports/pass_reduction_v51/REPORT_V51_IT.html).
+V51C è la nuova candidata locale; V49F resta baseline e V48 resta pubblicata.
+Non riottimizzare su 260909201/202 trattandoli come nuovi holdout. Nessuna
+submission eseguita, nessun commit/push. Bundle finale in
+`submission/submission_codex_e19_770_v51_candidate.py`.
+
+## Iterazione precedente V50
+
+Ultima iterazione: [report V50](model_specs/codex/e19/reports/pass_reduction_v50/REPORT_V50_IT.html)
+e [specifica V50 J respinta](model_specs/codex/e19/MODEL_SPEC_CODEX_770_V50.md).
+11 prototipi, 17 simulazioni sui tre seed di sviluppo (posto 0). Nessuna V50
+supera tutti i gate. J: cassa media +143,33 e PASS -52,33, ma MOVE +6,33 e
+due FEED in meno nel campione. Non promuovere il bundle V50.
+Nell'iterazione V50 i seed preregistrati 260909201/202 non erano stati aperti.
+V49F supera le prove seriali del runtime standard nei due posti del seed
+180903001: 719 azioni in parità, zero errori, overage 18,11 e 20,30 secondi
+entro i 60 consentiti. JSON `runtime_v49f_*.json` nel report V50.
+È una verifica locale, non una garanzia sull'hardware Kaggle.
+Prossimo problema: far eseguire il piano di capacità verificato dal dispatcher,
+invece di usare quel piano soltanto per ritardare le assunzioni.
+
+## Baseline locale conservata
+
+Leggere [MODEL_SPEC V49F](model_specs/codex/e19/MODEL_SPEC_CODEX_770_V49F.md),
+[report con grafici](model_specs/codex/e19/reports/pass_reduction_v49_20260909/REPORT_V49_PASS_IT.html)
+e [riproducibilità](model_specs/codex/e19/reports/pass_reduction_v49_20260909/REPRODUCE_IT.md).
+V48 pubblicata e tutti i suoi sorgenti restano congelati. Non avviare 662 e
+non pubblicare nuove varianti senza richiesta. Il rating non risolve i PASS.
+
+La diagnosi riproduce 719/719 azioni del replay esposto 106843637. D2 include
+un manovale assunto per eseguire solo 23 PASS. F elimina quell'assunzione,
+compensa la diversa posizione di ingresso e rimuove due movimenti terminali
+inutili. Lo sviluppo completo (tre seed, entrambi i posti) dà per ogni caso
+−23 PASS, MOVE invariati e cassa +3. Anche le quattro coppie sui due seed nuovi
+confermano lo stesso effetto. Tutti i gate locali passano: servizi, raccolte,
+perdite e obblighi scoperti invariati. Dopo D2, tutte le azioni coincidono nei
+dieci casi. Parità bundle/sorgenti: 719/719 nei due posti; 17 test superati.
+Il `summary.json` mantiene separate le due partizioni.
+
+Le revisioni A–E sono respinte e conservate: regressioni economiche, aumento
+dei MOVE oppure errore di geometria. Nessuna modifica F guidata dai seed nuovi.
+D11, D12–D15 e D29 rimangono aperti. Non dichiarare risolto il problema globale.
+Timeout locale 120: runtime Kaggle non certificato. Nessuna nuova submission
+e nessuna prova con avversari esterni non esposti.
+
+## Contesto storico V48 preservato
 
 ## Riferimento pubblicato
 

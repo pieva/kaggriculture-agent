@@ -1,0 +1,1932 @@
+{
+  "episode": 106843637,
+  "replay_sha256": "7cd440f9556b7f68a4cfd8e0ba0731c3a5d5d41de2ad529047918ca8bac2a048",
+  "actions": 719,
+  "mismatches": [],
+  "note": "Preparation without route gate at the actual post-dispatch state; feasibility does not certify profitability or capacity of the full day.",
+  "detail": "scratch\\v50\\route_probes.json.gz",
+  "days": [
+    {
+      "day": 12,
+      "probes": 46,
+      "feasible": 26,
+      "pass_slots_with_feasible": 8,
+      "kinds": {
+        "WATER": 26
+      },
+      "examples": [
+        {
+          "day": 12,
+          "hour": 16,
+          "worker": 4,
+          "target": [
+            8,
+            0
+          ],
+          "commands": [
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            1
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "EAST"
+              ],
+              [
+                8,
+                4
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                8,
+                3
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                8,
+                2
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                8,
+                1
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                8,
+                0
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                8,
+                0
+              ]
+            ]
+          ],
+          "carried": {
+            "FERTILIZER": 3
+          },
+          "owner_committed": {
+            "1": 2
+          }
+        },
+        {
+          "day": 12,
+          "hour": 16,
+          "worker": 4,
+          "target": [
+            9,
+            0
+          ],
+          "commands": [
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            1
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "EAST"
+              ],
+              [
+                8,
+                4
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                9,
+                4
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                9,
+                3
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                9,
+                2
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                9,
+                1
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                9,
+                0
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                9,
+                0
+              ]
+            ]
+          ],
+          "carried": {
+            "FERTILIZER": 3
+          },
+          "owner_committed": {
+            "1": 2
+          }
+        },
+        {
+          "day": 12,
+          "hour": 16,
+          "worker": 4,
+          "target": [
+            6,
+            1
+          ],
+          "commands": [
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            5
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "WEST"
+              ],
+              [
+                6,
+                4
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                6,
+                3
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                6,
+                2
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                6,
+                1
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                6,
+                1
+              ]
+            ]
+          ],
+          "carried": {
+            "FERTILIZER": 3
+          },
+          "owner_committed": {
+            "5": 2
+          }
+        },
+        {
+          "day": 12,
+          "hour": 16,
+          "worker": 4,
+          "target": [
+            7,
+            1
+          ],
+          "commands": [
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            5
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "NORTH"
+              ],
+              [
+                7,
+                3
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                7,
+                2
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                7,
+                1
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                7,
+                1
+              ]
+            ]
+          ],
+          "carried": {
+            "FERTILIZER": 3
+          },
+          "owner_committed": {
+            "5": 2
+          }
+        }
+      ]
+    },
+    {
+      "day": 13,
+      "probes": 71,
+      "feasible": 22,
+      "pass_slots_with_feasible": 8,
+      "kinds": {
+        "WATER": 22
+      },
+      "examples": [
+        {
+          "day": 13,
+          "hour": 16,
+          "worker": 12,
+          "target": [
+            2,
+            0
+          ],
+          "commands": [
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            6
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "WEST"
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            [
+              [
+                "WEST"
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            [
+              [
+                "WEST"
+              ],
+              [
+                2,
+                4
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                2,
+                3
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                2,
+                1
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                2,
+                0
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                2,
+                0
+              ]
+            ]
+          ],
+          "carried": {},
+          "owner_committed": {
+            "6": 2
+          }
+        },
+        {
+          "day": 13,
+          "hour": 16,
+          "worker": 12,
+          "target": [
+            3,
+            0
+          ],
+          "commands": [
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            0
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "WEST"
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            [
+              [
+                "WEST"
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                0
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                3,
+                0
+              ]
+            ]
+          ],
+          "carried": {},
+          "owner_committed": {
+            "0": 2
+          }
+        },
+        {
+          "day": 13,
+          "hour": 16,
+          "worker": 12,
+          "target": [
+            4,
+            0
+          ],
+          "commands": [
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            0
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "WEST"
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                3
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                2
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                1
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                0
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                4,
+                0
+              ]
+            ]
+          ],
+          "carried": {},
+          "owner_committed": {
+            "0": 2
+          }
+        },
+        {
+          "day": 13,
+          "hour": 16,
+          "worker": 12,
+          "target": [
+            3,
+            1
+          ],
+          "commands": [
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            10
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "WEST"
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            [
+              [
+                "WEST"
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                2
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                3,
+                1
+              ]
+            ]
+          ],
+          "carried": {},
+          "owner_committed": {
+            "10": 6
+          }
+        }
+      ]
+    },
+    {
+      "day": 14,
+      "probes": 21,
+      "feasible": 7,
+      "pass_slots_with_feasible": 6,
+      "kinds": {
+        "WATER": 7
+      },
+      "examples": [
+        {
+          "day": 14,
+          "hour": 20,
+          "worker": 0,
+          "target": [
+            1,
+            3
+          ],
+          "commands": [
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            8
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "NORTH"
+              ],
+              [
+                1,
+                5
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                1,
+                3
+              ]
+            ]
+          ],
+          "carried": {
+            "WHEAT": 3
+          },
+          "owner_committed": {
+            "8": 1
+          }
+        },
+        {
+          "day": 14,
+          "hour": 20,
+          "worker": 1,
+          "target": [
+            1,
+            3
+          ],
+          "commands": [
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            8
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "EAST"
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                "SOUTH"
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            [
+              [
+                "SOUTH"
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                1,
+                3
+              ]
+            ]
+          ],
+          "carried": {
+            "WHEAT": 2
+          },
+          "owner_committed": {
+            "8": 1
+          }
+        },
+        {
+          "day": 14,
+          "hour": 20,
+          "worker": 7,
+          "target": [
+            4,
+            0
+          ],
+          "commands": [
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            12
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "EAST"
+              ],
+              [
+                4,
+                2
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                1
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                0
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                4,
+                0
+              ]
+            ]
+          ],
+          "carried": {
+            "FERTILIZER": 4,
+            "WHEAT": 1
+          },
+          "owner_committed": {
+            "12": 2
+          }
+        },
+        {
+          "day": 14,
+          "hour": 20,
+          "worker": 7,
+          "target": [
+            1,
+            3
+          ],
+          "commands": [
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            8
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "WEST"
+              ],
+              [
+                2,
+                2
+              ]
+            ],
+            [
+              [
+                "WEST"
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            [
+              [
+                "SOUTH"
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                1,
+                3
+              ]
+            ]
+          ],
+          "carried": {
+            "FERTILIZER": 4,
+            "WHEAT": 1
+          },
+          "owner_committed": {
+            "8": 1
+          }
+        }
+      ]
+    },
+    {
+      "day": 15,
+      "probes": 204,
+      "feasible": 110,
+      "pass_slots_with_feasible": 11,
+      "kinds": {
+        "FERTILIZE,WATER": 3,
+        "WATER": 77,
+        "FEED,CARE,COLLECT_FERTILIZER": 11,
+        "FEED,CARE,HARVEST,COLLECT_FERTILIZER": 19
+      },
+      "examples": [
+        {
+          "day": 15,
+          "hour": 11,
+          "worker": 6,
+          "target": [
+            1,
+            1
+          ],
+          "commands": [
+            [
+              "FERTILIZE"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            10
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "EAST"
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                4,
+                1
+              ]
+            ],
+            [
+              [
+                "SOUTH"
+              ],
+              [
+                4,
+                2
+              ]
+            ],
+            [
+              [
+                "SOUTH"
+              ],
+              [
+                4,
+                3
+              ]
+            ],
+            [
+              [
+                "SOUTH"
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            [
+              [
+                "PICKUP",
+                "FERTILIZER",
+                1
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            [
+              [
+                "WEST"
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            [
+              [
+                "WEST"
+              ],
+              [
+                2,
+                4
+              ]
+            ],
+            [
+              [
+                "WEST"
+              ],
+              [
+                1,
+                4
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                1,
+                3
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                1,
+                2
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                "FERTILIZE"
+              ],
+              [
+                1,
+                1
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                1,
+                1
+              ]
+            ]
+          ],
+          "carried": {
+            "WHEAT": 3
+          },
+          "owner_committed": {
+            "10": 2
+          }
+        },
+        {
+          "day": 15,
+          "hour": 11,
+          "worker": 6,
+          "target": [
+            7,
+            1
+          ],
+          "commands": [
+            [
+              "WATER"
+            ]
+          ],
+          "owners": [
+            11
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "EAST"
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                4,
+                1
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                6,
+                1
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                7,
+                1
+              ]
+            ],
+            [
+              [
+                "WATER"
+              ],
+              [
+                7,
+                1
+              ]
+            ]
+          ],
+          "carried": {
+            "WHEAT": 3
+          },
+          "owner_committed": {
+            "11": 3
+          }
+        },
+        {
+          "day": 15,
+          "hour": 11,
+          "worker": 6,
+          "target": [
+            5,
+            2
+          ],
+          "commands": [
+            [
+              "FEED"
+            ],
+            [
+              "CARE"
+            ],
+            [
+              "COLLECT_FERTILIZER"
+            ]
+          ],
+          "owners": [
+            3
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "EAST"
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                4,
+                1
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            [
+              [
+                "SOUTH"
+              ],
+              [
+                5,
+                2
+              ]
+            ],
+            [
+              [
+                "FEED"
+              ],
+              [
+                5,
+                2
+              ]
+            ],
+            [
+              [
+                "CARE"
+              ],
+              [
+                5,
+                2
+              ]
+            ],
+            [
+              [
+                "COLLECT_FERTILIZER"
+              ],
+              [
+                5,
+                2
+              ]
+            ]
+          ],
+          "carried": {
+            "WHEAT": 3
+          },
+          "owner_committed": {
+            "3": 2
+          }
+        },
+        {
+          "day": 15,
+          "hour": 11,
+          "worker": 6,
+          "target": [
+            6,
+            2
+          ],
+          "commands": [
+            [
+              "FEED"
+            ],
+            [
+              "CARE"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "COLLECT_FERTILIZER"
+            ]
+          ],
+          "owners": [
+            11
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "EAST"
+              ],
+              [
+                3,
+                1
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                4,
+                1
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                5,
+                1
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                6,
+                1
+              ]
+            ],
+            [
+              [
+                "SOUTH"
+              ],
+              [
+                6,
+                2
+              ]
+            ],
+            [
+              [
+                "FEED"
+              ],
+              [
+                6,
+                2
+              ]
+            ],
+            [
+              [
+                "CARE"
+              ],
+              [
+                6,
+                2
+              ]
+            ],
+            [
+              [
+                "HARVEST"
+              ],
+              [
+                6,
+                2
+              ]
+            ],
+            [
+              [
+                "COLLECT_FERTILIZER"
+              ],
+              [
+                6,
+                2
+              ]
+            ]
+          ],
+          "carried": {
+            "WHEAT": 3
+          },
+          "owner_committed": {
+            "11": 3
+          }
+        }
+      ]
+    },
+    {
+      "day": 29,
+      "probes": 242,
+      "feasible": 28,
+      "pass_slots_with_feasible": 10,
+      "kinds": {
+        "FEED,COLLECT_FERTILIZER": 17,
+        "FEED,HARVEST,COLLECT_FERTILIZER": 11
+      },
+      "examples": [
+        {
+          "day": 29,
+          "hour": 13,
+          "worker": 3,
+          "target": [
+            3,
+            3
+          ],
+          "commands": [
+            [
+              "FEED"
+            ],
+            [
+              "COLLECT_FERTILIZER"
+            ]
+          ],
+          "owners": [
+            2
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "EAST"
+              ],
+              [
+                2,
+                9
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                3,
+                9
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                8
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                7
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                6
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            [
+              [
+                "FEED"
+              ],
+              [
+                3,
+                3
+              ]
+            ],
+            [
+              [
+                "COLLECT_FERTILIZER"
+              ],
+              [
+                3,
+                3
+              ]
+            ]
+          ],
+          "carried": {
+            "CARROT": 3,
+            "WHEAT": 4
+          },
+          "owner_committed": {
+            "2": 3
+          }
+        },
+        {
+          "day": 29,
+          "hour": 13,
+          "worker": 3,
+          "target": [
+            4,
+            3
+          ],
+          "commands": [
+            [
+              "FEED"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "COLLECT_FERTILIZER"
+            ]
+          ],
+          "owners": [
+            4
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "EAST"
+              ],
+              [
+                2,
+                9
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                3,
+                9
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                4,
+                9
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                8
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                7
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                6
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                5
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                3
+              ]
+            ],
+            [
+              [
+                "FEED"
+              ],
+              [
+                4,
+                3
+              ]
+            ],
+            [
+              [
+                "HARVEST"
+              ],
+              [
+                4,
+                3
+              ]
+            ],
+            [
+              [
+                "COLLECT_FERTILIZER"
+              ],
+              [
+                4,
+                3
+              ]
+            ]
+          ],
+          "carried": {
+            "CARROT": 3,
+            "WHEAT": 4
+          },
+          "owner_committed": {
+            "4": 4
+          }
+        },
+        {
+          "day": 29,
+          "hour": 13,
+          "worker": 3,
+          "target": [
+            3,
+            4
+          ],
+          "commands": [
+            [
+              "FEED"
+            ],
+            [
+              "COLLECT_FERTILIZER"
+            ]
+          ],
+          "owners": [
+            11
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "EAST"
+              ],
+              [
+                2,
+                9
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                3,
+                9
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                8
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                7
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                6
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                5
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            [
+              [
+                "FEED"
+              ],
+              [
+                3,
+                4
+              ]
+            ],
+            [
+              [
+                "COLLECT_FERTILIZER"
+              ],
+              [
+                3,
+                4
+              ]
+            ]
+          ],
+          "carried": {
+            "CARROT": 3,
+            "WHEAT": 4
+          },
+          "owner_committed": {
+            "11": 4
+          }
+        },
+        {
+          "day": 29,
+          "hour": 13,
+          "worker": 3,
+          "target": [
+            4,
+            4
+          ],
+          "commands": [
+            [
+              "FEED"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "COLLECT_FERTILIZER"
+            ]
+          ],
+          "owners": [
+            11
+          ],
+          "queue": [],
+          "ungated_feasible": true,
+          "steps": [
+            [
+              [
+                "EAST"
+              ],
+              [
+                2,
+                9
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                3,
+                9
+              ]
+            ],
+            [
+              [
+                "EAST"
+              ],
+              [
+                4,
+                9
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                8
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                7
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                6
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                5
+              ]
+            ],
+            [
+              [
+                "NORTH"
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            [
+              [
+                "FEED"
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            [
+              [
+                "HARVEST"
+              ],
+              [
+                4,
+                4
+              ]
+            ],
+            [
+              [
+                "COLLECT_FERTILIZER"
+              ],
+              [
+                4,
+                4
+              ]
+            ]
+          ],
+          "carried": {
+            "CARROT": 3,
+            "WHEAT": 4
+          },
+          "owner_committed": {
+            "11": 4
+          }
+        }
+      ]
+    }
+  ]
+}

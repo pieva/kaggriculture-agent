@@ -172,3 +172,76 @@ Nessuna nuova policy, nessuna 662, nessuna ulteriore submission.
 Aditya Kapadia; Aditya Mishra; Attension_Seeker; Bibek; Dandan Li; DataLover; DeokJin; Hafida Belayd; Jia Chen; Kaggler Albafica; Kanny912; Kenny; LittleScottyy; MD.Firoj Khondokar; MOHSIN525; Nguyễn Nhật Thanh; Nikola010; PRITIKA SA; Peter Thompson; Rheal Thomas; SanggeunParrk; Sarah Ng; Shane Thivaharraja; Sidharth Hulyalkar; Singaraj B; Terrance Luangrath; Tita Kongolo; Udbhaw Anand; Udit Jain #2; Yihan Guo; eternitywinner; huanghaoyu7280; lava; my; ricardo; typeIIIfairy; コーラ.
 
 Report: `docs/model_specs/codex/e19/reports/v48_external_pass_update_20260908/REPORT_V48_REPLAY_PASS_IT.html`.
+
+## 2026-09-09 — candidata V49, diagnosi PASS e controlli locali
+
+Su mandato esplicito del proprietario, ricostruita la V48 congelata sul replay
+già esposto 106843637 (picco D29). È diagnosi della baseline, non confronto
+di una nuova release contro lo stesso autore. I conteggi per persona dei 38
+replay restano dati esposti e descrittivi. Nessun nuovo autore Top aperto,
+nessun riuso dei Top consumati come validazione, nessuna pubblicazione Kaggle.
+
+Sviluppo della V49: 180903001–180903003, due posti, controllo interno V4D già
+esposto. Ablazione iniziale sul caso 180903001 posto 0. Partizione di
+trasferimento locale preregistrata prima dell'apertura: 260909101 e 260909102,
+due posti, sempre V4D. Dopo l'esecuzione anche questi seed sono esposti;
+non possono essere riutilizzati per correggere V49 e poi essere chiamati
+holdout. Il gate di avversari esterni non esposti rimane NON ESEGUITO.
+
+Protocollo, risultati e limiti, inclusa l'amplificazione del timeout locale:
+`docs/model_specs/codex/e19/reports/pass_reduction_v49_20260909/PROTOCOL_IT.md`.
+
+Esito finale: V49F congelata prima dell'apertura (2026-09-09 08:34:43 UTC).
+Sei coppie di sviluppo e quattro sui seed nuovi: sempre -23 PASS, MOVE
+invariati, cassa +3; gate biologici locali superati. Seed 260909101 e 260909102
+ora esposti. Nessuna correzione F guidata da questi risultati. Runtime Kaggle
+e gate esterno non certificati; nessuna nuova submission.
+
+## Iterazione V50 — sviluppo respinto
+
+11 prototipi e 17 simulazioni sui seed già esposti 180903001–180903003,
+posto 0, controllo V4D. Diagnosi offline sempre sul replay esposto 106843637.
+Nessun nuovo autore Top o replay esterno acquisito. I seed 260909201 e
+260909202 sono stati preregistrati ma NON aperti: nessuna candidata supera
+il gate di sviluppo. I seed 260909101/102 restano esposti dalla V49.
+V49F resta il riferimento locale; nessuna submission V50. Report:
+`docs/model_specs/codex/e19/reports/pass_reduction_v50/REPORT_V50_IT.html`.
+# V51 — apertura validazione 2026-09-09
+
+V51A/B/C sviluppate sui seed già esposti 180903001, 180903002, 180903003.
+A e B: posto 0; C: entrambi i posti. V51C supera tutti i gate sui sei casi.
+Seed 260909201 e 260909202 aperti il 2026-09-09 alle 13:45:22 UTC per
+validazione abbinata V49F/V51C, entrambi i posti. Da questo momento non sono
+più seed non esposti per esperimenti successivi. Nessuna modifica del candidato
+durante la validazione. Bundle SHA256:
+`43d5c6c3b70cf2940afaa83f3a243cba75e52f89db459d31ecb96187c4f13fda`.
+Evidenza: `docs/model_specs/codex/e19/reports/pass_reduction_v51/validation_opened.json`.
+
+Esito finale V51C: tutti i gate aggregati passati su sei casi di sviluppo e
+quattro di validazione. Validazione: cash medio +64,50, PASS −45,50, MOVE −61,
+servizi e deficit invariati; il seed 260909201 peggiora su cash/PASS.
+Runtime standard seriale nei due posti passato; nessuna pubblicazione.
+A e B restano respinte. Campagna V51: 16 simulazioni candidate (A 3, B 3,
+C 10), quattro nuove baseline V49F di validazione e due prove standard C.
+
+
+## V51C esterna — coorte esposta il 9 settembre 2026
+
+Submission 56124996; tutte le 42 partite non-self della cronologia congelata (ultimo match 21:09:33 italiane). Nessun filtro sugli esiti. Corpus e identita in `docs/model_specs/codex/e19/reports/v51_external_20260909/cohort.json`; report KPI nella stessa cartella. Questi episodi e avversari sono esposti, non nuovi holdout. Self-play 107150551 escluso dai KPI.
+
+Episodi: 107151686, 107152774, 107153628, 107154604, 107155543, 107156796, 107157515, 107158521, 107159481, 107160458, 107161468, 107162458, 107163409, 107164294, 107165419, 107166391, 107167400, 107168357, 107169303, 107170305, 107171301, 107172297, 107173278, 107173932, 107174267, 107175270, 107176259, 107177221, 107178193, 107179165, 107180144, 107181153, 107182140, 107182744, 107183104, 107184088, 107185057, 107186050, 107193953, 107203215, 107206666, 107218201.
+
+
+## 2026-09-09 — benchmark V51C con tre nuovi leader
+
+Protocollo registrato prima dei replay in `docs/model_specs/codex/e19/reports/top_v51_20260909/PROTOCOL_IT.md`. Primi tre autori non esposti in ordine di classifica: ranghi 1, 4, 5. Otter Vibe e SpaTaro esclusi. Cinque replay recenti consecutivi per autore, tutti inclusi nel corpus generale, senza filtro economico o di topologia. I 15 episodi sono distinti. Controllo V51C: intera coorte esterna 42, non incontri appaiati.
+
+| Alias qualificato | Autore | Submission | Finali 770 | Corpus completo | Stato |
+|---|---|---|---|---|---|
+| Top770-004 | Himanshu Kumar | 56122709 | 4/5 | 107229371, 107224595, 107219476, 107218827, 107217016 | ESPOSTO; ciclo diagnostico V51C, non holdout futuro |
+| Top770-005 | pensukesan | 56123692 | 5/5 | 107228511, 107223760, 107222447, 107222804, 107217682 | ESPOSTO; ciclo diagnostico V51C, non holdout futuro |
+| Top770-006 | kanno | 56126209 | 4/5 | 107227127, 107226315, 107225350, 107224376, 107224215 | ESPOSTO; ciclo diagnostico V51C, non holdout futuro |
+
+Tutti i finali 770 sono conformi in 16/16 checkpoint D15-D30. Himanshu e kanno conservano ciascuno un finale 10-7-0 nel corpus completo. Nei grafici i corpus completi sono denominati Leader-V51-01/02/03; la sensibilita solo 770 e separata. Mix animale differente da V51C, anche nei replay 770; non affermare identita architetturale o indipendenza delle strategie dei leader. Avversari incidentali osservati, non nuovi benchmark qualificati.
+
+Report: `docs/model_specs/codex/e19/reports/top_v51_20260909/REPORT_TOP_V51_IT.html`, con tre confronti da 22 KPI. Nessuna modifica della candidata e nessuna nuova submission.

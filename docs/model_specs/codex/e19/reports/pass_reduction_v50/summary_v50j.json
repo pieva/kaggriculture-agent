@@ -1,0 +1,227 @@
+{
+  "variant": "v50j",
+  "partitions": {
+    "development": {
+      "n": 3,
+      "cases": [
+        {
+          "seed": 180903001,
+          "seat": 0,
+          "baseline": {
+            "cash": 99577.0,
+            "pass_count": 1043,
+            "share": 14.42400774443369,
+            "slots": 7231,
+            "move": 3459,
+            "hire_cash": 7544.0,
+            "FEED": 317,
+            "CARE": 281,
+            "WATER": 891,
+            "HARVEST": 388,
+            "losses": 2,
+            "escapes": 0
+          },
+          "candidate": {
+            "cash": 99776.0,
+            "pass_count": 969,
+            "share": 13.501463006827366,
+            "slots": 7177,
+            "move": 3479,
+            "hire_cash": 7541.0,
+            "FEED": 316,
+            "CARE": 281,
+            "WATER": 891,
+            "HARVEST": 388,
+            "losses": 2,
+            "escapes": 0
+          },
+          "delta": {
+            "cash": 199.0,
+            "pass_count": -74,
+            "share": -0.9225447376063229,
+            "slots": -54,
+            "move": 20,
+            "hire_cash": -3.0,
+            "FEED": -1,
+            "CARE": 0,
+            "WATER": 0,
+            "HARVEST": 0,
+            "losses": 0,
+            "escapes": 0
+          },
+          "baseline_deficits": {
+            "missed_feed": 19,
+            "missed_useful_care": 32,
+            "missed_critical_water": 2,
+            "decay_lost_units": 0,
+            "productive_water_loss_units": 2
+          },
+          "candidate_deficits": {
+            "missed_feed": 20,
+            "missed_useful_care": 32,
+            "missed_critical_water": 2,
+            "decay_lost_units": 0,
+            "productive_water_loss_units": 2
+          },
+          "errors": 0,
+          "incomplete": 0,
+          "calls": 719
+        },
+        {
+          "seed": 180903002,
+          "seat": 0,
+          "baseline": {
+            "cash": 114114.0,
+            "pass_count": 1043,
+            "share": 14.42400774443369,
+            "slots": 7231,
+            "move": 3459,
+            "hire_cash": 7544.0,
+            "FEED": 317,
+            "CARE": 281,
+            "WATER": 891,
+            "HARVEST": 388,
+            "losses": 2,
+            "escapes": 0
+          },
+          "candidate": {
+            "cash": 114214.0,
+            "pass_count": 969,
+            "share": 13.501463006827366,
+            "slots": 7177,
+            "move": 3479,
+            "hire_cash": 7541.0,
+            "FEED": 316,
+            "CARE": 281,
+            "WATER": 891,
+            "HARVEST": 388,
+            "losses": 2,
+            "escapes": 0
+          },
+          "delta": {
+            "cash": 100.0,
+            "pass_count": -74,
+            "share": -0.9225447376063229,
+            "slots": -54,
+            "move": 20,
+            "hire_cash": -3.0,
+            "FEED": -1,
+            "CARE": 0,
+            "WATER": 0,
+            "HARVEST": 0,
+            "losses": 0,
+            "escapes": 0
+          },
+          "baseline_deficits": {
+            "missed_feed": 19,
+            "missed_useful_care": 32,
+            "missed_critical_water": 2,
+            "decay_lost_units": 0,
+            "productive_water_loss_units": 2
+          },
+          "candidate_deficits": {
+            "missed_feed": 20,
+            "missed_useful_care": 32,
+            "missed_critical_water": 2,
+            "decay_lost_units": 0,
+            "productive_water_loss_units": 2
+          },
+          "errors": 0,
+          "incomplete": 0,
+          "calls": 719
+        },
+        {
+          "seed": 180903003,
+          "seat": 0,
+          "baseline": {
+            "cash": 62934.0,
+            "pass_count": 1053,
+            "share": 14.52814569536424,
+            "slots": 7248,
+            "move": 3488,
+            "hire_cash": 7316.0,
+            "FEED": 317,
+            "CARE": 288,
+            "WATER": 879,
+            "HARVEST": 379,
+            "losses": 6,
+            "escapes": 0
+          },
+          "candidate": {
+            "cash": 63065.0,
+            "pass_count": 1044,
+            "share": 14.467849223946786,
+            "slots": 7216,
+            "move": 3467,
+            "hire_cash": 7316.0,
+            "FEED": 317,
+            "CARE": 288,
+            "WATER": 879,
+            "HARVEST": 380,
+            "losses": 6,
+            "escapes": 0
+          },
+          "delta": {
+            "cash": 131.0,
+            "pass_count": -9,
+            "share": -0.060296471417453645,
+            "slots": -32,
+            "move": -21,
+            "hire_cash": 0.0,
+            "FEED": 0,
+            "CARE": 0,
+            "WATER": 0,
+            "HARVEST": 1,
+            "losses": 0,
+            "escapes": 0
+          },
+          "baseline_deficits": {
+            "missed_feed": 19,
+            "missed_useful_care": 26,
+            "missed_critical_water": 6,
+            "decay_lost_units": 0,
+            "productive_water_loss_units": 2
+          },
+          "candidate_deficits": {
+            "missed_feed": 19,
+            "missed_useful_care": 26,
+            "missed_critical_water": 6,
+            "decay_lost_units": 0,
+            "productive_water_loss_units": 2
+          },
+          "errors": 0,
+          "incomplete": 0,
+          "calls": 719
+        }
+      ],
+      "mean_delta": {
+        "cash": 143.33333333333334,
+        "pass_count": -52.333333333333336,
+        "share": -0.6351286488766998,
+        "slots": -46.666666666666664,
+        "move": 6.333333333333333,
+        "hire_cash": -2.0,
+        "FEED": -0.6666666666666666,
+        "CARE": 0,
+        "WATER": 0,
+        "HARVEST": 0.3333333333333333,
+        "losses": 0,
+        "escapes": 0
+      },
+      "gates": {
+        "complete": true,
+        "pass_absolute": true,
+        "pass_share": true,
+        "move": false,
+        "cash_mean": true,
+        "cash_cases": true,
+        "losses": true,
+        "escapes": true,
+        "services": false,
+        "obligations": false
+      }
+    }
+  },
+  "local_only": true,
+  "status": "REJECTED"
+}

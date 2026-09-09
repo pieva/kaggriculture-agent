@@ -1,4 +1,59 @@
-# Stato del progetto — V48, replay esterni e PASS
+[Checkpoint di ripresa e riproduzione](SESSION_CHECKPOINT_V51_20260909.md). Ramo di salvataggio: `codex/v51-benchmark-checkpoint`.
+
+## Benchmark esterno V51C con i leader — 9 settembre 2026
+
+Completati tre nuovi riferimenti, cinque replay ciascuno: Top770-004 Himanshu Kumar (4/5 finali 770), Top770-005 pensukesan (5/5), Top770-006 kanno (4/5). Corpus completi nei grafici Leader-V51-01/02/03; tutti i 15 replay inclusi. Controllo: V51C esterna n42. Confronto descrittivo, non appaiato; nuovi riferimenti ora esposti.
+
+D16-D25: V51C PASS 27,08, MOVE 154,18, personale 13, WATER 35,06, CARE 11,61, costo assunzioni 376/giorno. Leader: PASS 4,16-8,48, MOVE circa 113, personale circa 11,67, WATER circa 44, CARE circa 17, costo circa 204. Il divario permane nel sottoinsieme 770. I mix biologici differiscono; evitare tagli ciechi di personale. Prossima priorita diagnostica: servizio e percorsi nella fase produttiva. Nessuna variante implementata durante il benchmark.
+
+[Report benchmark e tre confronti da 22 KPI](model_specs/codex/e19/reports/top_v51_20260909/REPORT_TOP_V51_IT.html). Protocollo, catalogo, CSV e manifest nella stessa cartella.
+
+## Submission esterna V51C: audit replay del 9 settembre 2026
+
+Submission **56124996 Complete**, rating osservato **942,1**. Coorte congelata: 42 partite contro altri giocatori, 22 vittorie / 20 sconfitte, cassa media 79.977,83. Un self-play escluso. PASS medi 33,18/giorno (13,94% degli slot); D29 34,36 contro 76,34 nella coorte storica V48 (confronto non appaiato). Nessun obbligo biologico mancato a D29; restano deficit negli altri giorni. Nessuna fuga animale o perdita per decadimento. Il ledger rileva una differenza di 1 nella cassa dell'avversario Scorpi, episodio 107183104 step 566; cassa V51C riconciliata, risultati originali Kaggle conservati.
+
+[Report KPI esterno](model_specs/codex/e19/reports/v51_external_20260909/REPORT_V51_REPLAY_KPI_IT.html), coorte, hash, CSV e diagnosi nella stessa cartella. Ricevuta aggiornata in `docs/model_specs/codex/e19/artifacts/derived/v51_external_publication_receipt.json`. Tutti questi episodi sono ora esposti. Nessuna nuova variante o submission prodotta durante questo audit. Il checkpoint locale seguente precede la pubblicazione; le sue frasi di mancato invio sono storiche.
+
+# Stato del progetto — V48 pubblicata, V51C candidata locale verificata
+
+V51C supera lo sviluppo completo (sei casi, entrambi i posti): delta medi
+cash +345, PASS −53, MOVE −34,33 contro V49F, senza regressioni biologiche
+misurate. Parità completa di 719 azioni del bundle verificata; sette test passati.
+I seed 260909201/202 sono stati aperti per la validazione abbinata e sono ora
+esposti. Validazione completa passata: cash medio +64,50, PASS −45,50,
+MOVE −61, servizi e deficit invariati. Miglioramento non uniforme: il primo
+seed peggiora su cash e PASS. Runtime standard seriale passato in entrambi
+i posti, parità di 719 azioni, overage 32,75/44,93 s entro il budget di 60.
+V51C è candidata locale verificata, V49F resta baseline, V48 resta pubblicata.
+[Report V51](model_specs/codex/e19/reports/pass_reduction_v51/REPORT_V51_IT.html).
+Nessuna nuova submission.
+
+## Iterazione precedente V50
+
+La successiva iterazione [V50](model_specs/codex/e19/reports/pass_reduction_v50/REPORT_V50_IT.html)
+è respinta: 11 prototipi e 17 simulazioni di sviluppo, nessuna variante entro
+tutti i vincoli. J riduce i PASS medi di 52,33 ma aggiunge 6,33 MOVE medi e
+perde due FEED nel campione di tre seed. Il bundle J è conservato per audit.
+V49F restava il riferimento. In V50 i seed 260909201/202 non erano aperti, nessuna nuova
+submission. V49F supera le prove seriali standard nei due posti del seed
+180903001: 719 azioni in parità, nessun errore, overage entro il budget del
+motore. Esiti nel report V50; equivalenza hardware Kaggle non garantita.
+
+Aggiornamento 9 settembre 2026:
+[specifica V49F](model_specs/codex/e19/MODEL_SPEC_CODEX_770_V49F.md),
+[report e grafici](model_specs/codex/e19/reports/pass_reduction_v49_20260909/REPORT_V49_PASS_IT.html),
+[protocollo e dati](model_specs/codex/e19/reports/pass_reduction_v49_20260909/REPRODUCE_IT.md).
+Diagnosi strumentata a V48 invariata, candidata separata e nessuna pubblicazione.
+F rimuove il manovale completamente inattivo di D2, con posizione di ingresso
+compensata e due movimenti terminali inutili eliminati. Sei casi di sviluppo:
+−23 PASS, stessi MOVE, cassa +3 in ogni caso. Quattro coppie sui due seed nuovi
+confermano lo stesso risultato; servizi, raccolte, perdite e obblighi scoperti
+invariati. Tutti i gate locali superati, partizioni separate nel summary.
+Parità 719/719 nei due posti, 17 test superati. A–E respinte, prove conservate.
+Gli altri picchi PASS rimangono aperti; runtime Kaggle e avversari esterni
+non esposti non sono certificati da questi confronti locali.
+
+## Contesto storico V48 preservato
 
 ## Riferimento pubblicato
 

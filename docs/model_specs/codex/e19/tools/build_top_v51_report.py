@@ -1,0 +1,71 @@
+"""Complete 22-KPI comparisons with independently selected external leaders."""
+import csv,hashlib,html,json,re,sys
+from pathlib import Path
+from statistics import mean,median
+ROOT=Path(__file__).resolve().parents[5];sys.path.insert(0,str(ROOT))
+from docs.model_specs.codex.e19.tools.build_assisted_complete_kpi import FIELDS
+B=ROOT/'docs/model_specs/codex/e19';O=B/'reports/top_v51_20260909'
+read=lambda p:json.loads(p.read_text(encoding='utf-8'))
+dump=lambda p,x:p.write_text(json.dumps(x,ensure_ascii=False,indent=2),encoding='utf-8')
+esc=html.escape
+fmt=lambda x:f'{x:,.2f}'.replace(',','_').replace('.',',').replace('_','.')
+groups=read(O/'cohorts.json');catalog=read(O/'catalog.json')
+ps=[read(O/f"profile_{p['group']}_{p['episode']}.json") for p in catalog]
+by={name:[p for p in ps if p['group']==name] for name in ['V51C',*[g['alias'] for g in groups]]}
+assert [len(p) for p in by.values()]==[42,5,5,5]
+def table(head,rows):
+    return '<div class="tablewrap"><table><thead><tr>'+''.join('<th>'+esc(str(x))+'</th>' for x in head)+'</tr></thead><tbody>'+''.join('<tr>'+''.join('<td>'+str(x)+'</td>' for x in r)+'</tr>' for r in rows)+'</tbody></table></div>'
+def avg(group,key,a=1,b=30):return mean(d[key] for p in group for d in p['daily'][a-1:b])
+def share(group,a=1,b=30):return sum(d['PASS'] for p in group for d in p['daily'][a-1:b])/sum(d['slots'] for p in group for d in p['daily'][a-1:b])
+def aggregate(group):return {k:[[median(p['daily'][d][k] for p in group),min(p['daily'][d][k] for p in group),max(p['daily'][d][k] for p in group)] for d in range(30)] for k in [f[0] for f in FIELDS]+['unlocked_tiles']}
+summary={}
+for name,group in by.items():
+    summary[name]=dict(n=len(group),cash_mean=mean(p['cash'] for p in group),wins=sum(p['cash']>p['opponent_cash'] for p in group),pass_share=share(group),phases={f'D{a}-D{b}':{k:avg(group,k,a,b) for k in ['PASS','MOVE','people','crop_tiles','occupied_livestock_tiles','WATER','FEED','CARE','HARVEST','hire_cash','missed_feed','missed_useful_care','missed_critical_water','weed_tiles']} for a,b in [(1,11),(12,15),(16,25),(26,30),(1,30)]})
+    finals=[p for p in group if p['topology_D30']==[7,7,0,0]]
+    summary[name]['finals770']=len(finals)
+    summary[name]['qualified770']=len(group)==5 and len(finals)>=4 and all(p['checkpoints770']/16>=.8 for p in finals)
+summary['V51C']['qualified770']=None
+dump(O/'summary.json',summary)
+template=(B/'tools/complete_kpi_template.html').read_text(encoding='utf-8')
+template=template.replace('7 settembre 2026','9 settembre 2026').replace('770 assistita V1','V51C').replace("candidate:'770 assistita'","candidate:'V51C'")
+template=re.sub(r'<p class="note">.*?</p>','<p class="note">V51C congelata, 42 replay esterni; leader, cinque replay recenti consecutivi. Confronto descrittivo non appaiato. Linea verticale: separazione D11/D12. <a href="REPORT_TOP_V51_IT.html">Sintesi e selezione</a></p>',template,count=1)
+template=re.sub(r'<h2>Diagnosi</h2>.*?<details>','<h2>Diagnosi</h2><p>Consultare la sintesi per differenze di struttura, servizi e costo del lavoro. I volumi non misurano da soli utilita o efficienza: condizioni, avversari e mix biologico differiscono.</p><details>',template,flags=re.S)
+template=template.replace('Stessi corpus storici già utilizzati; nessun nuovo benchmark esterno o invio di submission. Rigenerazione dei 14 run locali verificata contro tutti i KPI, ledger e risultati precedenti.','Tre nuovi corpus esterni selezionati prima dei KPI; nessuna modifica di V51C o nuova submission. PASS e MOVE contano solo persone presenti prima del batch, come nel report esterno V51C.')
+for g in groups:
+    name=g['alias'];group=by[name]
+    payload=dict(topLabel=name,metrics=[dict(key=k,label=l,unit=u) for k,l,u in FIELDS],series=dict(candidate=aggregate(by['V51C']),top770=aggregate(group)),aggregation='median/min/max',checkpoint='H24 pre-last-batch D1-D29; terminal D30')
+    filename=f'V51C_VS_{name}_22_KPI'
+    dump(O/(filename+'.json'),payload)
+    economy=table(['Voce media per partita','V51C',name],[[label,*[fmt(mean(p['cash'] for p in xs)) if key=='cash' else fmt(sum(avg(xs,key,d,d) for d in range(1,31))) for xs in [by['V51C'],group]]] for key,label in [('cash','Cassa finale registrata'),('sales_cash','Vendite ricostruite'),('purchase_cash','Acquisti ricostruiti'),('hire_cash','Assunzioni'),('land_cash','Terreno')]])
+    replacements=dict(TITLE=f'V51C vs {name} · 22 KPI D1–D30',COHORTS=f'V51C: 42 partite · {name}: 5 partite, rango osservato {g["rank"]}',TOP=name,ECONOMY=economy,PROVENANCE=f'Leader: {esc(g["name"])}; submission {g["submission"]}; episodi '+', '.join(map(str,g['episodes']))+'. Tutti i casi inclusi, senza filtro sulla topologia. Residui di ricostruzione cassa nella sintesi.',DATAFILE=filename+'.json',DATA=json.dumps(payload,ensure_ascii=False).replace('</',r'<\/'),OTHER='REPORT_TOP_V51_IT.html')
+    page=template
+    for key,value in replacements.items():page=page.replace('__'+key+'__',value)
+    assert not re.search(r'__[A-Z]+__',page)
+    (O/(filename+'.html')).write_text(page,encoding='utf-8')
+body='<h1>V51C contro i leader · benchmark esterno</h1><p>9 settembre 2026. Tre riferimenti nuovi selezionati in ordine di classifica, cinque replay consecutivi ciascuno. V51C: intera coorte congelata di 42 partite. La candidata resta invariata.</p>'
+body+='<p><strong>La somiglianza con gli avversari precedenti non implica allineamento ai leader.</strong> Questo report misura dove i KPI differiscono; non sono partite dirette tra V51C e i tre riferimenti. Cassa media, vittorie e rating di corpus differenti non stimano la probabilita di batterli.</p>'
+body+=table(['Riferimento','Autore','Rango / rating osservati','Submission','Replay','Finali 770','Qualifica Top770'],[[g['alias'],esc(g['name']),f"{g['rank']} / {fmt(g['rating'])}",g['submission'],5,f"{summary[g['alias']]['finals770']}/5",'Si, criterio preliminare soddisfatto' if summary[g['alias']]['qualified770'] else 'No'] for g in groups])
+body+='<p>Otter Vibe e SpaTaro esclusi per esposizione precedente. Cinque replay per leader conservati anche se non 770: questo e un benchmark generale dei leader. La qualifica separata Top770 richiede almeno 4/5 finali 7-7-0-0 e almeno 80% dei checkpoint D15-D30 conformi in quei replay. Nessun alias Top770 assegnato se il criterio non passa.</p>'
+body+='<h2>Quadro medio</h2>'+table(['Coorte','n','Vittorie nel proprio corpus','Cassa finale','PASS/giorno','PASS/slot','MOVE/giorno','Persone','Colture','Animali','Assunzioni/giorno'],[[name,x['n'],x['wins'],fmt(x['cash_mean']),fmt(avg(by[name],'PASS')),fmt(100*x['pass_share'])+'%',*[fmt(avg(by[name],k)) for k in ['MOVE','people','crop_tiles','occupied_livestock_tiles','hire_cash']]] for name,x in summary.items()])
+body+='<h2>Fase produttiva D16–D25</h2>'+table(['KPI',*by.keys()],[[k,*[fmt(avg(xs,k,16,25)) for xs in by.values()]] for k in ['people','crop_tiles','occupied_livestock_tiles','PASS','MOVE','WATER','FEED','CARE','HARVEST','hire_cash','weed_tiles','missed_feed','missed_useful_care','missed_critical_water']])
+body+="<h2>Che cosa emerge</h2><p><strong>Il divario principale resta nella fase produttiva, non solo a D29.</strong> Fra D16 e D25 V51C ha 27,08 PASS e 154,18 MOVE/giorno, contro 4,16-8,48 PASS e 112,62-113,14 MOVE dei leader. Impiega 13 persone contro 11,66-11,68, con 54,15 colture contro 57,90 e 14 animali contro 16,80-17. Le assunzioni costano 376/giorno contro 203,52-205,04; WATER 35,06 contro circa 44, CARE 11,61 contro 16,80-17. Questi dati suggeriscono di approfondire la pianificazione dei servizi e dei percorsi nella fase produttiva.</p><p>La direzione resta la stessa limitando i riferimenti ai finali 770, come mostra la tabella seguente. La struttura dei pascoli non rende identico il problema: V51C usa 9 mucche e 5 pecore, i riferimenti circa 8 mucche, 6 pecore e 3 oche. Il costo di assunzione non va scalato linearmente con il numero di persone. Non basta tagliare lavoratori o sostituire i PASS: occorre preservare il servizio produttivo.</p><p>I tre riferimenti hanno diversi KPI quasi identici; potrebbero condividere principi o implementazioni. I replay non permettono di verificarlo, quindi non sono tre prove indipendenti della stessa soluzione. Nessuna struttura o calendario va copiato senza un confronto controllato.</p>"
+strict={name:[p for p in xs if p['topology_D30']==[7,7,0,0]] for name,xs in by.items()}
+body+='<h2>Sensibilita: solo finali 770, fase D16-D25</h2>'+table(['Coorte','n','PASS','MOVE','Persone','Colture','Mucche','Pecore','Oche','WATER','CARE','Assunzioni'],[[name,len(xs),*[fmt(avg(xs,k,16,25)) for k in ['PASS','MOVE','people','crop_tiles','COW','SHEEP','GOOSE','WATER','CARE','hire_cash']]] for name,xs in strict.items()])
+body+='<h2>Chiusura D29</h2>'+table(['KPI',*by.keys()],[[k,*[fmt(avg(xs,k,29,29)) for xs in by.values()]] for k in ['people','PASS','MOVE','WATER','FEED','CARE','HARVEST','hire_cash','missed_feed','missed_useful_care','missed_critical_water']])
+body+='<h2>Deficit biologici e perdite: media per partita</h2>'+table(['Misura',*by.keys()],[[k,*[fmt(30*avg(xs,k)) for xs in by.values()]] for k in ['missed_feed','missed_useful_care','missed_critical_water','decay_lost_units','productive_water_loss_units','verified_animal_losses']])
+body+='<p>Obblighi misurati dopo il batch finale D1-D29; D30 non ha refresh successivo. CARE utile secondo il modello biologico del progetto. Un deficit di servizio non equivale automaticamente a una perdita monetaria; unità esposte ad acqua critica non sono una stima di ricavo perso. Infestanti e colture non irrigate a H24 sono consistenze osservate, non cause accertate.</p>'
+body+='<h2>Confronti completi, 22 pannelli ciascuno</h2><ul>'+''.join(f'<li><a href="V51C_VS_{g["alias"]}_22_KPI.html">V51C vs {g["alias"]}</a> · cinque replay, mediana e min–max</li>' for g in groups)+'</ul>'
+body+='<h2>Topologia e risultati di tutti i replay dei leader</h2>'+table(['Alias','Replay','Avversario','Cassa','D15: Q0/Q1/Q2/Q3','D30: Q0/Q1/Q2/Q3','Checkpoint 770 D15-D30'],[[p['group'],f'<a href="https://www.kaggle.com/competitions/kaggriculture/leaderboard?submissionId={p["submission"]}&amp;episodeId={p["episode"]}">{p["episode"]}</a>',esc(p['opponent']),fmt(p['cash']),'/'.join(map(str,p['topology_D15'])),'/'.join(map(str,p['topology_D30'])),f"{p['checkpoints770']}/16"] for p in ps if p['group']!='V51C'])
+discrepancies=[dict(group=p['group'],episode=p['episode'],**d) for p in ps for d in p['cash_discrepancies']]
+body+='<h2>Integrita della ricostruzione</h2><p>57 profili (42 V51C + 15 leader), ciascuno con 720 stati e DONE per entrambi i giocatori. Engine locale verificato contro il manifest congelato. La cassa finale e quella originale dei replay. I residui dei flussi e le discrepanze per transizione sono conservati, senza correzioni silenziose.</p>'
+body+=table(['Coorte','Residuo totale cassa del soggetto'],[[name,fmt(sum(p['net_cash_residual'] for p in xs))] for name,xs in by.items()])
+body+=table(['Coorte','Episodio','Transizione','Seat','Registrata','Ricostruita'],[[d['group'],d['episode'],d['index'],d['seat'],d['expected'],d['reconstructed']] for d in discrepancies])
+body+='<h2>Metodo e limiti</h2><p>Statistiche della sintesi: medie; grafici: mediana puntuale con min–max, non intervalli di confidenza. PASS e MOVE sono comandi richiesti a persone realmente presenti prima del batch; servizi sono esecuzioni verificate. Cassa e consistenze a H24 prima dell’ultimo batch D1-D29, D30 terminale. Flussi su tutti i batch del giorno. Topologie indicano pascoli per quadrante, non tutto il mix animale o l’uso agricolo dei quadranti.</p><p>Campione piccolo per leader, mercati e avversari differenti, possibili strategie correlate. Il campione di ogni autore resta distinto: nessun punteggio aggregato dei tre leader. Questi corpus sono ora esposti, non holdout per versioni future. Nessuna nuova strategia o submission prodotta.</p><p><a href="PROTOCOL_IT.md">Protocollo prima dei replay</a> · <a href="cohorts.json">Selezione</a> · <a href="catalog.json">Catalogo e hash originali</a> · <a href="summary.json">Sintesi JSON</a> · <a href="daily_means.csv">Medie giornaliere CSV</a> · <a href="manifest.json">Manifest</a></p>'
+page='<!doctype html><html lang="it"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Benchmark V51C e leader</title><style>body{background:#191f27;color:#dce6ef;font:16px/1.6 system-ui;max-width:1400px;margin:24px auto;padding:20px}h1,h2,a{color:#91ccf4}table{border-collapse:collapse;font-size:13px;width:100%}td,th{padding:7px;border:1px solid #3f4d5d;text-align:right}td:first-child,th:first-child{text-align:left}.tablewrap{overflow:auto;margin:20px 0}strong{color:#4fe1c0}</style>'+body+'</html>'
+(O/'REPORT_TOP_V51_IT.html').write_text(page,encoding='utf-8')
+rows=[dict(group=name,day=d+1,**{k:mean(p['daily'][d][k] for p in xs) for k in [f[0] for f in FIELDS]+['slots','pass_share','hire_cash','missed_feed','missed_useful_care','missed_critical_water']}) for name,xs in by.items() for d in range(30)]
+with (O/'daily_means.csv').open('w',encoding='utf-8-sig',newline='') as f:
+    w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
+sources=[Path(__file__),B/'tools/analyze_top_v51.py',B/'tools/download_top_v51.py',B/'tools/replay_real_worker_slots.py',B/'tools/audit_v51_external_ledger.py',B/'tools/audit_v49_obligations.py',B/'tools/portfolio_workforce_v16.py',B/'tools/complete_kpi_template.html',B/'tools/build_assisted_complete_kpi.py',ROOT/'experiments/e18/tools/common/replay_daily_operational_kpi.py',ROOT/'docs/model_specs/codex/e18/tools/build_e18_27_top770_complete_kpi.py',ROOT/'docs/model_specs/codex/e18/tools/build_e18_26_jesse_770_d20_trajectories.py',ROOT/'docs/foundation/ENGINE_SOURCE_MANIFEST.json',B/'reports/v51_external_20260909/manifest.json']
+dump(O/'manifest.json',dict(sources={p.relative_to(ROOT).as_posix():hashlib.sha256(p.read_bytes()).hexdigest() for p in sources},raw=catalog,outputs={p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in O.iterdir() if p.is_file() and p.name!='manifest.json' and p.suffix!='.log'}))
+print(json.dumps(summary,indent=2))

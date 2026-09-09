@@ -1,0 +1,782 @@
+[
+  {
+    "hour": 1,
+    "result": [
+      6,
+      null
+    ],
+    "active": {
+      "0": {
+        "target": [
+          3,
+          5
+        ],
+        "steps": [
+          [
+            [
+              "WEST"
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          [
+            [
+              "SOUTH"
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          [
+            [
+              "WATER"
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        ],
+        "kind": "SERVICE"
+      }
+    },
+    "final_attempt": {
+      "warehouse": {
+        "WHEAT": 14,
+        "CARROT": 0,
+        "TOMATO": 0,
+        "STRAWBERRY": 0,
+        "MELON": 0,
+        "EGG": 0,
+        "MILK": 0,
+        "WOOL": 8,
+        "FERTILIZER": 2,
+        "GOOSE": 0,
+        "COW": 0,
+        "SHEEP": 0
+      },
+      "count": 6,
+      "budgets": [
+        20,
+        23,
+        23,
+        23,
+        23,
+        23,
+        23
+      ],
+      "committed_pickups": {},
+      "unassigned": [
+        [
+          [
+            3,
+            2
+          ],
+          [
+            [
+              "FEED"
+            ],
+            [
+              "COLLECT_FERTILIZER"
+            ]
+          ],
+          3,
+          1,
+          "SERVICE"
+        ],
+        [
+          [
+            3,
+            3
+          ],
+          [
+            [
+              "FEED"
+            ],
+            [
+              "COLLECT_FERTILIZER"
+            ]
+          ],
+          3,
+          1,
+          "SERVICE"
+        ],
+        [
+          [
+            3,
+            4
+          ],
+          [
+            [
+              "FEED"
+            ],
+            [
+              "COLLECT_FERTILIZER"
+            ]
+          ],
+          3,
+          1,
+          "SERVICE"
+        ],
+        [
+          [
+            4,
+            4
+          ],
+          [
+            [
+              "FEED"
+            ],
+            [
+              "HARVEST"
+            ],
+            [
+              "COLLECT_FERTILIZER"
+            ]
+          ],
+          3,
+          4,
+          "SERVICE"
+        ],
+        [
+          [
+            0,
+            7
+          ],
+          [
+            [
+              "WATER"
+            ]
+          ],
+          2,
+          1,
+          "SERVICE"
+        ],
+        [
+          [
+            0,
+            9
+          ],
+          [
+            [
+              "FERTILIZE"
+            ],
+            [
+              "WATER"
+            ]
+          ],
+          2,
+          1,
+          "SERVICE"
+        ],
+        [
+          [
+            1,
+            2
+          ],
+          [
+            [
+              "WATER"
+            ]
+          ],
+          2,
+          1,
+          "SERVICE"
+        ],
+        [
+          [
+            1,
+            6
+          ],
+          [
+            [
+              "WATER"
+            ]
+          ],
+          2,
+          1,
+          "SERVICE"
+        ],
+        [
+          [
+            1,
+            8
+          ],
+          [
+            [
+              "FERTILIZE"
+            ],
+            [
+              "WATER"
+            ],
+            [
+              "HARVEST"
+            ]
+          ],
+          2,
+          207,
+          "SERVICE"
+        ],
+        [
+          [
+            2,
+            7
+          ],
+          [
+            [
+              "WATER"
+            ]
+          ],
+          2,
+          1,
+          "SERVICE"
+        ],
+        [
+          [
+            3,
+            6
+          ],
+          [
+            [
+              "WATER"
+            ]
+          ],
+          2,
+          1,
+          "SERVICE"
+        ],
+        [
+          [
+            4,
+            5
+          ],
+          [
+            [
+              "WATER"
+            ]
+          ],
+          2,
+          1,
+          "SERVICE"
+        ],
+        [
+          [
+            8,
+            3
+          ],
+          [
+            [
+              "HARVEST"
+            ]
+          ],
+          2,
+          207,
+          "SERVICE"
+        ],
+        [
+          [
+            9,
+            2
+          ],
+          [
+            [
+              "HARVEST"
+            ]
+          ],
+          2,
+          207,
+          "SERVICE"
+        ]
+      ]
+    }
+  },
+  {
+    "hour": 2,
+    "result": [
+      6,
+      null
+    ],
+    "active": {
+      "0": {
+        "target": [
+          3,
+          5
+        ],
+        "steps": [
+          [
+            [
+              "SOUTH"
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          [
+            [
+              "WATER"
+            ],
+            [
+              3,
+              5
+            ]
+          ]
+        ],
+        "kind": "SERVICE"
+      },
+      "2": {
+        "target": [
+          5,
+          2
+        ],
+        "steps": [
+          [
+            [
+              "PICKUP",
+              "WHEAT",
+              4
+            ],
+            [
+              5,
+              4
+            ]
+          ],
+          [
+            [
+              "NORTH"
+            ],
+            [
+              5,
+              3
+            ]
+          ],
+          [
+            [
+              "NORTH"
+            ],
+            [
+              5,
+              2
+            ]
+          ],
+          [
+            [
+              "FEED"
+            ],
+            [
+              5,
+              2
+            ]
+          ],
+          [
+            [
+              "HARVEST"
+            ],
+            [
+              5,
+              2
+            ]
+          ],
+          [
+            [
+              "COLLECT_FERTILIZER"
+            ],
+            [
+              5,
+              2
+            ]
+          ]
+        ],
+        "kind": "SERVICE"
+      },
+      "4": {
+        "target": [
+          6,
+          4
+        ],
+        "steps": [
+          [
+            [
+              "NORTH"
+            ],
+            [
+              5,
+              4
+            ]
+          ],
+          [
+            [
+              "PICKUP",
+              "WHEAT",
+              6
+            ],
+            [
+              5,
+              4
+            ]
+          ],
+          [
+            [
+              "EAST"
+            ],
+            [
+              6,
+              4
+            ]
+          ],
+          [
+            [
+              "FEED"
+            ],
+            [
+              6,
+              4
+            ]
+          ],
+          [
+            [
+              "HARVEST"
+            ],
+            [
+              6,
+              4
+            ]
+          ],
+          [
+            [
+              "COLLECT_FERTILIZER"
+            ],
+            [
+              6,
+              4
+            ]
+          ]
+        ],
+        "kind": "SERVICE"
+      },
+      "6": {
+        "target": [
+          7,
+          4
+        ],
+        "steps": [
+          [
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              5,
+              4
+            ]
+          ],
+          [
+            [
+              "EAST"
+            ],
+            [
+              6,
+              4
+            ]
+          ],
+          [
+            [
+              "EAST"
+            ],
+            [
+              7,
+              4
+            ]
+          ],
+          [
+            [
+              "FEED"
+            ],
+            [
+              7,
+              4
+            ]
+          ],
+          [
+            [
+              "COLLECT_FERTILIZER"
+            ],
+            [
+              7,
+              4
+            ]
+          ]
+        ],
+        "kind": "SERVICE"
+      },
+      "1": {
+        "target": [
+          4,
+          2
+        ],
+        "steps": [
+          [
+            [
+              "PICKUP",
+              "WHEAT",
+              2
+            ],
+            [
+              4,
+              4
+            ]
+          ],
+          [
+            [
+              "NORTH"
+            ],
+            [
+              4,
+              3
+            ]
+          ],
+          [
+            [
+              "NORTH"
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          [
+            [
+              "FEED"
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          [
+            [
+              "HARVEST"
+            ],
+            [
+              4,
+              2
+            ]
+          ],
+          [
+            [
+              "COLLECT_FERTILIZER"
+            ],
+            [
+              4,
+              2
+            ]
+          ]
+        ],
+        "kind": "SERVICE"
+      },
+      "3": {
+        "target": [
+          3,
+          9
+        ],
+        "steps": [
+          [
+            [
+              "WEST"
+            ],
+            [
+              3,
+              5
+            ]
+          ],
+          [
+            [
+              "SOUTH"
+            ],
+            [
+              3,
+              6
+            ]
+          ],
+          [
+            [
+              "SOUTH"
+            ],
+            [
+              3,
+              7
+            ]
+          ],
+          [
+            [
+              "SOUTH"
+            ],
+            [
+              3,
+              8
+            ]
+          ],
+          [
+            [
+              "SOUTH"
+            ],
+            [
+              3,
+              9
+            ]
+          ],
+          [
+            [
+              "WATER"
+            ],
+            [
+              3,
+              9
+            ]
+          ],
+          [
+            [
+              "HARVEST"
+            ],
+            [
+              3,
+              9
+            ]
+          ]
+        ],
+        "kind": "SERVICE"
+      },
+      "5": {
+        "target": [
+          5,
+          0
+        ],
+        "steps": [
+          [
+            [
+              "EAST"
+            ],
+            [
+              5,
+              4
+            ]
+          ],
+          [
+            [
+              "NORTH"
+            ],
+            [
+              5,
+              3
+            ]
+          ],
+          [
+            [
+              "NORTH"
+            ],
+            [
+              5,
+              2
+            ]
+          ],
+          [
+            [
+              "NORTH"
+            ],
+            [
+              5,
+              1
+            ]
+          ],
+          [
+            [
+              "NORTH"
+            ],
+            [
+              5,
+              0
+            ]
+          ],
+          [
+            [
+              "WATER"
+            ],
+            [
+              5,
+              0
+            ]
+          ],
+          [
+            [
+              "HARVEST"
+            ],
+            [
+              5,
+              0
+            ]
+          ]
+        ],
+        "kind": "SERVICE"
+      }
+    },
+    "final_attempt": {
+      "warehouse": {
+        "WHEAT": 14,
+        "CARROT": 0,
+        "TOMATO": 0,
+        "STRAWBERRY": 0,
+        "MELON": 0,
+        "EGG": 0,
+        "MILK": 0,
+        "WOOL": 0,
+        "FERTILIZER": 2,
+        "GOOSE": 0,
+        "COW": 0,
+        "SHEEP": 0
+      },
+      "count": 6,
+      "budgets": [
+        20,
+        16,
+        16,
+        15,
+        16,
+        15,
+        17,
+        22,
+        22,
+        22,
+        22,
+        22,
+        22
+      ],
+      "committed_pickups": {
+        "WHEAT": 14
+      },
+      "unassigned": [],
+      "pickups": {
+        "WHEAT": 17,
+        "FERTILIZER": 2
+      },
+      "costs": [
+        19,
+        15,
+        14,
+        7,
+        15,
+        15,
+        17,
+        18,
+        21,
+        14,
+        11,
+        0,
+        21
+      ]
+    }
+  }
+]

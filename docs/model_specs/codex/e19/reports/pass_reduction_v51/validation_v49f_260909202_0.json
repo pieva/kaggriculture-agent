@@ -1,0 +1,2776 @@
+{
+  "variant": "v49f",
+  "seed": 260909202,
+  "seat": 0,
+  "split": "validation",
+  "opponent": "V4D exposed internal control",
+  "reward": 30468.0,
+  "opponent_reward": 31062.0,
+  "baseline_sha256": "eabe7bc782fcffab354ffbe9f454bdc1a1b5d37419e30b957c5d260193c96f31",
+  "candidate_sources": {},
+  "actions_sha256": "65b678b7442564c1b726d7f525d394220abf186cfc0699d63cefd055e757f94a",
+  "daily": [
+    {
+      "day": 1,
+      "slots": 134,
+      "pass_count": 35,
+      "move": 41,
+      "cash": 22.0,
+      "requested": {
+        "PASS": 35,
+        "NORTH": 17,
+        "WEST": 21,
+        "PICKUP": 6,
+        "BUILD_PASTURE": 4,
+        "PLANT": 19,
+        "PLACE": 4,
+        "WATER": 19,
+        "CARE": 4,
+        "FEED": 2,
+        "EAST": 3
+      },
+      "executed": {
+        "BUILD_PASTURE": 4,
+        "PLANT": 19,
+        "WATER": 19,
+        "CARE": 4,
+        "FEED": 2
+      },
+      "hire_cash": 12.0,
+      "animals": 4,
+      "crops": 19
+    },
+    {
+      "day": 2,
+      "slots": 93,
+      "pass_count": 46,
+      "move": 24,
+      "cash": 240.0,
+      "requested": {
+        "PICKUP": 2,
+        "FEED": 4,
+        "PASS": 46,
+        "WEST": 13,
+        "CARE": 4,
+        "NORTH": 8,
+        "COLLECT_FERTILIZER": 4,
+        "PLACE": 3,
+        "BUILD_PASTURE": 2,
+        "WATER": 4,
+        "EAST": 2,
+        "SOUTH": 1
+      },
+      "executed": {
+        "FEED": 4,
+        "CARE": 4,
+        "BUILD_PASTURE": 2,
+        "WATER": 4
+      },
+      "hire_cash": 4.0,
+      "animals": 4,
+      "crops": 19
+    },
+    {
+      "day": 3,
+      "slots": 116,
+      "pass_count": 28,
+      "move": 40,
+      "cash": 204.0,
+      "requested": {
+        "PICKUP": 2,
+        "FEED": 4,
+        "PASS": 28,
+        "WEST": 16,
+        "CARE": 4,
+        "NORTH": 16,
+        "COLLECT_FERTILIZER": 4,
+        "PLACE": 3,
+        "WATER": 22,
+        "EAST": 5,
+        "HARVEST": 6,
+        "SOUTH": 3,
+        "PLANT": 3
+      },
+      "executed": {
+        "FEED": 4,
+        "CARE": 4,
+        "WATER": 22,
+        "HARVEST": 6,
+        "PLANT": 3
+      },
+      "hire_cash": 7.0,
+      "animals": 5,
+      "crops": 17
+    },
+    {
+      "day": 4,
+      "slots": 139,
+      "pass_count": 28,
+      "move": 61,
+      "cash": 247.0,
+      "requested": {
+        "PICKUP": 2,
+        "WEST": 21,
+        "FEED": 3,
+        "NORTH": 22,
+        "CARE": 5,
+        "COLLECT_FERTILIZER": 5,
+        "WATER": 23,
+        "HARVEST": 4,
+        "SOUTH": 13,
+        "PLANT": 4,
+        "EAST": 5,
+        "PASS": 28,
+        "PLACE": 3,
+        "DROP": 1
+      },
+      "executed": {
+        "FEED": 3,
+        "CARE": 5,
+        "WATER": 20,
+        "HARVEST": 1,
+        "PLANT": 4
+      },
+      "hire_cash": 12.0,
+      "animals": 5,
+      "crops": 19
+    },
+    {
+      "day": 5,
+      "slots": 116,
+      "pass_count": 37,
+      "move": 42,
+      "cash": 652.0,
+      "requested": {
+        "PICKUP": 1,
+        "FEED": 5,
+        "PASS": 37,
+        "WEST": 11,
+        "CARE": 6,
+        "COLLECT_FERTILIZER": 6,
+        "NORTH": 14,
+        "WATER": 10,
+        "EAST": 6,
+        "HARVEST": 3,
+        "SOUTH": 11,
+        "PLANT": 3,
+        "PLACE": 2,
+        "DROP": 1
+      },
+      "executed": {
+        "FEED": 5,
+        "CARE": 6,
+        "WATER": 10,
+        "HARVEST": 3,
+        "PLANT": 3
+      },
+      "hire_cash": 7.0,
+      "animals": 6,
+      "crops": 19
+    },
+    {
+      "day": 6,
+      "slots": 137,
+      "pass_count": 36,
+      "move": 48,
+      "cash": 853.0,
+      "requested": {
+        "PICKUP": 2,
+        "WEST": 18,
+        "FEED": 6,
+        "PASS": 36,
+        "CARE": 6,
+        "NORTH": 19,
+        "COLLECT_FERTILIZER": 6,
+        "WATER": 23,
+        "EAST": 6,
+        "HARVEST": 4,
+        "PLACE": 2,
+        "PLANT": 4,
+        "SOUTH": 5
+      },
+      "executed": {
+        "FEED": 6,
+        "CARE": 6,
+        "WATER": 23,
+        "HARVEST": 4,
+        "PLANT": 4
+      },
+      "hire_cash": 12.0,
+      "animals": 6,
+      "crops": 19
+    },
+    {
+      "day": 7,
+      "slots": 207,
+      "pass_count": 16,
+      "move": 102,
+      "cash": 394.0,
+      "requested": {
+        "WEST": 36,
+        "NORTH": 26,
+        "PICKUP": 7,
+        "PASS": 16,
+        "HARVEST": 5,
+        "SOUTH": 5,
+        "FEED": 8,
+        "CARE": 8,
+        "EAST": 35,
+        "COLLECT_FERTILIZER": 6,
+        "PLACE": 7,
+        "WATER": 28,
+        "BUILD_PASTURE": 7,
+        "PLANT": 13
+      },
+      "executed": {
+        "HARVEST": 5,
+        "FEED": 8,
+        "CARE": 8,
+        "WATER": 28,
+        "BUILD_PASTURE": 7,
+        "PLANT": 13
+      },
+      "hire_cash": 54.0,
+      "animals": 8,
+      "crops": 31
+    },
+    {
+      "day": 8,
+      "slots": 206,
+      "pass_count": 38,
+      "move": 88,
+      "cash": 466.0,
+      "requested": {
+        "PICKUP": 9,
+        "WEST": 23,
+        "NORTH": 34,
+        "FEED": 7,
+        "CARE": 10,
+        "COLLECT_FERTILIZER": 8,
+        "EAST": 24,
+        "PLACE": 9,
+        "SOUTH": 7,
+        "WATER": 29,
+        "PASS": 38,
+        "PLANT": 8
+      },
+      "executed": {
+        "FEED": 7,
+        "CARE": 10,
+        "WATER": 29,
+        "PLANT": 8
+      },
+      "hire_cash": 54.0,
+      "animals": 10,
+      "crops": 37
+    },
+    {
+      "day": 9,
+      "slots": 247,
+      "pass_count": 34,
+      "move": 113,
+      "cash": 797.0,
+      "requested": {
+        "NORTH": 38,
+        "HARVEST": 7,
+        "PICKUP": 7,
+        "EAST": 28,
+        "SOUTH": 13,
+        "FEED": 11,
+        "WEST": 34,
+        "PLACE": 7,
+        "CARE": 13,
+        "PASS": 34,
+        "COLLECT_FERTILIZER": 10,
+        "WATER": 40,
+        "PLANT": 5
+      },
+      "executed": {
+        "HARVEST": 7,
+        "FEED": 11,
+        "CARE": 12,
+        "WATER": 40,
+        "PLANT": 5
+      },
+      "hire_cash": 143.0,
+      "animals": 12,
+      "crops": 37
+    },
+    {
+      "day": 10,
+      "slots": 274,
+      "pass_count": 66,
+      "move": 105,
+      "cash": 2048.0,
+      "requested": {
+        "PICKUP": 5,
+        "WEST": 22,
+        "EAST": 34,
+        "HARVEST": 6,
+        "FEED": 13,
+        "NORTH": 38,
+        "CARE": 13,
+        "PLACE": 5,
+        "COLLECT_FERTILIZER": 13,
+        "SOUTH": 11,
+        "WATER": 41,
+        "PASS": 66,
+        "PLANT": 4,
+        "DROP": 3
+      },
+      "executed": {
+        "HARVEST": 6,
+        "FEED": 12,
+        "CARE": 12,
+        "WATER": 41,
+        "PLANT": 4
+      },
+      "hire_cash": 232.0,
+      "animals": 12,
+      "crops": 37
+    },
+    {
+      "day": 11,
+      "slots": 275,
+      "pass_count": 56,
+      "move": 120,
+      "cash": 15794.0,
+      "requested": {
+        "NORTH": 41,
+        "WEST": 33,
+        "PICKUP": 3,
+        "WATER": 21,
+        "FEED": 13,
+        "HARVEST": 15,
+        "CARE": 13,
+        "EAST": 21,
+        "COLLECT_FERTILIZER": 13,
+        "SOUTH": 25,
+        "PLACE": 11,
+        "PASS": 56,
+        "PLANT": 9,
+        "BUILD_PASTURE": 1
+      },
+      "executed": {
+        "WATER": 21,
+        "FEED": 12,
+        "HARVEST": 15,
+        "CARE": 12,
+        "PLANT": 9,
+        "BUILD_PASTURE": 1
+      },
+      "hire_cash": 232.0,
+      "animals": 12,
+      "crops": 34
+    },
+    {
+      "day": 12,
+      "slots": 290,
+      "pass_count": 51,
+      "move": 119,
+      "cash": 15984.0,
+      "requested": {
+        "PICKUP": 12,
+        "WEST": 30,
+        "PASS": 51,
+        "NORTH": 40,
+        "EAST": 31,
+        "FEED": 13,
+        "SOUTH": 18,
+        "CARE": 13,
+        "PLANT": 21,
+        "COLLECT_FERTILIZER": 12,
+        "WATER": 47,
+        "HARVEST": 1,
+        "PLACE": 1
+      },
+      "executed": {
+        "FEED": 13,
+        "CARE": 13,
+        "PLANT": 21,
+        "WATER": 47,
+        "HARVEST": 1
+      },
+      "hire_cash": 376.0,
+      "animals": 13,
+      "crops": 55
+    },
+    {
+      "day": 13,
+      "slots": 253,
+      "pass_count": 50,
+      "move": 110,
+      "cash": 16136.0,
+      "requested": {
+        "EAST": 25,
+        "PICKUP": 9,
+        "NORTH": 32,
+        "WEST": 36,
+        "WATER": 29,
+        "FEED": 14,
+        "CARE": 14,
+        "HARVEST": 6,
+        "COLLECT_FERTILIZER": 13,
+        "PASS": 50,
+        "SOUTH": 17,
+        "PLANT": 6,
+        "PLACE": 1,
+        "DROP": 1
+      },
+      "executed": {
+        "WATER": 29,
+        "FEED": 14,
+        "CARE": 14,
+        "HARVEST": 6,
+        "PLANT": 6
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 60
+    },
+    {
+      "day": 14,
+      "slots": 284,
+      "pass_count": 44,
+      "move": 136,
+      "cash": 17930.0,
+      "requested": {
+        "WEST": 39,
+        "EAST": 29,
+        "PICKUP": 6,
+        "WATER": 46,
+        "FEED": 14,
+        "PASS": 44,
+        "SOUTH": 27,
+        "CARE": 14,
+        "NORTH": 41,
+        "COLLECT_FERTILIZER": 14,
+        "HARVEST": 5,
+        "PLANT": 5
+      },
+      "executed": {
+        "WATER": 46,
+        "FEED": 14,
+        "CARE": 14,
+        "HARVEST": 5,
+        "PLANT": 5
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 61
+    },
+    {
+      "day": 15,
+      "slots": 283,
+      "pass_count": 45,
+      "move": 136,
+      "cash": 19817.0,
+      "requested": {
+        "WEST": 36,
+        "NORTH": 36,
+        "SOUTH": 29,
+        "HARVEST": 14,
+        "WATER": 30,
+        "PICKUP": 4,
+        "EAST": 35,
+        "FEED": 13,
+        "CARE": 13,
+        "PLANT": 8,
+        "COLLECT_FERTILIZER": 13,
+        "PASS": 45,
+        "FERTILIZE": 4,
+        "DROP": 3
+      },
+      "executed": {
+        "HARVEST": 14,
+        "WATER": 30,
+        "FEED": 13,
+        "CARE": 13,
+        "PLANT": 8,
+        "FERTILIZE": 4
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 61
+    },
+    {
+      "day": 16,
+      "slots": 294,
+      "pass_count": 44,
+      "move": 153,
+      "cash": 20713.0,
+      "requested": {
+        "PICKUP": 13,
+        "EAST": 36,
+        "WEST": 44,
+        "SOUTH": 29,
+        "NORTH": 44,
+        "HARVEST": 15,
+        "PASS": 44,
+        "WATER": 36,
+        "FEED": 14,
+        "CARE": 5,
+        "COLLECT_FERTILIZER": 5,
+        "FERTILIZE": 4,
+        "PLANT": 3,
+        "DROP": 2
+      },
+      "executed": {
+        "HARVEST": 15,
+        "WATER": 36,
+        "FEED": 14,
+        "CARE": 5,
+        "FERTILIZE": 4,
+        "PLANT": 3
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 57
+    },
+    {
+      "day": 17,
+      "slots": 284,
+      "pass_count": 34,
+      "move": 138,
+      "cash": 22954.0,
+      "requested": {
+        "WEST": 36,
+        "EAST": 42,
+        "NORTH": 47,
+        "SOUTH": 13,
+        "WATER": 36,
+        "PICKUP": 8,
+        "FEED": 14,
+        "PLANT": 7,
+        "HARVEST": 18,
+        "CARE": 13,
+        "COLLECT_FERTILIZER": 13,
+        "PASS": 34,
+        "FERTILIZE": 2,
+        "DROP": 1
+      },
+      "executed": {
+        "WATER": 36,
+        "FEED": 14,
+        "PLANT": 7,
+        "HARVEST": 18,
+        "CARE": 13,
+        "FERTILIZE": 2
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 61
+    },
+    {
+      "day": 18,
+      "slots": 294,
+      "pass_count": 23,
+      "move": 162,
+      "cash": 24665.0,
+      "requested": {
+        "WEST": 48,
+        "EAST": 34,
+        "WATER": 41,
+        "NORTH": 44,
+        "SOUTH": 36,
+        "PICKUP": 9,
+        "FEED": 14,
+        "CARE": 12,
+        "COLLECT_FERTILIZER": 12,
+        "HARVEST": 16,
+        "FERTILIZE": 2,
+        "PASS": 23,
+        "PLANT": 3
+      },
+      "executed": {
+        "WATER": 41,
+        "FEED": 14,
+        "CARE": 12,
+        "HARVEST": 16,
+        "FERTILIZE": 2,
+        "PLANT": 3
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 59
+    },
+    {
+      "day": 19,
+      "slots": 294,
+      "pass_count": 33,
+      "move": 146,
+      "cash": 25465.0,
+      "requested": {
+        "WEST": 42,
+        "NORTH": 42,
+        "HARVEST": 21,
+        "PICKUP": 4,
+        "WATER": 35,
+        "SOUTH": 17,
+        "EAST": 45,
+        "FEED": 14,
+        "CARE": 14,
+        "PLANT": 10,
+        "COLLECT_FERTILIZER": 14,
+        "PASS": 33,
+        "FERTILIZE": 3
+      },
+      "executed": {
+        "HARVEST": 21,
+        "WATER": 35,
+        "FEED": 14,
+        "CARE": 14,
+        "PLANT": 10,
+        "FERTILIZE": 3
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 61
+    },
+    {
+      "day": 20,
+      "slots": 293,
+      "pass_count": 34,
+      "move": 139,
+      "cash": 25901.0,
+      "requested": {
+        "SOUTH": 26,
+        "WEST": 35,
+        "PICKUP": 11,
+        "NORTH": 45,
+        "FEED": 14,
+        "WATER": 43,
+        "EAST": 33,
+        "CARE": 13,
+        "HARVEST": 17,
+        "COLLECT_FERTILIZER": 13,
+        "FERTILIZE": 6,
+        "PLANT": 3,
+        "PASS": 34
+      },
+      "executed": {
+        "FEED": 14,
+        "WATER": 43,
+        "CARE": 13,
+        "HARVEST": 17,
+        "FERTILIZE": 6,
+        "PLANT": 3
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 61
+    },
+    {
+      "day": 21,
+      "slots": 294,
+      "pass_count": 11,
+      "move": 166,
+      "cash": 26300.0,
+      "requested": {
+        "SOUTH": 34,
+        "WEST": 51,
+        "EAST": 33,
+        "HARVEST": 21,
+        "NORTH": 48,
+        "PICKUP": 8,
+        "FEED": 14,
+        "CARE": 14,
+        "FERTILIZE": 8,
+        "PASS": 11,
+        "WATER": 36,
+        "PLANT": 2,
+        "COLLECT_FERTILIZER": 14
+      },
+      "executed": {
+        "HARVEST": 21,
+        "FEED": 14,
+        "CARE": 14,
+        "FERTILIZE": 8,
+        "WATER": 36,
+        "PLANT": 2
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 56
+    },
+    {
+      "day": 22,
+      "slots": 294,
+      "pass_count": 15,
+      "move": 152,
+      "cash": 26732.0,
+      "requested": {
+        "WEST": 37,
+        "EAST": 41,
+        "PICKUP": 7,
+        "NORTH": 45,
+        "SOUTH": 29,
+        "FEED": 14,
+        "CARE": 13,
+        "HARVEST": 26,
+        "COLLECT_FERTILIZER": 13,
+        "PASS": 15,
+        "FERTILIZE": 6,
+        "WATER": 41,
+        "PLANT": 5,
+        "DIG": 2
+      },
+      "executed": {
+        "FEED": 14,
+        "CARE": 13,
+        "HARVEST": 26,
+        "FERTILIZE": 6,
+        "WATER": 41,
+        "PLANT": 5,
+        "DIG": 2
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 55
+    },
+    {
+      "day": 23,
+      "slots": 293,
+      "pass_count": 16,
+      "move": 173,
+      "cash": 26772.0,
+      "requested": {
+        "WEST": 44,
+        "EAST": 32,
+        "NORTH": 51,
+        "HARVEST": 27,
+        "DIG": 6,
+        "PLANT": 13,
+        "WATER": 27,
+        "SOUTH": 46,
+        "FEED": 11,
+        "CARE": 6,
+        "COLLECT_FERTILIZER": 6,
+        "PICKUP": 4,
+        "PASS": 16,
+        "FERTILIZE": 2,
+        "DROP": 2
+      },
+      "executed": {
+        "HARVEST": 27,
+        "DIG": 6,
+        "PLANT": 13,
+        "WATER": 27,
+        "FEED": 11,
+        "CARE": 6,
+        "FERTILIZE": 2
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 50
+    },
+    {
+      "day": 24,
+      "slots": 294,
+      "pass_count": 22,
+      "move": 151,
+      "cash": 26349.0,
+      "requested": {
+        "PICKUP": 12,
+        "EAST": 34,
+        "WEST": 43,
+        "SOUTH": 30,
+        "NORTH": 44,
+        "PASS": 22,
+        "FEED": 14,
+        "HARVEST": 25,
+        "CARE": 10,
+        "PLANT": 10,
+        "WATER": 35,
+        "COLLECT_FERTILIZER": 10,
+        "FERTILIZE": 2,
+        "DIG": 2,
+        "DROP": 1
+      },
+      "executed": {
+        "FEED": 14,
+        "HARVEST": 25,
+        "CARE": 10,
+        "PLANT": 10,
+        "WATER": 35,
+        "FERTILIZE": 2,
+        "DIG": 2
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 53
+    },
+    {
+      "day": 25,
+      "slots": 294,
+      "pass_count": 28,
+      "move": 145,
+      "cash": 26413.0,
+      "requested": {
+        "WEST": 34,
+        "EAST": 31,
+        "NORTH": 46,
+        "PICKUP": 10,
+        "SOUTH": 34,
+        "HARVEST": 21,
+        "FEED": 14,
+        "PASS": 28,
+        "PLANT": 5,
+        "FERTILIZE": 6,
+        "CARE": 13,
+        "WATER": 34,
+        "COLLECT_FERTILIZER": 13,
+        "DIG": 3,
+        "DROP": 2
+      },
+      "executed": {
+        "HARVEST": 21,
+        "FEED": 14,
+        "PLANT": 5,
+        "FERTILIZE": 6,
+        "CARE": 13,
+        "WATER": 34,
+        "DIG": 3
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 53
+    },
+    {
+      "day": 26,
+      "slots": 293,
+      "pass_count": 23,
+      "move": 157,
+      "cash": 25881.0,
+      "requested": {
+        "WEST": 48,
+        "EAST": 33,
+        "PICKUP": 8,
+        "NORTH": 39,
+        "SOUTH": 37,
+        "HARVEST": 22,
+        "FEED": 14,
+        "WATER": 39,
+        "CARE": 12,
+        "COLLECT_FERTILIZER": 12,
+        "PASS": 23,
+        "PLANT": 3,
+        "FERTILIZE": 3
+      },
+      "executed": {
+        "HARVEST": 22,
+        "FEED": 14,
+        "WATER": 39,
+        "CARE": 12,
+        "PLANT": 3,
+        "FERTILIZE": 3
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 48
+    },
+    {
+      "day": 27,
+      "slots": 294,
+      "pass_count": 20,
+      "move": 178,
+      "cash": 26619.0,
+      "requested": {
+        "WEST": 49,
+        "EAST": 23,
+        "NORTH": 41,
+        "HARVEST": 24,
+        "SOUTH": 65,
+        "FEED": 14,
+        "WATER": 23,
+        "CARE": 14,
+        "COLLECT_FERTILIZER": 14,
+        "PICKUP": 2,
+        "FERTILIZE": 4,
+        "PASS": 20,
+        "DROP": 1
+      },
+      "executed": {
+        "HARVEST": 24,
+        "FEED": 14,
+        "WATER": 23,
+        "CARE": 14,
+        "FERTILIZE": 4
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 35
+    },
+    {
+      "day": 28,
+      "slots": 294,
+      "pass_count": 34,
+      "move": 168,
+      "cash": 27323.0,
+      "requested": {
+        "WEST": 45,
+        "EAST": 35,
+        "SOUTH": 41,
+        "NORTH": 47,
+        "WATER": 33,
+        "HARVEST": 29,
+        "PASS": 34,
+        "PICKUP": 4,
+        "FEED": 13,
+        "CARE": 3,
+        "COLLECT_FERTILIZER": 10
+      },
+      "executed": {
+        "WATER": 32,
+        "HARVEST": 29,
+        "FEED": 13,
+        "CARE": 3
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 24
+    },
+    {
+      "day": 29,
+      "slots": 294,
+      "pass_count": 140,
+      "move": 95,
+      "cash": 28473.0,
+      "requested": {
+        "WEST": 34,
+        "SOUTH": 29,
+        "EAST": 10,
+        "NORTH": 22,
+        "WATER": 9,
+        "PICKUP": 2,
+        "PASS": 140,
+        "HARVEST": 18,
+        "FEED": 14,
+        "COLLECT_FERTILIZER": 14,
+        "DROP": 2
+      },
+      "executed": {
+        "WATER": 8,
+        "HARVEST": 18,
+        "FEED": 14
+      },
+      "hire_cash": 376.0,
+      "animals": 14,
+      "crops": 3
+    },
+    {
+      "day": 30,
+      "slots": 78,
+      "pass_count": 23,
+      "move": 30,
+      "cash": 30468.0,
+      "requested": {
+        "WEST": 9,
+        "EAST": 9,
+        "HARVEST": 6,
+        "NORTH": 6,
+        "COLLECT_FERTILIZER": 11,
+        "SOUTH": 6,
+        "DROP": 8,
+        "PASS": 23
+      },
+      "executed": {
+        "HARVEST": 6
+      },
+      "hire_cash": 12.0,
+      "animals": 14,
+      "crops": 0
+    }
+  ],
+  "pass_diagnostic": null,
+  "losses": [
+    {
+      "service_day": 21,
+      "position": [
+        9,
+        3
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": true,
+      "last_production_day": 24,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 7,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": 18
+      }
+    },
+    {
+      "service_day": 23,
+      "position": [
+        8,
+        4
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 0,
+      "future_production": false,
+      "last_production_day": 23,
+      "physical_cause": "water_refresh",
+      "productive_loss": false,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 6,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 0,
+        "max_lifespan_step": 552,
+        "fertilized_until_day": 19
+      }
+    },
+    {
+      "service_day": 23,
+      "position": [
+        4,
+        5
+      ],
+      "crop": "STRAWBERRY",
+      "held_units_after_actions": 1,
+      "future_production": true,
+      "last_production_day": 28,
+      "physical_cause": "water_refresh",
+      "productive_loss": true,
+      "tile_after_actions": {
+        "kind": "PLANT",
+        "crop": "STRAWBERRY",
+        "planted_day": 11,
+        "watered_today": false,
+        "consecutive_unwatered": 1,
+        "yield_units": 1,
+        "max_lifespan_step": -1,
+        "fertilized_until_day": -1
+      }
+    }
+  ],
+  "metrics": {
+    "ack_PICKUP": 133,
+    "portfolio_certificate_evaluations": 569,
+    "renewal_insertion_accept": 66,
+    "wait_input": 18,
+    "ack_WEST": 740,
+    "ack_EAST": 591,
+    "ack_NORTH": 760,
+    "ack_FEED": 244,
+    "ack_SOUTH": 563,
+    "ack_CARE": 196,
+    "ack_PLANT": 104,
+    "ack_COLLECT_FERTILIZER": 220,
+    "ack_WATER": 597,
+    "ack_HARVEST": 324,
+    "ack_PLACE": 2,
+    "jobs_at_refresh": 48,
+    "renewal_insertion_reject": 463,
+    "growth_rejected_day_route": 1019,
+    "portfolio_certificate_budget_exhausted": 525,
+    "wait_seed": 11,
+    "ack_FERTILIZE": 51,
+    "ack_DROP": 13,
+    "ack_DIG": 13,
+    "unack_WATER": 2
+  },
+  "errors": 0,
+  "incomplete": 0,
+  "ledger": {
+    "daily": [
+      {
+        "day": 1,
+        "requested_actions": {
+          "PASS": 35,
+          "MOVE": 41,
+          "PICKUP": 6,
+          "BUILD_PASTURE": 4,
+          "PLANT": 19,
+          "PLACE": 4,
+          "WATER": 19,
+          "CARE": 4,
+          "FEED": 2
+        },
+        "executed_actions": {
+          "BUILD_PASTURE": 4,
+          "PLANT": 19,
+          "WATER": 19,
+          "CARE": 4,
+          "FEED": 2
+        },
+        "planted": {
+          "MELON": 12,
+          "WHEAT": 7
+        },
+        "harvested": {},
+        "sold_units": {
+          "WHEAT": 8
+        },
+        "sales_cash": {
+          "WHEAT": 224
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 13,
+          "BUY_SEED:WHEAT": 7,
+          "BUY_SEED:MELON": 12,
+          "BUY_ANIMAL:COW": 2,
+          "BUY_ANIMAL:SHEEP": 2
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 360,
+          "BUY_SEED:WHEAT": 70,
+          "BUY_SEED:MELON": 960,
+          "BUY_ANIMAL:COW": 800,
+          "BUY_ANIMAL:SHEEP": 1000
+        },
+        "dig_removed": {},
+        "animal_placed": {
+          "COW": 2,
+          "SHEEP": 2
+        },
+        "hire_cash": 12.0,
+        "hires": 5,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 2,
+        "requested_actions": {
+          "PICKUP": 2,
+          "FEED": 4,
+          "PASS": 46,
+          "MOVE": 24,
+          "CARE": 4,
+          "COLLECT_FERTILIZER": 4,
+          "PLACE": 3,
+          "BUILD_PASTURE": 2,
+          "WATER": 4
+        },
+        "executed_actions": {
+          "FEED": 4,
+          "CARE": 4,
+          "BUILD_PASTURE": 2,
+          "WATER": 4
+        },
+        "planted": {},
+        "harvested": {},
+        "sold_units": {
+          "FERTILIZER": 4,
+          "WHEAT": 3
+        },
+        "sales_cash": {
+          "FERTILIZER": 398,
+          "WHEAT": 88
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 9
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 264
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 4.0,
+        "hires": 3,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 3,
+        "requested_actions": {
+          "PICKUP": 2,
+          "FEED": 4,
+          "PASS": 28,
+          "MOVE": 40,
+          "CARE": 4,
+          "COLLECT_FERTILIZER": 4,
+          "PLACE": 3,
+          "WATER": 22,
+          "HARVEST": 6,
+          "PLANT": 3
+        },
+        "executed_actions": {
+          "FEED": 4,
+          "CARE": 4,
+          "WATER": 22,
+          "HARVEST": 6,
+          "PLANT": 3
+        },
+        "planted": {
+          "WHEAT": 3
+        },
+        "harvested": {
+          "WHEAT": 12
+        },
+        "sold_units": {
+          "WHEAT": 1,
+          "FERTILIZER": 4
+        },
+        "sales_cash": {
+          "WHEAT": 30,
+          "FERTILIZER": 391
+        },
+        "bought_units": {
+          "BUY_SEED:WHEAT": 5,
+          "BUY_ANIMAL:COW": 1
+        },
+        "purchase_cash": {
+          "BUY_SEED:WHEAT": 50,
+          "BUY_ANIMAL:COW": 400
+        },
+        "dig_removed": {},
+        "animal_placed": {
+          "COW": 1
+        },
+        "hire_cash": 7.0,
+        "hires": 4,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 4,
+        "requested_actions": {
+          "PICKUP": 2,
+          "MOVE": 61,
+          "FEED": 3,
+          "CARE": 5,
+          "COLLECT_FERTILIZER": 5,
+          "WATER": 23,
+          "HARVEST": 4,
+          "PLANT": 4,
+          "PASS": 28,
+          "PLACE": 3,
+          "DROP": 1
+        },
+        "executed_actions": {
+          "FEED": 3,
+          "CARE": 5,
+          "WATER": 20,
+          "HARVEST": 1,
+          "PLANT": 4
+        },
+        "planted": {
+          "WHEAT": 4
+        },
+        "harvested": {
+          "WHEAT": 3
+        },
+        "sold_units": {
+          "WHEAT": 3,
+          "FERTILIZER": 4
+        },
+        "sales_cash": {
+          "WHEAT": 90,
+          "FERTILIZER": 385
+        },
+        "bought_units": {
+          "BUY_SEED:WHEAT": 2,
+          "BUY_ANIMAL:COW": 1
+        },
+        "purchase_cash": {
+          "BUY_SEED:WHEAT": 20,
+          "BUY_ANIMAL:COW": 400
+        },
+        "dig_removed": {},
+        "animal_placed": {
+          "COW": 1
+        },
+        "hire_cash": 12.0,
+        "hires": 5,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 5,
+        "requested_actions": {
+          "PICKUP": 1,
+          "FEED": 5,
+          "PASS": 37,
+          "MOVE": 42,
+          "CARE": 6,
+          "COLLECT_FERTILIZER": 6,
+          "WATER": 10,
+          "HARVEST": 3,
+          "PLANT": 3,
+          "PLACE": 2,
+          "DROP": 1
+        },
+        "executed_actions": {
+          "FEED": 5,
+          "CARE": 6,
+          "WATER": 10,
+          "HARVEST": 3,
+          "PLANT": 3
+        },
+        "planted": {
+          "WHEAT": 3
+        },
+        "harvested": {
+          "WHEAT": 6
+        },
+        "sold_units": {
+          "FERTILIZER": 6,
+          "WHEAT": 2
+        },
+        "sales_cash": {
+          "FERTILIZER": 565,
+          "WHEAT": 60
+        },
+        "bought_units": {
+          "BUY_SEED:WHEAT": 3,
+          "BUY_PRODUCT:WHEAT": 6
+        },
+        "purchase_cash": {
+          "BUY_SEED:WHEAT": 30,
+          "BUY_PRODUCT:WHEAT": 183
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 7.0,
+        "hires": 4,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 6,
+        "requested_actions": {
+          "PICKUP": 2,
+          "MOVE": 48,
+          "FEED": 6,
+          "PASS": 36,
+          "CARE": 6,
+          "COLLECT_FERTILIZER": 6,
+          "WATER": 23,
+          "HARVEST": 4,
+          "PLACE": 2,
+          "PLANT": 4
+        },
+        "executed_actions": {
+          "FEED": 6,
+          "CARE": 6,
+          "WATER": 23,
+          "HARVEST": 4,
+          "PLANT": 4
+        },
+        "planted": {
+          "STRAWBERRY": 4
+        },
+        "harvested": {
+          "WHEAT": 8
+        },
+        "sold_units": {
+          "FERTILIZER": 6,
+          "WHEAT": 2
+        },
+        "sales_cash": {
+          "FERTILIZER": 551,
+          "WHEAT": 62
+        },
+        "bought_units": {
+          "BUY_SEED:STRAWBERRY": 4
+        },
+        "purchase_cash": {
+          "BUY_SEED:STRAWBERRY": 400
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 12.0,
+        "hires": 5,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 7,
+        "requested_actions": {
+          "MOVE": 102,
+          "PICKUP": 7,
+          "PASS": 16,
+          "HARVEST": 5,
+          "FEED": 8,
+          "CARE": 8,
+          "COLLECT_FERTILIZER": 6,
+          "PLACE": 7,
+          "WATER": 28,
+          "BUILD_PASTURE": 7,
+          "PLANT": 13
+        },
+        "executed_actions": {
+          "HARVEST": 5,
+          "FEED": 8,
+          "CARE": 8,
+          "WATER": 28,
+          "BUILD_PASTURE": 7,
+          "PLANT": 13
+        },
+        "planted": {
+          "WHEAT": 5,
+          "STRAWBERRY": 8
+        },
+        "harvested": {
+          "WOOL": 12,
+          "WHEAT": 6
+        },
+        "sold_units": {
+          "WOOL": 10,
+          "FERTILIZER": 8
+        },
+        "sales_cash": {
+          "WOOL": 2034,
+          "FERTILIZER": 718
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 10,
+          "BUY_ANIMAL:COW": 2,
+          "BUY_PRODUCT:FERTILIZER": 2,
+          "BUY_SEED:WHEAT": 5,
+          "BUY_SEED:STRAWBERRY": 8
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 325,
+          "BUY_ANIMAL:COW": 800,
+          "BUY_PRODUCT:FERTILIZER": 182,
+          "BUY_SEED:WHEAT": 50,
+          "BUY_SEED:STRAWBERRY": 800
+        },
+        "dig_removed": {},
+        "animal_placed": {
+          "COW": 2
+        },
+        "hire_cash": 54.0,
+        "hires": 8,
+        "land_cash": 1000.0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 8,
+        "requested_actions": {
+          "PICKUP": 9,
+          "MOVE": 88,
+          "FEED": 7,
+          "CARE": 10,
+          "COLLECT_FERTILIZER": 8,
+          "PLACE": 9,
+          "WATER": 29,
+          "PASS": 38,
+          "PLANT": 8
+        },
+        "executed_actions": {
+          "FEED": 7,
+          "CARE": 10,
+          "WATER": 29,
+          "PLANT": 8
+        },
+        "planted": {
+          "STRAWBERRY": 4,
+          "WHEAT": 4
+        },
+        "harvested": {},
+        "sold_units": {
+          "WOOL": 2,
+          "FERTILIZER": 9,
+          "WHEAT": 9
+        },
+        "sales_cash": {
+          "WOOL": 377,
+          "FERTILIZER": 781,
+          "WHEAT": 296
+        },
+        "bought_units": {
+          "BUY_ANIMAL:COW": 2,
+          "BUY_PRODUCT:FERTILIZER": 1,
+          "BUY_SEED:STRAWBERRY": 4,
+          "BUY_SEED:WHEAT": 4
+        },
+        "purchase_cash": {
+          "BUY_ANIMAL:COW": 800,
+          "BUY_PRODUCT:FERTILIZER": 88,
+          "BUY_SEED:STRAWBERRY": 400,
+          "BUY_SEED:WHEAT": 40
+        },
+        "dig_removed": {},
+        "animal_placed": {
+          "COW": 2
+        },
+        "hire_cash": 54.0,
+        "hires": 8,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 9,
+        "requested_actions": {
+          "MOVE": 113,
+          "HARVEST": 7,
+          "PICKUP": 7,
+          "FEED": 11,
+          "PLACE": 7,
+          "CARE": 13,
+          "PASS": 34,
+          "COLLECT_FERTILIZER": 10,
+          "WATER": 40,
+          "PLANT": 5
+        },
+        "executed_actions": {
+          "HARVEST": 7,
+          "FEED": 11,
+          "CARE": 12,
+          "WATER": 40,
+          "PLANT": 5
+        },
+        "planted": {
+          "STRAWBERRY": 4,
+          "WHEAT": 1
+        },
+        "harvested": {
+          "MILK": 12,
+          "WHEAT": 10
+        },
+        "sold_units": {
+          "FERTILIZER": 1,
+          "MILK": 12,
+          "WHEAT": 2
+        },
+        "sales_cash": {
+          "FERTILIZER": 85,
+          "MILK": 2479,
+          "WHEAT": 70
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 22,
+          "BUY_ANIMAL:SHEEP": 2,
+          "BUY_SEED:STRAWBERRY": 4,
+          "BUY_SEED:WHEAT": 1
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 750,
+          "BUY_ANIMAL:SHEEP": 1000,
+          "BUY_SEED:STRAWBERRY": 400,
+          "BUY_SEED:WHEAT": 10
+        },
+        "dig_removed": {},
+        "animal_placed": {
+          "SHEEP": 2
+        },
+        "hire_cash": 143.0,
+        "hires": 10,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 10,
+        "requested_actions": {
+          "PICKUP": 5,
+          "MOVE": 105,
+          "HARVEST": 6,
+          "FEED": 13,
+          "CARE": 13,
+          "PLACE": 5,
+          "COLLECT_FERTILIZER": 13,
+          "WATER": 41,
+          "PASS": 66,
+          "PLANT": 4,
+          "DROP": 3
+        },
+        "executed_actions": {
+          "HARVEST": 6,
+          "FEED": 12,
+          "CARE": 12,
+          "WATER": 41,
+          "PLANT": 4
+        },
+        "planted": {
+          "WHEAT": 4
+        },
+        "harvested": {
+          "WOOL": 8,
+          "WHEAT": 8
+        },
+        "sold_units": {
+          "FERTILIZER": 11,
+          "WOOL": 8,
+          "WHEAT": 2
+        },
+        "sales_cash": {
+          "FERTILIZER": 911,
+          "WOOL": 1386,
+          "WHEAT": 76
+        },
+        "bought_units": {
+          "BUY_PRODUCT:FERTILIZER": 1,
+          "BUY_PRODUCT:WHEAT": 21,
+          "BUY_SEED:WHEAT": 4
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:FERTILIZER": 85,
+          "BUY_PRODUCT:WHEAT": 765,
+          "BUY_SEED:WHEAT": 40
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 232.0,
+        "hires": 11,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 11,
+        "requested_actions": {
+          "MOVE": 120,
+          "PICKUP": 3,
+          "WATER": 21,
+          "FEED": 13,
+          "HARVEST": 15,
+          "CARE": 13,
+          "COLLECT_FERTILIZER": 13,
+          "PLACE": 11,
+          "PASS": 56,
+          "PLANT": 9,
+          "BUILD_PASTURE": 1
+        },
+        "executed_actions": {
+          "WATER": 21,
+          "FEED": 12,
+          "HARVEST": 15,
+          "CARE": 12,
+          "PLANT": 9,
+          "BUILD_PASTURE": 1
+        },
+        "planted": {
+          "WHEAT": 8,
+          "STRAWBERRY": 1
+        },
+        "harvested": {
+          "MELON": 72,
+          "MILK": 12
+        },
+        "sold_units": {
+          "FERTILIZER": 20,
+          "MELON": 54,
+          "MILK": 12,
+          "WHEAT": 6
+        },
+        "sales_cash": {
+          "FERTILIZER": 1596,
+          "MELON": 12124,
+          "MILK": 2416,
+          "WHEAT": 245
+        },
+        "bought_units": {
+          "BUY_PRODUCT:FERTILIZER": 8,
+          "BUY_PRODUCT:WHEAT": 40,
+          "BUY_SEED:WHEAT": 8,
+          "BUY_SEED:STRAWBERRY": 2
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:FERTILIZER": 656,
+          "BUY_PRODUCT:WHEAT": 1567,
+          "BUY_SEED:WHEAT": 80,
+          "BUY_SEED:STRAWBERRY": 200
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 232.0,
+        "hires": 11,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 12,
+        "requested_actions": {
+          "PICKUP": 12,
+          "MOVE": 119,
+          "PASS": 51,
+          "FEED": 13,
+          "CARE": 13,
+          "PLANT": 21,
+          "COLLECT_FERTILIZER": 12,
+          "WATER": 47,
+          "HARVEST": 1,
+          "PLACE": 1
+        },
+        "executed_actions": {
+          "FEED": 13,
+          "CARE": 13,
+          "PLANT": 21,
+          "WATER": 47,
+          "HARVEST": 1
+        },
+        "planted": {
+          "STRAWBERRY": 14,
+          "WHEAT": 7
+        },
+        "harvested": {
+          "MILK": 6
+        },
+        "sold_units": {
+          "FERTILIZER": 12,
+          "MELON": 18,
+          "WHEAT": 50
+        },
+        "sales_cash": {
+          "FERTILIZER": 894,
+          "MELON": 2010,
+          "WHEAT": 1914
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 10,
+          "BUY_SEED:STRAWBERRY": 13,
+          "BUY_SEED:WHEAT": 7,
+          "BUY_ANIMAL:COW": 1
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 382,
+          "BUY_SEED:STRAWBERRY": 1300,
+          "BUY_SEED:WHEAT": 70,
+          "BUY_ANIMAL:COW": 400
+        },
+        "dig_removed": {},
+        "animal_placed": {
+          "COW": 1
+        },
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 2000.0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 13,
+        "requested_actions": {
+          "MOVE": 110,
+          "PICKUP": 9,
+          "WATER": 29,
+          "FEED": 14,
+          "CARE": 14,
+          "HARVEST": 6,
+          "COLLECT_FERTILIZER": 13,
+          "PASS": 50,
+          "PLANT": 6,
+          "PLACE": 1,
+          "DROP": 1
+        },
+        "executed_actions": {
+          "WATER": 29,
+          "FEED": 14,
+          "CARE": 14,
+          "HARVEST": 6,
+          "PLANT": 6
+        },
+        "planted": {
+          "WHEAT": 3,
+          "STRAWBERRY": 3
+        },
+        "harvested": {
+          "WOOL": 8,
+          "MILK": 9,
+          "WHEAT": 2
+        },
+        "sold_units": {
+          "FERTILIZER": 8,
+          "MILK": 6
+        },
+        "sales_cash": {
+          "FERTILIZER": 559,
+          "MILK": 1120
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 8,
+          "BUY_SEED:WHEAT": 3,
+          "BUY_SEED:STRAWBERRY": 3,
+          "BUY_ANIMAL:SHEEP": 1
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 321,
+          "BUY_SEED:WHEAT": 30,
+          "BUY_SEED:STRAWBERRY": 300,
+          "BUY_ANIMAL:SHEEP": 500
+        },
+        "dig_removed": {},
+        "animal_placed": {
+          "SHEEP": 1
+        },
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 14,
+        "requested_actions": {
+          "MOVE": 136,
+          "PICKUP": 6,
+          "WATER": 46,
+          "FEED": 14,
+          "PASS": 44,
+          "CARE": 14,
+          "COLLECT_FERTILIZER": 14,
+          "HARVEST": 5,
+          "PLANT": 5
+        },
+        "executed_actions": {
+          "WATER": 46,
+          "FEED": 14,
+          "CARE": 14,
+          "HARVEST": 5,
+          "PLANT": 5
+        },
+        "planted": {
+          "WHEAT": 5
+        },
+        "harvested": {
+          "WHEAT": 11,
+          "MILK": 3
+        },
+        "sold_units": {
+          "FERTILIZER": 5,
+          "MILK": 9,
+          "WOOL": 8
+        },
+        "sales_cash": {
+          "FERTILIZER": 331,
+          "MILK": 1473,
+          "WOOL": 910
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 12,
+          "BUY_SEED:WHEAT": 5
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 494,
+          "BUY_SEED:WHEAT": 50
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 15,
+        "requested_actions": {
+          "MOVE": 136,
+          "HARVEST": 14,
+          "WATER": 30,
+          "PICKUP": 4,
+          "FEED": 13,
+          "CARE": 13,
+          "PLANT": 8,
+          "COLLECT_FERTILIZER": 13,
+          "PASS": 45,
+          "FERTILIZE": 4,
+          "DROP": 3
+        },
+        "executed_actions": {
+          "HARVEST": 14,
+          "WATER": 30,
+          "FEED": 13,
+          "CARE": 13,
+          "PLANT": 8,
+          "FERTILIZE": 4
+        },
+        "planted": {
+          "WHEAT": 8
+        },
+        "harvested": {
+          "WHEAT": 24,
+          "MILK": 15,
+          "WOOL": 12
+        },
+        "sold_units": {
+          "FERTILIZER": 14,
+          "MILK": 9,
+          "WHEAT": 10,
+          "WOOL": 6
+        },
+        "sales_cash": {
+          "FERTILIZER": 831,
+          "MILK": 1246,
+          "WHEAT": 420,
+          "WOOL": 164
+        },
+        "bought_units": {
+          "BUY_SEED:WHEAT": 8,
+          "BUY_PRODUCT:WHEAT": 1
+        },
+        "purchase_cash": {
+          "BUY_SEED:WHEAT": 80,
+          "BUY_PRODUCT:WHEAT": 42
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 16,
+        "requested_actions": {
+          "PICKUP": 13,
+          "MOVE": 153,
+          "HARVEST": 15,
+          "PASS": 44,
+          "WATER": 36,
+          "FEED": 14,
+          "CARE": 5,
+          "COLLECT_FERTILIZER": 5,
+          "FERTILIZE": 4,
+          "PLANT": 3,
+          "DROP": 2
+        },
+        "executed_actions": {
+          "HARVEST": 15,
+          "WATER": 36,
+          "FEED": 14,
+          "CARE": 5,
+          "FERTILIZE": 4,
+          "PLANT": 3
+        },
+        "planted": {
+          "WHEAT": 3
+        },
+        "harvested": {
+          "WHEAT": 20,
+          "MILK": 9,
+          "WOOL": 8,
+          "STRAWBERRY": 8
+        },
+        "sold_units": {
+          "FERTILIZER": 9,
+          "MILK": 18,
+          "WHEAT": 13,
+          "WOOL": 10
+        },
+        "sales_cash": {
+          "FERTILIZER": 484,
+          "MILK": 1785,
+          "WHEAT": 544,
+          "WOOL": 14
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 10,
+          "BUY_SEED:WHEAT": 3
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 420,
+          "BUY_SEED:WHEAT": 30
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 17,
+        "requested_actions": {
+          "MOVE": 138,
+          "WATER": 36,
+          "PICKUP": 8,
+          "FEED": 14,
+          "PLANT": 7,
+          "HARVEST": 18,
+          "CARE": 13,
+          "COLLECT_FERTILIZER": 13,
+          "PASS": 34,
+          "FERTILIZE": 2,
+          "DROP": 1
+        },
+        "executed_actions": {
+          "WATER": 36,
+          "FEED": 14,
+          "PLANT": 7,
+          "HARVEST": 18,
+          "CARE": 13,
+          "FERTILIZE": 2
+        },
+        "planted": {
+          "WHEAT": 7
+        },
+        "harvested": {
+          "WHEAT": 8,
+          "MILK": 26,
+          "STRAWBERRY": 12
+        },
+        "sold_units": {
+          "STRAWBERRY": 8,
+          "WHEAT": 5,
+          "WOOL": 4
+        },
+        "sales_cash": {
+          "STRAWBERRY": 1218,
+          "WHEAT": 210,
+          "WOOL": 4
+        },
+        "bought_units": {
+          "BUY_SEED:WHEAT": 7,
+          "BUY_PRODUCT:WHEAT": 3
+        },
+        "purchase_cash": {
+          "BUY_SEED:WHEAT": 70,
+          "BUY_PRODUCT:WHEAT": 126
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 18,
+        "requested_actions": {
+          "MOVE": 162,
+          "WATER": 41,
+          "PICKUP": 9,
+          "FEED": 14,
+          "CARE": 12,
+          "COLLECT_FERTILIZER": 12,
+          "HARVEST": 16,
+          "FERTILIZE": 2,
+          "PASS": 23,
+          "PLANT": 3
+        },
+        "executed_actions": {
+          "WATER": 41,
+          "FEED": 14,
+          "CARE": 12,
+          "HARVEST": 16,
+          "FERTILIZE": 2,
+          "PLANT": 3
+        },
+        "planted": {
+          "WHEAT": 3
+        },
+        "harvested": {
+          "WHEAT": 15,
+          "MILK": 7,
+          "STRAWBERRY": 13,
+          "WOOL": 3
+        },
+        "sold_units": {
+          "FERTILIZER": 5,
+          "MILK": 26,
+          "STRAWBERRY": 12
+        },
+        "sales_cash": {
+          "FERTILIZER": 240,
+          "MILK": 805,
+          "STRAWBERRY": 1373
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 7,
+          "BUY_SEED:WHEAT": 3
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 301,
+          "BUY_SEED:WHEAT": 30
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 19,
+        "requested_actions": {
+          "MOVE": 146,
+          "HARVEST": 21,
+          "PICKUP": 4,
+          "WATER": 35,
+          "FEED": 14,
+          "CARE": 14,
+          "PLANT": 10,
+          "COLLECT_FERTILIZER": 14,
+          "PASS": 33,
+          "FERTILIZE": 3
+        },
+        "executed_actions": {
+          "HARVEST": 21,
+          "WATER": 35,
+          "FEED": 14,
+          "CARE": 14,
+          "PLANT": 10,
+          "FERTILIZE": 3
+        },
+        "planted": {
+          "WHEAT": 10
+        },
+        "harvested": {
+          "WHEAT": 22,
+          "MILK": 12,
+          "WOOL": 16,
+          "STRAWBERRY": 7
+        },
+        "sold_units": {
+          "MILK": 7,
+          "STRAWBERRY": 13,
+          "WHEAT": 5,
+          "WOOL": 3
+        },
+        "sales_cash": {
+          "MILK": 13,
+          "STRAWBERRY": 1036,
+          "WHEAT": 220,
+          "WOOL": 7
+        },
+        "bought_units": {
+          "BUY_SEED:WHEAT": 10
+        },
+        "purchase_cash": {
+          "BUY_SEED:WHEAT": 100
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 20,
+        "requested_actions": {
+          "MOVE": 139,
+          "PICKUP": 11,
+          "FEED": 14,
+          "WATER": 43,
+          "CARE": 13,
+          "HARVEST": 17,
+          "COLLECT_FERTILIZER": 13,
+          "FERTILIZE": 6,
+          "PLANT": 3,
+          "PASS": 34
+        },
+        "executed_actions": {
+          "FEED": 14,
+          "WATER": 43,
+          "CARE": 13,
+          "HARVEST": 17,
+          "FERTILIZE": 6,
+          "PLANT": 3
+        },
+        "planted": {
+          "WHEAT": 3
+        },
+        "harvested": {
+          "WHEAT": 9,
+          "MILK": 15,
+          "STRAWBERRY": 18
+        },
+        "sold_units": {
+          "FERTILIZER": 5,
+          "MILK": 12,
+          "STRAWBERRY": 7,
+          "WHEAT": 8,
+          "WOOL": 16
+        },
+        "sales_cash": {
+          "FERTILIZER": 206,
+          "MILK": 32,
+          "STRAWBERRY": 410,
+          "WHEAT": 352,
+          "WOOL": 20
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 4,
+          "BUY_SEED:WHEAT": 3
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 178,
+          "BUY_SEED:WHEAT": 30
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 21,
+        "requested_actions": {
+          "MOVE": 166,
+          "HARVEST": 21,
+          "PICKUP": 8,
+          "FEED": 14,
+          "CARE": 14,
+          "FERTILIZE": 8,
+          "PASS": 11,
+          "WATER": 36,
+          "PLANT": 2,
+          "COLLECT_FERTILIZER": 14
+        },
+        "executed_actions": {
+          "HARVEST": 21,
+          "FEED": 14,
+          "CARE": 14,
+          "FERTILIZE": 8,
+          "WATER": 36,
+          "PLANT": 2
+        },
+        "planted": {
+          "WHEAT": 2
+        },
+        "harvested": {
+          "WHEAT": 21,
+          "MILK": 15,
+          "STRAWBERRY": 14,
+          "WOOL": 6
+        },
+        "sold_units": {
+          "FERTILIZER": 13,
+          "MILK": 15,
+          "STRAWBERRY": 18
+        },
+        "sales_cash": {
+          "FERTILIZER": 481,
+          "MILK": 47,
+          "STRAWBERRY": 312
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 1,
+          "BUY_SEED:WHEAT": 2
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 45,
+          "BUY_SEED:WHEAT": 20
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 22,
+        "requested_actions": {
+          "MOVE": 152,
+          "PICKUP": 7,
+          "FEED": 14,
+          "CARE": 13,
+          "HARVEST": 26,
+          "COLLECT_FERTILIZER": 13,
+          "PASS": 15,
+          "FERTILIZE": 6,
+          "WATER": 41,
+          "PLANT": 5,
+          "DIG": 2
+        },
+        "executed_actions": {
+          "FEED": 14,
+          "CARE": 13,
+          "HARVEST": 26,
+          "FERTILIZE": 6,
+          "WATER": 41,
+          "PLANT": 5,
+          "DIG": 2
+        },
+        "planted": {
+          "WHEAT": 5
+        },
+        "harvested": {
+          "STRAWBERRY": 28,
+          "WHEAT": 7,
+          "MILK": 12,
+          "WOOL": 12
+        },
+        "sold_units": {
+          "FERTILIZER": 17,
+          "MILK": 15,
+          "STRAWBERRY": 14,
+          "WHEAT": 7,
+          "WOOL": 6
+        },
+        "sales_cash": {
+          "FERTILIZER": 542,
+          "MILK": 45,
+          "STRAWBERRY": 14,
+          "WHEAT": 322,
+          "WOOL": 10
+        },
+        "bought_units": {
+          "BUY_SEED:WHEAT": 5,
+          "BUY_PRODUCT:WHEAT": 1
+        },
+        "purchase_cash": {
+          "BUY_SEED:WHEAT": 50,
+          "BUY_PRODUCT:WHEAT": 46
+        },
+        "dig_removed": {
+          "STRAWBERRY": 2
+        },
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 23,
+        "requested_actions": {
+          "MOVE": 173,
+          "HARVEST": 27,
+          "DIG": 6,
+          "PLANT": 13,
+          "WATER": 27,
+          "FEED": 11,
+          "CARE": 6,
+          "COLLECT_FERTILIZER": 6,
+          "PICKUP": 4,
+          "PASS": 16,
+          "FERTILIZE": 2,
+          "DROP": 2
+        },
+        "executed_actions": {
+          "HARVEST": 27,
+          "DIG": 6,
+          "PLANT": 13,
+          "WATER": 27,
+          "FEED": 11,
+          "CARE": 6,
+          "FERTILIZE": 2
+        },
+        "planted": {
+          "WHEAT": 13
+        },
+        "harvested": {
+          "WHEAT": 29,
+          "STRAWBERRY": 31,
+          "MILK": 3
+        },
+        "sold_units": {
+          "FERTILIZER": 5,
+          "MILK": 12,
+          "STRAWBERRY": 28,
+          "WOOL": 12,
+          "WHEAT": 14
+        },
+        "sales_cash": {
+          "FERTILIZER": 140,
+          "MILK": 36,
+          "STRAWBERRY": 48,
+          "WOOL": 12,
+          "WHEAT": 658
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 8,
+          "BUY_SEED:WHEAT": 13
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 377,
+          "BUY_SEED:WHEAT": 130
+        },
+        "dig_removed": {
+          "STRAWBERRY": 6
+        },
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 24,
+        "requested_actions": {
+          "PICKUP": 12,
+          "MOVE": 151,
+          "PASS": 22,
+          "FEED": 14,
+          "HARVEST": 25,
+          "CARE": 10,
+          "PLANT": 10,
+          "WATER": 35,
+          "COLLECT_FERTILIZER": 10,
+          "FERTILIZE": 2,
+          "DIG": 2,
+          "DROP": 1
+        },
+        "executed_actions": {
+          "FEED": 14,
+          "HARVEST": 25,
+          "CARE": 10,
+          "PLANT": 10,
+          "WATER": 35,
+          "FERTILIZE": 2,
+          "DIG": 2
+        },
+        "planted": {
+          "WHEAT": 10
+        },
+        "harvested": {
+          "STRAWBERRY": 26,
+          "WHEAT": 8,
+          "MILK": 13,
+          "WOOL": 2
+        },
+        "sold_units": {
+          "FERTILIZER": 8,
+          "MILK": 3,
+          "STRAWBERRY": 31,
+          "WHEAT": 6
+        },
+        "sales_cash": {
+          "FERTILIZER": 190,
+          "MILK": 27,
+          "STRAWBERRY": 31,
+          "WHEAT": 282
+        },
+        "bought_units": {
+          "BUY_SEED:WHEAT": 10,
+          "BUY_PRODUCT:WHEAT": 10
+        },
+        "purchase_cash": {
+          "BUY_SEED:WHEAT": 100,
+          "BUY_PRODUCT:WHEAT": 477
+        },
+        "dig_removed": {
+          "WEED": 1,
+          "STRAWBERRY": 1
+        },
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 25,
+        "requested_actions": {
+          "MOVE": 145,
+          "PICKUP": 10,
+          "HARVEST": 21,
+          "FEED": 14,
+          "PASS": 28,
+          "PLANT": 5,
+          "FERTILIZE": 6,
+          "CARE": 13,
+          "WATER": 34,
+          "COLLECT_FERTILIZER": 13,
+          "DIG": 3,
+          "DROP": 2
+        },
+        "executed_actions": {
+          "HARVEST": 21,
+          "FEED": 14,
+          "PLANT": 5,
+          "FERTILIZE": 6,
+          "CARE": 13,
+          "WATER": 34,
+          "DIG": 3
+        },
+        "planted": {
+          "WHEAT": 5
+        },
+        "harvested": {
+          "WHEAT": 6,
+          "STRAWBERRY": 21,
+          "MILK": 20,
+          "WOOL": 12
+        },
+        "sold_units": {
+          "FERTILIZER": 11,
+          "MILK": 15,
+          "STRAWBERRY": 28,
+          "WHEAT": 8,
+          "WOOL": 2
+        },
+        "sales_cash": {
+          "FERTILIZER": 213,
+          "MILK": 83,
+          "STRAWBERRY": 130,
+          "WHEAT": 385,
+          "WOOL": 6
+        },
+        "bought_units": {
+          "BUY_SEED:WHEAT": 5,
+          "BUY_PRODUCT:WHEAT": 3
+        },
+        "purchase_cash": {
+          "BUY_SEED:WHEAT": 50,
+          "BUY_PRODUCT:WHEAT": 146
+        },
+        "dig_removed": {
+          "STRAWBERRY": 1,
+          "WEED": 2
+        },
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 26,
+        "requested_actions": {
+          "MOVE": 157,
+          "PICKUP": 8,
+          "HARVEST": 22,
+          "FEED": 14,
+          "WATER": 39,
+          "CARE": 12,
+          "COLLECT_FERTILIZER": 12,
+          "PASS": 23,
+          "PLANT": 3,
+          "FERTILIZE": 3
+        },
+        "executed_actions": {
+          "HARVEST": 22,
+          "FEED": 14,
+          "WATER": 39,
+          "CARE": 12,
+          "PLANT": 3,
+          "FERTILIZE": 3
+        },
+        "planted": {
+          "CARROT": 3
+        },
+        "harvested": {
+          "STRAWBERRY": 26,
+          "WHEAT": 15,
+          "MILK": 8
+        },
+        "sold_units": {
+          "FERTILIZER": 11,
+          "MILK": 18,
+          "STRAWBERRY": 19,
+          "WOOL": 12
+        },
+        "sales_cash": {
+          "FERTILIZER": 184,
+          "MILK": 48,
+          "STRAWBERRY": 19,
+          "WOOL": 12
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 11,
+          "BUY_SEED:CARROT": 3
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 540,
+          "BUY_SEED:CARROT": 60
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 27,
+        "requested_actions": {
+          "MOVE": 178,
+          "HARVEST": 24,
+          "FEED": 14,
+          "WATER": 23,
+          "CARE": 14,
+          "COLLECT_FERTILIZER": 14,
+          "PICKUP": 2,
+          "FERTILIZE": 4,
+          "PASS": 20,
+          "DROP": 1
+        },
+        "executed_actions": {
+          "HARVEST": 24,
+          "FEED": 14,
+          "WATER": 23,
+          "CARE": 14,
+          "FERTILIZE": 4
+        },
+        "planted": {},
+        "harvested": {
+          "STRAWBERRY": 6,
+          "WHEAT": 37,
+          "MILK": 14,
+          "WOOL": 6
+        },
+        "sold_units": {
+          "FERTILIZER": 12,
+          "MILK": 8,
+          "STRAWBERRY": 26,
+          "WHEAT": 17
+        },
+        "sales_cash": {
+          "FERTILIZER": 168,
+          "MILK": 50,
+          "STRAWBERRY": 46,
+          "WHEAT": 850
+        },
+        "bought_units": {},
+        "purchase_cash": {},
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 28,
+        "requested_actions": {
+          "MOVE": 168,
+          "WATER": 33,
+          "HARVEST": 29,
+          "PASS": 34,
+          "PICKUP": 4,
+          "FEED": 13,
+          "CARE": 3,
+          "COLLECT_FERTILIZER": 10
+        },
+        "executed_actions": {
+          "WATER": 32,
+          "HARVEST": 29,
+          "FEED": 13,
+          "CARE": 3
+        },
+        "planted": {},
+        "harvested": {
+          "STRAWBERRY": 25,
+          "WHEAT": 37,
+          "WOOL": 11,
+          "MILK": 6
+        },
+        "sold_units": {
+          "FERTILIZER": 16,
+          "MILK": 14,
+          "STRAWBERRY": 6,
+          "WHEAT": 21,
+          "WOOL": 6
+        },
+        "sales_cash": {
+          "FERTILIZER": 130,
+          "MILK": 34,
+          "STRAWBERRY": 6,
+          "WHEAT": 1050,
+          "WOOL": 10
+        },
+        "bought_units": {
+          "BUY_PRODUCT:WHEAT": 3
+        },
+        "purchase_cash": {
+          "BUY_PRODUCT:WHEAT": 150
+        },
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 29,
+        "requested_actions": {
+          "MOVE": 95,
+          "WATER": 9,
+          "PICKUP": 2,
+          "PASS": 140,
+          "HARVEST": 18,
+          "FEED": 14,
+          "COLLECT_FERTILIZER": 14,
+          "DROP": 2
+        },
+        "executed_actions": {
+          "WATER": 8,
+          "HARVEST": 18,
+          "FEED": 14
+        },
+        "planted": {},
+        "harvested": {
+          "WHEAT": 20,
+          "STRAWBERRY": 6,
+          "CARROT": 9,
+          "MILK": 19
+        },
+        "sold_units": {
+          "FERTILIZER": 13,
+          "MILK": 12,
+          "STRAWBERRY": 25,
+          "WHEAT": 24,
+          "WOOL": 11
+        },
+        "sales_cash": {
+          "FERTILIZER": 45,
+          "MILK": 136,
+          "STRAWBERRY": 130,
+          "WHEAT": 1200,
+          "WOOL": 15
+        },
+        "bought_units": {},
+        "purchase_cash": {},
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 376.0,
+        "hires": 12,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      },
+      {
+        "day": 30,
+        "requested_actions": {
+          "MOVE": 30,
+          "HARVEST": 6,
+          "COLLECT_FERTILIZER": 11,
+          "DROP": 8,
+          "PASS": 23
+        },
+        "executed_actions": {
+          "HARVEST": 6
+        },
+        "planted": {},
+        "harvested": {
+          "MILK": 10,
+          "WOOL": 6
+        },
+        "sold_units": {
+          "CARROT": 9,
+          "FERTILIZER": 22,
+          "MILK": 23,
+          "STRAWBERRY": 6,
+          "WHEAT": 11,
+          "WOOL": 6
+        },
+        "sales_cash": {
+          "CARROT": 1262,
+          "FERTILIZER": 22,
+          "MILK": 105,
+          "STRAWBERRY": 69,
+          "WHEAT": 539,
+          "WOOL": 10
+        },
+        "bought_units": {},
+        "purchase_cash": {},
+        "dig_removed": {},
+        "animal_placed": {},
+        "hire_cash": 12.0,
+        "hires": 5,
+        "land_cash": 0,
+        "unit_cash_delta": 0.0
+      }
+    ],
+    "cash_parity_steps_both_players": 719,
+    "cash_parity_errors": 0,
+    "initial_cash": 3000.0,
+    "net_cash_flow": 27468.0,
+    "animal_escapes": []
+  },
+  "runtime": {
+    "telemetry": false,
+    "configured_act_timeout": 120,
+    "calls": 719,
+    "max_seconds": 26.91150909999851,
+    "overage": 79.47324379975908
+  },
+  "recoveries": [],
+  "details": "scratch\\v51\\validation_v49f_260909202_0.json.gz",
+  "staffing": []
+}
