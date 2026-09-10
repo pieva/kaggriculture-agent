@@ -1,0 +1,62 @@
+{
+  "passed": true,
+  "variant": "E20v28",
+  "bundle_sha256": "83d3f548a3a704c60ad27dd61dfc1e9badf230c1129623161f965025878e3ba1",
+  "metrics": {
+    "cases": 20,
+    "cash": 76866.3,
+    "median_cash": 76472.5,
+    "min_cash": 42295.0,
+    "stress": 2.3,
+    "animal_losses": 0,
+    "positive_seeds_vs_E19": 8,
+    "seed_count": 10,
+    "median_seed_delta_vs_E19": 3109.5,
+    "worst_seed_delta_vs_E19": -10415.0,
+    "actions": {
+      "MOVE": 3497.4,
+      "PASS": 987.9,
+      "WATER": 854.1,
+      "FEED": 348.2,
+      "CARE": 293.95
+    },
+    "delta_vs_E19": 4460.0,
+    "delta_percent_vs_E19": 6.159684999785919,
+    "gate_passed": true
+  },
+  "control": {
+    "cases": 20,
+    "cash": 72406.3,
+    "median_cash": 68794.0,
+    "min_cash": 44679.0,
+    "stress": 3.55,
+    "animal_losses": 0,
+    "positive_seeds_vs_E19": 0,
+    "seed_count": 10,
+    "median_seed_delta_vs_E19": 0.0,
+    "worst_seed_delta_vs_E19": 0.0,
+    "actions": {
+      "MOVE": 3477.65,
+      "PASS": 1058.05,
+      "WATER": 890,
+      "FEED": 316.3,
+      "CARE": 281.55
+    },
+    "delta_vs_E19": 0.0,
+    "delta_percent_vs_E19": 0.0,
+    "gate_passed": false
+  },
+  "evidence": {
+    "docs\\model_specs\\codex\\e20\\reports\\e20_1\\development\\evaluation.json": "012cfb61c6cf7f44ad1f69f6b20e9c6cc34621ccb33d45a8af85606b79f1f415",
+    "docs\\model_specs\\codex\\e20\\reports\\e20_1\\verification_e20_1_care_E20v28.json": "749855a15874c0397e53a43bf126e337bc83521850217f4cb488a6266c427109"
+  },
+  "holdout_seeds": [
+    180910201,
+    180910202,
+    180910203,
+    180910204,
+    180910205,
+    180910206,
+    180910207
+  ]
+}

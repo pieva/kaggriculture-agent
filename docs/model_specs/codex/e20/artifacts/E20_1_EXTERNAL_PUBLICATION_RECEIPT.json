@@ -1,0 +1,17 @@
+{
+  "submission_id": null,
+  "status": "Error",
+  "observed_utc": "2026-09-10T10:51:50.046698+00:00",
+  "url": "https://www.kaggle.com/competitions/kaggriculture/submissions",
+  "file": "submission/submission_codex_e20_772_e20v28_candidate.py",
+  "sha256": "83d3f548a3a704c60ad27dd61dfc1e9badf230c1129623161f965025878e3ba1",
+  "variant": "E20v28",
+  "label": "E20.1",
+  "purpose": "External diagnostic validation explicitly requested by owner",
+  "independent_gate_passed": false,
+  "rating": null,
+  "evidence": "Kaggle Submission Details: Validation Episode failed; preview episode-107444826-agent-0-logs.json, first call duration 0.257877 seconds.",
+  "validation_episode_id": 107444826,
+  "error": "NameError: name '__file__' is not defined",
+  "error_location": "main.py line 91: exec(compile(route_source,str(Path(__file__)),exec),route_scope)"
+}

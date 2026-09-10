@@ -1,0 +1,59 @@
+{
+  "objective": "E20.1: preserve the D1-D11 E19 opening and 772 topology; recover cash without extra crop stress or animal losses",
+  "baseline": "E20v18",
+  "first_ablation": "E20v24: extend existing protected water visits and route-owner bypass to productive stressed crops from D12",
+  "development_seeds": [
+    180903001,
+    180903002,
+    180903003,
+    180910101,
+    180910102,
+    180910103,
+    180910104,
+    180910105,
+    180910106,
+    180910107
+  ],
+  "confirmation_seeds_reserved_before_results": [
+    180910201,
+    180910202,
+    180910203,
+    180910204,
+    180910205,
+    180910206,
+    180910207
+  ],
+  "screen": "All ten development seeds against E18; retain full replay and actual executed-action ledger. Confirm promising mechanisms in both seats and against E19 before freezing.",
+  "promotion": "On matched E18 opponents, mean cash at least E19, positive seed-median delta, strict cash improvement on a majority of seed averages, crop-stress transitions no greater than E19 and zero animal losses. Report lower-tail results separately.",
+  "confirmation": "Frozen source and both seats; no tuning on confirmation outcomes. Failed candidates remain local experimental revisions.",
+  "diagnostics": "22 established KPIs plus water deadline route rejection and productive crop survival diagnostics. Raw WATER totals alone are not a success criterion.",
+  "additional_ablations": {
+    "E20v25": "Productive water rescue bypass from D12; retain original priorities",
+    "E20v26": "Route and certificate insertion sorts remote tiles first within equal urgency; retain original rescue and priorities",
+    "E20v27": "Omit CARE only when optimistic incremental yield is zero; account for bonus consumption at tonight production",
+    "E20v28": "Combine remote-first route insertion with the same zero-gain CARE filter"
+  },
+  "frozen_for_role_swap": {
+    "variant": "E20v28",
+    "file": "submission\\submission_codex_e20_772_e20v28_candidate.py",
+    "sha256": "83d3f548a3a704c60ad27dd61dfc1e9badf230c1129623161f965025878e3ba1",
+    "confirmation_started": true
+  },
+  "runtime_validation_amendment": {
+    "reason": "Shared four-core laptop exhausted 60s overage during overlapping benchmark processes",
+    "eligibility": "Every agent must receive all 719 calls; criterion already enforced by verification tools",
+    "procedure": "Retain completed 719-call cases; archive all incomplete cases without inspecting economic rank; rerun same frozen policies, same seed and same game time limits with one worker, no simultaneous simulations",
+    "archived_confirmation_cases": [
+      "E18_E19_180910201",
+      "E18_E19_180910202",
+      "E18_E19_180910203",
+      "E18_E19_180910204",
+      "E19_E20.1_180910205"
+    ],
+    "archived_control_cases": [
+      "C770_E18_180910104",
+      "C770_E18_180910105"
+    ],
+    "no_policy_changes": true
+  }
+}

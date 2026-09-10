@@ -1,0 +1,52 @@
+{
+  "variant": "E20v28",
+  "parameters": {
+    "positions": [
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ]
+    ],
+    "species": [
+      "COW",
+      "SHEEP"
+    ],
+    "start": 11,
+    "preserve": true,
+    "remote_first": true,
+    "useful_care": true
+  },
+  "uploaded": true,
+  "status": "EXPERIMENTAL_INDEPENDENT_GATE_FAILED",
+  "sha256": "83d3f548a3a704c60ad27dd61dfc1e9badf230c1129623161f965025878e3ba1",
+  "sources": {
+    "docs\\model_specs\\codex\\e20\\tools\\policy.py": "e7cfe8249f57a42789bebad189bff19b2767f5feddf4b6d4851fb1454e2676ec",
+    "submission\\submission_codex_e18_770_v48_external.py": "57e7155e69a4b0db43ccb22295a7172fc4d338999dae6a6e775081b67ecf7743",
+    "docs\\model_specs\\codex\\e19\\tools\\biological_plan_770_v48.py": "8b324aaee858c95ae42340e1f988794859d9b15d5264c8df2a54672d445710ac",
+    "docs\\model_specs\\codex\\e19\\tools\\daily_routes_770_v48.py": "5dad34caa1efa934b94016580c44ce067e67cca9c5f19e9d721138f0f6c94d53",
+    "docs\\model_specs\\codex\\e20\\tools\\build_submission.py": "ddcc9c2cd91a731bcc032014b1a342440c1afb0d32c95d4a6285942f5dba1908"
+  },
+  "independent_gate_passed": false,
+  "validation_report": "docs/model_specs/codex/e20/reports/e20_1/REPORT.html",
+  "external_submission": {
+    "submission_id": null,
+    "status": "Error",
+    "observed_utc": "2026-09-10T10:51:50.046698+00:00",
+    "url": "https://www.kaggle.com/competitions/kaggriculture/submissions",
+    "file": "submission/submission_codex_e20_772_e20v28_candidate.py",
+    "sha256": "83d3f548a3a704c60ad27dd61dfc1e9badf230c1129623161f965025878e3ba1",
+    "variant": "E20v28",
+    "label": "E20.1",
+    "purpose": "External diagnostic validation explicitly requested by owner",
+    "independent_gate_passed": false,
+    "rating": null,
+    "evidence": "Kaggle Submission Details: Validation Episode failed; preview episode-107444826-agent-0-logs.json, first call duration 0.257877 seconds.",
+    "validation_episode_id": 107444826,
+    "error": "NameError: name '__file__' is not defined",
+    "error_location": "main.py line 91: exec(compile(route_source,str(Path(__file__)),exec),route_scope)"
+  }
+}

@@ -1,5 +1,12 @@
 # Indice MODEL_SPEC Codex
 
+## E20 — 7–7–2, 10 settembre 2026
+
+Revisione E20.1 (E20v28): [specifica del pianificatore](e20/E20_1_SPEC.md), [report di decisione](e20/reports/e20_1/REPORT.html) e [nuovo torneo con 22 KPI](e20/reports/e20_1_confirmation/REPORT.html). La decisione distingue sviluppo e conferma indipendente; nessun aggiornamento implicito del riferimento pubblicato.
+
+[Specifica E20](e20/MODEL_SPEC_CODEX_E20_772.md), [sviluppo](e20/reports/DEVELOPMENT.md) e [torneo finale con 22 KPI](e20/reports/tournament/REPORT.html). E20 è una candidata locale congelata; il riferimento pubblicato V48 resta invariato. Il report distingue il gate development dalla conferma su sette seed separati.
+
+
 Questo indice raccoglie le specifiche e i riferimenti dei modelli Codex.
 La [specifica della strategia 770 pubblicata](e19/MODEL_SPEC_CODEX_770_V48.md)
 descrive le decisioni del modello e i file che le implementano.

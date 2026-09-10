@@ -1,0 +1,28 @@
+{
+  "complete": true,
+  "games": 42,
+  "independent_seeds": 7,
+  "expected_pairings_verified": true,
+  "opening_E19_E20_parity_cases": 14,
+  "E20_max_observed_pastures": [
+    7,
+    7,
+    2
+  ],
+  "frozen_bundles": {
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7",
+    "submission\\submission_codex_e18_770_v48_external.py": "57e7155e69a4b0db43ccb22295a7172fc4d338999dae6a6e775081b67ecf7743",
+    "submission\\submission_codex_e20_772_e20v18_candidate.py": "46d1c41c70605c14a7363908d6bc38d71e6ba387d7de9093ea8bd58dc7ce6f50"
+  },
+  "animal_losses": {
+    "E18": 5,
+    "E19": 0,
+    "E20": 0
+  },
+  "crop_stress_transitions": {
+    "E18": 616,
+    "E19": 96,
+    "E20": 266
+  },
+  "source": "docs\\model_specs\\codex\\e20\\tools\\verify_tournament.py"
+}

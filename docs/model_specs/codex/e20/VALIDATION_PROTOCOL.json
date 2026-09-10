@@ -1,0 +1,15 @@
+{
+  "created": "2026-09-10",
+  "development_seeds": [180903001, 180903002, 180903003],
+  "development_primary_metric": "mean final cash against frozen E18 V4D on the same seed/seat as E19 V48",
+  "development_threshold": "E20 mean cash >= E19 mean cash; complete seasons; exact 7-7-2 and no verified animal losses",
+  "tournament_seeds_reserved_before_results": [180910101, 180910102, 180910103, 180910104, 180910105, 180910106, 180910107],
+  "tournament_design": "three frozen models, all three pairings, both seats, 7 seeds, 42 full-season games",
+  "selection": "freeze selected standalone E20 bundle after the development gate; no tuning on tournament results",
+  "sources": {
+    "E18": "submission/submission_codex_e18_2_capacity_governed_v4d.py",
+    "E19": "submission/submission_codex_e18_770_v48_external.py"
+  },
+  "report_standard": "V4.1, 22 daily KPI, per-pair medians and min-max with reconciled engine ledger",
+  "external_submission_authorized_by_this_protocol": false
+}

@@ -2446,3 +2446,36 @@ il loop CARROT che già funziona.
 
 Report:
 `experiments/e18/reports/common/E18_CLAUDE_COPILOT_ANTIGRAVITY_TOURNAMENT_V2_REPORT_IT.md`.
+
+## 2026-09-10 — E20 772, gate economico e torneo a tre
+
+23 varianti esplorate; E20v18 congelata dopo +4,56% matched development su tre seed e due ruoli. Torneo completo di 42 partite su sette seed separati; report dei 22 KPI, ledger e CSV. Nessuna submission esterna. [Report](model_specs/codex/e20/reports/tournament/REPORT.md) · [Stato](PROJECT_STATE.md).
+
+
+## E20.1 — 2026-09-10: percorsi, CARE e conferma separata
+
+Cinque nuove ablation su dieci seed; E20v28 selezionata e congelata dopo il gate appaiato (+6,16% vs E19). Torneo indipendente di 42 partite: delta appaiato -5,82%, seed positivi 1/7. Non promossa: il gate indipendente non è superato. Controllo C770 verificato separatamente; tentativi interrotti sotto carico archiviati e ripetuti in isolamento. Nessuna nuova submission esterna.
+
+[Report finale](model_specs/codex/e20/reports/e20_1/REPORT.html) · [Specifica](model_specs/codex/e20/E20_1_SPEC.md).
+
+
+## 2026-09-10 — E20.1 inviata per verifica esterna
+
+Su richiesta esplicita del proprietario, caricato su Kaggle il bundle E20v28 congelato (target 772), SHA256 `83d3f548a3a704c60ad27dd61dfc1e9badf230c1129623161f965025878e3ba1`. Stato osservato: **Pending**, nessun rating ancora disponibile. Il mancato superamento del gate economico interno rimane registrato; questa pubblicazione e una verifica esterna sperimentale.
+
+[Ricevuta](model_specs/codex/e20/artifacts/E20_1_EXTERNAL_PUBLICATION_RECEIPT.json) · [Submission Kaggle](https://www.kaggle.com/competitions/kaggriculture/submissions).
+
+## Correzione submission — E20.1, correzione caricamento Kaggle
+
+Aggiornamento 2026-09-10. Il primo invio E20v28 ha fallito la validazione (episodio 107444826): `NameError: name '__file__' is not defined`, alla prima chiamata. Il loader Kaggle usa un namespace exec senza quel campo; i precedenti test con runpy non riproducevano questa condizione.
+
+Corretto soltanto il nome diagnostico passato a due compile dei moduli incorporati. Il bundle originale resta congelato. Nuovo file: `submission/submission_codex_e20_772_e20v28_loaderfix.py`, SHA256 `9d84c838de39c2c8df620a21db258ea4a4065a5a2b4f75288bde53218d71c9bb`.
+
+Verifica: 2 test di regressione passati senza __file__ e senza letture di file; 719 azioni identiche per ciascuno dei due ruoli (1.438 totali) sui replay E20v28 seed 180910101, usando la funzione agent del bundle caricata con exec. Nessuna modifica alla strategia. Nuovo invio Kaggle: **Pending**; rating non disponibile.
+
+Il risultato interno rimane: +6,16% nello sviluppo, -5,82% nella conferma indipendente contro E18; non promossa economicamente. La pubblicazione serve alla verifica esterna richiesta dal proprietario.
+
+- [Ricevuta del fallimento](model_specs/codex/e20/artifacts/E20_1_EXTERNAL_PUBLICATION_RECEIPT.json)
+- [Ricevuta del nuovo invio](model_specs/codex/e20/artifacts/E20_1_LOADERFIX_PUBLICATION_RECEIPT.json)
+- [Verifica di parita](model_specs/codex/e20/reports/e20_1/LOADER_FIX_VALIDATION.json)
+- [Report economico e 22 KPI](model_specs/codex/e20/reports/e20_1/REPORT.html)

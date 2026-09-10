@@ -1,0 +1,195 @@
+{
+  "status": "Non promossa: il gate indipendente non \u00e8 superato",
+  "promoted": false,
+  "development": {
+    "cases": 20,
+    "cash": 76866.3,
+    "median_cash": 76472.5,
+    "min_cash": 42295.0,
+    "stress": 2.3,
+    "animal_losses": 0,
+    "positive_seeds_vs_E19": 8,
+    "seed_count": 10,
+    "median_seed_delta_vs_E19": 3109.5,
+    "worst_seed_delta_vs_E19": -10415.0,
+    "actions": {
+      "MOVE": 3497.4,
+      "PASS": 987.9,
+      "WATER": 854.1,
+      "FEED": 348.2,
+      "CARE": 293.95
+    },
+    "delta_vs_E19": 4460.0,
+    "delta_percent_vs_E19": 6.159684999785919,
+    "gate_passed": true
+  },
+  "confirmation": {
+    "cases": 14,
+    "cash": 55001.857142857145,
+    "median_cash": 44655.5,
+    "min_cash": 33991.0,
+    "stress": 3.7857142857142856,
+    "animal_losses": 0,
+    "positive_seeds_vs_E19": 1,
+    "seed_count": 7,
+    "median_seed_delta_vs_E19": -3442.0,
+    "worst_seed_delta_vs_E19": -15335.5,
+    "actions": {
+      "MOVE": 3504.6428571428573,
+      "PASS": 997.5714285714286,
+      "WATER": 840.5714285714286,
+      "FEED": 350.5,
+      "CARE": 295
+    },
+    "delta_vs_E19": -3397.0,
+    "delta_percent_vs_E19": -5.816894655472704,
+    "gate_passed": false
+  },
+  "control770": {
+    "cases": 10,
+    "cash": 68041.8,
+    "median_cash": 66773.5,
+    "min_cash": 36911.0,
+    "stress": 3.9,
+    "animal_losses": 0,
+    "positive_seeds_vs_E19": 4,
+    "seed_count": 10,
+    "median_seed_delta_vs_E19": -5189.5,
+    "worst_seed_delta_vs_E19": -20544.0,
+    "actions": {
+      "MOVE": 3507.7,
+      "PASS": 996.5,
+      "WATER": 881.2,
+      "FEED": 315.3,
+      "CARE": 268.6
+    },
+    "delta_vs_E19": -3889.199999999997,
+    "delta_percent_vs_E19": -5.406848229553319,
+    "gate_passed": false
+  },
+  "runtime_archives": [
+    {
+      "stage": "e20_1_confirmation",
+      "case": "E18_E19_180910201.json",
+      "agents": [
+        "E18",
+        "E19"
+      ],
+      "calls": [
+        719,
+        483
+      ],
+      "overage": [
+        0,
+        60.87338799997815
+      ]
+    },
+    {
+      "stage": "e20_1_confirmation",
+      "case": "E18_E19_180910202.json",
+      "agents": [
+        "E18",
+        "E19"
+      ],
+      "calls": [
+        719,
+        530
+      ],
+      "overage": [
+        0,
+        61.649292899986904
+      ]
+    },
+    {
+      "stage": "e20_1_confirmation",
+      "case": "E18_E19_180910203.json",
+      "agents": [
+        "E18",
+        "E19"
+      ],
+      "calls": [
+        719,
+        506
+      ],
+      "overage": [
+        0,
+        61.0488661000054
+      ]
+    },
+    {
+      "stage": "e20_1_confirmation",
+      "case": "E18_E19_180910204.json",
+      "agents": [
+        "E18",
+        "E19"
+      ],
+      "calls": [
+        719,
+        482
+      ],
+      "overage": [
+        0,
+        61.608450100015034
+      ]
+    },
+    {
+      "stage": "e20_1_confirmation",
+      "case": "E19_E20.1_180910205.json",
+      "agents": [
+        "E19",
+        "E20.1"
+      ],
+      "calls": [
+        719,
+        578
+      ],
+      "overage": [
+        40.06050910004706,
+        62.958507400006056
+      ]
+    },
+    {
+      "stage": "e20_1_control",
+      "case": "C770_E18_180910104.json",
+      "agents": [
+        "C770",
+        "E18"
+      ],
+      "calls": [
+        506,
+        719
+      ],
+      "overage": [
+        61.553838399959204,
+        0
+      ]
+    },
+    {
+      "stage": "e20_1_control",
+      "case": "C770_E18_180910105.json",
+      "agents": [
+        "C770",
+        "E18"
+      ],
+      "calls": [
+        530,
+        719
+      ],
+      "overage": [
+        60.33293499998399,
+        0
+      ]
+    }
+  ],
+  "bundle_sha256": "83d3f548a3a704c60ad27dd61dfc1e9badf230c1129623161f965025878e3ba1",
+  "sources": {
+    "docs\\model_specs\\codex\\e20\\reports\\e20_1\\development\\evaluation.json": "012cfb61c6cf7f44ad1f69f6b20e9c6cc34621ccb33d45a8af85606b79f1f415",
+    "docs\\model_specs\\codex\\e20\\reports\\e20_1\\confirmation\\evaluation.json": "13bff64bd3b0bffdbec16f90d80babe916c387f7180c9af107d3415cfead9462",
+    "docs\\model_specs\\codex\\e20\\reports\\e20_1_confirmation\\data.json": "affb5a8d112730082e222a9b2842e8a2974977de541ece9a89e37bb06ee483b9",
+    "docs\\model_specs\\codex\\e20\\reports\\e20_1\\topology_control\\evaluation.json": "17bf5efe4e6046a4e6924ebcf5595eb88aa652a2bd199ca3f164252ca78964d1",
+    "docs\\model_specs\\codex\\e20\\artifacts\\E20_1_CONFIRMATION_VERIFICATION.json": "02795f1df16c91d30b4f5083181e7dcb5ea645faf2502c4f1666139dff59abf0",
+    "docs\\model_specs\\codex\\e20\\artifacts\\E20_1_DEVELOPMENT_GATE.json": "3732cc95dd9aea3afce0a72f07042d99081ac77a2772889b31c784cd2e7933a6",
+    "docs\\model_specs\\codex\\e20\\reports\\e20_1\\verification_e20_1_control_C770.json": "5574837770e5dfa0c9590c08c49adc6500f774e0e0b834d3d6229185cb0a5052",
+    "docs\\model_specs\\codex\\e20\\tools\\summarize_e20_1.py": "7c0ea68d5e8ba4fe1aa3c50ae56ce1c30efafeb9d0a25e18c17cfbe6f560b3a9"
+  }
+}

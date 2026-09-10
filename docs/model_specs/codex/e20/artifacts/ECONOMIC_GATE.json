@@ -1,0 +1,80 @@
+{
+  "passed": true,
+  "metric": "matched final cash against E18",
+  "cases": [
+    {
+      "seed": 180903001,
+      "seat": 0,
+      "E19": 99574.0,
+      "E20": 101638.0,
+      "delta": 2064.0,
+      "source_bundle_action_parity": true,
+      "animal_losses": 0,
+      "crop_water_deaths": 10,
+      "E19_crop_water_deaths": 2
+    },
+    {
+      "seed": 180903001,
+      "seat": 1,
+      "E19": 99574.0,
+      "E20": 101638.0,
+      "delta": 2064.0,
+      "source_bundle_action_parity": true,
+      "animal_losses": 0,
+      "crop_water_deaths": 10,
+      "E19_crop_water_deaths": 2
+    },
+    {
+      "seed": 180903002,
+      "seat": 0,
+      "E19": 114111.0,
+      "E20": 118592.0,
+      "delta": 4481.0,
+      "source_bundle_action_parity": true,
+      "animal_losses": 0,
+      "crop_water_deaths": 10,
+      "E19_crop_water_deaths": 2
+    },
+    {
+      "seed": 180903002,
+      "seat": 1,
+      "E19": 114111.0,
+      "E20": 118592.0,
+      "delta": 4481.0,
+      "source_bundle_action_parity": true,
+      "animal_losses": 0,
+      "crop_water_deaths": 10,
+      "E19_crop_water_deaths": 2
+    },
+    {
+      "seed": 180903003,
+      "seat": 0,
+      "E19": 62931.0,
+      "E20": 68986.0,
+      "delta": 6055.0,
+      "source_bundle_action_parity": true,
+      "animal_losses": 0,
+      "crop_water_deaths": 10,
+      "E19_crop_water_deaths": 7
+    },
+    {
+      "seed": 180903003,
+      "seat": 1,
+      "E19": 62931.0,
+      "E20": 68986.0,
+      "delta": 6055.0,
+      "source_bundle_action_parity": true,
+      "animal_losses": 0,
+      "crop_water_deaths": 10,
+      "E19_crop_water_deaths": 7
+    }
+  ],
+  "E19_mean": 92205.33333333333,
+  "E20_mean": 96405.33333333333,
+  "delta": 4200.0,
+  "delta_percent": 4.555051045492675,
+  "independent_seeds": 3,
+  "paired_seats": 6,
+  "bundle_sha256": "46d1c41c70605c14a7363908d6bc38d71e6ba387d7de9093ea8bd58dc7ce6f50",
+  "note": "Development gate; role swaps are not independent seeds. Tournament seeds remain untouched."
+}
