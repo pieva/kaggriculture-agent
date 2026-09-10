@@ -1,0 +1,149 @@
+{
+  "reference": "E18",
+  "models": {
+    "E18": {
+      "path": "submission/submission_codex_e18_2_capacity_governed_v4d.py",
+      "sha256": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7"
+    },
+    "E19": {
+      "path": "submission/submission_codex_e18_770_v48_external.py",
+      "sha256": "57e7155e69a4b0db43ccb22295a7172fc4d338999dae6a6e775081b67ecf7743"
+    },
+    "E20.1": {
+      "path": "submission/submission_codex_e20_772_e20v28_loaderfix.py",
+      "sha256": "9d84c838de39c2c8df620a21db258ea4a4065a5a2b4f75288bde53218d71c9bb"
+    }
+  },
+  "cohorts": {
+    "diagnostic": {
+      "seeds": [
+        180910201,
+        180910202,
+        180910203,
+        180910204,
+        180910205,
+        180910206,
+        180910207
+      ],
+      "status": "previously_exposed",
+      "games": 42
+    },
+    "reserved_validation": {
+      "seeds": [
+        180911301,
+        180911302,
+        180911303,
+        180911304,
+        180911305,
+        180911306,
+        180911307
+      ],
+      "status": "reserved_not_run",
+      "promotion_protocol_required_before_opening": true
+    }
+  },
+  "experiments": [
+    {
+      "id": "H001",
+      "status": "complete",
+      "scope": "method pilot, not promotion",
+      "seed": 180910201,
+      "checkpoint": 456,
+      "models": [
+        "E18",
+        "E19",
+        "E20.1"
+      ],
+      "intervention": "remove final HIRE order from first D20 batch containing HIRE, once",
+      "protocol_sha256": "5e284ebde6694acd4eb7f9053e689b3070a99b0adbb388f395147abb69375fc3",
+      "adopted": false,
+      "control_suffix_states_exact_per_model": 263,
+      "result_path": "docs/model_specs/codex/evolution/reports/diagnostic_20260910/H001_RESULT.json"
+    },
+    {
+      "id": "H002",
+      "status": "complete",
+      "models": [
+        "E18",
+        "E19",
+        "E20.1"
+      ],
+      "seeds": [
+        180910201,
+        180910202
+      ],
+      "seat": 0,
+      "paired_situations": 6,
+      "intervention": "omit first SELL STRAWBERRY request on D20 once; subsequent decisions free",
+      "protocol_sha256": "c662f003e44bb5e3659134b454af5386f5862168abf8cdd94efbd5d513c50d84",
+      "control_reuse": "H001 seed201 with exact source/bundle/engine hash checks",
+      "adopted": false,
+      "result_path": "docs/model_specs/codex/evolution/reports/H002/RESULT.json",
+      "finding": "same physical farms and executed services; equal terminal strawberry volume/stock; cash effect entirely in strawberry sales; opposite signs by model on two seeds"
+    },
+    {
+      "id": "H003",
+      "status": "complete",
+      "protocol_sha256": "c1b0c3eefe3112bbbdb3254c851be4980063eddcac78a8851e6471b38e43034b",
+      "rule": "move first D20 SELL STRAWBERRY to front only across other SELL orders, once",
+      "scan_cases": 84,
+      "source_games": 42,
+      "full_trajectory_seeds": [
+        180910201,
+        180910202
+      ],
+      "new_full_branches": 4,
+      "adopted": false,
+      "result_path": "docs/model_specs/codex/evolution/reports/H003/RESULT.json",
+      "finding": "same-batch prioritization has positive mean but losses against other orderings; opponent current order is not an observable policy input"
+    },
+    {
+      "id": "H004",
+      "status": "complete",
+      "adopted": false,
+      "protocol_sha256": "e6a712048012b5fe1975899e3fdae80f40712900b3fb518c92a94847fd9c4a88",
+      "result_path": "docs/model_specs/codex/evolution/reports/H004/RESULT.json",
+      "forecast_covered": 18,
+      "forecast_errors": 0,
+      "applied_reorders": 0,
+      "decision": "NOT_OPERATIONALLY_USEFUL",
+      "prediction_sha256": "85894ac98aa9fcdcd7d133d3eabad73984e6bad0b0b887b82d8c3a14d8b81835"
+    },
+    {
+      "id": "H005",
+      "status": "complete",
+      "adopted": false,
+      "protocol_sha256": "de0453083e196b3da33f2673d392547711b69782fdf627b3cb8f4dff0f4d274d",
+      "result_path": "docs/model_specs/codex/evolution/reports/H005/RESULT.json",
+      "historical_identified": 83,
+      "forecast_covered": 31,
+      "forecast_errors": 0,
+      "applied_reorders": 0,
+      "decision": "NOT_OPERATIONALLY_USEFUL",
+      "prediction_sha256": "15c9ff591642b2fa1c2ba758bffb48b40bc0dbf39e9dc2ede6a6b83695221e53"
+    },
+    {
+      "id": "H006",
+      "status": "complete",
+      "adopted": false,
+      "decision": "DIAGNOSTIC_ONLY_REQUIRES_FULL_CONTINUATIONS",
+      "protocol_sha256": "b53e5ec0bbdb30c9901eb10f4d521b79b996b27ae6509d084d82fcd88372f965",
+      "prediction_sha256": "42f8b4b643dccb593c0cf08a48fce9f6fd7973995f1cc4723e65bc0d0f9a76bd",
+      "historical_identified": 116,
+      "forecast_covered": 40,
+      "forecast_errors": 0,
+      "applied_reorders": 4,
+      "result_path": "docs/model_specs/codex/evolution/reports/H006/RESULT.json",
+      "full_continuations": {
+        "status": "complete",
+        "controls": 4,
+        "interventions": 4,
+        "distinct_seeds": 2,
+        "adopted": false,
+        "result_path": "docs/model_specs/codex/evolution/reports/H006_FULL/RESULT.json",
+        "mean_delta_cash": 18.5,
+        "mean_delta_margin": 34.5
+      }
+    }
+  ]
+}

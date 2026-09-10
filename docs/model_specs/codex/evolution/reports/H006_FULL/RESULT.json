@@ -1,0 +1,881 @@
+{
+  "experiment": "H006_FULL",
+  "distinct_seeds": 2,
+  "paired_situations": 4,
+  "rows": [
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 0,
+      "physical_farms_equal": true,
+      "executed_services_equal": true,
+      "intervention": {
+        "step": 456,
+        "day": 20,
+        "hour": 1,
+        "reason": "reordered",
+        "proposed": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              5
+            ],
+            [
+              "SELL",
+              "MILK",
+              12
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              7
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              8
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "emitted": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [],
+          "market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              7
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              5
+            ],
+            [
+              "SELL",
+              "MILK",
+              12
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              8
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        }
+      },
+      "conditions": {
+        "control": {
+          "windows": {
+            "D20": {
+              "cash": 35366.0,
+              "opponent_cash": 37876.0,
+              "margin": -2510.0,
+              "strawberry_units": 7,
+              "strawberry_sales": 1745,
+              "strawberry_price": 249.28571428571428,
+              "strawberry_stock": 18,
+              "sales": 2920,
+              "purchases": 207,
+              "wages": 376.0
+            },
+            "D20-D22": {
+              "cash": 44903.0,
+              "opponent_cash": 47415.0,
+              "margin": -2512.0,
+              "strawberry_units": 39,
+              "strawberry_sales": 9801,
+              "strawberry_price": 251.30769230769232,
+              "strawberry_stock": 28,
+              "sales": 13334,
+              "purchases": 332,
+              "wages": 1128.0
+            },
+            "D20-D30": {
+              "cash": 95881.0,
+              "opponent_cash": 97067.0,
+              "margin": -1186.0,
+              "strawberry_units": 209,
+              "strawberry_sales": 52226,
+              "strawberry_price": 249.88516746411483,
+              "strawberry_stock": 0,
+              "sales": 69267,
+              "purchases": 2648,
+              "wages": 3767.0
+            }
+          },
+          "losses": 0,
+          "stress": 2,
+          "first_strawberry_sale_at_or_after_trigger": {
+            "step": 457,
+            "day": 20,
+            "hour": 1,
+            "item": "STRAWBERRY",
+            "price": 250
+          }
+        },
+        "reorder": {
+          "windows": {
+            "D20": {
+              "cash": 35383.0,
+              "opponent_cash": 37861.0,
+              "margin": -2478.0,
+              "strawberry_units": 7,
+              "strawberry_sales": 1762,
+              "strawberry_price": 251.71428571428572,
+              "strawberry_stock": 18,
+              "sales": 2937,
+              "purchases": 207,
+              "wages": 376.0
+            },
+            "D20-D22": {
+              "cash": 44920.0,
+              "opponent_cash": 47400.0,
+              "margin": -2480.0,
+              "strawberry_units": 39,
+              "strawberry_sales": 9818,
+              "strawberry_price": 251.74358974358975,
+              "strawberry_stock": 28,
+              "sales": 13351,
+              "purchases": 332,
+              "wages": 1128.0
+            },
+            "D20-D30": {
+              "cash": 95898.0,
+              "opponent_cash": 97052.0,
+              "margin": -1154.0,
+              "strawberry_units": 209,
+              "strawberry_sales": 52243,
+              "strawberry_price": 249.9665071770335,
+              "strawberry_stock": 0,
+              "sales": 69284,
+              "purchases": 2648,
+              "wages": 3767.0
+            }
+          },
+          "losses": 0,
+          "stress": 2,
+          "first_strawberry_sale_at_or_after_trigger": {
+            "step": 457,
+            "day": 20,
+            "hour": 1,
+            "item": "STRAWBERRY",
+            "price": 253
+          }
+        }
+      },
+      "delta_cash": 17.0,
+      "delta_margin": 32.0,
+      "biological_regression": false,
+      "decision": "DIAGNOSTIC_ONLY",
+      "adopted": false,
+      "changed_worker_batches_by_seat": [
+        0,
+        0
+      ],
+      "initial_delta_cash": 17.0,
+      "initial_delta_margin": 32.0
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 0,
+      "physical_farms_equal": true,
+      "executed_services_equal": true,
+      "intervention": {
+        "step": 456,
+        "day": 20,
+        "hour": 1,
+        "reason": "reordered",
+        "proposed": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              5
+            ],
+            [
+              "SELL",
+              "MILK",
+              12
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              7
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              8
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "emitted": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [],
+          "market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              7
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              5
+            ],
+            [
+              "SELL",
+              "MILK",
+              12
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              8
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        }
+      },
+      "conditions": {
+        "control": {
+          "windows": {
+            "D20": {
+              "cash": 35015.0,
+              "opponent_cash": 37134.0,
+              "margin": -2119.0,
+              "strawberry_units": 7,
+              "strawberry_sales": 1596,
+              "strawberry_price": 228.0,
+              "strawberry_stock": 18,
+              "sales": 2621,
+              "purchases": 208,
+              "wages": 376.0
+            },
+            "D20-D22": {
+              "cash": 42865.0,
+              "opponent_cash": 44818.0,
+              "margin": -1953.0,
+              "strawberry_units": 39,
+              "strawberry_sales": 8708,
+              "strawberry_price": 223.28205128205127,
+              "strawberry_stock": 28,
+              "sales": 11348,
+              "purchases": 333,
+              "wages": 1128.0
+            },
+            "D20-D30": {
+              "cash": 79850.0,
+              "opponent_cash": 73424.0,
+              "margin": 6426.0,
+              "strawberry_units": 209,
+              "strawberry_sales": 39264,
+              "strawberry_price": 187.86602870813397,
+              "strawberry_stock": 0,
+              "sales": 53292,
+              "purchases": 2653,
+              "wages": 3767.0
+            }
+          },
+          "losses": 0,
+          "stress": 2,
+          "first_strawberry_sale_at_or_after_trigger": {
+            "step": 457,
+            "day": 20,
+            "hour": 1,
+            "item": "STRAWBERRY",
+            "price": 229
+          }
+        },
+        "reorder": {
+          "windows": {
+            "D20": {
+              "cash": 35035.0,
+              "opponent_cash": 37117.0,
+              "margin": -2082.0,
+              "strawberry_units": 7,
+              "strawberry_sales": 1616,
+              "strawberry_price": 230.85714285714286,
+              "strawberry_stock": 18,
+              "sales": 2641,
+              "purchases": 208,
+              "wages": 376.0
+            },
+            "D20-D22": {
+              "cash": 42885.0,
+              "opponent_cash": 44801.0,
+              "margin": -1916.0,
+              "strawberry_units": 39,
+              "strawberry_sales": 8728,
+              "strawberry_price": 223.7948717948718,
+              "strawberry_stock": 28,
+              "sales": 11368,
+              "purchases": 333,
+              "wages": 1128.0
+            },
+            "D20-D30": {
+              "cash": 79870.0,
+              "opponent_cash": 73407.0,
+              "margin": 6463.0,
+              "strawberry_units": 209,
+              "strawberry_sales": 39284,
+              "strawberry_price": 187.96172248803828,
+              "strawberry_stock": 0,
+              "sales": 53312,
+              "purchases": 2653,
+              "wages": 3767.0
+            }
+          },
+          "losses": 0,
+          "stress": 2,
+          "first_strawberry_sale_at_or_after_trigger": {
+            "step": 457,
+            "day": 20,
+            "hour": 1,
+            "item": "STRAWBERRY",
+            "price": 233
+          }
+        }
+      },
+      "delta_cash": 20.0,
+      "delta_margin": 37.0,
+      "biological_regression": false,
+      "decision": "DIAGNOSTIC_ONLY",
+      "adopted": false,
+      "changed_worker_batches_by_seat": [
+        0,
+        0
+      ],
+      "initial_delta_cash": 20.0,
+      "initial_delta_margin": 37.0
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 1,
+      "physical_farms_equal": true,
+      "executed_services_equal": true,
+      "intervention": {
+        "step": 456,
+        "day": 20,
+        "hour": 1,
+        "reason": "reordered",
+        "proposed": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              5
+            ],
+            [
+              "SELL",
+              "MILK",
+              12
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              7
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              8
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "emitted": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [],
+          "market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              7
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              5
+            ],
+            [
+              "SELL",
+              "MILK",
+              12
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              8
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        }
+      },
+      "conditions": {
+        "control": {
+          "windows": {
+            "D20": {
+              "cash": 35366.0,
+              "opponent_cash": 37876.0,
+              "margin": -2510.0,
+              "strawberry_units": 7,
+              "strawberry_sales": 1745,
+              "strawberry_price": 249.28571428571428,
+              "strawberry_stock": 18,
+              "sales": 2920,
+              "purchases": 207,
+              "wages": 376.0
+            },
+            "D20-D22": {
+              "cash": 44903.0,
+              "opponent_cash": 47415.0,
+              "margin": -2512.0,
+              "strawberry_units": 39,
+              "strawberry_sales": 9801,
+              "strawberry_price": 251.30769230769232,
+              "strawberry_stock": 28,
+              "sales": 13334,
+              "purchases": 332,
+              "wages": 1128.0
+            },
+            "D20-D30": {
+              "cash": 95881.0,
+              "opponent_cash": 97067.0,
+              "margin": -1186.0,
+              "strawberry_units": 209,
+              "strawberry_sales": 52226,
+              "strawberry_price": 249.88516746411483,
+              "strawberry_stock": 0,
+              "sales": 69267,
+              "purchases": 2648,
+              "wages": 3767.0
+            }
+          },
+          "losses": 0,
+          "stress": 2,
+          "first_strawberry_sale_at_or_after_trigger": {
+            "step": 457,
+            "day": 20,
+            "hour": 1,
+            "item": "STRAWBERRY",
+            "price": 250
+          }
+        },
+        "reorder": {
+          "windows": {
+            "D20": {
+              "cash": 35383.0,
+              "opponent_cash": 37861.0,
+              "margin": -2478.0,
+              "strawberry_units": 7,
+              "strawberry_sales": 1762,
+              "strawberry_price": 251.71428571428572,
+              "strawberry_stock": 18,
+              "sales": 2937,
+              "purchases": 207,
+              "wages": 376.0
+            },
+            "D20-D22": {
+              "cash": 44920.0,
+              "opponent_cash": 47400.0,
+              "margin": -2480.0,
+              "strawberry_units": 39,
+              "strawberry_sales": 9818,
+              "strawberry_price": 251.74358974358975,
+              "strawberry_stock": 28,
+              "sales": 13351,
+              "purchases": 332,
+              "wages": 1128.0
+            },
+            "D20-D30": {
+              "cash": 95898.0,
+              "opponent_cash": 97052.0,
+              "margin": -1154.0,
+              "strawberry_units": 209,
+              "strawberry_sales": 52243,
+              "strawberry_price": 249.9665071770335,
+              "strawberry_stock": 0,
+              "sales": 69284,
+              "purchases": 2648,
+              "wages": 3767.0
+            }
+          },
+          "losses": 0,
+          "stress": 2,
+          "first_strawberry_sale_at_or_after_trigger": {
+            "step": 457,
+            "day": 20,
+            "hour": 1,
+            "item": "STRAWBERRY",
+            "price": 253
+          }
+        }
+      },
+      "delta_cash": 17.0,
+      "delta_margin": 32.0,
+      "biological_regression": false,
+      "decision": "DIAGNOSTIC_ONLY",
+      "adopted": false,
+      "changed_worker_batches_by_seat": [
+        0,
+        0
+      ],
+      "initial_delta_cash": 17.0,
+      "initial_delta_margin": 32.0
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 1,
+      "physical_farms_equal": true,
+      "executed_services_equal": true,
+      "intervention": {
+        "step": 456,
+        "day": 20,
+        "hour": 1,
+        "reason": "reordered",
+        "proposed": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [],
+          "market": [
+            [
+              "SELL",
+              "FERTILIZER",
+              5
+            ],
+            [
+              "SELL",
+              "MILK",
+              12
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              7
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              8
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        },
+        "emitted": {
+          "farmer": [
+            "SOUTH"
+          ],
+          "hands": [],
+          "market": [
+            [
+              "SELL",
+              "STRAWBERRY",
+              7
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              5
+            ],
+            [
+              "SELL",
+              "MILK",
+              12
+            ],
+            [
+              "SELL",
+              "WHEAT",
+              8
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        }
+      },
+      "conditions": {
+        "control": {
+          "windows": {
+            "D20": {
+              "cash": 35015.0,
+              "opponent_cash": 37134.0,
+              "margin": -2119.0,
+              "strawberry_units": 7,
+              "strawberry_sales": 1596,
+              "strawberry_price": 228.0,
+              "strawberry_stock": 18,
+              "sales": 2621,
+              "purchases": 208,
+              "wages": 376.0
+            },
+            "D20-D22": {
+              "cash": 42865.0,
+              "opponent_cash": 44818.0,
+              "margin": -1953.0,
+              "strawberry_units": 39,
+              "strawberry_sales": 8708,
+              "strawberry_price": 223.28205128205127,
+              "strawberry_stock": 28,
+              "sales": 11348,
+              "purchases": 333,
+              "wages": 1128.0
+            },
+            "D20-D30": {
+              "cash": 79850.0,
+              "opponent_cash": 73424.0,
+              "margin": 6426.0,
+              "strawberry_units": 209,
+              "strawberry_sales": 39264,
+              "strawberry_price": 187.86602870813397,
+              "strawberry_stock": 0,
+              "sales": 53292,
+              "purchases": 2653,
+              "wages": 3767.0
+            }
+          },
+          "losses": 0,
+          "stress": 2,
+          "first_strawberry_sale_at_or_after_trigger": {
+            "step": 457,
+            "day": 20,
+            "hour": 1,
+            "item": "STRAWBERRY",
+            "price": 229
+          }
+        },
+        "reorder": {
+          "windows": {
+            "D20": {
+              "cash": 35035.0,
+              "opponent_cash": 37117.0,
+              "margin": -2082.0,
+              "strawberry_units": 7,
+              "strawberry_sales": 1616,
+              "strawberry_price": 230.85714285714286,
+              "strawberry_stock": 18,
+              "sales": 2641,
+              "purchases": 208,
+              "wages": 376.0
+            },
+            "D20-D22": {
+              "cash": 42885.0,
+              "opponent_cash": 44801.0,
+              "margin": -1916.0,
+              "strawberry_units": 39,
+              "strawberry_sales": 8728,
+              "strawberry_price": 223.7948717948718,
+              "strawberry_stock": 28,
+              "sales": 11368,
+              "purchases": 333,
+              "wages": 1128.0
+            },
+            "D20-D30": {
+              "cash": 79870.0,
+              "opponent_cash": 73407.0,
+              "margin": 6463.0,
+              "strawberry_units": 209,
+              "strawberry_sales": 39284,
+              "strawberry_price": 187.96172248803828,
+              "strawberry_stock": 0,
+              "sales": 53312,
+              "purchases": 2653,
+              "wages": 3767.0
+            }
+          },
+          "losses": 0,
+          "stress": 2,
+          "first_strawberry_sale_at_or_after_trigger": {
+            "step": 457,
+            "day": 20,
+            "hour": 1,
+            "item": "STRAWBERRY",
+            "price": 233
+          }
+        }
+      },
+      "delta_cash": 20.0,
+      "delta_margin": 37.0,
+      "biological_regression": false,
+      "decision": "DIAGNOSTIC_ONLY",
+      "adopted": false,
+      "changed_worker_batches_by_seat": [
+        0,
+        0
+      ],
+      "initial_delta_cash": 20.0,
+      "initial_delta_margin": 37.0
+    }
+  ],
+  "metadata_sources_sha256": {
+    "docs\\model_specs\\codex\\evolution\\artifacts\\H006_FULL\\E19_180910204_seat0_control.json": "8e37af19abc964665386372b4c82f353e4c41b8c3fa4d45093bb1c2f8399ec50",
+    "docs\\model_specs\\codex\\evolution\\artifacts\\H006_FULL\\E19_180910204_seat0_strawberry_first.json": "d4f2b42f8669b614c7ee2e60775dbc4917821a20a86ba2674284f96f0a1c8cfc",
+    "docs\\model_specs\\codex\\evolution\\artifacts\\H006_FULL\\E19_180910206_seat0_control.json": "b54bab870552cc1d0920ec93111a4caec4964f784bfae258f1afdb894d1e1257",
+    "docs\\model_specs\\codex\\evolution\\artifacts\\H006_FULL\\E19_180910206_seat0_strawberry_first.json": "295baa17c2c2f04788fcb6194085d8260b2383f5981bc23bfda1124e52548b34",
+    "docs\\model_specs\\codex\\evolution\\artifacts\\H006_FULL\\E19_180910204_seat1_control.json": "611ad672705b092aaaeb7888d09613dc3e4dc2fbb78e0f23a7326d253df39e6b",
+    "docs\\model_specs\\codex\\evolution\\artifacts\\H006_FULL\\E19_180910204_seat1_strawberry_first.json": "7826a18105b8afbc168cecdbb8e03a6a91ebfa31fa79f11ad0e8fb6e1a9954ea",
+    "docs\\model_specs\\codex\\evolution\\artifacts\\H006_FULL\\E19_180910206_seat1_control.json": "70e5a89c2ca6f30b805ce131b9389fd1ecdb5188fae77b0059873fc948ade775",
+    "docs\\model_specs\\codex\\evolution\\artifacts\\H006_FULL\\E19_180910206_seat1_strawberry_first.json": "ebc60aed28a298114a9ae549c44d92f3b2c2b3239281a012f2d74a6fa5b81fa8"
+  }
+}

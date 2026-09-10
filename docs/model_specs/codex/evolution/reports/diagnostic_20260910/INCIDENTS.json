@@ -1,0 +1,257 @@
+{
+  "selection_rule": "minimum, median and maximum signed delta for each common-opponent contrast; descriptive selection, not independent tests",
+  "incidents": [
+    {
+      "selection": "minimum_delta",
+      "model_a": "E19",
+      "model_b": "E20.1",
+      "opponent": "E18",
+      "seed": 180910207,
+      "delta_cash_b_minus_a": -15335.5,
+      "windows": {
+        "D15-D19": {
+          "net": -967.0,
+          "sales": -709,
+          "purchases": 258,
+          "wages": 0.0
+        },
+        "D20-D24": {
+          "net": -5678.0,
+          "sales": -6333,
+          "purchases": -655,
+          "wages": 0.0
+        },
+        "D25-D30": {
+          "net": -8215.5,
+          "sales": -7058,
+          "purchases": 1164.0,
+          "wages": -6.5
+        }
+      }
+    },
+    {
+      "selection": "median_delta",
+      "model_a": "E19",
+      "model_b": "E20.1",
+      "opponent": "E18",
+      "seed": 180910202,
+      "delta_cash_b_minus_a": -3442.0,
+      "windows": {
+        "D15-D19": {
+          "net": -2580.0,
+          "sales": -2331,
+          "purchases": 249,
+          "wages": 0.0
+        },
+        "D20-D24": {
+          "net": -1354.0,
+          "sales": -1538,
+          "purchases": -184,
+          "wages": 0.0
+        },
+        "D25-D30": {
+          "net": 1072.0,
+          "sales": 1694.0,
+          "purchases": 623.5,
+          "wages": -1.5
+        }
+      }
+    },
+    {
+      "selection": "maximum_delta",
+      "model_a": "E19",
+      "model_b": "E20.1",
+      "opponent": "E18",
+      "seed": 180910201,
+      "delta_cash_b_minus_a": 5896.0,
+      "windows": {
+        "D15-D19": {
+          "net": 296.0,
+          "sales": 52,
+          "purchases": -244,
+          "wages": 0.0
+        },
+        "D20-D24": {
+          "net": 3483.0,
+          "sales": 3815,
+          "purchases": 332,
+          "wages": 0.0
+        },
+        "D25-D30": {
+          "net": 3358.0,
+          "sales": 3470,
+          "purchases": 117,
+          "wages": -5.0
+        }
+      }
+    },
+    {
+      "selection": "minimum_delta",
+      "model_a": "E18",
+      "model_b": "E19",
+      "opponent": "E20.1",
+      "seed": 180910201,
+      "delta_cash_b_minus_a": -4282.5,
+      "windows": {
+        "D15-D19": {
+          "net": -1719.0,
+          "sales": -6210,
+          "purchases": -4491,
+          "wages": 0.0
+        },
+        "D20-D24": {
+          "net": -2369.0,
+          "sales": -5812,
+          "purchases": -3443,
+          "wages": 0.0
+        },
+        "D25-D30": {
+          "net": -3363.5,
+          "sales": -5974.5,
+          "purchases": -2480,
+          "wages": -131.0
+        }
+      }
+    },
+    {
+      "selection": "median_delta",
+      "model_a": "E18",
+      "model_b": "E19",
+      "opponent": "E20.1",
+      "seed": 180910204,
+      "delta_cash_b_minus_a": 1673.0,
+      "windows": {
+        "D15-D19": {
+          "net": -922.0,
+          "sales": -5487,
+          "purchases": -4565,
+          "wages": 0.0
+        },
+        "D20-D24": {
+          "net": 4188.0,
+          "sales": 199,
+          "purchases": -3989,
+          "wages": 0.0
+        },
+        "D25-D30": {
+          "net": -4133.0,
+          "sales": -7640,
+          "purchases": -3371,
+          "wages": -136.0
+        }
+      }
+    },
+    {
+      "selection": "maximum_delta",
+      "model_a": "E18",
+      "model_b": "E19",
+      "opponent": "E20.1",
+      "seed": 180910206,
+      "delta_cash_b_minus_a": 15175.0,
+      "windows": {
+        "D15-D19": {
+          "net": -517.0,
+          "sales": -5084,
+          "purchases": -4567,
+          "wages": 0.0
+        },
+        "D20-D24": {
+          "net": 6633.0,
+          "sales": 2617,
+          "purchases": -4016,
+          "wages": 0.0
+        },
+        "D25-D30": {
+          "net": 6576.0,
+          "sales": 2959,
+          "purchases": -3481,
+          "wages": -136.0
+        }
+      }
+    },
+    {
+      "selection": "minimum_delta",
+      "model_a": "E18",
+      "model_b": "E20.1",
+      "opponent": "E19",
+      "seed": 180910202,
+      "delta_cash_b_minus_a": -13218.0,
+      "windows": {
+        "D15-D19": {
+          "net": -10664.0,
+          "sales": -14950,
+          "purchases": -4286,
+          "wages": 0.0
+        },
+        "D20-D24": {
+          "net": -3773.0,
+          "sales": -7159.0,
+          "purchases": -3386.0,
+          "wages": 0.0
+        },
+        "D25-D30": {
+          "net": -1668.0,
+          "sales": -4729.5,
+          "purchases": -2922.5,
+          "wages": -139.0
+        }
+      }
+    },
+    {
+      "selection": "median_delta",
+      "model_a": "E18",
+      "model_b": "E20.1",
+      "opponent": "E19",
+      "seed": 180910201,
+      "delta_cash_b_minus_a": 4764.0,
+      "windows": {
+        "D15-D19": {
+          "net": -3350.0,
+          "sales": -8065,
+          "purchases": -4715,
+          "wages": 0.0
+        },
+        "D20-D24": {
+          "net": 1622.0,
+          "sales": -2088,
+          "purchases": -3710,
+          "wages": 0.0
+        },
+        "D25-D30": {
+          "net": 4634.0,
+          "sales": 2914.5,
+          "purchases": -1583.5,
+          "wages": -136.0
+        }
+      }
+    },
+    {
+      "selection": "maximum_delta",
+      "model_a": "E18",
+      "model_b": "E20.1",
+      "opponent": "E19",
+      "seed": 180910206,
+      "delta_cash_b_minus_a": 13537.0,
+      "windows": {
+        "D15-D19": {
+          "net": -3123.0,
+          "sales": -7860,
+          "purchases": -4737,
+          "wages": 0.0
+        },
+        "D20-D24": {
+          "net": 6401.0,
+          "sales": 2679,
+          "purchases": -3722,
+          "wages": 0.0
+        },
+        "D25-D30": {
+          "net": 8293.0,
+          "sales": 4932,
+          "purchases": -3222,
+          "wages": -139.0
+        }
+      }
+    }
+  ]
+}

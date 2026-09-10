@@ -1,0 +1,137 @@
+{
+  "experiment": "H003",
+  "condition": "strawberry_first",
+  "agents": [
+    "E19",
+    "E18"
+  ],
+  "seed": 180910202,
+  "rewards": [
+    50905.0,
+    73197.0
+  ],
+  "checkpoint": 456,
+  "intervention": {
+    "step": 456,
+    "day": 20,
+    "hour": 1,
+    "reason": "reordered",
+    "proposed": {
+      "farmer": [
+        "PICKUP",
+        "WHEAT",
+        14
+      ],
+      "hands": [],
+      "market": [
+        [
+          "SELL",
+          "MILK",
+          18
+        ],
+        [
+          "SELL",
+          "STRAWBERRY",
+          9
+        ],
+        [
+          "SELL",
+          "WHEAT",
+          7
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ]
+      ]
+    },
+    "emitted": {
+      "farmer": [
+        "PICKUP",
+        "WHEAT",
+        14
+      ],
+      "hands": [],
+      "market": [
+        [
+          "SELL",
+          "STRAWBERRY",
+          9
+        ],
+        [
+          "SELL",
+          "MILK",
+          18
+        ],
+        [
+          "SELL",
+          "WHEAT",
+          7
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ]
+      ]
+    }
+  },
+  "source_replay_sha256": "68bbe7de785cb2a1313eed531c7dbe5d35323484257e389e3f959cdde2810f11",
+  "replay_sha256": "12ff045dc374f4446e1defdbc87d7f7bd508cc6ec4ff854c30c015d92a5d1edb",
+  "runtime": [
+    {
+      "calls": 719,
+      "core_errors": 0,
+      "max_seconds": 2.014046700001927
+    },
+    {
+      "calls": 719,
+      "core_errors": null,
+      "max_seconds": 0.013443000003462657
+    }
+  ],
+  "verification": {
+    "prefix_actions_per_agent": 456,
+    "suffix_action_batches": 0,
+    "suffix_states": 0,
+    "clock_field_excluded": "remainingOverageTime"
+  },
+  "sources": {
+    "docs\\model_specs\\codex\\evolution\\tools\\branch_h003.py": "ed21bf0f7c01899e6cf1510ba2d2b36c78294b0c7c3edd59dacc1bccdd4672da",
+    "docs\\model_specs\\codex\\evolution\\tools\\market_order.py": "c5a069bab12b011aa39a5f09077e6e0bcad60f1fae172862deba1992018acac2",
+    "docs\\model_specs\\codex\\evolution\\H003_PROTOCOL.md": "c1b0c3eefe3112bbbdb3254c851be4980063eddcac78a8851e6471b38e43034b",
+    "submission\\submission_codex_e18_770_v48_external.py": "57e7155e69a4b0db43ccb22295a7172fc4d338999dae6a6e775081b67ecf7743",
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7"
+  },
+  "engine": {
+    "version": "1.32.7",
+    "sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e"
+  }
+}

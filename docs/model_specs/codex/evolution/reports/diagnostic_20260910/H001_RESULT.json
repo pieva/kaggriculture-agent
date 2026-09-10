@@ -1,0 +1,641 @@
+{
+  "experiment": "H001",
+  "purpose": "method_pilot_not_promotion",
+  "rows": [
+    {
+      "model": "E18",
+      "conditions": {
+        "control": {
+          "reward": 43673.0,
+          "losses": 0,
+          "stress": 22,
+          "verification": {
+            "prefix_actions_per_agent": 456,
+            "suffix_action_batches": 263,
+            "suffix_states": 263,
+            "clock_field_excluded": "remainingOverageTime"
+          },
+          "intervention": null,
+          "windows": {
+            "D20": {
+              "cash": 29273.0,
+              "hires": 12,
+              "wages": 376.0,
+              "sales": 2955,
+              "purchases": 998,
+              "MOVE": 144,
+              "PASS": 11,
+              "WATER": 35,
+              "FEED": 19,
+              "CARE": 19
+            },
+            "D20-D22": {
+              "cash": 29799.0,
+              "hires": 36,
+              "wages": 1128.0,
+              "sales": 6144,
+              "purchases": 2909,
+              "MOVE": 445,
+              "PASS": 17,
+              "WATER": 99,
+              "FEED": 57,
+              "CARE": 56
+            },
+            "D20-D30": {
+              "cash": 43673.0,
+              "hires": 130,
+              "wages": 3903.0,
+              "sales": 29206,
+              "purchases": 9322,
+              "MOVE": 1676,
+              "PASS": 74,
+              "WATER": 307,
+              "FEED": 180,
+              "CARE": 165
+            }
+          },
+          "opponent_reward": 38856.0,
+          "D20_hands_after_first_batches": [
+            6,
+            12,
+            12,
+            12
+          ]
+        },
+        "omit_one_hire": {
+          "reward": 51603.0,
+          "losses": 1,
+          "stress": 34,
+          "verification": {
+            "prefix_actions_per_agent": 456,
+            "suffix_action_batches": 0,
+            "suffix_states": 0,
+            "clock_field_excluded": "remainingOverageTime"
+          },
+          "intervention": {
+            "step": 456,
+            "day": 20,
+            "hour": 1,
+            "proposed": {
+              "farmer": [
+                "PICKUP",
+                "WHEAT",
+                8
+              ],
+              "hands": [],
+              "market": [
+                [
+                  "SELL",
+                  "STRAWBERRY",
+                  14
+                ],
+                [
+                  "SELL",
+                  "WHEAT",
+                  4
+                ],
+                [
+                  "SELL",
+                  "EGG",
+                  2
+                ],
+                [
+                  "SELL",
+                  "FERTILIZER",
+                  1
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ]
+              ]
+            },
+            "emitted": {
+              "farmer": [
+                "PICKUP",
+                "WHEAT",
+                8
+              ],
+              "hands": [],
+              "market": [
+                [
+                  "SELL",
+                  "STRAWBERRY",
+                  14
+                ],
+                [
+                  "SELL",
+                  "WHEAT",
+                  4
+                ],
+                [
+                  "SELL",
+                  "EGG",
+                  2
+                ],
+                [
+                  "SELL",
+                  "FERTILIZER",
+                  1
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ]
+              ]
+            }
+          },
+          "windows": {
+            "D20": {
+              "cash": 29417.0,
+              "hires": 11,
+              "wages": 232.0,
+              "sales": 2955,
+              "purchases": 998,
+              "MOVE": 129,
+              "PASS": 11,
+              "WATER": 22,
+              "FEED": 14,
+              "CARE": 14
+            },
+            "D20-D22": {
+              "cash": 29984.0,
+              "hires": 35,
+              "wages": 984.0,
+              "sales": 6183,
+              "purchases": 2907,
+              "MOVE": 430,
+              "PASS": 17,
+              "WATER": 72,
+              "FEED": 50,
+              "CARE": 49
+            },
+            "D20-D30": {
+              "cash": 51603.0,
+              "hires": 129,
+              "wages": 3759.0,
+              "sales": 37090,
+              "purchases": 9420,
+              "MOVE": 1653,
+              "PASS": 92,
+              "WATER": 255,
+              "FEED": 165,
+              "CARE": 152
+            }
+          },
+          "opponent_reward": 42619.0,
+          "D20_hands_after_first_batches": [
+            5,
+            11,
+            11,
+            11
+          ]
+        }
+      },
+      "delta_cash": 7930.0,
+      "result": "gain",
+      "biological_regression": true,
+      "decision": "REJECT_BIOLOGICAL_REGRESSION",
+      "adopted": false
+    },
+    {
+      "model": "E19",
+      "conditions": {
+        "control": {
+          "reward": 36786.0,
+          "losses": 0,
+          "stress": 6,
+          "verification": {
+            "prefix_actions_per_agent": 456,
+            "suffix_action_batches": 263,
+            "suffix_states": 263,
+            "clock_field_excluded": "remainingOverageTime"
+          },
+          "intervention": null,
+          "windows": {
+            "D20": {
+              "cash": 26770.0,
+              "hires": 12,
+              "wages": 376.0,
+              "sales": 1658,
+              "purchases": 168,
+              "MOVE": 125,
+              "PASS": 53,
+              "WATER": 45,
+              "FEED": 14,
+              "CARE": 14
+            },
+            "D20-D22": {
+              "cash": 27456.0,
+              "hires": 36,
+              "wages": 1128.0,
+              "sales": 3620,
+              "purchases": 692,
+              "MOVE": 472,
+              "PASS": 80,
+              "WATER": 110,
+              "FEED": 42,
+              "CARE": 37
+            },
+            "D20-D30": {
+              "cash": 36786.0,
+              "hires": 125,
+              "wages": 3772.0,
+              "sales": 18644,
+              "purchases": 3742,
+              "MOVE": 1607,
+              "PASS": 336,
+              "WATER": 307,
+              "FEED": 133,
+              "CARE": 100
+            }
+          },
+          "opponent_reward": 41686.0,
+          "D20_hands_after_first_batches": [
+            6,
+            11,
+            12,
+            12
+          ]
+        },
+        "omit_one_hire": {
+          "reward": 40882.0,
+          "losses": 0,
+          "stress": 5,
+          "verification": {
+            "prefix_actions_per_agent": 456,
+            "suffix_action_batches": 0,
+            "suffix_states": 0,
+            "clock_field_excluded": "remainingOverageTime"
+          },
+          "intervention": {
+            "step": 456,
+            "day": 20,
+            "hour": 1,
+            "proposed": {
+              "farmer": [
+                "WEST"
+              ],
+              "hands": [],
+              "market": [
+                [
+                  "SELL",
+                  "MILK",
+                  16
+                ],
+                [
+                  "SELL",
+                  "STRAWBERRY",
+                  16
+                ],
+                [
+                  "SELL",
+                  "WHEAT",
+                  7
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ]
+              ]
+            },
+            "emitted": {
+              "farmer": [
+                "WEST"
+              ],
+              "hands": [],
+              "market": [
+                [
+                  "SELL",
+                  "MILK",
+                  16
+                ],
+                [
+                  "SELL",
+                  "STRAWBERRY",
+                  16
+                ],
+                [
+                  "SELL",
+                  "WHEAT",
+                  7
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ]
+              ]
+            }
+          },
+          "windows": {
+            "D20": {
+              "cash": 26670.0,
+              "hires": 12,
+              "wages": 376.0,
+              "sales": 1658,
+              "purchases": 268,
+              "MOVE": 137,
+              "PASS": 43,
+              "WATER": 46,
+              "FEED": 14,
+              "CARE": 13
+            },
+            "D20-D22": {
+              "cash": 27386.0,
+              "hires": 36,
+              "wages": 1128.0,
+              "sales": 3674,
+              "purchases": 816,
+              "MOVE": 496,
+              "PASS": 57,
+              "WATER": 114,
+              "FEED": 41,
+              "CARE": 36
+            },
+            "D20-D30": {
+              "cash": 40882.0,
+              "hires": 126,
+              "wages": 3780.0,
+              "sales": 22472,
+              "purchases": 3466,
+              "MOVE": 1675,
+              "PASS": 291,
+              "WATER": 328,
+              "FEED": 128,
+              "CARE": 93
+            }
+          },
+          "opponent_reward": 51251.0,
+          "D20_hands_after_first_batches": [
+            5,
+            12,
+            12,
+            12
+          ]
+        }
+      },
+      "delta_cash": 4096.0,
+      "result": "gain",
+      "biological_regression": false,
+      "decision": "LOCAL_RESULT_REQUIRES_REPLICATION",
+      "adopted": false
+    },
+    {
+      "model": "E20.1",
+      "conditions": {
+        "control": {
+          "reward": 43717.0,
+          "losses": 0,
+          "stress": 3,
+          "verification": {
+            "prefix_actions_per_agent": 456,
+            "suffix_action_batches": 263,
+            "suffix_states": 263,
+            "clock_field_excluded": "remainingOverageTime"
+          },
+          "intervention": null,
+          "windows": {
+            "D20": {
+              "cash": 26848.0,
+              "hires": 12,
+              "wages": 376.0,
+              "sales": 2586,
+              "purchases": 73,
+              "MOVE": 150,
+              "PASS": 25,
+              "WATER": 39,
+              "FEED": 16,
+              "CARE": 15
+            },
+            "D20-D22": {
+              "cash": 29780.0,
+              "hires": 36,
+              "wages": 1128.0,
+              "sales": 6674,
+              "purchases": 477,
+              "MOVE": 471,
+              "PASS": 55,
+              "WATER": 106,
+              "FEED": 46,
+              "CARE": 39
+            },
+            "D20-D30": {
+              "cash": 43717.0,
+              "hires": 124,
+              "wages": 3767.0,
+              "sales": 26755,
+              "purchases": 3982,
+              "MOVE": 1660,
+              "PASS": 276,
+              "WATER": 272,
+              "FEED": 154,
+              "CARE": 100
+            }
+          },
+          "opponent_reward": 50035.0,
+          "D20_hands_after_first_batches": [
+            6,
+            12,
+            12,
+            12
+          ]
+        },
+        "omit_one_hire": {
+          "reward": 44130.0,
+          "losses": 0,
+          "stress": 0,
+          "verification": {
+            "prefix_actions_per_agent": 456,
+            "suffix_action_batches": 0,
+            "suffix_states": 0,
+            "clock_field_excluded": "remainingOverageTime"
+          },
+          "intervention": {
+            "step": 456,
+            "day": 20,
+            "hour": 1,
+            "proposed": {
+              "farmer": [
+                "WEST"
+              ],
+              "hands": [],
+              "market": [
+                [
+                  "SELL",
+                  "MILK",
+                  6
+                ],
+                [
+                  "SELL",
+                  "STRAWBERRY",
+                  12
+                ],
+                [
+                  "SELL",
+                  "WHEAT",
+                  4
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ]
+              ]
+            },
+            "emitted": {
+              "farmer": [
+                "WEST"
+              ],
+              "hands": [],
+              "market": [
+                [
+                  "SELL",
+                  "MILK",
+                  6
+                ],
+                [
+                  "SELL",
+                  "STRAWBERRY",
+                  12
+                ],
+                [
+                  "SELL",
+                  "WHEAT",
+                  4
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ],
+                [
+                  "HIRE"
+                ]
+              ]
+            }
+          },
+          "windows": {
+            "D20": {
+              "cash": 25973.0,
+              "hires": 12,
+              "wages": 376.0,
+              "sales": 1816,
+              "purchases": 178,
+              "MOVE": 144,
+              "PASS": 25,
+              "WATER": 41,
+              "FEED": 16,
+              "CARE": 15
+            },
+            "D20-D22": {
+              "cash": 29349.0,
+              "hires": 36,
+              "wages": 1128.0,
+              "sales": 6207,
+              "purchases": 441,
+              "MOVE": 474,
+              "PASS": 61,
+              "WATER": 104,
+              "FEED": 46,
+              "CARE": 38
+            },
+            "D20-D30": {
+              "cash": 44130.0,
+              "hires": 124,
+              "wages": 3767.0,
+              "sales": 27212,
+              "purchases": 4026,
+              "MOVE": 1708,
+              "PASS": 216,
+              "WATER": 280,
+              "FEED": 146,
+              "CARE": 96
+            }
+          },
+          "opponent_reward": 44947.0,
+          "D20_hands_after_first_batches": [
+            5,
+            12,
+            12,
+            12
+          ]
+        }
+      },
+      "delta_cash": 413.0,
+      "result": "gain",
+      "biological_regression": false,
+      "decision": "LOCAL_RESULT_REQUIRES_REPLICATION",
+      "adopted": false
+    }
+  ]
+}

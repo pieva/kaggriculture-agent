@@ -1,0 +1,50 @@
+{
+  "experiment": "H006_FULL",
+  "condition": "control",
+  "agents": [
+    "E19",
+    "E18"
+  ],
+  "target_seat": 0,
+  "seed": 180910204,
+  "rewards": [
+    95881.0,
+    97067.0
+  ],
+  "checkpoint": 456,
+  "intervention": null,
+  "source_replay_sha256": "4bb0660102fa01ccec57b950b0a0f2800834b19987817abc9a32fe289cd93440",
+  "replay_sha256": "cd86b84f00f2cb853587f86f9045ced2ad763f797a4e501d7858d457c443a788",
+  "runtime": [
+    {
+      "calls": 719,
+      "core_errors": 0,
+      "max_seconds": 1.6755091000086395
+    },
+    {
+      "calls": 719,
+      "core_errors": null,
+      "max_seconds": 0.012326199997914955
+    }
+  ],
+  "verification": {
+    "prefix_actions_per_agent": 456,
+    "suffix_action_batches": 263,
+    "suffix_states": 263,
+    "clock_field_excluded": "remainingOverageTime"
+  },
+  "sources": {
+    "docs\\model_specs\\codex\\evolution\\tools\\branch_h006_full.py": "8f635221d217845b5b96643095984a0c4af6a469baac4a31407373c4d50d2cca",
+    "docs\\model_specs\\codex\\evolution\\tools\\market_order.py": "c5a069bab12b011aa39a5f09077e6e0bcad60f1fae172862deba1992018acac2",
+    "docs\\model_specs\\codex\\evolution\\H006_CONTINUATION_PROTOCOL.md": "92594456ab02d47fd724f70100970f46e702f0572b5bd7a5fe36ddd10038c444",
+    "docs\\model_specs\\codex\\evolution\\H006_PROTOCOL.md": "b53e5ec0bbdb30c9901eb10f4d521b79b996b27ae6509d084d82fcd88372f965",
+    "docs\\model_specs\\codex\\evolution\\tools\\infer_market_order_floor.py": "ddaaad44356a83364d08308134f0a280ced73bcbcdbeb21b0842faa3ace09d6e",
+    "docs\\model_specs\\codex\\evolution\\reports\\H006\\PREDICTIONS.json": "42f8b4b643dccb593c0cf08a48fce9f6fd7973995f1cc4723e65bc0d0f9a76bd",
+    "submission\\submission_codex_e18_770_v48_external.py": "57e7155e69a4b0db43ccb22295a7172fc4d338999dae6a6e775081b67ecf7743",
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7"
+  },
+  "engine": {
+    "version": "1.32.7",
+    "sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e"
+  }
+}

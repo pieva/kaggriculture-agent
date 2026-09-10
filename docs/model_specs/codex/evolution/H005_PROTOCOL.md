@@ -1,0 +1,9 @@
+# H005 — acquisti e vendite misti nel modello inverso
+
+Registrato prima delle predizioni H005. Estensione contabile di H004, nessuna modifica al forecast: cinque H1 D15-D19, almeno due testimonianze univoche tutte concordi, altrimenti astensione. Stessi84giocatori/42partite/7seed diagnostici esposti; nessun accesso ai seed riservati. H004 resta congelato come controllo.
+
+Modifica: trattare SELL e BUY_PRODUCT come flussi con segno opposto e ricostruire la quantita effettiva dal deposito proprio dopo aver simulato le azioni fisiche proprie. Ricostruire separatamente gli acquisti di semi a prezzo fisso dalle scorte proprie. Il residuo di mercato concorrente puo essere negativo per WHEAT/FERTILIZER (acquisti), non per i prodotti non acquistabili. Quotazione BUY_PRODUCT al livello di inventario dopo la singola unita acquistata, come nell engine. Enumerare prima/uguale/dopo con acquisti concorrenti inclusi.
+
+Conservare le limitazioni: una richiesta per prodotto variabile, niente acquisto/rivendita compensati o vendite spezzate da parte dell avversario; BUY_ANIMAL e BUY_LAND non supportati. Astenersi se il percorso di stock puo raggiungere il prezzo minimo: le vendite al floor non incrementano l offerta e non sono invertibili da questo modello. Controllo conservativo sul massimo stock possibile fra le permutazioni. Non abbassare soglie o scegliere un altro periodo dopo gli esiti.
+
+Verifiche: confronti sintetici con il mercato dell engine per acquisti/vendite simultanei e posizioni diverse; predizioni scritte/hashate prima delle etichette target e payoff H003; riproduzione da storia troncata con input immutabili. Valutare copertura storica, errori, copertura operativa, falsi positivi e delta cassa/margine one-step rispetto aH004/H003. Nessuna promozione su questo campione, anche se migliora la copertura. Il riuso dei payoff non e una nuova traiettoria completa.

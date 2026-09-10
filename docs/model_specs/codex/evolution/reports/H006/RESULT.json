@@ -1,0 +1,4810 @@
+{
+  "predictions_sha256": "42f8b4b643dccb593c0cf08a48fce9f6fd7973995f1cc4723e65bc0d0f9a76bd",
+  "statuses": {
+    "no_own_strawberry": 168,
+    "identified": 116,
+    "floor_unidentifiable": 27,
+    "ambiguous": 39,
+    "inconsistent_competing_supply": 70
+  },
+  "historical_identified": 116,
+  "historical_errors": 0,
+  "forecast_covered": 40,
+  "forecast_errors": 0,
+  "applied": 4,
+  "applied_losses": 0,
+  "total_delta_cash": 74.0,
+  "evaluation": [
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910201,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910201,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 202.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910202,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910202,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 179.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910203,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910203,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 41.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910204,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910204,
+      "seat": 1,
+      "forecast": "first",
+      "truth": "first",
+      "apply": true,
+      "delta_cash": 17.0,
+      "delta_margin": 32.0,
+      "unconditional_delta_cash": 17.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910205,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910205,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 36.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910206,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910206,
+      "seat": 1,
+      "forecast": "first",
+      "truth": "first",
+      "apply": true,
+      "delta_cash": 20.0,
+      "delta_margin": 37.0,
+      "unconditional_delta_cash": 20.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910207,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910207,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 40.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910201,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910201,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 157.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910202,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910202,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 195.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910203,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910203,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 44.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910204,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910204,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 22.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910205,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910205,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 185.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910206,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910206,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 23.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910207,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910207,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 55.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910201,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 202.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910201,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910202,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 179.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910202,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910203,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 41.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910203,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910204,
+      "seat": 0,
+      "forecast": "first",
+      "truth": "first",
+      "apply": true,
+      "delta_cash": 17.0,
+      "delta_margin": 32.0,
+      "unconditional_delta_cash": 17.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910204,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910205,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 184.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910205,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910206,
+      "seat": 0,
+      "forecast": "first",
+      "truth": "first",
+      "apply": true,
+      "delta_cash": 20.0,
+      "delta_margin": 37.0,
+      "unconditional_delta_cash": 20.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910206,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E18",
+      "seed": 180910207,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 40.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E19",
+      "seed": 180910207,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910201,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 175.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910201,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -40.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910202,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -10.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910202,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 15.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910203,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 8.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910203,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 22.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910204,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -158.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910204,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -135.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910205,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -232.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910205,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 145.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910206,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -81.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910206,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -60.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910207,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -34.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910207,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -35.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910201,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 157.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910201,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910202,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 195.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910202,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910203,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 44.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910203,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910204,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 22.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910204,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910205,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 42.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910205,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910206,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 23.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910206,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E18",
+      "seed": 180910207,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 55.0
+    },
+    {
+      "model": "E18",
+      "opponent": "E20.1",
+      "seed": 180910207,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 0.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910201,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -40.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910201,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 175.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910202,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 15.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910202,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -10.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910203,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 22.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910203,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 8.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910204,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -135.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910204,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -158.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910205,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 37.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910205,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": 30.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910206,
+      "seat": 0,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -60.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910206,
+      "seat": 1,
+      "forecast": "not_first",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -81.0
+    },
+    {
+      "model": "E20.1",
+      "opponent": "E19",
+      "seed": 180910207,
+      "seat": 0,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -35.0
+    },
+    {
+      "model": "E19",
+      "opponent": "E20.1",
+      "seed": 180910207,
+      "seat": 1,
+      "forecast": "abstain",
+      "truth": "not_first",
+      "apply": false,
+      "delta_cash": 0,
+      "delta_margin": 0,
+      "unconditional_delta_cash": -34.0
+    }
+  ],
+  "historical": [
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 19,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 19,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 18,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 18,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 19,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 17,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 17,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 19,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 19,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "first",
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 18,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E18",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 18,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910201,
+      "seat": 0,
+      "day": 19,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 18,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910201,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 17,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910202,
+      "seat": 0,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910202,
+      "seat": 1,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910203,
+      "seat": 0,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910203,
+      "seat": 1,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910204,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910204,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910205,
+      "seat": 0,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910205,
+      "seat": 1,
+      "day": 19,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 17,
+      "status": "ambiguous",
+      "inferred": null,
+      "truth": "first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910206,
+      "seat": 0,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 17,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 18,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910206,
+      "seat": 1,
+      "day": 19,
+      "status": "identified",
+      "inferred": "not_first",
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 17,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E20.1",
+      "seed": 180910207,
+      "seat": 0,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 15,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 16,
+      "status": "no_own_strawberry",
+      "inferred": null,
+      "truth": "absent"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 17,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 18,
+      "status": "inconsistent_competing_supply",
+      "inferred": null,
+      "truth": "not_first"
+    },
+    {
+      "model": "E19",
+      "seed": 180910207,
+      "seat": 1,
+      "day": 19,
+      "status": "floor_unidentifiable",
+      "inferred": null,
+      "truth": "not_first"
+    }
+  ],
+  "adopted": false
+}

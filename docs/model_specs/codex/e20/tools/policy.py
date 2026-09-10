@@ -34,6 +34,9 @@ VARIANTS={
     'E20v26': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, remote_first=True),
     'E20v27': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, useful_care=True),
     'E20v28': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, remote_first=True, useful_care=True),
+    'E20v29': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, remote_first=True, useful_care=True, late_hourly_routes=True),
+    'E20v30': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, remote_first=True, useful_care=True, late_transfer=True),
+    'E20v31': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, remote_first=True, useful_care=True, late_closing=True),
 }
 
 def care_can_add_yield(tile,day,final_day,rule):
@@ -77,6 +80,43 @@ def create_agent(context=None, variant='E20v1'):
             old='sorted(offers,key=lambda o:(-o[2],o[0]))'
             assert route_source.count(old)==1
             route_source=route_source.replace(old,'sorted(offers,key=lambda o:(-o[2],-min(distance(p,o[0]) for p in positions),o[0]))')
+        if cfg.get('late_hourly_routes'):
+            assert route_source.count('core.hour//6')==2
+            route_source=route_source.replace('core.hour//6','(core.hour if core.day>=19 else core.hour//6)')
+        if cfg.get('late_closing'):
+            anchor='            rescue=rescue or final_water_deadline(core.day,tile,commands)'
+            assert route_source.count(anchor)==1
+            route_source=route_source.replace(anchor,anchor+"\n            rescue=rescue or (19<=core.day<29 and core.remaining<=6 and commands and all(c[0] in {'FEED','WATER','CARE','HARVEST','COLLECT_FERTILIZER','FERTILIZE'} for c in commands))")
+        if cfg.get('late_transfer'):
+            anchor='        core.daily_route_state=dict(day=core.day+1,remaining={str(w):list(q) for w,q in queues.items()})'
+            assert route_source.count(anchor)==1
+            transfer="""        if 19<=core.day<29:
+            for worker in range(len(core.positions)):
+                if worker in core.active or queues.get(worker):continue
+                choices=[]
+                for donor,queue in queues.items():
+                    if donor==worker:continue
+                    route=[by_target[t] for t in queue if t in by_target and t not in claimed]
+                    start=core.positions[donor]
+                    active=core.active.get(donor)
+                    if active and active['steps']:start=active['steps'][-1][1]
+                    inv=core.private['inventories'][donor]
+                    before=route_cost(start,route,core.sheds,inv)
+                    for index,offer in enumerate(route):
+                        target,commands,priority,value,kind=offer
+                        if kind!='SERVICE' or target in claimed:continue
+                        steps=prepare(worker,target,commands)
+                        if steps is None or len(steps)>core.remaining-1:continue
+                        after=route_cost(start,route[:index]+route[index+1:],core.sheds,inv)
+                        saving=before-after-len(steps)
+                        if saving>0:choices.append((-priority,-saving,len(steps),target,donor))
+                if choices:
+                    _,saving,cost,target,donor=min(choices)
+                    queues[donor].remove(target)
+                    queues[worker]=[target]
+                    core.daily_route_log.append(dict(day=core.day+1,hour=core.hour+1,event='late_transfer',worker=worker,donor=donor,target=target,estimated_saved_steps=-saving,recipient_steps=cost))
+"""
+            route_source=route_source.replace(anchor,transfer+anchor)
         route_scope=dict(routes.__dict__)
         exec(compile(route_source,str(Path(__file__)),'exec'),route_scope)
         routes.install.__code__=route_scope['install'].__code__

@@ -1,0 +1,45 @@
+{
+  "experiment": "H001",
+  "condition": "control",
+  "agents": [
+    "E18",
+    "E19"
+  ],
+  "seed": 180910201,
+  "rewards": [
+    43673.0,
+    38856.0
+  ],
+  "checkpoint": 456,
+  "intervention": null,
+  "source_replay_sha256": "28f6966947f0fb31c6cd84243dc58ad37fd0efbe35a0208b40ed5c4b579289e9",
+  "replay_sha256": "31bc81274a111aeda25e58e21eb823e0f94c01d1f713299dd1c806da2514a8eb",
+  "runtime": [
+    {
+      "calls": 719,
+      "core_errors": null,
+      "max_seconds": 0.030523099994752556
+    },
+    {
+      "calls": 719,
+      "core_errors": 0,
+      "max_seconds": 3.8814542000036454
+    }
+  ],
+  "verification": {
+    "prefix_actions_per_agent": 456,
+    "suffix_action_batches": 263,
+    "suffix_states": 263,
+    "clock_field_excluded": "remainingOverageTime"
+  },
+  "sources": {
+    "docs\\model_specs\\codex\\evolution\\tools\\branch_replay.py": "87f7b0077998c47f054d3c3678975530ee655277f0779071598bd675b3eee5c3",
+    "docs\\model_specs\\codex\\evolution\\PROTOCOL.md": "5e284ebde6694acd4eb7f9053e689b3070a99b0adbb388f395147abb69375fc3",
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7",
+    "submission\\submission_codex_e18_770_v48_external.py": "57e7155e69a4b0db43ccb22295a7172fc4d338999dae6a6e775081b67ecf7743"
+  },
+  "engine": {
+    "version": "1.32.7",
+    "sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e"
+  }
+}

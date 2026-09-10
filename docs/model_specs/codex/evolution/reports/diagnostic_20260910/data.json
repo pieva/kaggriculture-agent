@@ -1,0 +1,6639 @@
+{
+  "reference": "E18",
+  "cohort_role": "diagnostic_previously_exposed",
+  "games": 42,
+  "seeds": [
+    180910201,
+    180910202,
+    180910203,
+    180910204,
+    180910205,
+    180910206,
+    180910207
+  ],
+  "summary": {
+    "E18": {
+      "cash": 60978.892857142855,
+      "windows": {
+        "D15-D19": {
+          "net": 15308.25,
+          "sales": 22893.85714285714,
+          "purchases": 5705.607142857143,
+          "wages": 1880.0,
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.364285714285714
+        },
+        "D20-D24": {
+          "net": 13450.892857142857,
+          "sales": 20513.35714285714,
+          "purchases": 5182.464285714285,
+          "wages": 1880.0,
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 52.964285714285715
+        },
+        "D25-D30": {
+          "net": 18906.10714285714,
+          "sales": 25614.25,
+          "purchases": 4685.142857142857,
+          "wages": 2023.0,
+          "MOVE": 934.5,
+          "PASS": 55.607142857142854,
+          "crop_tiles_mean": 43.79761904761905
+        }
+      }
+    },
+    "E19": {
+      "cash": 61443.107142857145,
+      "windows": {
+        "D15-D19": {
+          "net": 11381.392857142857,
+          "sales": 14403.75,
+          "purchases": 1142.357142857143,
+          "wages": 1880.0,
+          "MOVE": 731,
+          "PASS": 187.5,
+          "crop_tiles_mean": 58.2
+        },
+        "D20-D24": {
+          "net": 15040.17857142857,
+          "sales": 18503.10714285714,
+          "purchases": 1582.9285714285713,
+          "wages": 1880.0,
+          "MOVE": 784,
+          "PASS": 100.17857142857143,
+          "crop_tiles_mean": 52.871428571428574
+        },
+        "D25-D30": {
+          "net": 18812.178571428572,
+          "sales": 21932.5,
+          "purchases": 1228.9642857142858,
+          "wages": 1891.357142857143,
+          "MOVE": 831.8928571428571,
+          "PASS": 189,
+          "crop_tiles_mean": 30.80952380952381
+        }
+      }
+    },
+    "E20.1": {
+      "cash": 59671.42857142857,
+      "windows": {
+        "D15-D19": {
+          "net": 11241.107142857143,
+          "sales": 14202.142857142857,
+          "purchases": 1081.0357142857142,
+          "wages": 1880.0,
+          "MOVE": 738.4285714285714,
+          "PASS": 144,
+          "crop_tiles_mean": 57.214285714285715
+        },
+        "D20-D24": {
+          "net": 14699.214285714286,
+          "sales": 18047.60714285714,
+          "purchases": 1468.392857142857,
+          "wages": 1880.0,
+          "MOVE": 795.5,
+          "PASS": 94.78571428571429,
+          "crop_tiles_mean": 52.457142857142856
+        },
+        "D25-D30": {
+          "net": 18217.071428571428,
+          "sales": 21928.321428571428,
+          "purchases": 1824.3214285714287,
+          "wages": 1886.9285714285713,
+          "MOVE": 855.9285714285714,
+          "PASS": 150.07142857142858,
+          "crop_tiles_mean": 27.595238095238095
+        }
+      }
+    }
+  },
+  "paired_common_opponent": [
+    {
+      "a": "E19",
+      "b": "E20.1",
+      "opponent": "E18",
+      "mean_delta": -3397.0,
+      "seeds_positive": 1,
+      "contrasts": [
+        {
+          "seed": 180910201,
+          "delta_cash_b_minus_a": 5896.0,
+          "windows": {
+            "D15-D19": {
+              "net": 296.0,
+              "sales": 52,
+              "purchases": -244,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": 3483.0,
+              "sales": 3815,
+              "purchases": 332,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": 3358.0,
+              "sales": 3470,
+              "purchases": 117,
+              "wages": -5.0
+            }
+          }
+        },
+        {
+          "seed": 180910202,
+          "delta_cash_b_minus_a": -3442.0,
+          "windows": {
+            "D15-D19": {
+              "net": -2580.0,
+              "sales": -2331,
+              "purchases": 249,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": -1354.0,
+              "sales": -1538,
+              "purchases": -184,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": 1072.0,
+              "sales": 1694.0,
+              "purchases": 623.5,
+              "wages": -1.5
+            }
+          }
+        },
+        {
+          "seed": 180910203,
+          "delta_cash_b_minus_a": -4786.0,
+          "windows": {
+            "D15-D19": {
+              "net": -493.0,
+              "sales": -224,
+              "purchases": 269,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": -531.5,
+              "sales": -1114,
+              "purchases": -582.5,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": -3226.5,
+              "sales": -1805,
+              "purchases": 1421.5,
+              "wages": 0.0
+            }
+          }
+        },
+        {
+          "seed": 180910204,
+          "delta_cash_b_minus_a": -353.0,
+          "windows": {
+            "D15-D19": {
+              "net": 942.0,
+              "sales": 764,
+              "purchases": -178,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": -2309.0,
+              "sales": -2057,
+              "purchases": 252,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": 1795.0,
+              "sales": 1962,
+              "purchases": 170,
+              "wages": -3.0
+            }
+          }
+        },
+        {
+          "seed": 180910205,
+          "delta_cash_b_minus_a": -4431.5,
+          "windows": {
+            "D15-D19": {
+              "net": 105.0,
+              "sales": -458.5,
+              "purchases": -563.5,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": -1682.5,
+              "sales": -1428.5,
+              "purchases": 254,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": -1771.5,
+              "sales": -1803.0,
+              "purchases": -35.5,
+              "wages": 4.0
+            }
+          }
+        },
+        {
+          "seed": 180910206,
+          "delta_cash_b_minus_a": -1327.0,
+          "windows": {
+            "D15-D19": {
+              "net": -2126.0,
+              "sales": -2308,
+              "purchases": -182,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": -231.0,
+              "sales": 50,
+              "purchases": 281,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": 1952.0,
+              "sales": 2169,
+              "purchases": 220,
+              "wages": -3.0
+            }
+          }
+        },
+        {
+          "seed": 180910207,
+          "delta_cash_b_minus_a": -15335.5,
+          "windows": {
+            "D15-D19": {
+              "net": -967.0,
+              "sales": -709,
+              "purchases": 258,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": -5678.0,
+              "sales": -6333,
+              "purchases": -655,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": -8215.5,
+              "sales": -7058,
+              "purchases": 1164.0,
+              "wages": -6.5
+            }
+          }
+        }
+      ]
+    },
+    {
+      "a": "E18",
+      "b": "E19",
+      "opponent": "E20.1",
+      "mean_delta": 4801.5,
+      "seeds_positive": 5,
+      "contrasts": [
+        {
+          "seed": 180910201,
+          "delta_cash_b_minus_a": -4282.5,
+          "windows": {
+            "D15-D19": {
+              "net": -1719.0,
+              "sales": -6210,
+              "purchases": -4491,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": -2369.0,
+              "sales": -5812,
+              "purchases": -3443,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": -3363.5,
+              "sales": -5974.5,
+              "purchases": -2480,
+              "wages": -131.0
+            }
+          }
+        },
+        {
+          "seed": 180910202,
+          "delta_cash_b_minus_a": -3145.5,
+          "windows": {
+            "D15-D19": {
+              "net": -6471.0,
+              "sales": -11050,
+              "purchases": -4579,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": -771.0,
+              "sales": -3932.5,
+              "purchases": -3161.5,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": 732.5,
+              "sales": -2935.5,
+              "purchases": -3547.5,
+              "wages": -120.5
+            }
+          }
+        },
+        {
+          "seed": 180910203,
+          "delta_cash_b_minus_a": 9603.5,
+          "windows": {
+            "D15-D19": {
+              "net": -628.0,
+              "sales": -5475,
+              "purchases": -4847,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": 3023.0,
+              "sales": -444,
+              "purchases": -3467,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": 3806.5,
+              "sales": -459.5,
+              "purchases": -4139,
+              "wages": -127.0
+            }
+          }
+        },
+        {
+          "seed": 180910204,
+          "delta_cash_b_minus_a": 1673.0,
+          "windows": {
+            "D15-D19": {
+              "net": -922.0,
+              "sales": -5487,
+              "purchases": -4565,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": 4188.0,
+              "sales": 199,
+              "purchases": -3989,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": -4133.0,
+              "sales": -7640,
+              "purchases": -3371,
+              "wages": -136.0
+            }
+          }
+        },
+        {
+          "seed": 180910205,
+          "delta_cash_b_minus_a": 326.0,
+          "windows": {
+            "D15-D19": {
+              "net": -1913.5,
+              "sales": -6166,
+              "purchases": -4252.5,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": 4578.0,
+              "sales": 687.5,
+              "purchases": -3890.5,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": -5573.5,
+              "sales": -9399.0,
+              "purchases": -3690.5,
+              "wages": -135.0
+            }
+          }
+        },
+        {
+          "seed": 180910206,
+          "delta_cash_b_minus_a": 15175.0,
+          "windows": {
+            "D15-D19": {
+              "net": -517.0,
+              "sales": -5084,
+              "purchases": -4567,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": 6633.0,
+              "sales": 2617,
+              "purchases": -4016,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": 6576.0,
+              "sales": 2959,
+              "purchases": -3481,
+              "wages": -136.0
+            }
+          }
+        },
+        {
+          "seed": 180910207,
+          "delta_cash_b_minus_a": 14261.0,
+          "windows": {
+            "D15-D19": {
+              "net": -9011.0,
+              "sales": -13877,
+              "purchases": -4866,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": 11199.0,
+              "sales": 7794,
+              "purchases": -3405,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": 8866.0,
+              "sales": 4724,
+              "purchases": -4015.0,
+              "wages": -127.0
+            }
+          }
+        }
+      ]
+    },
+    {
+      "a": "E18",
+      "b": "E20.1",
+      "opponent": "E19",
+      "mean_delta": 2069.0714285714284,
+      "seeds_positive": 4,
+      "contrasts": [
+        {
+          "seed": 180910201,
+          "delta_cash_b_minus_a": 4764.0,
+          "windows": {
+            "D15-D19": {
+              "net": -3350.0,
+              "sales": -8065,
+              "purchases": -4715,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": 1622.0,
+              "sales": -2088,
+              "purchases": -3710,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": 4634.0,
+              "sales": 2914.5,
+              "purchases": -1583.5,
+              "wages": -136.0
+            }
+          }
+        },
+        {
+          "seed": 180910202,
+          "delta_cash_b_minus_a": -13218.0,
+          "windows": {
+            "D15-D19": {
+              "net": -10664.0,
+              "sales": -14950,
+              "purchases": -4286,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": -3773.0,
+              "sales": -7159.0,
+              "purchases": -3386.0,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": -1668.0,
+              "sales": -4729.5,
+              "purchases": -2922.5,
+              "wages": -139.0
+            }
+          }
+        },
+        {
+          "seed": 180910203,
+          "delta_cash_b_minus_a": 5254.0,
+          "windows": {
+            "D15-D19": {
+              "net": -2189.0,
+              "sales": -6689,
+              "purchases": -4500,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": 3536.0,
+              "sales": -378.5,
+              "purchases": -3914.5,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": 1008.0,
+              "sales": -1879,
+              "purchases": -2751,
+              "wages": -136.0
+            }
+          }
+        },
+        {
+          "seed": 180910204,
+          "delta_cash_b_minus_a": 6561.0,
+          "windows": {
+            "D15-D19": {
+              "net": -575.0,
+              "sales": -5293,
+              "purchases": -4718,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": 5811.0,
+              "sales": 2021,
+              "purchases": -3790,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": -778.0,
+              "sales": -4266,
+              "purchases": -3352,
+              "wages": -136.0
+            }
+          }
+        },
+        {
+          "seed": 180910205,
+          "delta_cash_b_minus_a": -967.0,
+          "windows": {
+            "D15-D19": {
+              "net": -1577.0,
+              "sales": -6359,
+              "purchases": -4782.0,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": 2313.0,
+              "sales": -1484,
+              "purchases": -3797,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": -3736.0,
+              "sales": -7495.5,
+              "purchases": -3623.5,
+              "wages": -136.0
+            }
+          }
+        },
+        {
+          "seed": 180910206,
+          "delta_cash_b_minus_a": 13537.0,
+          "windows": {
+            "D15-D19": {
+              "net": -3123.0,
+              "sales": -7860,
+              "purchases": -4737,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": 6401.0,
+              "sales": 2679,
+              "purchases": -3722,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": 8293.0,
+              "sales": 4932,
+              "purchases": -3222,
+              "wages": -139.0
+            }
+          }
+        },
+        {
+          "seed": 180910207,
+          "delta_cash_b_minus_a": -1447.5,
+          "windows": {
+            "D15-D19": {
+              "net": -9434.0,
+              "sales": -14019,
+              "purchases": -4585,
+              "wages": 0.0
+            },
+            "D20-D24": {
+              "net": 4589.0,
+              "sales": 500,
+              "purchases": -4089,
+              "wages": 0.0
+            },
+            "D25-D30": {
+              "net": 561.5,
+              "sales": -2044.0,
+              "purchases": -2468.0,
+              "wages": -137.5
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "rows": [
+    {
+      "seed": 180910201,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 43673.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 13261.0,
+          "cash_end": 27692.0,
+          "net": 14431.0,
+          "sales": 21807,
+          "purchases": 5496,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 255,
+            "FERTILIZER": 3915,
+            "MILK": 1789,
+            "STRAWBERRY": 4167,
+            "WHEAT": 2824,
+            "WOOL": 8857
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 27692.0,
+          "cash_end": 31068.0,
+          "net": 3376.0,
+          "sales": 10153,
+          "purchases": 4897,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 408,
+            "FERTILIZER": 1927,
+            "MELON": 447,
+            "MILK": 1053,
+            "STRAWBERRY": 2765,
+            "WHEAT": 1527,
+            "WOOL": 2026
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 31068.0,
+          "cash_end": 43673.0,
+          "net": 12605.0,
+          "sales": 19053,
+          "purchases": 4425,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 408,
+            "FERTILIZER": 449,
+            "MELON": 1794,
+            "MILK": 5116,
+            "STRAWBERRY": 1458,
+            "WHEAT": 7880,
+            "WOOL": 1948
+          },
+          "MOVE": 936,
+          "PASS": 53,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910201,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 38856.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 16021.0,
+          "cash_end": 25656.0,
+          "net": 9635.0,
+          "sales": 12566,
+          "purchases": 1051,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2292,
+            "MILK": 1216,
+            "STRAWBERRY": 3186,
+            "WHEAT": 955,
+            "WOOL": 4917
+          },
+          "MOVE": 702,
+          "PASS": 208,
+          "crop_tiles_mean": 58
+        },
+        "D20-D24": {
+          "cash_start": 25656.0,
+          "cash_end": 28038.0,
+          "net": 2382.0,
+          "sales": 5725,
+          "purchases": 1463,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1384,
+            "MILK": 722,
+            "STRAWBERRY": 1356,
+            "WHEAT": 1510,
+            "WOOL": 753
+          },
+          "MOVE": 793,
+          "PASS": 111,
+          "crop_tiles_mean": 50.6
+        },
+        "D25-D30": {
+          "cash_start": 28038.0,
+          "cash_end": 38856.0,
+          "net": 10818.0,
+          "sales": 14571,
+          "purchases": 1861,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 5296,
+            "FERTILIZER": 478,
+            "MILK": 4752,
+            "STRAWBERRY": 834,
+            "WHEAT": 2066,
+            "WOOL": 1145
+          },
+          "MOVE": 847,
+          "PASS": 191,
+          "crop_tiles_mean": 29.833333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910202,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 74814.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 12943.0,
+          "cash_end": 36756.0,
+          "net": 23813.0,
+          "sales": 31171,
+          "purchases": 5478,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 267,
+            "FERTILIZER": 4036,
+            "MILK": 846,
+            "STRAWBERRY": 7019,
+            "WHEAT": 2817,
+            "WOOL": 16186
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 36756.0,
+          "cash_end": 54551.0,
+          "net": 17795.0,
+          "sales": 24571,
+          "purchases": 4896,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 439,
+            "FERTILIZER": 2177,
+            "MELON": 447,
+            "MILK": 743,
+            "STRAWBERRY": 5537,
+            "WHEAT": 1515,
+            "WOOL": 13713
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 54551.0,
+          "cash_end": 74814.0,
+          "net": 20263.0,
+          "sales": 26681,
+          "purchases": 4395,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 456,
+            "FERTILIZER": 648,
+            "MELON": 1794,
+            "MILK": 2530,
+            "STRAWBERRY": 1238,
+            "WHEAT": 7569,
+            "WOOL": 12446
+          },
+          "MOVE": 934,
+          "PASS": 57,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910202,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 51290.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15998.0,
+          "cash_end": 28956.0,
+          "net": 12958.0,
+          "sales": 15808,
+          "purchases": 970,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2307,
+            "MILK": 415,
+            "STRAWBERRY": 4697,
+            "WHEAT": 1233,
+            "WOOL": 7156
+          },
+          "MOVE": 746,
+          "PASS": 183,
+          "crop_tiles_mean": 57.2
+        },
+        "D20-D24": {
+          "cash_start": 28956.0,
+          "cash_end": 37331.0,
+          "net": 8375.0,
+          "sales": 11982,
+          "purchases": 1727,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1048,
+            "MILK": 575,
+            "STRAWBERRY": 3728,
+            "WHEAT": 1234,
+            "WOOL": 5397
+          },
+          "MOVE": 757,
+          "PASS": 125,
+          "crop_tiles_mean": 52.2
+        },
+        "D25-D30": {
+          "cash_start": 37331.0,
+          "cash_end": 51290.0,
+          "net": 13959.0,
+          "sales": 16968,
+          "purchases": 1122,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 2237,
+            "FERTILIZER": 758,
+            "MILK": 2259,
+            "STRAWBERRY": 722,
+            "WHEAT": 3367,
+            "WOOL": 7625
+          },
+          "MOVE": 891,
+          "PASS": 136,
+          "crop_tiles_mean": 30.666666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910203,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 38765.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 11488.0,
+          "cash_end": 20859.0,
+          "net": 9371.0,
+          "sales": 16993,
+          "purchases": 5742,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 280,
+            "FERTILIZER": 4036,
+            "MILK": 627,
+            "STRAWBERRY": 8122,
+            "WHEAT": 3018,
+            "WOOL": 910
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 20859.0,
+          "cash_end": 31661.0,
+          "net": 10802.0,
+          "sales": 17865,
+          "purchases": 5183,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 460,
+            "FERTILIZER": 2300,
+            "MELON": 447,
+            "MILK": 169,
+            "STRAWBERRY": 12787,
+            "WHEAT": 1620,
+            "WOOL": 82
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 31661.0,
+          "cash_end": 38765.0,
+          "net": 7104.0,
+          "sales": 13799,
+          "purchases": 4672,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 474,
+            "FERTILIZER": 642,
+            "MELON": 2081,
+            "MILK": 210,
+            "STRAWBERRY": 2168,
+            "WHEAT": 8127,
+            "WOOL": 97
+          },
+          "MOVE": 940,
+          "PASS": 49,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910203,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 43568.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14428.0,
+          "cash_end": 21317.0,
+          "net": 6889.0,
+          "sales": 9793,
+          "purchases": 1024,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2307,
+            "MILK": 309,
+            "STRAWBERRY": 5657,
+            "WHEAT": 1323,
+            "WOOL": 197
+          },
+          "MOVE": 746,
+          "PASS": 183,
+          "crop_tiles_mean": 57.2
+        },
+        "D20-D24": {
+          "cash_start": 21317.0,
+          "cash_end": 31689.0,
+          "net": 10372.0,
+          "sales": 14203,
+          "purchases": 1951,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 885,
+            "MILK": 103,
+            "STRAWBERRY": 11822,
+            "WHEAT": 1360,
+            "WOOL": 33
+          },
+          "MOVE": 775,
+          "PASS": 98,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 31689.0,
+          "cash_end": 43568.0,
+          "net": 11879.0,
+          "sales": 14510,
+          "purchases": 739,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 7773,
+            "FERTILIZER": 818,
+            "MILK": 122,
+            "STRAWBERRY": 1642,
+            "WHEAT": 4101,
+            "WOOL": 54
+          },
+          "MOVE": 889,
+          "PASS": 119,
+          "crop_tiles_mean": 32.666666666666664
+        }
+      }
+    },
+    {
+      "seed": 180910204,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 97067.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15456.0,
+          "cash_end": 34081.0,
+          "net": 18625.0,
+          "sales": 26186,
+          "purchases": 5681,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 289,
+            "FERTILIZER": 4024,
+            "MILK": 8015,
+            "STRAWBERRY": 9996,
+            "WHEAT": 2946,
+            "WOOL": 916
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 34081.0,
+          "cash_end": 57222.0,
+          "net": 23141.0,
+          "sales": 30204,
+          "purchases": 5183,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 503,
+            "FERTILIZER": 2144,
+            "MELON": 447,
+            "MILK": 1405,
+            "STRAWBERRY": 22696,
+            "WHEAT": 1634,
+            "WOOL": 1375
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 57222.0,
+          "cash_end": 97067.0,
+          "net": 39845.0,
+          "sales": 46532,
+          "purchases": 4664,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 556,
+            "FERTILIZER": 512,
+            "MELON": 2013,
+            "MILK": 743,
+            "STRAWBERRY": 22331,
+            "WHEAT": 8429,
+            "WOOL": 11948
+          },
+          "MOVE": 933,
+          "PASS": 56,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910204,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 95881.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 17753.0,
+          "cash_end": 33029.0,
+          "net": 15276.0,
+          "sales": 18343,
+          "purchases": 1187,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1555,
+            "MILK": 7097,
+            "STRAWBERRY": 8127,
+            "WHEAT": 1375,
+            "WOOL": 189
+          },
+          "MOVE": 735,
+          "PASS": 179,
+          "crop_tiles_mean": 59.8
+        },
+        "D20-D24": {
+          "cash_start": 33029.0,
+          "cash_end": 59655.0,
+          "net": 26626.0,
+          "sales": 29788,
+          "purchases": 1282,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1578,
+            "MILK": 1885,
+            "STRAWBERRY": 24341,
+            "WHEAT": 1861,
+            "WOOL": 123
+          },
+          "MOVE": 782,
+          "PASS": 86,
+          "crop_tiles_mean": 55
+        },
+        "D25-D30": {
+          "cash_start": 59655.0,
+          "cash_end": 95881.0,
+          "net": 36226.0,
+          "sales": 39479,
+          "purchases": 1366,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1280,
+            "FERTILIZER": 684,
+            "MILK": 951,
+            "STRAWBERRY": 27885,
+            "WHEAT": 3331,
+            "WOOL": 5348
+          },
+          "MOVE": 795,
+          "PASS": 211,
+          "crop_tiles_mean": 30.5
+        }
+      }
+    },
+    {
+      "seed": 180910205,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 60896.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 12981.0,
+          "cash_end": 25154.0,
+          "net": 12173.0,
+          "sales": 19839,
+          "purchases": 5786,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 280,
+            "FERTILIZER": 3876,
+            "MILK": 3617,
+            "STRAWBERRY": 8102,
+            "WHEAT": 3054,
+            "WOOL": 910
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 25154.0,
+          "cash_end": 41032.0,
+          "net": 15878.0,
+          "sales": 23090,
+          "purchases": 5332,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 467,
+            "FERTILIZER": 1971,
+            "MELON": 447,
+            "MILK": 691,
+            "STRAWBERRY": 16446,
+            "WHEAT": 1693,
+            "WOOL": 1375
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 41032.0,
+          "cash_end": 60896.0,
+          "net": 19864.0,
+          "sales": 26728,
+          "purchases": 4841,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 509,
+            "FERTILIZER": 476,
+            "MELON": 2081,
+            "MILK": 661,
+            "STRAWBERRY": 12045,
+            "WHEAT": 8901,
+            "WOOL": 2055
+          },
+          "MOVE": 931,
+          "PASS": 58,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910205,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 60358.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15727.0,
+          "cash_end": 24981.0,
+          "net": 9254.0,
+          "sales": 13205,
+          "purchases": 2071,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2420,
+            "MILK": 3526,
+            "STRAWBERRY": 5400,
+            "WHEAT": 1660,
+            "WOOL": 199
+          },
+          "MOVE": 712,
+          "PASS": 187,
+          "crop_tiles_mean": 58.4
+        },
+        "D20-D24": {
+          "cash_start": 24981.0,
+          "cash_end": 41749.0,
+          "net": 16768.0,
+          "sales": 19828,
+          "purchases": 1180,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1113,
+            "MILK": 598,
+            "STRAWBERRY": 16606,
+            "WHEAT": 1395,
+            "WOOL": 116
+          },
+          "MOVE": 771,
+          "PASS": 124,
+          "crop_tiles_mean": 55
+        },
+        "D25-D30": {
+          "cash_start": 41749.0,
+          "cash_end": 60358.0,
+          "net": 18609.0,
+          "sales": 21816,
+          "purchases": 1320,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1894,
+            "FERTILIZER": 518,
+            "MILK": 971,
+            "STRAWBERRY": 14021,
+            "WHEAT": 3112,
+            "WOOL": 1300
+          },
+          "MOVE": 817,
+          "PASS": 196,
+          "crop_tiles_mean": 31.833333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910206,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 73424.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15880.0,
+          "cash_end": 33794.0,
+          "net": 17914.0,
+          "sales": 25523,
+          "purchases": 5729,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 255,
+            "FERTILIZER": 4024,
+            "MILK": 7916,
+            "STRAWBERRY": 9423,
+            "WHEAT": 2989,
+            "WOOL": 916
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 33794.0,
+          "cash_end": 51859.0,
+          "net": 18065.0,
+          "sales": 25138,
+          "purchases": 5193,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 408,
+            "FERTILIZER": 2144,
+            "MELON": 447,
+            "MILK": 755,
+            "STRAWBERRY": 19668,
+            "WHEAT": 1634,
+            "WOOL": 82
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 51859.0,
+          "cash_end": 73424.0,
+          "net": 21565.0,
+          "sales": 28281,
+          "purchases": 4693,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 408,
+            "FERTILIZER": 512,
+            "MELON": 2013,
+            "MILK": 1938,
+            "STRAWBERRY": 14750,
+            "WHEAT": 8580,
+            "WOOL": 80
+          },
+          "MOVE": 946,
+          "PASS": 42,
+          "crop_tiles_mean": 43.666666666666664
+        }
+      }
+    },
+    {
+      "seed": 180910206,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 79850.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 18120.0,
+          "cash_end": 32978.0,
+          "net": 14858.0,
+          "sales": 17937,
+          "purchases": 1199,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1555,
+            "MILK": 7097,
+            "STRAWBERRY": 7702,
+            "WHEAT": 1394,
+            "WOOL": 189
+          },
+          "MOVE": 735,
+          "PASS": 179,
+          "crop_tiles_mean": 59.8
+        },
+        "D20-D24": {
+          "cash_start": 32978.0,
+          "cash_end": 54930.0,
+          "net": 21952.0,
+          "sales": 25115,
+          "purchases": 1283,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1578,
+            "MILK": 988,
+            "STRAWBERRY": 20646,
+            "WHEAT": 1861,
+            "WOOL": 42
+          },
+          "MOVE": 782,
+          "PASS": 86,
+          "crop_tiles_mean": 55
+        },
+        "D25-D30": {
+          "cash_start": 54930.0,
+          "cash_end": 79850.0,
+          "net": 24920.0,
+          "sales": 28177,
+          "purchases": 1370,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 3570,
+            "FERTILIZER": 684,
+            "MILK": 1877,
+            "STRAWBERRY": 18618,
+            "WHEAT": 3362,
+            "WOOL": 66
+          },
+          "MOVE": 795,
+          "PASS": 211,
+          "crop_tiles_mean": 30.5
+        }
+      }
+    },
+    {
+      "seed": 180910207,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 59219.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 11535.0,
+          "cash_end": 28807.0,
+          "net": 17272.0,
+          "sales": 25029,
+          "purchases": 5877,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 287,
+            "FERTILIZER": 4036,
+            "MILK": 229,
+            "STRAWBERRY": 8150,
+            "WHEAT": 3111,
+            "WOOL": 9216
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 28807.0,
+          "cash_end": 44617.0,
+          "net": 15810.0,
+          "sales": 23146,
+          "purchases": 5456,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 483,
+            "FERTILIZER": 2283,
+            "MELON": 447,
+            "MILK": 277,
+            "STRAWBERRY": 15193,
+            "WHEAT": 1711,
+            "WOOL": 2752
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 44617.0,
+          "cash_end": 59219.0,
+          "net": 14602.0,
+          "sales": 21581,
+          "purchases": 4956,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 517,
+            "FERTILIZER": 671,
+            "MELON": 2081,
+            "MILK": 743,
+            "STRAWBERRY": 6457,
+            "WHEAT": 8486,
+            "WOOL": 2626
+          },
+          "MOVE": 941,
+          "PASS": 50,
+          "crop_tiles_mean": 43.5
+        }
+      }
+    },
+    {
+      "seed": 180910207,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 52887.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14664.0,
+          "cash_end": 25715.0,
+          "net": 11051.0,
+          "sales": 13982,
+          "purchases": 1051,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2307,
+            "MILK": 122,
+            "STRAWBERRY": 5657,
+            "WHEAT": 1363,
+            "WOOL": 4533
+          },
+          "MOVE": 746,
+          "PASS": 183,
+          "crop_tiles_mean": 57.2
+        },
+        "D20-D24": {
+          "cash_start": 25715.0,
+          "cash_end": 39939.0,
+          "net": 14224.0,
+          "sales": 18142,
+          "purchases": 2038,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 898,
+            "MILK": 135,
+            "STRAWBERRY": 15205,
+            "WHEAT": 1388,
+            "WOOL": 516
+          },
+          "MOVE": 769,
+          "PASS": 103,
+          "crop_tiles_mean": 52.8
+        },
+        "D25-D30": {
+          "cash_start": 39939.0,
+          "cash_end": 52887.0,
+          "net": 12948.0,
+          "sales": 15716,
+          "purchases": 868,
+          "wages": 1900.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1600,
+            "FERTILIZER": 782,
+            "MILK": 999,
+            "STRAWBERRY": 6897,
+            "WHEAT": 4691,
+            "WOOL": 747
+          },
+          "MOVE": 856,
+          "PASS": 174,
+          "crop_tiles_mean": 32.333333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910201,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 50035.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 13185.0,
+          "cash_end": 23970.0,
+          "net": 10785.0,
+          "sales": 18189,
+          "purchases": 5524,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 255,
+            "FERTILIZER": 3808,
+            "MILK": 3505,
+            "STRAWBERRY": 6862,
+            "WHEAT": 2849,
+            "WOOL": 910
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 23970.0,
+          "cash_end": 30861.0,
+          "net": 6891.0,
+          "sales": 13683,
+          "purchases": 4912,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 408,
+            "FERTILIZER": 1711,
+            "MELON": 447,
+            "MILK": 1147,
+            "STRAWBERRY": 7260,
+            "WHEAT": 1553,
+            "WOOL": 1157
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 30861.0,
+          "cash_end": 50035.0,
+          "net": 19174.0,
+          "sales": 25619,
+          "purchases": 4422,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 408,
+            "FERTILIZER": 377,
+            "MELON": 1794,
+            "MILK": 2809,
+            "STRAWBERRY": 1271,
+            "WHEAT": 7914,
+            "WOOL": 11046
+          },
+          "MOVE": 938,
+          "PASS": 52,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910201,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 43717.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14780.0,
+          "cash_end": 24711.0,
+          "net": 9931.0,
+          "sales": 12618,
+          "purchases": 807,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2822,
+            "MILK": 3676,
+            "STRAWBERRY": 5150,
+            "WHEAT": 766,
+            "WOOL": 204
+          },
+          "MOVE": 727,
+          "PASS": 135,
+          "crop_tiles_mean": 57.8
+        },
+        "D20-D24": {
+          "cash_start": 24711.0,
+          "cash_end": 30497.0,
+          "net": 5786.0,
+          "sales": 9436,
+          "purchases": 1770,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1136,
+            "MILK": 1030,
+            "STRAWBERRY": 5987,
+            "WHEAT": 520,
+            "WOOL": 763
+          },
+          "MOVE": 788,
+          "PASS": 94,
+          "crop_tiles_mean": 52
+        },
+        "D25-D30": {
+          "cash_start": 30497.0,
+          "cash_end": 43717.0,
+          "net": 13220.0,
+          "sales": 17319,
+          "purchases": 2212,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 4401,
+            "FERTILIZER": 424,
+            "MILK": 3237,
+            "STRAWBERRY": 864,
+            "WHEAT": 2100,
+            "WOOL": 6293
+          },
+          "MOVE": 872,
+          "PASS": 182,
+          "crop_tiles_mean": 23.333333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910202,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 61532.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 12791.0,
+          "cash_end": 33231.0,
+          "net": 20440.0,
+          "sales": 27860,
+          "purchases": 5540,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 267,
+            "FERTILIZER": 4018,
+            "MILK": 229,
+            "STRAWBERRY": 4251,
+            "WHEAT": 2854,
+            "WOOL": 16241
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 33231.0,
+          "cash_end": 45786.0,
+          "net": 12555.0,
+          "sales": 19420,
+          "purchases": 4985,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 439,
+            "FERTILIZER": 2017,
+            "MELON": 447,
+            "MILK": 173,
+            "STRAWBERRY": 1528,
+            "WHEAT": 1561,
+            "WOOL": 13255
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 45786.0,
+          "cash_end": 61532.0,
+          "net": 15746.0,
+          "sales": 22215,
+          "purchases": 4446,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 456,
+            "FERTILIZER": 507,
+            "MELON": 1794,
+            "MILK": 206,
+            "STRAWBERRY": 357,
+            "WHEAT": 7792,
+            "WOOL": 11103
+          },
+          "MOVE": 921,
+          "PASS": 71,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910202,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 45594.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15418.0,
+          "cash_end": 25796.0,
+          "net": 10378.0,
+          "sales": 13477,
+          "purchases": 1219,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2103,
+            "MILK": 79,
+            "STRAWBERRY": 3451,
+            "WHEAT": 924,
+            "WOOL": 6920
+          },
+          "MOVE": 762,
+          "PASS": 141,
+          "crop_tiles_mean": 56.2
+        },
+        "D20-D24": {
+          "cash_start": 25796.0,
+          "cash_end": 32900.0,
+          "net": 7104.0,
+          "sales": 10405,
+          "purchases": 1421,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1212,
+            "MILK": 98,
+            "STRAWBERRY": 615,
+            "WHEAT": 1023,
+            "WOOL": 7457
+          },
+          "MOVE": 819,
+          "PASS": 87,
+          "crop_tiles_mean": 51.6
+        },
+        "D25-D30": {
+          "cash_start": 32900.0,
+          "cash_end": 45594.0,
+          "net": 12694.0,
+          "sales": 16189,
+          "purchases": 1608,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 5275,
+            "FERTILIZER": 697,
+            "MILK": 121,
+            "STRAWBERRY": 133,
+            "WHEAT": 3568,
+            "WOOL": 6395
+          },
+          "MOVE": 887,
+          "PASS": 140,
+          "crop_tiles_mean": 26.5
+        }
+      }
+    },
+    {
+      "seed": 180910203,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 34677.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 11279.0,
+          "cash_end": 20100.0,
+          "net": 8821.0,
+          "sales": 16552,
+          "purchases": 5851,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 280,
+            "FERTILIZER": 4018,
+            "MILK": 133,
+            "STRAWBERRY": 8102,
+            "WHEAT": 3089,
+            "WOOL": 930
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 20100.0,
+          "cash_end": 28589.0,
+          "net": 8489.0,
+          "sales": 15698,
+          "purchases": 5329,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 461,
+            "FERTILIZER": 2039,
+            "MELON": 447,
+            "MILK": 67,
+            "STRAWBERRY": 10936,
+            "WHEAT": 1680,
+            "WOOL": 68
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 28589.0,
+          "cash_end": 34677.0,
+          "net": 6088.0,
+          "sales": 12966,
+          "purchases": 4855,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 491,
+            "FERTILIZER": 452,
+            "MELON": 1870,
+            "MILK": 192,
+            "STRAWBERRY": 1280,
+            "WHEAT": 8606,
+            "WOOL": 75
+          },
+          "MOVE": 936,
+          "PASS": 55,
+          "crop_tiles_mean": 44
+        }
+      }
+    },
+    {
+      "seed": 180910203,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 37365.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 13893.0,
+          "cash_end": 20289.0,
+          "net": 6396.0,
+          "sales": 9569,
+          "purchases": 1293,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2103,
+            "MILK": 57,
+            "STRAWBERRY": 6219,
+            "WHEAT": 1002,
+            "WOOL": 188
+          },
+          "MOVE": 762,
+          "PASS": 141,
+          "crop_tiles_mean": 56.2
+        },
+        "D20-D24": {
+          "cash_start": 20289.0,
+          "cash_end": 30335.0,
+          "net": 10046.0,
+          "sales": 13279,
+          "purchases": 1353,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1243,
+            "MILK": 60,
+            "STRAWBERRY": 10715,
+            "WHEAT": 1210,
+            "WOOL": 51
+          },
+          "MOVE": 789,
+          "PASS": 102,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 30335.0,
+          "cash_end": 37365.0,
+          "net": 7030.0,
+          "sales": 11044,
+          "purchases": 2122,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 5553,
+            "FERTILIZER": 688,
+            "MILK": 136,
+            "STRAWBERRY": 794,
+            "WHEAT": 3803,
+            "WOOL": 70
+          },
+          "MOVE": 826,
+          "PASS": 184,
+          "crop_tiles_mean": 26.666666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910204,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 101964.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15456.0,
+          "cash_end": 33387.0,
+          "net": 17931.0,
+          "sales": 25521,
+          "purchases": 5710,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 289,
+            "FERTILIZER": 3846,
+            "MILK": 7419,
+            "STRAWBERRY": 9994,
+            "WHEAT": 2982,
+            "WOOL": 991
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 33387.0,
+          "cash_end": 59183.0,
+          "net": 25796.0,
+          "sales": 32832,
+          "purchases": 5156,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 503,
+            "FERTILIZER": 1901,
+            "MELON": 447,
+            "MILK": 519,
+            "STRAWBERRY": 22093,
+            "WHEAT": 1629,
+            "WOOL": 5740
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 59183.0,
+          "cash_end": 101964.0,
+          "net": 42781.0,
+          "sales": 49401,
+          "purchases": 4597,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 556,
+            "FERTILIZER": 389,
+            "MELON": 2013,
+            "MILK": 430,
+            "STRAWBERRY": 21047,
+            "WHEAT": 8354,
+            "WOOL": 16612
+          },
+          "MOVE": 939,
+          "PASS": 50,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910204,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 95528.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 16972.0,
+          "cash_end": 33190.0,
+          "net": 16218.0,
+          "sales": 19107,
+          "purchases": 1009,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2349,
+            "MILK": 7340,
+            "STRAWBERRY": 8129,
+            "WHEAT": 979,
+            "WOOL": 310
+          },
+          "MOVE": 717,
+          "PASS": 153,
+          "crop_tiles_mean": 58.2
+        },
+        "D20-D24": {
+          "cash_start": 33190.0,
+          "cash_end": 57507.0,
+          "net": 24317.0,
+          "sales": 27731,
+          "purchases": 1534,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1310,
+            "MILK": 575,
+            "STRAWBERRY": 23614,
+            "WHEAT": 1222,
+            "WOOL": 1010
+          },
+          "MOVE": 799,
+          "PASS": 89,
+          "crop_tiles_mean": 52.6
+        },
+        "D25-D30": {
+          "cash_start": 57507.0,
+          "cash_end": 95528.0,
+          "net": 38021.0,
+          "sales": 41441,
+          "purchases": 1536,
+          "wages": 1884.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1083,
+            "FERTILIZER": 500,
+            "MILK": 374,
+            "STRAWBERRY": 26095,
+            "WHEAT": 3229,
+            "WOOL": 10160
+          },
+          "MOVE": 856,
+          "PASS": 117,
+          "crop_tiles_mean": 29
+        }
+      }
+    },
+    {
+      "seed": 180910205,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 39036.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 12977.0,
+          "cash_end": 24091.0,
+          "net": 11114.0,
+          "sales": 18819,
+          "purchases": 5825,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 280,
+            "FERTILIZER": 3831,
+            "MILK": 3857,
+            "STRAWBERRY": 6870,
+            "WHEAT": 3061,
+            "WOOL": 920
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 24091.0,
+          "cash_end": 27357.0,
+          "net": 3266.0,
+          "sales": 10520,
+          "purchases": 5374,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 467,
+            "FERTILIZER": 1738,
+            "MELON": 447,
+            "MILK": 1029,
+            "STRAWBERRY": 5053,
+            "WHEAT": 1714,
+            "WOOL": 72
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 27357.0,
+          "cash_end": 39036.0,
+          "net": 11679.0,
+          "sales": 18611,
+          "purchases": 4909,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 501,
+            "FERTILIZER": 329,
+            "MELON": 1794,
+            "MILK": 2858,
+            "STRAWBERRY": 1340,
+            "WHEAT": 9001,
+            "WOOL": 2788
+          },
+          "MOVE": 934,
+          "PASS": 57,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910205,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 33991.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14683.0,
+          "cash_end": 24307.0,
+          "net": 9624.0,
+          "sales": 12695,
+          "purchases": 1191,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2413,
+            "MILK": 3466,
+            "STRAWBERRY": 5834,
+            "WHEAT": 780,
+            "WOOL": 202
+          },
+          "MOVE": 717,
+          "PASS": 153,
+          "crop_tiles_mean": 57.6
+        },
+        "D20-D24": {
+          "cash_start": 24307.0,
+          "cash_end": 26922.0,
+          "net": 2615.0,
+          "sales": 6354,
+          "purchases": 1859,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1396,
+            "MILK": 625,
+            "STRAWBERRY": 3062,
+            "WHEAT": 1227,
+            "WOOL": 44
+          },
+          "MOVE": 803,
+          "PASS": 95,
+          "crop_tiles_mean": 50.8
+        },
+        "D25-D30": {
+          "cash_start": 26922.0,
+          "cash_end": 33991.0,
+          "net": 7069.0,
+          "sales": 10752,
+          "purchases": 1783,
+          "wages": 1900.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 2064,
+            "FERTILIZER": 495,
+            "MILK": 3199,
+            "STRAWBERRY": 851,
+            "WHEAT": 3526,
+            "WOOL": 617
+          },
+          "MOVE": 862,
+          "PASS": 150,
+          "crop_tiles_mean": 30.333333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910206,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 72991.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15753.0,
+          "cash_end": 30225.0,
+          "net": 14472.0,
+          "sales": 22096,
+          "purchases": 5744,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 255,
+            "FERTILIZER": 3846,
+            "MILK": 4004,
+            "STRAWBERRY": 10070,
+            "WHEAT": 3011,
+            "WOOL": 910
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 30225.0,
+          "cash_end": 48890.0,
+          "net": 18665.0,
+          "sales": 25790,
+          "purchases": 5245,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 416,
+            "FERTILIZER": 1901,
+            "MELON": 447,
+            "MILK": 169,
+            "STRAWBERRY": 21103,
+            "WHEAT": 1676,
+            "WOOL": 78
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 48890.0,
+          "cash_end": 72991.0,
+          "net": 24101.0,
+          "sales": 30907,
+          "purchases": 4783,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 456,
+            "FERTILIZER": 389,
+            "MELON": 2081,
+            "MILK": 188,
+            "STRAWBERRY": 18921,
+            "WHEAT": 8788,
+            "WOOL": 84
+          },
+          "MOVE": 929,
+          "PASS": 60,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910206,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 78523.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 17198.0,
+          "cash_end": 29930.0,
+          "net": 12732.0,
+          "sales": 15629,
+          "purchases": 1017,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2349,
+            "MILK": 4092,
+            "STRAWBERRY": 8000,
+            "WHEAT": 984,
+            "WOOL": 204
+          },
+          "MOVE": 717,
+          "PASS": 153,
+          "crop_tiles_mean": 58.2
+        },
+        "D20-D24": {
+          "cash_start": 29930.0,
+          "cash_end": 51651.0,
+          "net": 21721.0,
+          "sales": 25165,
+          "purchases": 1564,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1310,
+            "MILK": 86,
+            "STRAWBERRY": 22471,
+            "WHEAT": 1252,
+            "WOOL": 46
+          },
+          "MOVE": 799,
+          "PASS": 89,
+          "crop_tiles_mean": 52.6
+        },
+        "D25-D30": {
+          "cash_start": 51651.0,
+          "cash_end": 78523.0,
+          "net": 26872.0,
+          "sales": 30346,
+          "purchases": 1590,
+          "wages": 1884.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 2675,
+            "FERTILIZER": 500,
+            "MILK": 168,
+            "STRAWBERRY": 23513,
+            "WHEAT": 3424,
+            "WOOL": 66
+          },
+          "MOVE": 856,
+          "PASS": 117,
+          "crop_tiles_mean": 29
+        }
+      }
+    },
+    {
+      "seed": 180910207,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 45472.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 11463.0,
+          "cash_end": 29264.0,
+          "net": 17801.0,
+          "sales": 25591,
+          "purchases": 5910,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 287,
+            "FERTILIZER": 4018,
+            "MILK": 261,
+            "STRAWBERRY": 8001,
+            "WHEAT": 3129,
+            "WOOL": 9895
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 29264.0,
+          "cash_end": 37039.0,
+          "net": 7775.0,
+          "sales": 15087,
+          "purchases": 5432,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 483,
+            "FERTILIZER": 2016,
+            "MELON": 447,
+            "MILK": 397,
+            "STRAWBERRY": 8579,
+            "WHEAT": 1716,
+            "WOOL": 1449
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 37039.0,
+          "cash_end": 45472.0,
+          "net": 8433.0,
+          "sales": 15348,
+          "purchases": 4892,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 517,
+            "FERTILIZER": 466,
+            "MELON": 1794,
+            "MILK": 776,
+            "STRAWBERRY": 1276,
+            "WHEAT": 8509,
+            "WOOL": 2010
+          },
+          "MOVE": 939,
+          "PASS": 53,
+          "crop_tiles_mean": 43.5
+        }
+      }
+    },
+    {
+      "seed": 180910207,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 1,
+      "reward": 37517.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14189.0,
+          "cash_end": 24273.0,
+          "net": 10084.0,
+          "sales": 13273,
+          "purchases": 1309,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2103,
+            "MILK": 91,
+            "STRAWBERRY": 5989,
+            "WHEAT": 1014,
+            "WOOL": 4076
+          },
+          "MOVE": 762,
+          "PASS": 141,
+          "crop_tiles_mean": 56.2
+        },
+        "D20-D24": {
+          "cash_start": 24273.0,
+          "cash_end": 32819.0,
+          "net": 8546.0,
+          "sales": 11809,
+          "purchases": 1383,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1250,
+            "MILK": 208,
+            "STRAWBERRY": 8207,
+            "WHEAT": 1238,
+            "WOOL": 906
+          },
+          "MOVE": 789,
+          "PASS": 102,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 32819.0,
+          "cash_end": 37517.0,
+          "net": 4698.0,
+          "sales": 8758,
+          "purchases": 2168,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1177,
+            "FERTILIZER": 694,
+            "MILK": 1101,
+            "STRAWBERRY": 748,
+            "WHEAT": 3908,
+            "WOOL": 1130
+          },
+          "MOVE": 826,
+          "PASS": 184,
+          "crop_tiles_mean": 26.666666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910201,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 36786.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 16021.0,
+          "cash_end": 25656.0,
+          "net": 9635.0,
+          "sales": 12566,
+          "purchases": 1051,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2292,
+            "MILK": 1216,
+            "STRAWBERRY": 3186,
+            "WHEAT": 955,
+            "WOOL": 4917
+          },
+          "MOVE": 702,
+          "PASS": 208,
+          "crop_tiles_mean": 58
+        },
+        "D20-D24": {
+          "cash_start": 25656.0,
+          "cash_end": 27880.0,
+          "net": 2224.0,
+          "sales": 5517,
+          "purchases": 1413,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1279,
+            "MILK": 722,
+            "STRAWBERRY": 1356,
+            "WHEAT": 1465,
+            "WOOL": 695
+          },
+          "MOVE": 787,
+          "PASS": 121,
+          "crop_tiles_mean": 49.8
+        },
+        "D25-D30": {
+          "cash_start": 27880.0,
+          "cash_end": 36786.0,
+          "net": 8906.0,
+          "sales": 13127,
+          "purchases": 2329,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 5938,
+            "FERTILIZER": 586,
+            "MILK": 2705,
+            "STRAWBERRY": 1368,
+            "WHEAT": 1646,
+            "WOOL": 884
+          },
+          "MOVE": 820,
+          "PASS": 215,
+          "crop_tiles_mean": 29
+        }
+      }
+    },
+    {
+      "seed": 180910201,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 41686.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 13261.0,
+          "cash_end": 27692.0,
+          "net": 14431.0,
+          "sales": 21807,
+          "purchases": 5496,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 255,
+            "FERTILIZER": 3915,
+            "MILK": 1789,
+            "STRAWBERRY": 4167,
+            "WHEAT": 2824,
+            "WOOL": 8857
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 27692.0,
+          "cash_end": 31068.0,
+          "net": 3376.0,
+          "sales": 10153,
+          "purchases": 4897,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 408,
+            "FERTILIZER": 1927,
+            "MELON": 447,
+            "MILK": 1053,
+            "STRAWBERRY": 2765,
+            "WHEAT": 1527,
+            "WOOL": 2026
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 31068.0,
+          "cash_end": 41686.0,
+          "net": 10618.0,
+          "sales": 17079,
+          "purchases": 4438,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 413,
+            "FERTILIZER": 443,
+            "MELON": 1794,
+            "MILK": 2133,
+            "STRAWBERRY": 2086,
+            "WHEAT": 7917,
+            "WOOL": 2293
+          },
+          "MOVE": 937,
+          "PASS": 53,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910202,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 50726.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15998.0,
+          "cash_end": 28956.0,
+          "net": 12958.0,
+          "sales": 15808,
+          "purchases": 970,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2307,
+            "MILK": 415,
+            "STRAWBERRY": 4697,
+            "WHEAT": 1233,
+            "WOOL": 7156
+          },
+          "MOVE": 746,
+          "PASS": 183,
+          "crop_tiles_mean": 57.2
+        },
+        "D20-D24": {
+          "cash_start": 28956.0,
+          "cash_end": 37171.0,
+          "net": 8215.0,
+          "sales": 11912,
+          "purchases": 1817,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 925,
+            "MILK": 605,
+            "STRAWBERRY": 3753,
+            "WHEAT": 1232,
+            "WOOL": 5397
+          },
+          "MOVE": 787,
+          "PASS": 93,
+          "crop_tiles_mean": 52.2
+        },
+        "D25-D30": {
+          "cash_start": 37171.0,
+          "cash_end": 50726.0,
+          "net": 13555.0,
+          "sales": 16155,
+          "purchases": 713,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 2727,
+            "FERTILIZER": 860,
+            "MILK": 1062,
+            "STRAWBERRY": 709,
+            "WHEAT": 3296,
+            "WOOL": 7501
+          },
+          "MOVE": 868,
+          "PASS": 138,
+          "crop_tiles_mean": 32.166666666666664
+        }
+      }
+    },
+    {
+      "seed": 180910202,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 73358.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 12943.0,
+          "cash_end": 36756.0,
+          "net": 23813.0,
+          "sales": 31171,
+          "purchases": 5478,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 267,
+            "FERTILIZER": 4036,
+            "MILK": 846,
+            "STRAWBERRY": 7019,
+            "WHEAT": 2817,
+            "WOOL": 16186
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 36756.0,
+          "cash_end": 54519.0,
+          "net": 17763.0,
+          "sales": 24542,
+          "purchases": 4899,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 439,
+            "FERTILIZER": 2195,
+            "MELON": 447,
+            "MILK": 743,
+            "STRAWBERRY": 5490,
+            "WHEAT": 1515,
+            "WOOL": 13713
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 54519.0,
+          "cash_end": 73358.0,
+          "net": 18839.0,
+          "sales": 25284,
+          "purchases": 4422,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 456,
+            "FERTILIZER": 667,
+            "MELON": 1794,
+            "MILK": 905,
+            "STRAWBERRY": 1259,
+            "WHEAT": 7654,
+            "WOOL": 12549
+          },
+          "MOVE": 934,
+          "PASS": 57,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910203,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 40734.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14428.0,
+          "cash_end": 21317.0,
+          "net": 6889.0,
+          "sales": 9793,
+          "purchases": 1024,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2307,
+            "MILK": 309,
+            "STRAWBERRY": 5657,
+            "WHEAT": 1323,
+            "WOOL": 197
+          },
+          "MOVE": 746,
+          "PASS": 183,
+          "crop_tiles_mean": 57.2
+        },
+        "D20-D24": {
+          "cash_start": 21317.0,
+          "cash_end": 32100.0,
+          "net": 10783.0,
+          "sales": 14583,
+          "purchases": 1920,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 913,
+            "MILK": 89,
+            "STRAWBERRY": 12183,
+            "WHEAT": 1361,
+            "WOOL": 37
+          },
+          "MOVE": 808,
+          "PASS": 93,
+          "crop_tiles_mean": 51.4
+        },
+        "D25-D30": {
+          "cash_start": 32100.0,
+          "cash_end": 40734.0,
+          "net": 8634.0,
+          "sales": 11188,
+          "purchases": 662,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 5688,
+            "FERTILIZER": 845,
+            "MILK": 351,
+            "STRAWBERRY": 1509,
+            "WHEAT": 2750,
+            "WOOL": 45
+          },
+          "MOVE": 815,
+          "PASS": 219,
+          "crop_tiles_mean": 28.333333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910203,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 39025.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 11488.0,
+          "cash_end": 20859.0,
+          "net": 9371.0,
+          "sales": 16993,
+          "purchases": 5742,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 280,
+            "FERTILIZER": 4036,
+            "MILK": 627,
+            "STRAWBERRY": 8122,
+            "WHEAT": 3018,
+            "WOOL": 910
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 20859.0,
+          "cash_end": 31663.0,
+          "net": 10804.0,
+          "sales": 17866,
+          "purchases": 5182,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 460,
+            "FERTILIZER": 2228,
+            "MELON": 447,
+            "MILK": 169,
+            "STRAWBERRY": 12860,
+            "WHEAT": 1620,
+            "WOOL": 82
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 31663.0,
+          "cash_end": 39025.0,
+          "net": 7362.0,
+          "sales": 14079,
+          "purchases": 4694,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 474,
+            "FERTILIZER": 666,
+            "MELON": 1870,
+            "MILK": 398,
+            "STRAWBERRY": 2232,
+            "WHEAT": 8337,
+            "WOOL": 102
+          },
+          "MOVE": 930,
+          "PASS": 60,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910204,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 95881.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 17753.0,
+          "cash_end": 33029.0,
+          "net": 15276.0,
+          "sales": 18343,
+          "purchases": 1187,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1555,
+            "MILK": 7097,
+            "STRAWBERRY": 8127,
+            "WHEAT": 1375,
+            "WOOL": 189
+          },
+          "MOVE": 735,
+          "PASS": 179,
+          "crop_tiles_mean": 59.8
+        },
+        "D20-D24": {
+          "cash_start": 33029.0,
+          "cash_end": 59655.0,
+          "net": 26626.0,
+          "sales": 29788,
+          "purchases": 1282,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1578,
+            "MILK": 1885,
+            "STRAWBERRY": 24341,
+            "WHEAT": 1861,
+            "WOOL": 123
+          },
+          "MOVE": 782,
+          "PASS": 86,
+          "crop_tiles_mean": 55
+        },
+        "D25-D30": {
+          "cash_start": 59655.0,
+          "cash_end": 95881.0,
+          "net": 36226.0,
+          "sales": 39479,
+          "purchases": 1366,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1280,
+            "FERTILIZER": 684,
+            "MILK": 951,
+            "STRAWBERRY": 27885,
+            "WHEAT": 3331,
+            "WOOL": 5348
+          },
+          "MOVE": 795,
+          "PASS": 211,
+          "crop_tiles_mean": 30.5
+        }
+      }
+    },
+    {
+      "seed": 180910204,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 97067.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15456.0,
+          "cash_end": 34081.0,
+          "net": 18625.0,
+          "sales": 26186,
+          "purchases": 5681,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 289,
+            "FERTILIZER": 4024,
+            "MILK": 8015,
+            "STRAWBERRY": 9996,
+            "WHEAT": 2946,
+            "WOOL": 916
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 34081.0,
+          "cash_end": 57222.0,
+          "net": 23141.0,
+          "sales": 30204,
+          "purchases": 5183,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 503,
+            "FERTILIZER": 2144,
+            "MELON": 447,
+            "MILK": 1405,
+            "STRAWBERRY": 22696,
+            "WHEAT": 1634,
+            "WOOL": 1375
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 57222.0,
+          "cash_end": 97067.0,
+          "net": 39845.0,
+          "sales": 46532,
+          "purchases": 4664,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 556,
+            "FERTILIZER": 512,
+            "MELON": 2013,
+            "MILK": 743,
+            "STRAWBERRY": 22331,
+            "WHEAT": 8429,
+            "WOOL": 11948
+          },
+          "MOVE": 933,
+          "PASS": 56,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910205,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 38001.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15676.0,
+          "cash_end": 24404.0,
+          "net": 8728.0,
+          "sales": 11704,
+          "purchases": 1096,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2292,
+            "MILK": 3543,
+            "STRAWBERRY": 4645,
+            "WHEAT": 1021,
+            "WOOL": 203
+          },
+          "MOVE": 702,
+          "PASS": 208,
+          "crop_tiles_mean": 58
+        },
+        "D20-D24": {
+          "cash_start": 24404.0,
+          "cash_end": 29043.0,
+          "net": 4639.0,
+          "sales": 8089,
+          "purchases": 1570,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1292,
+            "MILK": 1058,
+            "STRAWBERRY": 4085,
+            "WHEAT": 1622,
+            "WOOL": 32
+          },
+          "MOVE": 803,
+          "PASS": 113,
+          "crop_tiles_mean": 49.8
+        },
+        "D25-D30": {
+          "cash_start": 29043.0,
+          "cash_end": 38001.0,
+          "net": 8958.0,
+          "sales": 12677,
+          "purchases": 1827,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1556,
+            "FERTILIZER": 573,
+            "MILK": 5420,
+            "STRAWBERRY": 1377,
+            "WHEAT": 3685,
+            "WOOL": 66
+          },
+          "MOVE": 838,
+          "PASS": 183,
+          "crop_tiles_mean": 30.833333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910205,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 40432.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 12984.0,
+          "cash_end": 24864.0,
+          "net": 11880.0,
+          "sales": 19535,
+          "purchases": 5775,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 280,
+            "FERTILIZER": 3915,
+            "MILK": 4273,
+            "STRAWBERRY": 7127,
+            "WHEAT": 3033,
+            "WOOL": 907
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 24864.0,
+          "cash_end": 28862.0,
+          "net": 3998.0,
+          "sales": 11218,
+          "purchases": 5340,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 467,
+            "FERTILIZER": 1950,
+            "MELON": 447,
+            "MILK": 1129,
+            "STRAWBERRY": 5442,
+            "WHEAT": 1701,
+            "WOOL": 82
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 28862.0,
+          "cash_end": 40432.0,
+          "net": 11570.0,
+          "sales": 18514,
+          "purchases": 4921,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 501,
+            "FERTILIZER": 435,
+            "MELON": 1794,
+            "MILK": 4629,
+            "STRAWBERRY": 2067,
+            "WHEAT": 9007,
+            "WOOL": 81
+          },
+          "MOVE": 934,
+          "PASS": 56,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910206,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 79850.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 18120.0,
+          "cash_end": 32978.0,
+          "net": 14858.0,
+          "sales": 17937,
+          "purchases": 1199,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1555,
+            "MILK": 7097,
+            "STRAWBERRY": 7702,
+            "WHEAT": 1394,
+            "WOOL": 189
+          },
+          "MOVE": 735,
+          "PASS": 179,
+          "crop_tiles_mean": 59.8
+        },
+        "D20-D24": {
+          "cash_start": 32978.0,
+          "cash_end": 54930.0,
+          "net": 21952.0,
+          "sales": 25115,
+          "purchases": 1283,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1578,
+            "MILK": 988,
+            "STRAWBERRY": 20646,
+            "WHEAT": 1861,
+            "WOOL": 42
+          },
+          "MOVE": 782,
+          "PASS": 86,
+          "crop_tiles_mean": 55
+        },
+        "D25-D30": {
+          "cash_start": 54930.0,
+          "cash_end": 79850.0,
+          "net": 24920.0,
+          "sales": 28177,
+          "purchases": 1370,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 3570,
+            "FERTILIZER": 684,
+            "MILK": 1877,
+            "STRAWBERRY": 18618,
+            "WHEAT": 3362,
+            "WOOL": 66
+          },
+          "MOVE": 795,
+          "PASS": 211,
+          "crop_tiles_mean": 30.5
+        }
+      }
+    },
+    {
+      "seed": 180910206,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 73424.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15880.0,
+          "cash_end": 33794.0,
+          "net": 17914.0,
+          "sales": 25523,
+          "purchases": 5729,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 255,
+            "FERTILIZER": 4024,
+            "MILK": 7916,
+            "STRAWBERRY": 9423,
+            "WHEAT": 2989,
+            "WOOL": 916
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 33794.0,
+          "cash_end": 51859.0,
+          "net": 18065.0,
+          "sales": 25138,
+          "purchases": 5193,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 408,
+            "FERTILIZER": 2144,
+            "MELON": 447,
+            "MILK": 755,
+            "STRAWBERRY": 19668,
+            "WHEAT": 1634,
+            "WOOL": 82
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 51859.0,
+          "cash_end": 73424.0,
+          "net": 21565.0,
+          "sales": 28281,
+          "purchases": 4693,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 408,
+            "FERTILIZER": 512,
+            "MELON": 2013,
+            "MILK": 1938,
+            "STRAWBERRY": 14750,
+            "WHEAT": 8580,
+            "WOOL": 80
+          },
+          "MOVE": 946,
+          "PASS": 42,
+          "crop_tiles_mean": 43.666666666666664
+        }
+      }
+    },
+    {
+      "seed": 180910207,
+      "model": "E19",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 52916.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14664.0,
+          "cash_end": 25715.0,
+          "net": 11051.0,
+          "sales": 13982,
+          "purchases": 1051,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2307,
+            "MILK": 122,
+            "STRAWBERRY": 5657,
+            "WHEAT": 1363,
+            "WOOL": 4533
+          },
+          "MOVE": 746,
+          "PASS": 183,
+          "crop_tiles_mean": 57.2
+        },
+        "D20-D24": {
+          "cash_start": 25715.0,
+          "cash_end": 39939.0,
+          "net": 14224.0,
+          "sales": 18142,
+          "purchases": 2038,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 898,
+            "MILK": 135,
+            "STRAWBERRY": 15205,
+            "WHEAT": 1388,
+            "WOOL": 516
+          },
+          "MOVE": 769,
+          "PASS": 103,
+          "crop_tiles_mean": 52.8
+        },
+        "D25-D30": {
+          "cash_start": 39939.0,
+          "cash_end": 52916.0,
+          "net": 12977.0,
+          "sales": 16076,
+          "purchases": 1207,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1445,
+            "FERTILIZER": 772,
+            "MILK": 1026,
+            "STRAWBERRY": 6933,
+            "WHEAT": 4703,
+            "WOOL": 1197
+          },
+          "MOVE": 901,
+          "PASS": 160,
+          "crop_tiles_mean": 31.166666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910207,
+      "model": "E18",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 58957.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 11535.0,
+          "cash_end": 28807.0,
+          "net": 17272.0,
+          "sales": 25029,
+          "purchases": 5877,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 287,
+            "FERTILIZER": 4036,
+            "MILK": 229,
+            "STRAWBERRY": 8150,
+            "WHEAT": 3111,
+            "WOOL": 9216
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 52.4
+        },
+        "D20-D24": {
+          "cash_start": 28807.0,
+          "cash_end": 44617.0,
+          "net": 15810.0,
+          "sales": 23146,
+          "purchases": 5456,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 483,
+            "FERTILIZER": 2283,
+            "MELON": 447,
+            "MILK": 277,
+            "STRAWBERRY": 15193,
+            "WHEAT": 1711,
+            "WOOL": 2752
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 52
+        },
+        "D25-D30": {
+          "cash_start": 44617.0,
+          "cash_end": 58957.0,
+          "net": 14340.0,
+          "sales": 21330,
+          "purchases": 4967,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 517,
+            "FERTILIZER": 682,
+            "MELON": 2081,
+            "MILK": 981,
+            "STRAWBERRY": 6480,
+            "WHEAT": 8506,
+            "WOOL": 2083
+          },
+          "MOVE": 932,
+          "PASS": 62,
+          "crop_tiles_mean": 43.5
+        }
+      }
+    },
+    {
+      "seed": 180910201,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 47209.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 16354.0,
+          "cash_end": 25420.0,
+          "net": 9066.0,
+          "sales": 11979,
+          "purchases": 1033,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2451,
+            "MILK": 3330,
+            "STRAWBERRY": 4449,
+            "WHEAT": 922,
+            "WOOL": 827
+          },
+          "MOVE": 702,
+          "PASS": 208,
+          "crop_tiles_mean": 58
+        },
+        "D20-D24": {
+          "cash_start": 25420.0,
+          "cash_end": 29922.0,
+          "net": 4502.0,
+          "sales": 7871,
+          "purchases": 1489,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1575,
+            "MILK": 2217,
+            "STRAWBERRY": 2650,
+            "WHEAT": 1397,
+            "WOOL": 32
+          },
+          "MOVE": 801,
+          "PASS": 114,
+          "crop_tiles_mean": 50
+        },
+        "D25-D30": {
+          "cash_start": 29922.0,
+          "cash_end": 47209.0,
+          "net": 17287.0,
+          "sales": 21422,
+          "purchases": 2243,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 5929,
+            "FERTILIZER": 891,
+            "MILK": 12029,
+            "STRAWBERRY": 768,
+            "WHEAT": 1733,
+            "WOOL": 72
+          },
+          "MOVE": 851,
+          "PASS": 185,
+          "crop_tiles_mean": 30.333333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910201,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 48982.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15119.0,
+          "cash_end": 26200.0,
+          "net": 11081.0,
+          "sales": 13742,
+          "purchases": 781,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 3130,
+            "MILK": 4860,
+            "STRAWBERRY": 4729,
+            "WHEAT": 733,
+            "WOOL": 290
+          },
+          "MOVE": 727,
+          "PASS": 135,
+          "crop_tiles_mean": 57.8
+        },
+        "D20-D24": {
+          "cash_start": 26200.0,
+          "cash_end": 31198.0,
+          "net": 4998.0,
+          "sales": 8065,
+          "purchases": 1187,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1678,
+            "MILK": 2753,
+            "STRAWBERRY": 2640,
+            "WHEAT": 967,
+            "WOOL": 27
+          },
+          "MOVE": 819,
+          "PASS": 91,
+          "crop_tiles_mean": 51.4
+        },
+        "D25-D30": {
+          "cash_start": 31198.0,
+          "cash_end": 48982.0,
+          "net": 17784.0,
+          "sales": 22517,
+          "purchases": 2846,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 3755,
+            "FERTILIZER": 995,
+            "MILK": 13892,
+            "STRAWBERRY": 1446,
+            "WHEAT": 2359,
+            "WOOL": 70
+          },
+          "MOVE": 863,
+          "PASS": 171,
+          "crop_tiles_mean": 24.833333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910202,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 58458.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 16155.0,
+          "cash_end": 30124.0,
+          "net": 13969.0,
+          "sales": 16810,
+          "purchases": 961,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2490,
+            "MILK": 885,
+            "STRAWBERRY": 4928,
+            "WHEAT": 1218,
+            "WOOL": 7289
+          },
+          "MOVE": 746,
+          "PASS": 183,
+          "crop_tiles_mean": 57.2
+        },
+        "D20-D24": {
+          "cash_start": 30124.0,
+          "cash_end": 41172.0,
+          "net": 11048.0,
+          "sales": 14695,
+          "purchases": 1767,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1263,
+            "MILK": 673,
+            "STRAWBERRY": 5609,
+            "WHEAT": 1191,
+            "WOOL": 5959
+          },
+          "MOVE": 787,
+          "PASS": 93,
+          "crop_tiles_mean": 52.2
+        },
+        "D25-D30": {
+          "cash_start": 41172.0,
+          "cash_end": 58458.0,
+          "net": 17286.0,
+          "sales": 19880,
+          "purchases": 702,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 2317,
+            "FERTILIZER": 1488,
+            "MILK": 692,
+            "STRAWBERRY": 1219,
+            "WHEAT": 3199,
+            "WOOL": 10965
+          },
+          "MOVE": 869,
+          "PASS": 146,
+          "crop_tiles_mean": 32.166666666666664
+        }
+      }
+    },
+    {
+      "seed": 180910202,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 59595.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15830.0,
+          "cash_end": 28979.0,
+          "net": 13149.0,
+          "sales": 16221,
+          "purchases": 1192,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2329,
+            "MILK": 682,
+            "STRAWBERRY": 5266,
+            "WHEAT": 898,
+            "WOOL": 7046
+          },
+          "MOVE": 762,
+          "PASS": 141,
+          "crop_tiles_mean": 56.2
+        },
+        "D20-D24": {
+          "cash_start": 28979.0,
+          "cash_end": 42942.0,
+          "net": 13963.0,
+          "sales": 17196,
+          "purchases": 1353,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1709,
+            "MILK": 448,
+            "STRAWBERRY": 5898,
+            "WHEAT": 796,
+            "WOOL": 8345
+          },
+          "MOVE": 808,
+          "PASS": 94,
+          "crop_tiles_mean": 52.4
+        },
+        "D25-D30": {
+          "cash_start": 42942.0,
+          "cash_end": 59595.0,
+          "net": 16653.0,
+          "sales": 20097,
+          "purchases": 1560,
+          "wages": 1884.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1238,
+            "FERTILIZER": 1524,
+            "MILK": 736,
+            "STRAWBERRY": 951,
+            "WHEAT": 4185,
+            "WOOL": 11463
+          },
+          "MOVE": 861,
+          "PASS": 142,
+          "crop_tiles_mean": 29.833333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910203,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 43432.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14681.0,
+          "cash_end": 22874.0,
+          "net": 8193.0,
+          "sales": 11077,
+          "purchases": 1004,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2490,
+            "MILK": 691,
+            "STRAWBERRY": 5785,
+            "WHEAT": 1294,
+            "WOOL": 817
+          },
+          "MOVE": 746,
+          "PASS": 183,
+          "crop_tiles_mean": 57.2
+        },
+        "D20-D24": {
+          "cash_start": 22874.0,
+          "cash_end": 34375.0,
+          "net": 11501.0,
+          "sales": 15230,
+          "purchases": 1849,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1265,
+            "MILK": 263,
+            "STRAWBERRY": 12353,
+            "WHEAT": 1300,
+            "WOOL": 49
+          },
+          "MOVE": 808,
+          "PASS": 93,
+          "crop_tiles_mean": 51.4
+        },
+        "D25-D30": {
+          "cash_start": 34375.0,
+          "cash_end": 43432.0,
+          "net": 9057.0,
+          "sales": 11587,
+          "purchases": 638,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 5382,
+            "FERTILIZER": 1359,
+            "MILK": 573,
+            "STRAWBERRY": 1624,
+            "WHEAT": 2604,
+            "WOOL": 45
+          },
+          "MOVE": 813,
+          "PASS": 221,
+          "crop_tiles_mean": 28.333333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910203,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 44371.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14387.0,
+          "cash_end": 21569.0,
+          "net": 7182.0,
+          "sales": 10304,
+          "purchases": 1242,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2329,
+            "MILK": 447,
+            "STRAWBERRY": 6287,
+            "WHEAT": 955,
+            "WOOL": 286
+          },
+          "MOVE": 762,
+          "PASS": 141,
+          "crop_tiles_mean": 56.2
+        },
+        "D20-D24": {
+          "cash_start": 21569.0,
+          "cash_end": 36205.0,
+          "net": 14636.0,
+          "sales": 17784,
+          "purchases": 1268,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1810,
+            "MILK": 132,
+            "STRAWBERRY": 14666,
+            "WHEAT": 1113,
+            "WOOL": 63
+          },
+          "MOVE": 789,
+          "PASS": 102,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 36205.0,
+          "cash_end": 44371.0,
+          "net": 8166.0,
+          "sales": 11996,
+          "purchases": 1943,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 4290,
+            "FERTILIZER": 1565,
+            "MILK": 606,
+            "STRAWBERRY": 1989,
+            "WHEAT": 3472,
+            "WOOL": 74
+          },
+          "MOVE": 831,
+          "PASS": 177,
+          "crop_tiles_mean": 26.666666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910204,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 103637.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 17996.0,
+          "cash_end": 35005.0,
+          "net": 17009.0,
+          "sales": 20034,
+          "purchases": 1145,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1648,
+            "MILK": 8381,
+            "STRAWBERRY": 7882,
+            "WHEAT": 1310,
+            "WOOL": 813
+          },
+          "MOVE": 735,
+          "PASS": 179,
+          "crop_tiles_mean": 59.8
+        },
+        "D20-D24": {
+          "cash_start": 35005.0,
+          "cash_end": 64989.0,
+          "net": 29984.0,
+          "sales": 33031,
+          "purchases": 1167,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2010,
+            "MILK": 6248,
+            "STRAWBERRY": 23077,
+            "WHEAT": 1648,
+            "WOOL": 48
+          },
+          "MOVE": 782,
+          "PASS": 86,
+          "crop_tiles_mean": 55
+        },
+        "D25-D30": {
+          "cash_start": 64989.0,
+          "cash_end": 103637.0,
+          "net": 38648.0,
+          "sales": 41761,
+          "purchases": 1226,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 2052,
+            "FERTILIZER": 1321,
+            "MILK": 10676,
+            "STRAWBERRY": 24778,
+            "WHEAT": 2882,
+            "WOOL": 52
+          },
+          "MOVE": 793,
+          "PASS": 213,
+          "crop_tiles_mean": 30.5
+        }
+      }
+    },
+    {
+      "seed": 180910204,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 103628.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 17559.0,
+          "cash_end": 35609.0,
+          "net": 18050.0,
+          "sales": 20893,
+          "purchases": 963,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2590,
+            "MILK": 9236,
+            "STRAWBERRY": 7863,
+            "WHEAT": 910,
+            "WOOL": 294
+          },
+          "MOVE": 717,
+          "PASS": 153,
+          "crop_tiles_mean": 58.2
+        },
+        "D20-D24": {
+          "cash_start": 35609.0,
+          "cash_end": 64561.0,
+          "net": 28952.0,
+          "sales": 32225,
+          "purchases": 1393,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1911,
+            "MILK": 6099,
+            "STRAWBERRY": 23084,
+            "WHEAT": 1079,
+            "WOOL": 52
+          },
+          "MOVE": 799,
+          "PASS": 89,
+          "crop_tiles_mean": 52.6
+        },
+        "D25-D30": {
+          "cash_start": 64561.0,
+          "cash_end": 103628.0,
+          "net": 39067.0,
+          "sales": 42266,
+          "purchases": 1312,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1947,
+            "FERTILIZER": 1221,
+            "MILK": 11884,
+            "STRAWBERRY": 24189,
+            "WHEAT": 2966,
+            "WOOL": 59
+          },
+          "MOVE": 881,
+          "PASS": 115,
+          "crop_tiles_mean": 29.666666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910205,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 53583.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 16288.0,
+          "cash_end": 26254.0,
+          "net": 9966.0,
+          "sales": 12931,
+          "purchases": 1085,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2460,
+            "MILK": 3851,
+            "STRAWBERRY": 5033,
+            "WHEAT": 1004,
+            "WOOL": 583
+          },
+          "MOVE": 702,
+          "PASS": 208,
+          "crop_tiles_mean": 58
+        },
+        "D20-D24": {
+          "cash_start": 26254.0,
+          "cash_end": 39023.0,
+          "net": 12769.0,
+          "sales": 16433,
+          "purchases": 1784,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1565,
+            "MILK": 1747,
+            "STRAWBERRY": 11667,
+            "WHEAT": 1418,
+            "WOOL": 36
+          },
+          "MOVE": 807,
+          "PASS": 106,
+          "crop_tiles_mean": 51
+        },
+        "D25-D30": {
+          "cash_start": 39023.0,
+          "cash_end": 53583.0,
+          "net": 14560.0,
+          "sales": 17325,
+          "purchases": 873,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1496,
+            "FERTILIZER": 1000,
+            "MILK": 8023,
+            "STRAWBERRY": 3042,
+            "WHEAT": 3720,
+            "WOOL": 44
+          },
+          "MOVE": 831,
+          "PASS": 189,
+          "crop_tiles_mean": 32.5
+        }
+      }
+    },
+    {
+      "seed": 180910205,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 53520.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14967.0,
+          "cash_end": 26461.0,
+          "net": 11494.0,
+          "sales": 14541,
+          "purchases": 1167,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2643,
+            "MILK": 4266,
+            "STRAWBERRY": 6385,
+            "WHEAT": 747,
+            "WOOL": 500
+          },
+          "MOVE": 717,
+          "PASS": 153,
+          "crop_tiles_mean": 57.6
+        },
+        "D20-D24": {
+          "cash_start": 26461.0,
+          "cash_end": 38225.0,
+          "net": 11764.0,
+          "sales": 15281,
+          "purchases": 1637,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1910,
+            "MILK": 1030,
+            "STRAWBERRY": 11326,
+            "WHEAT": 971,
+            "WOOL": 44
+          },
+          "MOVE": 788,
+          "PASS": 104,
+          "crop_tiles_mean": 51.8
+        },
+        "D25-D30": {
+          "cash_start": 38225.0,
+          "cash_end": 53520.0,
+          "net": 15295.0,
+          "sales": 18629,
+          "purchases": 1447,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1304,
+            "FERTILIZER": 1074,
+            "MILK": 9018,
+            "STRAWBERRY": 3553,
+            "WHEAT": 3603,
+            "WOOL": 77
+          },
+          "MOVE": 857,
+          "PASS": 174,
+          "crop_tiles_mean": 27.333333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910206,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 88166.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 18236.0,
+          "cash_end": 32191.0,
+          "net": 13955.0,
+          "sales": 17012,
+          "purchases": 1177,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1648,
+            "MILK": 5027,
+            "STRAWBERRY": 8175,
+            "WHEAT": 1349,
+            "WOOL": 813
+          },
+          "MOVE": 735,
+          "PASS": 179,
+          "crop_tiles_mean": 59.8
+        },
+        "D20-D24": {
+          "cash_start": 32191.0,
+          "cash_end": 57489.0,
+          "net": 25298.0,
+          "sales": 28407,
+          "purchases": 1229,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2010,
+            "MILK": 494,
+            "STRAWBERRY": 24081,
+            "WHEAT": 1774,
+            "WOOL": 48
+          },
+          "MOVE": 782,
+          "PASS": 86,
+          "crop_tiles_mean": 55
+        },
+        "D25-D30": {
+          "cash_start": 57489.0,
+          "cash_end": 88166.0,
+          "net": 30677.0,
+          "sales": 33866,
+          "purchases": 1302,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 2330,
+            "FERTILIZER": 1299,
+            "MILK": 1337,
+            "STRAWBERRY": 25683,
+            "WHEAT": 3165,
+            "WOOL": 52
+          },
+          "MOVE": 795,
+          "PASS": 211,
+          "crop_tiles_mean": 30.5
+        }
+      }
+    },
+    {
+      "seed": 180910206,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 86961.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 17846.0,
+          "cash_end": 32637.0,
+          "net": 14791.0,
+          "sales": 17663,
+          "purchases": 992,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2590,
+            "MILK": 5672,
+            "STRAWBERRY": 8160,
+            "WHEAT": 947,
+            "WOOL": 294
+          },
+          "MOVE": 717,
+          "PASS": 153,
+          "crop_tiles_mean": 58.2
+        },
+        "D20-D24": {
+          "cash_start": 32637.0,
+          "cash_end": 57103.0,
+          "net": 24466.0,
+          "sales": 27817,
+          "purchases": 1471,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1911,
+            "MILK": 610,
+            "STRAWBERRY": 24087,
+            "WHEAT": 1157,
+            "WOOL": 52
+          },
+          "MOVE": 799,
+          "PASS": 89,
+          "crop_tiles_mean": 52.6
+        },
+        "D25-D30": {
+          "cash_start": 57103.0,
+          "cash_end": 86961.0,
+          "net": 29858.0,
+          "sales": 33213,
+          "purchases": 1471,
+          "wages": 1884.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1966,
+            "FERTILIZER": 1246,
+            "MILK": 1395,
+            "STRAWBERRY": 25436,
+            "WHEAT": 3108,
+            "WOOL": 62
+          },
+          "MOVE": 856,
+          "PASS": 117,
+          "crop_tiles_mean": 29
+        }
+      }
+    },
+    {
+      "seed": 180910207,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 0,
+      "reward": 60075.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14670.0,
+          "cash_end": 23460.0,
+          "net": 8790.0,
+          "sales": 11714,
+          "purchases": 1044,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2490,
+            "MILK": 885,
+            "STRAWBERRY": 6158,
+            "WHEAT": 1364,
+            "WOOL": 817
+          },
+          "MOVE": 746,
+          "PASS": 183,
+          "crop_tiles_mean": 57.2
+        },
+        "D20-D24": {
+          "cash_start": 23460.0,
+          "cash_end": 42434.0,
+          "net": 18974.0,
+          "sales": 22881,
+          "purchases": 2027,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1233,
+            "MILK": 827,
+            "STRAWBERRY": 19396,
+            "WHEAT": 1380,
+            "WOOL": 45
+          },
+          "MOVE": 769,
+          "PASS": 103,
+          "crop_tiles_mean": 52.8
+        },
+        "D25-D30": {
+          "cash_start": 42434.0,
+          "cash_end": 60075.0,
+          "net": 17641.0,
+          "sales": 20477,
+          "purchases": 944,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 868,
+            "FERTILIZER": 1358,
+            "MILK": 2921,
+            "STRAWBERRY": 10401,
+            "WHEAT": 4877,
+            "WOOL": 52
+          },
+          "MOVE": 872,
+          "PASS": 162,
+          "crop_tiles_mean": 31
+        }
+      }
+    },
+    {
+      "seed": 180910207,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 1,
+      "reward": 57156.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14371.0,
+          "cash_end": 22209.0,
+          "net": 7838.0,
+          "sales": 11010,
+          "purchases": 1292,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2329,
+            "MILK": 682,
+            "STRAWBERRY": 6717,
+            "WHEAT": 996,
+            "WOOL": 286
+          },
+          "MOVE": 762,
+          "PASS": 141,
+          "crop_tiles_mean": 56.2
+        },
+        "D20-D24": {
+          "cash_start": 22209.0,
+          "cash_end": 42608.0,
+          "net": 20399.0,
+          "sales": 23646,
+          "purchases": 1367,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1808,
+            "MILK": 731,
+            "STRAWBERRY": 19816,
+            "WHEAT": 1228,
+            "WOOL": 63
+          },
+          "MOVE": 789,
+          "PASS": 102,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 42608.0,
+          "cash_end": 57156.0,
+          "net": 14548.0,
+          "sales": 19118,
+          "purchases": 2686,
+          "wages": 1884.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 862,
+            "FERTILIZER": 1604,
+            "MILK": 2991,
+            "STRAWBERRY": 9179,
+            "WHEAT": 4411,
+            "WOOL": 71
+          },
+          "MOVE": 884,
+          "PASS": 116,
+          "crop_tiles_mean": 26.166666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910201,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 43717.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14780.0,
+          "cash_end": 24711.0,
+          "net": 9931.0,
+          "sales": 12618,
+          "purchases": 807,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2822,
+            "MILK": 3676,
+            "STRAWBERRY": 5150,
+            "WHEAT": 766,
+            "WOOL": 204
+          },
+          "MOVE": 727,
+          "PASS": 135,
+          "crop_tiles_mean": 57.8
+        },
+        "D20-D24": {
+          "cash_start": 24711.0,
+          "cash_end": 30497.0,
+          "net": 5786.0,
+          "sales": 9436,
+          "purchases": 1770,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1136,
+            "MILK": 1030,
+            "STRAWBERRY": 5987,
+            "WHEAT": 520,
+            "WOOL": 763
+          },
+          "MOVE": 788,
+          "PASS": 94,
+          "crop_tiles_mean": 52
+        },
+        "D25-D30": {
+          "cash_start": 30497.0,
+          "cash_end": 43717.0,
+          "net": 13220.0,
+          "sales": 17319,
+          "purchases": 2212,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 4401,
+            "FERTILIZER": 424,
+            "MILK": 3237,
+            "STRAWBERRY": 864,
+            "WHEAT": 2100,
+            "WOOL": 6293
+          },
+          "MOVE": 872,
+          "PASS": 182,
+          "crop_tiles_mean": 23.333333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910201,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 50035.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 13185.0,
+          "cash_end": 23970.0,
+          "net": 10785.0,
+          "sales": 18189,
+          "purchases": 5524,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 255,
+            "FERTILIZER": 3808,
+            "MILK": 3505,
+            "STRAWBERRY": 6862,
+            "WHEAT": 2849,
+            "WOOL": 910
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 23970.0,
+          "cash_end": 30861.0,
+          "net": 6891.0,
+          "sales": 13683,
+          "purchases": 4912,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 408,
+            "FERTILIZER": 1711,
+            "MELON": 447,
+            "MILK": 1147,
+            "STRAWBERRY": 7260,
+            "WHEAT": 1553,
+            "WOOL": 1157
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 30861.0,
+          "cash_end": 50035.0,
+          "net": 19174.0,
+          "sales": 25619,
+          "purchases": 4422,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 408,
+            "FERTILIZER": 377,
+            "MELON": 1794,
+            "MILK": 2809,
+            "STRAWBERRY": 1271,
+            "WHEAT": 7914,
+            "WOOL": 11046
+          },
+          "MOVE": 938,
+          "PASS": 52,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910202,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 49538.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15418.0,
+          "cash_end": 25796.0,
+          "net": 10378.0,
+          "sales": 13477,
+          "purchases": 1219,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2103,
+            "MILK": 79,
+            "STRAWBERRY": 3451,
+            "WHEAT": 924,
+            "WOOL": 6920
+          },
+          "MOVE": 762,
+          "PASS": 141,
+          "crop_tiles_mean": 56.2
+        },
+        "D20-D24": {
+          "cash_start": 25796.0,
+          "cash_end": 32574.0,
+          "net": 6778.0,
+          "sales": 10413,
+          "purchases": 1755,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1219,
+            "MILK": 84,
+            "STRAWBERRY": 699,
+            "WHEAT": 977,
+            "WOOL": 7434
+          },
+          "MOVE": 792,
+          "PASS": 90,
+          "crop_tiles_mean": 52
+        },
+        "D25-D30": {
+          "cash_start": 32574.0,
+          "cash_end": 49538.0,
+          "net": 16964.0,
+          "sales": 20322,
+          "purchases": 1474,
+          "wages": 1884.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 8355,
+            "FERTILIZER": 731,
+            "MILK": 140,
+            "STRAWBERRY": 294,
+            "WHEAT": 4322,
+            "WOOL": 6480
+          },
+          "MOVE": 847,
+          "PASS": 130,
+          "crop_tiles_mean": 29.833333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910202,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 60663.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 12791.0,
+          "cash_end": 33231.0,
+          "net": 20440.0,
+          "sales": 27860,
+          "purchases": 5540,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 267,
+            "FERTILIZER": 4018,
+            "MILK": 229,
+            "STRAWBERRY": 4251,
+            "WHEAT": 2854,
+            "WOOL": 16241
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 33231.0,
+          "cash_end": 45758.0,
+          "net": 12527.0,
+          "sales": 19393,
+          "purchases": 4986,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 439,
+            "FERTILIZER": 2010,
+            "MELON": 447,
+            "MILK": 169,
+            "STRAWBERRY": 1514,
+            "WHEAT": 1559,
+            "WOOL": 13255
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 45758.0,
+          "cash_end": 60663.0,
+          "net": 14905.0,
+          "sales": 21401,
+          "purchases": 4473,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 456,
+            "FERTILIZER": 482,
+            "MELON": 1794,
+            "MILK": 206,
+            "STRAWBERRY": 667,
+            "WHEAT": 7845,
+            "WOOL": 9951
+          },
+          "MOVE": 921,
+          "PASS": 71,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910203,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 37365.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 13893.0,
+          "cash_end": 20289.0,
+          "net": 6396.0,
+          "sales": 9569,
+          "purchases": 1293,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2103,
+            "MILK": 57,
+            "STRAWBERRY": 6219,
+            "WHEAT": 1002,
+            "WOOL": 188
+          },
+          "MOVE": 762,
+          "PASS": 141,
+          "crop_tiles_mean": 56.2
+        },
+        "D20-D24": {
+          "cash_start": 20289.0,
+          "cash_end": 30335.0,
+          "net": 10046.0,
+          "sales": 13279,
+          "purchases": 1353,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1243,
+            "MILK": 60,
+            "STRAWBERRY": 10715,
+            "WHEAT": 1210,
+            "WOOL": 51
+          },
+          "MOVE": 789,
+          "PASS": 102,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 30335.0,
+          "cash_end": 37365.0,
+          "net": 7030.0,
+          "sales": 11044,
+          "purchases": 2122,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 5553,
+            "FERTILIZER": 688,
+            "MILK": 136,
+            "STRAWBERRY": 794,
+            "WHEAT": 3803,
+            "WOOL": 70
+          },
+          "MOVE": 826,
+          "PASS": 184,
+          "crop_tiles_mean": 26.666666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910203,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 34677.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 11279.0,
+          "cash_end": 20100.0,
+          "net": 8821.0,
+          "sales": 16552,
+          "purchases": 5851,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 280,
+            "FERTILIZER": 4018,
+            "MILK": 133,
+            "STRAWBERRY": 8102,
+            "WHEAT": 3089,
+            "WOOL": 930
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 20100.0,
+          "cash_end": 28589.0,
+          "net": 8489.0,
+          "sales": 15698,
+          "purchases": 5329,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 461,
+            "FERTILIZER": 2039,
+            "MELON": 447,
+            "MILK": 67,
+            "STRAWBERRY": 10936,
+            "WHEAT": 1680,
+            "WOOL": 68
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 28589.0,
+          "cash_end": 34677.0,
+          "net": 6088.0,
+          "sales": 12966,
+          "purchases": 4855,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 491,
+            "FERTILIZER": 452,
+            "MELON": 1870,
+            "MILK": 192,
+            "STRAWBERRY": 1280,
+            "WHEAT": 8606,
+            "WOOL": 75
+          },
+          "MOVE": 936,
+          "PASS": 55,
+          "crop_tiles_mean": 44
+        }
+      }
+    },
+    {
+      "seed": 180910204,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 95528.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 16972.0,
+          "cash_end": 33190.0,
+          "net": 16218.0,
+          "sales": 19107,
+          "purchases": 1009,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2349,
+            "MILK": 7340,
+            "STRAWBERRY": 8129,
+            "WHEAT": 979,
+            "WOOL": 310
+          },
+          "MOVE": 717,
+          "PASS": 153,
+          "crop_tiles_mean": 58.2
+        },
+        "D20-D24": {
+          "cash_start": 33190.0,
+          "cash_end": 57507.0,
+          "net": 24317.0,
+          "sales": 27731,
+          "purchases": 1534,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1310,
+            "MILK": 575,
+            "STRAWBERRY": 23614,
+            "WHEAT": 1222,
+            "WOOL": 1010
+          },
+          "MOVE": 799,
+          "PASS": 89,
+          "crop_tiles_mean": 52.6
+        },
+        "D25-D30": {
+          "cash_start": 57507.0,
+          "cash_end": 95528.0,
+          "net": 38021.0,
+          "sales": 41441,
+          "purchases": 1536,
+          "wages": 1884.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1083,
+            "FERTILIZER": 500,
+            "MILK": 374,
+            "STRAWBERRY": 26095,
+            "WHEAT": 3229,
+            "WOOL": 10160
+          },
+          "MOVE": 856,
+          "PASS": 117,
+          "crop_tiles_mean": 29
+        }
+      }
+    },
+    {
+      "seed": 180910204,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 101964.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15456.0,
+          "cash_end": 33387.0,
+          "net": 17931.0,
+          "sales": 25521,
+          "purchases": 5710,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 289,
+            "FERTILIZER": 3846,
+            "MILK": 7419,
+            "STRAWBERRY": 9994,
+            "WHEAT": 2982,
+            "WOOL": 991
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 33387.0,
+          "cash_end": 59183.0,
+          "net": 25796.0,
+          "sales": 32832,
+          "purchases": 5156,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 503,
+            "FERTILIZER": 1901,
+            "MELON": 447,
+            "MILK": 519,
+            "STRAWBERRY": 22093,
+            "WHEAT": 1629,
+            "WOOL": 5740
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 59183.0,
+          "cash_end": 101964.0,
+          "net": 42781.0,
+          "sales": 49401,
+          "purchases": 4597,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 556,
+            "FERTILIZER": 389,
+            "MELON": 2013,
+            "MILK": 430,
+            "STRAWBERRY": 21047,
+            "WHEAT": 8354,
+            "WOOL": 16612
+          },
+          "MOVE": 939,
+          "PASS": 50,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910205,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 55505.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14555.0,
+          "cash_end": 23123.0,
+          "net": 8568.0,
+          "sales": 11297,
+          "purchases": 849,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2822,
+            "MILK": 1306,
+            "STRAWBERRY": 6139,
+            "WHEAT": 826,
+            "WOOL": 204
+          },
+          "MOVE": 727,
+          "PASS": 135,
+          "crop_tiles_mean": 57.8
+        },
+        "D20-D24": {
+          "cash_start": 23123.0,
+          "cash_end": 38550.0,
+          "net": 15427.0,
+          "sales": 18706,
+          "purchases": 1399,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1187,
+            "MILK": 190,
+            "STRAWBERRY": 16794,
+            "WHEAT": 380,
+            "WOOL": 155
+          },
+          "MOVE": 780,
+          "PASS": 93,
+          "crop_tiles_mean": 53.2
+        },
+        "D25-D30": {
+          "cash_start": 38550.0,
+          "cash_end": 55505.0,
+          "net": 16955.0,
+          "sales": 20135,
+          "purchases": 1293,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 525,
+            "FERTILIZER": 345,
+            "MILK": 458,
+            "STRAWBERRY": 8601,
+            "WHEAT": 4011,
+            "WOOL": 6195
+          },
+          "MOVE": 849,
+          "PASS": 221,
+          "crop_tiles_mean": 24.666666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910205,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 63126.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 12860.0,
+          "cash_end": 22972.0,
+          "net": 10112.0,
+          "sales": 17799,
+          "purchases": 5807,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 287,
+            "FERTILIZER": 3808,
+            "MILK": 1472,
+            "STRAWBERRY": 8263,
+            "WHEAT": 3058,
+            "WOOL": 911
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 22972.0,
+          "cash_end": 38193.0,
+          "net": 15221.0,
+          "sales": 22427,
+          "purchases": 5326,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 493,
+            "FERTILIZER": 1743,
+            "MELON": 447,
+            "MILK": 385,
+            "STRAWBERRY": 16179,
+            "WHEAT": 1711,
+            "WOOL": 1469
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 38193.0,
+          "cash_end": 63126.0,
+          "net": 24933.0,
+          "sales": 31768,
+          "purchases": 4812,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 545,
+            "FERTILIZER": 335,
+            "MELON": 2149,
+            "MILK": 462,
+            "STRAWBERRY": 7979,
+            "WHEAT": 8612,
+            "WOOL": 11686
+          },
+          "MOVE": 928,
+          "PASS": 61,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910206,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 78523.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 17198.0,
+          "cash_end": 29930.0,
+          "net": 12732.0,
+          "sales": 15629,
+          "purchases": 1017,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2349,
+            "MILK": 4092,
+            "STRAWBERRY": 8000,
+            "WHEAT": 984,
+            "WOOL": 204
+          },
+          "MOVE": 717,
+          "PASS": 153,
+          "crop_tiles_mean": 58.2
+        },
+        "D20-D24": {
+          "cash_start": 29930.0,
+          "cash_end": 51651.0,
+          "net": 21721.0,
+          "sales": 25165,
+          "purchases": 1564,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1310,
+            "MILK": 86,
+            "STRAWBERRY": 22471,
+            "WHEAT": 1252,
+            "WOOL": 46
+          },
+          "MOVE": 799,
+          "PASS": 89,
+          "crop_tiles_mean": 52.6
+        },
+        "D25-D30": {
+          "cash_start": 51651.0,
+          "cash_end": 78523.0,
+          "net": 26872.0,
+          "sales": 30346,
+          "purchases": 1590,
+          "wages": 1884.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 2675,
+            "FERTILIZER": 500,
+            "MILK": 168,
+            "STRAWBERRY": 23513,
+            "WHEAT": 3424,
+            "WOOL": 66
+          },
+          "MOVE": 856,
+          "PASS": 117,
+          "crop_tiles_mean": 29
+        }
+      }
+    },
+    {
+      "seed": 180910206,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 72991.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15753.0,
+          "cash_end": 30225.0,
+          "net": 14472.0,
+          "sales": 22096,
+          "purchases": 5744,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 255,
+            "FERTILIZER": 3846,
+            "MILK": 4004,
+            "STRAWBERRY": 10070,
+            "WHEAT": 3011,
+            "WOOL": 910
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 30225.0,
+          "cash_end": 48890.0,
+          "net": 18665.0,
+          "sales": 25790,
+          "purchases": 5245,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 416,
+            "FERTILIZER": 1901,
+            "MELON": 447,
+            "MILK": 169,
+            "STRAWBERRY": 21103,
+            "WHEAT": 1676,
+            "WOOL": 78
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 48890.0,
+          "cash_end": 72991.0,
+          "net": 24101.0,
+          "sales": 30907,
+          "purchases": 4783,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 456,
+            "FERTILIZER": 389,
+            "MELON": 2081,
+            "MILK": 188,
+            "STRAWBERRY": 18921,
+            "WHEAT": 8788,
+            "WOOL": 84
+          },
+          "MOVE": 929,
+          "PASS": 60,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910207,
+      "model": "E20.1",
+      "opponent": "E18",
+      "seat": 0,
+      "reward": 37615.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14189.0,
+          "cash_end": 24273.0,
+          "net": 10084.0,
+          "sales": 13273,
+          "purchases": 1309,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2103,
+            "MILK": 91,
+            "STRAWBERRY": 5989,
+            "WHEAT": 1014,
+            "WOOL": 4076
+          },
+          "MOVE": 762,
+          "PASS": 141,
+          "crop_tiles_mean": 56.2
+        },
+        "D20-D24": {
+          "cash_start": 24273.0,
+          "cash_end": 32819.0,
+          "net": 8546.0,
+          "sales": 11809,
+          "purchases": 1383,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1250,
+            "MILK": 208,
+            "STRAWBERRY": 8207,
+            "WHEAT": 1238,
+            "WOOL": 906
+          },
+          "MOVE": 789,
+          "PASS": 102,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 32819.0,
+          "cash_end": 37615.0,
+          "net": 4796.0,
+          "sales": 8918,
+          "purchases": 2235,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1508,
+            "FERTILIZER": 688,
+            "MILK": 910,
+            "STRAWBERRY": 788,
+            "WHEAT": 4478,
+            "WOOL": 546
+          },
+          "MOVE": 835,
+          "PASS": 144,
+          "crop_tiles_mean": 29.666666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910207,
+      "model": "E18",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 46439.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 11463.0,
+          "cash_end": 29264.0,
+          "net": 17801.0,
+          "sales": 25591,
+          "purchases": 5910,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 287,
+            "FERTILIZER": 4018,
+            "MILK": 261,
+            "STRAWBERRY": 8001,
+            "WHEAT": 3129,
+            "WOOL": 9895
+          },
+          "MOVE": 745,
+          "PASS": 51,
+          "crop_tiles_mean": 53.4
+        },
+        "D20-D24": {
+          "cash_start": 29264.0,
+          "cash_end": 37039.0,
+          "net": 7775.0,
+          "sales": 15087,
+          "purchases": 5432,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 483,
+            "FERTILIZER": 2016,
+            "MELON": 447,
+            "MILK": 397,
+            "STRAWBERRY": 8579,
+            "WHEAT": 1716,
+            "WOOL": 1449
+          },
+          "MOVE": 740,
+          "PASS": 21,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 37039.0,
+          "cash_end": 46439.0,
+          "net": 9400.0,
+          "sales": 16316,
+          "purchases": 4893,
+          "wages": 2023.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "EGG": 517,
+            "FERTILIZER": 467,
+            "MELON": 1794,
+            "MILK": 841,
+            "STRAWBERRY": 1160,
+            "WHEAT": 8821,
+            "WOOL": 2716
+          },
+          "MOVE": 932,
+          "PASS": 59,
+          "crop_tiles_mean": 43.833333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910201,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 45905.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15119.0,
+          "cash_end": 26200.0,
+          "net": 11081.0,
+          "sales": 13742,
+          "purchases": 781,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 3130,
+            "MILK": 4860,
+            "STRAWBERRY": 4729,
+            "WHEAT": 733,
+            "WOOL": 290
+          },
+          "MOVE": 727,
+          "PASS": 135,
+          "crop_tiles_mean": 57.8
+        },
+        "D20-D24": {
+          "cash_start": 26200.0,
+          "cash_end": 31198.0,
+          "net": 4998.0,
+          "sales": 8065,
+          "purchases": 1187,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1678,
+            "MILK": 2753,
+            "STRAWBERRY": 2640,
+            "WHEAT": 967,
+            "WOOL": 27
+          },
+          "MOVE": 819,
+          "PASS": 91,
+          "crop_tiles_mean": 51.4
+        },
+        "D25-D30": {
+          "cash_start": 31198.0,
+          "cash_end": 45905.0,
+          "net": 14707.0,
+          "sales": 19444,
+          "purchases": 2850,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 3794,
+            "FERTILIZER": 1004,
+            "MILK": 10734,
+            "STRAWBERRY": 1477,
+            "WHEAT": 2353,
+            "WOOL": 82
+          },
+          "MOVE": 863,
+          "PASS": 171,
+          "crop_tiles_mean": 24.833333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910201,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 44296.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 16354.0,
+          "cash_end": 25420.0,
+          "net": 9066.0,
+          "sales": 11979,
+          "purchases": 1033,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2451,
+            "MILK": 3330,
+            "STRAWBERRY": 4449,
+            "WHEAT": 922,
+            "WOOL": 827
+          },
+          "MOVE": 702,
+          "PASS": 208,
+          "crop_tiles_mean": 58
+        },
+        "D20-D24": {
+          "cash_start": 25420.0,
+          "cash_end": 29962.0,
+          "net": 4542.0,
+          "sales": 7871,
+          "purchases": 1449,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1575,
+            "MILK": 2217,
+            "STRAWBERRY": 2650,
+            "WHEAT": 1397,
+            "WOOL": 32
+          },
+          "MOVE": 803,
+          "PASS": 111,
+          "crop_tiles_mean": 50.2
+        },
+        "D25-D30": {
+          "cash_start": 29962.0,
+          "cash_end": 44296.0,
+          "net": 14334.0,
+          "sales": 17867,
+          "purchases": 1641,
+          "wages": 1892.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 5007,
+            "FERTILIZER": 877,
+            "MILK": 9701,
+            "STRAWBERRY": 745,
+            "WHEAT": 1473,
+            "WOOL": 64
+          },
+          "MOVE": 786,
+          "PASS": 272,
+          "crop_tiles_mean": 28
+        }
+      }
+    },
+    {
+      "seed": 180910202,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 62141.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15830.0,
+          "cash_end": 28979.0,
+          "net": 13149.0,
+          "sales": 16221,
+          "purchases": 1192,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2329,
+            "MILK": 682,
+            "STRAWBERRY": 5266,
+            "WHEAT": 898,
+            "WOOL": 7046
+          },
+          "MOVE": 762,
+          "PASS": 141,
+          "crop_tiles_mean": 56.2
+        },
+        "D20-D24": {
+          "cash_start": 28979.0,
+          "cash_end": 43028.0,
+          "net": 14049.0,
+          "sales": 17599,
+          "purchases": 1670,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1753,
+            "MILK": 491,
+            "STRAWBERRY": 6096,
+            "WHEAT": 923,
+            "WOOL": 8336
+          },
+          "MOVE": 792,
+          "PASS": 90,
+          "crop_tiles_mean": 52
+        },
+        "D25-D30": {
+          "cash_start": 43028.0,
+          "cash_end": 62141.0,
+          "net": 19113.0,
+          "sales": 22409,
+          "purchases": 1412,
+          "wages": 1884.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 2059,
+            "FERTILIZER": 1674,
+            "MILK": 755,
+            "STRAWBERRY": 1176,
+            "WHEAT": 4071,
+            "WOOL": 12674
+          },
+          "MOVE": 847,
+          "PASS": 130,
+          "crop_tiles_mean": 29.833333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910202,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 57446.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 16155.0,
+          "cash_end": 30124.0,
+          "net": 13969.0,
+          "sales": 16810,
+          "purchases": 961,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2490,
+            "MILK": 885,
+            "STRAWBERRY": 4928,
+            "WHEAT": 1218,
+            "WOOL": 7289
+          },
+          "MOVE": 746,
+          "PASS": 183,
+          "crop_tiles_mean": 57.2
+        },
+        "D20-D24": {
+          "cash_start": 30124.0,
+          "cash_end": 42616.0,
+          "net": 12492.0,
+          "sales": 16253,
+          "purchases": 1881,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1181,
+            "MILK": 455,
+            "STRAWBERRY": 5445,
+            "WHEAT": 1276,
+            "WOOL": 7896
+          },
+          "MOVE": 795,
+          "PASS": 83,
+          "crop_tiles_mean": 52.6
+        },
+        "D25-D30": {
+          "cash_start": 42616.0,
+          "cash_end": 57446.0,
+          "net": 14830.0,
+          "sales": 17865,
+          "purchases": 1122,
+          "wages": 1913.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1460,
+            "FERTILIZER": 1381,
+            "MILK": 692,
+            "STRAWBERRY": 1028,
+            "WHEAT": 4036,
+            "WOOL": 9268
+          },
+          "MOVE": 847,
+          "PASS": 192,
+          "crop_tiles_mean": 30.666666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910203,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 43927.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14387.0,
+          "cash_end": 21569.0,
+          "net": 7182.0,
+          "sales": 10304,
+          "purchases": 1242,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2329,
+            "MILK": 447,
+            "STRAWBERRY": 6287,
+            "WHEAT": 955,
+            "WOOL": 286
+          },
+          "MOVE": 762,
+          "PASS": 141,
+          "crop_tiles_mean": 56.2
+        },
+        "D20-D24": {
+          "cash_start": 21569.0,
+          "cash_end": 35611.0,
+          "net": 14042.0,
+          "sales": 17190,
+          "purchases": 1268,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1808,
+            "MILK": 162,
+            "STRAWBERRY": 14044,
+            "WHEAT": 1113,
+            "WOOL": 63
+          },
+          "MOVE": 789,
+          "PASS": 102,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 35611.0,
+          "cash_end": 43927.0,
+          "net": 8316.0,
+          "sales": 12124,
+          "purchases": 1921,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 4311,
+            "FERTILIZER": 1657,
+            "MILK": 767,
+            "STRAWBERRY": 1944,
+            "WHEAT": 3379,
+            "WOOL": 66
+          },
+          "MOVE": 825,
+          "PASS": 182,
+          "crop_tiles_mean": 26.666666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910203,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 45129.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14681.0,
+          "cash_end": 22874.0,
+          "net": 8193.0,
+          "sales": 11077,
+          "purchases": 1004,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2490,
+            "MILK": 691,
+            "STRAWBERRY": 5785,
+            "WHEAT": 1294,
+            "WOOL": 817
+          },
+          "MOVE": 746,
+          "PASS": 183,
+          "crop_tiles_mean": 57.2
+        },
+        "D20-D24": {
+          "cash_start": 22874.0,
+          "cash_end": 34397.0,
+          "net": 11523.0,
+          "sales": 15278,
+          "purchases": 1875,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1233,
+            "MILK": 245,
+            "STRAWBERRY": 12501,
+            "WHEAT": 1254,
+            "WOOL": 45
+          },
+          "MOVE": 767,
+          "PASS": 103,
+          "crop_tiles_mean": 52.8
+        },
+        "D25-D30": {
+          "cash_start": 34397.0,
+          "cash_end": 45129.0,
+          "net": 10732.0,
+          "sales": 13426,
+          "purchases": 794,
+          "wages": 1900.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 5860,
+            "FERTILIZER": 1293,
+            "MILK": 569,
+            "STRAWBERRY": 1601,
+            "WHEAT": 4049,
+            "WOOL": 54
+          },
+          "MOVE": 856,
+          "PASS": 174,
+          "crop_tiles_mean": 32.333333333333336
+        }
+      }
+    },
+    {
+      "seed": 180910204,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 103628.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 17559.0,
+          "cash_end": 35609.0,
+          "net": 18050.0,
+          "sales": 20893,
+          "purchases": 963,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2590,
+            "MILK": 9236,
+            "STRAWBERRY": 7863,
+            "WHEAT": 910,
+            "WOOL": 294
+          },
+          "MOVE": 717,
+          "PASS": 153,
+          "crop_tiles_mean": 58.2
+        },
+        "D20-D24": {
+          "cash_start": 35609.0,
+          "cash_end": 64561.0,
+          "net": 28952.0,
+          "sales": 32225,
+          "purchases": 1393,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1911,
+            "MILK": 6099,
+            "STRAWBERRY": 23084,
+            "WHEAT": 1079,
+            "WOOL": 52
+          },
+          "MOVE": 799,
+          "PASS": 89,
+          "crop_tiles_mean": 52.6
+        },
+        "D25-D30": {
+          "cash_start": 64561.0,
+          "cash_end": 103628.0,
+          "net": 39067.0,
+          "sales": 42266,
+          "purchases": 1312,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1947,
+            "FERTILIZER": 1221,
+            "MILK": 11884,
+            "STRAWBERRY": 24189,
+            "WHEAT": 2966,
+            "WOOL": 59
+          },
+          "MOVE": 881,
+          "PASS": 115,
+          "crop_tiles_mean": 29.666666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910204,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 103637.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 17996.0,
+          "cash_end": 35005.0,
+          "net": 17009.0,
+          "sales": 20034,
+          "purchases": 1145,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1648,
+            "MILK": 8381,
+            "STRAWBERRY": 7882,
+            "WHEAT": 1310,
+            "WOOL": 813
+          },
+          "MOVE": 735,
+          "PASS": 179,
+          "crop_tiles_mean": 59.8
+        },
+        "D20-D24": {
+          "cash_start": 35005.0,
+          "cash_end": 64989.0,
+          "net": 29984.0,
+          "sales": 33031,
+          "purchases": 1167,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2010,
+            "MILK": 6248,
+            "STRAWBERRY": 23077,
+            "WHEAT": 1648,
+            "WOOL": 48
+          },
+          "MOVE": 782,
+          "PASS": 86,
+          "crop_tiles_mean": 55
+        },
+        "D25-D30": {
+          "cash_start": 64989.0,
+          "cash_end": 103637.0,
+          "net": 38648.0,
+          "sales": 41761,
+          "purchases": 1226,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 2052,
+            "FERTILIZER": 1321,
+            "MILK": 10676,
+            "STRAWBERRY": 24778,
+            "WHEAT": 2882,
+            "WOOL": 52
+          },
+          "MOVE": 793,
+          "PASS": 213,
+          "crop_tiles_mean": 30.5
+        }
+      }
+    },
+    {
+      "seed": 180910205,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 45874.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 15064.0,
+          "cash_end": 24469.0,
+          "net": 9405.0,
+          "sales": 12115,
+          "purchases": 830,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 3109,
+            "MILK": 1638,
+            "STRAWBERRY": 5999,
+            "WHEAT": 795,
+            "WOOL": 574
+          },
+          "MOVE": 727,
+          "PASS": 135,
+          "crop_tiles_mean": 57.8
+        },
+        "D20-D24": {
+          "cash_start": 24469.0,
+          "cash_end": 37207.0,
+          "net": 12738.0,
+          "sales": 16059,
+          "purchases": 1441,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1713,
+            "MILK": 207,
+            "STRAWBERRY": 12892,
+            "WHEAT": 888,
+            "WOOL": 359
+          },
+          "MOVE": 774,
+          "PASS": 103,
+          "crop_tiles_mean": 53.4
+        },
+        "D25-D30": {
+          "cash_start": 37207.0,
+          "cash_end": 45874.0,
+          "net": 8667.0,
+          "sales": 11622,
+          "purchases": 1068,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 559,
+            "FERTILIZER": 857,
+            "MILK": 155,
+            "STRAWBERRY": 1591,
+            "WHEAT": 3697,
+            "WOOL": 4763
+          },
+          "MOVE": 870,
+          "PASS": 188,
+          "crop_tiles_mean": 25.833333333333332
+        }
+      }
+    },
+    {
+      "seed": 180910205,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 49231.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 16019.0,
+          "cash_end": 23452.0,
+          "net": 7433.0,
+          "sales": 11355,
+          "purchases": 2042,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2587,
+            "MILK": 1227,
+            "STRAWBERRY": 5340,
+            "WHEAT": 1636,
+            "WOOL": 565
+          },
+          "MOVE": 712,
+          "PASS": 187,
+          "crop_tiles_mean": 58.4
+        },
+        "D20-D24": {
+          "cash_start": 23452.0,
+          "cash_end": 38326.0,
+          "net": 14874.0,
+          "sales": 17889,
+          "purchases": 1135,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1390,
+            "MILK": 213,
+            "STRAWBERRY": 14714,
+            "WHEAT": 1327,
+            "WOOL": 245
+          },
+          "MOVE": 771,
+          "PASS": 124,
+          "crop_tiles_mean": 55
+        },
+        "D25-D30": {
+          "cash_start": 38326.0,
+          "cash_end": 49231.0,
+          "net": 10905.0,
+          "sales": 14256,
+          "purchases": 1467,
+          "wages": 1884.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 2053,
+            "FERTILIZER": 988,
+            "MILK": 303,
+            "STRAWBERRY": 2195,
+            "WHEAT": 3282,
+            "WOOL": 5435
+          },
+          "MOVE": 812,
+          "PASS": 174,
+          "crop_tiles_mean": 32
+        }
+      }
+    },
+    {
+      "seed": 180910206,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 86961.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 17846.0,
+          "cash_end": 32637.0,
+          "net": 14791.0,
+          "sales": 17663,
+          "purchases": 992,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2590,
+            "MILK": 5672,
+            "STRAWBERRY": 8160,
+            "WHEAT": 947,
+            "WOOL": 294
+          },
+          "MOVE": 717,
+          "PASS": 153,
+          "crop_tiles_mean": 58.2
+        },
+        "D20-D24": {
+          "cash_start": 32637.0,
+          "cash_end": 57103.0,
+          "net": 24466.0,
+          "sales": 27817,
+          "purchases": 1471,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1911,
+            "MILK": 610,
+            "STRAWBERRY": 24087,
+            "WHEAT": 1157,
+            "WOOL": 52
+          },
+          "MOVE": 799,
+          "PASS": 89,
+          "crop_tiles_mean": 52.6
+        },
+        "D25-D30": {
+          "cash_start": 57103.0,
+          "cash_end": 86961.0,
+          "net": 29858.0,
+          "sales": 33213,
+          "purchases": 1471,
+          "wages": 1884.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1966,
+            "FERTILIZER": 1246,
+            "MILK": 1395,
+            "STRAWBERRY": 25436,
+            "WHEAT": 3108,
+            "WOOL": 62
+          },
+          "MOVE": 856,
+          "PASS": 117,
+          "crop_tiles_mean": 29
+        }
+      }
+    },
+    {
+      "seed": 180910206,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 88166.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 18236.0,
+          "cash_end": 32191.0,
+          "net": 13955.0,
+          "sales": 17012,
+          "purchases": 1177,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1648,
+            "MILK": 5027,
+            "STRAWBERRY": 8175,
+            "WHEAT": 1349,
+            "WOOL": 813
+          },
+          "MOVE": 735,
+          "PASS": 179,
+          "crop_tiles_mean": 59.8
+        },
+        "D20-D24": {
+          "cash_start": 32191.0,
+          "cash_end": 57489.0,
+          "net": 25298.0,
+          "sales": 28407,
+          "purchases": 1229,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2010,
+            "MILK": 494,
+            "STRAWBERRY": 24081,
+            "WHEAT": 1774,
+            "WOOL": 48
+          },
+          "MOVE": 782,
+          "PASS": 86,
+          "crop_tiles_mean": 55
+        },
+        "D25-D30": {
+          "cash_start": 57489.0,
+          "cash_end": 88166.0,
+          "net": 30677.0,
+          "sales": 33866,
+          "purchases": 1302,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 2330,
+            "FERTILIZER": 1299,
+            "MILK": 1337,
+            "STRAWBERRY": 25683,
+            "WHEAT": 3165,
+            "WOOL": 52
+          },
+          "MOVE": 795,
+          "PASS": 211,
+          "crop_tiles_mean": 30.5
+        }
+      }
+    },
+    {
+      "seed": 180910207,
+      "model": "E20.1",
+      "opponent": "E19",
+      "seat": 0,
+      "reward": 58125.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14371.0,
+          "cash_end": 22209.0,
+          "net": 7838.0,
+          "sales": 11010,
+          "purchases": 1292,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2329,
+            "MILK": 682,
+            "STRAWBERRY": 6717,
+            "WHEAT": 996,
+            "WOOL": 286
+          },
+          "MOVE": 762,
+          "PASS": 141,
+          "crop_tiles_mean": 56.2
+        },
+        "D20-D24": {
+          "cash_start": 22209.0,
+          "cash_end": 42608.0,
+          "net": 20399.0,
+          "sales": 23646,
+          "purchases": 1367,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1808,
+            "MILK": 731,
+            "STRAWBERRY": 19816,
+            "WHEAT": 1228,
+            "WOOL": 63
+          },
+          "MOVE": 789,
+          "PASS": 102,
+          "crop_tiles_mean": 53
+        },
+        "D25-D30": {
+          "cash_start": 42608.0,
+          "cash_end": 58125.0,
+          "net": 15517.0,
+          "sales": 19705,
+          "purchases": 2301,
+          "wages": 1887.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1381,
+            "FERTILIZER": 1562,
+            "MILK": 2965,
+            "STRAWBERRY": 9335,
+            "WHEAT": 4401,
+            "WOOL": 61
+          },
+          "MOVE": 865,
+          "PASS": 118,
+          "crop_tiles_mean": 29.666666666666668
+        }
+      }
+    },
+    {
+      "seed": 180910207,
+      "model": "E19",
+      "opponent": "E20.1",
+      "seat": 1,
+      "reward": 60358.0,
+      "windows": {
+        "D15-D19": {
+          "cash_start": 14670.0,
+          "cash_end": 23460.0,
+          "net": 8790.0,
+          "sales": 11714,
+          "purchases": 1044,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 2490,
+            "MILK": 885,
+            "STRAWBERRY": 6158,
+            "WHEAT": 1364,
+            "WOOL": 817
+          },
+          "MOVE": 746,
+          "PASS": 183,
+          "crop_tiles_mean": 57.2
+        },
+        "D20-D24": {
+          "cash_start": 23460.0,
+          "cash_end": 42434.0,
+          "net": 18974.0,
+          "sales": 22881,
+          "purchases": 2027,
+          "wages": 1880.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "FERTILIZER": 1233,
+            "MILK": 827,
+            "STRAWBERRY": 19396,
+            "WHEAT": 1380,
+            "WOOL": 45
+          },
+          "MOVE": 769,
+          "PASS": 103,
+          "crop_tiles_mean": 52.8
+        },
+        "D25-D30": {
+          "cash_start": 42434.0,
+          "cash_end": 60358.0,
+          "net": 17924.0,
+          "sales": 20635,
+          "purchases": 811,
+          "wages": 1900.0,
+          "land": 0,
+          "unit_cash": 0.0,
+          "sales_by_product": {
+            "CARROT": 1402,
+            "FERTILIZER": 1396,
+            "MILK": 3204,
+            "STRAWBERRY": 10021,
+            "WHEAT": 4554,
+            "WOOL": 58
+          },
+          "MOVE": 858,
+          "PASS": 154,
+          "crop_tiles_mean": 32.5
+        }
+      }
+    }
+  ]
+}

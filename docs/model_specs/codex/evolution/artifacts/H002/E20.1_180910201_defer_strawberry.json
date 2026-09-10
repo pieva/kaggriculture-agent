@@ -1,0 +1,131 @@
+{
+  "experiment": "H002",
+  "condition": "defer_strawberry",
+  "agents": [
+    "E20.1",
+    "E18"
+  ],
+  "seed": 180910201,
+  "rewards": [
+    43843.0,
+    50035.0
+  ],
+  "checkpoint": 456,
+  "intervention": {
+    "step": 456,
+    "day": 20,
+    "hour": 1,
+    "removed": [
+      "SELL",
+      "STRAWBERRY",
+      12
+    ],
+    "proposed": {
+      "farmer": [
+        "WEST"
+      ],
+      "hands": [],
+      "market": [
+        [
+          "SELL",
+          "MILK",
+          6
+        ],
+        [
+          "SELL",
+          "STRAWBERRY",
+          12
+        ],
+        [
+          "SELL",
+          "WHEAT",
+          4
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ]
+      ]
+    },
+    "emitted": {
+      "farmer": [
+        "WEST"
+      ],
+      "hands": [],
+      "market": [
+        [
+          "SELL",
+          "MILK",
+          6
+        ],
+        [
+          "SELL",
+          "WHEAT",
+          4
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ]
+      ]
+    }
+  },
+  "source_replay_sha256": "f2db0d88f6b998271f30c02d8d14ea4ed1b054075e0c6dacf87a2954471f2c26",
+  "replay_sha256": "49d6df70908da982dde0a0565cb72716f43de5e74135e37c2c68b3d3bc2e3b42",
+  "runtime": [
+    {
+      "calls": 719,
+      "core_errors": 0,
+      "max_seconds": 2.086474299998372
+    },
+    {
+      "calls": 719,
+      "core_errors": null,
+      "max_seconds": 0.014114699995843694
+    }
+  ],
+  "verification": {
+    "prefix_actions_per_agent": 456,
+    "suffix_action_batches": 0,
+    "suffix_states": 0,
+    "clock_field_excluded": "remainingOverageTime"
+  },
+  "sources": {
+    "docs\\model_specs\\codex\\evolution\\tools\\branch_h002.py": "11918de56d99fe571e063976f829dd3a7cf202bce997cabfdd382af6b53ad5a7",
+    "docs\\model_specs\\codex\\evolution\\H002_PROTOCOL.md": "c662f003e44bb5e3659134b454af5386f5862168abf8cdd94efbd5d513c50d84",
+    "submission\\submission_codex_e20_772_e20v28_loaderfix.py": "9d84c838de39c2c8df620a21db258ea4a4065a5a2b4f75288bde53218d71c9bb",
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7"
+  },
+  "engine": {
+    "version": "1.32.7",
+    "sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e"
+  }
+}

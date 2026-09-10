@@ -1,0 +1,102 @@
+{
+  "action_parity": 719,
+  "pass_total": 209,
+  "rejected_attempt_counts": {
+    "route_reservation": 6089,
+    "travel_and_work": 5683,
+    "procurement_margin": 16,
+    "missing_material": 128,
+    "return_reserve": 26,
+    "reserved_material": 9
+  },
+  "pass_opportunities_with_reason": {
+    "procurement_margin": 3,
+    "travel_and_work": 167,
+    "route_reservation": 132,
+    "missing_material": 15,
+    "return_reserve": 10,
+    "reserved_material": 2
+  },
+  "late_free_opportunities_with_preparable_service_ignoring_route": [
+    {
+      "day": 21,
+      "hour": 21,
+      "worker": 0,
+      "unique_services": [
+        [
+          [
+            0,
+            0
+          ],
+          [
+            [
+              "WATER"
+            ]
+          ]
+        ],
+        [
+          [
+            1,
+            0
+          ],
+          [
+            [
+              "WATER"
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "day": 21,
+      "hour": 22,
+      "worker": 0,
+      "unique_services": [
+        [
+          [
+            1,
+            0
+          ],
+          [
+            [
+              "WATER"
+            ]
+          ]
+        ]
+      ]
+    },
+    {
+      "day": 26,
+      "hour": 20,
+      "worker": 11,
+      "unique_services": [
+        [
+          [
+            2,
+            5
+          ],
+          [
+            [
+              "WATER"
+            ],
+            [
+              "HARVEST"
+            ]
+          ]
+        ],
+        [
+          [
+            2,
+            5
+          ],
+          [
+            [
+              "WATER"
+            ]
+          ]
+        ]
+      ]
+    }
+  ],
+  "note": "Reasons overlap within a PASS. Attempts repeat as the dispatcher considers assignments; neither count is a count of avoidable PASS. Shadow preparation ignores route ownership/order, not full admission."
+}

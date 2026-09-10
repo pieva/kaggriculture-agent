@@ -1,0 +1,145 @@
+{
+  "experiment": "H002",
+  "condition": "defer_strawberry",
+  "agents": [
+    "E18",
+    "E19"
+  ],
+  "seed": 180910201,
+  "rewards": [
+    43282.0,
+    39565.0
+  ],
+  "checkpoint": 456,
+  "intervention": {
+    "step": 456,
+    "day": 20,
+    "hour": 1,
+    "removed": [
+      "SELL",
+      "STRAWBERRY",
+      14
+    ],
+    "proposed": {
+      "farmer": [
+        "PICKUP",
+        "WHEAT",
+        8
+      ],
+      "hands": [],
+      "market": [
+        [
+          "SELL",
+          "STRAWBERRY",
+          14
+        ],
+        [
+          "SELL",
+          "WHEAT",
+          4
+        ],
+        [
+          "SELL",
+          "EGG",
+          2
+        ],
+        [
+          "SELL",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ]
+      ]
+    },
+    "emitted": {
+      "farmer": [
+        "PICKUP",
+        "WHEAT",
+        8
+      ],
+      "hands": [],
+      "market": [
+        [
+          "SELL",
+          "WHEAT",
+          4
+        ],
+        [
+          "SELL",
+          "EGG",
+          2
+        ],
+        [
+          "SELL",
+          "FERTILIZER",
+          1
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ],
+        [
+          "HIRE"
+        ]
+      ]
+    }
+  },
+  "source_replay_sha256": "28f6966947f0fb31c6cd84243dc58ad37fd0efbe35a0208b40ed5c4b579289e9",
+  "replay_sha256": "7083f17a2a08d7f15fcfa4c4058837b3c763c81708fe60209e7a4f35cb889023",
+  "runtime": [
+    {
+      "calls": 719,
+      "core_errors": null,
+      "max_seconds": 0.018161300002248026
+    },
+    {
+      "calls": 719,
+      "core_errors": 0,
+      "max_seconds": 1.7242645000078483
+    }
+  ],
+  "verification": {
+    "prefix_actions_per_agent": 456,
+    "suffix_action_batches": 0,
+    "suffix_states": 0,
+    "clock_field_excluded": "remainingOverageTime"
+  },
+  "sources": {
+    "docs\\model_specs\\codex\\evolution\\tools\\branch_h002.py": "11918de56d99fe571e063976f829dd3a7cf202bce997cabfdd382af6b53ad5a7",
+    "docs\\model_specs\\codex\\evolution\\H002_PROTOCOL.md": "c662f003e44bb5e3659134b454af5386f5862168abf8cdd94efbd5d513c50d84",
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7",
+    "submission\\submission_codex_e18_770_v48_external.py": "57e7155e69a4b0db43ccb22295a7172fc4d338999dae6a6e775081b67ecf7743"
+  },
+  "engine": {
+    "version": "1.32.7",
+    "sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e"
+  }
+}

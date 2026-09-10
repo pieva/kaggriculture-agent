@@ -1,0 +1,57 @@
+{
+  "status_transitions": [
+    {
+      "before": "ambiguous",
+      "after": "ambiguous",
+      "count": 27
+    },
+    {
+      "before": "floor_unidentifiable",
+      "after": "floor_unidentifiable",
+      "count": 26
+    },
+    {
+      "before": "identified",
+      "after": "identified",
+      "count": 83
+    },
+    {
+      "before": "inconsistent_competing_supply",
+      "after": "ambiguous",
+      "count": 12
+    },
+    {
+      "before": "inconsistent_competing_supply",
+      "after": "floor_unidentifiable",
+      "count": 1
+    },
+    {
+      "before": "inconsistent_competing_supply",
+      "after": "identified",
+      "count": 33
+    },
+    {
+      "before": "inconsistent_competing_supply",
+      "after": "inconsistent_competing_supply",
+      "count": 70
+    },
+    {
+      "before": "no_own_strawberry",
+      "after": "no_own_strawberry",
+      "count": 168
+    }
+  ],
+  "witnesses_with_reported_fixed_floor": 45,
+  "forecast_transitions": {
+    "not_first -> not_first": 31,
+    "abstain -> abstain": 44,
+    "abstain -> first": 4,
+    "abstain -> not_first": 5
+  },
+  "forecast_labels": {
+    "not_first": 36,
+    "abstain": 44,
+    "first": 4
+  },
+  "previous_predictions_unchanged": true
+}
