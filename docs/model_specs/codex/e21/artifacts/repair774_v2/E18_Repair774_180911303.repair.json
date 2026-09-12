@@ -1,0 +1,734 @@
+{
+  "metrics": {
+    "slack_services": 12,
+    "uncovered_sowings_declined": 445,
+    "excursions_removed": 21,
+    "rerouted_commands": 109,
+    "rejoins": 21,
+    "terminal_passthrough": 47
+  },
+  "events": [
+    {
+      "step": 271,
+      "worker": 7,
+      "rejoin_step": 274,
+      "target": [
+        3,
+        7
+      ]
+    },
+    {
+      "step": 277,
+      "worker": 6,
+      "rejoin_step": 286,
+      "target": [
+        3,
+        9
+      ]
+    },
+    {
+      "step": 324,
+      "worker": 2,
+      "rejoin_step": 334,
+      "target": [
+        6,
+        3
+      ]
+    },
+    {
+      "step": 351,
+      "worker": 6,
+      "rejoin_step": 356,
+      "target": [
+        2,
+        9
+      ]
+    },
+    {
+      "step": 351,
+      "worker": 7,
+      "rejoin_step": 354,
+      "target": [
+        4,
+        9
+      ]
+    },
+    {
+      "step": 370,
+      "worker": 11,
+      "rejoin_step": 377,
+      "target": [
+        4,
+        9
+      ]
+    },
+    {
+      "step": 389,
+      "worker": 2,
+      "rejoin_step": 396,
+      "target": [
+        2,
+        8
+      ]
+    },
+    {
+      "step": 411,
+      "worker": 0,
+      "rejoin_step": 415,
+      "target": [
+        3,
+        7
+      ]
+    },
+    {
+      "step": 417,
+      "worker": 7,
+      "rejoin_step": 420,
+      "target": [
+        4,
+        8
+      ]
+    },
+    {
+      "step": 464,
+      "worker": 7,
+      "rejoin_step": 469,
+      "target": [
+        2,
+        7
+      ]
+    },
+    {
+      "step": 486,
+      "worker": 7,
+      "rejoin_step": 491,
+      "target": [
+        4,
+        5
+      ]
+    },
+    {
+      "step": 493,
+      "worker": 7,
+      "rejoin_step": 498,
+      "target": [
+        4,
+        8
+      ]
+    },
+    {
+      "step": 510,
+      "worker": 12,
+      "rejoin_step": 515,
+      "target": [
+        4,
+        8
+      ]
+    },
+    {
+      "step": 532,
+      "worker": 3,
+      "rejoin_step": 538,
+      "target": [
+        4,
+        6
+      ]
+    },
+    {
+      "step": 556,
+      "worker": 7,
+      "rejoin_step": 562,
+      "target": [
+        4,
+        5
+      ]
+    },
+    {
+      "step": 578,
+      "worker": 6,
+      "rejoin_step": 585,
+      "target": [
+        3,
+        8
+      ]
+    },
+    {
+      "step": 606,
+      "worker": 3,
+      "rejoin_step": 610,
+      "target": [
+        4,
+        8
+      ]
+    },
+    {
+      "step": 608,
+      "worker": 7,
+      "rejoin_step": 611,
+      "target": [
+        2,
+        7
+      ]
+    },
+    {
+      "step": 632,
+      "worker": 2,
+      "rejoin_step": 637,
+      "target": [
+        4,
+        5
+      ]
+    },
+    {
+      "step": 650,
+      "worker": 2,
+      "rejoin_step": 654,
+      "target": [
+        3,
+        7
+      ]
+    },
+    {
+      "step": 657,
+      "worker": 11,
+      "rejoin_step": 660,
+      "target": [
+        4,
+        8
+      ]
+    }
+  ],
+  "pending_detours": {},
+  "telemetry": {
+    "agent_version": "CODEX-E21-774-REPAIR2",
+    "candidate_id": "CODEX-E21-774-REPAIR2",
+    "base_agent_version": null,
+    "governor_enabled": true,
+    "topology_reclaim_enabled": false,
+    "mode": "RECOVERY",
+    "mode_history": [
+      {
+        "day": 0,
+        "from": null,
+        "to": "DENSE_V4D",
+        "reason": "initial"
+      },
+      {
+        "day": 2,
+        "from": "DENSE_V4D",
+        "to": "RECOVERY",
+        "reason": "own_service_stress"
+      },
+      {
+        "day": 11,
+        "from": "RECOVERY",
+        "to": "RECLAIM_CROP",
+        "reason": "repair1_fixed774_17_pasture_animals"
+      },
+      {
+        "day": 13,
+        "from": "RECLAIM_CROP",
+        "to": "RECOVERY",
+        "reason": "own_service_stress"
+      }
+    ],
+    "action_effect_modes": [
+      "DENSE_V4D",
+      "RECOVERY"
+    ],
+    "committed_reclaims": [
+      [
+        4,
+        7
+      ]
+    ],
+    "target_pastures_by_quadrant": {
+      "Q0": 7,
+      "Q1": 7,
+      "Q2": 4
+    },
+    "livestock_resource_cap": 17,
+    "latest_own_capacity": {
+      "hands": 1,
+      "crops": 50,
+      "animals": 18,
+      "weeds": 2,
+      "water_stressed": 22,
+      "feed_stressed": 0,
+      "harvest_ready": 45,
+      "hard_stress": 26,
+      "capacity_margin": -26
+    },
+    "latest_opponent_features": {
+      "quadrants": 3,
+      "hands": 0,
+      "crops": 53,
+      "animals": 19,
+      "pastures": 19,
+      "weeds": 1,
+      "money": 51225.0
+    },
+    "latest_opponent_pressure": 77.0,
+    "capacity_history": [
+      {
+        "day": 0,
+        "mode": "DENSE_V4D",
+        "own": {
+          "hands": 1,
+          "crops": 0,
+          "animals": 0,
+          "weeds": 0,
+          "water_stressed": 0,
+          "feed_stressed": 0,
+          "harvest_ready": 0,
+          "hard_stress": 0,
+          "capacity_margin": 1
+        },
+        "opponent_pressure": 0.0
+      },
+      {
+        "day": 1,
+        "mode": "DENSE_V4D",
+        "own": {
+          "hands": 1,
+          "crops": 19,
+          "animals": 4,
+          "weeds": 0,
+          "water_stressed": 0,
+          "feed_stressed": 2,
+          "harvest_ready": 19,
+          "hard_stress": 4,
+          "capacity_margin": -4
+        },
+        "opponent_pressure": 23.0
+      },
+      {
+        "day": 2,
+        "mode": "DENSE_V4D",
+        "own": {
+          "hands": 1,
+          "crops": 19,
+          "animals": 4,
+          "weeds": 0,
+          "water_stressed": 15,
+          "feed_stressed": 0,
+          "harvest_ready": 19,
+          "hard_stress": 15,
+          "capacity_margin": -15
+        },
+        "opponent_pressure": 24.0
+      },
+      {
+        "day": 3,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 16,
+          "animals": 5,
+          "weeds": 0,
+          "water_stressed": 0,
+          "feed_stressed": 1,
+          "harvest_ready": 16,
+          "hard_stress": 2,
+          "capacity_margin": -2
+        },
+        "opponent_pressure": 21.5
+      },
+      {
+        "day": 4,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 19,
+          "animals": 6,
+          "weeds": 0,
+          "water_stressed": 0,
+          "feed_stressed": 3,
+          "harvest_ready": 19,
+          "hard_stress": 6,
+          "capacity_margin": -6
+        },
+        "opponent_pressure": 25.0
+      },
+      {
+        "day": 5,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 19,
+          "animals": 6,
+          "weeds": 0,
+          "water_stressed": 12,
+          "feed_stressed": 1,
+          "harvest_ready": 19,
+          "hard_stress": 14,
+          "capacity_margin": -14
+        },
+        "opponent_pressure": 25.0
+      },
+      {
+        "day": 6,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 19,
+          "animals": 6,
+          "weeds": 0,
+          "water_stressed": 0,
+          "feed_stressed": 0,
+          "harvest_ready": 15,
+          "hard_stress": 0,
+          "capacity_margin": 0
+        },
+        "opponent_pressure": 25.0
+      },
+      {
+        "day": 7,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 29,
+          "animals": 8,
+          "weeds": 0,
+          "water_stressed": 4,
+          "feed_stressed": 0,
+          "harvest_ready": 17,
+          "hard_stress": 4,
+          "capacity_margin": -4
+        },
+        "opponent_pressure": 42.5
+      },
+      {
+        "day": 8,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 37,
+          "animals": 10,
+          "weeds": 0,
+          "water_stressed": 8,
+          "feed_stressed": 3,
+          "harvest_ready": 21,
+          "hard_stress": 14,
+          "capacity_margin": -14
+        },
+        "opponent_pressure": 51.5
+      },
+      {
+        "day": 9,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 37,
+          "animals": 12,
+          "weeds": 0,
+          "water_stressed": 2,
+          "feed_stressed": 1,
+          "harvest_ready": 17,
+          "hard_stress": 4,
+          "capacity_margin": -4
+        },
+        "opponent_pressure": 52.5
+      },
+      {
+        "day": 10,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 37,
+          "animals": 12,
+          "weeds": 0,
+          "water_stressed": 0,
+          "feed_stressed": 0,
+          "harvest_ready": 17,
+          "hard_stress": 0,
+          "capacity_margin": 0
+        },
+        "opponent_pressure": 52.5
+      },
+      {
+        "day": 11,
+        "mode": "RECLAIM_CROP",
+        "own": {
+          "hands": 1,
+          "crops": 34,
+          "animals": 12,
+          "weeds": 0,
+          "water_stressed": 25,
+          "feed_stressed": 0,
+          "harvest_ready": 13,
+          "hard_stress": 25,
+          "capacity_margin": -25
+        },
+        "opponent_pressure": 50.0
+      },
+      {
+        "day": 12,
+        "mode": "RECLAIM_CROP",
+        "own": {
+          "hands": 1,
+          "crops": 54,
+          "animals": 17,
+          "weeds": 1,
+          "water_stressed": 9,
+          "feed_stressed": 1,
+          "harvest_ready": 32,
+          "hard_stress": 13,
+          "capacity_margin": -13
+        },
+        "opponent_pressure": 78.0
+      },
+      {
+        "day": 13,
+        "mode": "RECLAIM_CROP",
+        "own": {
+          "hands": 1,
+          "crops": 53,
+          "animals": 18,
+          "weeds": 3,
+          "water_stressed": 40,
+          "feed_stressed": 3,
+          "harvest_ready": 30,
+          "hard_stress": 52,
+          "capacity_margin": -52
+        },
+        "opponent_pressure": 75.0
+      },
+      {
+        "day": 14,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 49,
+          "animals": 18,
+          "weeds": 4,
+          "water_stressed": 2,
+          "feed_stressed": 1,
+          "harvest_ready": 25,
+          "hard_stress": 12,
+          "capacity_margin": -12
+        },
+        "opponent_pressure": 74.0
+      },
+      {
+        "day": 15,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 47,
+          "animals": 18,
+          "weeds": 3,
+          "water_stressed": 27,
+          "feed_stressed": 0,
+          "harvest_ready": 23,
+          "hard_stress": 33,
+          "capacity_margin": -33
+        },
+        "opponent_pressure": 74.0
+      },
+      {
+        "day": 16,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 48,
+          "animals": 18,
+          "weeds": 1,
+          "water_stressed": 13,
+          "feed_stressed": 2,
+          "harvest_ready": 24,
+          "hard_stress": 19,
+          "capacity_margin": -19
+        },
+        "opponent_pressure": 76.0
+      },
+      {
+        "day": 17,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 52,
+          "animals": 18,
+          "weeds": 1,
+          "water_stressed": 28,
+          "feed_stressed": 0,
+          "harvest_ready": 24,
+          "hard_stress": 30,
+          "capacity_margin": -30
+        },
+        "opponent_pressure": 80.0
+      },
+      {
+        "day": 18,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 52,
+          "animals": 18,
+          "weeds": 1,
+          "water_stressed": 22,
+          "feed_stressed": 2,
+          "harvest_ready": 28,
+          "hard_stress": 28,
+          "capacity_margin": -28
+        },
+        "opponent_pressure": 79.0
+      },
+      {
+        "day": 19,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 52,
+          "animals": 18,
+          "weeds": 3,
+          "water_stressed": 24,
+          "feed_stressed": 1,
+          "harvest_ready": 25,
+          "hard_stress": 32,
+          "capacity_margin": -32
+        },
+        "opponent_pressure": 76.0
+      },
+      {
+        "day": 20,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 53,
+          "animals": 18,
+          "weeds": 1,
+          "water_stressed": 22,
+          "feed_stressed": 0,
+          "harvest_ready": 29,
+          "hard_stress": 24,
+          "capacity_margin": -24
+        },
+        "opponent_pressure": 80.0
+      },
+      {
+        "day": 21,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 49,
+          "animals": 18,
+          "weeds": 4,
+          "water_stressed": 22,
+          "feed_stressed": 0,
+          "harvest_ready": 24,
+          "hard_stress": 30,
+          "capacity_margin": -30
+        },
+        "opponent_pressure": 73.0
+      },
+      {
+        "day": 22,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 51,
+          "animals": 18,
+          "weeds": 1,
+          "water_stressed": 20,
+          "feed_stressed": 0,
+          "harvest_ready": 31,
+          "hard_stress": 22,
+          "capacity_margin": -22
+        },
+        "opponent_pressure": 78.0
+      },
+      {
+        "day": 23,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 45,
+          "animals": 18,
+          "weeds": 5,
+          "water_stressed": 28,
+          "feed_stressed": 0,
+          "harvest_ready": 21,
+          "hard_stress": 38,
+          "capacity_margin": -38
+        },
+        "opponent_pressure": 68.0
+      },
+      {
+        "day": 24,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 44,
+          "animals": 18,
+          "weeds": 7,
+          "water_stressed": 13,
+          "feed_stressed": 2,
+          "harvest_ready": 33,
+          "hard_stress": 31,
+          "capacity_margin": -31
+        },
+        "opponent_pressure": 65.0
+      },
+      {
+        "day": 25,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 50,
+          "animals": 18,
+          "weeds": 4,
+          "water_stressed": 24,
+          "feed_stressed": 1,
+          "harvest_ready": 38,
+          "hard_stress": 34,
+          "capacity_margin": -34
+        },
+        "opponent_pressure": 74.0
+      },
+      {
+        "day": 26,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 51,
+          "animals": 18,
+          "weeds": 1,
+          "water_stressed": 16,
+          "feed_stressed": 2,
+          "harvest_ready": 45,
+          "hard_stress": 22,
+          "capacity_margin": -22
+        },
+        "opponent_pressure": 79.0
+      },
+      {
+        "day": 27,
+        "mode": "RECOVERY",
+        "own": {
+          "hands": 1,
+          "crops": 50,
+          "animals": 18,
+          "weeds": 2,
+          "water_stressed": 22,
+          "feed_stressed": 0,
+          "harvest_ready": 45,
+          "hard_stress": 26,
+          "capacity_margin": -26
+        },
+        "opponent_pressure": 77.0
+      }
+    ],
+    "override_batches": 27,
+    "recovery_route_actions": 0,
+    "recovery_service_commands": 23,
+    "opponent_conditioned_recovery_batches": 216,
+    "no_freed_work_violations": 0,
+    "aborted_reclaim_batches": 0,
+    "terminal_passthrough_batches": 0,
+    "technical_errors": 0,
+    "fallbacks": 0,
+    "public_features_only": true,
+    "cross_episode_memory": false
+  }
+}

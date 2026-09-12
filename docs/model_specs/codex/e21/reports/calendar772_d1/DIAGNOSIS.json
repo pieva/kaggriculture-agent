@@ -1,0 +1,226 @@
+[
+  {
+    "result": {
+      "seed": 180911301,
+      "seat": 0,
+      "technical_pass": false,
+      "calendar_timing_pass": false,
+      "geometry_equal": false,
+      "prefix_equal": false,
+      "mix": {
+        "COW": 8,
+        "SHEEP": 3,
+        "GOOSE": 0
+      },
+      "topology": [
+        6,
+        3,
+        2
+      ],
+      "cash": 25369.0,
+      "baseline_cash": 80178.0,
+      "cash_delta": -54809.0,
+      "runtime": {
+        "calls": 719,
+        "max_seconds": 0.18883409997215495,
+        "overage_seconds": 0,
+        "core_errors": 0,
+        "metrics": {
+          "portfolio_certificate_evaluations": 179,
+          "ack_WEST": 823,
+          "wait_input": 25,
+          "ack_NORTH": 918,
+          "ack_PICKUP": 185,
+          "ack_PLANT": 157,
+          "ack_WATER": 642,
+          "ack_BUILD_PASTURE": 11,
+          "ack_PLACE": 11,
+          "ack_FEED": 243,
+          "ack_CARE": 204,
+          "ack_EAST": 506,
+          "jobs_at_refresh": 120,
+          "ack_COLLECT_FERTILIZER": 232,
+          "ack_HARVEST": 312,
+          "ack_SOUTH": 404,
+          "wait_seed": 8,
+          "unack_HARVEST": 779,
+          "ack_DROP": 20,
+          "ack_DIG": 19,
+          "renewal_insertion_accept": 1,
+          "ack_FERTILIZE": 62,
+          "renewal_insertion_reject": 11,
+          "growth_rejected_day_route": 13,
+          "unack_WATER": 1
+        }
+      }
+    },
+    "calendar_checkpoints": {
+      "12": {
+        "MELON": 1,
+        "WHEAT": 7,
+        "STRAWBERRY": 26,
+        "CARROT": 0,
+        "COW": 7,
+        "SHEEP": 2,
+        "GOOSE": 0,
+        "people": 11
+      },
+      "15": {
+        "MELON": 0,
+        "WHEAT": 12,
+        "STRAWBERRY": 32,
+        "CARROT": 0,
+        "COW": 7,
+        "SHEEP": 2,
+        "GOOSE": 0,
+        "people": 10
+      },
+      "20": {
+        "MELON": 0,
+        "WHEAT": 6,
+        "STRAWBERRY": 33,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 2,
+        "GOOSE": 0,
+        "people": 11
+      },
+      "25": {
+        "MELON": 0,
+        "WHEAT": 6,
+        "STRAWBERRY": 22,
+        "CARROT": 5,
+        "COW": 8,
+        "SHEEP": 3,
+        "GOOSE": 0,
+        "people": 11
+      },
+      "30": {
+        "MELON": 0,
+        "WHEAT": 0,
+        "STRAWBERRY": 4,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 3,
+        "GOOSE": 0,
+        "people": 12
+      }
+    },
+    "candidate_crop_audit": [
+      {
+        "service_day": 5,
+        "position": [
+          1,
+          3
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 5,
+        "position": [
+          0,
+          4
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 14,
+        "position": [
+          3,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 14,
+        "position": [
+          8,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 14,
+        "position": [
+          9,
+          4
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 16,
+        "position": [
+          4,
+          9
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 18,
+        "position": [
+          3,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 19,
+        "position": [
+          2,
+          8
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 19,
+        "position": [
+          4,
+          8
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 26,
+        "position": [
+          1,
+          0
+        ],
+        "crop": "STRAWBERRY"
+      }
+    ],
+    "baseline_crop_audit": [
+      {
+        "service_day": 22,
+        "position": [
+          8,
+          4
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 22,
+        "position": [
+          9,
+          4
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 22,
+        "position": [
+          3,
+          8
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 22,
+        "position": [
+          4,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      }
+    ]
+  }
+]

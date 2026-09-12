@@ -1,0 +1,55 @@
+[
+  {
+    "seed": 180911301,
+    "seat": 0,
+    "technical_pass": false,
+    "calendar_timing_pass": false,
+    "geometry_equal": true,
+    "prefix_equal": false,
+    "mix": {
+      "COW": 10,
+      "SHEEP": 6,
+      "GOOSE": 0
+    },
+    "topology": [
+      7,
+      7,
+      2
+    ],
+    "cash": 44219.0,
+    "baseline_cash": 80178.0,
+    "cash_delta": -35959.0,
+    "runtime": {
+      "calls": 719,
+      "max_seconds": 0.21421920001739636,
+      "overage_seconds": 0,
+      "core_errors": 0,
+      "metrics": {
+        "portfolio_certificate_evaluations": 221,
+        "wait_input": 28,
+        "ack_PICKUP": 212,
+        "ack_WEST": 810,
+        "ack_NORTH": 867,
+        "ack_BUILD_PASTURE": 16,
+        "ack_PLACE": 16,
+        "ack_FEED": 328,
+        "ack_PLANT": 178,
+        "ack_CARE": 256,
+        "ack_WATER": 736,
+        "ack_SOUTH": 465,
+        "ack_EAST": 570,
+        "jobs_at_refresh": 35,
+        "ack_COLLECT_FERTILIZER": 303,
+        "ack_HARVEST": 366,
+        "ack_DIG": 12,
+        "wait_seed": 12,
+        "ack_DROP": 27,
+        "renewal_insertion_accept": 16,
+        "ack_FERTILIZE": 59,
+        "renewal_insertion_reject": 27,
+        "growth_rejected_day_route": 33,
+        "unack_WATER": 1
+      }
+    }
+  }
+]

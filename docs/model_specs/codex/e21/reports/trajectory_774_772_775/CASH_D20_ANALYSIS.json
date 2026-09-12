@@ -1,0 +1,332 @@
+{
+  "window": "All action flows D20-D30, exact state 456 to terminal; not D19 pre-last-batch checkpoint",
+  "rows": [
+    {
+      "sales_cash": {
+        "STRAWBERRY": 26766,
+        "WHEAT": 9779,
+        "EGG": 778,
+        "FERTILIZER": 1584,
+        "MILK": 1419,
+        "WOOL": 9936,
+        "MELON": 2052
+      },
+      "sold_units": {
+        "STRAWBERRY": 165,
+        "WHEAT": 195,
+        "EGG": 16,
+        "FERTILIZER": 131,
+        "MILK": 126,
+        "WOOL": 145,
+        "MELON": 25
+      },
+      "harvested": {
+        "MILK": 126,
+        "WHEAT": 162,
+        "STRAWBERRY": 159,
+        "EGG": 14,
+        "WOOL": 139,
+        "MELON": 26
+      },
+      "purchase_cash": {
+        "BUY_SEED:WHEAT": 710,
+        "BUY_PRODUCT:WHEAT": 8765,
+        "BUY_PRODUCT:FERTILIZER": 246
+      },
+      "bought_units": {
+        "BUY_SEED:WHEAT": 71,
+        "BUY_PRODUCT:WHEAT": 180,
+        "BUY_PRODUCT:FERTILIZER": 26
+      },
+      "hire_cash": 3903.0,
+      "net_cash": 38690.0,
+      "label": "774 ricostruita",
+      "source": "docs\\model_specs\\codex\\e21\\artifacts\\fixed774\\Fixed774_E18_180911301.json",
+      "cash_start_d20": 33783.0,
+      "cash_final": 72473.0,
+      "wool_price_checkpoints": {
+        "20": 209,
+        "21": 125,
+        "24": 24,
+        "25": 5,
+        "27": 18,
+        "30": 1
+      },
+      "town_checkpoints": {
+        "13": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP"
+        ],
+        "16": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP",
+          "FARMERS_MARKET"
+        ],
+        "19": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP",
+          "FARMERS_MARKET",
+          "ICE_CREAM_SHOP"
+        ],
+        "22": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP",
+          "FARMERS_MARKET",
+          "ICE_CREAM_SHOP",
+          "PET_CAFE"
+        ],
+        "25": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP",
+          "FARMERS_MARKET",
+          "ICE_CREAM_SHOP",
+          "PET_CAFE",
+          "ICE_CREAM_SHOP"
+        ]
+      }
+    },
+    {
+      "sales_cash": {
+        "MILK": 2636,
+        "STRAWBERRY": 31217,
+        "WHEAT": 4517,
+        "WOOL": 14091,
+        "FERTILIZER": 1858,
+        "CARROT": 2025
+      },
+      "sold_units": {
+        "MILK": 151,
+        "STRAWBERRY": 211,
+        "WHEAT": 96,
+        "WOOL": 90,
+        "FERTILIZER": 131,
+        "CARROT": 29
+      },
+      "harvested": {
+        "WHEAT": 164,
+        "MILK": 144,
+        "STRAWBERRY": 199,
+        "WOOL": 77,
+        "CARROT": 29
+      },
+      "purchase_cash": {
+        "BUY_PRODUCT:WHEAT": 2961,
+        "BUY_SEED:WHEAT": 350,
+        "BUY_SEED:CARROT": 220
+      },
+      "bought_units": {
+        "BUY_PRODUCT:WHEAT": 64,
+        "BUY_SEED:WHEAT": 35,
+        "BUY_SEED:CARROT": 11
+      },
+      "hire_cash": 3764.0,
+      "net_cash": 49049.0,
+      "label": "772 · E20.2",
+      "source": "docs\\model_specs\\codex\\e20\\artifacts\\e20_2_confirmation\\E20.2_E18_180911301.json",
+      "cash_start_d20": 28788.0,
+      "cash_final": 77837.0,
+      "wool_price_checkpoints": {
+        "20": 226,
+        "21": 214,
+        "24": 193,
+        "25": 154,
+        "27": 102,
+        "30": 1
+      },
+      "town_checkpoints": {
+        "13": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP"
+        ],
+        "16": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP",
+          "BRUNCH_SPOT"
+        ],
+        "19": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP",
+          "BRUNCH_SPOT",
+          "SMOOTHIE_SHOP"
+        ],
+        "22": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP",
+          "BRUNCH_SPOT",
+          "SMOOTHIE_SHOP",
+          "ICE_CREAM_SHOP"
+        ],
+        "25": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP",
+          "BRUNCH_SPOT",
+          "SMOOTHIE_SHOP",
+          "ICE_CREAM_SHOP",
+          "PIZZA_SHOP"
+        ]
+      }
+    },
+    {
+      "sales_cash": {
+        "STRAWBERRY": 29453,
+        "WHEAT": 9859,
+        "EGG": 863,
+        "FERTILIZER": 2553,
+        "MILK": 2287,
+        "WOOL": 22307,
+        "MELON": 2317
+      },
+      "sold_units": {
+        "STRAWBERRY": 177,
+        "WHEAT": 207,
+        "EGG": 16,
+        "FERTILIZER": 124,
+        "MILK": 131,
+        "WOOL": 140,
+        "MELON": 23
+      },
+      "harvested": {
+        "MILK": 131,
+        "WHEAT": 175,
+        "STRAWBERRY": 171,
+        "EGG": 14,
+        "WOOL": 140,
+        "MELON": 26
+      },
+      "purchase_cash": {
+        "BUY_SEED:WHEAT": 710,
+        "BUY_PRODUCT:WHEAT": 8281,
+        "BUY_PRODUCT:FERTILIZER": 515
+      },
+      "bought_units": {
+        "BUY_SEED:WHEAT": 71,
+        "BUY_PRODUCT:WHEAT": 180,
+        "BUY_PRODUCT:FERTILIZER": 26
+      },
+      "hire_cash": 3903.0,
+      "net_cash": 56230.0,
+      "label": "775 · E18",
+      "source": "docs\\model_specs\\codex\\e20\\artifacts\\e20_2_confirmation\\E18_E20.2_180911301.json",
+      "cash_start_d20": 37802.0,
+      "cash_final": 94032.0,
+      "wool_price_checkpoints": {
+        "20": 226,
+        "21": 214,
+        "24": 193,
+        "25": 154,
+        "27": 102,
+        "30": 1
+      },
+      "town_checkpoints": {
+        "13": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP"
+        ],
+        "16": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP",
+          "BRUNCH_SPOT"
+        ],
+        "19": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP",
+          "BRUNCH_SPOT",
+          "SMOOTHIE_SHOP"
+        ],
+        "22": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP",
+          "BRUNCH_SPOT",
+          "SMOOTHIE_SHOP",
+          "ICE_CREAM_SHOP"
+        ],
+        "25": [
+          "PET_CAFE",
+          "YARN_STORE",
+          "FARMERS_MARKET",
+          "SMOOTHIE_SHOP",
+          "BRUNCH_SPOT",
+          "SMOOTHIE_SHOP",
+          "ICE_CREAM_SHOP",
+          "PIZZA_SHOP"
+        ]
+      }
+    }
+  ],
+  "same_match_e18": {
+    "sales_cash": {
+      "STRAWBERRY": 28783,
+      "WHEAT": 10344,
+      "EGG": 779,
+      "FERTILIZER": 1526,
+      "MILK": 1242,
+      "WOOL": 8326,
+      "MELON": 2005
+    },
+    "sold_units": {
+      "STRAWBERRY": 177,
+      "WHEAT": 206,
+      "EGG": 16,
+      "FERTILIZER": 124,
+      "MILK": 131,
+      "WOOL": 140,
+      "MELON": 23
+    },
+    "harvested": {
+      "MILK": 131,
+      "WHEAT": 174,
+      "STRAWBERRY": 171,
+      "EGG": 14,
+      "WOOL": 140,
+      "MELON": 26
+    },
+    "purchase_cash": {
+      "BUY_SEED:WHEAT": 710,
+      "BUY_PRODUCT:WHEAT": 8765,
+      "BUY_PRODUCT:FERTILIZER": 246
+    },
+    "bought_units": {
+      "BUY_SEED:WHEAT": 71,
+      "BUY_PRODUCT:WHEAT": 180,
+      "BUY_PRODUCT:FERTILIZER": 26
+    },
+    "hire_cash": 3903.0,
+    "net_cash": 39381.0,
+    "label": "775 E18 nella partita della 774",
+    "cash_final": 75765.0
+  },
+  "sources": {
+    "docs\\model_specs\\codex\\e21\\artifacts\\fixed774\\Fixed774_E18_180911301.json": "259d1734ceb4fdbb25de86a1aca018b0416ab944b5b013e7460c17c48396f2eb",
+    "docs\\model_specs\\codex\\e20\\artifacts\\e20_2_confirmation\\E20.2_E18_180911301.json": "6c0b965f5d2ece6bcd55c7fe1967ac96ec15f3fe84660eecb70b0a00ce938d92",
+    "docs\\model_specs\\codex\\e20\\artifacts\\e20_2_confirmation\\E18_E20.2_180911301.json": "925d475e1da4c36b54be196e94c01097afc896cfad33e941112f2f4b187b2f5e"
+  },
+  "new_simulations": 0
+}

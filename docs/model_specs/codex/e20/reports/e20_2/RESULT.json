@@ -1,0 +1,187 @@
+{
+  "version": "E20.2",
+  "variant": "E20v32",
+  "decision": "DEVELOPMENT_SIGNAL_ONLY",
+  "adopted": false,
+  "uploaded": false,
+  "distinct_seeds": 2,
+  "paired_cases": 4,
+  "mean_delta_cash": 1397.5,
+  "mean_delta_margin": 865.0,
+  "pairs": [
+    {
+      "seed": 180910201,
+      "seat": 0,
+      "conditions": {
+        "control": {
+          "cash": 43717.0,
+          "margin": -6318.0,
+          "stress": 3,
+          "losses": 0,
+          "actions": {
+            "CARE": 100,
+            "FEED": 154,
+            "WATER": 272,
+            "MOVE": 1660,
+            "PASS": 276
+          },
+          "sales": 26755,
+          "purchases": 3982,
+          "wages": 3767.0
+        },
+        "candidate": {
+          "cash": 46492.0,
+          "margin": 565.0,
+          "stress": 3,
+          "losses": 0,
+          "actions": {
+            "CARE": 75,
+            "FEED": 152,
+            "WATER": 259,
+            "MOVE": 1699,
+            "PASS": 285
+          },
+          "sales": 30463,
+          "purchases": 4915,
+          "wages": 3767.0
+        }
+      },
+      "delta_cash": 2775.0,
+      "delta_margin": 6883.0,
+      "biological_regression": false
+    },
+    {
+      "seed": 180910201,
+      "seat": 1,
+      "conditions": {
+        "control": {
+          "cash": 43717.0,
+          "margin": -6318.0,
+          "stress": 3,
+          "losses": 0,
+          "actions": {
+            "CARE": 100,
+            "FEED": 154,
+            "WATER": 272,
+            "MOVE": 1660,
+            "PASS": 276
+          },
+          "sales": 26755,
+          "purchases": 3982,
+          "wages": 3767.0
+        },
+        "candidate": {
+          "cash": 48346.0,
+          "margin": -361.0,
+          "stress": 3,
+          "losses": 0,
+          "actions": {
+            "CARE": 72,
+            "FEED": 148,
+            "WATER": 275,
+            "MOVE": 1686,
+            "PASS": 295
+          },
+          "sales": 31744,
+          "purchases": 4329,
+          "wages": 3780.0
+        }
+      },
+      "delta_cash": 4629.0,
+      "delta_margin": 5957.0,
+      "biological_regression": false
+    },
+    {
+      "seed": 180910203,
+      "seat": 0,
+      "conditions": {
+        "control": {
+          "cash": 37365.0,
+          "margin": 2688.0,
+          "stress": 5,
+          "losses": 0,
+          "actions": {
+            "CARE": 103,
+            "FEED": 148,
+            "WATER": 286,
+            "MOVE": 1615,
+            "PASS": 286
+          },
+          "sales": 24323,
+          "purchases": 3475,
+          "wages": 3772.0
+        },
+        "candidate": {
+          "cash": 36458.0,
+          "margin": -2002.0,
+          "stress": 5,
+          "losses": 0,
+          "actions": {
+            "CARE": 71,
+            "FEED": 153,
+            "WATER": 278,
+            "MOVE": 1695,
+            "PASS": 236
+          },
+          "sales": 23632,
+          "purchases": 3696,
+          "wages": 3767.0
+        }
+      },
+      "delta_cash": -907.0,
+      "delta_margin": -4690.0,
+      "biological_regression": false
+    },
+    {
+      "seed": 180910203,
+      "seat": 1,
+      "conditions": {
+        "control": {
+          "cash": 37365.0,
+          "margin": 2688.0,
+          "stress": 5,
+          "losses": 0,
+          "actions": {
+            "CARE": 103,
+            "FEED": 148,
+            "WATER": 286,
+            "MOVE": 1615,
+            "PASS": 286
+          },
+          "sales": 24323,
+          "purchases": 3475,
+          "wages": 3772.0
+        },
+        "candidate": {
+          "cash": 36458.0,
+          "margin": -2002.0,
+          "stress": 5,
+          "losses": 0,
+          "actions": {
+            "CARE": 71,
+            "FEED": 153,
+            "WATER": 278,
+            "MOVE": 1695,
+            "PASS": 236
+          },
+          "sales": 23632,
+          "purchases": 3696,
+          "wages": 3767.0
+        }
+      },
+      "delta_cash": -907.0,
+      "delta_margin": -4690.0,
+      "biological_regression": false
+    }
+  ],
+  "sources": {
+    "docs/model_specs/codex/e20/artifacts/e20_2_care_floor/E20.2_180910201_seat0_control.json": "809ae16154777ea613264d97754e9807692887b3ef90e4fd99dc674ae9013cd9",
+    "docs/model_specs/codex/e20/artifacts/e20_2_care_floor/E20.2_180910201_seat0_candidate.json": "45c19a708ae2bf857455e4d581e4f62323055c477c2170a8c874128779e3c1f5",
+    "docs/model_specs/codex/e20/artifacts/e20_2_care_floor/E20.2_180910201_seat1_control.json": "7bce76a15b096cabbadc3dc0e4c94d60f67a4ef7ebcac2b61bef1f47a82b0dda",
+    "docs/model_specs/codex/e20/artifacts/e20_2_care_floor/E20.2_180910201_seat1_candidate.json": "16480f031212851d1c44a4f5543efd4b6277f7b7938a1580d0c80736a92f1ca6",
+    "docs/model_specs/codex/e20/artifacts/e20_2_care_floor/E20.2_180910203_seat0_control.json": "99df48a4079f48531af6ef6644e0554381c77db033cbedeeea863ec0336006d0",
+    "docs/model_specs/codex/e20/artifacts/e20_2_care_floor/E20.2_180910203_seat0_candidate.json": "1975c119947afd77e9f3a09ea51433f33709c2145f368424c219f2701f7f73ce",
+    "docs/model_specs/codex/e20/artifacts/e20_2_care_floor/E20.2_180910203_seat1_control.json": "869bff3f88715016eb4d405fe20041a7918c9d5cc0a34e9d2a75cf8404bd7ede",
+    "docs/model_specs/codex/e20/artifacts/e20_2_care_floor/E20.2_180910203_seat1_candidate.json": "3e0028c6f6917dbed6214cb2f3b9fee458e05ea7b91fd8a1d856d429c7a55c35"
+  }
+}

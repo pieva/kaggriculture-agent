@@ -1,0 +1,42 @@
+{
+  "variant": "E20v32",
+  "parameters": {
+    "positions": [
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ]
+    ],
+    "species": [
+      "COW",
+      "SHEEP"
+    ],
+    "start": 11,
+    "preserve": true,
+    "remote_first": true,
+    "useful_care": true,
+    "late_care_floor": true
+  },
+  "uploaded": false,
+  "status": "LOCAL_FROZEN_CANDIDATE",
+  "sha256": "2e23faa7e581b0ab3a391da0e4707e49d04b6eebeaff4bdb495cacd9e91b317c",
+  "sources": {
+    "docs\\model_specs\\codex\\e20\\tools\\policy.py": "cb04bcea3c8b5c7656c277e4882bcb2300a83391ced6e6189f60be99349aef4f",
+    "submission\\submission_codex_e18_770_v48_external.py": "57e7155e69a4b0db43ccb22295a7172fc4d338999dae6a6e775081b67ecf7743",
+    "docs\\model_specs\\codex\\e19\\tools\\biological_plan_770_v48.py": "8b324aaee858c95ae42340e1f988794859d9b15d5264c8df2a54672d445710ac",
+    "docs\\model_specs\\codex\\e19\\tools\\daily_routes_770_v48.py": "5dad34caa1efa934b94016580c44ce067e67cca9c5f19e9d721138f0f6c94d53",
+    "docs\\model_specs\\codex\\e20\\tools\\build_submission.py": "23eb009c8d54648ff44b8e871a6b7752113a2ed448c0aea2b3b990101dc109f3"
+  },
+  "validation": {
+    "decision": "DEVELOPMENT_SIGNAL_ONLY",
+    "result": "docs/model_specs/codex/e20/reports/e20_2/RESULT.json",
+    "complete_branches": 8,
+    "exact_controls": 4,
+    "calls_per_agent": 719,
+    "visual_qa": "BLOCKED_BY_BROWSER_URL_POLICY"
+  }
+}

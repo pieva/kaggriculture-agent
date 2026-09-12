@@ -1,0 +1,665 @@
+{
+  "stage": "operational772_goose2_v2",
+  "agents": [
+    "Goose2",
+    "E18"
+  ],
+  "seed": 180911303,
+  "rewards": [
+    110220.0,
+    108171.0
+  ],
+  "opening": [
+    {
+      "name": "Goose2",
+      "placements": [
+        {
+          "day": 1,
+          "hour": 5,
+          "position": [
+            4,
+            4
+          ],
+          "animal": null
+        },
+        {
+          "day": 1,
+          "hour": 6,
+          "position": [
+            4,
+            3
+          ],
+          "animal": null
+        },
+        {
+          "day": 1,
+          "hour": 6,
+          "position": [
+            4,
+            4
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 1,
+          "hour": 7,
+          "position": [
+            4,
+            3
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 1,
+          "hour": 9,
+          "position": [
+            3,
+            3
+          ],
+          "animal": null
+        },
+        {
+          "day": 1,
+          "hour": 10,
+          "position": [
+            3,
+            3
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 1,
+          "hour": 11,
+          "position": [
+            3,
+            4
+          ],
+          "animal": null
+        },
+        {
+          "day": 1,
+          "hour": 12,
+          "position": [
+            3,
+            4
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 2,
+          "hour": 7,
+          "position": [
+            2,
+            4
+          ],
+          "animal": null
+        },
+        {
+          "day": 2,
+          "hour": 11,
+          "position": [
+            4,
+            2
+          ],
+          "animal": null
+        },
+        {
+          "day": 3,
+          "hour": 23,
+          "position": [
+            4,
+            2
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 5,
+          "hour": 1,
+          "position": [
+            2,
+            4
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 7,
+          "hour": 11,
+          "position": [
+            5,
+            2
+          ],
+          "animal": null
+        },
+        {
+          "day": 7,
+          "hour": 11,
+          "position": [
+            5,
+            4
+          ],
+          "animal": null
+        },
+        {
+          "day": 7,
+          "hour": 13,
+          "position": [
+            6,
+            2
+          ],
+          "animal": null
+        },
+        {
+          "day": 7,
+          "hour": 13,
+          "position": [
+            5,
+            3
+          ],
+          "animal": null
+        },
+        {
+          "day": 7,
+          "hour": 13,
+          "position": [
+            5,
+            4
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 7,
+          "hour": 14,
+          "position": [
+            5,
+            3
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 7,
+          "hour": 17,
+          "position": [
+            6,
+            4
+          ],
+          "animal": null
+        },
+        {
+          "day": 7,
+          "hour": 19,
+          "position": [
+            7,
+            4
+          ],
+          "animal": null
+        },
+        {
+          "day": 8,
+          "hour": 11,
+          "position": [
+            6,
+            4
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 8,
+          "hour": 16,
+          "position": [
+            5,
+            2
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 9,
+          "hour": 11,
+          "position": [
+            7,
+            4
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 10,
+          "hour": 15,
+          "position": [
+            6,
+            2
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 11,
+          "hour": 10,
+          "position": [
+            3,
+            2
+          ],
+          "animal": null
+        },
+        {
+          "day": 11,
+          "hour": 11,
+          "position": [
+            3,
+            2
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 12,
+          "hour": 13,
+          "position": [
+            4,
+            6
+          ],
+          "animal": null
+        },
+        {
+          "day": 12,
+          "hour": 14,
+          "position": [
+            4,
+            6
+          ],
+          "animal": "SHEEP"
+        }
+      ],
+      "topology": [
+        7,
+        6,
+        1
+      ]
+    },
+    {
+      "name": "E18",
+      "placements": [
+        {
+          "day": 1,
+          "hour": 5,
+          "position": [
+            4,
+            4
+          ],
+          "animal": null
+        },
+        {
+          "day": 1,
+          "hour": 6,
+          "position": [
+            4,
+            3
+          ],
+          "animal": null
+        },
+        {
+          "day": 1,
+          "hour": 6,
+          "position": [
+            4,
+            4
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 1,
+          "hour": 7,
+          "position": [
+            4,
+            3
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 1,
+          "hour": 8,
+          "position": [
+            3,
+            4
+          ],
+          "animal": null
+        },
+        {
+          "day": 1,
+          "hour": 9,
+          "position": [
+            3,
+            4
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 1,
+          "hour": 10,
+          "position": [
+            3,
+            3
+          ],
+          "animal": null
+        },
+        {
+          "day": 1,
+          "hour": 11,
+          "position": [
+            3,
+            3
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 2,
+          "hour": 5,
+          "position": [
+            4,
+            2
+          ],
+          "animal": null
+        },
+        {
+          "day": 2,
+          "hour": 6,
+          "position": [
+            2,
+            4
+          ],
+          "animal": null
+        },
+        {
+          "day": 3,
+          "hour": 24,
+          "position": [
+            4,
+            2
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 5,
+          "hour": 1,
+          "position": [
+            2,
+            4
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 7,
+          "hour": 13,
+          "position": [
+            5,
+            2
+          ],
+          "animal": null
+        },
+        {
+          "day": 7,
+          "hour": 13,
+          "position": [
+            5,
+            3
+          ],
+          "animal": null
+        },
+        {
+          "day": 7,
+          "hour": 13,
+          "position": [
+            5,
+            4
+          ],
+          "animal": null
+        },
+        {
+          "day": 7,
+          "hour": 14,
+          "position": [
+            5,
+            3
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 7,
+          "hour": 14,
+          "position": [
+            5,
+            4
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 7,
+          "hour": 14,
+          "position": [
+            6,
+            4
+          ],
+          "animal": null
+        },
+        {
+          "day": 7,
+          "hour": 15,
+          "position": [
+            6,
+            2
+          ],
+          "animal": null
+        },
+        {
+          "day": 7,
+          "hour": 16,
+          "position": [
+            7,
+            4
+          ],
+          "animal": null
+        },
+        {
+          "day": 7,
+          "hour": 19,
+          "position": [
+            6,
+            3
+          ],
+          "animal": null
+        },
+        {
+          "day": 8,
+          "hour": 11,
+          "position": [
+            6,
+            4
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 8,
+          "hour": 17,
+          "position": [
+            5,
+            2
+          ],
+          "animal": "COW"
+        },
+        {
+          "day": 9,
+          "hour": 10,
+          "position": [
+            7,
+            4
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 9,
+          "hour": 15,
+          "position": [
+            6,
+            2
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 11,
+          "hour": 16,
+          "position": [
+            3,
+            2
+          ],
+          "animal": null
+        },
+        {
+          "day": 12,
+          "hour": 4,
+          "position": [
+            3,
+            5
+          ],
+          "animal": null
+        },
+        {
+          "day": 12,
+          "hour": 4,
+          "position": [
+            4,
+            5
+          ],
+          "animal": null
+        },
+        {
+          "day": 12,
+          "hour": 6,
+          "position": [
+            4,
+            5
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 12,
+          "hour": 7,
+          "position": [
+            3,
+            5
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 12,
+          "hour": 8,
+          "position": [
+            4,
+            6
+          ],
+          "animal": null
+        },
+        {
+          "day": 12,
+          "hour": 9,
+          "position": [
+            3,
+            6
+          ],
+          "animal": null
+        },
+        {
+          "day": 12,
+          "hour": 10,
+          "position": [
+            3,
+            2
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 12,
+          "hour": 10,
+          "position": [
+            4,
+            6
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 12,
+          "hour": 10,
+          "position": [
+            4,
+            7
+          ],
+          "animal": null
+        },
+        {
+          "day": 12,
+          "hour": 15,
+          "position": [
+            3,
+            6
+          ],
+          "animal": "SHEEP"
+        },
+        {
+          "day": 12,
+          "hour": 18,
+          "position": [
+            4,
+            7
+          ],
+          "animal": "SHEEP"
+        }
+      ],
+      "topology": [
+        7,
+        7,
+        5
+      ]
+    }
+  ],
+  "replay_sha256": "837baed73fd27b1614342d58c681b199a75f46b6ab2dba4059a3de3475831847",
+  "sources": {
+    "docs\\model_specs\\codex\\e20\\tools\\run_experiment.py": "4a5af94949705a2b74909dc3d94b5ba1255ed618d366996e0ffac8cc4717abcb",
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7",
+    "submission\\submission_codex_e18_770_v48_external.py": "57e7155e69a4b0db43ccb22295a7172fc4d338999dae6a6e775081b67ecf7743"
+  },
+  "runtime": [
+    {
+      "calls": 719,
+      "max_seconds": 0.017793100036215037,
+      "overage_seconds": 0,
+      "core_errors": 0,
+      "metrics": {
+        "exact_original_frames": 144,
+        "exact_original_worker_actions": 3673,
+        "issued_FEED": 141,
+        "issued_HARVEST": 178,
+        "issued_PLACE": 4,
+        "issued_CARE": 125,
+        "wait_SHEEP": 1,
+        "issued_WATER": 387,
+        "issued_BUILD_PASTURE": 2,
+        "wait_seed": 5,
+        "issued_PLANT": 70,
+        "raw_position_recovery": 9,
+        "issued_COLLECT_FERTILIZER": 120,
+        "issued_BUILD_COOP": 1,
+        "issued_DROP": 31,
+        "observed_FEED_backup": 38,
+        "dependency_harvest": 1,
+        "issued_FERTILIZE": 27,
+        "optional_fertilizer_unavailable": 7,
+        "observed_WATER_backup": 2,
+        "issued_DIG": 10,
+        "wait_WHEAT": 11,
+        "terminal_return": 11
+      }
+    },
+    {
+      "calls": 719,
+      "max_seconds": 0.012127299967687577,
+      "overage_seconds": 0,
+      "core_errors": null,
+      "metrics": {}
+    }
+  ]
+}

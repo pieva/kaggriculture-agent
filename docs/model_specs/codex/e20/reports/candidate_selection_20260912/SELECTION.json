@@ -1,0 +1,84 @@
+{
+  "date": "2026-09-12",
+  "recommended_overall": "E18",
+  "recommended_E20_exploratory": "E20.2",
+  "uploaded": false,
+  "selected_bundle": "submission\\submission_codex_e18_2_capacity_governed_v4d.py",
+  "sha256": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7",
+  "rows": [
+    {
+      "model": "E20.2",
+      "games": 14,
+      "seeds": 7,
+      "mean_margin": -3539.0,
+      "positive_seeds": 2,
+      "common_four_margin": -6975.25,
+      "mean_losses": 0,
+      "stage": "e20_2_confirmation",
+      "sum_daily_stressed_tile_snapshots_mean": 511.07142857142856,
+      "mean_verified_crop_starvation_events": 2
+    },
+    {
+      "model": "E20.3",
+      "games": 4,
+      "seeds": 2,
+      "mean_margin": -4787.0,
+      "positive_seeds": 1,
+      "common_four_margin": -4787.0,
+      "mean_losses": 0,
+      "stage": "e20_3_mix_development",
+      "sum_daily_stressed_tile_snapshots_mean": 517.25,
+      "mean_verified_crop_starvation_events": 3.75
+    },
+    {
+      "model": "E20.4",
+      "games": 4,
+      "seeds": 2,
+      "mean_margin": -7253.5,
+      "positive_seeds": 1,
+      "common_four_margin": -7253.5,
+      "mean_losses": 0,
+      "stage": "e20_4_short_cycle_repaired",
+      "sum_daily_stressed_tile_snapshots_mean": 518,
+      "mean_verified_crop_starvation_events": 2.5
+    },
+    {
+      "model": "E20.5",
+      "games": 4,
+      "seeds": 2,
+      "mean_margin": -9477.5,
+      "positive_seeds": 0,
+      "common_four_margin": -9477.5,
+      "mean_losses": 0,
+      "stage": "e20_5_observed_demand",
+      "sum_daily_stressed_tile_snapshots_mean": 515,
+      "mean_verified_crop_starvation_events": 2
+    },
+    {
+      "model": "E20.6",
+      "games": 4,
+      "seeds": 2,
+      "mean_margin": -10544.0,
+      "positive_seeds": 0,
+      "common_four_margin": -10544.0,
+      "mean_losses": 0,
+      "stage": "e20_6_conditional_sell",
+      "sum_daily_stressed_tile_snapshots_mean": 515.5,
+      "mean_verified_crop_starvation_events": 2.5
+    },
+    {
+      "model": "E20.7",
+      "games": 14,
+      "seeds": 7,
+      "mean_margin": -9662.0,
+      "positive_seeds": 0,
+      "common_four_margin": -12528.25,
+      "mean_losses": 0,
+      "stage": "e20_7_controller_transfer",
+      "sum_daily_stressed_tile_snapshots_mean": 544.3571428571429,
+      "mean_verified_crop_starvation_events": 23
+    }
+  ],
+  "limit": "No version above E20.10; current selection at E20.7. E20.8–E20.10 not generated.",
+  "reserved_seeds_used": false
+}

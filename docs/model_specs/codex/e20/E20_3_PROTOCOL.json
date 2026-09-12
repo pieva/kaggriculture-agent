@@ -1,0 +1,29 @@
+{
+  "version": "E20.3",
+  "variant": "E20v33",
+  "hypothesis": "Shift late animal completion from 10 cows/6 sheep to 8/8: same 772 topology and 16 animals. Q2 both sheep; finish existing Q0/Q1 structures toward total 8/8. Other E20.2 policy unchanged. Observed wool revenue gap motivates intervention; current prices do not guarantee future prices.",
+  "development_seeds": [
+    180911301,
+    180911303
+  ],
+  "selection": "Predeclared development seeds: earliest loss and earliest win versus E18. Both roles, two fresh exact full controls. Other five exposed tournament seeds retained for diagnostic breadth after screen; not independent validation.",
+  "gate": "Positive mean cash delta versus E20.2 in each development seed, no additional crop stress or animal escapes per case, 719 calls, zero E20 core errors, unchanged first 264 actions/full states to D11 end, 772 caps. If passes, broaden to all seven exposed seeds before freezing independent validation; no threshold tuning.",
+  "reserved_next_validation_seeds": [
+    180912401,
+    180912402,
+    180912403,
+    180912404,
+    180912405,
+    180912406,
+    180912407
+  ],
+  "budget": "Six serial full games for initial screen; no new independent seed access yet.",
+  "sources": {
+    "docs/model_specs/codex/e20/tools/policy.py": "dcd633e39760f7afc7f4713f3a2455de3d96fcec857cbde525c2bfe50afc282f",
+    "docs/model_specs/codex/e20/tools/develop_e20_3.py": "5177bce2f8b9318b0bdd31e9d5087fe76486f9e93b0706f3a816e7530ff3c1ab",
+    "docs/model_specs/codex/e20/tools/run_experiment.py": "4a5af94949705a2b74909dc3d94b5ba1255ed618d366996e0ffac8cc4717abcb",
+    "submission/submission_codex_e20_772_e20v33_candidate.py": "497e5505570390fb252511c53b89067e087fe4e31c491cac86ca032d53986ac1",
+    "submission/submission_codex_e20_772_e20v32_candidate.py": "2e23faa7e581b0ab3a391da0e4707e49d04b6eebeaff4bdb495cacd9e91b317c",
+    "submission/submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7"
+  }
+}

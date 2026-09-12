@@ -202,6 +202,13 @@ cura del giorno appena concluso. L'ordine conta: quella cura non aumenta
 retroattivamente la produzione appena avvenuta. Il prodotto presente sulla
 casella è limitato, quindi rimandare la raccolta può sprecare nuova resa.
 
+Se l'animale sopravvive a una giornata senza alimentazione che coincide con
+una produzione programmata, produce comunque l'unità base, entro il limite
+di prodotto presente, ma non usa il bonus CARE accumulato: quel bonus viene
+azzerato e perso. Nelle giornate senza produzione programmata il bonus
+precedente resta invece accantonato. Una cura senza alimentazione non
+aggiunge nuovo bonus.
+
 Ogni animale sopravvissuto rende disponibile una unità di fertilizzante al
 refresh. La disponibilità non si accumula per più giorni; per ottenerla
 occorre eseguire `COLLECT_FERTILIZER`.
@@ -232,13 +239,36 @@ fine giornata elimina l'eccedenza: gli inventari personali non aggirano il limit
 
 I due giocatori condividono scorte e prezzi del mercato. Semi e animali hanno
 costi definiti dalle rispettive regole; i prezzi dei prodotti dipendono dalle
-scorte. Le vendite aumentano l'offerta, gli acquisti e il consumo della città
-la riducono. Il prezzo osservato non è quindi una costante garantita per tutte
-le unità o per i turni successivi.
+scorte. Le vendite aumentano lo stock del mercato soltanto quando il prezzo
+della singola unità è maggiore di 1. **Il prezzo minimo è 1:** una vendita
+a quel prezzo toglie comunque il prodotto dal deposito e accredita il denaro,
+ma non aumenta lo stock del mercato. Gli acquisti di prodotti e il consumo
+della città riducono lo stock. Il prezzo osservato non è quindi una costante
+garantita per tutte le unità o per i turni successivi; la variazione dello
+stock pubblico non basta a ricostruire le quantità vendute al prezzo minimo.
 
-Gli ordini vengono elaborati rispettando l'ordine delle liste e confrontando
-gli ordini dei due giocatori. Denaro, disponibilità e capacità possono limitarne
-l'esecuzione. La città consuma periodicamente prodotti; nuovi negozi possono
+`BUY_PRODUCT` permette di acquistare soltanto **grano (`WHEAT`) e fertilizzante
+(`FERTILIZER`)**. Per ogni unità il prezzo viene calcolato sullo stock del
+mercato diminuito di uno, cioè sul livello successivo al prelievo; una vendita
+è invece quotata sullo stock prima dell'aggiunta. Semi e animali si acquistano
+con gli ordini separati `BUY_SEED` e `BUY_ANIMAL`, ai rispettivi costi fissi.
+
+Gli ordini vengono elaborati per posizione nelle liste: prima gli ordini
+in posizione 0 dei due giocatori, poi quelli in posizione 1, e così via.
+Per ogni posizione, `HIRE` e `BUY_LAND` sono eseguiti una sola volta, in ordine
+di giocatore. Gli scambi rimanenti procedono **una unità per giocatore alla
+volta**: vengono prima calcolati entrambi i prezzi sullo stesso stock ancora
+non modificato dagli scambi di quella coppia, poi vengono applicate le due
+operazioni. Per gli acquisti resta valida la quotazione sullo stock meno uno.
+Il ciclo continua fino all'esaurimento o all'interruzione degli ordini a
+quella posizione; soltanto allora passa alla posizione successiva.
+
+Denaro, disponibilità nel deposito e capacità possono limitare l'esecuzione.
+Un'operazione che non può proseguire interrompe quell'ordine, senza impedire
+di esaminare gli ordini successivi. Riordinare la lista può quindi cambiare
+i prezzi realizzati anche mantenendo identici prodotti, quantità e turno.
+
+La città consuma periodicamente prodotti; nuovi negozi possono
 essere attivati durante la partita, anche duplicando un tipo già presente.
 I ritmi di consumo e di apertura sono parametri della configurazione.
 
@@ -258,9 +288,21 @@ decadimento delle piante, anche il terreno lasciato vuoto può produrre infestan
 
 ## Dove sono definite le regole
 
+Il codice è pubblico nel
+[repository ufficiale Kaggle: ambiente Kaggriculture](https://github.com/Kaggle/kaggle-environments/tree/master/kaggle_environments/envs/kaggriculture).
+I file principali sono
+[`kaggriculture.py`](https://github.com/Kaggle/kaggle-environments/blob/master/kaggle_environments/envs/kaggriculture/kaggriculture.py)
+per l'esecuzione delle regole e
+[`kaggriculture.json`](https://github.com/Kaggle/kaggle-environments/blob/master/kaggle_environments/envs/kaggriculture/kaggriculture.json)
+per configurazione e schema dell'interfaccia.
+
 La descrizione è verificata sul pacchetto locale `kaggle-environments` e non
 certifica da sola che il server Kaggle non abbia ricevuto aggiornamenti.
 Le configurazioni degli episodi possono modificare i valori predefiniti.
+Nel confronto del 12 settembre 2026, il contenuto dei due file principali
+locali coincide con quello del ramo ufficiale `master` scaricato per la
+verifica. Il ramo può cambiare: questo confronto non identifica da solo
+la versione eseguita dal server in una specifica partita.
 
 | Fonte nel pacchetto `kaggle_environments/envs/kaggriculture/` | Responsabilità |
 |---|---|
@@ -276,3 +318,12 @@ Le configurazioni degli episodi possono modificare i valori predefiniti.
 Gli hash delle fonti lette sono in [ENGINE_SOURCE_MANIFEST.json](ENGINE_SOURCE_MANIFEST.json).
 Il [verbale storico di riconciliazione](../governance/history/model_spec_c2/foundation_revision/ANTIGRAVITY_C2_FINAL_ENGINE_CONTRACT_RECONCILIATION.md)
 conserva le verifiche precedenti. È evidenza di audit, non l'introduzione al gioco.
+
+
+## Nota di verifica 2026-09-12: RNG delle infestanti e negozi
+
+Nel sorgente locale ufficiale 1.32.7, `_end_of_day` inizializza un solo `random.Random((seed * 1_000_003) ^ day)`. Per ciascuna fattoria aggiorna piante e animali, poi `_spawn_weeds` estrae un numero casuale soltanto per le caselle `None`. Dopo entrambe le fattorie, lo stesso RNG sceglie il nuovo negozio quando previsto dal calendario.
+
+**Uno stesso seed, con policy diverse, non garantisce la stessa sequenza di negozi.** Il numero di caselle vuote dopo il refresh dipende dalle azioni e può spostare l'estrazione del negozio. La diversa domanda dei negozi può cambiare i ricavi di prodotti non direttamente interessati dalla modifica. I negozi sono osservazioni pubbliche correnti; la policy non conosce i negozi futuri.
+
+Conseguenza per gli esperimenti: il delta sul motore invariato è l'effetto totale della modifica, comprensivo della variazione di questa traiettoria. Non chiamarlo effetto a domanda invariata. Per separare il meccanismo operativo dalla domanda si può aggiungere una simulazione diagnostica con il calendario dei negozi mantenuto al controllo, chiaramente etichettata come sintetica e non utilizzabile per promozione o submission. I controlli senza intervento devono ancora riprodurre esattamente lo stato originale. Servono verifiche indipendenti sufficientemente ampie sul motore invariato; non selezionare una policy perché ottiene negozi favorevoli in pochi seed.

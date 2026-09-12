@@ -1,0 +1,234 @@
+<meta charset="utf-8"><title>E21 calendario774 C2</title><style>body{font:17px/1.5 system-ui;max-width:1200px;margin:32px auto;padding:20px}img{max-width:100%}td,th{padding:7px;border-bottom:1px solid #ddd}</style><h1>E21 774: prova del calendario comune</h1>
+<p><strong>Stato: quattro casi tecnicamente completati; verificare il gate economico e biologico sotto.</strong> La Repair2 pubblicata non è stata modificata né ripubblicata.</p>
+<p>La candidata C2 conserva il prefisso E21 D1–D11 e mira alla stessa geometria 774 e allo stesso mix8C/9S/1G. Da D12 usa il pianificatore osservativo e il dispatcher già esistenti della V48, adattati a caselle riservate, 33 fragole/23 grani, successione delle fragole verso grano e carote nel finale. Questo cambia calendario e dispatcher, non identifica causalmente il solo calendario. L'organico rimane limitato a12 aiutanti; nessun cap artificiale sui MOVE.</p>
+<h2>Difetto corretto durante lo screening</h2>
+<p>C1 si interrompe dopo265 chiamate: il controller770 non classificava GOOSE fra gli animali e tentava di quotarla come prodotto di mercato (KeyError). C2 aggiunge la regola motore dell'oca ai dizionari isolati del controller, senza cambiare il codice congelato degli altri agenti. C1 e relativi sorgenti sono conservati nella cartella calendar774_c1; la sua cassa non è un risultato competitivo valido.</p>
+<h2>Tutti i casi eseguiti C2</h2>
+<table>
+<thead>
+<tr>
+<th>Seed</th>
+<th style="text-align:right">Ruolo</th>
+<th style="text-align:right">Chiamate</th>
+<th>Prefisso uguale</th>
+<th>Topologia finale</th>
+<th>Animali C/S/G</th>
+<th style="text-align:right">Cassa candidata</th>
+<th style="text-align:right">Cassa Repair2</th>
+<th style="text-align:right">Delta</th>
+<th>Tecnica</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>180911301</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">719</td>
+<td>True</td>
+<td>[7, 7, 4]</td>
+<td>[8, 9, 1]</td>
+<td style="text-align:right">63435</td>
+<td style="text-align:right">65391</td>
+<td style="text-align:right">-1956</td>
+<td>True</td>
+</tr>
+<tr>
+<td>180911301</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">719</td>
+<td>True</td>
+<td>[7, 7, 4]</td>
+<td>[8, 9, 1]</td>
+<td style="text-align:right">63435</td>
+<td style="text-align:right">65391</td>
+<td style="text-align:right">-1956</td>
+<td>True</td>
+</tr>
+<tr>
+<td>180911303</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">719</td>
+<td>True</td>
+<td>[7, 7, 4]</td>
+<td>[8, 9, 1]</td>
+<td style="text-align:right">48254</td>
+<td style="text-align:right">63410</td>
+<td style="text-align:right">-15156</td>
+<td>True</td>
+</tr>
+<tr>
+<td>180911303</td>
+<td style="text-align:right">1</td>
+<td style="text-align:right">719</td>
+<td>True</td>
+<td>[7, 7, 4]</td>
+<td>[8, 9, 1]</td>
+<td style="text-align:right">48254</td>
+<td style="text-align:right">63410</td>
+<td style="text-align:right">-15156</td>
+<td>True</td>
+</tr>
+</tbody>
+</table>
+<p>Il confronto locale usa lo stesso seed, ruolo e avversario775 delle prove Repair2 già salvate. Le reazioni del mercato e dell’avversario possono divergere dopo il cambio di azioni. Seed già esposti, nessuna conferma indipendente e nessuna prova di mantenere il vantaggio iniziale di rating. I seed riservati180912401–407 restano inutilizzati.</p>
+<p><strong>Gate di sviluppo: NON SUPERATO.</strong> Cassa positiva in ciascun seed: False; perdite biologiche non peggiori in ciascun caso: True. Delta mediando i ruoli per seed: {180911301: -1956.0, 180911303: -15156.0}.</p>
+<h2>Calendario effettivamente realizzato</h2>
+<p>Le quote sono intenzioni soggette a capacità, non semine forzate. Il raggiungimento tardivo delle 33 fragole non equivale al calendario esterno D12.</p>
+<table>
+<thead>
+<tr>
+<th>Giorno</th>
+<th>Modello</th>
+<th style="text-align:right">Fragole</th>
+<th style="text-align:right">Grano</th>
+<th style="text-align:right">Meloni</th>
+<th style="text-align:right">Carote</th>
+<th style="text-align:right">MOVE</th>
+<th style="text-align:right">PASS</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>12</td>
+<td>C2</td>
+<td style="text-align:right">27.0</td>
+<td style="text-align:right">17.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">121.5</td>
+<td style="text-align:right">42.0</td>
+</tr>
+<tr>
+<td>12</td>
+<td>Repair2</td>
+<td style="text-align:right">22.0</td>
+<td style="text-align:right">24.0</td>
+<td style="text-align:right">8.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">130.0</td>
+<td style="text-align:right">22.0</td>
+</tr>
+<tr>
+<td>15</td>
+<td>C2</td>
+<td style="text-align:right">33.0</td>
+<td style="text-align:right">20.5</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">151.5</td>
+<td style="text-align:right">27.0</td>
+</tr>
+<tr>
+<td>15</td>
+<td>Repair2</td>
+<td style="text-align:right">28.0</td>
+<td style="text-align:right">12.0</td>
+<td style="text-align:right">8.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">144.0</td>
+<td style="text-align:right">13.0</td>
+</tr>
+<tr>
+<td>20</td>
+<td>C2</td>
+<td style="text-align:right">31.5</td>
+<td style="text-align:right">20.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">145.0</td>
+<td style="text-align:right">21.0</td>
+</tr>
+<tr>
+<td>20</td>
+<td>Repair2</td>
+<td style="text-align:right">36.0</td>
+<td style="text-align:right">9.0</td>
+<td style="text-align:right">8.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">144.0</td>
+<td style="text-align:right">12.0</td>
+</tr>
+<tr>
+<td>25</td>
+<td>C2</td>
+<td style="text-align:right">12.5</td>
+<td style="text-align:right">20.5</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">8.5</td>
+<td style="text-align:right">156.0</td>
+<td style="text-align:right">22.0</td>
+</tr>
+<tr>
+<td>25</td>
+<td>Repair2</td>
+<td style="text-align:right">19.0</td>
+<td style="text-align:right">31.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">146.0</td>
+<td style="text-align:right">7.0</td>
+</tr>
+<tr>
+<td>30</td>
+<td>C2</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">45.5</td>
+<td style="text-align:right">15.0</td>
+</tr>
+<tr>
+<td>30</td>
+<td>Repair2</td>
+<td style="text-align:right">13.0</td>
+<td style="text-align:right">0.5</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">0.0</td>
+<td style="text-align:right">143.0</td>
+<td style="text-align:right">52.5</td>
+</tr>
+</tbody>
+</table>
+<h2>Contabilità e sicurezza</h2>
+<p>Medie per partita, intera stagione.</p>
+<table>
+<thead>
+<tr>
+<th>Misura</th>
+<th style="text-align:right">C2</th>
+<th style="text-align:right">Repair2</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Vendite</td>
+<td style="text-align:right">88429.50</td>
+<td style="text-align:right">109288.50</td>
+</tr>
+<tr>
+<td>Acquisti</td>
+<td style="text-align:right">25033.00</td>
+<td style="text-align:right">37205.00</td>
+</tr>
+<tr>
+<td>Assunzioni</td>
+<td style="text-align:right">7552.00</td>
+<td style="text-align:right">7683.00</td>
+</tr>
+<tr>
+<td>Perdite crop per sete</td>
+<td style="text-align:right">5.00</td>
+<td style="text-align:right">25.00</td>
+</tr>
+<tr>
+<td>Fughe animali</td>
+<td style="text-align:right">0.00</td>
+<td style="text-align:right">0.00</td>
+</tr>
+</tbody>
+</table>
+<p><img src="KPI22.png" alt="22 KPI diagnostici" /></p>
+<p>Dati completi in DIAGNOSIS.json, RESULTS.json e negli artefatti .kpi.json/.replay.json.gz. Le perdite e i servizi non vengono esclusi quando sfavorevoli. Protocollo e hash fissati prima dei risultati in PROTOCOL.json.</p>
+<h2>Esito</h2>
+<p>C2 non promossa: delta medio −8.556, negativo in entrambi i seed. Meno perdite crop (5 anziché25), ma maggiore inattività e ricavi insufficienti a compensare. Il calendario target non è stato riprodotto nei tempi:33fragole aD15, non D12. Il test respinge questa implementazione del trasferimento, non dimostra che il calendario comune sia inadatto in generale alla774. Posizioni/specie finali e assenza di animali residui verificate in FINAL_VERIFICATION.json; nessuna modifica alla submission pubblicata.</p>

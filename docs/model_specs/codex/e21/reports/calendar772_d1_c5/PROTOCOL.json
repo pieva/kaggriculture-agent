@@ -1,0 +1,26 @@
+{
+  "identity": "CALENDAR772-D1-C5",
+  "status": "FROZEN_DEVELOPMENT",
+  "scope": "C5 keeps C4 D1 opening funding and animal priority; from D2 restores original priority4 for new animals so overdue expansion does not systematically preempt current crop deadlines. Timetable and route certificates unchanged. D1 historical timed crop locations and staffing with observed-state 772 dispatcher; fixed 772 animal geometry/mix. Opening is changed. Technical timing screen must pass before further pairs.",
+  "seeds": [
+    180911301,
+    180911303
+  ],
+  "roles": [
+    0,
+    1
+  ],
+  "opponent": "E18 frozen775",
+  "baseline": "Base772 freshly run matching seed and role",
+  "economic_gate": "Positive own-cash delta averaged roles on each seed; biological losses no worse each case",
+  "sources": {
+    "docs\\model_specs\\codex\\e21\\reports\\calendar772_d1\\CALENDAR.json": "417a7623709cd8e7f548b417fbfd0bd0826bfbeaf1f25dc517f112cb0813ce3b",
+    "docs\\model_specs\\codex\\e21\\calendar772_d1_c5_policy.py": "f86592bc4aec658672b021bf3fdfb408f99f92493941b1c6e28027f66cc0c4e2",
+    "docs\\model_specs\\codex\\e21\\run_calendar772_d1_c5.py": "548e7dcf6be55c78f57264bcb830d83073400785835ff96eabc29adff1354694",
+    "submission\\submission_codex_e20_772_e20v28_loaderfix.py": "9d84c838de39c2c8df620a21db258ea4a4065a5a2b4f75288bde53218d71c9bb",
+    "submission\\submission_codex_e18_770_v48_external.py": "57e7155e69a4b0db43ccb22295a7172fc4d338999dae6a6e775081b67ecf7743",
+    "docs\\model_specs\\codex\\e19\\tools\\biological_plan_770_v48.py": "8b324aaee858c95ae42340e1f988794859d9b15d5264c8df2a54672d445710ac"
+  },
+  "stop": "Stop on first technical failure of topology, animal mix, D1/D6/D9/D12 timetable, calls or core errors. No economic tuning after first result.",
+  "reserved_seeds": "180912401-407 remain unused"
+}

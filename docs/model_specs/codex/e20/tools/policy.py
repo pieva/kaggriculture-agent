@@ -1,5 +1,6 @@
 """E20: frozen V48 opening and routes, two explicitly reserved E18 Q2 plots."""
 from dataclasses import replace
+import ast
 from pathlib import Path
 import runpy
 import sys
@@ -37,7 +38,43 @@ VARIANTS={
     'E20v29': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, remote_first=True, useful_care=True, late_hourly_routes=True),
     'E20v30': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, remote_first=True, useful_care=True, late_transfer=True),
     'E20v31': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, remote_first=True, useful_care=True, late_closing=True),
+    'E20v32': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, remote_first=True, useful_care=True, late_care_floor=True),
+    'E20v33': dict(positions=((4,5),(4,6)), species=('SHEEP','SHEEP'), start=11, preserve=True, remote_first=True, useful_care=True, late_care_floor=True, animal_mix=(('COW',8),('SHEEP',8))),
+    'E20v34': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, remote_first=True, useful_care=True, late_care_floor=True, economic_short_cycle=True),
+    'E20v35': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, remote_first=True, useful_care=True, late_care_floor=True, economic_short_cycle=True),
+    'E20v36': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, remote_first=True, useful_care=True, late_care_floor=True, economic_short_cycle=True, observed_demand=True),
+    'E20v37': dict(positions=((4,5),(4,6)), species=('COW','SHEEP'), start=11, preserve=True, remote_first=True, useful_care=True, late_care_floor=True, economic_short_cycle=True, observed_demand=True, conditional_sell=True),
 }
+
+SHOP_PRODUCTS={'BAKERY':('EGG','WHEAT'),'PIZZA_SHOP':('MILK','TOMATO','WHEAT'),
+    'BRUNCH_SPOT':('EGG','WHEAT','STRAWBERRY'),'YARN_STORE':('WOOL',),
+    'ICE_CREAM_SHOP':('STRAWBERRY','MILK','WHEAT'),'PET_CAFE':('CARROT',),
+    'SMOOTHIE_SHOP':('STRAWBERRY','MILK'),'FARMERS_MARKET':('WHEAT','CARROT','TOMATO','STRAWBERRY')}
+
+def observed_town_demand(core,item,day):
+    """Conditional demand from current public shops only, at configured intervals."""
+    if item=='FERTILIZER' or day<=core.day:return 0
+    configuration=core.e20_configuration
+    start=core.day*core.turns+core.hour;end=start+(day-core.day)*core.turns
+    interval=max(1,int(configuration.get('townShopSellInterval',4)))
+    center=max(1,int(configuration.get('townCenterSellInterval',24)))
+    per_event=sum((2 if len(SHOP_PRODUCTS.get(s,()))==1 else 1) for s in core.e20_observation.get('town',{}).get('unlocked_shops',[]) if item in SHOP_PRODUCTS.get(s,()))
+    return per_event*(end//interval-start//interval)+(end//center-start//center)
+
+class ObservedDemandPolicy:
+    def __init__(self,policy):self.policy=policy;self.core=policy.core
+    def __call__(self,observation,configuration=None):
+        self.core.e20_observation=observation;self.core.e20_configuration=configuration or {}
+        return self.policy(observation,configuration)
+
+def choose_short_cycle(core,intended,rules,cash):
+    """Use existing conditional valuations only for a wheat/carrot planting choice."""
+    if intended!='WHEAT' or not 11<=core.day<25:return intended
+    options=getattr(core,'portfolio_latest',{})
+    wheat,carrot=options.get('WHEAT'),options.get('CARROT')
+    if not wheat or not carrot or cash<rules['CROPS']['CARROT']['seed']:return intended
+    if carrot['end']>core.final_day-1 or carrot['admission_value']<=0:return intended
+    return 'CARROT' if carrot['total']>wheat['total'] else intended
 
 def care_can_add_yield(tile,day,final_day,rule):
     """Zero-gain filter; assumes future feeding and timely collection, not future prices."""
@@ -49,6 +86,11 @@ def care_can_add_yield(tile,day,final_day,rule):
     # Today's bonus is stored AFTER the next refresh's production.
     pending=0 if produces(day+1) else tile.get('pending_care_bonus',0)
     return pending<rule['max_held']-1
+
+def care_market_allows(day,prices,product):
+    """Experimental spot-price gate; no claim about prices at future production."""
+    price=prices.get(product)
+    return day<19 or price is None or price>1
 
 def productive_water_deadline(day,tile,commands,rules,turns=24,final_day=29):
     """Protect an existing crop that can survive and still produce this season."""
@@ -67,6 +109,20 @@ def productive_water_deadline(day,tile,commands,rules,turns=24,final_day=29):
 def create_agent(context=None, variant='E20v1'):
     cfg=VARIANTS[variant]
     bundle=runpy.run_path(str(ROOT/'submission/submission_codex_e18_770_v48_external.py'))
+    if cfg.get('observed_demand'):
+        parent_source=(ROOT/'submission/submission_codex_e18_770_v48_external.py').read_text()
+        tree=ast.parse(parent_source)
+        candidates=[n.args[0].value for n in ast.walk(tree) if isinstance(n,ast.Call) and isinstance(n.func,ast.Name) and n.func.id=='compile' and n.args and isinstance(n.args[0],ast.Constant) and isinstance(n.args[0].value,str) and n.args[0].value.startswith('"""Observation-driven crop succession experiment')]
+        assert len(candidates)==1
+        succession_source=candidates[0]
+        anchor="            inventory=core.market['inventory'][c]+supply"
+        assert succession_source.count(anchor)==1
+        succession_source=succession_source.replace(anchor,anchor+'-observed_town_demand(core,c,d)')
+        succession=sys.modules['_v48pkg.portfolio_succession_v14']
+        succession.observed_town_demand=observed_town_demand
+        scope=dict(succession.__dict__)
+        exec(compile(succession_source,'<e20-demand>','exec'),scope)
+        succession.install.__code__=scope['install'].__code__
     if cfg.get('water_rescue') or cfg.get('remote_first'):
         routes=sys.modules['_v48pkg.daily_routes_770_v48']
         route_source=(ROOT/'docs/model_specs/codex/e19/tools/daily_routes_770_v48.py').read_text()
@@ -129,6 +185,16 @@ def create_agent(context=None, variant='E20v1'):
         assert source.count(old)==1
         source=source.replace(old,'care_can_add_yield(t,core.day,core.final_day,r)')
         module.care_can_add_yield=care_can_add_yield
+    if cfg.get('late_care_floor'):
+        old='care_can_add_yield(t,core.day,core.final_day,r)'
+        assert source.count(old)==1
+        source=source.replace(old,"(care_can_add_yield(t,core.day,core.final_day,r) and care_market_allows(core.day,core.market.get('prices',{}),r['product']))")
+        module.care_market_allows=care_market_allows
+    if cfg.get('economic_short_cycle'):
+        old="            tile=core._tile(pos)\n            if core.day>=25:"
+        assert source.count(old)==1
+        source=source.replace(old,"            tile=core._tile(pos)\n            intended=choose_short_cycle(core,intended,rules,cash)\n            if core.day>=25:")
+        module.choose_short_cycle=choose_short_cycle
     if not cfg.get('preserve'):
         source=source.replace("targets={'WHEAT':23,'STRAWBERRY':38}","targets={'WHEAT':23,'STRAWBERRY':36}")
         source=source.replace("if pos in intentions or isinstance(tile,dict)","if pos in core.e20_reserved or pos in intentions or isinstance(tile,dict)")
@@ -165,6 +231,11 @@ def create_agent(context=None, variant='E20v1'):
     original=bundle['_base'].create_agent
     def base(context):
         p=original(context)
+        if cfg.get('conditional_sell'):
+            conservative=p.core.envelope.conservative
+            def conditional(item,operation,unit_quotes):
+                return sum(unit_quotes) if operation=='SELL' else conservative(item,operation,unit_quotes)
+            p.core.envelope.conservative=conditional
         if cfg.get('water_deadline'):
             routes=sys.modules['_v48pkg.daily_routes_770_v48']
             terminal_deadline=routes.final_water_deadline
@@ -172,7 +243,7 @@ def create_agent(context=None, variant='E20v1'):
                 return terminal_deadline(day,tile,commands) or productive_water_deadline(
                     day,tile,commands,p.core.__call__.__func__.__globals__['CROPS'],p.core.turns,p.core.final_day)
             routes.final_water_deadline=deadline
-        p.core.profile=replace(p.core.profile,target=16,maximum_hands=cfg.get('hands',12),mix_weights=(('COW',9+cfg['species'].count('COW')),('SHEEP',5+cfg['species'].count('SHEEP'))))
+        p.core.profile=replace(p.core.profile,target=16,maximum_hands=cfg.get('hands',12),mix_weights=cfg.get('animal_mix',(('COW',9+cfg['species'].count('COW')),('SHEEP',5+cfg['species'].count('SHEEP')))))
         p.core.e20_reserved=dict(zip(cfg['positions'],cfg['species']))
         p.core.e20_start=cfg['start']
         p.core.e20_q2crop=cfg.get('q2crop')
@@ -183,6 +254,7 @@ def create_agent(context=None, variant='E20v1'):
         return p
     bundle['_base'].create_agent=base
     policy=bundle['create_agent'](context)
+    if cfg.get('observed_demand'):policy=ObservedDemandPolicy(policy)
     if 'teacher_hours' not in cfg:return policy
     return Q2TeacherBridge(policy,cfg['teacher_hours'])
 

@@ -1,0 +1,25 @@
+{
+  "status": "DIAGNOSTIC_RECONSTRUCTION_NOT_HISTORICAL_774",
+  "seed": 180911301,
+  "seat": 0,
+  "opponent": "E18",
+  "runs": 1,
+  "reference_772": "E20.2",
+  "changes": [
+    "Enable topology_reclaim_enabled after loading frozen E18",
+    "Repair unhashable dict membership in dormant empty/locked predicate"
+  ],
+  "preserved": [
+    "capacity and pressure thresholds",
+    "crop selection and inherited filters",
+    "rollback to dense",
+    "terminal passthrough",
+    "all other frozen E18 behavior"
+  ],
+  "evaluation": "22 KPI D1-30, Q0/Q1 D1-11 and D12-19; realized topology and first divergence; no promotion",
+  "sources": {
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7",
+    "src\\agricola\\strategy\\codex\\codex_e18_capacity_governed_v4d.py": "db64957c1b374e0220ed53a9a4d79b40ed5cc84688d0aef188cda5b85a127498",
+    "docs\\model_specs\\codex\\e21\\reconstruct_774.py": "02c223bc0ade8827bc444cd776140974cca7da7b4faba35640e76f0beef184f9"
+  }
+}

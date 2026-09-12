@@ -1,0 +1,24 @@
+{
+  "identity": "E21-CALENDAR774-C1",
+  "status": "FROZEN_DEVELOPMENT",
+  "scope": "Maintain Repair2 774 geometry and 8C9S1G; transfer calendar AND existing V48 dispatcher from D12. Not pure calendar causality.",
+  "seeds": [
+    180911301,
+    180911303
+  ],
+  "roles": [
+    0,
+    1
+  ],
+  "opponent": "E18 frozen775",
+  "baseline": "repair774_v2 matching seed and role",
+  "sources": {
+    "docs\\model_specs\\codex\\e21\\calendar774_policy.py": "ae4d5838aff5bd679cf45f4467646de5324aed19f099fa936078526ec47b7e4e",
+    "docs\\model_specs\\codex\\e21\\run_calendar774.py": "9ef94c47ae649a8a7c3cabfa5e18e63c4a7d2592ba309521ab3d8977d86e0eab",
+    "submission\\submission_codex_e21_774_repair2.py": "5af967e001e3576cae7ab3c26aa9f2d9e953ba2ba6b66441a8ca1287d0365674",
+    "submission\\submission_codex_e18_770_v48_external.py": "57e7155e69a4b0db43ccb22295a7172fc4d338999dae6a6e775081b67ecf7743",
+    "docs\\model_specs\\codex\\e19\\tools\\biological_plan_770_v48.py": "8b324aaee858c95ae42340e1f988794859d9b15d5264c8df2a54672d445710ac"
+  },
+  "stop": "Stop on first technical failure of topology, animal mix, opening parity, calls or core errors. No economic tuning after first result.",
+  "reserved_seeds": "180912401-407 remain unused"
+}

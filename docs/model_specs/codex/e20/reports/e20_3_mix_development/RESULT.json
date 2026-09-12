@@ -1,0 +1,112 @@
+{
+  "variant": "E20v33",
+  "cases": [
+    {
+      "seed": 180911301,
+      "seat": 0,
+      "prefix_states": 265,
+      "cash": 63942.0,
+      "margin": -10070.0,
+      "delta_cash": -13895.0,
+      "baseline": "docs\\model_specs\\codex\\e20\\artifacts\\e20_2_confirmation\\E20.2_E18_180911301.json",
+      "sales_delta": {
+        "STRAWBERRY": -11959,
+        "CARROT": -414,
+        "MILK": -1660,
+        "WHEAT": 765,
+        "MELON": 0,
+        "FERTILIZER": 105,
+        "WOOL": -329
+      },
+      "stress": [
+        5,
+        4
+      ],
+      "losses": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 180911301,
+      "seat": 1,
+      "prefix_states": 265,
+      "cash": 63942.0,
+      "margin": -10070.0,
+      "delta_cash": -13895.0,
+      "baseline": "docs\\model_specs\\codex\\e20\\artifacts\\e20_2_confirmation\\E18_E20.2_180911301.json",
+      "sales_delta": {
+        "STRAWBERRY": -11959,
+        "CARROT": -414,
+        "MILK": -1660,
+        "WHEAT": 765,
+        "MELON": 0,
+        "FERTILIZER": 105,
+        "WOOL": -329
+      },
+      "stress": [
+        5,
+        4
+      ],
+      "losses": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 180911303,
+      "seat": 0,
+      "prefix_states": 265,
+      "cash": 68070.0,
+      "margin": -146.0,
+      "delta_cash": -2264.0,
+      "baseline": "docs\\model_specs\\codex\\e20\\artifacts\\e20_2_confirmation\\E20.2_E18_180911303.json",
+      "sales_delta": {
+        "STRAWBERRY": -1450,
+        "CARROT": 119,
+        "MILK": 190,
+        "WHEAT": -627,
+        "MELON": 0,
+        "FERTILIZER": 81,
+        "WOOL": -302
+      },
+      "stress": [
+        1,
+        4
+      ],
+      "losses": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 180911303,
+      "seat": 1,
+      "prefix_states": 265,
+      "cash": 69214.0,
+      "margin": 1138.0,
+      "delta_cash": 4.0,
+      "baseline": "docs\\model_specs\\codex\\e20\\artifacts\\e20_2_confirmation\\E18_E20.2_180911303.json",
+      "sales_delta": {
+        "STRAWBERRY": -566,
+        "CARROT": 281,
+        "MILK": 219,
+        "WHEAT": -74,
+        "MELON": 0,
+        "FERTILIZER": 109,
+        "WOOL": 140
+      },
+      "stress": [
+        2,
+        3
+      ],
+      "losses": [
+        0,
+        0
+      ]
+    }
+  ],
+  "adopted": false,
+  "uploaded": false,
+  "decision": "NOT_ADOPTED"
+}

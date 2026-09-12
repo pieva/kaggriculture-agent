@@ -1,0 +1,1402 @@
+[
+  {
+    "result": {
+      "seed": 180911301,
+      "seat": 0,
+      "technical_pass": true,
+      "prefix_equal": true,
+      "mix": {
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1
+      },
+      "topology": [
+        7,
+        7,
+        4
+      ],
+      "cash": 63435.0,
+      "baseline_cash": 65391.0,
+      "cash_delta": -1956.0,
+      "runtime": {
+        "calls": 719,
+        "max_seconds": 2.736860400007572,
+        "overage_seconds": 5.8306262999540195,
+        "core_errors": 0,
+        "metrics": {
+          "ack_PICKUP": 168,
+          "portfolio_certificate_evaluations": 547,
+          "renewal_insertion_accept": 50,
+          "wait_input": 24,
+          "ack_WEST": 763,
+          "ack_NORTH": 753,
+          "ack_EAST": 605,
+          "ack_FEED": 306,
+          "ack_CARE": 244,
+          "ack_COLLECT_FERTILIZER": 270,
+          "ack_BUILD_PASTURE": 4,
+          "ack_PLACE": 6,
+          "ack_SOUTH": 561,
+          "ack_PLANT": 93,
+          "ack_WATER": 506,
+          "ack_HARVEST": 324,
+          "jobs_at_refresh": 48,
+          "renewal_insertion_reject": 448,
+          "growth_rejected_day_route": 844,
+          "wait_seed": 11,
+          "portfolio_certificate_budget_exhausted": 361,
+          "ack_FERTILIZE": 43,
+          "ack_DROP": 17,
+          "ack_DIG": 15,
+          "unack_WATER": 1
+        }
+      }
+    },
+    "calendar_checkpoints": {
+      "12": {
+        "MELON": 0,
+        "WHEAT": 17,
+        "STRAWBERRY": 27,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "15": {
+        "MELON": 0,
+        "WHEAT": 19,
+        "STRAWBERRY": 33,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "20": {
+        "MELON": 0,
+        "WHEAT": 21,
+        "STRAWBERRY": 31,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "25": {
+        "MELON": 0,
+        "WHEAT": 21,
+        "STRAWBERRY": 11,
+        "CARROT": 7,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "30": {
+        "MELON": 0,
+        "WHEAT": 0,
+        "STRAWBERRY": 0,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 7
+      }
+    },
+    "candidate_crop_audit": [
+      {
+        "service_day": 15,
+        "position": [
+          8,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 18,
+        "position": [
+          8,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 18,
+        "position": [
+          9,
+          4
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 22,
+        "position": [
+          0,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          4,
+          7
+        ],
+        "crop": "STRAWBERRY"
+      }
+    ],
+    "baseline_crop_audit": [
+      {
+        "service_day": 12,
+        "position": [
+          2,
+          9
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 13,
+        "position": [
+          3,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 13,
+        "position": [
+          2,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 13,
+        "position": [
+          0,
+          4
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 14,
+        "position": [
+          0,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 15,
+        "position": [
+          3,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 15,
+        "position": [
+          2,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 19,
+        "position": [
+          3,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 19,
+        "position": [
+          3,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 21,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 21,
+        "position": [
+          9,
+          2
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 21,
+        "position": [
+          9,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          0,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          0,
+          5
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          1,
+          5
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          2,
+          7
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          3,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          1,
+          6
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          1,
+          8
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          2,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          3,
+          9
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 25,
+        "position": [
+          9,
+          4
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 27,
+        "position": [
+          1,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 28,
+        "position": [
+          1,
+          5
+        ],
+        "crop": "WHEAT"
+      }
+    ]
+  },
+  {
+    "result": {
+      "seed": 180911301,
+      "seat": 1,
+      "technical_pass": true,
+      "prefix_equal": true,
+      "mix": {
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1
+      },
+      "topology": [
+        7,
+        7,
+        4
+      ],
+      "cash": 63435.0,
+      "baseline_cash": 65391.0,
+      "cash_delta": -1956.0,
+      "runtime": {
+        "calls": 719,
+        "max_seconds": 2.3660175999975763,
+        "overage_seconds": 6.558165199996438,
+        "core_errors": 0,
+        "metrics": {
+          "ack_PICKUP": 168,
+          "portfolio_certificate_evaluations": 547,
+          "renewal_insertion_accept": 50,
+          "wait_input": 24,
+          "ack_WEST": 763,
+          "ack_NORTH": 753,
+          "ack_EAST": 605,
+          "ack_FEED": 306,
+          "ack_CARE": 244,
+          "ack_COLLECT_FERTILIZER": 270,
+          "ack_BUILD_PASTURE": 4,
+          "ack_PLACE": 6,
+          "ack_SOUTH": 561,
+          "ack_PLANT": 93,
+          "ack_WATER": 506,
+          "ack_HARVEST": 324,
+          "jobs_at_refresh": 48,
+          "renewal_insertion_reject": 448,
+          "growth_rejected_day_route": 844,
+          "wait_seed": 11,
+          "portfolio_certificate_budget_exhausted": 361,
+          "ack_FERTILIZE": 43,
+          "ack_DROP": 17,
+          "ack_DIG": 15,
+          "unack_WATER": 1
+        }
+      }
+    },
+    "calendar_checkpoints": {
+      "12": {
+        "MELON": 0,
+        "WHEAT": 17,
+        "STRAWBERRY": 27,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "15": {
+        "MELON": 0,
+        "WHEAT": 19,
+        "STRAWBERRY": 33,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "20": {
+        "MELON": 0,
+        "WHEAT": 21,
+        "STRAWBERRY": 31,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "25": {
+        "MELON": 0,
+        "WHEAT": 21,
+        "STRAWBERRY": 11,
+        "CARROT": 7,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "30": {
+        "MELON": 0,
+        "WHEAT": 0,
+        "STRAWBERRY": 0,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 7
+      }
+    },
+    "candidate_crop_audit": [
+      {
+        "service_day": 15,
+        "position": [
+          8,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 18,
+        "position": [
+          8,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 18,
+        "position": [
+          9,
+          4
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 22,
+        "position": [
+          0,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          4,
+          7
+        ],
+        "crop": "STRAWBERRY"
+      }
+    ],
+    "baseline_crop_audit": [
+      {
+        "service_day": 12,
+        "position": [
+          2,
+          9
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 13,
+        "position": [
+          3,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 13,
+        "position": [
+          2,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 13,
+        "position": [
+          0,
+          4
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 14,
+        "position": [
+          0,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 15,
+        "position": [
+          3,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 15,
+        "position": [
+          2,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 19,
+        "position": [
+          3,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 19,
+        "position": [
+          3,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 21,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 21,
+        "position": [
+          9,
+          2
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 21,
+        "position": [
+          9,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          0,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          0,
+          5
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          1,
+          5
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          2,
+          7
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          3,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          1,
+          6
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          1,
+          8
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          2,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          3,
+          9
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 25,
+        "position": [
+          9,
+          4
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 27,
+        "position": [
+          1,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 28,
+        "position": [
+          1,
+          5
+        ],
+        "crop": "WHEAT"
+      }
+    ]
+  },
+  {
+    "result": {
+      "seed": 180911303,
+      "seat": 0,
+      "technical_pass": true,
+      "prefix_equal": true,
+      "mix": {
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1
+      },
+      "topology": [
+        7,
+        7,
+        4
+      ],
+      "cash": 48254.0,
+      "baseline_cash": 63410.0,
+      "cash_delta": -15156.0,
+      "runtime": {
+        "calls": 719,
+        "max_seconds": 2.4096060000010766,
+        "overage_seconds": 7.460059900127817,
+        "core_errors": 0,
+        "metrics": {
+          "ack_PICKUP": 173,
+          "portfolio_certificate_evaluations": 533,
+          "renewal_insertion_accept": 38,
+          "wait_input": 28,
+          "ack_WEST": 729,
+          "ack_NORTH": 737,
+          "ack_EAST": 584,
+          "ack_FEED": 306,
+          "ack_CARE": 237,
+          "ack_BUILD_PASTURE": 4,
+          "ack_COLLECT_FERTILIZER": 265,
+          "ack_PLACE": 6,
+          "ack_SOUTH": 559,
+          "ack_WATER": 537,
+          "ack_DROP": 20,
+          "ack_HARVEST": 325,
+          "ack_PLANT": 98,
+          "jobs_at_refresh": 45,
+          "renewal_insertion_reject": 429,
+          "growth_rejected_day_route": 954,
+          "wait_seed": 6,
+          "portfolio_certificate_budget_exhausted": 509,
+          "ack_FERTILIZE": 43,
+          "ack_DIG": 13,
+          "unack_WATER": 1
+        }
+      }
+    },
+    "calendar_checkpoints": {
+      "12": {
+        "MELON": 0,
+        "WHEAT": 17,
+        "STRAWBERRY": 27,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "15": {
+        "MELON": 0,
+        "WHEAT": 22,
+        "STRAWBERRY": 33,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "20": {
+        "MELON": 0,
+        "WHEAT": 19,
+        "STRAWBERRY": 32,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "25": {
+        "MELON": 0,
+        "WHEAT": 20,
+        "STRAWBERRY": 14,
+        "CARROT": 10,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "30": {
+        "MELON": 0,
+        "WHEAT": 0,
+        "STRAWBERRY": 0,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 4
+      }
+    },
+    "candidate_crop_audit": [
+      {
+        "service_day": 17,
+        "position": [
+          9,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 20,
+        "position": [
+          9,
+          2
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 22,
+        "position": [
+          8,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 22,
+        "position": [
+          9,
+          4
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 25,
+        "position": [
+          0,
+          0
+        ],
+        "crop": "WHEAT"
+      }
+    ],
+    "baseline_crop_audit": [
+      {
+        "service_day": 12,
+        "position": [
+          2,
+          9
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 13,
+        "position": [
+          3,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 13,
+        "position": [
+          2,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 13,
+        "position": [
+          0,
+          4
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 14,
+        "position": [
+          0,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 15,
+        "position": [
+          3,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 15,
+        "position": [
+          2,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 19,
+        "position": [
+          3,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 19,
+        "position": [
+          3,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 21,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 21,
+        "position": [
+          9,
+          2
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 21,
+        "position": [
+          9,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          0,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          0,
+          5
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          1,
+          5
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          2,
+          7
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          3,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          1,
+          6
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          1,
+          8
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          2,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          3,
+          9
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 25,
+        "position": [
+          9,
+          4
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 27,
+        "position": [
+          1,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 28,
+        "position": [
+          1,
+          5
+        ],
+        "crop": "WHEAT"
+      }
+    ]
+  },
+  {
+    "result": {
+      "seed": 180911303,
+      "seat": 1,
+      "technical_pass": true,
+      "prefix_equal": true,
+      "mix": {
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1
+      },
+      "topology": [
+        7,
+        7,
+        4
+      ],
+      "cash": 48254.0,
+      "baseline_cash": 63410.0,
+      "cash_delta": -15156.0,
+      "runtime": {
+        "calls": 719,
+        "max_seconds": 2.403293500014115,
+        "overage_seconds": 7.51012170012109,
+        "core_errors": 0,
+        "metrics": {
+          "ack_PICKUP": 173,
+          "portfolio_certificate_evaluations": 533,
+          "renewal_insertion_accept": 38,
+          "wait_input": 28,
+          "ack_WEST": 729,
+          "ack_NORTH": 737,
+          "ack_EAST": 584,
+          "ack_FEED": 306,
+          "ack_CARE": 237,
+          "ack_BUILD_PASTURE": 4,
+          "ack_COLLECT_FERTILIZER": 265,
+          "ack_PLACE": 6,
+          "ack_SOUTH": 559,
+          "ack_WATER": 537,
+          "ack_DROP": 20,
+          "ack_HARVEST": 325,
+          "ack_PLANT": 98,
+          "jobs_at_refresh": 45,
+          "renewal_insertion_reject": 429,
+          "growth_rejected_day_route": 954,
+          "wait_seed": 6,
+          "portfolio_certificate_budget_exhausted": 509,
+          "ack_FERTILIZE": 43,
+          "ack_DIG": 13,
+          "unack_WATER": 1
+        }
+      }
+    },
+    "calendar_checkpoints": {
+      "12": {
+        "MELON": 0,
+        "WHEAT": 17,
+        "STRAWBERRY": 27,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "15": {
+        "MELON": 0,
+        "WHEAT": 22,
+        "STRAWBERRY": 33,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "20": {
+        "MELON": 0,
+        "WHEAT": 19,
+        "STRAWBERRY": 32,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "25": {
+        "MELON": 0,
+        "WHEAT": 20,
+        "STRAWBERRY": 14,
+        "CARROT": 10,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 13
+      },
+      "30": {
+        "MELON": 0,
+        "WHEAT": 0,
+        "STRAWBERRY": 0,
+        "CARROT": 0,
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1,
+        "people": 4
+      }
+    },
+    "candidate_crop_audit": [
+      {
+        "service_day": 17,
+        "position": [
+          9,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 20,
+        "position": [
+          9,
+          2
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 22,
+        "position": [
+          8,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 22,
+        "position": [
+          9,
+          4
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 25,
+        "position": [
+          0,
+          0
+        ],
+        "crop": "WHEAT"
+      }
+    ],
+    "baseline_crop_audit": [
+      {
+        "service_day": 12,
+        "position": [
+          2,
+          9
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 13,
+        "position": [
+          3,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 13,
+        "position": [
+          2,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 13,
+        "position": [
+          0,
+          4
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 14,
+        "position": [
+          0,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 15,
+        "position": [
+          3,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 15,
+        "position": [
+          2,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 19,
+        "position": [
+          3,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 19,
+        "position": [
+          3,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 21,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 21,
+        "position": [
+          9,
+          2
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 21,
+        "position": [
+          9,
+          3
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          0,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          0,
+          5
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          1,
+          5
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 23,
+        "position": [
+          2,
+          7
+        ],
+        "crop": "MELON"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          3,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          1,
+          6
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          1,
+          8
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          2,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 24,
+        "position": [
+          3,
+          9
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 25,
+        "position": [
+          9,
+          4
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 27,
+        "position": [
+          1,
+          1
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 28,
+        "position": [
+          1,
+          5
+        ],
+        "crop": "WHEAT"
+      }
+    ]
+  }
+]

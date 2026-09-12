@@ -23,3 +23,13 @@ submission/** -text whitespace=cr-at-eol
 
 # Exact pre-edit copies retained by the foundation documentation review.
 docs/governance/history/foundation_documentation_20260908/** -text whitespace=cr-at-eol
+
+# Frozen experimental evidence: preserve bytes used in SHA256 manifests.
+docs/model_specs/codex/e21/** -text whitespace=cr-at-eol
+docs/model_specs/codex/e20/configs/e20v40/** -text whitespace=cr-at-eol
+docs/model_specs/codex/e20/tools/operational_calendar*.py -text whitespace=cr-at-eol
+docs/model_specs/codex/e20/tools/build_e20_v40.py -text whitespace=cr-at-eol
+submission/submission_codex_e20_8_e20v40_calendar_2g.py -text whitespace=cr-at-eol
+
+# Generated SVG path formatting is preserved as evidence.
+docs/model_specs/codex/e21/**/*.svg -whitespace

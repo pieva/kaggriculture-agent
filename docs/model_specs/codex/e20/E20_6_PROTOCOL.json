@@ -1,0 +1,21 @@
+{
+  "version": "E20.6",
+  "variant": "E20v37",
+  "hypothesis": "On E20v36 replace lifetime historical-low cap of SELL valuations with the sum of supplied current/conditional marginal quotes. BUY retains conservative historical-high envelope. Forecast revenues are not spendable cash. Other parameters unchanged; quantify separately vs v36 and original v32.",
+  "development_seeds": [
+    180911301,
+    180911303
+  ],
+  "gate": "Positive mean cash delta versus E20.2 in EACH seed, no additional crop stress or animal escapes per case; all calls, exact prefix, zero errors, topology caps. No independent seed access.",
+  "budget": "Four serial full candidates, reuse exact controls, unchanged official engine; report town-path mediation.",
+  "smoke": "First 264 actions exact and D12 call successful without __file__, zero core errors.",
+  "sources": {
+    "docs\\model_specs\\codex\\e20\\tools\\develop_e20_6.py": "7106da7693af9e33234aac4b38c462b20b820429cf934a95b4b61521bc864c08",
+    "docs\\model_specs\\codex\\e20\\tools\\policy.py": "84cd521aaa14056e4b8fce2125879675673394d88fa2561de25590d074cbb31f",
+    "docs\\model_specs\\codex\\e20\\tools\\build_submission.py": "1f6a8e0b4e928661895f9ec290bd8360a74b35f4fa239a23a4646c18f82eba45",
+    "docs\\model_specs\\codex\\e20\\tools\\run_experiment.py": "4a5af94949705a2b74909dc3d94b5ba1255ed618d366996e0ffac8cc4717abcb",
+    "submission\\submission_codex_e20_772_e20v37_candidate.py": "a4075a2564ffafc5617d66d2018b9f75623a0248eac6af1fb3b4ef1cb0012184",
+    "submission\\submission_codex_e20_772_e20v32_candidate.py": "2e23faa7e581b0ab3a391da0e4707e49d04b6eebeaff4bdb495cacd9e91b317c",
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7"
+  }
+}

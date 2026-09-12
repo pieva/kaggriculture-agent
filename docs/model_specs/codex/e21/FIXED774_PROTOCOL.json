@@ -1,0 +1,27 @@
+{
+  "identity": "FIXED774_MODERN_RECONSTRUCTION_NOT_HISTORICAL",
+  "seed": 180911301,
+  "seat": 0,
+  "opponent": "E18",
+  "runs": 1,
+  "activation": "D12 (day index 11), preserve E18 opening including coop",
+  "target": [
+    4,
+    7
+  ],
+  "mechanism": "E20v39 inherited persistent topology filter, reduced to one reclaim; no E20 planner",
+  "cap": "18 pre-Q2, 19 after Q2, matching surviving E18 reclaim envelope; does not guarantee one fewer purchased animal",
+  "differences_from_surviving_reclaim": [
+    "fixed D12 activation",
+    "no rollback",
+    "filters persist at terminal",
+    "inherited topology-cap service/fill routing"
+  ],
+  "limits": "Diagnostic trajectory only; no claim of historical reproduction or isolated pasture value; no tuning",
+  "sources": {
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7",
+    "docs\\model_specs\\codex\\e20\\tools\\build_e20_v39.py": "b0cd7a006126365cd82328d87f5c80850b39a6f7100a402f2ee2b41e5b871faf",
+    "docs\\model_specs\\codex\\e21\\reconstruct_fixed_774.py": "6025497f458f1180de5b598105f4d076f612dd11a99a3d2011ddaeea64ae0e62",
+    "docs\\model_specs\\codex\\e21\\artifacts\\fixed774_reconstruction.py": "6b8d6fe182da707b309570c6e02ca0df29ca8673969ac6fc9fdcb2853e4f0346"
+  }
+}

@@ -1,0 +1,235 @@
+[
+  {
+    "name": "OpNative",
+    "rewards": [
+      95229.0,
+      83193.0
+    ],
+    "runtime": {
+      "calls": 719,
+      "max_seconds": 0.00015780003741383553,
+      "overage_seconds": 0,
+      "core_errors": null,
+      "metrics": {}
+    },
+    "topology": [
+      7,
+      7,
+      0
+    ],
+    "checkpoints": {
+      "1": {
+        "MELON": 12,
+        "WHEAT": 7,
+        "STRAWBERRY": 0,
+        "COW": 2,
+        "SHEEP": 2,
+        "GOOSE": 0,
+        "people": 6,
+        "money": 32.0
+      },
+      "6": {
+        "MELON": 12,
+        "WHEAT": 3,
+        "STRAWBERRY": 4,
+        "COW": 4,
+        "SHEEP": 2,
+        "GOOSE": 0,
+        "people": 5,
+        "money": 810.0
+      },
+      "9": {
+        "MELON": 12,
+        "WHEAT": 5,
+        "STRAWBERRY": 20,
+        "COW": 8,
+        "SHEEP": 4,
+        "GOOSE": 0,
+        "people": 9,
+        "money": 1258.0
+      },
+      "12": {
+        "MELON": 0,
+        "WHEAT": 21,
+        "STRAWBERRY": 33,
+        "COW": 8,
+        "SHEEP": 6,
+        "GOOSE": 3,
+        "people": 11,
+        "money": 13797.0
+      },
+      "15": {
+        "MELON": 0,
+        "WHEAT": 24,
+        "STRAWBERRY": 33,
+        "COW": 8,
+        "SHEEP": 6,
+        "GOOSE": 3,
+        "people": 10,
+        "money": 22870.0
+      },
+      "30": {
+        "MELON": 0,
+        "WHEAT": 0,
+        "STRAWBERRY": 0,
+        "COW": 8,
+        "SHEEP": 6,
+        "GOOSE": 3,
+        "people": 12,
+        "money": 95229.0
+      }
+    },
+    "crop_losses": 2,
+    "animal_losses": 0,
+    "terminal": {
+      "cash": 95229.0,
+      "reward": 95229.0,
+      "shed": {},
+      "carried": {},
+      "seeds": {},
+      "tile_yield_units": {},
+      "spot_prices": {
+        "WHEAT": 45,
+        "CARROT": 41,
+        "TOMATO": 83,
+        "STRAWBERRY": 5,
+        "MELON": 81,
+        "EGG": 50,
+        "MILK": 1,
+        "WOOL": 250,
+        "FERTILIZER": 1
+      }
+    }
+  },
+  {
+    "name": "Op772",
+    "rewards": [
+      70945.0,
+      79030.0
+    ],
+    "runtime": {
+      "calls": 719,
+      "max_seconds": 0.002047699992544949,
+      "overage_seconds": 0,
+      "core_errors": 0,
+      "metrics": {
+        "exact_original_frames": 144,
+        "exact_original_worker_actions": 3491,
+        "issued_FEED": 118,
+        "issued_HARVEST": 179,
+        "issued_PLACE": 4,
+        "issued_CARE": 123,
+        "wait_SHEEP": 1,
+        "issued_WATER": 415,
+        "issued_BUILD_PASTURE": 3,
+        "wait_seed": 5,
+        "issued_PLANT": 81,
+        "issued_COLLECT_FERTILIZER": 118,
+        "issued_DROP": 32,
+        "dependency_harvest": 1,
+        "issued_FERTILIZE": 23,
+        "optional_fertilizer_unavailable": 7,
+        "issued_DIG": 15,
+        "wait_WHEAT": 10,
+        "terminal_return": 15
+      }
+    },
+    "topology": [
+      7,
+      7,
+      2
+    ],
+    "checkpoints": {
+      "1": {
+        "MELON": 12,
+        "WHEAT": 7,
+        "STRAWBERRY": 0,
+        "COW": 2,
+        "SHEEP": 2,
+        "GOOSE": 0,
+        "people": 6,
+        "money": 32.0
+      },
+      "6": {
+        "MELON": 12,
+        "WHEAT": 3,
+        "STRAWBERRY": 4,
+        "COW": 4,
+        "SHEEP": 2,
+        "GOOSE": 0,
+        "people": 5,
+        "money": 810.0
+      },
+      "9": {
+        "MELON": 12,
+        "WHEAT": 5,
+        "STRAWBERRY": 20,
+        "COW": 9,
+        "SHEEP": 3,
+        "GOOSE": 0,
+        "people": 9,
+        "money": 471.0
+      },
+      "12": {
+        "MELON": 0,
+        "WHEAT": 19,
+        "STRAWBERRY": 31,
+        "COW": 10,
+        "SHEEP": 6,
+        "GOOSE": 0,
+        "people": 12,
+        "money": 10671.0
+      },
+      "15": {
+        "MELON": 0,
+        "WHEAT": 26,
+        "STRAWBERRY": 31,
+        "COW": 10,
+        "SHEEP": 6,
+        "GOOSE": 0,
+        "people": 11,
+        "money": 18051.0
+      },
+      "30": {
+        "MELON": 0,
+        "WHEAT": 0,
+        "STRAWBERRY": 0,
+        "COW": 9,
+        "SHEEP": 6,
+        "GOOSE": 0,
+        "people": 13,
+        "money": 70945.0
+      }
+    },
+    "crop_losses": 4,
+    "animal_losses": 1,
+    "terminal": {
+      "cash": 70945.0,
+      "reward": 70945.0,
+      "shed": {
+        "WOOL": 6,
+        "COW": 1
+      },
+      "carried": {},
+      "seeds": {
+        "WHEAT": 5,
+        "CARROT": 3,
+        "STRAWBERRY": 2
+      },
+      "tile_yield_units": {
+        "CARROT": 1
+      },
+      "spot_prices": {
+        "WHEAT": 43,
+        "CARROT": 59,
+        "TOMATO": 79,
+        "STRAWBERRY": 22,
+        "MELON": 96,
+        "EGG": 64,
+        "MILK": 1,
+        "WOOL": 248,
+        "FERTILIZER": 1
+      }
+    }
+  }
+]

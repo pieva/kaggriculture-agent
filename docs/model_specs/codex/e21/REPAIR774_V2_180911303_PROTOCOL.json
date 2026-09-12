@@ -1,0 +1,35 @@
+{
+  "identity": "CODEX-E21-774-REPAIR2",
+  "seed": 180911303,
+  "roles": [
+    0,
+    1
+  ],
+  "opponent": "E18",
+  "purpose": "technical repair verification, not competitive promotion",
+  "invariants": [
+    "719 calls",
+    "no exceptions or nested fallbacks",
+    "774",
+    "17 pasture animals plus goose",
+    "no unused livestock at terminal",
+    "route rejoins",
+    "unchanged D1-D11"
+  ],
+  "changes": [
+    "cap17",
+    "disable fill into formerly empty Q1 pasture",
+    "skip unneeded target excursions with timed rejoin",
+    "correct metadata",
+    "terminal delivery protection",
+    "fill only Q2, keep Q1 (6,3) empty",
+    "require next-turn on-target slot before sowing",
+    "normalize optional shared step"
+  ],
+  "sources": {
+    "docs/model_specs/codex/e21/artifacts/fixed774_reconstruction.py": "6b8d6fe182da707b309570c6e02ca0df29ca8673969ac6fc9fdcb2853e4f0346",
+    "docs/model_specs/codex/e21/repair774_overlay.py": "657b63f0b84cf2f7978c2391bb6feb16430764fd07bc644f63c3cf50b7667e7f",
+    "docs/model_specs/codex/e21/artifacts/repaired774_v2.py": "54cdd147b47e74fe43024c9960ffe5308135e83e5618d3cba874339337c36669",
+    "docs/model_specs/codex/e21/repair774_v2_overlay.py": "2326723de5cb24f8d6b36a17382a668ef1c66bff6081ed074e44073786051ee6"
+  }
+}

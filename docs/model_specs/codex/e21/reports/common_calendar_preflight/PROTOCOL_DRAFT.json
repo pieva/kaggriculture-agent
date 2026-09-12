@@ -1,0 +1,41 @@
+{
+  "status": "DESIGN_PENDING_SCOPE",
+  "parent": "submission\\submission_codex_e21_774_repair2.py",
+  "sha256": "5af967e001e3576cae7ab3c26aa9f2d9e953ba2ba6b66441a8ca1287d0365674",
+  "submission": 56185961,
+  "question": "Maintain E21 774 livestock/geometry or also evaluate full 14 pastures +3 geese package?",
+  "observational_data": {
+    "E21_games": 20,
+    "common_calendar_games": 9,
+    "paired": false
+  },
+  "proposed_primary_test": "E21 calendar adaptation preserving 774, complete sow-water-harvest-deliver missions from D12; unchanged D1-D11 actions. No automatic labor cuts. This is not yet implemented.",
+  "comparators": [
+    "published E21 Repair2 immutable",
+    "E18 775 immutable as common local opponent"
+  ],
+  "development_seeds": [
+    180911301,
+    180911303
+  ],
+  "roles": [
+    0,
+    1
+  ],
+  "validation": "Development seeds exposed; do not use reserved 180912401-407 before frozen candidate and preregistered gate.",
+  "gate": [
+    "719 calls per agent, complete720 state replay",
+    "source/bundle identity; no exceptions or hidden fallback",
+    "same opening D1-D11 for calendar-only arm",
+    "no extra animal escapes or crop losses per paired case",
+    "candidate cash gain positive averaged over roles on each of two development seeds",
+    "record full sales/purchases/labor, harvested/sold quantities and realized prices",
+    "confirm separately on new frozen cases before any claim of maintaining competitive advantage"
+  ],
+  "prohibited_shortcuts": [
+    "replay other agent orders from D12 on incompatible E21 state",
+    "replace MELON with STRAWBERRY without covering next irrigations and later harvests",
+    "infer causal benefit from different external cohorts",
+    "claim 8 initial wins establish a durable advantage"
+  ]
+}

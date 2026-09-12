@@ -1,0 +1,53 @@
+{
+  "experiment": "E20.2-care-floor",
+  "condition": "candidate",
+  "agents": [
+    "E20.1",
+    "E18"
+  ],
+  "target_seat": 0,
+  "seed": 180910201,
+  "rewards": [
+    46492.0,
+    45927.0
+  ],
+  "checkpoint": 456,
+  "intervention": {
+    "step": 456,
+    "day": 20,
+    "hour": 1,
+    "reason": "care_floor_planning",
+    "target_seat": 0
+  },
+  "source_replay_sha256": "f2db0d88f6b998271f30c02d8d14ea4ed1b054075e0c6dacf87a2954471f2c26",
+  "replay_sha256": "5e40586a42400d888ee6dcda0ad6c70ff8b47b2dccf1caaf0aaeb8d26f7a6e4e",
+  "runtime": [
+    {
+      "calls": 719,
+      "core_errors": 0,
+      "max_seconds": 1.6984061999828555
+    },
+    {
+      "calls": 719,
+      "core_errors": null,
+      "max_seconds": 0.010867699980735779
+    }
+  ],
+  "verification": {
+    "prefix_actions_per_agent": 456,
+    "suffix_action_batches": 0,
+    "suffix_states": 0,
+    "clock_field_excluded": "remainingOverageTime"
+  },
+  "sources": {
+    "docs\\model_specs\\codex\\e20\\tools\\branch_e20_2.py": "39e8c0fc5f870b9acd592087473541e2e9121fc3edaf8bae0b8b9e3c1f7c855a",
+    "docs\\model_specs\\codex\\e20\\tools\\policy.py": "cb04bcea3c8b5c7656c277e4882bcb2300a83391ced6e6189f60be99349aef4f",
+    "docs\\model_specs\\codex\\e20\\E20_2_PROTOCOL.md": "b8951397fee7e78c976cabbe68a25c7357fb9c1f8048940f3339985c1f8aa64e",
+    "submission\\submission_codex_e20_772_e20v32_candidate.py": "2e23faa7e581b0ab3a391da0e4707e49d04b6eebeaff4bdb495cacd9e91b317c",
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7"
+  },
+  "engine": {
+    "version": "1.32.7",
+    "sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e"
+  }
+}

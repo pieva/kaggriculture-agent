@@ -1,0 +1,87 @@
+<meta charset="utf-8"><title>772: esecuzione calendario da D1</title><style>body{font:17px/1.5 system-ui;max-width:1200px;margin:32px auto;padding:20px}img{max-width:100%}td,th{padding:7px;border-bottom:1px solid #ddd}</style><h1>772: esecuzione del calendario da D1</h1>
+<p><strong>Nessuna variante promossa.</strong> Quattro nuove prove complete, C3–C6, tutte sul seed diagnostico180911301, ruolo0, contro775 congelata. Ogni variante fallisce il primo controllo temporale; non sono quattro repliche della stessa candidata. Il protocollo interrompe gli altri ruoli/seed dopo quel fallimento. C2 è il riferimento precedente,772 E20.1 pubblicata il controllo competitivo:80178 di cassa sul medesimo caso.</p>
+<p>La ricerca prosegue esclusivamente sulla772. La774 è esclusa da ulteriori implementazioni per scelta dell'utente. Nessuna submission, commit o push; seed riservati inutilizzati.</p>
+<h2>Tutti i risultati</h2>
+<p>Obiettivo D1:12meloni,7grani,2mucche e2pecore. Fragole previste D6/D9/D12:4/20/33.</p>
+<table>
+<thead>
+<tr>
+<th>Variante</th>
+<th>D1 meloni/grano</th>
+<th>D1 mucche/pecore</th>
+<th>Fragole D6/D9/D12</th>
+<th style="text-align:right">Cassa</th>
+<th style="text-align:right">Perdite colture</th>
+<th style="text-align:right">Fughe animali</th>
+<th>Gate</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>C2</td>
+<td>12/7</td>
+<td>1/1</td>
+<td>2/11/31</td>
+<td style="text-align:right">30295</td>
+<td style="text-align:right">0</td>
+<td style="text-align:right">0</td>
+<td>non superato</td>
+</tr>
+<tr>
+<td>C3</td>
+<td>10/4</td>
+<td>2/2</td>
+<td>3/7/33</td>
+<td style="text-align:right">24762</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">0</td>
+<td>non superato</td>
+</tr>
+<tr>
+<td>C4</td>
+<td>12/7</td>
+<td>2/2</td>
+<td>0/7/30</td>
+<td style="text-align:right">40311</td>
+<td style="text-align:right">2</td>
+<td style="text-align:right">0</td>
+<td>non superato</td>
+</tr>
+<tr>
+<td>C5</td>
+<td>12/7</td>
+<td>2/2</td>
+<td>0/16/33</td>
+<td style="text-align:right">44219</td>
+<td style="text-align:right">5</td>
+<td style="text-align:right">0</td>
+<td>non superato</td>
+</tr>
+<tr>
+<td>C6</td>
+<td>12/7</td>
+<td>2/2</td>
+<td>0/16/33</td>
+<td style="text-align:right">22836</td>
+<td style="text-align:right">3</td>
+<td style="text-align:right">0</td>
+<td>non superato</td>
+</tr>
+</tbody>
+</table>
+<p>Tutte le nuove varianti completano719 chiamate, senza errori core, conservando esattamente la geometria finale772 e il mix10mucche/6pecore. Questo non basta: gli insediamenti e le semine devono arrivare anche nei giorni previsti. Il risultato non è una validazione indipendente né un confronto a prezzi invariati: mercato e avversario reagiscono alle azioni.</p>
+<h2>Correzioni e riscontri</h2>
+<ul>
+<li><strong>C3 — Insediamenti iniziali:</strong> priorità7 agli animali dovuti. C2 lasciava due insediamenti ineseguiti aD1, pur mostrando1004 di denaro e888 liberi dopo la riserva aH17. Le offerte erano presenti; i lavori colturali brevi precedevano gli insediamenti e allontanavano i lavoratori. C3 completa4animali ma perde5semine iniziali.</li>
+<li><strong>C4 — Finanziamento D1:</strong> solo nel primo giorno la riserva copre il cibo corrente e i collocamenti impegnati, mantenendo sottratti gli acquisti prenotati. La riserva per due giorni futuri bloccava parte delle semine. C4 completa12meloni,7grani e4animali, chiudendo con50 di cassa. La scelta aumenta l'esposizione al fabbisogno dei giorni successivi: non è stata promossa.</li>
+<li><strong>C5 — Concorrenza dopo l'avvio:</strong> mantiene la precedenza speciale agli animali solo aD1. In C4 aD6 un acquisto animale da400 riduce la disponibilità prima delle fragole; le offerte tornano finanziabili versoH18. C5 recupera16fragole aD9 e33 aD12, ma ne ha0 aD6.</li>
+<li><strong>C6 — Priorità delle fragole:</strong> porta a7 la priorità delle semine di fragole già dovute. Non migliora i conteggi D6/D9/D12 diC5 e peggiora la cassa del caso. Non adottata.</li>
+</ul>
+<h2>Che cosa resta irrisolto</h2>
+<p><strong>Raggiungere33fragole aD12 non equivale a realizzare il calendario comune.</strong> In C5 eC6 la prima tranche D6 manca: cambiano quindi le età delle piante, le prime produzioni e le successioni. Il protocollo temporale intercetta questo problema e impedisce una falsa promozione.</p>
+<p>Il prototipo attiva gli investimenti quando scadono e controlla la capacità giornaliera, ma non garantisce in anticipo che cassa, caselle libere e rotte siano disponibili per tutte le tranche. Le correzioni locali alle priorità spostano il conflitto; serve un piano con prenotazioni coordinate prima delle scadenze. Il passo successivo deve rendere verificabile questo vincolo, non aggiungere un'altra priorità sulla stessa coda.</p>
+<p>L'apertura originale772 realizza già le semine comuni D1–D10 nei20replay pubblici analizzati. È un riferimento di esecuzione da conservare: questi test non giustificano la sostituzione del suo avvio con il prototipo più debole.</p>
+<h2>Report con22KPI e dati integrali</h2>
+<p><a href="../calendar772_d1_c3/REPORT.html">C3</a> · <a href="../calendar772_d1_c4/REPORT.html">C4</a> · <a href="../calendar772_d1_c5/REPORT.html">C5</a> · <a href="../calendar772_d1_c6/REPORT.html">C6</a>.</p>
+<p><img src="../calendar772_d1_c5/KPI22.png" alt="22KPI C5, base772 e comune storico" /></p>
+<p>C5 è mostrata perché recupera parte delle scadenze rispetto aC2, non perché sia adottata. Protocolli fissati prima dei risultati, sorgenti congelati e verificati, replay completi e audit conservati nelle cartelle di ciascuna variante. SUMMARY.json riporta tutte le misure della tabella.</p>

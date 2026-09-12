@@ -1,3 +1,45 @@
+## 2026-09-12 — E20.8 / E20v40 pubblicata per verifica esterna
+
+Su richiesta utente, ricondotta alla E20 la variante calendario comune con 8C/6S/2G (14 pascoli + 2 pollai, topologia pascoli761). Sorgenti/piani canonici in e20/tools/operational_calendar_{base,goose2}.py e e20/configs/e20v40; bundle `submission/submission_codex_e20_8_e20v40_calendar_2g.py`, SHA256 `3305aef93ac53aa805db01541feb7e79022df1f5e04a2f167d0e6c00b69c63a5`. Parità2876azioni e partita caricatore reale ruolo1 passate. Invio Kaggle confermato dalla UI, ora Complete con punteggio iniziale600.0 (non un rating stabilizzato); stato aggiornato in e20/reports/e20_8_release/PUBLICATION.json. [Scheda release](model_specs/codex/e20/E20_8_RELEASE.md), [report 22 KPI con prezzi](model_specs/codex/e20/reports/e20_8_three_calendars/REPORT.html). E21 conserva esperimenti e provenienza storici. Nessuna modifica strategica rispetto alla Goose2 V2 testata. Commit/push e riordino autorizzati dall’utente.
+
+## Passaggio attivo alla nuova chat: E21 774
+
+Richiesta utente del 12 settembre 2026: salvare lo stato; aprira personalmente una nuova chat per E21. Prima ristudiare la vecchia 774 e confrontarla con la nuova impostazione di pianificazione biologica, missioni complete e analisi economica. Non avviare nuove versioni in questa chat.
+
+**Leggere per primo [il brief E21](model_specs/codex/e21/NEW_SESSION_BRIEF.md)**: contiene base/hash E18, provenienza della 775 dalla routine V9, riferimenti reali alla vecchia 774, confronti proposti, diagnosi recenti e verifiche mancanti. E21 e un ramo diagnostico 774; E18 resta riferimento competitivo. E20 ferma a .7, massimo .10 se riaperta; nessuna prosecuzione automatica del vecchio obiettivo di battere E18. Nessuna nuova simulazione, submission, commit o push per questo passaggio. Le sezioni sottostanti sono storiche e subordinate a questa decisione.
+
+---
+
+## 2026-09-12 — Selezione candidati per verifica esterna
+
+E20.7 conclusa: 14 partite, margine medio −9662 contro E18, 0/7 seed positivi; NON ADOTTATA. Scelta complessiva E18; scelta esplorativa della serie E20: E20.2, nessuna revisione successiva supera i gate. Nessun upload eseguito. Bilancio: `docs/model_specs/codex/e20/reports/candidate_selection_20260912/REPORT.md`; dati SELECTION.json. Selezione allo stato E20.7; E20.8–E20.10 non generate. Resta il limite massimo E20.10, non proseguire indefinitamente né avviare E20.11. Le sezioni precedenti che richiedono continuazione senza limite o descrivono E20.7 in corso sono storiche e superate. Seed indipendenti 180912401–407 inutilizzati.
+
+---
+
+## 2026-09-12 — Conferma E20.2 conclusa; E20.3 in sviluppo
+
+Torneo a tre completo: 42 partite valide, sette seed 180911301–307 ora esposti. E20.2 contro E18: margine medio -3539, 2/7 seed positivi; contro E19 +1138,7, 5/7 positivi. Decisione DO_NOT_SUBMIT_E20_2. Audit saldi completo, report 22 KPI in `model_specs/codex/e20/reports/e20_2_confirmation/REPORT.html`; dettagli contabili in CASH_GAP.md/JSON e decisione in SUBMISSION_DECISION.md.
+
+E18 meno E20.2: maggiori ricavi +18290,7, maggiori acquisti -14422,4, maggiori assunzioni -329,4, differenza netta +3539. Circa 2679,7 nasce D12–19, solo 859,3 D20–30. Raccolto grano quasi uguale (316,7 vs 313,9), quindi i maggiori ricavi del grano non indicano maggiore produzione: E18 compra e vende più grano. Lana: raccolto 238 vs 137,9, ricavi +6407,1; latte ricavi quasi uguali. E20.2 acquista 10 mucche/6 pecore, E18 8/11 oltre a un'oca. Non attribuire la perdita ai PASS.
+
+Avviata E20.3/E20v33, unica variazione sul portafoglio: 8 mucche/8 pecore, due pecore in Q2, stessa topologia 772 e resto di E20.2 invariato. Protocollo E20_3_PROTOCOL.json congelato, bundle v33 congelato. Screen sei partite seriali: seed 180911301 (prima perdita) e 180911303 (prima vittoria), due ruoli per candidata e un controllo esatto intero per seed. Runner `tools/develop_e20_3.py`, stage `e20_3_mix_development`; non lanciare simulazioni concorrenti. Richiesti delta cassa positivi in entrambi i seed e nessun peggioramento biologico per caso. Poi ampliare ai sette seed esposti, non chiamarli holdout. Nuovi seed 180912401–407 riservati e NON eseguiti. Non modificare policy/bundle/protocollo durante lo screen. Obiettivo utente: proseguire upgrade fondati su diagnosi economica fino a superare E18 in validazione indipendente; nessuna submission automatica.
+
+---
+
+## 2026-09-12 — E20.2 generata e verificata localmente
+
+Congelata E20v32, base E20.1/E20v28, topologia 7-7-2. Da D20 esclude nuove offerte CARE quando il prezzo pubblico del prodotto animale è 1; non cambia FEED né sostituisce comandi con PASS. Ipotesi economica sul prezzo corrente, non garanzia di resa futura.
+
+Otto rami completi (quattro controlli esatti e quattro candidate), seed diagnostici 180910201/203, entrambi i ruoli contro E18. 719 chiamate per agente, zero errori core E20, prefisso identico di 456 azioni; controlli identici nelle 263 transizioni successive. Topologia verificata, bundle eseguito senza __file__.
+
+Delta cassa +2775/+4629 sul seed 201 e -907/-907 sul 203; media +1397,5. Margine medio +865. Stress colture e fughe non peggiorano; PASS cresce nel primo seed e cala nel secondo. Decisione DEVELOPMENT_SIGNAL_ONLY: nessuna promozione o submission. Due seed già esposti, non quattro repliche indipendenti; riservati 180911301–307 inutilizzati.
+
+[Specifica E20.2](model_specs/codex/e20/E20_2_SPEC.md) e [report leggibile dei 22 KPI](model_specs/codex/e20/reports/e20_2/REPORT.html). Bundle submission_codex_e20_772_e20v32_candidate.py, SHA256 2e23faa7e581b0ab3a391da0e4707e49d04b6eebeaff4bdb495cacd9e91b317c. Verifica visiva HTML bloccata dalla policy del browser; dati e struttura verificati.
+
+Ripresa: analizzare perché il seed 203 perde cassa e margine nonostante meno PASS, confrontando produzione, vendite e impiego del lavoro liberato. Completare le verifiche CARE/grano/FEED elencate sotto prima di formulare un nuovo intervento. La diagnosi preliminare ha contato 708 richieste CARE D20–30 in sette replay E20.1 (131 a prezzo minimo, nessuna prima del FEED o su animale già curato), ma non misura bonus persi o valore marginale. Non considerare chiuso l'audit del contratto. E18 resta il riferimento esterno; verificare la submission E18 del 10 settembre prima di eventuali nuovi invii.
+
+---
+
 # Experiment Log
 
 ## 2026-09-09 — Torneo a tre vie e chiusura delle linee Antigravity, Claude, Copilot

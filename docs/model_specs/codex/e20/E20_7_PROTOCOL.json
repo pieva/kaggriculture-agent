@@ -1,0 +1,24 @@
+{
+  "version": "E20.7",
+  "variant": "E20v39",
+  "hypothesis": "Transfer the proven E18 controller from D12 to 772, preserving E20 D1-D11 BUILD_COOP filtering. Use existing topology-cap machinery to reclaim (3,5),(3,6),(4,7) as wheat, leaving (4,5),(4,6) as Q2 pastures. Cap pasture livestock resources at 16. Retain E18 recovery on idle workers and enforce topology also at terminal. This is a broader controller transfer, not a single-market-feature causal ablation. Does not include v33-v37 changes. A post-D11 coop/goose is allowed; target refers to pastures.",
+  "development_seeds": [
+    180911301,
+    180911302,
+    180911303,
+    180911304,
+    180911305,
+    180911306,
+    180911307
+  ],
+  "gate": "On all seven exposed seeds and both roles: positive mean direct margin vs E18, positive seed-mean margin in at least 5/7, mean crop stress and animal losses no greater than E18. 719 calls, DONE, zero instrumented cap errors, first 264 action batches/states identical to E20.2 matchup, 772 caps. Only a pass allows untouched independent validation with a separately frozen protocol.",
+  "budget": "14 serial full candidate games. Reuse two previously rerun exact full controls for technical checks. No economic early stopping or exclusions; stop on technical failure and retain evidence. Cohort is exposed, not holdout. New seeds 180912401-407 remain reserved.",
+  "prototype": "v38 preserves unfiltered E18 opening, so differs at BUILD_COOP on step254. Not simulated or selected economically. v39 restores requested E20 opening; 264 exact prefix actions and first D12 successful without __file__.",
+  "sources": {
+    "docs\\model_specs\\codex\\e20\\tools\\develop_e20_7.py": "c7f6f6ce18351c042b01a0b9c19a1770d82a032dd2f5b5d300204077876b5607",
+    "docs\\model_specs\\codex\\e20\\tools\\build_e20_v39.py": "b0cd7a006126365cd82328d87f5c80850b39a6f7100a402f2ee2b41e5b871faf",
+    "docs\\model_specs\\codex\\e20\\tools\\run_experiment.py": "4a5af94949705a2b74909dc3d94b5ba1255ed618d366996e0ffac8cc4717abcb",
+    "submission\\submission_codex_e20_772_e20v39_candidate.py": "56141450b8760d2707273bf802a6bce5a49dbcdeab1f28bbed6dc75d510839bb",
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7"
+  }
+}

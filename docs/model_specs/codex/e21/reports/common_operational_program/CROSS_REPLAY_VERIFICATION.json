@@ -1,0 +1,1092 @@
+{
+  "same_complete_worker_program": [
+    107083439,
+    107150692,
+    107341826,
+    107382620,
+    107923552
+  ],
+  "unit_groups": [
+    [
+      107083439,
+      107150692,
+      107341826,
+      107382620,
+      107923552
+    ],
+    [
+      107169059
+    ],
+    [
+      107396212
+    ],
+    [
+      107410838
+    ],
+    [
+      108019744
+    ]
+  ],
+  "comparisons": [
+    {
+      "episode": 107083439,
+      "workers": {
+        "equal_frames": 719,
+        "first_difference": null
+      },
+      "positions": {
+        "equal_frames": 719,
+        "first_difference": null
+      },
+      "market": {
+        "equal_frames": 719,
+        "first_difference": null
+      }
+    },
+    {
+      "episode": 107150692,
+      "workers": {
+        "equal_frames": 719,
+        "first_difference": null
+      },
+      "positions": {
+        "equal_frames": 719,
+        "first_difference": null
+      },
+      "market": {
+        "equal_frames": 661,
+        "first_difference": {
+          "day": 11,
+          "hour": 14,
+          "canonical": [
+            [
+              "SELL",
+              "MELON",
+              6
+            ],
+            [
+              "SELL",
+              "MILK",
+              3
+            ]
+          ],
+          "observed": [
+            [
+              "SELL",
+              "MELON",
+              6
+            ],
+            [
+              "SELL",
+              "MILK",
+              0
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode": 107169059,
+      "workers": {
+        "equal_frames": 695,
+        "first_difference": {
+          "day": 2,
+          "hour": 6,
+          "canonical": {
+            "farmer": [
+              "COLLECT_FERTILIZER"
+            ],
+            "hands": [
+              [
+                "CARE"
+              ],
+              [
+                "COLLECT_FERTILIZER"
+              ],
+              [
+                "BUILD_PASTURE"
+              ]
+            ]
+          },
+          "observed": {
+            "farmer": [
+              "COLLECT_FERTILIZER"
+            ],
+            "hands": [
+              [
+                "CARE"
+              ],
+              [
+                "COLLECT_FERTILIZER"
+              ],
+              [
+                "DIG"
+              ]
+            ]
+          }
+        }
+      },
+      "positions": {
+        "equal_frames": 703,
+        "first_difference": {
+          "day": 2,
+          "hour": 8,
+          "canonical": [
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              2,
+              3
+            ]
+          ],
+          "observed": [
+            [
+              3,
+              4
+            ],
+            [
+              4,
+              3
+            ],
+            [
+              4,
+              4
+            ],
+            [
+              2,
+              4
+            ]
+          ]
+        }
+      },
+      "market": {
+        "equal_frames": 717,
+        "first_difference": {
+          "day": 27,
+          "hour": 11,
+          "canonical": [
+            [
+              "SELL",
+              "WHEAT",
+              9
+            ]
+          ],
+          "observed": [
+            [
+              "SELL",
+              "WHEAT",
+              9
+            ],
+            [
+              "SELL",
+              "WOOL",
+              7
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode": 107341826,
+      "workers": {
+        "equal_frames": 719,
+        "first_difference": null
+      },
+      "positions": {
+        "equal_frames": 719,
+        "first_difference": null
+      },
+      "market": {
+        "equal_frames": 616,
+        "first_difference": {
+          "day": 5,
+          "hour": 1,
+          "canonical": [
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ]
+          ],
+          "observed": [
+            [
+              "SELL",
+              "FERTILIZER",
+              1
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode": 107382620,
+      "workers": {
+        "equal_frames": 719,
+        "first_difference": null
+      },
+      "positions": {
+        "equal_frames": 719,
+        "first_difference": null
+      },
+      "market": {
+        "equal_frames": 708,
+        "first_difference": {
+          "day": 19,
+          "hour": 19,
+          "canonical": [
+            [
+              "BUY_SEED",
+              "WHEAT",
+              1
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              4
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ]
+          ],
+          "observed": [
+            [
+              "BUY_SEED",
+              "WHEAT",
+              1
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              4
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode": 107396212,
+      "workers": {
+        "equal_frames": 713,
+        "first_difference": {
+          "day": 30,
+          "hour": 17,
+          "canonical": {
+            "farmer": [
+              "EAST"
+            ],
+            "hands": [
+              [
+                "HARVEST"
+              ],
+              [
+                "WEST"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "CARE"
+              ],
+              [
+                "SOUTH"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "PASS"
+              ],
+              [
+                "PASS"
+              ],
+              [
+                "EAST"
+              ],
+              [
+                "PASS"
+              ]
+            ]
+          },
+          "observed": {
+            "farmer": [
+              "EAST"
+            ],
+            "hands": [
+              [
+                "HARVEST"
+              ],
+              [
+                "WEST"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "CARE"
+              ],
+              [
+                "SOUTH"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "COLLECT_FERTILIZER"
+              ],
+              [
+                "EAST"
+              ],
+              [
+                "EAST"
+              ],
+              [
+                "EAST"
+              ]
+            ]
+          }
+        }
+      },
+      "positions": {
+        "equal_frames": 713,
+        "first_difference": {
+          "day": 30,
+          "hour": 18,
+          "canonical": [
+            [
+              5,
+              5
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              4
+            ]
+          ],
+          "observed": [
+            [
+              5,
+              5
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              6,
+              4
+            ]
+          ]
+        }
+      },
+      "market": {
+        "equal_frames": 712,
+        "first_difference": {
+          "day": 19,
+          "hour": 19,
+          "canonical": [
+            [
+              "BUY_SEED",
+              "WHEAT",
+              1
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              4
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ]
+          ],
+          "observed": [
+            [
+              "BUY_SEED",
+              "WHEAT",
+              1
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              4
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode": 107410838,
+      "workers": {
+        "equal_frames": 712,
+        "first_difference": {
+          "day": 30,
+          "hour": 17,
+          "canonical": {
+            "farmer": [
+              "EAST"
+            ],
+            "hands": [
+              [
+                "HARVEST"
+              ],
+              [
+                "WEST"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "CARE"
+              ],
+              [
+                "SOUTH"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "PASS"
+              ],
+              [
+                "PASS"
+              ],
+              [
+                "EAST"
+              ],
+              [
+                "PASS"
+              ]
+            ]
+          },
+          "observed": {
+            "farmer": [
+              "EAST"
+            ],
+            "hands": [
+              [
+                "HARVEST"
+              ],
+              [
+                "WEST"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "CARE"
+              ],
+              [
+                "SOUTH"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "EAST"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "EAST"
+              ],
+              [
+                "EAST"
+              ]
+            ]
+          }
+        }
+      },
+      "positions": {
+        "equal_frames": 714,
+        "first_difference": {
+          "day": 30,
+          "hour": 18,
+          "canonical": [
+            [
+              5,
+              5
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              5,
+              4
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              5,
+              4
+            ]
+          ],
+          "observed": [
+            [
+              5,
+              5
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              2,
+              6
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              4,
+              7
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              5,
+              3
+            ],
+            [
+              4,
+              2
+            ],
+            [
+              6,
+              4
+            ]
+          ]
+        }
+      },
+      "market": {
+        "equal_frames": 708,
+        "first_difference": {
+          "day": 19,
+          "hour": 19,
+          "canonical": [
+            [
+              "BUY_SEED",
+              "WHEAT",
+              1
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              4
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ]
+          ],
+          "observed": [
+            [
+              "BUY_SEED",
+              "WHEAT",
+              1
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              4
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode": 107923552,
+      "workers": {
+        "equal_frames": 719,
+        "first_difference": null
+      },
+      "positions": {
+        "equal_frames": 719,
+        "first_difference": null
+      },
+      "market": {
+        "equal_frames": 712,
+        "first_difference": {
+          "day": 19,
+          "hour": 19,
+          "canonical": [
+            [
+              "BUY_SEED",
+              "WHEAT",
+              1
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              4
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ]
+          ],
+          "observed": [
+            [
+              "BUY_SEED",
+              "WHEAT",
+              1
+            ],
+            [
+              "SELL",
+              "STRAWBERRY",
+              4
+            ],
+            [
+              "SELL",
+              "MILK",
+              6
+            ],
+            [
+              "SELL",
+              "WOOL",
+              2
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "episode": 108019744,
+      "workers": {
+        "equal_frames": 500,
+        "first_difference": {
+          "day": 13,
+          "hour": 17,
+          "canonical": {
+            "farmer": [
+              "WEST"
+            ],
+            "hands": [
+              [
+                "CARE"
+              ],
+              [
+                "COLLECT_FERTILIZER"
+              ],
+              [
+                "PASS"
+              ],
+              [
+                "WATER"
+              ],
+              [
+                "COLLECT_FERTILIZER"
+              ],
+              [
+                "PLANT",
+                "WHEAT"
+              ],
+              [
+                "HARVEST"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "WATER"
+              ]
+            ]
+          },
+          "observed": {
+            "farmer": [
+              "WEST"
+            ],
+            "hands": [
+              [
+                "CARE"
+              ],
+              [
+                "COLLECT_FERTILIZER"
+              ],
+              [
+                "WEST"
+              ],
+              [
+                "WATER"
+              ],
+              [
+                "COLLECT_FERTILIZER"
+              ],
+              [
+                "PLANT",
+                "WHEAT"
+              ],
+              [
+                "HARVEST"
+              ],
+              [
+                "NORTH"
+              ],
+              [
+                "WATER"
+              ]
+            ]
+          }
+        }
+      },
+      "positions": {
+        "equal_frames": 500,
+        "first_difference": {
+          "day": 13,
+          "hour": 18,
+          "canonical": [
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              7,
+              4
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              2,
+              9
+            ]
+          ],
+          "observed": [
+            [
+              1,
+              5
+            ],
+            [
+              2,
+              4
+            ],
+            [
+              6,
+              2
+            ],
+            [
+              6,
+              4
+            ],
+            [
+              2,
+              1
+            ],
+            [
+              4,
+              1
+            ],
+            [
+              8,
+              0
+            ],
+            [
+              3,
+              0
+            ],
+            [
+              0,
+              6
+            ],
+            [
+              2,
+              9
+            ]
+          ]
+        }
+      },
+      "market": {
+        "equal_frames": 495,
+        "first_difference": {
+          "day": 7,
+          "hour": 1,
+          "canonical": [
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ]
+          ],
+          "observed": [
+            [
+              "SELL",
+              "FERTILIZER",
+              2
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ],
+            [
+              "HIRE"
+            ]
+          ]
+        }
+      }
+    }
+  ],
+  "cardinal_movement_mismatches": [],
+  "scope": "Unit commands AND positions identical across five independent historical games. Market quantities are not one universal inferred rule."
+}

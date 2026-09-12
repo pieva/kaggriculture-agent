@@ -1,0 +1,35 @@
+{
+  "variant": "E20v35",
+  "parameters": {
+    "positions": [
+      [
+        4,
+        5
+      ],
+      [
+        4,
+        6
+      ]
+    ],
+    "species": [
+      "COW",
+      "SHEEP"
+    ],
+    "start": 11,
+    "preserve": true,
+    "remote_first": true,
+    "useful_care": true,
+    "late_care_floor": true,
+    "economic_short_cycle": true
+  },
+  "uploaded": false,
+  "status": "LOCAL_FROZEN_CANDIDATE",
+  "sha256": "019724026e295e3f5c402fe7da87c00f32cf7041bbe3f45d88ae72a77059daff",
+  "sources": {
+    "docs\\model_specs\\codex\\e20\\tools\\policy.py": "5527b4c3812d604889ebaa931dc1aaf8b2cc8d5d2a9e3f70df0334955c93de13",
+    "submission\\submission_codex_e18_770_v48_external.py": "57e7155e69a4b0db43ccb22295a7172fc4d338999dae6a6e775081b67ecf7743",
+    "docs\\model_specs\\codex\\e19\\tools\\biological_plan_770_v48.py": "8b324aaee858c95ae42340e1f988794859d9b15d5264c8df2a54672d445710ac",
+    "docs\\model_specs\\codex\\e19\\tools\\daily_routes_770_v48.py": "5dad34caa1efa934b94016580c44ce067e67cca9c5f19e9d721138f0f6c94d53",
+    "docs\\model_specs\\codex\\e20\\tools\\build_submission.py": "23eb009c8d54648ff44b8e871a6b7752113a2ed448c0aea2b3b990101dc109f3"
+  }
+}

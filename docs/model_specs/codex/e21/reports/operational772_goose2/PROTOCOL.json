@@ -1,0 +1,23 @@
+{
+  "seeds": [
+    180911301,
+    180911303
+  ],
+  "seat": 0,
+  "opponent": "frozen775",
+  "change": "Replace COW by GOOSE at (6,3) and (4,5), PASTURE by COOP; same V8 routes, crop calendar, observed resupply and extra specialist. Fixed before both games.",
+  "expected_final": {
+    "COW": 8,
+    "SHEEP": 6,
+    "GOOSE": 2
+  },
+  "sources": {
+    "docs\\model_specs\\codex\\e21\\run_operational772_goose2.py": "4ddb25c95127149de83880e7159639bd5f228b6c4928e3b0733d277fe064f817",
+    "docs\\model_specs\\codex\\e21\\operational772_goose2_policy.py": "3978a17355b59dbe325915ceffbf3dfb62dc6f20a09c73eab49c9556e0782c9b",
+    "docs\\model_specs\\codex\\e21\\operational772_v8_policy.py": "118ff4d78edd5771d9ae5d92a01ceee2c5aa7b55496043ad8e3ec588cf807e53",
+    "docs\\model_specs\\codex\\e21\\reports\\operational772_v8\\PLAN_772.json": "b090638abe36d616a323667fbd00443cf55fa6a5b2e23811092b5b0fdf734712",
+    "docs\\model_specs\\codex\\e21\\reports\\operational772_v8\\PLAN_NATIVE.json": "985aca145627ee523a58b3136310c38fba26ffb2b556fb93afa64f208e694915",
+    "docs\\model_specs\\codex\\e21\\reports\\common_operational_program\\PROGRAM.json": "98a794a330fbd2507e8d8e8d6b970528c3736e38e9a2b044bb70eb0449062a90",
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7"
+  }
+}

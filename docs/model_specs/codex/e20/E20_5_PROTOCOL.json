@@ -1,0 +1,21 @@
+{
+  "version": "E20.5",
+  "variant": "E20v36",
+  "hypothesis": "Extend E20v35 conditional succession prices by subtracting consumption of currently observed town shops (including duplicates and single-product multiplier) and town center at configured intervals. No forecast of future shops. Short-cycle WHEAT/CARROT selection remains the only dynamic quota override; other crop intentions and livestock unchanged. Existing own-supply and feed forecasts retained; opponent future production remains an uncertainty.",
+  "development_seeds": [
+    180911301,
+    180911303
+  ],
+  "gate": "Positive mean own cash delta versus frozen E20.2 in each seed and no additional crop stress/escapes per case; all calls, exact first 264 actions/full states, zero errors, topology caps. Also report delta vs v35 to isolate demand forecast. No independent seed access yet.",
+  "budget": "Four serial candidates, unchanged official engine. Reuse verified exact full controls.",
+  "smoke": "No-file loader, 264 exact prefix actions plus successful D12 call; duplicate/single-product demand, zero horizon, fertilizer exclusion, nondefault intervals checked.",
+  "sources": {
+    "docs\\model_specs\\codex\\e20\\tools\\develop_e20_5.py": "d1ed8bae1e0c973788fc4f8819307aee405c3cb31ba3701e3347724f94134f24",
+    "docs\\model_specs\\codex\\e20\\tools\\policy.py": "29cb995a980c15e39094ad67e2e3264f9096b9319d7bfebe961898c12900810f",
+    "docs\\model_specs\\codex\\e20\\tools\\build_submission.py": "1f6a8e0b4e928661895f9ec290bd8360a74b35f4fa239a23a4646c18f82eba45",
+    "docs\\model_specs\\codex\\e20\\tools\\run_experiment.py": "4a5af94949705a2b74909dc3d94b5ba1255ed618d366996e0ffac8cc4717abcb",
+    "submission\\submission_codex_e20_772_e20v36_candidate.py": "711c9406841146e3610831dc38ee519699f536db32a3cb5ae9b6de4287d01d1c",
+    "submission\\submission_codex_e20_772_e20v32_candidate.py": "2e23faa7e581b0ab3a391da0e4707e49d04b6eebeaff4bdb495cacd9e91b317c",
+    "submission\\submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7"
+  }
+}

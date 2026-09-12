@@ -17,6 +17,7 @@ def build(variant):
         "ROOT=Path(__file__).resolve().parents[5]":"ROOT=None",
         "str(Path(__file__))": "'<e20-embedded>'",
         "runpy.run_path(str(ROOT/'submission/submission_codex_e18_770_v48_external.py'))":"_load_parent()",
+        "(ROOT/'submission/submission_codex_e18_770_v48_external.py').read_text()":"_PARENT_SOURCE",
         "(ROOT/'docs/model_specs/codex/e19/tools/biological_plan_770_v48.py').read_text()":"_BIO_SOURCE",
         "(ROOT/'docs/model_specs/codex/e19/tools/daily_routes_770_v48.py').read_text()":"_ROUTE_SOURCE",
     }

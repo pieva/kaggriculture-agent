@@ -1,4 +1,17 @@
+## Versione corrente E20.8 / E20v40
+
+[Release calendario comune con due oche](E20_8_RELEASE.md): sorgenti canoniche e bundle per verifica esterna.
+
+Selezione aggiornata: [bilancio candidati e verifica esterna](reports/candidate_selection_20260912/REPORT.md).
+
 # E20 — 772
+
+## E20.2 — candidata CARE al prezzo minimo
+
+[Specifica](E20_2_SPEC.md) · [Protocollo](E20_2_PROTOCOL.md) · [22 KPI](reports/e20_2/REPORT.html).
+E20v32: nuove offerte CARE filtrate da D20 quando il prodotto vale 1.
+Quattro confronti su due seed: +1397,5 cassa media, esiti discordanti fra seed.
+Segnale di sviluppo soltanto; nessuna promozione o submission.
 
 ## E20.1 — revisione del pianificatore
 

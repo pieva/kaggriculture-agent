@@ -1,0 +1,152 @@
+[
+  {
+    "day": 1,
+    "worker": 5,
+    "unfinished": [
+      {
+        "position": [
+          0,
+          3
+        ],
+        "command": [
+          "WATER"
+        ],
+        "source_step": 23,
+        "source_day": 1,
+        "source_hour": 23,
+        "changed": false
+      }
+    ]
+  },
+  {
+    "day": 1,
+    "worker": 1,
+    "unfinished": [
+      {
+        "position": [
+          0,
+          2
+        ],
+        "command": [
+          "WATER"
+        ],
+        "source_step": 23,
+        "source_day": 1,
+        "source_hour": 23,
+        "changed": false
+      }
+    ]
+  },
+  {
+    "day": 3,
+    "worker": 0,
+    "unfinished": [
+      {
+        "position": [
+          4,
+          2
+        ],
+        "command": [
+          "PLACE",
+          "COW"
+        ],
+        "source_step": 70,
+        "source_day": 3,
+        "source_hour": 22,
+        "changed": false
+      },
+      {
+        "position": [
+          4,
+          2
+        ],
+        "command": [
+          "CARE"
+        ],
+        "source_step": 71,
+        "source_day": 3,
+        "source_hour": 23,
+        "changed": false
+      }
+    ]
+  },
+  {
+    "day": 4,
+    "worker": 0,
+    "unfinished": [
+      {
+        "position": [
+          4,
+          4
+        ],
+        "command": [
+          "PLACE",
+          "FERTILIZER"
+        ],
+        "source_step": 91,
+        "source_day": 4,
+        "source_hour": 19,
+        "changed": false
+      },
+      {
+        "position": [
+          4,
+          4
+        ],
+        "command": [
+          "CARE"
+        ],
+        "source_step": 92,
+        "source_day": 4,
+        "source_hour": 20,
+        "changed": false
+      },
+      {
+        "position": [
+          4,
+          3
+        ],
+        "command": [
+          "COLLECT_FERTILIZER"
+        ],
+        "source_step": 94,
+        "source_day": 4,
+        "source_hour": 22,
+        "changed": false
+      },
+      {
+        "position": [
+          4,
+          3
+        ],
+        "command": [
+          "CARE"
+        ],
+        "source_step": 95,
+        "source_day": 4,
+        "source_hour": 23,
+        "changed": false
+      }
+    ]
+  },
+  {
+    "day": 4,
+    "worker": 3,
+    "unfinished": [
+      {
+        "position": [
+          2,
+          4
+        ],
+        "command": [
+          "PLACE",
+          "COW"
+        ],
+        "source_step": 96,
+        "source_day": 4,
+        "source_hour": 24,
+        "changed": false
+      }
+    ]
+  }
+]

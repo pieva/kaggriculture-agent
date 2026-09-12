@@ -1,0 +1,33 @@
+{
+  "date": "2026-09-12",
+  "models": [
+    "E18",
+    "E19",
+    "E20.2"
+  ],
+  "seeds": [
+    180911301,
+    180911302,
+    180911303,
+    180911304,
+    180911305,
+    180911306,
+    180911307
+  ],
+  "matches": 42,
+  "workers": 1,
+  "hypothesis": "Frozen E20.2 competes economically with E18 and E19; no tuning after holdout exposure.",
+  "gate": "Against EACH reference: positive mean direct margin after averaging roles within seed; positive margin in at least 5/7 seeds; mean crop stress and animal escapes no greater than reference. All 719 calls, DONE/DONE, zero instrumented core errors. No exclusions by outcome. Invalid runs block decision, retain evidence. Internal eligibility only, no automatic submission.",
+  "budget": "42 complete games, serial; no adaptive extension or early economic stop",
+  "sources": {
+    "submission/submission_codex_e18_2_capacity_governed_v4d.py": "c5fb1fc4966b81f238cdd0de4ca5e15b16ea6b8ae077a08ecc881f8729fd01f7",
+    "submission/submission_codex_e18_770_v48_external.py": "57e7155e69a4b0db43ccb22295a7172fc4d338999dae6a6e775081b67ecf7743",
+    "submission/submission_codex_e20_772_e20v32_candidate.py": "2e23faa7e581b0ab3a391da0e4707e49d04b6eebeaff4bdb495cacd9e91b317c",
+    "docs/model_specs/codex/e20/tools/confirm_e20_2.py": "d041157476cb1aa5857e490c1e6e6e9381c57aedfe28a7958fa2b3a227a1b551",
+    "docs/model_specs/codex/e20/tools/run_experiment.py": "4a5af94949705a2b74909dc3d94b5ba1255ed618d366996e0ffac8cc4717abcb",
+    "docs/model_specs/codex/e20/tools/build_report.py": "464113fa3281ead83cb3f4fc17ffe4729bb98df489ee29ef296584f5a64fc946",
+    "docs/model_specs/codex/e20/tools/audit_results.py": "2134f2942e81495de9b85352d677833a509ea341ca0f062537f80201da407f8f",
+    ".venv/Lib/site-packages/kaggle_environments/envs/kaggriculture/kaggriculture.py": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+    ".venv/Lib/site-packages/kaggle_environments/envs/kaggriculture/kaggriculture.json": "a82c89c1a2315b93f39775d8e025471a01b738647c9772658368ee6b1b6f4867"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "variant": "E20v35",
+  "cases": [
+    {
+      "seed": 180911301,
+      "seat": 0,
+      "prefix_states": 265,
+      "cash": 79897.0,
+      "margin": -14761.0,
+      "delta_cash": 2060.0,
+      "baseline": "docs\\model_specs\\codex\\e20\\artifacts\\e20_2_confirmation\\E20.2_E18_180911301.json",
+      "stress": [
+        5,
+        1
+      ],
+      "losses": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 180911301,
+      "seat": 1,
+      "prefix_states": 265,
+      "cash": 79897.0,
+      "margin": -14761.0,
+      "delta_cash": 2060.0,
+      "baseline": "docs\\model_specs\\codex\\e20\\artifacts\\e20_2_confirmation\\E18_E20.2_180911301.json",
+      "stress": [
+        5,
+        1
+      ],
+      "losses": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 180911303,
+      "seat": 0,
+      "prefix_states": 265,
+      "cash": 66900.0,
+      "margin": 165.0,
+      "delta_cash": -3434.0,
+      "baseline": "docs\\model_specs\\codex\\e20\\artifacts\\e20_2_confirmation\\E20.2_E18_180911303.json",
+      "stress": [
+        1,
+        4
+      ],
+      "losses": [
+        0,
+        0
+      ]
+    },
+    {
+      "seed": 180911303,
+      "seat": 1,
+      "prefix_states": 265,
+      "cash": 67288.0,
+      "margin": 343.0,
+      "delta_cash": -1922.0,
+      "baseline": "docs\\model_specs\\codex\\e20\\artifacts\\e20_2_confirmation\\E18_E20.2_180911303.json",
+      "stress": [
+        2,
+        4
+      ],
+      "losses": [
+        0,
+        0
+      ]
+    }
+  ],
+  "adopted": false,
+  "uploaded": false,
+  "decision": "NOT_ADOPTED"
+}

@@ -1,0 +1,33 @@
+[
+  {
+    "seed": 180911301,
+    "seat": 0,
+    "technical_pass": false,
+    "prefix_equal": true,
+    "mix": {
+      "COW": 0,
+      "SHEEP": 0,
+      "GOOSE": 0
+    },
+    "topology": [
+      7,
+      7,
+      0
+    ],
+    "cash": 19188.0,
+    "baseline_cash": 65391.0,
+    "cash_delta": -46203.0,
+    "runtime": {
+      "calls": 265,
+      "max_seconds": 0.02128490002360195,
+      "overage_seconds": 0,
+      "core_errors": 0,
+      "metrics": {
+        "ack_PICKUP": 1,
+        "portfolio_certificate_evaluations": 1,
+        "renewal_insertion_accept": 1,
+        "wait_input": 3
+      }
+    }
+  }
+]

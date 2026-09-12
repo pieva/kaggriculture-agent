@@ -1,0 +1,45 @@
+{
+  "start_day": 1,
+  "opening_prefix_frozen": false,
+  "versions": {
+    "772": {
+      "topology": [
+        7,
+        7,
+        2
+      ],
+      "mix": {
+        "COW": 10,
+        "SHEEP": 6,
+        "GOOSE": 0
+      },
+      "crop_capacity": 59
+    },
+    "774": {
+      "topology": [
+        7,
+        7,
+        4
+      ],
+      "mix": {
+        "COW": 8,
+        "SHEEP": 9,
+        "GOOSE": 1
+      },
+      "empty_pasture": [
+        6,
+        3
+      ],
+      "crop_capacity": 56
+    }
+  },
+  "D12_crops": {
+    "STRAWBERRY": 33,
+    "WHEAT": 21,
+    "MELON": 0
+  },
+  "common_peak_crops": 58,
+  "adaptation774": "Reduce later wheat occupancy as needed to fit56 crop slots; preserve animal geometry.",
+  "execution_gate": "Observed plant dates, water, harvest maturity, full delivery, livestock placement and no silent failures before economic comparison.",
+  "status": "Shared D1 requirement adopted; D1 controller not yet validated for transfer to774"
+}

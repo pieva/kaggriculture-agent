@@ -1,0 +1,41 @@
+{
+  "model": "CODEX-E21-774-REPAIR2",
+  "submission_id": 56185961,
+  "status": "Complete",
+  "score_observed": 600.0,
+  "score_note": "Initial validation only; competitive results pending",
+  "submitted_at_utc": "2026-09-12T13:01:10Z",
+  "observed_at_utc": "2026-09-12T13:05:29.821966+00:00",
+  "url": "https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56185961",
+  "file": "submission/submission_codex_e21_774_repair2.py",
+  "sha256": "5af967e001e3576cae7ab3c26aa9f2d9e953ba2ba6b66441a8ca1287d0365674",
+  "loader_parity": [
+    {
+      "replay": "E18_Repair774_180911301.replay.json.gz",
+      "seat": 1,
+      "calls": 719,
+      "mismatches": 0
+    },
+    {
+      "replay": "E18_Repair774_180911303.replay.json.gz",
+      "seat": 1,
+      "calls": 719,
+      "mismatches": 0
+    },
+    {
+      "replay": "Repair774_E18_180911301.replay.json.gz",
+      "seat": 0,
+      "calls": 719,
+      "mismatches": 0
+    },
+    {
+      "replay": "Repair774_E18_180911303.replay.json.gz",
+      "seat": 0,
+      "calls": 719,
+      "mismatches": 0
+    }
+  ],
+  "submitted_at_approximate": true,
+  "automation_id": "774-acquisizione-e-confronto-esterno-dopo-un-ora",
+  "scheduled_review_local": "2026-09-12T17:00:00+02:00"
+}

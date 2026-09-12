@@ -16,7 +16,7 @@ def build(stage='tournament'):
     cases=[json.loads(p.read_text()) for p in paths]
     assert cases
     models=sorted({s['name'] for c in cases for s in c['sides']})
-    candidate='E20.1' if 'E20.1' in models else 'E20'
+    candidate='E20.2' if 'E20.2' in models else 'E20.1' if 'E20.1' in models else 'E20'
     groups={m:[s for c in cases for s in c['sides'] if s['name']==m] for m in models}
     metadata=[json.loads(p.with_name(p.name.replace('.kpi.json','.json')).read_text()) for p in paths]
     assert all(all(v['calls']==719 for v in r['runtime']) for r in metadata),'Incomplete agent execution: do not include timed-out cases in economic aggregates'
@@ -32,7 +32,7 @@ def build(stage='tournament'):
             sales=mean(sum(sum(d['sales_cash'].values()) for d in s['ledger']['daily']) for s in ss),
             purchases=mean(sum(sum(d['purchase_cash'].values()) for d in s['ledger']['daily']) for s in ss),
             wages=mean(sum(d['hire_cash'] for d in s['ledger']['daily']) for s in ss))
-        target={'E18':[7,7,5],'E19':[7,7,0],'E20':[7,7,2],'E20.1':[7,7,2]}[m]
+        target={'E18':[7,7,5],'E19':[7,7,0],'E20':[7,7,2],'E20.1':[7,7,2],'E20.2':[7,7,2]}[m]
         observed=[o['topology'] for r in metadata for o in r['opening'] if o['name']==m]
         summary[m]['target_topology']=target
         summary[m]['exact_target_cases']=sum(t==target for t in observed)
@@ -176,8 +176,9 @@ select.addEventListener('change',render);render();</script></html>'''
         ROOT/'.venv/Lib/site-packages/kaggle_environments/envs/kaggriculture/kaggriculture.py',
         ROOT/'submission/submission_codex_e18_2_capacity_governed_v4d.py',
         ROOT/'submission/submission_codex_e18_770_v48_external.py',
-        ROOT/('submission/submission_codex_e20_772_e20v28_candidate.py' if candidate=='E20.1' else 'submission/submission_codex_e20_772_e20v18_candidate.py'),
+        ROOT/('submission/submission_codex_e20_772_e20v32_candidate.py' if candidate=='E20.2' else 'submission/submission_codex_e20_772_e20v28_candidate.py' if candidate=='E20.1' else 'submission/submission_codex_e20_772_e20v18_candidate.py'),
         BASE/'VALIDATION_PROTOCOL.json',BASE/'artifacts/ECONOMIC_GATE.json']
+    if candidate=='E20.2':provenance += [BASE/'E20_2_CONFIRMATION_PROTOCOL.json']
     if stage=='e20_1_confirmation':provenance += [BASE/'E20_1_PROTOCOL.json',BASE/'artifacts/E20_1_DEVELOPMENT_GATE.json',BASE/'reports/e20_1/confirmation/evaluation.json']
     manifest=dict(stage=stage,panels=22,matches=len(cases),sources={str(p.relative_to(ROOT)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths+provenance})
     (out/'manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
