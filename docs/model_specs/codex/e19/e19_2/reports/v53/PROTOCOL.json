@@ -1,0 +1,19 @@
+{
+  "candidate": "E19.3 V53 fixes",
+  "seeds": [
+    180911301,
+    180911303
+  ],
+  "opponents": {
+    "E19V51C": "submission\\submission_codex_e19_770_v51_candidate.py",
+    "E22": "submission\\submission_codex_e22_s56165462_observed_v1.py",
+    "E20.9fix": "submission\\submission_codex_e20_9_placefix_internal.py"
+  },
+  "method": "Serial full 720-step file-loader games; frozen baseline seat0 screening, E22 and E20.9fix both seats. Exposed seeds, shared endogenous market; no external submission.",
+  "hashes": {
+    "submission\\submission_codex_e19_3_770_v53_fixes.py": "7aec1603470421d8bea27de38c2a20b8a8f2351cbf29ab7a756eee7268dbecfa",
+    "submission\\submission_codex_e19_770_v51_candidate.py": "43d5c6c3b70cf2940afaa83f3a243cba75e52f89db459d31ecb96187c4f13fda",
+    "submission\\submission_codex_e22_s56165462_observed_v1.py": "7abb5c797a16b76c80c352578012641aa081fb004c994e6bd7a9c3810bc3712a",
+    "submission\\submission_codex_e20_9_placefix_internal.py": "6281dd9ac1cf97957f3eab942c29a5d613cb1834e2b64f992829a68353b2d645"
+  }
+}

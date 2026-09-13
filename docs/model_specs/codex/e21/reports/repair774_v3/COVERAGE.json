@@ -1,0 +1,523 @@
+{
+  "source": "docs\\model_specs\\codex\\e21\\artifacts\\repair774_v2\\Repair774_E18_180911301",
+  "method": "Worker positions and requested commands on service_day associated with each verified starvation; descriptive, no counterfactual route assumed.",
+  "events": [
+    {
+      "service_day": 12,
+      "position": [
+        2,
+        9
+      ],
+      "crop": "WHEAT",
+      "visits": [
+        {
+          "hour": 24,
+          "worker": 7,
+          "command": [
+            "PLANT",
+            "WHEAT"
+          ]
+        }
+      ]
+    },
+    {
+      "service_day": 13,
+      "position": [
+        3,
+        1
+      ],
+      "crop": "WHEAT",
+      "visits": [
+        {
+          "hour": 14,
+          "worker": 4,
+          "command": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 16,
+          "worker": 10,
+          "command": [
+            "EAST"
+          ]
+        }
+      ]
+    },
+    {
+      "service_day": 13,
+      "position": [
+        2,
+        3
+      ],
+      "crop": "STRAWBERRY",
+      "visits": [
+        {
+          "hour": 7,
+          "worker": 11,
+          "command": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 11,
+          "worker": 10,
+          "command": [
+            "NORTH"
+          ]
+        }
+      ]
+    },
+    {
+      "service_day": 13,
+      "position": [
+        0,
+        4
+      ],
+      "crop": "WHEAT",
+      "visits": []
+    },
+    {
+      "service_day": 14,
+      "position": [
+        0,
+        0
+      ],
+      "crop": "WHEAT",
+      "visits": [
+        {
+          "hour": 20,
+          "worker": 8,
+          "command": [
+            "WATER"
+          ]
+        },
+        {
+          "hour": 21,
+          "worker": 8,
+          "command": [
+            "HARVEST"
+          ]
+        },
+        {
+          "hour": 22,
+          "worker": 8,
+          "command": [
+            "PLANT",
+            "WHEAT"
+          ]
+        },
+        {
+          "hour": 23,
+          "worker": 8,
+          "command": [
+            "SOUTH"
+          ]
+        }
+      ]
+    },
+    {
+      "service_day": 15,
+      "position": [
+        3,
+        0
+      ],
+      "crop": "WHEAT",
+      "visits": [
+        {
+          "hour": 22,
+          "worker": 11,
+          "command": [
+            "HARVEST"
+          ]
+        },
+        {
+          "hour": 23,
+          "worker": 11,
+          "command": [
+            "PASS"
+          ]
+        },
+        {
+          "hour": 24,
+          "worker": 11,
+          "command": [
+            "PLANT",
+            "WHEAT"
+          ]
+        }
+      ]
+    },
+    {
+      "service_day": 15,
+      "position": [
+        2,
+        1
+      ],
+      "crop": "WHEAT",
+      "visits": [
+        {
+          "hour": 18,
+          "worker": 11,
+          "command": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 19,
+          "worker": 12,
+          "command": [
+            "WATER"
+          ]
+        },
+        {
+          "hour": 20,
+          "worker": 12,
+          "command": [
+            "HARVEST"
+          ]
+        },
+        {
+          "hour": 21,
+          "worker": 12,
+          "command": [
+            "PASS"
+          ]
+        },
+        {
+          "hour": 22,
+          "worker": 12,
+          "command": [
+            "PASS"
+          ]
+        },
+        {
+          "hour": 23,
+          "worker": 12,
+          "command": [
+            "PASS"
+          ]
+        },
+        {
+          "hour": 24,
+          "worker": 12,
+          "command": [
+            "PLANT",
+            "WHEAT"
+          ]
+        }
+      ]
+    },
+    {
+      "service_day": 19,
+      "position": [
+        3,
+        1
+      ],
+      "crop": "WHEAT",
+      "visits": [
+        {
+          "hour": 22,
+          "worker": 4,
+          "command": [
+            "HARVEST"
+          ]
+        },
+        {
+          "hour": 23,
+          "worker": 4,
+          "command": [
+            "PASS"
+          ]
+        },
+        {
+          "hour": 24,
+          "worker": 4,
+          "command": [
+            "PLANT",
+            "WHEAT"
+          ]
+        }
+      ]
+    },
+    {
+      "service_day": 19,
+      "position": [
+        3,
+        9
+      ],
+      "crop": "STRAWBERRY",
+      "visits": []
+    },
+    {
+      "service_day": 21,
+      "position": [
+        9,
+        0
+      ],
+      "crop": "WHEAT",
+      "visits": []
+    },
+    {
+      "service_day": 21,
+      "position": [
+        9,
+        2
+      ],
+      "crop": "STRAWBERRY",
+      "visits": []
+    },
+    {
+      "service_day": 21,
+      "position": [
+        9,
+        3
+      ],
+      "crop": "STRAWBERRY",
+      "visits": []
+    },
+    {
+      "service_day": 23,
+      "position": [
+        0,
+        0
+      ],
+      "crop": "WHEAT",
+      "visits": [
+        {
+          "hour": 23,
+          "worker": 0,
+          "command": [
+            "HARVEST"
+          ]
+        },
+        {
+          "hour": 23,
+          "worker": 2,
+          "command": [
+            "WATER"
+          ]
+        },
+        {
+          "hour": 24,
+          "worker": 0,
+          "command": [
+            "PLANT",
+            "WHEAT"
+          ]
+        },
+        {
+          "hour": 24,
+          "worker": 2,
+          "command": [
+            "EAST"
+          ]
+        }
+      ]
+    },
+    {
+      "service_day": 23,
+      "position": [
+        0,
+        5
+      ],
+      "crop": "MELON",
+      "visits": []
+    },
+    {
+      "service_day": 23,
+      "position": [
+        1,
+        5
+      ],
+      "crop": "MELON",
+      "visits": []
+    },
+    {
+      "service_day": 23,
+      "position": [
+        2,
+        7
+      ],
+      "crop": "MELON",
+      "visits": []
+    },
+    {
+      "service_day": 24,
+      "position": [
+        9,
+        0
+      ],
+      "crop": "WHEAT",
+      "visits": []
+    },
+    {
+      "service_day": 24,
+      "position": [
+        3,
+        1
+      ],
+      "crop": "WHEAT",
+      "visits": [
+        {
+          "hour": 23,
+          "worker": 7,
+          "command": [
+            "HARVEST"
+          ]
+        },
+        {
+          "hour": 24,
+          "worker": 7,
+          "command": [
+            "PLANT",
+            "WHEAT"
+          ]
+        }
+      ]
+    },
+    {
+      "service_day": 24,
+      "position": [
+        1,
+        6
+      ],
+      "crop": "WHEAT",
+      "visits": [
+        {
+          "hour": 24,
+          "worker": 9,
+          "command": [
+            "PLANT",
+            "WHEAT"
+          ]
+        }
+      ]
+    },
+    {
+      "service_day": 24,
+      "position": [
+        1,
+        8
+      ],
+      "crop": "WHEAT",
+      "visits": []
+    },
+    {
+      "service_day": 24,
+      "position": [
+        2,
+        9
+      ],
+      "crop": "STRAWBERRY",
+      "visits": []
+    },
+    {
+      "service_day": 24,
+      "position": [
+        3,
+        9
+      ],
+      "crop": "WHEAT",
+      "visits": [
+        {
+          "hour": 23,
+          "worker": 6,
+          "command": [
+            "HARVEST"
+          ]
+        },
+        {
+          "hour": 24,
+          "worker": 6,
+          "command": [
+            "PLANT",
+            "WHEAT"
+          ]
+        }
+      ]
+    },
+    {
+      "service_day": 25,
+      "position": [
+        9,
+        4
+      ],
+      "crop": "WHEAT",
+      "visits": [
+        {
+          "hour": 24,
+          "worker": 3,
+          "command": [
+            "PLANT",
+            "WHEAT"
+          ]
+        }
+      ]
+    },
+    {
+      "service_day": 27,
+      "position": [
+        1,
+        1
+      ],
+      "crop": "WHEAT",
+      "visits": [
+        {
+          "hour": 23,
+          "worker": 5,
+          "command": [
+            "HARVEST"
+          ]
+        },
+        {
+          "hour": 24,
+          "worker": 5,
+          "command": [
+            "PLANT",
+            "WHEAT"
+          ]
+        }
+      ]
+    },
+    {
+      "service_day": 28,
+      "position": [
+        1,
+        5
+      ],
+      "crop": "WHEAT",
+      "visits": [
+        {
+          "hour": 12,
+          "worker": 6,
+          "command": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 22,
+          "worker": 12,
+          "command": [
+            "HARVEST"
+          ]
+        },
+        {
+          "hour": 23,
+          "worker": 12,
+          "command": [
+            "PASS"
+          ]
+        },
+        {
+          "hour": 24,
+          "worker": 12,
+          "command": [
+            "PLANT",
+            "WHEAT"
+          ]
+        }
+      ]
+    }
+  ]
+}

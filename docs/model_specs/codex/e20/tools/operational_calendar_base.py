@@ -137,7 +137,8 @@ class Agent:
             if op=='WATER' and (not isinstance(tile,dict) or tile.get('kind')!='PLANT' or tile.get('watered_today')):done();continue
             if op=='FERTILIZE' and (not isinstance(tile,dict) or not tile.get('crop') or tile.get('fertilized_until_day',-1)>=obs['day']):done();continue
             if op=='HARVEST' and (not isinstance(tile,dict) or not tile.get('yield_units',0)):done();continue
-            if op=='PLACE' and isinstance(tile,dict) and tile.get('animal'):done();continue
+            # PLACE also deposits products into the shed from an occupied tile.
+            if op=='PLACE' and cmd[1] in ANIMALS and isinstance(tile,dict) and tile.get('animal'):done();continue
             if op.startswith('BUILD_') and isinstance(tile,dict) and tile.get('kind')==op[6:]:done();continue
             if op=='DIG' and tile is None:done();continue
             if op=='PLANT' and isinstance(tile,dict) and tile.get('crop')==cmd[1] and tile.get('planted_day',-1)>=j['source_day']-1:done();continue

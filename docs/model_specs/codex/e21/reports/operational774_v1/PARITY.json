@@ -1,0 +1,3610 @@
+[
+  {
+    "seed": 180911301,
+    "seat": 0,
+    "actions_equal": 719,
+    "reset": true,
+    "cash": 83239.0,
+    "opponent": 79012.0,
+    "metrics": {
+      "exact_original_frames": 144,
+      "exact_original_worker_actions": 3162,
+      "issued_FEED": 200,
+      "issued_HARVEST": 201,
+      "issued_CARE": 200,
+      "issued_WATER": 440,
+      "issued_COLLECT_FERTILIZER": 190,
+      "issued_DROP": 52,
+      "wait_SHEEP": 1,
+      "issued_BUILD_PASTURE": 5,
+      "issued_PLACE": 5,
+      "wait_seed": 3,
+      "issued_PLANT": 87,
+      "observed_FEED_backup": 51,
+      "issued_FERTILIZE": 24,
+      "optional_fertilizer_unavailable": 10,
+      "wait_WHEAT": 148,
+      "issued_DIG": 15,
+      "observed_WATER_backup": 2,
+      "dependency_harvest": 1,
+      "raw_position_recovery": 6,
+      "terminal_return": 26
+    },
+    "crop_losses": [
+      {
+        "service_day": 16,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 22,
+        "position": [
+          8,
+          2
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 25,
+        "position": [
+          4,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 27,
+        "position": [
+          2,
+          5
+        ],
+        "crop": "STRAWBERRY"
+      }
+    ],
+    "terminal": {
+      "cash": 83239.0,
+      "reward": 83239.0,
+      "shed": {
+        "WHEAT": 2,
+        "WOOL": 4
+      },
+      "carried": {},
+      "seeds": {
+        "WHEAT": 11,
+        "CARROT": 3
+      },
+      "tile_yield_units": {
+        "WHEAT": 1
+      },
+      "spot_prices": {
+        "WHEAT": 44,
+        "CARROT": 41,
+        "TOMATO": 83,
+        "STRAWBERRY": 12,
+        "MELON": 86,
+        "EGG": 53,
+        "MILK": 1,
+        "WOOL": 254,
+        "FERTILIZER": 1
+      }
+    },
+    "daily_alignment": [
+      {
+        "day": 1,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 2,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 3,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 4,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 5,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 6,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 3,
+          "STRAWBERRY": 4,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 3,
+          "STRAWBERRY": 4,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 7,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 6,
+          "STRAWBERRY": 12,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 6,
+          "STRAWBERRY": 12,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 8,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 9,
+          "STRAWBERRY": 16,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 9,
+          "STRAWBERRY": 16,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 9,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 10,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 11,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 12,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 12,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 12,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 18,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 21,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 13,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 14,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 15,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 16,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 17,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 18,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 19,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 20,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 21,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 22,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 28,
+          "STRAWBERRY": 28,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 30,
+          "STRAWBERRY": 28,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 23,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 29,
+          "STRAWBERRY": 27,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 31,
+          "STRAWBERRY": 27,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 24,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 36,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 38,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 25,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 35,
+          "STRAWBERRY": 17,
+          "CARROT": 4
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 37,
+          "STRAWBERRY": 17,
+          "CARROT": 4
+        }
+      },
+      {
+        "day": 26,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 12,
+          "CARROT": 18
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 27,
+          "STRAWBERRY": 13,
+          "CARROT": 18
+        }
+      },
+      {
+        "day": 27,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 15,
+          "STRAWBERRY": 12,
+          "CARROT": 26
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 16,
+          "STRAWBERRY": 13,
+          "CARROT": 29
+        }
+      },
+      {
+        "day": 28,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 17,
+          "STRAWBERRY": 3,
+          "CARROT": 22
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 18,
+          "STRAWBERRY": 4,
+          "CARROT": 26
+        }
+      },
+      {
+        "day": 29,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 10,
+          "STRAWBERRY": 0,
+          "CARROT": 11
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 10,
+          "STRAWBERRY": 0,
+          "CARROT": 13
+        }
+      },
+      {
+        "day": 30,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 1,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 0,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      }
+    ],
+    "unfinished_jobs": [
+      {
+        "day": 19,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              5,
+              4
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 19,
+            "source_hour": 16,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 19,
+        "worker": 13,
+        "unfinished": [
+          {
+            "position": [
+              5,
+              4
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 19,
+            "source_hour": 16,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 23,
+        "worker": 8,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              1
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 552,
+            "source_day": 23,
+            "source_hour": 24,
+            "changed": false
+          }
+        ]
+      },
+      {
+        "day": 24,
+        "worker": 9,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              4
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 576,
+            "source_day": 24,
+            "source_hour": 24,
+            "changed": false
+          }
+        ]
+      },
+      {
+        "day": 24,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              1
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 24,
+            "source_hour": 22,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 3,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              7
+            ],
+            "command": [
+              "PICKUP",
+              "FERTILIZER",
+              4
+            ],
+            "source_step": 579,
+            "source_day": 25,
+            "source_hour": 3,
+            "changed": true
+          },
+          {
+            "position": [
+              0,
+              7
+            ],
+            "command": [
+              "PICKUP",
+              "FERTILIZER",
+              3
+            ],
+            "source_step": 579,
+            "source_day": 25,
+            "source_hour": 3,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 4,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              9
+            ],
+            "command": [
+              "FERTILIZE"
+            ],
+            "source_step": 580,
+            "source_day": 25,
+            "source_hour": 4,
+            "changed": true
+          },
+          {
+            "position": [
+              4,
+              9
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 581,
+            "source_day": 25,
+            "source_hour": 5,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 11,
+        "unfinished": [
+          {
+            "position": [
+              3,
+              3
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 25,
+            "source_hour": 17,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              3,
+              3
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 25,
+            "source_hour": 15,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 26,
+        "worker": 7,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              7
+            ],
+            "command": [
+              "HARVEST"
+            ],
+            "source_step": 602,
+            "source_day": 26,
+            "source_hour": 2,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 27,
+        "worker": 6,
+        "unfinished": [
+          {
+            "position": [
+              1,
+              7
+            ],
+            "command": [
+              "PLANT",
+              "CARROT"
+            ],
+            "source_step": 647,
+            "source_day": 27,
+            "source_hour": 23,
+            "changed": false
+          },
+          {
+            "position": [
+              1,
+              7
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 648,
+            "source_day": 27,
+            "source_hour": 24,
+            "changed": false
+          }
+        ]
+      },
+      {
+        "day": 27,
+        "worker": 11,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              2
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 27,
+            "source_hour": 19,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 27,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              2
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 27,
+            "source_hour": 16,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 29,
+        "worker": 13,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "CARE"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "HARVEST"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "COLLECT_FERTILIZER"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              5
+            ],
+            "command": [
+              "DROP"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 180911301,
+    "seat": 1,
+    "actions_equal": 719,
+    "reset": true,
+    "cash": 83239.0,
+    "opponent": 79012.0,
+    "metrics": {
+      "exact_original_frames": 144,
+      "exact_original_worker_actions": 3162,
+      "issued_FEED": 200,
+      "issued_HARVEST": 201,
+      "issued_CARE": 200,
+      "issued_WATER": 440,
+      "issued_COLLECT_FERTILIZER": 190,
+      "issued_DROP": 52,
+      "wait_SHEEP": 1,
+      "issued_BUILD_PASTURE": 5,
+      "issued_PLACE": 5,
+      "wait_seed": 3,
+      "issued_PLANT": 87,
+      "observed_FEED_backup": 51,
+      "issued_FERTILIZE": 24,
+      "optional_fertilizer_unavailable": 10,
+      "wait_WHEAT": 148,
+      "issued_DIG": 15,
+      "observed_WATER_backup": 2,
+      "dependency_harvest": 1,
+      "raw_position_recovery": 6,
+      "terminal_return": 26
+    },
+    "crop_losses": [
+      {
+        "service_day": 16,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 22,
+        "position": [
+          8,
+          2
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 25,
+        "position": [
+          4,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 27,
+        "position": [
+          2,
+          5
+        ],
+        "crop": "STRAWBERRY"
+      }
+    ],
+    "terminal": {
+      "cash": 83239.0,
+      "reward": 83239.0,
+      "shed": {
+        "WHEAT": 2,
+        "WOOL": 4
+      },
+      "carried": {},
+      "seeds": {
+        "WHEAT": 11,
+        "CARROT": 3
+      },
+      "tile_yield_units": {
+        "WHEAT": 1
+      },
+      "spot_prices": {
+        "WHEAT": 44,
+        "CARROT": 41,
+        "TOMATO": 83,
+        "STRAWBERRY": 12,
+        "MELON": 86,
+        "EGG": 53,
+        "MILK": 1,
+        "WOOL": 254,
+        "FERTILIZER": 1
+      }
+    },
+    "daily_alignment": [
+      {
+        "day": 1,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 2,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 3,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 4,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 5,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 6,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 3,
+          "STRAWBERRY": 4,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 3,
+          "STRAWBERRY": 4,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 7,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 6,
+          "STRAWBERRY": 12,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 6,
+          "STRAWBERRY": 12,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 8,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 9,
+          "STRAWBERRY": 16,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 9,
+          "STRAWBERRY": 16,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 9,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 10,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 11,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 12,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 12,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 12,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 18,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 21,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 13,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 14,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 15,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 16,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 17,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 18,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 19,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 20,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 21,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 22,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 28,
+          "STRAWBERRY": 28,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 30,
+          "STRAWBERRY": 28,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 23,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 29,
+          "STRAWBERRY": 27,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 31,
+          "STRAWBERRY": 27,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 24,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 36,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 38,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 25,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 35,
+          "STRAWBERRY": 17,
+          "CARROT": 4
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 37,
+          "STRAWBERRY": 17,
+          "CARROT": 4
+        }
+      },
+      {
+        "day": 26,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 12,
+          "CARROT": 18
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 27,
+          "STRAWBERRY": 13,
+          "CARROT": 18
+        }
+      },
+      {
+        "day": 27,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 15,
+          "STRAWBERRY": 12,
+          "CARROT": 26
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 16,
+          "STRAWBERRY": 13,
+          "CARROT": 29
+        }
+      },
+      {
+        "day": 28,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 17,
+          "STRAWBERRY": 3,
+          "CARROT": 22
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 18,
+          "STRAWBERRY": 4,
+          "CARROT": 26
+        }
+      },
+      {
+        "day": 29,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 10,
+          "STRAWBERRY": 0,
+          "CARROT": 11
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 10,
+          "STRAWBERRY": 0,
+          "CARROT": 13
+        }
+      },
+      {
+        "day": 30,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 1,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 0,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      }
+    ],
+    "unfinished_jobs": [
+      {
+        "day": 19,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              5,
+              4
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 19,
+            "source_hour": 16,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 19,
+        "worker": 13,
+        "unfinished": [
+          {
+            "position": [
+              5,
+              4
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 19,
+            "source_hour": 16,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 23,
+        "worker": 8,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              1
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 552,
+            "source_day": 23,
+            "source_hour": 24,
+            "changed": false
+          }
+        ]
+      },
+      {
+        "day": 24,
+        "worker": 9,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              4
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 576,
+            "source_day": 24,
+            "source_hour": 24,
+            "changed": false
+          }
+        ]
+      },
+      {
+        "day": 24,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              1
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 24,
+            "source_hour": 22,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 3,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              7
+            ],
+            "command": [
+              "PICKUP",
+              "FERTILIZER",
+              4
+            ],
+            "source_step": 579,
+            "source_day": 25,
+            "source_hour": 3,
+            "changed": true
+          },
+          {
+            "position": [
+              0,
+              7
+            ],
+            "command": [
+              "PICKUP",
+              "FERTILIZER",
+              3
+            ],
+            "source_step": 579,
+            "source_day": 25,
+            "source_hour": 3,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 4,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              9
+            ],
+            "command": [
+              "FERTILIZE"
+            ],
+            "source_step": 580,
+            "source_day": 25,
+            "source_hour": 4,
+            "changed": true
+          },
+          {
+            "position": [
+              4,
+              9
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 581,
+            "source_day": 25,
+            "source_hour": 5,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 11,
+        "unfinished": [
+          {
+            "position": [
+              3,
+              3
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 25,
+            "source_hour": 17,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              3,
+              3
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 25,
+            "source_hour": 15,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 26,
+        "worker": 7,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              7
+            ],
+            "command": [
+              "HARVEST"
+            ],
+            "source_step": 602,
+            "source_day": 26,
+            "source_hour": 2,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 27,
+        "worker": 6,
+        "unfinished": [
+          {
+            "position": [
+              1,
+              7
+            ],
+            "command": [
+              "PLANT",
+              "CARROT"
+            ],
+            "source_step": 647,
+            "source_day": 27,
+            "source_hour": 23,
+            "changed": false
+          },
+          {
+            "position": [
+              1,
+              7
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 648,
+            "source_day": 27,
+            "source_hour": 24,
+            "changed": false
+          }
+        ]
+      },
+      {
+        "day": 27,
+        "worker": 11,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              2
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 27,
+            "source_hour": 19,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 27,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              2
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 27,
+            "source_hour": 16,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 29,
+        "worker": 13,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "CARE"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "HARVEST"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "COLLECT_FERTILIZER"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              5
+            ],
+            "command": [
+              "DROP"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 180911303,
+    "seat": 0,
+    "actions_equal": 719,
+    "reset": true,
+    "cash": 95262.0,
+    "opponent": 86740.0,
+    "metrics": {
+      "exact_original_frames": 144,
+      "exact_original_worker_actions": 3162,
+      "issued_FEED": 200,
+      "issued_HARVEST": 201,
+      "issued_CARE": 200,
+      "issued_WATER": 440,
+      "issued_COLLECT_FERTILIZER": 190,
+      "issued_DROP": 52,
+      "wait_SHEEP": 1,
+      "issued_BUILD_PASTURE": 5,
+      "issued_PLACE": 5,
+      "wait_seed": 3,
+      "issued_PLANT": 87,
+      "observed_FEED_backup": 51,
+      "issued_FERTILIZE": 24,
+      "optional_fertilizer_unavailable": 10,
+      "wait_WHEAT": 148,
+      "issued_DIG": 15,
+      "observed_WATER_backup": 2,
+      "dependency_harvest": 1,
+      "raw_position_recovery": 6,
+      "terminal_return": 26
+    },
+    "crop_losses": [
+      {
+        "service_day": 16,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 22,
+        "position": [
+          8,
+          2
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 25,
+        "position": [
+          4,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 27,
+        "position": [
+          2,
+          5
+        ],
+        "crop": "STRAWBERRY"
+      }
+    ],
+    "terminal": {
+      "cash": 95262.0,
+      "reward": 95262.0,
+      "shed": {
+        "WHEAT": 2,
+        "WOOL": 4
+      },
+      "carried": {},
+      "seeds": {
+        "WHEAT": 11,
+        "CARROT": 3
+      },
+      "tile_yield_units": {
+        "WHEAT": 1
+      },
+      "spot_prices": {
+        "WHEAT": 49,
+        "CARROT": 71,
+        "TOMATO": 280,
+        "STRAWBERRY": 156,
+        "MELON": 84,
+        "EGG": 60,
+        "MILK": 1,
+        "WOOL": 1,
+        "FERTILIZER": 1
+      }
+    },
+    "daily_alignment": [
+      {
+        "day": 1,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 2,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 3,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 4,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 5,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 6,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 3,
+          "STRAWBERRY": 4,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 3,
+          "STRAWBERRY": 4,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 7,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 6,
+          "STRAWBERRY": 12,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 6,
+          "STRAWBERRY": 12,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 8,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 9,
+          "STRAWBERRY": 16,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 9,
+          "STRAWBERRY": 16,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 9,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 10,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 11,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 12,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 12,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 12,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 18,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 21,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 13,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 14,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 15,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 16,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 17,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 18,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 19,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 20,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 21,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 22,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 28,
+          "STRAWBERRY": 28,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 30,
+          "STRAWBERRY": 28,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 23,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 29,
+          "STRAWBERRY": 27,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 31,
+          "STRAWBERRY": 27,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 24,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 36,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 38,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 25,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 35,
+          "STRAWBERRY": 17,
+          "CARROT": 4
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 37,
+          "STRAWBERRY": 17,
+          "CARROT": 4
+        }
+      },
+      {
+        "day": 26,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 12,
+          "CARROT": 18
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 27,
+          "STRAWBERRY": 13,
+          "CARROT": 18
+        }
+      },
+      {
+        "day": 27,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 15,
+          "STRAWBERRY": 12,
+          "CARROT": 26
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 16,
+          "STRAWBERRY": 13,
+          "CARROT": 29
+        }
+      },
+      {
+        "day": 28,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 17,
+          "STRAWBERRY": 3,
+          "CARROT": 22
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 18,
+          "STRAWBERRY": 4,
+          "CARROT": 26
+        }
+      },
+      {
+        "day": 29,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 10,
+          "STRAWBERRY": 0,
+          "CARROT": 11
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 10,
+          "STRAWBERRY": 0,
+          "CARROT": 13
+        }
+      },
+      {
+        "day": 30,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 1,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 0,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      }
+    ],
+    "unfinished_jobs": [
+      {
+        "day": 19,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              5,
+              4
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 19,
+            "source_hour": 16,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 19,
+        "worker": 13,
+        "unfinished": [
+          {
+            "position": [
+              5,
+              4
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 19,
+            "source_hour": 16,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 23,
+        "worker": 8,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              1
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 552,
+            "source_day": 23,
+            "source_hour": 24,
+            "changed": false
+          }
+        ]
+      },
+      {
+        "day": 24,
+        "worker": 9,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              4
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 576,
+            "source_day": 24,
+            "source_hour": 24,
+            "changed": false
+          }
+        ]
+      },
+      {
+        "day": 24,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              1
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 24,
+            "source_hour": 22,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 3,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              7
+            ],
+            "command": [
+              "PICKUP",
+              "FERTILIZER",
+              4
+            ],
+            "source_step": 579,
+            "source_day": 25,
+            "source_hour": 3,
+            "changed": true
+          },
+          {
+            "position": [
+              0,
+              7
+            ],
+            "command": [
+              "PICKUP",
+              "FERTILIZER",
+              3
+            ],
+            "source_step": 579,
+            "source_day": 25,
+            "source_hour": 3,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 4,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              9
+            ],
+            "command": [
+              "FERTILIZE"
+            ],
+            "source_step": 580,
+            "source_day": 25,
+            "source_hour": 4,
+            "changed": true
+          },
+          {
+            "position": [
+              4,
+              9
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 581,
+            "source_day": 25,
+            "source_hour": 5,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 11,
+        "unfinished": [
+          {
+            "position": [
+              3,
+              3
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 25,
+            "source_hour": 17,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              3,
+              3
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 25,
+            "source_hour": 15,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 26,
+        "worker": 7,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              7
+            ],
+            "command": [
+              "HARVEST"
+            ],
+            "source_step": 602,
+            "source_day": 26,
+            "source_hour": 2,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 27,
+        "worker": 6,
+        "unfinished": [
+          {
+            "position": [
+              1,
+              7
+            ],
+            "command": [
+              "PLANT",
+              "CARROT"
+            ],
+            "source_step": 647,
+            "source_day": 27,
+            "source_hour": 23,
+            "changed": false
+          },
+          {
+            "position": [
+              1,
+              7
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 648,
+            "source_day": 27,
+            "source_hour": 24,
+            "changed": false
+          }
+        ]
+      },
+      {
+        "day": 27,
+        "worker": 11,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              2
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 27,
+            "source_hour": 19,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 27,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              2
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 27,
+            "source_hour": 16,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 29,
+        "worker": 13,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "CARE"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "HARVEST"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "COLLECT_FERTILIZER"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              5
+            ],
+            "command": [
+              "DROP"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "seed": 180911303,
+    "seat": 1,
+    "actions_equal": 719,
+    "reset": true,
+    "cash": 95262.0,
+    "opponent": 86740.0,
+    "metrics": {
+      "exact_original_frames": 144,
+      "exact_original_worker_actions": 3162,
+      "issued_FEED": 200,
+      "issued_HARVEST": 201,
+      "issued_CARE": 200,
+      "issued_WATER": 440,
+      "issued_COLLECT_FERTILIZER": 190,
+      "issued_DROP": 52,
+      "wait_SHEEP": 1,
+      "issued_BUILD_PASTURE": 5,
+      "issued_PLACE": 5,
+      "wait_seed": 3,
+      "issued_PLANT": 87,
+      "observed_FEED_backup": 51,
+      "issued_FERTILIZE": 24,
+      "optional_fertilizer_unavailable": 10,
+      "wait_WHEAT": 148,
+      "issued_DIG": 15,
+      "observed_WATER_backup": 2,
+      "dependency_harvest": 1,
+      "raw_position_recovery": 6,
+      "terminal_return": 26
+    },
+    "crop_losses": [
+      {
+        "service_day": 16,
+        "position": [
+          9,
+          0
+        ],
+        "crop": "WHEAT"
+      },
+      {
+        "service_day": 22,
+        "position": [
+          8,
+          2
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 25,
+        "position": [
+          4,
+          9
+        ],
+        "crop": "STRAWBERRY"
+      },
+      {
+        "service_day": 27,
+        "position": [
+          2,
+          5
+        ],
+        "crop": "STRAWBERRY"
+      }
+    ],
+    "terminal": {
+      "cash": 95262.0,
+      "reward": 95262.0,
+      "shed": {
+        "WHEAT": 2,
+        "WOOL": 4
+      },
+      "carried": {},
+      "seeds": {
+        "WHEAT": 11,
+        "CARROT": 3
+      },
+      "tile_yield_units": {
+        "WHEAT": 1
+      },
+      "spot_prices": {
+        "WHEAT": 49,
+        "CARROT": 71,
+        "TOMATO": 280,
+        "STRAWBERRY": 156,
+        "MELON": 84,
+        "EGG": 60,
+        "MILK": 1,
+        "WOOL": 1,
+        "FERTILIZER": 1
+      }
+    },
+    "daily_alignment": [
+      {
+        "day": 1,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 2,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 3,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 4,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 5,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 7,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 6,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 3,
+          "STRAWBERRY": 4,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 3,
+          "STRAWBERRY": 4,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 7,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 6,
+          "STRAWBERRY": 12,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 6,
+          "STRAWBERRY": 12,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 8,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 9,
+          "STRAWBERRY": 16,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 9,
+          "STRAWBERRY": 16,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 9,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 10,
+        "actual": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 12,
+          "WHEAT": 5,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 11,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 12,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 12,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 12,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 18,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 21,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 13,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 14,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 15,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 16,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 22,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 24,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 17,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 18,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 19,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 20,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 21,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 23,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 33,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 22,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 28,
+          "STRAWBERRY": 28,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 30,
+          "STRAWBERRY": 28,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 23,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 29,
+          "STRAWBERRY": 27,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 31,
+          "STRAWBERRY": 27,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 24,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 36,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 38,
+          "STRAWBERRY": 20,
+          "CARROT": 0
+        }
+      },
+      {
+        "day": 25,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 35,
+          "STRAWBERRY": 17,
+          "CARROT": 4
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 37,
+          "STRAWBERRY": 17,
+          "CARROT": 4
+        }
+      },
+      {
+        "day": 26,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 25,
+          "STRAWBERRY": 12,
+          "CARROT": 18
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 27,
+          "STRAWBERRY": 13,
+          "CARROT": 18
+        }
+      },
+      {
+        "day": 27,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 15,
+          "STRAWBERRY": 12,
+          "CARROT": 26
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 16,
+          "STRAWBERRY": 13,
+          "CARROT": 29
+        }
+      },
+      {
+        "day": 28,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 17,
+          "STRAWBERRY": 3,
+          "CARROT": 22
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 18,
+          "STRAWBERRY": 4,
+          "CARROT": 26
+        }
+      },
+      {
+        "day": 29,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 10,
+          "STRAWBERRY": 0,
+          "CARROT": 11
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 10,
+          "STRAWBERRY": 0,
+          "CARROT": 13
+        }
+      },
+      {
+        "day": 30,
+        "actual": {
+          "MELON": 0,
+          "WHEAT": 1,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        },
+        "native": {
+          "MELON": 0,
+          "WHEAT": 0,
+          "STRAWBERRY": 0,
+          "CARROT": 0
+        }
+      }
+    ],
+    "unfinished_jobs": [
+      {
+        "day": 19,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              5,
+              4
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 19,
+            "source_hour": 16,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 19,
+        "worker": 13,
+        "unfinished": [
+          {
+            "position": [
+              5,
+              4
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 19,
+            "source_hour": 16,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 23,
+        "worker": 8,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              1
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 552,
+            "source_day": 23,
+            "source_hour": 24,
+            "changed": false
+          }
+        ]
+      },
+      {
+        "day": 24,
+        "worker": 9,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              4
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 576,
+            "source_day": 24,
+            "source_hour": 24,
+            "changed": false
+          }
+        ]
+      },
+      {
+        "day": 24,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              1
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 24,
+            "source_hour": 22,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 3,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              7
+            ],
+            "command": [
+              "PICKUP",
+              "FERTILIZER",
+              4
+            ],
+            "source_step": 579,
+            "source_day": 25,
+            "source_hour": 3,
+            "changed": true
+          },
+          {
+            "position": [
+              0,
+              7
+            ],
+            "command": [
+              "PICKUP",
+              "FERTILIZER",
+              3
+            ],
+            "source_step": 579,
+            "source_day": 25,
+            "source_hour": 3,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 4,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              9
+            ],
+            "command": [
+              "FERTILIZE"
+            ],
+            "source_step": 580,
+            "source_day": 25,
+            "source_hour": 4,
+            "changed": true
+          },
+          {
+            "position": [
+              4,
+              9
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 581,
+            "source_day": 25,
+            "source_hour": 5,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 11,
+        "unfinished": [
+          {
+            "position": [
+              3,
+              3
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 25,
+            "source_hour": 17,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 25,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              3,
+              3
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 25,
+            "source_hour": 15,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 26,
+        "worker": 7,
+        "unfinished": [
+          {
+            "position": [
+              0,
+              7
+            ],
+            "command": [
+              "HARVEST"
+            ],
+            "source_step": 602,
+            "source_day": 26,
+            "source_hour": 2,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 27,
+        "worker": 6,
+        "unfinished": [
+          {
+            "position": [
+              1,
+              7
+            ],
+            "command": [
+              "PLANT",
+              "CARROT"
+            ],
+            "source_step": 647,
+            "source_day": 27,
+            "source_hour": 23,
+            "changed": false
+          },
+          {
+            "position": [
+              1,
+              7
+            ],
+            "command": [
+              "WATER"
+            ],
+            "source_step": 648,
+            "source_day": 27,
+            "source_hour": 24,
+            "changed": false
+          }
+        ]
+      },
+      {
+        "day": 27,
+        "worker": 11,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              2
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 27,
+            "source_hour": 19,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 27,
+        "worker": 12,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              2
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 27,
+            "source_hour": 16,
+            "changed": true
+          }
+        ]
+      },
+      {
+        "day": 29,
+        "worker": 13,
+        "unfinished": [
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "FEED"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "CARE"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "HARVEST"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              6
+            ],
+            "command": [
+              "COLLECT_FERTILIZER"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          },
+          {
+            "position": [
+              4,
+              5
+            ],
+            "command": [
+              "DROP"
+            ],
+            "source_day": 29,
+            "source_hour": 1,
+            "source_step": 673,
+            "changed": false
+          }
+        ]
+      }
+    ]
+  }
+]

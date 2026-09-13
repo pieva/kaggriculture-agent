@@ -1,0 +1,471 @@
+{
+  "episode": 108491899,
+  "seed": 1392588142,
+  "source": "data\\replays\\json\\e22_closure_20260913\\108491899.json",
+  "sha256": "bc3d067387b354cb59e63163de3d36dab00b1a880908484cced21e1fbe42c9d0",
+  "worker_action_parity": 719,
+  "market_order_differences": [
+    217,
+    336,
+    399,
+    423,
+    433,
+    448,
+    481,
+    496,
+    505,
+    529,
+    530,
+    552,
+    568,
+    577,
+    600,
+    624,
+    639,
+    668,
+    673,
+    684,
+    697,
+    717,
+    718
+  ],
+  "caveat": "Fixed recorded opponent actions; ex-post diagnostic, not a policy evaluation. Market order parity with source not asserted.",
+  "results": [
+    {
+      "mode": "control",
+      "cash": [
+        131885.0,
+        118902.0
+      ],
+      "own_delta": 0.0,
+      "shed": {
+        "WHEAT": 1,
+        "WOOL": 3
+      },
+      "crops": [
+        {
+          "x": 2,
+          "y": 5,
+          "crop": "WHEAT",
+          "units": 2
+        },
+        {
+          "x": 3,
+          "y": 7,
+          "crop": "TOMATO",
+          "units": 1
+        },
+        {
+          "x": 4,
+          "y": 8,
+          "crop": "TOMATO",
+          "units": 1
+        }
+      ],
+      "verified_control_states": 11,
+      "tomato_routes": []
+    },
+    {
+      "mode": "tomatoes",
+      "cash": [
+        131885.0,
+        119097.0
+      ],
+      "own_delta": 195.0,
+      "shed": {
+        "WHEAT": 1,
+        "WOOL": 3
+      },
+      "crops": [
+        {
+          "x": 2,
+          "y": 5,
+          "crop": "WHEAT",
+          "units": 2
+        }
+      ],
+      "verified_control_states": 0,
+      "tomato_routes": [
+        {
+          "hour": 13,
+          "worker": 9,
+          "action": [
+            "WEST"
+          ]
+        },
+        {
+          "hour": 13,
+          "worker": 10,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 14,
+          "worker": 9,
+          "action": [
+            "WEST"
+          ]
+        },
+        {
+          "hour": 14,
+          "worker": 10,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 15,
+          "worker": 9,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 15,
+          "worker": 10,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 16,
+          "worker": 9,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 16,
+          "worker": 10,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 17,
+          "worker": 9,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 17,
+          "worker": 10,
+          "action": [
+            "HARVEST"
+          ]
+        },
+        {
+          "hour": 18,
+          "worker": 9,
+          "action": [
+            "HARVEST"
+          ]
+        },
+        {
+          "hour": 18,
+          "worker": 10,
+          "action": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 19,
+          "worker": 9,
+          "action": [
+            "EAST"
+          ]
+        },
+        {
+          "hour": 19,
+          "worker": 10,
+          "action": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 20,
+          "worker": 9,
+          "action": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 20,
+          "worker": 10,
+          "action": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 21,
+          "worker": 9,
+          "action": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 21,
+          "worker": 10,
+          "action": [
+            "DROP"
+          ]
+        },
+        {
+          "hour": 22,
+          "worker": 9,
+          "action": [
+            "DROP"
+          ]
+        },
+        {
+          "hour": 22,
+          "worker": 10,
+          "action": [
+            "PASS"
+          ]
+        },
+        {
+          "hour": 23,
+          "worker": 9,
+          "action": [
+            "PASS"
+          ]
+        },
+        {
+          "hour": 23,
+          "worker": 10,
+          "action": [
+            "PASS"
+          ]
+        }
+      ]
+    },
+    {
+      "mode": "wheat",
+      "cash": [
+        131885.0,
+        118978.0
+      ],
+      "own_delta": 76.0,
+      "shed": {
+        "WOOL": 3
+      },
+      "crops": [
+        {
+          "x": 3,
+          "y": 7,
+          "crop": "TOMATO",
+          "units": 1
+        },
+        {
+          "x": 4,
+          "y": 8,
+          "crop": "TOMATO",
+          "units": 1
+        }
+      ],
+      "verified_control_states": 0,
+      "tomato_routes": []
+    },
+    {
+      "mode": "last_delivery",
+      "cash": [
+        131850.0,
+        119122.0
+      ],
+      "own_delta": 220.0,
+      "shed": {},
+      "crops": [
+        {
+          "x": 2,
+          "y": 5,
+          "crop": "WHEAT",
+          "units": 2
+        },
+        {
+          "x": 3,
+          "y": 7,
+          "crop": "TOMATO",
+          "units": 1
+        },
+        {
+          "x": 4,
+          "y": 8,
+          "crop": "TOMATO",
+          "units": 1
+        }
+      ],
+      "verified_control_states": 0,
+      "tomato_routes": []
+    },
+    {
+      "mode": "combined",
+      "cash": [
+        131885.0,
+        119302.0
+      ],
+      "own_delta": 400.0,
+      "shed": {},
+      "crops": [],
+      "verified_control_states": 0,
+      "tomato_routes": [
+        {
+          "hour": 13,
+          "worker": 9,
+          "action": [
+            "WEST"
+          ]
+        },
+        {
+          "hour": 13,
+          "worker": 10,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 14,
+          "worker": 9,
+          "action": [
+            "WEST"
+          ]
+        },
+        {
+          "hour": 14,
+          "worker": 10,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 15,
+          "worker": 9,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 15,
+          "worker": 10,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 16,
+          "worker": 9,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 16,
+          "worker": 10,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 17,
+          "worker": 9,
+          "action": [
+            "SOUTH"
+          ]
+        },
+        {
+          "hour": 17,
+          "worker": 10,
+          "action": [
+            "HARVEST"
+          ]
+        },
+        {
+          "hour": 18,
+          "worker": 9,
+          "action": [
+            "HARVEST"
+          ]
+        },
+        {
+          "hour": 18,
+          "worker": 10,
+          "action": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 19,
+          "worker": 9,
+          "action": [
+            "EAST"
+          ]
+        },
+        {
+          "hour": 19,
+          "worker": 10,
+          "action": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 20,
+          "worker": 9,
+          "action": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 20,
+          "worker": 10,
+          "action": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 21,
+          "worker": 9,
+          "action": [
+            "NORTH"
+          ]
+        },
+        {
+          "hour": 21,
+          "worker": 10,
+          "action": [
+            "DROP"
+          ]
+        },
+        {
+          "hour": 22,
+          "worker": 9,
+          "action": [
+            "DROP"
+          ]
+        },
+        {
+          "hour": 22,
+          "worker": 10,
+          "action": [
+            "PASS"
+          ]
+        },
+        {
+          "hour": 23,
+          "worker": 9,
+          "action": [
+            "PASS"
+          ]
+        },
+        {
+          "hour": 23,
+          "worker": 10,
+          "action": [
+            "PASS"
+          ]
+        }
+      ]
+    }
+  ]
+}

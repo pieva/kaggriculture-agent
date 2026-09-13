@@ -1,0 +1,132 @@
+{
+  "models": [
+    {
+      "name": "Olympus",
+      "submission": 56184881,
+      "n": 5,
+      "mean": {
+        "harvested": 514.2,
+        "bought": 139.8,
+        "sold": 312.4,
+        "fed": 309.6,
+        "purchase_cash": 4812.8,
+        "sales_cash": 12567.6,
+        "seed_cash": 1622,
+        "initial": 0,
+        "final": 0,
+        "discarded": 32
+      }
+    },
+    {
+      "name": "kiki yi2",
+      "submission": 56137379,
+      "n": 5,
+      "mean": {
+        "harvested": 516.8,
+        "bought": 289.2,
+        "sold": 446.4,
+        "fed": 358.6,
+        "purchase_cash": 9404.8,
+        "sales_cash": 16152.8,
+        "seed_cash": 1630,
+        "initial": 0,
+        "final": 0,
+        "discarded": 1
+      }
+    },
+    {
+      "name": "spbforce",
+      "submission": 56200341,
+      "n": 5,
+      "mean": {
+        "harvested": 560,
+        "bought": 188.4,
+        "sold": 362.2,
+        "fed": 385,
+        "purchase_cash": 6744.4,
+        "sales_cash": 14499.8,
+        "seed_cash": 1634,
+        "initial": 0,
+        "final": 0,
+        "discarded": 1.2
+      }
+    },
+    {
+      "name": "Majkel1337",
+      "submission": 56156662,
+      "n": 4,
+      "mean": {
+        "harvested": 621,
+        "bought": 211,
+        "sold": 504.5,
+        "fed": 311,
+        "purchase_cash": 8035.5,
+        "sales_cash": 20092.25,
+        "seed_cash": 1935,
+        "initial": 0,
+        "final": 0,
+        "discarded": 16.5
+      }
+    },
+    {
+      "name": "Mengfei Li",
+      "submission": 56173067,
+      "n": 5,
+      "mean": {
+        "harvested": 514.4,
+        "bought": 173,
+        "sold": 374.6,
+        "fed": 308.6,
+        "purchase_cash": 6263.2,
+        "sales_cash": 14426.4,
+        "seed_cash": 1076,
+        "initial": 0,
+        "final": 0,
+        "discarded": 4.2
+      }
+    },
+    {
+      "name": "THIRD FARM CLUB",
+      "submission": 56180166,
+      "n": 4,
+      "mean": {
+        "harvested": 459.25,
+        "bought": 169.5,
+        "sold": 243.75,
+        "fed": 381.75,
+        "purchase_cash": 6340.25,
+        "sales_cash": 9782.5,
+        "seed_cash": 1152.5,
+        "initial": 0,
+        "final": 0,
+        "discarded": 3.25
+      }
+    }
+  ],
+  "n": 28,
+  "excluded": [
+    {
+      "name": "Majkel1337",
+      "episode": 108488494,
+      "error": "(108488494, 690, -2)"
+    },
+    {
+      "name": "THIRD FARM CLUB",
+      "episode": 108500556,
+      "error": "mass balance residual 14",
+      "totals": {
+        "harvested": 513,
+        "bought": 133,
+        "sold": 289,
+        "fed": 338,
+        "purchase_cash": 4997,
+        "sales_cash": 11526,
+        "seed_cash": 1230,
+        "initial": 0,
+        "final": 0,
+        "discarded": 5
+      }
+    }
+  ],
+  "note": "Grain is fungible. Harvested and bought grain cannot be uniquely assigned to FEED without an attribution convention. Avoided purchases and net savings require a counterfactual including forgone sales, work and land costs. Excluded replays have unresolved reconstruction discrepancies; do not use their feed totals."
+}

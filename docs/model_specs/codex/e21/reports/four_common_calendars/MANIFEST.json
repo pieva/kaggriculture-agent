@@ -1,0 +1,110 @@
+{
+  "files": {
+    "docs\\model_specs\\codex\\e21\\reports\\four_common_calendars\\CHECKS.json": "69a6986e62e68cf893ce3fc167c6b87e82ffed45867c72a41bd8275d90854147",
+    "docs\\model_specs\\codex\\e21\\reports\\four_common_calendars\\DAILY_22_KPI.csv": "ca321c869679086c770c6c55cf94c693eb9c3c7572de17908ef704c5817a83c0",
+    "docs\\model_specs\\codex\\e21\\reports\\four_common_calendars\\PRODUCTS.csv": "cd58da122e7ab2cd7073084a83dce61fb0f1c6f1462312a0f1ca8fafec0fa12d",
+    "docs\\model_specs\\codex\\e21\\reports\\four_common_calendars\\REPORT.html": "f469fe7240f9299cbf0fa59b548c6a7a1f62f67b081a4112c8d1643071692664",
+    "docs\\model_specs\\codex\\e21\\reports\\four_common_calendars\\REPORT.md": "a72610aaa7b62f55fd4664f5fa00e931d0c5ad1aa12a58278294fdeed4fae959",
+    "docs\\model_specs\\codex\\e21\\reports\\four_common_calendars\\REPORT_DATA.json": "8a2e18f8e82a5d536c87882f0da930d03c71fbd8d73c614a69bc43de2fd16e91",
+    "docs\\model_specs\\codex\\e21\\reports\\four_common_calendars\\REPORT_SCRIPT.js": "3dbd60ab3d61e0f49f31b057c9fb46080c9bbb200e9843d3df969149a7abdf61"
+  },
+  "source_script_sha256": "e8ab55431e10b00260afd528a642271afe69268d70b70d4f94fe96830f9ce4e9",
+  "replays": [
+    {
+      "model": "Piano comune nativo",
+      "context": "Piano comune nativo",
+      "seed": 180911301,
+      "seat": 0,
+      "replay": "docs\\model_specs\\codex\\e21\\artifacts\\operational772_recorded_control\\OpRecorded_E18_180911301.replay.json.gz",
+      "sha256": "2855031f4e4ecf5511eb40de8cbadf933d4dfd23327411817163b8ed3d5c62ae"
+    },
+    {
+      "model": "E18.2 V4D",
+      "context": "Piano comune nativo",
+      "seed": 180911301,
+      "seat": 1,
+      "replay": "docs\\model_specs\\codex\\e21\\artifacts\\operational772_recorded_control\\OpRecorded_E18_180911301.replay.json.gz",
+      "sha256": "2855031f4e4ecf5511eb40de8cbadf933d4dfd23327411817163b8ed3d5c62ae"
+    },
+    {
+      "model": "Piano comune nativo",
+      "context": "Piano comune nativo",
+      "seed": 180911303,
+      "seat": 0,
+      "replay": "docs\\model_specs\\codex\\e21\\artifacts\\operational772_recorded_control\\OpRecorded_E18_180911303.replay.json.gz",
+      "sha256": "6dd9f231374845a69d26e21847e438581cd6c82731a9dbbca31d36a4afc45523"
+    },
+    {
+      "model": "E18.2 V4D",
+      "context": "Piano comune nativo",
+      "seed": 180911303,
+      "seat": 1,
+      "replay": "docs\\model_specs\\codex\\e21\\artifacts\\operational772_recorded_control\\OpRecorded_E18_180911303.replay.json.gz",
+      "sha256": "6dd9f231374845a69d26e21847e438581cd6c82731a9dbbca31d36a4afc45523"
+    },
+    {
+      "model": "772 fix + pomodori (E20.9)",
+      "context": "772 fix + pomodori (E20.9)",
+      "seed": 180911301,
+      "seat": 0,
+      "replay": "docs\\model_specs\\codex\\e20\\artifacts\\e20_9_development_d\\Tomato_E18_180911301.replay.json.gz",
+      "sha256": "d8635fb752a5abd015276f5a58051370834e655163cbf219fc3f026c8c9f1b04"
+    },
+    {
+      "model": "E18.2 V4D",
+      "context": "772 fix + pomodori (E20.9)",
+      "seed": 180911301,
+      "seat": 1,
+      "replay": "docs\\model_specs\\codex\\e20\\artifacts\\e20_9_development_d\\Tomato_E18_180911301.replay.json.gz",
+      "sha256": "d8635fb752a5abd015276f5a58051370834e655163cbf219fc3f026c8c9f1b04"
+    },
+    {
+      "model": "772 fix + pomodori (E20.9)",
+      "context": "772 fix + pomodori (E20.9)",
+      "seed": 180911303,
+      "seat": 0,
+      "replay": "docs\\model_specs\\codex\\e20\\artifacts\\e20_9_development_d\\Tomato_E18_180911303.replay.json.gz",
+      "sha256": "96d08a9a4c07a42475314eb0762d30719e7721142ac2af3595c67873b5c4ea81"
+    },
+    {
+      "model": "E18.2 V4D",
+      "context": "772 fix + pomodori (E20.9)",
+      "seed": 180911303,
+      "seat": 1,
+      "replay": "docs\\model_specs\\codex\\e20\\artifacts\\e20_9_development_d\\Tomato_E18_180911303.replay.json.gz",
+      "sha256": "96d08a9a4c07a42475314eb0762d30719e7721142ac2af3595c67873b5c4ea81"
+    },
+    {
+      "model": "774 comune",
+      "context": "774 comune",
+      "seed": 180911301,
+      "seat": 0,
+      "replay": "docs\\model_specs\\codex\\e21\\artifacts\\operational774_v1\\Common774_E18_180911301.replay.json.gz",
+      "sha256": "20dd24e4b47d5a5c721bdbc5eda8da26f0e33c87a29a20ce5d6a7134022e91ea"
+    },
+    {
+      "model": "E18.2 V4D",
+      "context": "774 comune",
+      "seed": 180911301,
+      "seat": 1,
+      "replay": "docs\\model_specs\\codex\\e21\\artifacts\\operational774_v1\\Common774_E18_180911301.replay.json.gz",
+      "sha256": "20dd24e4b47d5a5c721bdbc5eda8da26f0e33c87a29a20ce5d6a7134022e91ea"
+    },
+    {
+      "model": "774 comune",
+      "context": "774 comune",
+      "seed": 180911303,
+      "seat": 0,
+      "replay": "docs\\model_specs\\codex\\e21\\artifacts\\operational774_v1\\Common774_E18_180911303.replay.json.gz",
+      "sha256": "940579edec42ce46cdb6ec9b78afb9e2b73f7a0ea885441f40c885ffbe73420f"
+    },
+    {
+      "model": "E18.2 V4D",
+      "context": "774 comune",
+      "seed": 180911303,
+      "seat": 1,
+      "replay": "docs\\model_specs\\codex\\e21\\artifacts\\operational774_v1\\Common774_E18_180911303.replay.json.gz",
+      "sha256": "940579edec42ce46cdb6ec9b78afb9e2b73f7a0ea885441f40c885ffbe73420f"
+    }
+  ]
+}

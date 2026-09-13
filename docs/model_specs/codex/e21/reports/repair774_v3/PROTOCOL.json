@@ -1,0 +1,28 @@
+{
+  "model": "E21-774-Repair3",
+  "hypothesis": "Observed water stress and invalid animal services on crops cause avoidable crop losses. Prioritize survival on existing visits, without new routes.",
+  "seeds": [
+    180911301,
+    180911303
+  ],
+  "roles": [
+    0,
+    1
+  ],
+  "opponent": "frozen E18",
+  "control": "existing Repair2 matched seeds/roles",
+  "changes": "D12-D28 replace PASS/CARE/FEED/COLLECT_FERTILIZER on unwatered crop by WATER; FERTILIZE only replaced when consecutive_unwatered>=1; one water command per tile; no terminal changes.",
+  "gates": [
+    "719calls,DONE",
+    "zero nested errors",
+    "exact774 and8C9S1G",
+    "no animal escapes",
+    "D1-D11 unchanged",
+    "paired crop losses/cash/margin reported; no automatic promotion"
+  ],
+  "sources": {
+    "docs\\model_specs\\codex\\e21\\repair774_v3_overlay.py": "b2ade146d6e697249b2872a33db67ba0c9fb856b7259cb4e639eeb9eb96c89ae",
+    "docs\\model_specs\\codex\\e21\\artifacts\\repaired774_v2.py": "54cdd147b47e74fe43024c9960ffe5308135e83e5618d3cba874339337c36669",
+    "docs\\model_specs\\codex\\e21\\artifacts\\repaired774_v3.py": "2ce496df45e407d1def9e3d2d2386edb761f264c60723dbf213ceb4225971b7b"
+  }
+}

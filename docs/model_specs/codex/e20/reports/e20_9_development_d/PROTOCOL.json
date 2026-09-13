@@ -1,0 +1,26 @@
+{
+  "seeds": [
+    180911301,
+    180911303
+  ],
+  "roles": [
+    0,
+    1
+  ],
+  "models": [
+    "Tomato"
+  ],
+  "opponent": "E18 frozen775",
+  "stage": "e20_9_development_d",
+  "interventions": "Finance replaces first BUY13/SELL13/BUY13 with BUY13. Tomato adds two crop missions at (3,7),(4,8) from D20 with first harvest >=8 days, late cutoff D21; 1000 current cash admission D19. Same 8C6S2G livestock. Terminal return guard for all workers; tomato harvest admission includes delivery and sale time. Specialist missions only D20,D21,D29,D30; reuse existing crop service otherwise. Controls: stage c Finance (same financial and return intervention), Reference frozen E20.8.",
+  "gate": "Technical:719 calls, no unknown commands, expected761/8C6S2G, zero animal escapes, tomato placed/watered/harvested/sold by D30. Economic: report paired cash and margin; no automatic promotion on two exposed seeds.",
+  "sources": {
+    "docs/model_specs/codex/e20/tools/develop_e20_9_candidate.py": "b1d2760e0695ef1ee4965ba80f646125acb04f4d6c644ecc330e369171b9f14e",
+    "docs/model_specs/codex/e20/tools/operational_calendar_v44.py": "f106bb268d941bcd08d3c18249bc7a8bff2c8d9cbc7f47d9d201d5a217e47409",
+    "docs/model_specs/codex/e20/tools/operational_calendar_base.py": "bb6ff999c53a2214c3671e82e27f14703adce7decede21c76f604335c3b85145",
+    "docs/model_specs/codex/e20/tools/operational_calendar_goose2.py": "7d2ad2bed57bc4739e7d2ceb11efc605ed8ea7319864cda6977beb10d2beaa96",
+    "docs/model_specs/codex/e20/configs/e20v40/PLAN_772.json": "b090638abe36d616a323667fbd00443cf55fa6a5b2e23811092b5b0fdf734712",
+    "docs/model_specs/codex/e20/configs/e20v40/PLAN_NATIVE.json": "985aca145627ee523a58b3136310c38fba26ffb2b556fb93afa64f208e694915",
+    "docs/model_specs/codex/e20/configs/e20v40/PROGRAM.json": "98a794a330fbd2507e8d8e8d6b970528c3736e38e9a2b044bb70eb0449062a90"
+  }
+}

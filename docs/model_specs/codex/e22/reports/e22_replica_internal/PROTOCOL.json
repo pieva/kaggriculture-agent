@@ -1,0 +1,34 @@
+{
+  "models": [
+    "E22Replica",
+    "E209Fix"
+  ],
+  "opponent": "E209 frozen",
+  "seeds": [
+    180911301,
+    180911303
+  ],
+  "seats": [
+    0,
+    1
+  ],
+  "replica_submission": 56165462,
+  "replica_episode": 108518933,
+  "parity_replays": 20,
+  "parity_actions": 14380,
+  "source_sha256": "842c42cfbd0103bbc42fa65dbdb644fdd86d5f945974e54cf960949b91590762",
+  "bundle_sha256": "50c835eb21da4a4d46442882fc3442636ed0d9888104c2e93c3ecdbdf887da81",
+  "frozen_sha256": "56956735924f78d3d5502754425b207c67849ff217980e3c383add726b47debe",
+  "fix": "PLACE skip only for animal items, not product deposits",
+  "limits": "Exposed seeds; internal diagnostics, no rating inference or publication. One simulation at a time.",
+  "source_hashes": {
+    "submission\\submission_codex_e20_9_placefix_internal.py": "6281dd9ac1cf97957f3eab942c29a5d613cb1834e2b64f992829a68353b2d645",
+    "docs\\model_specs\\codex\\e20\\tools\\operational_calendar_base.py": "68d3895bc8eb2d2bbcba87052fbf5e8339056f4421fbe9bb2a13f0fb7202059d",
+    "docs\\model_specs\\codex\\e20\\tools\\operational_calendar_goose2.py": "7d2ad2bed57bc4739e7d2ceb11efc605ed8ea7319864cda6977beb10d2beaa96",
+    "docs\\model_specs\\codex\\e20\\tools\\operational_calendar_v44.py": "f106bb268d941bcd08d3c18249bc7a8bff2c8d9cbc7f47d9d201d5a217e47409",
+    "docs\\model_specs\\codex\\e22\\tools\\build_compare_e22.py": "d4865a8b61b341da5f650c057fd42ff1e1a792ac4289045897c0c0f5cab8d67e",
+    "docs\\model_specs\\codex\\e20\\configs\\e20v40\\PLAN_772.json": "b090638abe36d616a323667fbd00443cf55fa6a5b2e23811092b5b0fdf734712",
+    "docs\\model_specs\\codex\\e20\\configs\\e20v40\\PLAN_NATIVE.json": "985aca145627ee523a58b3136310c38fba26ffb2b556fb93afa64f208e694915",
+    "docs\\model_specs\\codex\\e20\\configs\\e20v40\\PROGRAM.json": "98a794a330fbd2507e8d8e8d6b970528c3736e38e9a2b044bb70eb0449062a90"
+  }
+}

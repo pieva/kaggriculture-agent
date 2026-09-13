@@ -1,0 +1,9 @@
+{
+  "purpose": "internal one-condition correction; not submitted",
+  "parent_sha256": "56956735924f78d3d5502754425b207c67849ff217980e3c383add726b47debe",
+  "sha256": "6281dd9ac1cf97957f3eab942c29a5d613cb1834e2b64f992829a68353b2d645",
+  "change": {
+    "old": "if op=='PLACE' and isinstance(tile,dict) and tile.get('animal'):done();continue",
+    "new": "if op=='PLACE' and cmd[1] in ANIMALS and isinstance(tile,dict) and tile.get('animal'):done();continue"
+  }
+}

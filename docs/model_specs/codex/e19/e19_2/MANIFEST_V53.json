@@ -1,0 +1,13 @@
+{
+  "file": "submission\\submission_codex_e19_3_770_v53_fixes.py",
+  "sha256": "7aec1603470421d8bea27de38c2a20b8a8f2351cbf29ab7a756eee7268dbecfa",
+  "parent_sha256": "43d5c6c3b70cf2940afaa83f3a243cba75e52f89db459d31ecb96187c4f13fda",
+  "status": "tested internally, not promoted, not submitted",
+  "fixes": [
+    "net same-batch grain round trips",
+    "urgent feeding separate from optional services",
+    "reserve accessible grain and delay growth for threatened animals",
+    "sell observed terminal stock"
+  ],
+  "validation": "9 unit checks;10 full file-loader games, all losses, zero escapes; known D26 starvation regression passes"
+}

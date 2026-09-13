@@ -1,5 +1,7 @@
 # Kaggriculture — Experimental Training of Decision Models
 
+**Stato corrente: E22, submission 56206528.** [Stato del progetto](docs/PROJECT_STATE.md) · [Ripresa della prossima sessione](docs/NEW_SESSION.md).
+
 Kaggriculture è un laboratorio sperimentale per sviluppare e valutare **modelli decisionali che gestiscono una fattoria simulata**: decidono cosa coltivare, come impiegare la manodopera, quando acquistare risorse e come organizzare produzione e vendite. I modelli sono *espliciti* perché le loro regole, ipotesi e priorità sono documentate e tradotte in codice eseguibile, chiamato **policy**.
 
 Il progetto impiega più **agenti di sviluppo interni** — Antigravity (AG), Codex, Claude e Copilot — per costruire modelli alternativi e revisionare la documentazione condivisa. Questi strumenti sviluppano le policy; sono poi le policy a prendere le decisioni durante le partite.

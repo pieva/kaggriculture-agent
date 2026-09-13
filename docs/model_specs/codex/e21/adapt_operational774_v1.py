@@ -1,0 +1,99 @@
+"""Compile native daily worker visits into a 772-specific operational plan."""
+from pathlib import Path
+from collections import defaultdict
+import json,hashlib
+BASE=Path(__file__).resolve().parent
+SOURCE=BASE/'reports/common_operational_program'
+OUT=BASE/'reports/operational774_v1'
+MOVE={'NORTH','SOUTH','EAST','WEST','PASS'}
+ANIMAL_TARGETS={(1,4):(4,6),(4,1):(4,1),(3,2):(3,2),(2,3):(3,6)}
+SPECIES={(4,6):'SHEEP',(3,6):'SHEEP',(3,2):'SHEEP',(4,1):'GOOSE'}
+CROP_TARGETS={(3,5):(1,4),(3,6):(2,3),(4,5):(0,7),(4,6):(4,9)}
+def build(adapt=True):
+    operations=json.loads((SOURCE/'OPERATIONS.json').read_text(encoding='utf-8'))
+    original=json.loads((SOURCE/'PROGRAM.json').read_text(encoding='utf-8'))
+    plans=defaultdict(lambda:defaultdict(list));changes=[]
+    for op in operations:
+        cmd=list(op['command']);name=cmd[0];pos=tuple(op['position_before']);tile=op['tile_before'];day=op['day'];worker=op['worker']
+        if name in MOVE:continue
+        # Animal pickup is supplied from the actual adapted placement command.
+        if adapt and day>=7 and name=='PICKUP' and cmd[1] in {'COW','SHEEP','GOOSE'}:continue
+        animal=(isinstance(tile,dict) and (tile.get('animal') or tile.get('kind') in {'PASTURE','COOP'})) or name in {'PLACE','BUILD_PASTURE','BUILD_COOP'}
+        dest=pos
+        if adapt:
+            if day>=12 and not animal and pos in {(0,7),(4,9)}:
+                changes.append(dict(source_step=op['source_step'],worker=worker,position=pos,command=cmd,change='capacity: omitted two wheat sites'));continue
+            if animal and pos==(6,3) and name!='BUILD_PASTURE':
+                dest=(3,5);day=max(day,12)
+                if name=='PLACE':cmd=['PLACE','SHEEP']
+            elif animal and pos in ANIMAL_TARGETS:
+                dest=ANIMAL_TARGETS[pos]
+                if dest is None:
+                    changes.append(dict(source_step=op['source_step'],worker=worker,position=pos,command=cmd,change='removed animal visit'));continue
+                if dest in SPECIES and name=='PLACE':cmd=['PLACE',SPECIES[dest]]
+                if name=='BUILD_COOP' and dest!=(4,1):cmd=['BUILD_PASTURE']
+                if dest in {(3,5),(3,6),(4,5),(4,6)}:day=max(day,12)
+            elif not animal and pos in CROP_TARGETS and day>=12:
+                dest=CROP_TARGETS[pos]
+            elif name=='BUILD_COOP' or name=='DIG' and isinstance(tile,dict) and tile.get('kind')=='COOP':
+                changes.append(dict(source_step=op['source_step'],worker=worker,position=pos,command=cmd,change='removed temporary coop'));continue
+        job=dict(position=list(dest),command=cmd,source_step=op['source_step'],source_day=op['day'],source_hour=op['hour'],changed=dest!=pos or cmd!=op['command'] or day!=op['day'])
+        plans[day][worker].append(job)
+        if job['changed']:changes.append(dict(original=op,adapted=job,day=day,worker=worker))
+    if adapt:
+        for day in range(12,31):
+            base=max(len(f['positions_before']) for f in original['frames'] if f['day']==day)
+            for workers in [plans[day]]:
+                for w,jobs in list(workers.items()):
+                    removed=[j for j in jobs if tuple(j['position']) in {(3,5),(3,6),(4,5),(4,6)} and j['command'][0] in {'BUILD_PASTURE','PLACE','FEED','CARE','HARVEST','COLLECT_FERTILIZER'}]
+                    if removed:changes.append(dict(source_step=removed[0]['source_step'],worker=w,change='dedicated Q2 service'))
+                    workers[w]=[j for j in jobs if j not in removed]
+            for offset,sites in enumerate([[(3,5),(3,6)],[(4,5),(4,6)]]):
+                for pos in sites:
+                    for cmd in [['BUILD_PASTURE'],['PLACE','SHEEP'],['FEED'],['CARE'],['HARVEST'],['COLLECT_FERTILIZER']]:
+                        plans[day][base+offset].append(dict(position=list(pos),command=cmd,source_day=day,source_hour=1,source_step=(day-1)*24+1,changed=False))
+                plans[day][base+offset].append(dict(position=[4,5],command=['DROP'],source_day=day,source_hour=1,source_step=(day-1)*24+1,changed=False))
+    # Balance only displaced visits into spare slots, preserving unchanged route ordering.
+    # Greedy insertion uses distance and command count; it is a static compiler,
+    # never a run-time priority dispatcher. Resource detours are measured separately.
+    allocation=[]
+    def cost(jobs):
+        pos=(4,4);steps=0
+        for j in jobs:
+            p=tuple(j['position']);steps+=abs(pos[0]-p[0])+abs(pos[1]-p[1])+1;pos=p
+        return steps
+    for day,workers in plans.items():
+        if not adapt:continue
+        displaced=[]
+        for w,jobs in workers.items():
+            keep=[]
+            for j in jobs:
+                if j['changed']:displaced.append((w,j))
+                else:keep.append(j)
+            workers[w]=keep
+        # Keep all consecutive commands of each changed physical visit together.
+        bundles=[]
+        for w,j in displaced:
+            if bundles and bundles[-1][0]==w and bundles[-1][1][-1]['position']==j['position']:
+                bundles[-1][1].append(j)
+            else:bundles.append((w,[j]))
+        for source,jobs in bundles:
+            choices=[]
+            for w,route in workers.items():
+                if day>=12 and w>=max(len(f['positions_before']) for f in original['frames'] if f['day']==day):continue
+                for index in range(len(route)+1):
+                    # Never split the commands of an existing visit.
+                    if 0<index<len(route) and route[index-1]['position']==route[index]['position']:continue
+                    trial=route[:index]+jobs+route[index:]
+                    length=cost(trial)
+                    choices.append(((max(0,length-24),length-cost(route),int(w!=source),length),w,index))
+            _,w,index=min(choices)
+            workers[w][index:index]=jobs
+            allocation.append(dict(day=day,source_worker=source,worker=w,position=jobs[0]['position'],commands=[j['command'] for j in jobs],estimated_route_steps=cost(workers[w])))
+    return dict(adapted=adapt,source_episode=original['episode'],days={str(d):{str(w):jobs for w,jobs in workers.items()} for d,workers in plans.items()},market_frames={f"{x['day']}:{x['hour']}":x['action'].get('market',[]) for x in original['frames']},changes=changes,allocation=allocation)
+def main():
+    OUT.mkdir(parents=True,exist_ok=True)
+    for name,flag in [('PLAN_774.json',True),('PLAN_NATIVE.json',False)]:
+        (OUT/name).write_text(json.dumps(build(flag),ensure_ascii=False,indent=2),encoding='utf-8')
+    print('Compiled native and adapted 772 plans')
+if __name__=='__main__':main()

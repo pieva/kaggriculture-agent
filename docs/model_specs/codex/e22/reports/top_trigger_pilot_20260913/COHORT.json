@@ -1,0 +1,1445 @@
+{
+  "protocol": {
+    "frozen_utc": "2026-09-13T10:24:14.167812+00:00",
+    "selection": "Three nearest displayed ratings to 2000/2250/2500 within that band and three highest ranked >=3000. Five latest completed public non-self-play episodes per exact selected submission; no outcome or topology filtering. Exploratory sample, not representative estimate.",
+    "selections": [
+      {
+        "teamId": 16658732,
+        "submissionId": 56184881,
+        "rank": 1466,
+        "displayScore": "2000.2",
+        "band": "2000-2500",
+        "name": "Olympus"
+      },
+      {
+        "teamId": 16823957,
+        "submissionId": 56137379,
+        "rank": 1095,
+        "displayScore": "2248.9",
+        "band": "2000-2500",
+        "name": "kiki yi2"
+      },
+      {
+        "teamId": 16668262,
+        "submissionId": 56200341,
+        "rank": 683,
+        "displayScore": "2499.5",
+        "medal": "BRONZE",
+        "band": "2000-2500",
+        "name": "spbforce"
+      },
+      {
+        "teamId": 16718819,
+        "submissionId": 56156662,
+        "rank": 1,
+        "displayScore": "3228.9",
+        "medal": "GOLD",
+        "inTheMoney": true,
+        "band": "3000+",
+        "name": "Majkel1337"
+      },
+      {
+        "teamId": 16622349,
+        "submissionId": 56173067,
+        "rank": 2,
+        "displayScore": "3084.1",
+        "medal": "GOLD",
+        "inTheMoney": true,
+        "band": "3000+",
+        "name": "Mengfei Li"
+      },
+      {
+        "teamId": 16730524,
+        "submissionId": 56180166,
+        "rank": 3,
+        "displayScore": "3049.7",
+        "medal": "GOLD",
+        "inTheMoney": true,
+        "band": "3000+",
+        "name": "THIRD FARM CLUB"
+      }
+    ]
+  },
+  "games": [
+    {
+      "name": "Olympus",
+      "submission": 56184881,
+      "band": "2000-2500",
+      "display_score": 2000.2,
+      "episode": 108505984,
+      "seat": 1,
+      "rating": 2000.2410766232356,
+      "metadata": {
+        "id": 108505984,
+        "createTime": "2026-09-13T10:22:38.721513Z",
+        "endTime": "2026-09-13T10:23:58.022958800Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236896809,
+            "submissionId": 56203496,
+            "reward": 148759,
+            "initialScore": 1992.8386139743877,
+            "updatedScore": 2031.431381962548,
+            "teamId": 16850105
+          },
+          {
+            "id": 236896810,
+            "submissionId": 56184881,
+            "reward": 56553,
+            "index": 1,
+            "initialScore": 2000.2410766232356,
+            "updatedScore": 1996.0612595793789,
+            "teamId": 16658732
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108505984.json",
+      "sha256": "e26c40004e6f277b70ce808e57f2c242205288a5d8225d84f19b9018369b652b",
+      "teams": [
+        "Pantheon",
+        "Olympus"
+      ],
+      "rewards": [
+        148759.0,
+        56553.0
+      ],
+      "seed": 164235329
+    },
+    {
+      "name": "Olympus",
+      "submission": 56184881,
+      "band": "2000-2500",
+      "display_score": 2000.2,
+      "episode": 108504578,
+      "seat": 0,
+      "rating": 2004.7803509906253,
+      "metadata": {
+        "id": 108504578,
+        "createTime": "2026-09-13T10:14:39.726262Z",
+        "endTime": "2026-09-13T10:18:54.096260200Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236893997,
+            "submissionId": 56184881,
+            "reward": 114166,
+            "initialScore": 2004.7803509906253,
+            "updatedScore": 2000.2410766232356,
+            "teamId": 16658732
+          },
+          {
+            "id": 236893999,
+            "submissionId": 56201883,
+            "reward": 121592,
+            "index": 1,
+            "initialScore": 1999.4877020163049,
+            "updatedScore": 2007.0526868739373,
+            "teamId": 16786341
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108504578.json",
+      "sha256": "4bd12608676f301737aa9499f9390e5b01b62c46a955432abeb48df6007b1d89",
+      "teams": [
+        "Olympus",
+        "Farmula One"
+      ],
+      "rewards": [
+        114166.0,
+        121592.0
+      ],
+      "seed": 139803591
+    },
+    {
+      "name": "Olympus",
+      "submission": 56184881,
+      "band": "2000-2500",
+      "display_score": 2000.2,
+      "episode": 108498610,
+      "seat": 0,
+      "rating": 2002.517739687281,
+      "metadata": {
+        "id": 108498610,
+        "createTime": "2026-09-13T09:50:46.436886300Z",
+        "endTime": "2026-09-13T09:52:44.796630800Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236882060,
+            "submissionId": 56184881,
+            "reward": 72667,
+            "initialScore": 2002.517739687281,
+            "updatedScore": 2004.7803509906253,
+            "teamId": 16658732
+          },
+          {
+            "id": 236882062,
+            "submissionId": 56092524,
+            "reward": 68220,
+            "index": 1,
+            "initialScore": 1845.256713790304,
+            "updatedScore": 1842.9941024869597,
+            "teamId": 16734914
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108498610.json",
+      "sha256": "48f400ec32faffddc49a9fda177b25f289dd2b3f43364ddfb0e88f2359b217d1",
+      "teams": [
+        "Olympus",
+        "bharat"
+      ],
+      "rewards": [
+        72667.0,
+        68220.0
+      ],
+      "seed": 50499287
+    },
+    {
+      "name": "Olympus",
+      "submission": 56184881,
+      "band": "2000-2500",
+      "display_score": 2000.2,
+      "episode": 108495535,
+      "seat": 0,
+      "rating": 2006.8398181631153,
+      "metadata": {
+        "id": 108495535,
+        "createTime": "2026-09-13T09:38:47.536679900Z",
+        "endTime": "2026-09-13T09:42:38.825024800Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236875911,
+            "submissionId": 56184881,
+            "reward": 87331,
+            "initialScore": 2006.8398181631153,
+            "updatedScore": 2002.517739687281,
+            "teamId": 16658732
+          },
+          {
+            "id": 236875912,
+            "submissionId": 56187878,
+            "reward": 91995,
+            "index": 1,
+            "initialScore": 2017.227185883108,
+            "updatedScore": 2021.5492643589423,
+            "teamId": 16676034
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108495535.json",
+      "sha256": "6a1f39c5f5fc48fc58e86da92aaead51fe29ef501572123ed82805a1496e19f0",
+      "teams": [
+        "Olympus",
+        "Songyot P"
+      ],
+      "rewards": [
+        87331.0,
+        91995.0
+      ],
+      "seed": 1841331021
+    },
+    {
+      "name": "Olympus",
+      "submission": 56184881,
+      "band": "2000-2500",
+      "display_score": 2000.2,
+      "episode": 108495477,
+      "seat": 1,
+      "rating": 2003.9045807308867,
+      "metadata": {
+        "id": 108495477,
+        "createTime": "2026-09-13T09:38:47.452610200Z",
+        "endTime": "2026-09-13T09:41:45.943650700Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236875793,
+            "submissionId": 56161036,
+            "reward": 94752,
+            "initialScore": 1900.1485859815657,
+            "updatedScore": 1897.213348549337,
+            "teamId": 16634312
+          },
+          {
+            "id": 236875794,
+            "submissionId": 56184881,
+            "reward": 95266,
+            "index": 1,
+            "initialScore": 2003.9045807308867,
+            "updatedScore": 2006.8398181631153,
+            "teamId": 16658732
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108495477.json",
+      "sha256": "cadcd98a84181c04173d12bdb2114ecd9a9165217a73cc2ef2f83905be7204b5",
+      "teams": [
+        "Linh Le",
+        "Olympus"
+      ],
+      "rewards": [
+        94752.0,
+        95266.0
+      ],
+      "seed": 468456234
+    },
+    {
+      "name": "kiki yi2",
+      "submission": 56137379,
+      "band": "2000-2500",
+      "display_score": 2248.9,
+      "episode": 108500678,
+      "seat": 0,
+      "rating": 2254.310991365122,
+      "metadata": {
+        "id": 108500678,
+        "createTime": "2026-09-13T09:58:42.377439500Z",
+        "endTime": "2026-09-13T10:02:40.290986900Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236886197,
+            "submissionId": 56137379,
+            "reward": 78013,
+            "initialScore": 2254.310991365122,
+            "updatedScore": 2248.985754418676,
+            "teamId": 16823957
+          },
+          {
+            "id": 236886198,
+            "submissionId": 56186236,
+            "reward": 84387,
+            "index": 1,
+            "initialScore": 2205.418454943126,
+            "updatedScore": 2210.743691889572,
+            "teamId": 16843838
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108500678.json",
+      "sha256": "5502bd6987a497cfa4bb0d4bea08686564432b0204a9882258a392f02ec96dff",
+      "teams": [
+        "kiki yi2",
+        "Alapati Ramakrishna"
+      ],
+      "rewards": [
+        78013.0,
+        84387.0
+      ],
+      "seed": 911519806
+    },
+    {
+      "name": "kiki yi2",
+      "submission": 56137379,
+      "band": "2000-2500",
+      "display_score": 2248.9,
+      "episode": 108494972,
+      "seat": 0,
+      "rating": 2250.224403769422,
+      "metadata": {
+        "id": 108494972,
+        "createTime": "2026-09-13T09:38:46.596409200Z",
+        "endTime": "2026-09-13T09:40:39.185419800Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236874785,
+            "submissionId": 56137379,
+            "reward": 157779,
+            "initialScore": 2250.224403769422,
+            "updatedScore": 2254.310991365122,
+            "teamId": 16823957
+          },
+          {
+            "id": 236874786,
+            "submissionId": 56201720,
+            "reward": 71311,
+            "index": 1,
+            "initialScore": 2229.2377290289855,
+            "updatedScore": 2219.582440802333,
+            "teamId": 16716263
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108494972.json",
+      "sha256": "ccb400a496dead55bcac8df0dc60076c9b25110c3d7a70c156a31bcb4380caa9",
+      "teams": [
+        "kiki yi2",
+        "Ugnė Miklovaitė"
+      ],
+      "rewards": [
+        157779.0,
+        71311.0
+      ],
+      "seed": 41681285
+    },
+    {
+      "name": "kiki yi2",
+      "submission": 56137379,
+      "band": "2000-2500",
+      "display_score": 2248.9,
+      "episode": 108493397,
+      "seat": 0,
+      "rating": 2254.270836257214,
+      "metadata": {
+        "id": 108493397,
+        "createTime": "2026-09-13T09:30:40.545506500Z",
+        "endTime": "2026-09-13T09:34:24.546904700Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236871628,
+            "submissionId": 56137379,
+            "reward": 53939,
+            "initialScore": 2254.270836257214,
+            "updatedScore": 2250.224403769422,
+            "teamId": 16823957
+          },
+          {
+            "id": 236871645,
+            "submissionId": 56167468,
+            "reward": 54520,
+            "index": 1,
+            "initialScore": 2281.9470711531712,
+            "updatedScore": 2285.993503640963,
+            "teamId": 16848952
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108493397.json",
+      "sha256": "76917f6b704b6e789c6e5690a212a9c37c91ec1688480d90d1b0828a4c757a4e",
+      "teams": [
+        "kiki yi2",
+        "tubotu"
+      ],
+      "rewards": [
+        53939.0,
+        54520.0
+      ],
+      "seed": 779941121
+    },
+    {
+      "name": "kiki yi2",
+      "submission": 56137379,
+      "band": "2000-2500",
+      "display_score": 2248.9,
+      "episode": 108487585,
+      "seat": 0,
+      "rating": 2250.3351910563424,
+      "metadata": {
+        "id": 108487585,
+        "createTime": "2026-09-13T09:10:44.796371200Z",
+        "endTime": "2026-09-13T09:12:39.331886800Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236860012,
+            "submissionId": 56137379,
+            "reward": 96589,
+            "initialScore": 2250.3351910563424,
+            "updatedScore": 2254.270836257214,
+            "teamId": 16823957
+          },
+          {
+            "id": 236860014,
+            "submissionId": 56202506,
+            "reward": 47431,
+            "index": 1,
+            "initialScore": 2272.026884786349,
+            "updatedScore": 2194.8400472753756,
+            "teamId": 16866549
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108487585.json",
+      "sha256": "df9f33dee6d5a2c50109593e094e09b9340e89e0cb4d25dce949e98c0f80b6c3",
+      "teams": [
+        "kiki yi2",
+        "Roman Nesterov"
+      ],
+      "rewards": [
+        96589.0,
+        47431.0
+      ],
+      "seed": 229825618
+    },
+    {
+      "name": "kiki yi2",
+      "submission": 56137379,
+      "band": "2000-2500",
+      "display_score": 2248.9,
+      "episode": 108485289,
+      "seat": 1,
+      "rating": 2253.855704910332,
+      "metadata": {
+        "id": 108485289,
+        "createTime": "2026-09-13T08:58:51.734157700Z",
+        "endTime": "2026-09-13T09:04:00.625788100Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236855420,
+            "submissionId": 56198157,
+            "reward": 112836,
+            "initialScore": 2316.0813371481213,
+            "updatedScore": 2319.601851002111,
+            "teamId": 16870577
+          },
+          {
+            "id": 236855421,
+            "submissionId": 56137379,
+            "reward": 94850,
+            "index": 1,
+            "initialScore": 2253.855704910332,
+            "updatedScore": 2250.3351910563424,
+            "teamId": 16823957
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108485289.json",
+      "sha256": "7686dfd1a9ddc80d14779f7d14cfca4c3ce39aaffc585cd1ae70aa273afef553",
+      "teams": [
+        "Kenan Zhang9",
+        "kiki yi2"
+      ],
+      "rewards": [
+        112836.0,
+        94850.0
+      ],
+      "seed": 584696962
+    },
+    {
+      "name": "spbforce",
+      "submission": 56200341,
+      "band": "2000-2500",
+      "display_score": 2499.5,
+      "episode": 108505403,
+      "seat": 1,
+      "rating": 2499.5829074133553,
+      "metadata": {
+        "id": 108505403,
+        "createTime": "2026-09-13T10:18:41.493514Z",
+        "endTime": "2026-09-13T10:23:56.601513Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236895647,
+            "submissionId": 56200116,
+            "reward": 91380,
+            "initialScore": 2593.660208386357,
+            "updatedScore": 2587.4223913559235,
+            "teamId": 16681049
+          },
+          {
+            "id": 236895648,
+            "submissionId": 56200341,
+            "reward": 92595,
+            "index": 1,
+            "initialScore": 2499.5829074133553,
+            "updatedScore": 2507.5221220962326,
+            "teamId": 16668262
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108505403.json",
+      "sha256": "cce456d26f81acf1181eadb4c40acdb77dcd81a5dd0256c31847e6875dc84540",
+      "teams": [
+        "SiLin “Can SiLin” Can",
+        "spbforce"
+      ],
+      "rewards": [
+        91380.0,
+        92595.0
+      ],
+      "seed": 574646778
+    },
+    {
+      "name": "spbforce",
+      "submission": 56200341,
+      "band": "2000-2500",
+      "display_score": 2499.5,
+      "episode": 108505285,
+      "seat": 1,
+      "rating": 2492.736521565454,
+      "metadata": {
+        "id": 108505285,
+        "createTime": "2026-09-13T10:18:41.296337600Z",
+        "endTime": "2026-09-13T10:22:06.733964Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236895419,
+            "submissionId": 56185239,
+            "reward": 139080,
+            "initialScore": 2533.0370588877977,
+            "updatedScore": 2527.8873141354024,
+            "teamId": 16867601
+          },
+          {
+            "id": 236895420,
+            "submissionId": 56200341,
+            "reward": 140079,
+            "index": 1,
+            "initialScore": 2492.736521565454,
+            "updatedScore": 2499.5829074133553,
+            "teamId": 16668262
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108505285.json",
+      "sha256": "de8b4c96c4ccffcd6212353fe7e50a2a6e9a19230d0a2c4112daf19a97ad17dd",
+      "teams": [
+        "tadashikato",
+        "spbforce"
+      ],
+      "rewards": [
+        139080.0,
+        140079.0
+      ],
+      "seed": 1736623238
+    },
+    {
+      "name": "spbforce",
+      "submission": 56200341,
+      "band": "2000-2500",
+      "display_score": 2499.5,
+      "episode": 108504264,
+      "seat": 1,
+      "rating": 2492.352417868019,
+      "metadata": {
+        "id": 108504264,
+        "createTime": "2026-09-13T10:14:39.171894200Z",
+        "endTime": "2026-09-13T10:17:09.826230200Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236893373,
+            "submissionId": 56189092,
+            "reward": 127149,
+            "initialScore": 2503.6462952267516,
+            "updatedScore": 2503.3574766710926,
+            "teamId": 16640933
+          },
+          {
+            "id": 236893374,
+            "submissionId": 56200341,
+            "reward": 127149,
+            "index": 1,
+            "initialScore": 2492.352417868019,
+            "updatedScore": 2492.736521565454,
+            "teamId": 16668262
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108504264.json",
+      "sha256": "9a099552a4f83ba321b709053b6dd55a1e67602b0a647af6c920fa1a2cd4c9a9",
+      "teams": [
+        "Bhanu prasad",
+        "spbforce"
+      ],
+      "rewards": [
+        127149.0,
+        127149.0
+      ],
+      "seed": 1899446521
+    },
+    {
+      "name": "spbforce",
+      "submission": 56200341,
+      "band": "2000-2500",
+      "display_score": 2499.5,
+      "episode": 108503246,
+      "seat": 0,
+      "rating": 2493.483142207726,
+      "metadata": {
+        "id": 108503246,
+        "createTime": "2026-09-13T10:10:41.922822700Z",
+        "endTime": "2026-09-13T10:13:55.284752Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236891333,
+            "submissionId": 56200341,
+            "reward": 77600,
+            "initialScore": 2493.483142207726,
+            "updatedScore": 2492.352417868019,
+            "teamId": 16668262
+          },
+          {
+            "id": 236891334,
+            "submissionId": 56191528,
+            "reward": 77600,
+            "index": 1,
+            "initialScore": 2460.248766721745,
+            "updatedScore": 2461.098658783275,
+            "teamId": 16763505
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108503246.json",
+      "sha256": "4e40dfa6443d2a61336ece174110391172273fb3431bb02c4299dde00b99bd5e",
+      "teams": [
+        "spbforce",
+        "Sai Reddy Pothireddy"
+      ],
+      "rewards": [
+        77600.0,
+        77600.0
+      ],
+      "seed": 945289835
+    },
+    {
+      "name": "spbforce",
+      "submission": 56200341,
+      "band": "2000-2500",
+      "display_score": 2499.5,
+      "episode": 108502229,
+      "seat": 1,
+      "rating": 2494.278948462679,
+      "metadata": {
+        "id": 108502229,
+        "createTime": "2026-09-13T10:06:43.705910900Z",
+        "endTime": "2026-09-13T10:09:41.523729500Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236889299,
+            "submissionId": 56188934,
+            "reward": 50198,
+            "initialScore": 2470.8962121182603,
+            "updatedScore": 2471.4941644277806,
+            "teamId": 16726287
+          },
+          {
+            "id": 236889300,
+            "submissionId": 56200341,
+            "reward": 50198,
+            "index": 1,
+            "initialScore": 2494.278948462679,
+            "updatedScore": 2493.483142207726,
+            "teamId": 16668262
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108502229.json",
+      "sha256": "5159e27a44b683bfca980a1ebba313dae59ebe4e490b492197054162705630e1",
+      "teams": [
+        "BBaRRel.",
+        "spbforce"
+      ],
+      "rewards": [
+        50198.0,
+        50198.0
+      ],
+      "seed": 1119758479
+    },
+    {
+      "name": "Majkel1337",
+      "submission": 56156662,
+      "band": "3000+",
+      "display_score": 3228.9,
+      "episode": 108500554,
+      "seat": 0,
+      "rating": 3227.05622365089,
+      "metadata": {
+        "id": 108500554,
+        "createTime": "2026-09-13T09:58:42.190749500Z",
+        "endTime": "2026-09-13T10:04:16.222377900Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236885946,
+            "submissionId": 56156662,
+            "reward": 78190,
+            "initialScore": 3227.05622365089,
+            "updatedScore": 3228.9262217157257,
+            "teamId": 16718819
+          },
+          {
+            "id": 236885948,
+            "submissionId": 56193798,
+            "reward": 76361,
+            "index": 1,
+            "initialScore": 3034.313567765379,
+            "updatedScore": 3032.4435697005433,
+            "teamId": 16621799
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108500554.json",
+      "sha256": "91462d46744964a041dba75ebb1fc8fdcc22fab43d28fcf4662337da1f58f8ce",
+      "teams": [
+        "Majkel1337",
+        "Artem The Farmer 🍅"
+      ],
+      "rewards": [
+        78190.0,
+        76361.0
+      ],
+      "seed": 774714135
+    },
+    {
+      "name": "Majkel1337",
+      "submission": 56156662,
+      "band": "3000+",
+      "display_score": 3228.9,
+      "episode": 108494524,
+      "seat": 0,
+      "rating": 3226.290691681937,
+      "metadata": {
+        "id": 108494524,
+        "createTime": "2026-09-13T09:34:40.784032Z",
+        "endTime": "2026-09-13T09:39:53.982989Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236873893,
+            "submissionId": 56156662,
+            "reward": 107682,
+            "initialScore": 3226.290691681937,
+            "updatedScore": 3227.05622365089,
+            "teamId": 16718819
+          },
+          {
+            "id": 236873896,
+            "submissionId": 56173295,
+            "reward": 102920,
+            "index": 1,
+            "initialScore": 2896.8518955759996,
+            "updatedScore": 2896.0863636070467,
+            "teamId": 16621628
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108494524.json",
+      "sha256": "609981141283c1f9cb149dc03085dd9a97a753aa32c9765d151a79111420b3cd",
+      "teams": [
+        "Majkel1337",
+        "pupen_o"
+      ],
+      "rewards": [
+        107682.0,
+        102920.0
+      ],
+      "seed": 1966530669
+    },
+    {
+      "name": "Majkel1337",
+      "submission": 56156662,
+      "band": "3000+",
+      "display_score": 3228.9,
+      "episode": 108488494,
+      "seat": 1,
+      "rating": 3223.9539132188584,
+      "metadata": {
+        "id": 108488494,
+        "createTime": "2026-09-13T09:10:46.398334100Z",
+        "endTime": "2026-09-13T09:15:08.238244900Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236861862,
+            "submissionId": 56173067,
+            "reward": 78483,
+            "initialScore": 3072.9870935969047,
+            "updatedScore": 3070.650315133826,
+            "teamId": 16622349
+          },
+          {
+            "id": 236861863,
+            "submissionId": 56156662,
+            "reward": 106933,
+            "index": 1,
+            "initialScore": 3223.9539132188584,
+            "updatedScore": 3226.290691681937,
+            "teamId": 16718819
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108488494.json",
+      "sha256": "42832d182f8740315e158575494494f9afa9376b8ab85226b1ba134ee746b35b",
+      "teams": [
+        "Mengfei Li",
+        "Majkel1337"
+      ],
+      "rewards": [
+        78483.0,
+        106933.0
+      ],
+      "seed": 1780971223
+    },
+    {
+      "name": "Majkel1337",
+      "submission": 56156662,
+      "band": "3000+",
+      "display_score": 3228.9,
+      "episode": 108483149,
+      "seat": 1,
+      "rating": 3221.559813367546,
+      "metadata": {
+        "id": 108483149,
+        "createTime": "2026-09-13T08:50:42.033778700Z",
+        "endTime": "2026-09-13T08:54:20.062820400Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236851139,
+            "submissionId": 56173067,
+            "reward": 119172,
+            "initialScore": 3075.381193448217,
+            "updatedScore": 3072.9870935969047,
+            "teamId": 16622349
+          },
+          {
+            "id": 236851140,
+            "submissionId": 56156662,
+            "reward": 134405,
+            "index": 1,
+            "initialScore": 3221.559813367546,
+            "updatedScore": 3223.9539132188584,
+            "teamId": 16718819
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108483149.json",
+      "sha256": "1ac4dd3643c26b8b99c0636289f14e00a5d4d30f588f1835df35244f917183ed",
+      "teams": [
+        "Mengfei Li",
+        "Majkel1337"
+      ],
+      "rewards": [
+        119172.0,
+        134405.0
+      ],
+      "seed": 1242886219
+    },
+    {
+      "name": "Majkel1337",
+      "submission": 56156662,
+      "band": "3000+",
+      "display_score": 3228.9,
+      "episode": 108477110,
+      "seat": 0,
+      "rating": 3219.0599010038068,
+      "metadata": {
+        "id": 108477110,
+        "createTime": "2026-09-13T08:26:39.197678Z",
+        "endTime": "2026-09-13T08:29:30.816898900Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236839061,
+            "submissionId": 56156662,
+            "reward": 156369,
+            "initialScore": 3219.0599010038068,
+            "updatedScore": 3221.559813367546,
+            "teamId": 16718819
+          },
+          {
+            "id": 236839063,
+            "submissionId": 56173067,
+            "reward": 149232,
+            "index": 1,
+            "initialScore": 3081.5557374048135,
+            "updatedScore": 3079.055825041074,
+            "teamId": 16622349
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108477110.json",
+      "sha256": "d6f0efe47c3c9a44ca5df2b9cc705b2d0aa16a674f4442a56f0e6c0f300e72c1",
+      "teams": [
+        "Majkel1337",
+        "Mengfei Li"
+      ],
+      "rewards": [
+        156369.0,
+        149232.0
+      ],
+      "seed": 74586908
+    },
+    {
+      "name": "Mengfei Li",
+      "submission": 56173067,
+      "band": "3000+",
+      "display_score": 3084.1,
+      "episode": 108500570,
+      "seat": 0,
+      "rating": 3088.0393580439004,
+      "metadata": {
+        "id": 108500570,
+        "createTime": "2026-09-13T09:58:42.209652200Z",
+        "endTime": "2026-09-13T10:04:01.211016900Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236885977,
+            "submissionId": 56173067,
+            "reward": 75773,
+            "initialScore": 3088.0393580439004,
+            "updatedScore": 3084.166339869398,
+            "teamId": 16622349
+          },
+          {
+            "id": 236885979,
+            "submissionId": 56148003,
+            "reward": 83316,
+            "index": 1,
+            "initialScore": 3126.864319589759,
+            "updatedScore": 3130.737337764261,
+            "teamId": 16718819
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108500570.json",
+      "sha256": "6d6bc9065983726829711bd076b25a063c8690e100b9d0adb68abf4902eb09fb",
+      "teams": [
+        "Mengfei Li",
+        "Majkel1337"
+      ],
+      "rewards": [
+        75773.0,
+        83316.0
+      ],
+      "seed": 1483648346
+    },
+    {
+      "name": "Mengfei Li",
+      "submission": 56173067,
+      "band": "3000+",
+      "display_score": 3084.1,
+      "episode": 108500553,
+      "seat": 1,
+      "rating": 3079.0976168998054,
+      "metadata": {
+        "id": 108500553,
+        "createTime": "2026-09-13T09:58:42.190721700Z",
+        "endTime": "2026-09-13T10:01:40.273659800Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236885945,
+            "submissionId": 56161578,
+            "reward": 106084,
+            "initialScore": 3022.6343955285306,
+            "updatedScore": 3019.028550869066,
+            "teamId": 16732403
+          },
+          {
+            "id": 236885947,
+            "submissionId": 56173067,
+            "reward": 106399,
+            "index": 1,
+            "initialScore": 3079.0976168998054,
+            "updatedScore": 3082.70346155927,
+            "teamId": 16622349
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108500553.json",
+      "sha256": "518f4960939d1974c2849adb54ebfea7759cc5b26275ab80e1ac060bcf0776cd",
+      "teams": [
+        "ymg_aq",
+        "Mengfei Li"
+      ],
+      "rewards": [
+        106084.0,
+        106399.0
+      ],
+      "seed": 1955344063
+    },
+    {
+      "name": "Mengfei Li",
+      "submission": 56173067,
+      "band": "3000+",
+      "display_score": 3084.1,
+      "episode": 108500464,
+      "seat": 0,
+      "rating": 3082.70346155927,
+      "metadata": {
+        "id": 108500464,
+        "createTime": "2026-09-13T09:58:42.040075700Z",
+        "endTime": "2026-09-13T10:03:03.958076100Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236885769,
+            "submissionId": 56173067,
+            "reward": 97360,
+            "initialScore": 3082.70346155927,
+            "updatedScore": 3088.0393580439004,
+            "teamId": 16622349
+          },
+          {
+            "id": 236885770,
+            "submissionId": 56148003,
+            "reward": 94067,
+            "index": 1,
+            "initialScore": 3132.200216074389,
+            "updatedScore": 3126.864319589759,
+            "teamId": 16718819
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108500464.json",
+      "sha256": "d29217e44755bd4ad73b70c8eb3670684eb03d4dc5d5a9d8a025ce4e67df4469",
+      "teams": [
+        "Mengfei Li",
+        "Majkel1337"
+      ],
+      "rewards": [
+        97360.0,
+        94067.0
+      ],
+      "seed": 496869461
+    },
+    {
+      "name": "Mengfei Li",
+      "submission": 56173067,
+      "band": "3000+",
+      "display_score": 3084.1,
+      "episode": 108494533,
+      "seat": 1,
+      "rating": 3074.7892479792495,
+      "metadata": {
+        "id": 108494533,
+        "createTime": "2026-09-13T09:34:40.786557600Z",
+        "endTime": "2026-09-13T09:38:17.736233400Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236873923,
+            "submissionId": 56193798,
+            "reward": 109963,
+            "initialScore": 3048.2654348992914,
+            "updatedScore": 3044.200880694297,
+            "teamId": 16621799
+          },
+          {
+            "id": 236873932,
+            "submissionId": 56173067,
+            "reward": 123936,
+            "index": 1,
+            "initialScore": 3074.7892479792495,
+            "updatedScore": 3078.8538021842437,
+            "teamId": 16622349
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108494533.json",
+      "sha256": "950511622204158541a5dd483e32cae55bd4bcc43f41d4a415263a362ba95d12",
+      "teams": [
+        "Artem The Farmer 🍅",
+        "Mengfei Li"
+      ],
+      "rewards": [
+        109963.0,
+        123936.0
+      ],
+      "seed": 690642497
+    },
+    {
+      "name": "Mengfei Li",
+      "submission": 56173067,
+      "band": "3000+",
+      "display_score": 3084.1,
+      "episode": 108494383,
+      "seat": 0,
+      "rating": 3075.14563751231,
+      "metadata": {
+        "id": 108494383,
+        "createTime": "2026-09-13T09:34:40.579228600Z",
+        "endTime": "2026-09-13T09:39:49.120035800Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236873645,
+            "submissionId": 56173067,
+            "reward": 106637,
+            "initialScore": 3075.14563751231,
+            "updatedScore": 3079.0976168998054,
+            "teamId": 16622349
+          },
+          {
+            "id": 236873646,
+            "submissionId": 56180166,
+            "reward": 98404,
+            "index": 1,
+            "initialScore": 3041.4246570611417,
+            "updatedScore": 3037.472677673646,
+            "teamId": 16730524
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108494383.json",
+      "sha256": "ab62c5bffe2653753e7a62e9e015c6a9ed392ed9d53a6f74c0888827eabed048",
+      "teams": [
+        "Mengfei Li",
+        "THIRD FARM CLUB"
+      ],
+      "rewards": [
+        106637.0,
+        98404.0
+      ],
+      "seed": 1718497878
+    },
+    {
+      "name": "THIRD FARM CLUB",
+      "submission": 56180166,
+      "band": "3000+",
+      "display_score": 3049.7,
+      "episode": 108500556,
+      "seat": 1,
+      "rating": 3045.71984388352,
+      "metadata": {
+        "id": 108500556,
+        "createTime": "2026-09-13T09:58:42.194346200Z",
+        "endTime": "2026-09-13T10:06:40.074777100Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236885951,
+            "submissionId": 56114097,
+            "reward": 107277,
+            "initialScore": 3016.4002535432883,
+            "updatedScore": 3012.379599506196,
+            "teamId": 16640510
+          },
+          {
+            "id": 236885954,
+            "submissionId": 56180166,
+            "reward": 116830,
+            "index": 1,
+            "initialScore": 3045.71984388352,
+            "updatedScore": 3049.740497920612,
+            "teamId": 16730524
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108500556.json",
+      "sha256": "cc18a5c56f47ec5311ea303077ffa65539163e265e4fa3627e48b795c7360fea",
+      "teams": [
+        "SpaTaro",
+        "THIRD FARM CLUB"
+      ],
+      "rewards": [
+        107277.0,
+        116830.0
+      ],
+      "seed": 261888145
+    },
+    {
+      "name": "THIRD FARM CLUB",
+      "submission": 56180166,
+      "band": "3000+",
+      "display_score": 3049.7,
+      "episode": 108499522,
+      "seat": 0,
+      "rating": 3042.0754178085303,
+      "metadata": {
+        "id": 108499522,
+        "createTime": "2026-09-13T09:54:44.708930800Z",
+        "endTime": "2026-09-13T09:57:32.227394500Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236883885,
+            "submissionId": 56180166,
+            "reward": 97242,
+            "initialScore": 3042.0754178085303,
+            "updatedScore": 3045.71984388352,
+            "teamId": 16730524
+          },
+          {
+            "id": 236883886,
+            "submissionId": 56119872,
+            "reward": 96828,
+            "index": 1,
+            "initialScore": 2988.1962769634115,
+            "updatedScore": 2984.551850888422,
+            "teamId": 16805699
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108499522.json",
+      "sha256": "50dc99f726ae94b8bec6e32a289659eda7a6ce9be68d352ae494362f04e4a030",
+      "teams": [
+        "THIRD FARM CLUB",
+        "feel the agi"
+      ],
+      "rewards": [
+        97242.0,
+        96828.0
+      ],
+      "seed": 184848463
+    },
+    {
+      "name": "THIRD FARM CLUB",
+      "submission": 56180166,
+      "band": "3000+",
+      "display_score": 3049.7,
+      "episode": 108494525,
+      "seat": 1,
+      "rating": 3037.472677673646,
+      "metadata": {
+        "id": 108494525,
+        "createTime": "2026-09-13T09:34:40.783599600Z",
+        "endTime": "2026-09-13T09:41:26.835277Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236873889,
+            "submissionId": 56193798,
+            "reward": 94269,
+            "initialScore": 3044.200880694297,
+            "updatedScore": 3039.598140559413,
+            "teamId": 16621799
+          },
+          {
+            "id": 236873892,
+            "submissionId": 56180166,
+            "reward": 94978,
+            "index": 1,
+            "initialScore": 3037.472677673646,
+            "updatedScore": 3042.0754178085303,
+            "teamId": 16730524
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108494525.json",
+      "sha256": "0f3a64653d72a1d078d4c723537708f4e6cfa903d9715483626cc1c6f6b0e81e",
+      "teams": [
+        "Artem The Farmer 🍅",
+        "THIRD FARM CLUB"
+      ],
+      "rewards": [
+        94269.0,
+        94978.0
+      ],
+      "seed": 1759813371
+    },
+    {
+      "name": "THIRD FARM CLUB",
+      "submission": 56180166,
+      "band": "3000+",
+      "display_score": 3049.7,
+      "episode": 108494383,
+      "seat": 1,
+      "rating": 3041.4246570611417,
+      "metadata": {
+        "id": 108494383,
+        "createTime": "2026-09-13T09:34:40.579228600Z",
+        "endTime": "2026-09-13T09:39:49.120035800Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236873645,
+            "submissionId": 56173067,
+            "reward": 106637,
+            "initialScore": 3075.14563751231,
+            "updatedScore": 3079.0976168998054,
+            "teamId": 16622349
+          },
+          {
+            "id": 236873646,
+            "submissionId": 56180166,
+            "reward": 98404,
+            "index": 1,
+            "initialScore": 3041.4246570611417,
+            "updatedScore": 3037.472677673646,
+            "teamId": 16730524
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108494383.json",
+      "sha256": "ab62c5bffe2653753e7a62e9e015c6a9ed392ed9d53a6f74c0888827eabed048",
+      "teams": [
+        "Mengfei Li",
+        "THIRD FARM CLUB"
+      ],
+      "rewards": [
+        106637.0,
+        98404.0
+      ],
+      "seed": 1718497878
+    },
+    {
+      "name": "THIRD FARM CLUB",
+      "submission": 56180166,
+      "band": "3000+",
+      "display_score": 3049.7,
+      "episode": 108488231,
+      "seat": 0,
+      "rating": 3037.149360942545,
+      "metadata": {
+        "id": 108488231,
+        "createTime": "2026-09-13T09:10:45.898342600Z",
+        "endTime": "2026-09-13T09:16:54.647646200Z",
+        "state": "COMPLETED",
+        "type": "EPISODE_TYPE_PUBLIC",
+        "agents": [
+          {
+            "id": 236861303,
+            "submissionId": 56180166,
+            "reward": 132210,
+            "initialScore": 3037.149360942545,
+            "updatedScore": 3041.4246570611417,
+            "teamId": 16730524
+          },
+          {
+            "id": 236861304,
+            "submissionId": 56161578,
+            "reward": 120124,
+            "index": 1,
+            "initialScore": 3023.8628449190533,
+            "updatedScore": 3019.5875488004567,
+            "teamId": 16732403
+          }
+        ]
+      },
+      "path": "data/replays/json/e22_trigger_pilot_20260913/108488231.json",
+      "sha256": "bdddd8035316c95f076147a9a1595a43e5b1dc65a07ba565818e2b827f63cff2",
+      "teams": [
+        "THIRD FARM CLUB",
+        "ymg_aq"
+      ],
+      "rewards": [
+        132210.0,
+        120124.0
+      ],
+      "seed": 641890442
+    }
+  ]
+}
