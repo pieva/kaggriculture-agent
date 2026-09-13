@@ -1,0 +1,33 @@
+{
+  "hashes": {
+    "baseline": "f32ac78b8c220a21da8a9e71fb5c2e7a652298adfae53107beda5517d59a191d",
+    "candidate": "8446688c438af8728fefbf2ec294abea07cc654eaad981f6ff5fecd1d329b28e"
+  },
+  "control_submission": 56206528,
+  "arm": "8C9S",
+  "exposed_seeds": [
+    180911301,
+    180911302,
+    180911303,
+    180911304,
+    180911305,
+    180911306,
+    180911307
+  ],
+  "confirmation_seeds": [
+    180912401,
+    180912402,
+    180912403,
+    180912404,
+    180912405,
+    180912406,
+    180912407
+  ],
+  "seats": [
+    0,
+    1
+  ],
+  "method": "Direct paired head-to-head; serial simulations; actual file loader; shared endogenous market.",
+  "intervention": "8C9S v2: recurring external placement days/hours and harvest days. D12 worker 1 delivers sheep at H7, purchase moved H2 to H1; worker 6 retains feeding route. No additional hires; two fertilizer collection slots dropped on D12; milk delivery shifted to H11 with sale. V1 market logic otherwise retained, including early widened wool sale limits. Cow/other sheep placements unchanged.",
+  "limits": "Not a 6C10S replica or a pasture-only causal estimate; no rating estimate; no publication."
+}

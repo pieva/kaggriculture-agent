@@ -1,6 +1,6 @@
 # Stato del progetto — 13 settembre 2026
 
-**E22 è il campione corrente.** Pubblicata e Complete, submission [56206528](https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56206528). La prossima fase è studiarne l'evoluzione mantenendo una baseline congelata.
+**E22.1 — Pollai è il riferimento competitivo; E22.2 — Pascoli è pubblicata per verifica esterna.** Pubblicata e Complete, submission [56206528](https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56206528). La prossima fase è studiarne l'evoluzione mantenendo una baseline congelata.
 
 Il rating 2000 è stato superato: evidenza iniziale 2024; screenshot successivi dell'utente mostrano 2232,2 con posizione 1126 e, separatamente, 2266 nel pannello Games. Non sono letture live né una stima stabilizzata.
 
@@ -16,8 +16,12 @@ La pulizia sostituisce le etichette nominali con riferimenti numerici. Cambiano 
 - Ultimo confronto con due varianti interne scartate: E22 vince 8/8, senza fughe; il risparmio di lavoro da solo non spiega la superiorità. Dettagli conservati nell'archivio degli esperimenti, nessuna variante promossa.
 - Replay **108559326**, avversario **56204740**: E22 perde 71.697–75.080. Coincidono 533/719 gruppi di azioni lavoratori e 421/719 azioni complete. [Analisi iniziale](model_specs/codex/e22/reports/shared_plan_108559326/REPORT.md). L'episodio aggiorna il rating di E22 da 2251,15 a 2229,93; non è necessariamente l'ultimo rating della submission.
 
-## Direzione e organizzazione
+## Evoluzione Q0 e pubblicazione E22.2
 
-Studiare anche la variante segnalata nell’episodio 108561064 (pollaio Q2 conservato, tre pollai Q0 sostituiti da pascoli: osservazione utente da verificare). Studiare dapprima l'origine del divario nel replay, poi progettare modifiche isolate e verificabili a E22. Le ipotesi su reattività, diversificazione, autoconsumo e chiusura rimangono da validare; nessuna nuova variante implementata con questa pulizia.
+E22.2 (originale 8C9S v1) sostituisce i tre pollai Q0 con tre pascoli di pecore: totale 8 mucche e 9 pecore. Submission [56212495](https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56212495), stato **Complete**; score iniziale osservato 600,0, non stabilizzato. [Registro versioni](model_specs/codex/e22/VERSIONS.json).
 
-[NEW_SESSION](NEW_SESSION.md) contiene la ripresa; [specifica E22](model_specs/codex/e22/mod_specs.md) descrive la baseline; [EXPERIMENT_LOG](EXPERIMENT_LOG.md) è l'indice storico. Le istruzioni dei rami scartati sono archiviate, non priorità operative. Replay grezzi, copie ridondanti e report pesanti restano locali con [manifest](governance/history/LOCAL_ARTIFACTS_20260913.json); non sono inclusi nel clone Git.
+14 partite locali contro E22.1: 4/14 vittorie, media +353,14, mediana −2.092, su sette seed esposti nei due ruoli. La pubblicazione è diagnostica, autorizzata dall’utente dopo revisione; non è una promozione per superiorità interna. File invariato e verificato su 10.066 azioni; zero fughe/errori contabili, latte e lana raccolti interamente venduti. [Report](model_specs/codex/e22/reports/e22_2_vs_e22_1/REPORT.html) · [Revisione e pubblicazione](model_specs/codex/e22/reports/e22_2_release/REVIEW.md).
+
+Il calendario ricorrente nei sei replay esterni è stato implementato come v2, ma è risultato peggiore della v1 di 222,57 di margine medio. Rimane esperimento interno distinto. Seed 180912401–407 non usati. Prossimo obiettivo da concordare: analisi esterna di E22.2.
+
+[NEW_SESSION](NEW_SESSION.md) contiene la ripresa corrente; [EXPERIMENT_LOG](EXPERIMENT_LOG.md) conserva l’indice storico. Replay grezzi locali conservati con hash nel [manifest E22.2](model_specs/codex/e22/reports/e22_2_release/LOCAL_ARTIFACTS.json); report e strumenti restano versionati.

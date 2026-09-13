@@ -1,0 +1,65 @@
+{
+  "status": "Observed reusable pattern, not a tested policy or recovered source",
+  "schedule": [
+    {
+      "x": 3,
+      "y": 2,
+      "place_day": 11,
+      "place_hours": [
+        19,
+        20
+      ],
+      "harvest_days": [
+        17,
+        20,
+        23,
+        26,
+        29
+      ]
+    },
+    {
+      "x": 2,
+      "y": 3,
+      "place_day": 12,
+      "place_hours": [
+        7
+      ],
+      "harvest_days": [
+        18,
+        21,
+        24,
+        27,
+        30
+      ]
+    },
+    {
+      "x": 4,
+      "y": 1,
+      "place_day": 11,
+      "place_hours": [
+        20,
+        21
+      ],
+      "harvest_days": [
+        17,
+        20,
+        23,
+        26,
+        29
+      ],
+      "optional": true,
+      "observed_empty_submissions": [
+        56165125,
+        56205921
+      ]
+    }
+  ],
+  "guards": [
+    "Check pasture and carried sheep before PLACE; purchase only with cash and room.",
+    "Feed one carried wheat per animal/day, care only once; detect unsuccessful feed.",
+    "Harvest actual positive yield from age 6 then every 3 days; cap 6 units.",
+    "Deliver and sell final day wool; no terminal inventory valuation.",
+    "Do not copy failed feed actions or infer intentional vacancy from absent placement."
+  ],
+  "warning": "6C10S must preserve full coordinate mix; 56171606 reaches 6C10S after losing a sheep at (5,2) on D10."
+}

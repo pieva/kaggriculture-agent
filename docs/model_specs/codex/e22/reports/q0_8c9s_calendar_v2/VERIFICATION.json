@@ -1,0 +1,1657 @@
+{
+  "games": 14,
+  "seeds": 7,
+  "roles": 2,
+  "real_loader": "agent",
+  "replay_action_parity": 719,
+  "repeated_call_parity": 719,
+  "observation_mutations": 0,
+  "unchanged_first_ten_days_worker_batches": 240,
+  "baseline_unchanged": true,
+  "early_market_scope": "Wool SELL limits change before D11 too; no claim of identical early cash or market actions.",
+  "day10_cash_deltas": [
+    {
+      "seed": 180911301,
+      "seat": 0,
+      "delta": -9.0
+    },
+    {
+      "seed": 180911301,
+      "seat": 1,
+      "delta": -9.0
+    },
+    {
+      "seed": 180911302,
+      "seat": 0,
+      "delta": 7.0
+    },
+    {
+      "seed": 180911302,
+      "seat": 1,
+      "delta": 7.0
+    },
+    {
+      "seed": 180911303,
+      "seat": 0,
+      "delta": 7.0
+    },
+    {
+      "seed": 180911303,
+      "seat": 1,
+      "delta": 7.0
+    },
+    {
+      "seed": 180911304,
+      "seat": 0,
+      "delta": 7.0
+    },
+    {
+      "seed": 180911304,
+      "seat": 1,
+      "delta": 7.0
+    },
+    {
+      "seed": 180911305,
+      "seat": 0,
+      "delta": 7.0
+    },
+    {
+      "seed": 180911305,
+      "seat": 1,
+      "delta": 7.0
+    },
+    {
+      "seed": 180911306,
+      "seat": 0,
+      "delta": 7.0
+    },
+    {
+      "seed": 180911306,
+      "seat": 1,
+      "delta": 7.0
+    },
+    {
+      "seed": 180911307,
+      "seat": 0,
+      "delta": 7.0
+    },
+    {
+      "seed": 180911307,
+      "seat": 1,
+      "delta": 7.0
+    }
+  ],
+  "accounting_side_transitions": 20132,
+  "cash_errors": 0,
+  "candidate_escapes": 0,
+  "all_animal_output_sold": true,
+  "confirmation_seeds_used": false,
+  "residual": "Two carried fertilizer units in candidate terminal states; no residual milk, wool or eggs.",
+  "hashes": {
+    "baseline": "f32ac78b8c220a21da8a9e71fb5c2e7a652298adfae53107beda5517d59a191d",
+    "candidate": "8446688c438af8728fefbf2ec294abea07cc654eaad981f6ff5fecd1d329b28e"
+  },
+  "calendar_games": 14,
+  "all_expected_placement_times": true,
+  "all_expected_harvest_days": true,
+  "unchanged_initial_v1_batches": 264,
+  "unchanged_daily_hires": true,
+  "unchanged_total_planting_harvest_and_purchase_units": true,
+  "records": [
+    {
+      "seed": 180911301,
+      "seat": 0,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 180911301,
+      "seat": 1,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 180911302,
+      "seat": 0,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 180911302,
+      "seat": 1,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 180911303,
+      "seat": 0,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 180911303,
+      "seat": 1,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 180911304,
+      "seat": 0,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 180911304,
+      "seat": 1,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 180911305,
+      "seat": 0,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 180911305,
+      "seat": 1,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 180911306,
+      "seat": 0,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 180911306,
+      "seat": 1,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 180911307,
+      "seat": 0,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "seed": 180911307,
+      "seat": 1,
+      "calendar": [
+        {
+          "x": 4,
+          "y": 1,
+          "placement": [
+            11,
+            21
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 10,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 14,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 13,
+              "units": 3
+            }
+          ]
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "placement": [
+            11,
+            20
+          ],
+          "harvests": [
+            {
+              "day": 17,
+              "hour": 11,
+              "units": 6
+            },
+            {
+              "day": 20,
+              "hour": 11,
+              "units": 4
+            },
+            {
+              "day": 23,
+              "hour": 21,
+              "units": 4
+            },
+            {
+              "day": 26,
+              "hour": 8,
+              "units": 4
+            },
+            {
+              "day": 29,
+              "hour": 10,
+              "units": 4
+            }
+          ]
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "placement": [
+            12,
+            7
+          ],
+          "harvests": [
+            {
+              "day": 18,
+              "hour": 12,
+              "units": 6
+            },
+            {
+              "day": 21,
+              "hour": 10,
+              "units": 4
+            },
+            {
+              "day": 24,
+              "hour": 9,
+              "units": 4
+            },
+            {
+              "day": 27,
+              "hour": 17,
+              "units": 3
+            },
+            {
+              "day": 30,
+              "hour": 5,
+              "units": 4
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "v1_frozen_sha256": "df6991a5619f09e91bef6b6ac7034ade10f87c59e577d49c19cf197cd5cd2dcd"
+}

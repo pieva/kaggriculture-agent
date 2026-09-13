@@ -1,0 +1,742 @@
+{
+  "file": "submission\\submission_codex_e22_2_pascoli.py",
+  "sha256": "df6991a5619f09e91bef6b6ac7034ade10f87c59e577d49c19cf197cd5cd2dcd",
+  "loader": "agent",
+  "games": 14,
+  "action_parity": 10066,
+  "repeated_call_parity": 10066,
+  "observation_mutations": 0,
+  "max_local_call_seconds": 0.0009172999998554587,
+  "imports": [
+    "base64",
+    "zlib",
+    "json",
+    "copy"
+  ],
+  "blocking_errors": [],
+  "code_changed": false,
+  "new_simulations": 0,
+  "records": [
+    {
+      "seed": 180911301,
+      "seat": 0,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 108375.0,
+        "reward": 108375.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 44,
+          "CARROT": 44,
+          "TOMATO": 399,
+          "STRAWBERRY": 169,
+          "MELON": 120,
+          "EGG": 50,
+          "MILK": 1,
+          "WOOL": 1,
+          "FERTILIZER": 1
+        }
+      }
+    },
+    {
+      "seed": 180911301,
+      "seat": 1,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 108375.0,
+        "reward": 108375.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 44,
+          "CARROT": 44,
+          "TOMATO": 399,
+          "STRAWBERRY": 169,
+          "MELON": 120,
+          "EGG": 50,
+          "MILK": 1,
+          "WOOL": 1,
+          "FERTILIZER": 1
+        }
+      }
+    },
+    {
+      "seed": 180911302,
+      "seat": 0,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 52663.0,
+        "reward": 52663.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 40,
+          "CARROT": 69,
+          "TOMATO": 91,
+          "STRAWBERRY": 43,
+          "MELON": 120,
+          "EGG": 64,
+          "MILK": 1,
+          "WOOL": 1,
+          "FERTILIZER": 1
+        }
+      }
+    },
+    {
+      "seed": 180911302,
+      "seat": 1,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 52663.0,
+        "reward": 52663.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 40,
+          "CARROT": 69,
+          "TOMATO": 91,
+          "STRAWBERRY": 43,
+          "MELON": 120,
+          "EGG": 64,
+          "MILK": 1,
+          "WOOL": 1,
+          "FERTILIZER": 1
+        }
+      }
+    },
+    {
+      "seed": 180911303,
+      "seat": 0,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 87495.0,
+        "reward": 87495.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 41,
+          "CARROT": 265,
+          "TOMATO": 660,
+          "STRAWBERRY": 120,
+          "MELON": 120,
+          "EGG": 43,
+          "MILK": 1,
+          "WOOL": 1,
+          "FERTILIZER": 1
+        }
+      }
+    },
+    {
+      "seed": 180911303,
+      "seat": 1,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 87495.0,
+        "reward": 87495.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 41,
+          "CARROT": 265,
+          "TOMATO": 660,
+          "STRAWBERRY": 120,
+          "MELON": 120,
+          "EGG": 43,
+          "MILK": 1,
+          "WOOL": 1,
+          "FERTILIZER": 1
+        }
+      }
+    },
+    {
+      "seed": 180911304,
+      "seat": 0,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 130786.0,
+        "reward": 130786.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 42,
+          "CARROT": 31,
+          "TOMATO": 165,
+          "STRAWBERRY": 200,
+          "MELON": 120,
+          "EGG": 50,
+          "MILK": 238,
+          "WOOL": 1,
+          "FERTILIZER": 1
+        }
+      }
+    },
+    {
+      "seed": 180911304,
+      "seat": 1,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 130786.0,
+        "reward": 130786.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 42,
+          "CARROT": 31,
+          "TOMATO": 165,
+          "STRAWBERRY": 200,
+          "MELON": 120,
+          "EGG": 50,
+          "MILK": 238,
+          "WOOL": 1,
+          "FERTILIZER": 1
+        }
+      }
+    },
+    {
+      "seed": 180911305,
+      "seat": 0,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 84498.0,
+        "reward": 84498.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 42,
+          "CARROT": 113,
+          "TOMATO": 660,
+          "STRAWBERRY": 120,
+          "MELON": 120,
+          "EGG": 50,
+          "MILK": 1,
+          "WOOL": 1,
+          "FERTILIZER": 1
+        }
+      }
+    },
+    {
+      "seed": 180911305,
+      "seat": 1,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 84498.0,
+        "reward": 84498.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 42,
+          "CARROT": 113,
+          "TOMATO": 660,
+          "STRAWBERRY": 120,
+          "MELON": 120,
+          "EGG": 50,
+          "MILK": 1,
+          "WOOL": 1,
+          "FERTILIZER": 1
+        }
+      }
+    },
+    {
+      "seed": 180911306,
+      "seat": 0,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 79246.0,
+        "reward": 79246.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 40,
+          "CARROT": 63,
+          "TOMATO": 64,
+          "STRAWBERRY": 120,
+          "MELON": 120,
+          "EGG": 54,
+          "MILK": 101,
+          "WOOL": 1,
+          "FERTILIZER": 1
+        }
+      }
+    },
+    {
+      "seed": 180911306,
+      "seat": 1,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 79246.0,
+        "reward": 79246.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 40,
+          "CARROT": 63,
+          "TOMATO": 64,
+          "STRAWBERRY": 120,
+          "MELON": 120,
+          "EGG": 54,
+          "MILK": 101,
+          "WOOL": 1,
+          "FERTILIZER": 1
+        }
+      }
+    },
+    {
+      "seed": 180911307,
+      "seat": 0,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 107832.0,
+        "reward": 107832.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 42,
+          "CARROT": 27,
+          "TOMATO": 81,
+          "STRAWBERRY": 55,
+          "MELON": 120,
+          "EGG": 56,
+          "MILK": 1,
+          "WOOL": 241,
+          "FERTILIZER": 1
+        }
+      }
+    },
+    {
+      "seed": 180911307,
+      "seat": 1,
+      "unfed_target_days": [
+        {
+          "day": 25,
+          "x": 2,
+          "y": 3,
+          "consecutive": 1
+        },
+        {
+          "day": 26,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 4,
+          "y": 1,
+          "consecutive": 1
+        },
+        {
+          "day": 29,
+          "x": 3,
+          "y": 2,
+          "consecutive": 1
+        }
+      ],
+      "terminal": {
+        "cash": 107832.0,
+        "reward": 107832.0,
+        "shed": {},
+        "carried": {
+          "FERTILIZER": 2
+        },
+        "seeds": {},
+        "tile_yield_units": {},
+        "spot_prices": {
+          "WHEAT": 42,
+          "CARROT": 27,
+          "TOMATO": 81,
+          "STRAWBERRY": 55,
+          "MELON": 120,
+          "EGG": 56,
+          "MILK": 1,
+          "WOOL": 241,
+          "FERTILIZER": 1
+        }
+      }
+    }
+  ],
+  "findings": [
+    "Occasional single missed feeding days on the three target sheep; no escapes in the 14 tests. Existing scheduling limitation, not repaired in this release.",
+    "Two carried fertilizer units remain at D30; no unsold milk, wool or eggs.",
+    "Fixed routes and purchases do not recover from arbitrary cash/state divergence outside the tested seeds.",
+    "Wool SELL sizes differ from E22.1 before D11 too; external comparison is the whole E22.2 policy."
+  ],
+  "decision": "Publish exact tested E22.2 for user-authorized external diagnostic; no claim of optimality or internal superiority."
+}

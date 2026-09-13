@@ -1,4 +1,8 @@
-# E22 — baseline pubblicata
+# E22.1 — Pollai, baseline pubblicata
+
+Nome mnemonico adottato: **E22.1 — Pollai**. Alias del bundle a byte invariati: `submission/submission_codex_e22_1_pollai.py`. La configurazione alternativa scelta è **E22.2 — Pascoli**, precedente 8C9S v1, nel bundle `submission/submission_codex_e22_2_pascoli.py`. E22.2 ha una pecora in ciascuna delle tre caselle (4,1), (3,2), (2,3), per un mix totale 8 mucche e 9 pecore; resta una variante interna. La variante con calendario esterno v2 non è E22.2.
+
+[Confronto E22.2 contro E22.1, KPI D1–D30](reports/e22_2_vs_e22_1/REPORT.html) · [Identità e hash](VERSIONS.json). Le 14 partite già eseguite sono riutilizzate dopo verifica degli hash, senza nuove simulazioni. I percorsi storici riportati sotto restano validi per riprodurre i test precedenti.
 
 Submission **56206528**. Piano ricostruito dalle azioni pubbliche della submission **56165462**, episodio **108518933**; non è codice sorgente recuperato dal competitor.
 
