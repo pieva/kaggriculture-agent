@@ -1,0 +1,288 @@
+{
+  "created_utc": "2026-09-14T07:17:59.892912+00:00",
+  "read_only_external_acquisition": true,
+  "new_policy_simulations": 0,
+  "sources": {
+    "docs/model_specs/codex/e22/tools/acquire_external_20260914.py": "18a2bccf89a16f55bc68811b973024387c728ca03e2d3608d9754ecad457347d",
+    "docs/model_specs/codex/e22/tools/acquire_top_20260914.py": "ad4ca0d1d0d194a521fb4dc5451b65583958d18f334a10bf2f760e35dbd6726a",
+    "docs/model_specs/codex/e22/tools/align_diagnostics_20260914.py": "003aeeb634745358c62b19353779931cbd9f03a5a6846fdaa2b7152756c3ef3e",
+    "docs/model_specs/codex/e22/tools/analyze_external_20260914.py": "bb504e7d60be9b5f4cdfbf3448eb2449cefb94d842bbfbc0e70e43fc504f146b",
+    "docs/model_specs/codex/e22/tools/audit_overflow_20260914.py": "dcb63452d16774030db7e512da882131a5d4ab635451c058b9f530eb479aa5c3",
+    "docs/model_specs/codex/e22/tools/report_external_20260914.py": "7e5b9bf260ecd189deb8cff41cff39c27bfa90e144ac4820db21430487a414e5",
+    "docs/model_specs/codex/e22/tools/report_top_20260914.py": "a787c0dae095da36f41bc0003d3395b0c07288d8318ac7ad41b866692bd1028b"
+  },
+  "outputs": {
+    "ALL_RESULTS.csv": "ab7c681f8607ba6bc8a8b0172371a32f83f3c8edcfa174749432311acd7aa72c",
+    "ATOMIC_SEED_VERIFICATION.json": "0b97ef0a5a0877f9aabeff89db85c527af7fe118f57951e6d36d81f7d908cf4d",
+    "CHART_DATA.json": "63fb00f1c1e2113271d0b249eefa197d7c025b15f8bd58e294f638c861f09a75",
+    "COHORT.json": "a6a8f0ea8a067f1be90b6974619901bbeaf39bba678a38804fffcc4268744960",
+    "DAILY_22_KPI_PRICES.csv": "e905281187bfcddf44f9e24a2c4514089120b6fe4e6e1def549a0cc12af5b00a",
+    "DIAGNOSTICS.json": "d58e34977819dfa31f87b70ff6d9299361288589eadc517223b15a292223da1f",
+    "history_56206528.json": "a931a9ba5aeea950b4c683923c4fe6f17901f9512f82c2925b44967684b1849e",
+    "history_56212495.json": "ac726da49a3159717f6c59f6b2bd89971ae88570442bf9ed1545d954c0e632e0",
+    "HISTORY_SUMMARY.json": "3f7e2b74f0ae7e0a41e860677c1a931afcfb641a8f7d1fbeb49d7855d46fe7dd",
+    "OVERFLOW.json": "0f6b9d32a9ec667b31d52f51d2b2f7584895d053244864b3fc5107ad1a9c0e19",
+    "PROTOCOL.json": "5477055f509d835e040be6078bdcb761ee5856b9621451149112b8eaab029ef9",
+    "REPORT.html": "637e5a35654dbe1c12fec7d2e5176c27d7c6c1359a625af323a415c3754adcc5",
+    "REPORT.md": "3aef15a7b2f5b72bd3ee62f83ba818941d8caeb431388b9f9d8438f0ab85a3a8",
+    "SUMMARY.json": "af71c6b7d528b274c10362d32ffd4f908e81cb94c7983d6e9d6ce3702066503a",
+    "VERIFICATION.json": "eed9a505360ae781e8e64f49a10ce43778ef8e4a7671a04d95ee41d981cb2271"
+  },
+  "replays": [
+    {
+      "episode": 108690303,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108690303.json",
+      "sha256": "375a499fcf23aeb6468db3ac08f73aac47c14c2e89e275eeee6e75d06300bc34"
+    },
+    {
+      "episode": 108690641,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108690641.json",
+      "sha256": "470aee4e4f88fffb9f9ec3f8b5fcaea8c5f85c06a24433c839eca2bddeb64336"
+    },
+    {
+      "episode": 108691652,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108691652.json",
+      "sha256": "2b1a6a8b850b342bdc3cc22894f780b48e168b1827170463861ad9c42684b345"
+    },
+    {
+      "episode": 108692834,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108692834.json",
+      "sha256": "4989c69b4ad1822538559d3f1a6256649a18c2185b703c06a49710f97684529a"
+    },
+    {
+      "episode": 108693863,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108693863.json",
+      "sha256": "d9400eb3331b85b3c7c1fb39cedaa591c8c8763a49f2ae476f7acf46e922d064"
+    },
+    {
+      "episode": 108705968,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108705968.json",
+      "sha256": "cf6a3cf0bc2b90b63c7af591b397380cdf00d5e23034a75ce790706524e5b74d"
+    },
+    {
+      "episode": 108719293,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108719293.json",
+      "sha256": "0ed8dad7b15f1bd6e0c27c91fbfdc3ce7cb226c727fb16ee939f60bf4198fc71"
+    },
+    {
+      "episode": 108727691,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108727691.json",
+      "sha256": "1a1dfb65c5b41b31e5862f090bc054dd4dfb7e99c5a99d206f616bc3c72abbab"
+    },
+    {
+      "episode": 108729054,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108729054.json",
+      "sha256": "48e6ae84e29c9efe0470df1768599f87e54453bb6c4d6f50cb46ebf3500e08b7"
+    },
+    {
+      "episode": 108731784,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108731784.json",
+      "sha256": "602849263b6dd37c7f327ba36246e17203f0e3672215582ec3a33a2ce12d270a"
+    },
+    {
+      "episode": 108738673,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108738673.json",
+      "sha256": "257d9652536e6eb10208d7d98ee017d612081fea2d3a4288c4674842b9943547"
+    },
+    {
+      "episode": 108751097,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108751097.json",
+      "sha256": "8bc1e8a0be5e0ea3339cecb00755776d408e4f22bb8147ead05f62b98e40cd76"
+    },
+    {
+      "episode": 108751380,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108751380.json",
+      "sha256": "b21659643db4c6e813461bdd9d29898e6dca00d4444a1d07ee24a23bcd21a3bd"
+    },
+    {
+      "episode": 108751833,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108751833.json",
+      "sha256": "e4c3eabc13696e44a4d183828b49ec995964335853a946040a741e1d1c83bdae"
+    },
+    {
+      "episode": 108760817,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108760817.json",
+      "sha256": "852d4690ba2aba4cbd1102dda0314ac1f66341b0e5ebe2bd47e9c2fb42041e2b"
+    },
+    {
+      "episode": 108775744,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108775744.json",
+      "sha256": "0491e655604ec141262462801bd6a7842cbf7618a2c82326d13848693c7f2a9c"
+    },
+    {
+      "episode": 108776772,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108776772.json",
+      "sha256": "a3eb09778659947a7307cec72c8b17fdcf6ec42d15c231b4954b6bd8e8397c5d"
+    },
+    {
+      "episode": 108777186,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108777186.json",
+      "sha256": "2dcbb648790b21a9cc6d117358d9357c3a4e8dc474ffbbc0ee55917cfbf05da5"
+    },
+    {
+      "episode": 108792135,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108792135.json",
+      "sha256": "251da5c5413c629ec17f81fe1921e093a4107725e3c5293fcf79148a26424462"
+    },
+    {
+      "episode": 108806705,
+      "submission": 56212495,
+      "path": "data/replays/json/e22_external_20260914/108806705.json",
+      "sha256": "92d63639f89e260101c7c8e8d3c2474fda5de8fd19bd1cf1269f4720ac9e22d4"
+    },
+    {
+      "episode": 108763586,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108763586.json",
+      "sha256": "27db83b6b95680bdf9b20320184d691b3f8a62f3d03e6581b3183d2df493a6e8"
+    },
+    {
+      "episode": 108764531,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108764531.json",
+      "sha256": "76a1fc3e52a0349a6d8bde43aea0f07337e17a139e4264ba23eb2ef0b6423449"
+    },
+    {
+      "episode": 108764880,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108764880.json",
+      "sha256": "c5c9c4855aa9937173156a78d401a7a512b4a2bd54359155e0cc416777bdbea8"
+    },
+    {
+      "episode": 108766630,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108766630.json",
+      "sha256": "3413944794b03b433b5ee8fd0da4f0d17111248f05db174f54a6a98a300c462a"
+    },
+    {
+      "episode": 108769172,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108769172.json",
+      "sha256": "7fc3256c2119c2c105ce279ed43a27cf40b77ccb9871efb20d49537c7fe01750"
+    },
+    {
+      "episode": 108770737,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108770737.json",
+      "sha256": "309cba561332d9670bde42fc8f8586f2f515bb3029210b525088da351f913641"
+    },
+    {
+      "episode": 108776067,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108776067.json",
+      "sha256": "c3f09a08452dec14befb19f0d09e7c724a0901103ea8bccfd8d508bafc301a3a"
+    },
+    {
+      "episode": 108776903,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108776903.json",
+      "sha256": "bd7a3123b230353b527f091158d222363945ae3de26b3489297c542c4cc2c779"
+    },
+    {
+      "episode": 108780113,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108780113.json",
+      "sha256": "3009ac5c2fe0b199bb9165e0e15c5a2d88bbdbe475f71170f1580986d7fe17d7"
+    },
+    {
+      "episode": 108782198,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108782198.json",
+      "sha256": "dfc0a8d4aca0f1d42be339613c1710f4febf2400dfde159ab98483e01b26301a"
+    },
+    {
+      "episode": 108788190,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108788190.json",
+      "sha256": "3e39dcd18aca9263a0153798534e7b7b2f710f0b8a99283ce7ff91736f2e7e77"
+    },
+    {
+      "episode": 108789385,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108789385.json",
+      "sha256": "9e32544813802278e84e787f509ddb5fd8256913213f18aefdfdf7a65e1c4385"
+    },
+    {
+      "episode": 108795353,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108795353.json",
+      "sha256": "7597553d03fb79eeef3f9544b4360ff5b6fa5903150640cfc789f5a742f9c87a"
+    },
+    {
+      "episode": 108799362,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108799362.json",
+      "sha256": "d2856ec5a2a28ec97f365daa56a94b71324382dae25f47f6b300563ea33029ed"
+    },
+    {
+      "episode": 108801165,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108801165.json",
+      "sha256": "fecf206305e3cfd0b47313bb5cc666fcf143ed9e4848461bf0aa2d6d71f3fe6b"
+    },
+    {
+      "episode": 108806796,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108806796.json",
+      "sha256": "958cf97a968482efce45d1debdb104d8ca5ad96d4d8ffbcde386455ad76ba785"
+    },
+    {
+      "episode": 108810354,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108810354.json",
+      "sha256": "32e0c3ff9ecc9861eceb0a389ecbfbd3765552e174ef525d342225416c74570b"
+    },
+    {
+      "episode": 108811338,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108811338.json",
+      "sha256": "537b22ba974df5e4d168db052ac8bd66e1f07ae180db12c3dd26c672a3218fb3"
+    },
+    {
+      "episode": 108811408,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108811408.json",
+      "sha256": "447613f541c5b992bdf5ecd97155a15d29311f3934dfd0b770679620b5cd8625"
+    },
+    {
+      "episode": 108814261,
+      "submission": 56206528,
+      "path": "data/replays/json/e22_external_20260914/108814261.json",
+      "sha256": "a653b5847589f7f6cbe79d91c63460e35f288ce96fd616d5de278526511e3343"
+    }
+  ],
+  "verification": {
+    "games": 40,
+    "profiles": 80,
+    "kpi": 22,
+    "price_panels": 9,
+    "volume_panels": 9,
+    "views": 41,
+    "cash_parity_errors": 0,
+    "policy_actions_verified": 28760,
+    "failed_policy_actions": 0,
+    "new_simulations": 0,
+    "overflow_transitions_verified": 1160,
+    "animal_product_mass_balance": "harvest = sold + observed discarded; all 40 own profiles pass"
+  },
+  "browser_check": "Report rendered; selectors exercised; screenshot inspected. Final chart count and final route controls verified separately."
+}

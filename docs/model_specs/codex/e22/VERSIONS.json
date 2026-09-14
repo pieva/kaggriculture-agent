@@ -10,7 +10,13 @@
       "GOOSE": 3
     },
     "status": "published",
-    "submission": 56206528
+    "submission": 56206528,
+    "external_observation_20260914": {
+      "rating": 2147.0780241565144,
+      "episode": 108814261,
+      "episode_end_utc": "2026-09-14T06:35:36.757564300Z",
+      "report": "reports/external_e22_2_20260914/REPORT.html"
+    }
   },
   "E22.2": {
     "bundle": "submission\\submission_codex_e22_2_pascoli.py",
@@ -23,6 +29,63 @@
     },
     "status": "published",
     "submission": 56212495,
-    "publication": "reports/e22_2_release/PUBLICATION.json"
+    "publication": "reports/e22_2_release/PUBLICATION.json",
+    "external_observation_20260914": {
+      "rating": 1706.9189909158074,
+      "episode": 108806705,
+      "episode_end_utc": "2026-09-14T06:02:26.636270300Z",
+      "report": "reports/external_e22_2_20260914/REPORT.html"
+    }
+  },
+  "E22.2 fix v1": {
+    "bundle": "submission\\submission_codex_e22_2_fix_v1.py",
+    "sha256": "a9bdbcf5d0e2fefc7ecd2154336a69bf876ef52c7b8fcda2df81749abd492ac9",
+    "parent": "E22.2",
+    "mix": {
+      "COW": 8,
+      "SHEEP": 9
+    },
+    "status": "published",
+    "report": "reports/e22_2_fix_v1/REPORT.html",
+    "validation": {
+      "unit_tests": 10,
+      "external_replay_scenarios": 20,
+      "direct_games": 14,
+      "complete_mix": 20,
+      "escapes": 0,
+      "crop_stress": 0,
+      "overflow": 0,
+      "failed_plants": 0,
+      "direct_wins": 4,
+      "direct_mean_margin": -180.28571428571428
+    },
+    "limitations": "Remaining isolated missed feeding days; direct benchmark has lower mean margin than published E22.2. Published for external validation; rating not stabilized.",
+    "submission": 56228129,
+    "publication": "reports/e22_2_fix_v1/PUBLICATION.json"
+  },
+  "E22.1 Q2 Grano v1": {
+    "bundle": "submission\\submission_codex_e22_1_q2_grano_v1.py",
+    "sha256": "5db3ef642ddf8cac5a8797ee92baea40a7caa6ab9eb1908db482b7fdc3c4b18a",
+    "parent": "E22.1",
+    "mix": {
+      "COW": 8,
+      "SHEEP": 6,
+      "GOOSE": 3
+    },
+    "status": "published",
+    "submission": 56228842,
+    "publication": "reports/e22_1_q2_grano_v1/PUBLICATION.json",
+    "report": "reports/e22_1_q2_grano_v1/REPORT.html",
+    "validation": {
+      "real_file_loader_games": 34,
+      "diagnostic_positive": 20,
+      "diagnostic_cash_delta_mean": 68.15,
+      "direct_wins": 14,
+      "direct_games": 14,
+      "direct_mean_margin": 73.42857142857143,
+      "cash_parity_errors": 0,
+      "additional_hires": 0
+    },
+    "limitations": "Small local economic improvement; 7 exposed direct seeds, no independent rating claim. Kaggle Complete, initial score not stabilized."
   }
 }

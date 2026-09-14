@@ -1,0 +1,53 @@
+{
+  "published": {
+    "n": 20,
+    "mixes": {
+      "{'SHEEP': 9, 'COW': 8}": 18,
+      "{'SHEEP': 9, 'COW': 7}": 2
+    },
+    "escapes": 0,
+    "missing_worker_batches": 46,
+    "failed_plants": 6,
+    "unfed": 576,
+    "crop_stress": 40,
+    "product_loss": {
+      "WOOL": 24
+    },
+    "overflow": {
+      "WHEAT": 18,
+      "FERTILIZER": 2,
+      "WOOL": 24
+    },
+    "fertilizer_residual": 40,
+    "cash_mean": 90045.3
+  },
+  "fix": {
+    "n": 20,
+    "mixes": {
+      "{'SHEEP': 9, 'COW': 8}": 20
+    },
+    "escapes": 0,
+    "missing_worker_batches": 0,
+    "failed_plants": 0,
+    "unfed": 480,
+    "crop_stress": 0,
+    "product_loss": {},
+    "overflow": {},
+    "fertilizer_residual": 0,
+    "cash_mean": 91645.9
+  },
+  "direct_published": {
+    "n": 14,
+    "wins": 4,
+    "cash_mean": 92985.0,
+    "mean_margin": 353.14285714285717,
+    "median_margin": -2092.0
+  },
+  "direct_fix": {
+    "n": 14,
+    "wins": 4,
+    "cash_mean": 92742.0,
+    "mean_margin": -180.28571428571428,
+    "median_margin": -2738.0
+  }
+}

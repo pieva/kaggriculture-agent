@@ -1,0 +1,4802 @@
+[
+  {
+    "episode": 108763586,
+    "seat": 1,
+    "replay_sha256": "27db83b6b95680bdf9b20320184d691b3f8a62f3d03e6581b3183d2df493a6e8",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108764531,
+    "seat": 1,
+    "replay_sha256": "76a1fc3e52a0349a6d8bde43aea0f07337e17a139e4264ba23eb2ef0b6423449",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108764880,
+    "seat": 0,
+    "replay_sha256": "c5c9c4855aa9937173156a78d401a7a512b4a2bd54359155e0cc416777bdbea8",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108766630,
+    "seat": 0,
+    "replay_sha256": "3413944794b03b433b5ee8fd0da4f0d17111248f05db174f54a6a98a300c462a",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108769172,
+    "seat": 0,
+    "replay_sha256": "7fc3256c2119c2c105ce279ed43a27cf40b77ccb9871efb20d49537c7fe01750",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108770737,
+    "seat": 1,
+    "replay_sha256": "309cba561332d9670bde42fc8f8586f2f515bb3029210b525088da351f913641",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108776067,
+    "seat": 0,
+    "replay_sha256": "c3f09a08452dec14befb19f0d09e7c724a0901103ea8bccfd8d508bafc301a3a",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108776903,
+    "seat": 1,
+    "replay_sha256": "bd7a3123b230353b527f091158d222363945ae3de26b3489297c542c4cc2c779",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108780113,
+    "seat": 0,
+    "replay_sha256": "3009ac5c2fe0b199bb9165e0e15c5a2d88bbdbe475f71170f1580986d7fe17d7",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108782198,
+    "seat": 1,
+    "replay_sha256": "dfc0a8d4aca0f1d42be339613c1710f4febf2400dfde159ab98483e01b26301a",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108788190,
+    "seat": 0,
+    "replay_sha256": "3e39dcd18aca9263a0153798534e7b7b2f710f0b8a99283ce7ff91736f2e7e77",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108789385,
+    "seat": 0,
+    "replay_sha256": "9e32544813802278e84e787f509ddb5fd8256913213f18aefdfdf7a65e1c4385",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108795353,
+    "seat": 1,
+    "replay_sha256": "7597553d03fb79eeef3f9544b4360ff5b6fa5903150640cfc789f5a742f9c87a",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108799362,
+    "seat": 1,
+    "replay_sha256": "d2856ec5a2a28ec97f365daa56a94b71324382dae25f47f6b300563ea33029ed",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 1
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 1
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 1
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 1
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 4
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 1
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 1
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 6
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108801165,
+    "seat": 1,
+    "replay_sha256": "fecf206305e3cfd0b47313bb5cc666fcf143ed9e4848461bf0aa2d6d71f3fe6b",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108806796,
+    "seat": 0,
+    "replay_sha256": "958cf97a968482efce45d1debdb104d8ca5ad96d4d8ffbcde386455ad76ba785",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108810354,
+    "seat": 1,
+    "replay_sha256": "32e0c3ff9ecc9861eceb0a389ecbfbd3765552e174ef525d342225416c74570b",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108811338,
+    "seat": 0,
+    "replay_sha256": "537b22ba974df5e4d168db052ac8bd66e1f07ae180db12c3dd26c672a3218fb3",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108811408,
+    "seat": 0,
+    "replay_sha256": "447613f541c5b992bdf5ecd97155a15d29311f3934dfd0b770679620b5cd8625",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  },
+  {
+    "episode": 108814261,
+    "seat": 0,
+    "replay_sha256": "a653b5847589f7f6cbe79d91c63460e35f288ce96fd616d5de278526511e3343",
+    "sites": {
+      "3,7": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 14,
+            "worker": 3,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 28,
+            "hour": 7,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          },
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "BUILD_COOP"
+            ],
+            "kind": "COOP",
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 5,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 24,
+            "worker": 5,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 7,
+            "worker": 6,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 6,
+            "worker": 10,
+            "x": 3,
+            "y": 7,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [
+          {
+            "day": 29,
+            "hour": 5,
+            "worker": 6,
+            "tile_before": null
+          }
+        ],
+        "empty_idle_slots_d29_d30": []
+      },
+      "4,5": {
+        "transitions": [
+          {
+            "day": 12,
+            "hour": 4,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "PLANT",
+              "STRAWBERRY"
+            ],
+            "kind": "PLANT",
+            "animal": null,
+            "crop": "STRAWBERRY"
+          },
+          {
+            "day": 29,
+            "hour": 3,
+            "worker": 3,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "DIG"
+            ],
+            "kind": null,
+            "animal": null,
+            "crop": null
+          }
+        ],
+        "harvests": [
+          {
+            "day": 22,
+            "hour": 19,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 24,
+            "hour": 2,
+            "worker": 7,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 26,
+            "hour": 2,
+            "worker": 2,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          },
+          {
+            "day": 28,
+            "hour": 9,
+            "worker": 1,
+            "x": 4,
+            "y": 5,
+            "command": [
+              "HARVEST"
+            ],
+            "gain": {
+              "STRAWBERRY": 2
+            }
+          }
+        ],
+        "harvested": {
+          "STRAWBERRY": 8
+        },
+        "animal_states": [],
+        "build_requests": [],
+        "empty_idle_slots_d29_d30": [
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 21,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 22,
+            "worker": 7
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 3
+          },
+          {
+            "day": 30,
+            "hour": 23,
+            "worker": 7
+          }
+        ]
+      }
+    }
+  }
+]

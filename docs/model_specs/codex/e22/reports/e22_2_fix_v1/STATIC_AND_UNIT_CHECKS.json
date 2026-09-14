@@ -1,0 +1,14 @@
+{
+  "candidate_sha256": "a9bdbcf5d0e2fefc7ecd2154336a69bf876ef52c7b8fcda2df81749abd492ac9",
+  "python": "3.12.14",
+  "stdlib_imports": [
+    "base64",
+    "zlib",
+    "json",
+    "copy"
+  ],
+  "unit_tests": 10,
+  "unit_test_command": "python -m unittest tests.test_e22_2_fix",
+  "unit_test_result": "passed",
+  "published_e22_2_hash_unchanged": true
+}

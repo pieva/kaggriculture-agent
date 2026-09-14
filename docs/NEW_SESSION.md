@@ -1,25 +1,27 @@
-# Ripresa — E22.2 pubblicata, 13 settembre 2026
+# Nuova sessione — E23, architettura dal confronto con i top 2750–3000
 
-## Stato corrente
+La prossima sessione è dedicata a **E23**. Ripartire dal [brief E23](model_specs/codex/e23/README.md), non da ulteriori modifiche isolate al calendario E22.
 
-- **E22.1 — Pollai**, controllo pubblicato **56206528**: tre pollai Q0 con oche; totale 8 mucche, 6 pecore, 3 oche. Bundle `submission/submission_codex_e22_1_pollai.py`.
-- **E22.2 — Pascoli**, submission **56212495**, stato **Complete** verificato su Kaggle: originale 8C9S v1; pecora in ciascuno dei tre pascoli (4,1), (3,2), (2,3), totale 8 mucche e 9 pecore. Bundle `submission/submission_codex_e22_2_pascoli.py`, hash `df6991a5619f09e91bef6b6ac7034ade10f87c59e577d49c19cf197cd5cd2dcd`.
-- **Calendario esterno v2**: esperimento distinto, non selezionato e non pubblicato.
+## Prima lettura
 
-[Registro versioni](model_specs/codex/e22/VERSIONS.json) · [Pubblicazione](model_specs/codex/e22/reports/e22_2_release/PUBLICATION.json) · [Revisione](model_specs/codex/e22/reports/e22_2_release/REVIEW.md).
+1. [Atlante top 2750–3000](model_specs/codex/e22/reports/top_2750_3000_20260914/REPORT.html): 25 replay, topologie, collocamenti, percorsi e ricorrenze.
+2. [Khalid vs E22.1](model_specs/codex/e22/reports/top_2750_3000_20260914/KHALID_VS_E22_1.md): stessa famiglia di strutture, variazione 8C6S/9C5S e Q3 solo in 2/5 replay.
+3. [Registro bundle e pubblicazioni](model_specs/codex/e22/VERSIONS.json) e [stato del progetto](PROJECT_STATE.md).
 
-Il primo score visualizzato per E22.2 è 600,0: dato iniziale, non valutazione stabilizzata. Episodio osservato disponibile: 108620991. Il prossimo lavoro utile è analizzare un campione esterno di E22.2 confrontandolo con E22.1; attendere il mandato dell’utente prima di avviare nuove simulazioni, modifiche strategiche o pubblicazioni.
+## Stato salvato
 
-## Evidenze e limiti
+- **E22.1 Q2 Grano v1:** submission **56228842, Complete**, verificata alla chiusura del 14/09/2026. Invio alle 12:36:55 Europe/Rome; primi risultati esterni da acquisire, senza reinviare. SHA256 `5db3ef642ddf8cac5a8797ee92baea40a7caa6ab9eb1908db482b7fdc3c4b18a`. [Report](model_specs/codex/e22/reports/e22_1_q2_grano_v1/REPORT.html): 20/20 scenari positivi, +68,15 medio; 14/14 vittorie dirette, +73,43 medio; stessa manodopera e mix 8C6S3G.
+- **E22.2 fix v1:** submission 56228129, Complete all'ultima verifica. SHA256 `a9bdbcf5d0e2fefc7ecd2154336a69bf876ef52c7b8fcda2df81749abd492ac9`. [Report](model_specs/codex/e22/reports/e22_2_fix_v1/REPORT.html); la correzione meccanica non dimostra superiorità economica.
+- Originali congelati: E22.1 submission 56206528, E22.2 submission 56212495. Nessuna policy E23 implementata.
 
-[Confronto E22.2 contro E22.1](model_specs/codex/e22/reports/e22_2_vs_e22_1/REPORT.html): 14 partite seriali, seed esposti 180911301–307 in entrambi i ruoli. E22.2 vince 4/14, media margine +353,14, mediana −2.092. I ruoli danno esiti identici: sette seed indipendenti. Nessuna superiorità interna regolare dimostrata; pubblicazione diagnostica esplicitamente richiesta dall’utente.
+## Obiettivo operativo
 
-Revisione del file pubblicato: parità di 10.066 azioni con caricatore reale, determinismo, osservazioni immutate, zero fughe/errori contabili e tutto il latte/lana raccolto venduto. Restano giorni isolati senza alimentazione, due fertilizzanti residui e assenza di recupero generale dalle divergenze di cassa/stato. Le vendite lana cambiano anche prima di D11. I seed 180912401–407 sono ancora riservati e non usati.
+Acquisire i risultati esterni pendenti; confrontare i top per fasi, capitale, specie, Q3, colture e costo dei percorsi; formulare ipotesi economiche misurabili; progettare la nuova architettura E23 e testarne gli interventi separatamente, mantenendo report 22 KPI + prezzi e controlli contabili.
 
-[Traiettorie esterne](model_specs/codex/e22/reports/external_pasture_trajectories/REPORT.html): sei replay con tre pascoli, calendario ricorrente. [Calendario v2](model_specs/codex/e22/reports/q0_8c9s_calendar_v2/REPORT.html): implementato e verificato, ma margine medio +130,57, peggiore di v1 di 222,57; non scelto. La ricorrenza non prova ottimalità.
+I semi 180911301–307 sono esposti; 180912401–407 restano riservati. Non assumere che la ricorrenza nei top equivalga a ottimalità. Nessun monitor automatico o nuovo task è stato avviato.
 
-## Repository e riproduzione
+## Ripresa tecnica
 
-Codice, report e verifiche sono versionati. I replay grezzi compressi rimangono locali, conservati senza cancellazioni, con [manifest](model_specs/codex/e22/reports/e22_2_release/LOCAL_ARTIFACTS.json). Gli strumenti e i requisiti per rigenerare i report sono descritti nel [README](model_specs/codex/e22/README.md). Non modificare automaticamente il checkout originale.
+Ramo corrente `codex/e22-2-pascoli-release`; usare questo workspace. Python: `C:/Users/pietr/Projects/kaggriculture-agent/.venv/Scripts/python.exe`. I report sono in `docs/model_specs/codex/e22/reports`; il server locale usa la porta 8768 quando attivo. Per E23 si può aprire un ramo dedicato con prefisso `codex/` dal commit di chiusura.
 
-[Stato progetto](PROJECT_STATE.md) · [Registro esperimenti](EXPERIMENT_LOG.md) · [Contesto precedente archiviato](governance/history/session_snapshots/2026-09-13_e22_2_release/NEW_SESSION.md).
+[Chiusura e cache locali](model_specs/codex/e22/reports/closeout_20260914/README.md) · [Cronologia della sessione E22](archive/E22_NEW_SESSION_20260914.md).

@@ -1,0 +1,178 @@
+{
+  "history": {
+    "56212495": {
+      "submission": {
+        "id": 56212495,
+        "dateSubmitted": "2026-09-13T17:51:28.733Z",
+        "teamId": 16739578,
+        "status": "COMPLETE"
+      },
+      "competitive_n": 92,
+      "latest_rating": 1706.9189909158074,
+      "wins": 52,
+      "losses": 40,
+      "results_all": {
+        "n": 92,
+        "wins": 52,
+        "cash_mean": 98016.55434782608,
+        "margin_mean": 5473.195652173913,
+        "opponent_rating_mean": 1625.2205304717347
+      }
+    },
+    "56206528": {
+      "submission": {
+        "id": 56206528,
+        "dateSubmitted": "2026-09-13T12:06:33.010Z",
+        "teamId": 16739578,
+        "status": "COMPLETE"
+      },
+      "competitive_n": 151,
+      "latest_rating": 2147.0780241565144,
+      "wins": 74,
+      "losses": 77,
+      "results_all": {
+        "n": 151,
+        "wins": 74,
+        "cash_mean": 93736.25165562914,
+        "margin_mean": -751.3245033112582,
+        "opponent_rating_mean": 2095.663526772806
+      }
+    }
+  },
+  "latest20": {
+    "56212495": {
+      "n": 20,
+      "wins": 9,
+      "cash_mean": 90045.3,
+      "cash_median": 87039.5,
+      "margin_mean": -3442,
+      "margin_median": -1233.5,
+      "opponent_rating_mean": 1754.7965251651804,
+      "escapes": 0,
+      "crop_starvation": 40,
+      "unfed": 576,
+      "policy_differences": 0,
+      "cash_errors": 0,
+      "mixes": {
+        "{'COW': 8, 'SHEEP': 9, 'GOOSE': 0}": 18,
+        "{'COW': 7, 'SHEEP': 9, 'GOOSE': 0}": 2
+      },
+      "failed_actions": {
+        "CARE": 488,
+        "WATER": 286,
+        "HARVEST": 109,
+        "PLACE": 28,
+        "PLANT": 6,
+        "FEED": 48
+      },
+      "mean_totals": {
+        "harvested": {
+          "MILK": 241.7,
+          "WOOL": 225,
+          "CARROT": 83.85,
+          "MELON": 72,
+          "STRAWBERRY": 248.5,
+          "WHEAT": 516.35
+        },
+        "sold_units": {
+          "FERTILIZER": 349.55,
+          "MILK": 241.7,
+          "WOOL": 223.8,
+          "CARROT": 83.85,
+          "MELON": 72,
+          "STRAWBERRY": 248.5,
+          "WHEAT": 308.6
+        },
+        "sales_cash": {
+          "FERTILIZER": 14811.25,
+          "MILK": 23640.9,
+          "WOOL": 15933.45,
+          "CARROT": 4402.9,
+          "MELON": 14456.6,
+          "STRAWBERRY": 29663.75,
+          "WHEAT": 12377.1
+        },
+        "purchase_cash": {
+          "BUY_ANIMAL:SHEEP": 4500,
+          "BUY_SEED:MELON": 960,
+          "BUY_SEED:STRAWBERRY": 3300,
+          "BUY_SEED:WHEAT": 1630,
+          "BUY_SEED:CARROT": 620,
+          "BUY_PRODUCT:WHEAT": 5527.4,
+          "BUY_ANIMAL:COW": 3200,
+          "BUY_PRODUCT:FERTILIZER": 1873.45
+        }
+      }
+    },
+    "56206528": {
+      "n": 20,
+      "wins": 8,
+      "cash_mean": 87833.1,
+      "cash_median": 76688.0,
+      "margin_mean": -8061,
+      "margin_median": -815.5,
+      "opponent_rating_mean": 2162.02717863871,
+      "escapes": 3,
+      "crop_starvation": 44,
+      "unfed": 569,
+      "policy_differences": 0,
+      "cash_errors": 0,
+      "mixes": {
+        "{'COW': 8, 'SHEEP': 6, 'GOOSE': 3}": 16,
+        "{'COW': 7, 'SHEEP': 6, 'GOOSE': 3}": 3,
+        "{'COW': 3, 'SHEEP': 4, 'GOOSE': 2}": 1
+      },
+      "failed_actions": {
+        "CARE": 707,
+        "WATER": 352,
+        "HARVEST": 216,
+        "PLACE": 33,
+        "FEED": 242,
+        "PLANT": 9
+      },
+      "mean_totals": {
+        "harvested": {
+          "MILK": 232.3,
+          "WOOL": 158.1,
+          "CARROT": 84,
+          "MELON": 71.6,
+          "STRAWBERRY": 243.05,
+          "WHEAT": 516,
+          "EGG": 76.75
+        },
+        "sold_units": {
+          "FERTILIZER": 337.95,
+          "MILK": 231.75,
+          "WOOL": 156.85,
+          "CARROT": 84,
+          "MELON": 71.6,
+          "STRAWBERRY": 242.1,
+          "EGG": 75.8,
+          "WHEAT": 310.9
+        },
+        "sales_cash": {
+          "FERTILIZER": 14191.8,
+          "MILK": 20589.7,
+          "WOOL": 15444.2,
+          "CARROT": 4375.95,
+          "MELON": 14221.45,
+          "STRAWBERRY": 26815.75,
+          "EGG": 4113.5,
+          "WHEAT": 12526.4
+        },
+        "purchase_cash": {
+          "BUY_ANIMAL:SHEEP": 2950,
+          "BUY_ANIMAL:GOOSE": 885,
+          "BUY_SEED:MELON": 960,
+          "BUY_SEED:STRAWBERRY": 3290,
+          "BUY_SEED:WHEAT": 1628,
+          "BUY_SEED:CARROT": 620,
+          "BUY_PRODUCT:WHEAT": 5470.1,
+          "BUY_ANIMAL:COW": 3160,
+          "BUY_PRODUCT:FERTILIZER": 1855.5
+        }
+      }
+    }
+  },
+  "common_opponents": []
+}

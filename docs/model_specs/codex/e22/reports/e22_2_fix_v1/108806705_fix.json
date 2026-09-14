@@ -1,0 +1,99 @@
+{
+  "episode": 108806705,
+  "seat": 1,
+  "arm": "fix",
+  "hash": "a9bdbcf5d0e2fefc7ecd2154336a69bf876ef52c7b8fcda2df81749abd492ac9",
+  "rewards": [
+    80537.0,
+    77330.0
+  ],
+  "mix": {
+    "SHEEP": 9,
+    "COW": 8
+  },
+  "escaped": 0,
+  "unfed": 24,
+  "failed": {
+    "WATER": 22,
+    "PLACE": 1,
+    "HARVEST": 2
+  },
+  "missing_workers": [],
+  "animal_product_lost": {
+    "MILK": 0,
+    "WOOL": 0,
+    "EGG": 0
+  },
+  "residual": {
+    "MILK": 0,
+    "WOOL": 0,
+    "EGG": 0
+  },
+  "terminal": {
+    "cash": 77330.0,
+    "reward": 77330.0,
+    "shed": {},
+    "carried": {},
+    "seeds": {},
+    "tile_yield_units": {},
+    "spot_prices": {
+      "WHEAT": 21,
+      "CARROT": 72,
+      "TOMATO": 64,
+      "STRAWBERRY": 1,
+      "MELON": 120,
+      "EGG": 65,
+      "MILK": 1,
+      "WOOL": 234,
+      "FERTILIZER": 1
+    }
+  },
+  "totals": {
+    "planted": {
+      "MELON": 12,
+      "WHEAT": 163,
+      "STRAWBERRY": 33,
+      "CARROT": 31
+    },
+    "harvested": {
+      "WHEAT": 516,
+      "WOOL": 225,
+      "MILK": 245,
+      "MELON": 72,
+      "STRAWBERRY": 247,
+      "CARROT": 84
+    },
+    "sold_units": {
+      "WHEAT": 302,
+      "FERTILIZER": 354,
+      "WOOL": 225,
+      "MILK": 245,
+      "MELON": 72,
+      "STRAWBERRY": 247,
+      "CARROT": 84
+    },
+    "sales_cash": {
+      "WHEAT": 10199,
+      "FERTILIZER": 14671,
+      "WOOL": 48724,
+      "MILK": 4084,
+      "MELON": 14278,
+      "STRAWBERRY": 3869,
+      "CARROT": 6550
+    },
+    "purchase_cash": {
+      "BUY_PRODUCT:WHEAT": 5364,
+      "BUY_ANIMAL:COW": 3200,
+      "BUY_ANIMAL:SHEEP": 4500,
+      "BUY_SEED:MELON": 960,
+      "BUY_SEED:WHEAT": 1630,
+      "BUY_SEED:STRAWBERRY": 3300,
+      "BUY_PRODUCT:FERTILIZER": 1841,
+      "BUY_SEED:CARROT": 620
+    },
+    "hire_cash": 3630.0,
+    "land_cash": 3000.0,
+    "unit_cash_delta": 0.0
+  },
+  "source": "local engine replay"
+}
