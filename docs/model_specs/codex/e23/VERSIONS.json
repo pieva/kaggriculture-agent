@@ -1,6 +1,6 @@
 {
-  "phase": "local tournament complete; no candidate promoted",
-  "published": false,
+  "phase": "E23.1 and E23.3 Complete on Kaggle; external validation pending",
+  "published": true,
   "versions": {
     "E22G": {
       "path": "C:\\Users\\pietr\\Projects\\kaggriculture-agent\\submission\\submission_codex_e22_1_q2_grano_v1.py",
@@ -17,7 +17,7 @@
     "E23G": {
       "path": "C:\\Users\\pietr\\Projects\\kaggriculture-agent\\submission\\submission_codex_e23_1_geese_v1.py",
       "sha256": "9c96d0e5625961dbf3b9653312c02565883db50dd21acdf1090c0853deadbb3a",
-      "status": "local candidate",
+      "status": "Complete; external validation",
       "parent": "E22G",
       "mix": {
         "COW": 9,
@@ -62,7 +62,10 @@
       "clear_products": [
         "MILK"
       ],
-      "scope": "Portfolio at first placement; adapt stationary services; clear modified product in existing sale windows; shared E22S repairs. No route or hiring changes, no Q3/tomato. Sheep (5,2) keeps E22 D8 H15 rather than replay H16."
+      "scope": "Portfolio at first placement; adapt stationary services; clear modified product in existing sale windows; shared E22S repairs. No route or hiring changes, no Q3/tomato. Sheep (5,2) keeps E22 D8 H15 rather than replay H16.",
+      "submission": 56238382,
+      "submission_url": "https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56238382",
+      "initial_score": 600.0
     },
     "E23S": {
       "path": "C:\\Users\\pietr\\Projects\\kaggriculture-agent\\submission\\submission_codex_e23_2_sheep_v1.py",
@@ -159,12 +162,13 @@
       "clear_products": [
         "WOOL"
       ],
-      "scope": "Portfolio at first placement; adapt stationary services; clear modified product in existing sale windows; shared E22S repairs. No route or hiring changes, no Q3/tomato. Sheep (5,2) keeps E22 D8 H15 rather than replay H16."
+      "scope": "Portfolio at first placement; adapt stationary services; clear modified product in existing sale windows; shared E22S repairs. No route or hiring changes, no Q3/tomato. Sheep (5,2) keeps E22 D8 H15 rather than replay H16.",
+      "next_action": "Publish frozen E23.2 on 2026-09-15 and save ID; user requested handoff reminder, not automation."
     },
     "E23M": {
       "path": "C:\\Users\\pietr\\Projects\\kaggriculture-agent\\submission\\submission_codex_e23_3_7c10s_v1.py",
       "sha256": "4ecd301e3c112e6ea53662940679bc14855179ad79d57cc236990ea334987f00",
-      "status": "local candidate",
+      "status": "Complete; external validation",
       "parent": "E22S",
       "mix": {
         "COW": 7,
@@ -220,7 +224,10 @@
       "clear_products": [
         "WOOL"
       ],
-      "scope": "Intermediate portfolio: only (6,4) becomes SHEEP at D8 H10; (5,2) remains COW. Same services/executor/sale rule as E23S on the evolved tile; all E22S routes, hires and crops retained, including Q2 wheat."
+      "scope": "Intermediate portfolio: only (6,4) becomes SHEEP at D8 H10; (5,2) remains COW. Same services/executor/sale rule as E23S on the evolved tile; all E22S routes, hires and crops retained, including Q2 wheat.",
+      "submission": 56238389,
+      "submission_url": "https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56238389",
+      "initial_score": 600.0
     }
   },
   "protocol": "reports/tournament5_v1/matches/PROTOCOL.json",

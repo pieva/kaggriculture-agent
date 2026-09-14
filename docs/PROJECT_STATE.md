@@ -1,5 +1,10 @@
 # Stato del progetto — 14 settembre 2026
 
+## Pubblicazioni E23 — 14 settembre 2026
+
+E23.1 9C5S3G **56238382** ed E23.3 7C10S **56238389** pubblicate su richiesta dell'utente, entrambe Complete, score iniziale 600. Bundle identici a quelli del torneo, hash verificati. Risultati esterni da acquisire; non reinviare. Registro: `docs/model_specs/codex/e23/EXTERNAL_SUBMISSIONS_20260914.json`. Promemoria in NEW_SESSION: pubblicare E23.2 6C11S il 15 settembre e salvare ID/link/stato; nessuna automazione.
+
+
 > Handoff 2026-09-14: stato operativo in `docs/NEW_SESSION.md`. Report finale: http://127.0.0.1:8771/tournament5_v1/REPORT.html . Prossimo mandato: indicatori osservabili per colmare il gap con i top, usando i dati salvati; budget da concordare prima di nuove simulazioni. Checkpoint analitico verificato in `docs/model_specs/codex/e23/ANALYSIS_CHECKPOINT.zip`.
 
 

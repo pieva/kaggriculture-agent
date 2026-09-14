@@ -1,10 +1,17 @@
 # New Session — indicatori per colmare il gap con i top
 
+
+## Pubblicazioni esterne e promemoria 15 settembre 2026
+
+- E23.1 9C5S3G: submission **56238382**, Complete, score iniziale 600 (non valutazione consolidata). https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56238382
+- E23.3 7C10S: submission **56238389**, Complete, score iniziale 600. https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56238389 . Non reinviare nessuna delle due.
+- **Domani, 15 settembre 2026: pubblicare anche E23.2 6C11S per verifica esterna e salvare ID, link e stato** in questa new session e in VERSIONS.json. Usare il bundle congelato `submission/submission_codex_e23_2_sheep_v1.py`, SHA256 `48751f7b49c82d537d021249c9108f4210794247f5256a6d9f055916d821fa94`; verificare prima che non sia già stata inviata. Promemoria per la prossima sessione, nessun invio automatico pianificato.
+
 ## Mandato corrente e costi
 
 La prossima sessione deve **trovare indicatori osservabili che possano colmare il gap con i top**, usando prima i dati già raccolti. Non ripartire da altri semplici cambi di mix o da tornei estesi.
 
-L'utente ha segnalato circa **50 € di crediti spesi senza ottenere una policy migliore**: importo riferito, non verificato contabilmente. L'assistente ha riconosciuto il dimensionamento eccessivo del lavoro e degli aggiornamenti. Il risultato pratico richiesto resta migliorare E22, non produrre altra sola reportistica. Analisi mirata sui dati salvati; prima di nuove simulazioni individuare una modifica concreta, beneficio plausibile e test minimo con limite di costo/partite concordato. Nessun monitor, nuova attività o esecuzione lunga automatica. Nessuna pubblicazione Kaggle autorizzata. Aggiornamenti sintetici su risultati o decisioni utili.
+L'utente ha segnalato circa **50 € di crediti spesi senza ottenere una policy migliore**: importo riferito, non verificato contabilmente. L'assistente ha riconosciuto il dimensionamento eccessivo del lavoro e degli aggiornamenti. Il risultato pratico richiesto resta migliorare E22, non produrre altra sola reportistica. Analisi mirata sui dati salvati; prima di nuove simulazioni individuare una modifica concreta, beneficio plausibile e test minimo con limite di costo/partite concordato. Nessun monitor, nuova attività o esecuzione lunga automatica. Il 14 settembre l'utente ha poi autorizzato la pubblicazione di E23.1 ed E23.3 per verifica esterna. Aggiornamenti sintetici su risultati o decisioni utili.
 
 ## Report da aprire per primo
 
@@ -27,16 +34,16 @@ Ramo `codex/e23-evolution-tournament`; checkout `C:/Users/pietr/Projects/kaggric
 | Versione | Mix | Vittorie | Stato |
 |---|---|---:|---|
 | E22.1 | 8C6S3G | 40/56 | Q2 Grano, submission 56228842 |
-| E23.1 | 9C5S3G | 34/56 | Locale, non promossa |
+| E23.1 | 9C5S3G | 34/56 | Submission 56238382, Complete |
 | E22.2 | 8C9S | 30/56 | fix Q2 Grano, submission 56231638 |
-| E23.3 | 7C10S | 24/56 | Locale, non promossa |
+| E23.3 | 7C10S | 24/56 | Submission 56238389, Complete |
 | E23.2 | 6C11S | 12/56 | Locale, non promossa |
 
 E23.1 contro E22.1: 4–10, delta medio −982,71 monete. E23.2 contro E22.2: 2–12, −2.244,29. E23.3 contro E22.2: 4–10, −916. La 7C10S batte la 6C11S 12–2, +1.432,43 medie; l'ultimo seme favorisce invece 6C11S.
 
 Verificati 280 lati: mix attesi e Q2 Grano raccolto ovunque, zero fughe e discrepanze contabili. Nessuna differenza di ricompensa nei 70 confronti a posti invertiti: non sono campioni indipendenti. E23.1 lascia tre latti non raccolti sulla nuova mucca; nessuna differenza inventariale nei prodotti animali raccolti. Il pollaio Q2 era già eliminato nelle E22 correnti.
 
-Semi **180911301–180911307 già esposti**; **180912401–180912407 riservati e mai usati**. Non usare quelli riservati per selezionare indicatori. Nessuna E23 pubblicata. Risultati locali, non stime del rating Kaggle.
+Semi **180911301–180911307 già esposti**; **180912401–180912407 riservati e mai usati**. Non usare quelli riservati per selezionare indicatori. E23.1 ed E23.3 inviate per verifica esterna; E23.2 resta locale. Risultati locali, non stime del rating Kaggle.
 
 ## Indicatori da indagare — ipotesi, non risultati già dimostrati
 
