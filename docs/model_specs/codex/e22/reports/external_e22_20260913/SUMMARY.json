@@ -1,0 +1,527 @@
+{
+  "games": 78,
+  "wins": 46,
+  "draws": 0,
+  "losses": 32,
+  "mean_margin": 3279.269230769231,
+  "median_margin": 1048.5,
+  "latest_rating": 2223.8522023686737,
+  "latest_episode": 108602447,
+  "peak_rating": 2279.5916688652783,
+  "audited": 20,
+  "parity_errors": 0,
+  "variant_sample": [
+    {
+      "episode": 108549619,
+      "opponent_submission": 56124096,
+      "margin": -10234,
+      "own_mix": {
+        "GOOSE": 3,
+        "COW": 8,
+        "SHEEP": 6
+      },
+      "opponent_mix": {
+        "SHEEP": 11,
+        "COW": 5
+      },
+      "q0_three_pastures": true,
+      "q2_coop": true,
+      "own_plan_matches": 719,
+      "opponent_worker_matches": 218,
+      "own_escapes": 0,
+      "opponent_escapes": 0
+    },
+    {
+      "episode": 108558711,
+      "opponent_submission": 56171606,
+      "margin": -23731,
+      "own_mix": {
+        "GOOSE": 3,
+        "COW": 8,
+        "SHEEP": 6
+      },
+      "opponent_mix": {
+        "SHEEP": 10,
+        "COW": 6
+      },
+      "q0_three_pastures": true,
+      "q2_coop": true,
+      "own_plan_matches": 719,
+      "opponent_worker_matches": 224,
+      "own_escapes": 0,
+      "opponent_escapes": 1
+    },
+    {
+      "episode": 108561064,
+      "opponent_submission": 56165125,
+      "margin": -8990,
+      "own_mix": {
+        "GOOSE": 3,
+        "COW": 8,
+        "SHEEP": 6
+      },
+      "opponent_mix": {
+        "SHEEP": 10,
+        "COW": 6
+      },
+      "q0_three_pastures": true,
+      "q2_coop": true,
+      "own_plan_matches": 719,
+      "opponent_worker_matches": 302,
+      "own_escapes": 0,
+      "opponent_escapes": 0
+    },
+    {
+      "episode": 108575585,
+      "opponent_submission": 56205921,
+      "margin": -56815,
+      "own_mix": {
+        "GOOSE": 3,
+        "COW": 8,
+        "SHEEP": 6
+      },
+      "opponent_mix": {
+        "SHEEP": 10,
+        "COW": 6
+      },
+      "q0_three_pastures": true,
+      "q2_coop": true,
+      "own_plan_matches": 719,
+      "opponent_worker_matches": 228,
+      "own_escapes": 0,
+      "opponent_escapes": 0
+    }
+  ],
+  "target": {
+    "episode": 108561064,
+    "own_mix": {
+      "GOOSE": 3,
+      "COW": 8,
+      "SHEEP": 6
+    },
+    "opponent_mix": {
+      "SHEEP": 10,
+      "COW": 6
+    },
+    "own_totals": {
+      "sales_cash": {
+        "WHEAT": 11719,
+        "FERTILIZER": 14667,
+        "WOOL": 34457,
+        "MILK": 11340,
+        "MELON": 14267,
+        "EGG": 4366,
+        "STRAWBERRY": 51095,
+        "CARROT": 3511
+      },
+      "sold_units": {
+        "WHEAT": 308,
+        "FERTILIZER": 350,
+        "WOOL": 161,
+        "MILK": 245,
+        "MELON": 72,
+        "EGG": 78,
+        "STRAWBERRY": 249,
+        "CARROT": 84
+      },
+      "purchase_cash": {
+        "BUY_PRODUCT:WHEAT": 5269,
+        "BUY_ANIMAL:COW": 3200,
+        "BUY_ANIMAL:SHEEP": 3000,
+        "BUY_SEED:MELON": 960,
+        "BUY_SEED:WHEAT": 1630,
+        "BUY_SEED:STRAWBERRY": 3300,
+        "BUY_PRODUCT:FERTILIZER": 1844,
+        "BUY_ANIMAL:GOOSE": 900,
+        "BUY_SEED:CARROT": 620
+      },
+      "harvested": {
+        "WHEAT": 517,
+        "WOOL": 161,
+        "MILK": 245,
+        "MELON": 72,
+        "EGG": 78,
+        "STRAWBERRY": 249,
+        "CARROT": 84
+      },
+      "hire_cash": 3630.0,
+      "land_cash": 3000.0,
+      "unit_cash_delta": 0.0
+    },
+    "opponent_totals": {
+      "sales_cash": {
+        "WHEAT": 10824,
+        "FERTILIZER": 13428,
+        "WOOL": 50850,
+        "MILK": 10037,
+        "MELON": 14267,
+        "STRAWBERRY": 50737,
+        "CARROT": 3494
+      },
+      "sold_units": {
+        "WHEAT": 287,
+        "FERTILIZER": 333,
+        "WOOL": 247,
+        "MILK": 181,
+        "MELON": 72,
+        "STRAWBERRY": 247,
+        "CARROT": 84
+      },
+      "purchase_cash": {
+        "BUY_PRODUCT:WHEAT": 3621,
+        "BUY_ANIMAL:COW": 2400,
+        "BUY_ANIMAL:SHEEP": 5000,
+        "BUY_SEED:MELON": 960,
+        "BUY_SEED:WHEAT": 1630,
+        "BUY_SEED:STRAWBERRY": 3300,
+        "BUY_PRODUCT:FERTILIZER": 1074,
+        "BUY_SEED:CARROT": 620
+      },
+      "harvested": {
+        "WHEAT": 517,
+        "WOOL": 247,
+        "MILK": 181,
+        "MELON": 72,
+        "STRAWBERRY": 247,
+        "CARROT": 84
+      },
+      "hire_cash": 4973.0,
+      "land_cash": 3000.0,
+      "unit_cash_delta": 0.0
+    },
+    "cash_effect": {
+      "sales": {
+        "WHEAT": -895,
+        "EGG": -4366,
+        "WOOL": 16393,
+        "STRAWBERRY": -358,
+        "MELON": 0,
+        "MILK": -1303,
+        "FERTILIZER": -1239,
+        "CARROT": -17
+      },
+      "purchases": 2118,
+      "labor": -1343.0,
+      "land": 0.0,
+      "unit_cash": 0.0
+    },
+    "opponent_events": [
+      {
+        "day": 1,
+        "hour": 4,
+        "x": 4,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 1032.0
+      },
+      {
+        "day": 1,
+        "hour": 5,
+        "x": 4,
+        "y": 3,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 1032.0
+      },
+      {
+        "day": 1,
+        "hour": 5,
+        "x": 4,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": "COW",
+        "cash_before": 1032.0
+      },
+      {
+        "day": 1,
+        "hour": 6,
+        "x": 4,
+        "y": 3,
+        "kind": "PASTURE",
+        "animal": "COW",
+        "cash_before": 1032.0
+      },
+      {
+        "day": 1,
+        "hour": 8,
+        "x": 3,
+        "y": 3,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 872.0
+      },
+      {
+        "day": 1,
+        "hour": 9,
+        "x": 3,
+        "y": 3,
+        "kind": "PASTURE",
+        "animal": "SHEEP",
+        "cash_before": 792.0
+      },
+      {
+        "day": 1,
+        "hour": 10,
+        "x": 3,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 792.0
+      },
+      {
+        "day": 1,
+        "hour": 11,
+        "x": 3,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": "SHEEP",
+        "cash_before": 712.0
+      },
+      {
+        "day": 2,
+        "hour": 6,
+        "x": 2,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 26.0
+      },
+      {
+        "day": 2,
+        "hour": 10,
+        "x": 4,
+        "y": 2,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 210.0
+      },
+      {
+        "day": 3,
+        "hour": 22,
+        "x": 4,
+        "y": 2,
+        "kind": "PASTURE",
+        "animal": "COW",
+        "cash_before": 204.0
+      },
+      {
+        "day": 4,
+        "hour": 24,
+        "x": 2,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": "COW",
+        "cash_before": 256.0
+      },
+      {
+        "day": 7,
+        "hour": 10,
+        "x": 5,
+        "y": 2,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 1228.0
+      },
+      {
+        "day": 7,
+        "hour": 10,
+        "x": 5,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 1228.0
+      },
+      {
+        "day": 7,
+        "hour": 12,
+        "x": 6,
+        "y": 2,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 1218.0
+      },
+      {
+        "day": 7,
+        "hour": 12,
+        "x": 5,
+        "y": 3,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 1218.0
+      },
+      {
+        "day": 7,
+        "hour": 12,
+        "x": 5,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": "COW",
+        "cash_before": 1218.0
+      },
+      {
+        "day": 7,
+        "hour": 13,
+        "x": 5,
+        "y": 3,
+        "kind": "PASTURE",
+        "animal": "COW",
+        "cash_before": 1307.0
+      },
+      {
+        "day": 7,
+        "hour": 16,
+        "x": 6,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 1097.0
+      },
+      {
+        "day": 7,
+        "hour": 17,
+        "x": 6,
+        "y": 3,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 977.0
+      },
+      {
+        "day": 7,
+        "hour": 18,
+        "x": 7,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 977.0
+      },
+      {
+        "day": 8,
+        "hour": 10,
+        "x": 6,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": "SHEEP",
+        "cash_before": 383.0
+      },
+      {
+        "day": 8,
+        "hour": 16,
+        "x": 5,
+        "y": 2,
+        "kind": "PASTURE",
+        "animal": "SHEEP",
+        "cash_before": 723.0
+      },
+      {
+        "day": 9,
+        "hour": 10,
+        "x": 6,
+        "y": 3,
+        "kind": "PASTURE",
+        "animal": "SHEEP",
+        "cash_before": 1265.0
+      },
+      {
+        "day": 9,
+        "hour": 14,
+        "x": 7,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": "SHEEP",
+        "cash_before": 763.0
+      },
+      {
+        "day": 10,
+        "hour": 8,
+        "x": 6,
+        "y": 2,
+        "kind": "PASTURE",
+        "animal": "SHEEP",
+        "cash_before": 1256.0
+      },
+      {
+        "day": 11,
+        "hour": 15,
+        "x": 2,
+        "y": 3,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 14577.0
+      },
+      {
+        "day": 11,
+        "hour": 16,
+        "x": 4,
+        "y": 0,
+        "kind": "COOP",
+        "animal": null,
+        "cash_before": 14557.0
+      },
+      {
+        "day": 11,
+        "hour": 18,
+        "x": 1,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 15433.0
+      },
+      {
+        "day": 11,
+        "hour": 19,
+        "x": 3,
+        "y": 2,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 15423.0
+      },
+      {
+        "day": 11,
+        "hour": 19,
+        "x": 1,
+        "y": 4,
+        "kind": "PASTURE",
+        "animal": "SHEEP",
+        "cash_before": 15423.0
+      },
+      {
+        "day": 11,
+        "hour": 20,
+        "x": 4,
+        "y": 1,
+        "kind": "PASTURE",
+        "animal": null,
+        "cash_before": 16962.0
+      },
+      {
+        "day": 11,
+        "hour": 20,
+        "x": 3,
+        "y": 2,
+        "kind": "PASTURE",
+        "animal": "SHEEP",
+        "cash_before": 16962.0
+      },
+      {
+        "day": 12,
+        "hour": 7,
+        "x": 2,
+        "y": 3,
+        "kind": "PASTURE",
+        "animal": "SHEEP",
+        "cash_before": 15896.0
+      },
+      {
+        "day": 29,
+        "hour": 5,
+        "x": 3,
+        "y": 7,
+        "kind": "COOP",
+        "animal": null,
+        "cash_before": 116073.0
+      }
+    ],
+    "opponent_escapes": []
+  }
+}

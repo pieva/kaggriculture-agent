@@ -653,3 +653,27 @@ data/replays/json/**/*.json
 /docs/model_specs/codex/e22/reports/top_trigger_pilot_20260913/profiles/56200341_108504264.json
 /docs/model_specs/codex/e22/reports/top_trigger_pilot_20260913/profiles/56200341_108505285.json
 /docs/model_specs/codex/e22/reports/top_trigger_pilot_20260913/profiles/56200341_108505403.json
+
+# E22 external replay audit: raw history and generated bulky profiles/report remain local
+/docs/model_specs/codex/e22/reports/external_e22_20260913/history.json
+/docs/model_specs/codex/e22/reports/external_e22_20260913/profiles/
+/docs/model_specs/codex/e22/reports/external_e22_20260913/REPORT.html
+
+# E23 tournament: bulky reproducible replay/profile caches stay local
+/docs/model_specs/codex/e23/reports/tournament4_v1/matches/E*.json
+/docs/model_specs/codex/e23/reports/tournament4_v1/matches/*.json.gz
+/docs/model_specs/codex/e23/reports/tournament4_v1/pilot/E*.json
+/docs/model_specs/codex/e23/reports/tournament4_v1/pilot/*.json.gz
+/docs/model_specs/codex/e23/reports/tournament4_v1/*.log
+/docs/model_specs/codex/e23/reports/tournament4_v1/REPORT.html
+/docs/model_specs/codex/e23/reports/tournament4_v1/DAILY_22_KPI_PRICES.csv
+/docs/model_specs/codex/e23/reports/tournament5_v1/matches/E*.json
+/docs/model_specs/codex/e23/reports/tournament5_v1/matches/*.json.gz
+/docs/model_specs/codex/e23/reports/tournament5_v1/pilot/E*.json
+/docs/model_specs/codex/e23/reports/tournament5_v1/pilot/*.json.gz
+/docs/model_specs/codex/e23/reports/tournament5_v1/*.log
+/docs/model_specs/codex/e23/reports/tournament5_v1/DAILY_22_KPI_PRICES.csv
+
+# E23 baseline preserved in ANALYSIS_CHECKPOINT.zip
+/docs/model_specs/codex/e23/reports/sheep_vs_e222_20260914/BASELINE_REPLAY.json
+/docs/model_specs/codex/e23/reports/sheep_vs_e222_20260914/*.log

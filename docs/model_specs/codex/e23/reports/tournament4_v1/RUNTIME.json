@@ -1,0 +1,24 @@
+{
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "kaggle_environments": "1.32.7",
+  "engine_path": "C:\\Users\\pietr\\Projects\\kaggriculture-agent\\.venv\\Lib\\site-packages\\kaggle_environments\\envs\\kaggriculture\\kaggriculture.py",
+  "engine_sha256": "bc8a54879ef02c7ea64b8b333d6a976f0ea65c4949149d01f463f23bccee653e",
+  "working_directory": "C:\\Users\\pietr\\Projects\\kaggriculture-agent",
+  "serial": true,
+  "entrypoint": "agent",
+  "control_source": "C:/Users/pietr/.codex/worktrees/756c/kaggriculture-agent",
+  "commands": [
+    ".venv/Scripts/python.exe docs/model_specs/codex/e23/tools/build_e23_pair.py",
+    ".venv/Scripts/python.exe docs/model_specs/codex/e23/tools/run_tournament4.py --pilot",
+    ".venv/Scripts/python.exe docs/model_specs/codex/e23/tools/verify_e23_pilots.py",
+    ".venv/Scripts/python.exe docs/model_specs/codex/e23/tools/run_tournament4.py",
+    ".venv/Scripts/python.exe docs/model_specs/codex/e23/tools/report_tournament4.py"
+  ],
+  "audit_dependencies": {
+    "C:\\Users\\pietr\\.codex\\worktrees\\756c\\kaggriculture-agent\\docs\\model_specs\\codex\\e22\\tools\\analyze_external_20260914.py": "bb504e7d60be9b5f4cdfbf3448eb2449cefb94d842bbfbc0e70e43fc504f146b",
+    "C:\\Users\\pietr\\.codex\\worktrees\\756c\\kaggriculture-agent\\docs\\model_specs\\codex\\e22\\tools\\report_external_20260914.py": "c724d499d6991d332ee121fbfc77be02cb0a48a4f4bdb9e502172f9f58554add",
+    "C:\\Users\\pietr\\.codex\\worktrees\\756c\\kaggriculture-agent\\docs\\model_specs\\codex\\e20\\tools\\analyze_first_external.py": "bfbb7aeae4a63d78983f5d83b679d0c3ccc8b8211dd3ff7c46de8dce00b7ea5a",
+    "C:\\Users\\pietr\\.codex\\worktrees\\756c\\kaggriculture-agent\\docs\\model_specs\\codex\\e18\\tools\\build_e18_26_jesse_770_d30_closure.py": "f96cbd63d0c35641f29271d414968b67d4d744257eb576f9294e4cb7cd647d60",
+    "C:\\Users\\pietr\\.codex\\worktrees\\756c\\kaggriculture-agent\\docs\\model_specs\\codex\\e19\\tools\\build_assisted_complete_kpi.py": "51aa377cc50dca9d3d17889f3c99b9b5e2c692e5f1375b0913c1b487bfeb77d9"
+  }
+}

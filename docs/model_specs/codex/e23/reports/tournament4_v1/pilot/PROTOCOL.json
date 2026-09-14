@@ -1,0 +1,44 @@
+{
+  "hashes": {
+    "E22G": "5db3ef642ddf8cac5a8797ee92baea40a7caa6ab9eb1908db482b7fdc3c4b18a",
+    "E22S": "c6b6dcaa7480df647a288ec8c4333ed0a7b34a44cee1a068e9946d94209a1c3a",
+    "E23G": "9c96d0e5625961dbf3b9653312c02565883db50dd21acdf1090c0853deadbb3a",
+    "E23S": "48751f7b49c82d537d021249c9108f4210794247f5256a6d9f055916d821fa94"
+  },
+  "schedule": [
+    {
+      "id": "E22G_E23G_180911301_0",
+      "seed": 180911301,
+      "players": [
+        "E22G",
+        "E23G"
+      ]
+    },
+    {
+      "id": "E22G_E23G_180911301_1",
+      "seed": 180911301,
+      "players": [
+        "E23G",
+        "E22G"
+      ]
+    },
+    {
+      "id": "E22S_E23S_180911301_0",
+      "seed": 180911301,
+      "players": [
+        "E22S",
+        "E23S"
+      ]
+    },
+    {
+      "id": "E22S_E23S_180911301_1",
+      "seed": 180911301,
+      "players": [
+        "E23S",
+        "E22S"
+      ]
+    }
+  ],
+  "method": "Serial actual file loader; shared endogenous market; all pairings, seven exposed seeds, reversed seats. Win=1, tie=0.5. Reserved seeds unused.",
+  "scope": "Evolved portfolios plus service/sale adaptation and shared E22S repairs; not a pure species-only causal effect; not a Kaggle rating prediction."
+}

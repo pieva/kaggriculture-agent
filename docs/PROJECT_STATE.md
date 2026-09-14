@@ -1,4 +1,15 @@
-# Stato del progetto — 13 settembre 2026
+# Stato del progetto — 14 settembre 2026
+
+> Handoff 2026-09-14: stato operativo in `docs/NEW_SESSION.md`. Report finale: http://127.0.0.1:8771/tournament5_v1/REPORT.html . Prossimo mandato: indicatori osservabili per colmare il gap con i top, usando i dati salvati; budget da concordare prima di nuove simulazioni. Checkpoint analitico verificato in `docs/model_specs/codex/e23/ANALYSIS_CHECKPOINT.zip`.
+
+
+## Aggiornamento E23
+
+**Torneo a cinque completato e verificato (140 incontri).** Classifica per vittorie su 56: E22.1 40, E23.1 34, E22.2 30, E23.3 24, E23.2 12. La 7C10S è migliore della 6C11S nel loro confronto (12–2), ma non migliora E22.2 (4–10). Nessuna E23 promossa; tutte restano bundle locali congelati. Zero fughe e discrepanze contabili su 280 lati, mix e Q2 Grano corretti ovunque. [Esiti finali](model_specs/codex/e23/reports/tournament5_v1/REPORT.html).
+
+Esteso su richiesta a **tre E23 e torneo a cinque**: aggiunta E23.3 7C10S (pecora al posto della mucca in (6,4)). Due collaudi superati, 1.438 azioni aggiuntive verificate. [Torneo corrente da 140 incontri](model_specs/codex/e23/reports/tournament5_v1/REPORT.html); riutilizzati i 12 risultati completi del precedente torneo.
+
+Sviluppate due candidate locali: E23.1 9C5S3G ed E23.2 6C11S. [Stato, bundle e torneo a quattro](model_specs/codex/e23/README.md). Controlli attuali E22.1 Q2 Grano 56228842 ed E22.2 fix Q2 Grano 56231638. Quattro collaudi verificati, torneo seriale da 84 incontri; conteggio effettivo nel report. Nessuna nuova pubblicazione. Il seguito conserva lo stato storico del 13 settembre.
 
 **E22 è il campione corrente.** Pubblicata e Complete, submission [56206528](https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56206528). La prossima fase è studiarne l'evoluzione mantenendo una baseline congelata.
 
@@ -21,3 +32,7 @@ La pulizia sostituisce le etichette nominali con riferimenti numerici. Cambiano 
 Studiare anche la variante segnalata nell’episodio 108561064 (pollaio Q2 conservato, tre pollai Q0 sostituiti da pascoli: osservazione utente da verificare). Studiare dapprima l'origine del divario nel replay, poi progettare modifiche isolate e verificabili a E22. Le ipotesi su reattività, diversificazione, autoconsumo e chiusura rimangono da validare; nessuna nuova variante implementata con questa pulizia.
 
 [NEW_SESSION](NEW_SESSION.md) contiene la ripresa; [specifica E22](model_specs/codex/e22/mod_specs.md) descrive la baseline; [EXPERIMENT_LOG](EXPERIMENT_LOG.md) è l'indice storico. Le istruzioni dei rami scartati sono archiviate, non priorità operative. Replay grezzi, copie ridondanti e report pesanti restano locali con [manifest](governance/history/LOCAL_ARTIFACTS_20260913.json); non sono inclusi nel clone Git.
+
+## Analisi E22 conclusa e sviluppo Q0 autorizzato
+
+78 partite congelate, 46 vittorie e 32 sconfitte; audit 20 replay / 40 lati senza discrepanze. [Report](model_specs/codex/e22/reports/external_e22_20260913/REPORT.html). Quattro casi con pascoli sulle tre coordinate Q0, tutti vincenti contro E22 nel campione selezionato. Caso guida 108561064, submission 56165125: 6C10S contro 8C6S3G, +8.990 monete soprattutto dalla lana. Non è un confronto isolato di topologia. L’utente ha autorizzato una nuova attività dedicata: [New Session](NEW_SESSION.md) specifica un primo braccio 8C9S e distingue la replica 6C10S.

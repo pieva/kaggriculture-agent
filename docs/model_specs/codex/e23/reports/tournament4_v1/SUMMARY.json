@@ -1,0 +1,189 @@
+{
+  "verification": {
+    "matches": 10,
+    "expected": 84,
+    "profiles": 20,
+    "cash_parity_errors": 0,
+    "reserved_seeds_used": false,
+    "all_hashes_match": true
+  },
+  "standings": [
+    {
+      "key": "E22G",
+      "label": "E22.1 \u00b7 8C6S3G",
+      "n": 10,
+      "wins": 8,
+      "draws": 0,
+      "losses": 2,
+      "points": 8.0,
+      "cash_mean": 93812.8,
+      "margin_mean": 1194.0,
+      "margin_min": -6555.0,
+      "margin_max": 4714.0,
+      "escapes": 0,
+      "unfed": 290,
+      "crop_stress": 20,
+      "mixes": {
+        "{'GOOSE': 3, 'COW': 8, 'SHEEP': 6}": 10
+      },
+      "sold_mean": {
+        "MILK": 245,
+        "WOOL": 161,
+        "EGG": 78,
+        "WHEAT": 310,
+        "STRAWBERRY": 249
+      },
+      "sales_mean": {
+        "MILK": 17298.2,
+        "WOOL": 11042,
+        "EGG": 4005.6,
+        "WHEAT": 12810.8,
+        "STRAWBERRY": 34053.8
+      }
+    },
+    {
+      "key": "E22S",
+      "label": "E22.2 \u00b7 8C9S",
+      "n": 10,
+      "wins": 2,
+      "draws": 0,
+      "losses": 8,
+      "points": 2.0,
+      "cash_mean": 92618.8,
+      "margin_mean": -1194.0,
+      "margin_min": -4714.0,
+      "margin_max": 6555.0,
+      "escapes": 0,
+      "unfed": 240,
+      "crop_stress": 0,
+      "mixes": {
+        "{'SHEEP': 9, 'COW': 8}": 10
+      },
+      "sold_mean": {
+        "MILK": 245,
+        "WOOL": 225,
+        "EGG": 0,
+        "WHEAT": 304,
+        "STRAWBERRY": 247
+      },
+      "sales_mean": {
+        "MILK": 17300,
+        "WOOL": 14991.6,
+        "EGG": 0,
+        "WHEAT": 12547.4,
+        "STRAWBERRY": 33762.4
+      }
+    }
+  ],
+  "pairings": [
+    {
+      "a": "E22G",
+      "b": "E22S",
+      "n": 10,
+      "wins_a": 8,
+      "draws": 0,
+      "wins_b": 2,
+      "mean_margin_a": 1194.0,
+      "min_margin_a": -6555.0,
+      "max_margin_a": 4714.0,
+      "seed_mean_margins": [
+        -6555.0,
+        2355.0,
+        4714.0,
+        2731.0,
+        2725.0
+      ],
+      "sales_delta_a": {
+        "CARROT": 0,
+        "EGG": 4005.6,
+        "FERTILIZER": -15,
+        "MELON": 0,
+        "MILK": -1.8,
+        "STRAWBERRY": 291.4,
+        "WHEAT": 263.4,
+        "WOOL": -3949.6
+      },
+      "purchase_delta_a": -600,
+      "hire_cash": 0.0,
+      "land_cash": 0.0,
+      "unit_cash_delta": 0.0
+    }
+  ],
+  "seed_scores": [
+    {
+      "seed": 180911301,
+      "points": {
+        "E22G": 0,
+        "E22S": 2,
+        "E23G": 0,
+        "E23S": 0
+      },
+      "matches": {
+        "E22G": 2,
+        "E22S": 2,
+        "E23G": 0,
+        "E23S": 0
+      }
+    },
+    {
+      "seed": 180911302,
+      "points": {
+        "E22G": 2,
+        "E22S": 0,
+        "E23G": 0,
+        "E23S": 0
+      },
+      "matches": {
+        "E22G": 2,
+        "E22S": 2,
+        "E23G": 0,
+        "E23S": 0
+      }
+    },
+    {
+      "seed": 180911303,
+      "points": {
+        "E22G": 2,
+        "E22S": 0,
+        "E23G": 0,
+        "E23S": 0
+      },
+      "matches": {
+        "E22G": 2,
+        "E22S": 2,
+        "E23G": 0,
+        "E23S": 0
+      }
+    },
+    {
+      "seed": 180911304,
+      "points": {
+        "E22G": 2,
+        "E22S": 0,
+        "E23G": 0,
+        "E23S": 0
+      },
+      "matches": {
+        "E22G": 2,
+        "E22S": 2,
+        "E23G": 0,
+        "E23S": 0
+      }
+    },
+    {
+      "seed": 180911305,
+      "points": {
+        "E22G": 2,
+        "E22S": 0,
+        "E23G": 0,
+        "E23S": 0
+      },
+      "matches": {
+        "E22G": 2,
+        "E22S": 2,
+        "E23G": 0,
+        "E23S": 0
+      }
+    }
+  ]
+}
