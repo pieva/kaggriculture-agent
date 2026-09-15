@@ -1,11 +1,21 @@
-# New Session — indicatori per colmare il gap con i top
+# New Session — E24, economia delle colture e indicatori osservabili
 
 
-## Pubblicazioni esterne e promemoria 15 settembre 2026
+
+## Stato corrente — 15 settembre 2026
+
+- **E22.1 candidato di punta:** ripubblicato lo stesso bundle Q2 Grano 8C6S3G, nuovo ID **56247714**, Complete. [Kaggle](https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56247714). Vecchio ID 56228842 conservato come riferimento dei replay analizzati. SHA256 invariato `5db3ef642ddf8cac5a8797ee92baea40a7caa6ab9eb1908db482b7fdc3c4b18a`.
+- **E23.2 6C11S:** pubblicata **56247697**, Complete. [Kaggle](https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56247697). Nessuna modifica al bundle congelato. Non reinviare.
+- **Report da leggere per E24:** http://127.0.0.1:8772/crop_economics_20260915/REPORT.html — [HTML locale](model_specs/codex/e24/reports/crop_economics_20260915/REPORT.html), [sintesi](model_specs/codex/e24/reports/crop_economics_20260915/REPORT.md).
+- Campione congelato 14 settembre: 20 replay E22.1 + 8 ciascuno Catalyst, Thomas e Deodims (44 totali). 40 pannelli standard e 5 istogrammi per coltura, filtro per decadi. Semi e acquisti prodotto separati; saldo prima dei costi condivisi. Contabilità riconciliata, nessuna nuova partita. I nuovi invii del 15 settembre non hanno ancora un campione esterno analizzato.
+- Piste E24: resa grano 518 contro 571–584 a semine simili; fragola con volumi simili ma ricavi estremamente variabili; pomodoro soltanto in 3/24 replay top. Prima studiare indicatori osservabili di margine atteso per casella/slot di lavoro e casi/controesempi. Differenze tra mercati non sono guadagni causali. Concordare un test minimo prima di simulazioni.
+- Il registro `model_specs/codex/e23/EXTERNAL_SUBMISSIONS_20260915.json` conserva ID e hash; i profili analitici E24 sono salvati compressi. Per riaprire il report: `.venv/Scripts/python.exe -m http.server 8772 --bind 127.0.0.1 --directory docs/model_specs/codex/e24/reports`.
+
+## Storico pubblicazioni E23
 
 - E23.1 9C5S3G: submission **56238382**, Complete, score iniziale 600 (non valutazione consolidata). https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56238382
 - E23.3 7C10S: submission **56238389**, Complete, score iniziale 600. https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56238389 . Non reinviare nessuna delle due.
-- **Domani, 15 settembre 2026: pubblicare anche E23.2 6C11S per verifica esterna e salvare ID, link e stato** in questa new session e in VERSIONS.json. Usare il bundle congelato `submission/submission_codex_e23_2_sheep_v1.py`, SHA256 `48751f7b49c82d537d021249c9108f4210794247f5256a6d9f055916d821fa94`; verificare prima che non sia già stata inviata. Promemoria per la prossima sessione, nessun invio automatico pianificato.
+- Promemoria E23.2 del 15 settembre **eseguito**: submission 56247697, Complete. E22.1 ripubblicata invariata: 56247714, Complete.
 
 ## Mandato corrente e costi
 
@@ -37,13 +47,13 @@ Ramo `codex/e23-evolution-tournament`; checkout `C:/Users/pietr/Projects/kaggric
 | E23.1 | 9C5S3G | 34/56 | Submission 56238382, Complete |
 | E22.2 | 8C9S | 30/56 | fix Q2 Grano, submission 56231638 |
 | E23.3 | 7C10S | 24/56 | Submission 56238389, Complete |
-| E23.2 | 6C11S | 12/56 | Locale, non promossa |
+| E23.2 | 6C11S | 12/56 | Submission 56247697, Complete |
 
 E23.1 contro E22.1: 4–10, delta medio −982,71 monete. E23.2 contro E22.2: 2–12, −2.244,29. E23.3 contro E22.2: 4–10, −916. La 7C10S batte la 6C11S 12–2, +1.432,43 medie; l'ultimo seme favorisce invece 6C11S.
 
 Verificati 280 lati: mix attesi e Q2 Grano raccolto ovunque, zero fughe e discrepanze contabili. Nessuna differenza di ricompensa nei 70 confronti a posti invertiti: non sono campioni indipendenti. E23.1 lascia tre latti non raccolti sulla nuova mucca; nessuna differenza inventariale nei prodotti animali raccolti. Il pollaio Q2 era già eliminato nelle E22 correnti.
 
-Semi **180911301–180911307 già esposti**; **180912401–180912407 riservati e mai usati**. Non usare quelli riservati per selezionare indicatori. E23.1 ed E23.3 inviate per verifica esterna; E23.2 resta locale. Risultati locali, non stime del rating Kaggle.
+Semi **180911301–180911307 già esposti**; **180912401–180912407 riservati e mai usati**. Non usare quelli riservati per selezionare indicatori. Tutte le E23 sono pubblicate; E22.1 resta il candidato di punta, ripubblicato invariato il 15 settembre. Risultati locali, non stime del rating Kaggle.
 
 ## Indicatori da indagare — ipotesi, non risultati già dimostrati
 

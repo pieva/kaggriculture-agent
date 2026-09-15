@@ -1,5 +1,10 @@
 # Stato del progetto — 14 settembre 2026
 
+## E24 — aggiornamento 15 settembre 2026
+
+E23.2 **56247697** ed E22.1 invariata **56247714** pubblicate, Complete. E22.1 rimane candidato di punta. Report economia colture: http://127.0.0.1:8772/crop_economics_20260915/REPORT.html . 44 replay congelati, 40 pannelli e 5 istogrammi per coltura; semi, acquisti prodotto e saldo distinti. Piste: resa grano, esposizione fragola al prezzo, pomodoro condizionato; nessuna nuova simulazione. Dettagli in docs/NEW_SESSION.md.
+
+
 ## Pubblicazioni E23 — 14 settembre 2026
 
 E23.1 9C5S3G **56238382** ed E23.3 7C10S **56238389** pubblicate su richiesta dell'utente, entrambe Complete, score iniziale 600. Bundle identici a quelli del torneo, hash verificati. Risultati esterni da acquisire; non reinviare. Registro: `docs/model_specs/codex/e23/EXTERNAL_SUBMISSIONS_20260914.json`. Promemoria in NEW_SESSION: pubblicare E23.2 6C11S il 15 settembre e salvare ID/link/stato; nessuna automazione.

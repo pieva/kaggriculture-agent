@@ -1,0 +1,1 @@
+Open REPORT.html directly or serve parent directory on localhost:8772. All analytical profiles are retained compressed. Raw top replays remain in the E23 local cache. Generator imports audit/report helpers from the E22 worktree recorded in the project handoff.
