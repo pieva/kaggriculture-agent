@@ -11,6 +11,16 @@
 - Piste E24: resa grano 518 contro 571–584 a semine simili; fragola con volumi simili ma ricavi estremamente variabili; pomodoro soltanto in 3/24 replay top. Prima studiare indicatori osservabili di margine atteso per casella/slot di lavoro e casi/controesempi. Differenze tra mercati non sono guadagni causali. Concordare un test minimo prima di simulazioni.
 - Il registro `model_specs/codex/e23/EXTERNAL_SUBMISSIONS_20260915.json` conserva ID e hash; i profili analitici E24 sono salvati compressi. Per riaprire il report: `.venv/Scripts/python.exe -m http.server 8772 --bind 127.0.0.1 --directory docs/model_specs/codex/e24/reports`.
 
+## Verifiche richieste per la prossima sessione — mandato esplicito dell’utente
+
+Prima di sviluppare E24, **verificare le tre piste del report economico**, trattandole come ipotesi da confermare o smentire:
+
+1. **Resa del grano:** verificare il dato 518 contro 571–584 unità raccolte a semine simili; ricostruire per casella e ciclo fertilizzazione, maturazione, irrigazione e raccolta. Separare raccolto, prodotto comprato, autoconsumo animale, vendite e scorte. Spiegare il delta senza confondere commercio e produzione agricola.
+2. **Fragole e prezzo:** verificare che la variabilità dei ricavi derivi soprattutto dal prezzo a volumi simili; confrontare tempi delle vendite, domanda e saturazione osservabili. Cercare un segnale disponibile prima della decisione di mantenere o ruotare la coltura, con casi favorevoli e controesempi. Non usare prezzi futuri né attribuire causalità a mercati differenti.
+3. **Pomodoro condizionato:** verificare presenza in 3/24 replay top, coordinate, coltura precedente e calendario; confrontare anche i casi senza pomodoro. Ricostruire ricavi, semi, lavoro e terreno aggiuntivi, distinguendo costi misurati e costi condivisi non attribuibili. Determinare quali condizioni osservabili possano giustificarne l’introduzione, senza generalizzare la ricorrenza minoritaria.
+
+Per ogni punto consegnare: esito **confermato / smentito / non determinabile**, riferimenti a replay e giorni, numeri riconciliati, limiti e controesempi; se supportata, una regola implementabile e il beneficio plausibile. Usare prima i dati già salvati nel [report E24](model_specs/codex/e24/reports/crop_economics_20260915/REPORT.html). Solo dopo proporre una modifica mirata e un test minimo con budget concordato. E22.1 resta il candidato di punta; questa richiesta non avvia nuovi tornei o submission.
+
 ## Storico pubblicazioni E23
 
 - E23.1 9C5S3G: submission **56238382**, Complete, score iniziale 600 (non valutazione consolidata). https://www.kaggle.com/competitions/kaggriculture/submissions?submissionId=56238382
@@ -23,7 +33,7 @@ La prossima sessione deve **trovare indicatori osservabili che possano colmare i
 
 L'utente ha segnalato circa **50 € di crediti spesi senza ottenere una policy migliore**: importo riferito, non verificato contabilmente. L'assistente ha riconosciuto il dimensionamento eccessivo del lavoro e degli aggiornamenti. Il risultato pratico richiesto resta migliorare E22, non produrre altra sola reportistica. Analisi mirata sui dati salvati; prima di nuove simulazioni individuare una modifica concreta, beneficio plausibile e test minimo con limite di costo/partite concordato. Nessun monitor, nuova attività o esecuzione lunga automatica. Il 14 settembre l'utente ha poi autorizzato la pubblicazione di E23.1 ed E23.3 per verifica esterna. Aggiornamenti sintetici su risultati o decisioni utili.
 
-## Report da aprire per primo
+## Report storico del torneo E23 (dopo il report economico E24)
 
 **[REPORT DEL TORNEO A CINQUE — LINK BROWSER](http://127.0.0.1:8771/tournament5_v1/REPORT.html)**
 
